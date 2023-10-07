@@ -4,11 +4,12 @@ This Slack Bot fetches publications for authors from Google Scholar and sends no
 
 ## 📚 Table of Contents
 1. [🤖 Setting Up Your Slack Bot](#setting-up-your-slack-bot)
-2. [🔧 Setting Up The Repo](#setting-up-the-repo)
-3. [🚀 Usage](#usage)
-4. [📂 Directory Structure](#directory-structure)
-5. [📝 Files Descriptions](#files-descriptions)
-6. [📄 License](#license)
+2. [📚 Installing Required Libraries](#installing-libraries)
+3. [🔧 Setting Up The Repo](#setting-up-the-repo)
+4. [🚀 Usage](#usage)
+5. [📂 Directory Structure](#directory-structure)
+6. [📝 Files Descriptions](#files-descriptions)
+7. [📄 License](#license)
 
 ## 🤖 Setting Up Your Slack Bot
 
@@ -47,6 +48,14 @@ It's essential to only request the permissions necessary for your bot to functio
 2. Navigate to the channel you want the bot to post messages in.
 3. Click on the channel name at the top, and select **Add people & bots**.
 4. Search for your bot's name and invite it.
+
+## 📚 Installing Required Libraries
+
+Before you can run the project, you need to install some necessary libraries. To install the necessary libraries using `pip`, you can run the following commands:
+
+```sh
+pip install scholarly tqdm requests configparser
+```
 
 ## 🔧 Setting Up The Repo
 
