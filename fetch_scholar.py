@@ -16,6 +16,7 @@ import time
 from tqdm import tqdm  # Progress bar library
 
 from helper_funcs import clean_pubs
+from log_config import MIN, STANDARD
 
 # Get global debug flag
 DEBUG = False
@@ -23,20 +24,7 @@ DEBUG = False
 def set_debug(state):
     global DEBUG
     DEBUG = state
-    
-# Define custom logging levels
-MIN = 35
-STANDARD = 25
 
-# Add custom logging levels
-logging.addLevelName(MIN, "MIN")
-logging.addLevelName(STANDARD, "STANDARD")
-
-# Configure logging (set level to MIN for minimum log details, or STANDARD for standard log details)
-if DEBUG:
-    logging.basicConfig(level=STANDARD)
-else:
-    logging.basicConfig(level=MIN)
 
 def fetch_publication_details(pub):
     """

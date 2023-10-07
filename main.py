@@ -8,11 +8,22 @@ Created on Sat Oct  7 02:46:59 2023
 
 import sys
 import argparse
+import logging
 
-from slack_bot import format_pub_message, send_to_slack, get_slack_config, format_authors_message
+from slack_bot import send_to_slack, get_slack_config, make_slack_msg
 from fetch_scholar import fetch_pubs_dictionary, set_debug
 from helper_funcs import convert_json_to_tuple, get_authors_json
+from log_config import MIN, STANDARD
 
+# Default DEBUG_FLAG is set to False
+DEBUG_FLAG = False
+
+# Configure logging
+if DEBUG_FLAG:
+    logging.basicConfig(level=STANDARD)
+else:
+    logging.basicConfig(level=MIN)
+    
 def get_args():
     """
     Parses command-line arguments for the script.
@@ -31,64 +42,82 @@ def get_args():
 
 def main():
     """
-    Main execution function for the script.
+    The main function to orchestrate the process of fetching scholarly articles, 
+    formatting them, and sending them to Slack.
     
-    - Parses command-line arguments.
-    - Retrieves Slack configuration.
-    - Converts authors' JSON data into tuple representation.
-    - Fetches publication dictionary for each author.
-    - Formats each article for Slack and sends it.
+    Workflow:
+    1. Determine execution mode: IDE vs Command-line.
+    2. Configure logging based on debug mode.
+    3. Fetch Slack configurations.
+    4. Retrieve authors' details.
+    5. Fetch publication details for each author.
+    6. Format messages to be sent to Slack.
+    7. Send messages to Slack.
+    
+    Note: If running from an IDE, configurations are hardcoded.
     """
-    print("Initializing...")
+    logging.log(MIN, "Initializing...")
+
+    # Use the global DEBUG_FLAG so its value can be modified within this function
+    global DEBUG_FLAG
     
-    # Determine if the script is run from the IDE or command-line
+    # Check if the script is executed via command line or from an IDE
     if len(sys.argv) > 1:
-        # Running from command line: Parse command-line arguments
+        # Parse command-line arguments
         args = get_args()
+        DEBUG_FLAG = args.debug
+        logging.log(STANDARD, "Parsed command-line arguments.")
     else:
-        # Running from IDE: Use hardcoded configurations
+        # Use hardcoded configurations suitable for IDE execution
         args = {}
         args['slack_config_path'] = './src/slack.config'
         if DEBUG_FLAG:
-            args['authors_path'] = './src/authors_short.json'  # Adjusted for debug
-            args['debug'] = True
+            args['authors_path'] = './src/authors_short.json'
         else:
-            args['authors_path'] = './src/authors.json'  # Default
-            args['debug'] = False
-            
-    # Set the debug state in fetch_scholar.py
-    set_debug(args['debug'])
+            args['authors_path'] = './src/authors.json'
+        logging.log(STANDARD, "Using hardcoded configurations for IDE execution.")
 
-    # Fetching Slack configuration from the given path
+    # Reconfigure logging based on DEBUG_FLAG's value
+    if DEBUG_FLAG:
+        logging.basicConfig(level=STANDARD)
+        logging.log(STANDARD, "Debug mode activated.")
+    else:
+        logging.basicConfig(level=MIN)
+        logging.log(MIN, "Standard mode activated.")
+
+    # Sync the DEBUG_FLAG's value with the fetch_scholar module
+    set_debug(DEBUG_FLAG)
+    logging.log(STANDARD, f"Set debug mode in fetch_scholar.py to {DEBUG_FLAG}.")
+
+    # Extract Slack configurations from the provided path
     slack_config = get_slack_config(args['slack_config_path'])
-    
+    logging.log(STANDARD, f"Fetched Slack configuration from {args['slack_config_path']}.")
+
+    # Assign Slack API token and channel name from the config
     token = slack_config['api_token']
     ch_name = slack_config['channel_name']
-    
-    # Fetching authors' details from the given path
+    logging.log(MIN, f"Target Slack channel: {ch_name}.")
+
+    # Retrieve authors' details from the given JSON path
     authors_json = get_authors_json(args['authors_path'])
-    
-    # Convert authors' JSON data into tuple representation
+    logging.log(STANDARD, f"Fetched authors' details from {args['authors_path']}.")
+
+    # Convert JSON data of authors to a tuple representation
     authors = convert_json_to_tuple(authors_json)
-    
-    # Fetch publication dictionary for each author
+    logging.log(STANDARD, "Converted authors' JSON data into tuple representation.")
+
+    # Get publication details for each author from the scholarly database
     articles = fetch_pubs_dictionary(authors)
-    
-    def make_slack_msg(authors: list, articles: list) -> list:
-        authors_msg = format_authors_message(authors)
-        pubs_messages = ['List of publications since my last check:\n'] + [format_pub_message(article) for article in articles]
-        formatted_messages = [authors_msg] + pubs_messages
-        return formatted_messages
-    
-    # Make new slack messages (one per author)
+    logging.log(MIN, f"Fetched {len(articles)} articles for the provided authors.")
+
+    # Create Slack messages for each author using the provided articles' details
     formatted_messages = make_slack_msg(authors, articles)
-    
-    # Send each formatted message to Slack
+    logging.log(MIN, f"Formatted messages for {len(authors)} authors.")
+
+    # Send each of the formatted messages to the configured Slack channel
     for formatted_message in formatted_messages:
         send_to_slack(ch_name, formatted_message, token)
-        
-# Define a DEBUG_FLAG at the top of your script, just after imports
-DEBUG_FLAG = True
+        logging.log(STANDARD, "Sent message to Slack.")  # Preview first 50 chars for brevity
 
 if __name__ == "__main__":
     main()

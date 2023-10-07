@@ -8,6 +8,32 @@ Created on Fri Oct  6 21:07:18 2023
 import requests
 import configparser
 
+def make_slack_msg(authors: list, articles: list) -> list:
+    """
+    Create Slack messages by combining author details and article details.
+    
+    Parameters:
+    - authors (list): List of author details.
+    - articles (list): List of article details for the provided authors.
+    
+    Returns:
+    - list: Formatted Slack messages, one for each author.
+    
+    Each message starts with a brief introduction of the author, followed by 
+    a list of their articles. 
+    """
+    
+    # Start by creating a message about the authors
+    authors_msg = format_authors_message(authors)
+    
+    # For each article, create a message using the provided formatting function
+    pubs_messages = ['List of publications since my last check:\n'] + [format_pub_message(article) for article in articles]
+    
+    # Combine the authors' message with their respective articles' messages
+    formatted_messages = [authors_msg] + pubs_messages
+    
+    return formatted_messages
+    
 def get_slack_config(slack_config_path='./src/slack.config'):
     """
     Retrieves the Slack configuration details from a configuration file.
