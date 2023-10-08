@@ -116,8 +116,10 @@ The script accepts several command-line arguments (flags) to customize its behav
 
 - `--debug`: Enables debug mode which has specific behaviors intended primarily for testing the fetching mechanism of the bot.
   - Sets logging to STANDARD (higher) level.
-  - Utilizes the `authors_short.json` file which contains only two authors with missing publications to speed up and simplify tests.
-  - When saving fetched data, only cached data is stored, ensuring that updated data isn't saved. This ensures that on each call, the bot has to fetch and send something to Slack, allowing for repeated testing of the fetching mechanism.
+  - Utilizes the `authors_short.json` file which contains only two authors to speed up and simplify tests.
+  - When loading articles from cache, it doesn't load articles in last year. This ensures that on each call, the bot has to fetch and send something to Slack, allowing for repeated testing of the fetching mechanism.
+  - No data is saved, ensuring that newly fetched data isn't stored and so leaving the cache unaltered. 
+  
   - Example:
   ```sh
   python main.py --debug
@@ -133,6 +135,7 @@ If you're running the script from an IDE, the default settings are taken from ha
 slack-bot
 ├── fetch_scholar.py
 ├── helper_funcs.py
+├── log_config.py
 ├── main.py
 ├── README.md
 ├── slack_bot.py

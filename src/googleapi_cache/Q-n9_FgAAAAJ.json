@@ -1,0 +1,2207 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The features underlying the memorability of objects",
+            "pub_year": 2023,
+            "citation": "Science Advances 9 (17), eadd2981, 2023",
+            "author": "Max A Kramer and Martin N Hebart and Chris I Baker and Wilma A Bainbridge",
+            "journal": "Science Advances",
+            "volume": "9",
+            "number": "17",
+            "pages": "eadd2981",
+            "abstract": "Despite decades of study of memory, it remains unclear what makes an image memorable. There is considerable debate surrounding the underlying determinants of memory, including the roles of semantic (e.g., animacy, utility) and visual features (e.g., brightness) as well as whether the most prototypical or most atypical items are best remembered. Prior studies have relied on constrained stimulus sets, limiting any generalized view of the features that may contribute to memory. Here, we collected over one million memory ratings (N=13,946) for THINGS , a naturalistic dataset of 26,107 object images designed to comprehensively sample concrete objects. First, we establish a model of object features that is predictive of image memorability, capturing over half of the explainable variance. For this model, we find that semantic features have a stronger influence than visual features on what people will remember. Second, we examined whether memorability could be accounted for by the typicality of the objects, by comparing human behavioral data, object feature dimensions, and deep neural network features. While prototypical objects tend to be the most memorable, the relationship between memorability and typicality is more complex than a simple positive or negative association and typicality alone cannot account for memorability.Why is it that we seem to remember and forget the same things? Our lived experiences differ, but there is remarkable consistency in what is remembered across people. Here, we collected memory performance scores for a comprehensive and diverse collection of natural object images to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:oTdOBqtIf_kC",
+        "num_citations": 23,
+        "citedby_url": "/scholar?hl=en&cites=5945500258311618340,10652378970080750051,12041836059132593332",
+        "cites_id": [
+            "5945500258311618340",
+            "10652378970080750051",
+            "12041836059132593332"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2022.04.29.490104.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JD-o_PuoglIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 1,
+            "2022": 5,
+            "2023": 17
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "THINGS-data, a multimodal collection of large-scale datasets for investigating object representations in human brain and behavior",
+            "pub_year": 2023,
+            "citation": "Elife 12, e82580, 2023",
+            "author": "Martin N Hebart and Oliver Contier and Lina Teichmann and Adam H Rockter and Charles Y Zheng and Alexis Kidder and Anna Corriveau and Maryam Vaziri-Pashkam and Chris I Baker",
+            "journal": "Elife",
+            "volume": "12",
+            "pages": "e82580",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Understanding object representations requires a broad, comprehensive sampling of the objects in our visual world with dense measurements of brain activity and behavior. Here, we present THINGS-data, a multimodal collection of large-scale neuroimaging and behavioral datasets in humans, comprising densely sampled functional MRI and magnetoencephalographic recordings, as well as 4.70 million similarity judgments in response to thousands of photographic images for up to 1,854 object concepts. THINGS-data is unique in its breadth of richly annotated objects, allowing for testing countless hypotheses at scale while assessing the reproducibility of previous findings. Beyond the unique insights promised by each individual dataset, the multimodality of THINGS-data allows combining datasets for a much broader view into object processing than previously possible. Our analyses demonstrate the high quality of the datasets and provide five examples of hypothesisdriven and data-driven applications. THINGS-data constitutes the core public release of the THINGS initiative (https://things-initiative. org) for bridging the gap between disciplines and the advancement of cognitive neuroscience."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:PQEM9vzQD9gC",
+        "num_citations": 22,
+        "citedby_url": "/scholar?hl=en&cites=11776019156333001843,12813796853124410588,11855572849486790520",
+        "cites_id": [
+            "11776019156333001843",
+            "12813796853124410588",
+            "11855572849486790520"
+        ],
+        "pub_url": "https://elifesciences.org/articles/82580",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:c3xs2QfTbKMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 1,
+            "2022": 4,
+            "2023": 17
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Dimensions underlying human understanding of the reachable world",
+            "pub_year": 2023,
+            "citation": "Cognition 234, 105368, 2023",
+            "author": "Emilie L Josephs and Martin N Hebart and Talia Konkle",
+            "journal": "Cognition",
+            "volume": "234",
+            "pages": "105368",
+            "publisher": "Elsevier",
+            "abstract": "Near-scale environments, like work desks, restaurant place settings or lab benches, are the interface of our hand-based interactions with the world. How are our conceptual representations of these environments organized? What properties distinguish among reachspaces, and why? We obtained 1.25 million similarity judgments on 990 reachspace images, and generated a 30-dimensional embedding which accurately predicts these judgments. Examination of the embedding dimensions revealed key properties underlying these judgments, such as reachspace layout, affordance, and visual appearance. Clustering performed over the embedding revealed four distinct interpretable classes of reachspaces, distinguishing among spaces related to food, electronics, analog activities, and storage or display. Finally, we found that reachspace similarity ratings were better predicted by the function of the spaces than their \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:hNSvKAmkeYkC",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=16572595389553118791,9522837584176446662",
+        "cites_id": [
+            "16572595389553118791",
+            "9522837584176446662"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010027723000021",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Rw6XkLOv_eUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The spatiotemporal neural dynamics of object recognition for natural images and line drawings",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience 43 (3), 484-500, 2023",
+            "author": "Johannes JD Singer and Radoslaw M Cichy and Martin N Hebart",
+            "journal": "Journal of Neuroscience",
+            "volume": "43",
+            "number": "3",
+            "pages": "484-500",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Drawings offer a simple and efficient way to communicate meaning. While line drawings capture only coarsely how objects look in reality, we still perceive them as resembling real-world objects. Previous work has shown that this perceived similarity is mirrored by shared neural representations for drawings and natural images, which suggests that similar mechanisms underlie the recognition of both. However, other work has proposed that representations of drawings and natural images become similar only after substantial processing has taken place, suggesting distinct mechanisms. To arbitrate between those alternatives, we measured brain responses resolved in space and time using fMRI and MEG, respectively, while human participants (female and male) viewed images of objects depicted as photographs, line drawings, or sketch-like drawings. Using multivariate decoding, we demonstrate that object category \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:Ic1VZgkJnDsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=14102090530843616330",
+        "cites_id": [
+            "14102090530843616330"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/43/3/484.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:SmRVKZ-wtMMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Multidimensional object properties are dynamically represented in the human brain",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.09. 08.556679, 2023",
+            "author": "Lina Teichmann and Martin N Hebart and Chris I Baker",
+            "journal": "bioRxiv",
+            "pages": "2023.09. 08.556679",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Our visual world consists of an immense number of unique objects and yet, we are easily able to identify, distinguish, interact, and reason about the things we see within several hundred milliseconds. This requires that we flexibly integrate and focus on different object properties to support specific behavioral goals. In the current study, we examined how these rich object representations unfold in the human brain by modelling time-resolved MEG signals evoked by viewing thousands of objects. Using millions of behavioral judgments to guide our understanding of the neural representation of the object space, we find distinct temporal profiles across the object dimensions. These profiles fell into two broad types with either a distinct and early peak (~150 ms) or a slow rise to a late peak (~300 ms). Further, the early effects are stable across participants in contrast to later effects which show more variability across people. This highlights that early peaks may carry stimulus-specific and later peaks subject-specific information. Given that the dimensions with early peaks seem to be primarily visual dimensions and those with later peaks more conceptual, our results suggest that conceptual processing is more variable across people. Together, these data provide a comprehensive account of how a variety of object properties unfold in the human brain and contribute to the rich nature of object vision."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:cBPnxVikjH8C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.09.08.556679.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Distributed representations of behaviorally relevant object dimensions in the human visual system",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Oliver Contier and Chris I Baker and Martin N Hebart",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory Preprints",
+            "abstract": "Object vision is commonly thought to involve a hierarchy of brain regions processing increasingly complex image features, with high-level visual cortex supporting object recognition and categorization. However, object vision supports diverse behavioral goals, suggesting basic limitations of this category-centric framework. To address these limitations, here we map a series of behaviorally-relevant dimensions derived from a large-scale analysis of human similarity judgments directly onto the brain. Our results reveal broadly-distributed representations of behaviorally-relevant information, demonstrating selectivity to a wide variety of novel dimensions while capturing known selectivities for visual features and categories. Behaviorally-relevant dimensions were superior to categories at predicting brain responses, yielding mixed selectivity in much of visual cortex and sparse selectivity in category-selective clusters. This \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:xm0LlTxljI0C",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10473665/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revisiting the animacy, size, and curvature organization of human visual cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5072-5072, 2023",
+            "author": "Laura M Stoinski and Oliver Contier and Talia Konkle and Martin N Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5072-5072",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Previous research has uncovered a large-scale organization of object categories in occipitotemporal cortex by the dimensions of animacy and real-world size (Konkle & Caramazza, 2013). The tripartite division of cortical zones with a preference for large objects, all animals, and small objects has been robustly replicated and appears to be driven by the mid-level visual feature curvature, ie large objects tend to be boxier, and small objects and animals curvier (Long et al., 2017). However, given the factorial design in the original studies, it has remained open to what degree these findings generalize to larger stimulus sets. To address this question, we used THINGS-fMRI, a large-scale dataset comprising fMRI responses to 8,740 naturalistic images of 720 animate and inanimate object categories (Contier et al., 2021). We then collected and applied a rich behavioral dataset of perceived animacy, real-world size, and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:rCNdntzdTkkC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791451",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "THINGS-drawings: A large-scale dataset containing human sketches of 1,854 object concepts",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5975-5975, 2023",
+            "author": "Judith E Fan and Kushin Mukherjee and Holly Huey and Martin N Hebart and Wilma A Bainbridge",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5975-5975",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "People\u2019s knowledge about objects has traditionally been probed using a combination of feature-listing and rating tasks. However, feature listing fails to capture nuances in what people know about how objects look\u2014their visual knowledge\u2014which cannot easily be described in words. Moreover, rating tasks are limited by the set of attributes that researchers even think to consider. By contrast, freehand sketching provides a way for people to externalize their visual knowledge about objects in an open-ended fashion. As such, sketch behavior provides a versatile substrate for asking a wide range of questions about visual object knowledge that go beyond the scope of a typical study. Here we introduce THINGS-drawings, a new crowdsourced dataset containing multiple freehand sketches of the 1,854 object concepts in the THINGS database (Hebart et al., 2019). THINGS-drawings contains fine-grained information \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:EaFouW7jFu4C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792322",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revealing interpretable object dimensions from a high-throughput model of the fusiform face area",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5356-5356, 2023",
+            "author": "Oliver Contier and Shu Fujimori and Katja Seeliger and N Apurva Ratan Murty and Martin Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5356-5356",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "A central aim of visual neuroscience is to uncover the function of individual visually-responsive brain regions. A hallmark of occipitotemporal cortex is its functional organization into category-selective brain regions, and among these regions, it is well established that fusiform face area (FFA) responds highly selectively to the visual presentation of faces. At the same time, previous research has shown that FFA activity overlaps with several other feature maps that are not face specific, such as animacy, size, or curvature (Long et al., 2017), and FFA has been shown to carry above-chance information about non-face objects (Duchaine & Yovel, 2015). Thus, it remains an open question which other object dimensions may be represented in patterns of FFA responses. Here, we explored this question with a recent high-throughput neural-network model of FFA activity which has been shown to yield excellent predictive \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:x21FZCSn4ZoC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792039",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Uncovering high-level visual cortex preferences by training convolutional neural networks on large neuroimaging data",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5493-5493, 2023",
+            "author": "K Seeliger and R Leipe and J Roth and MN Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5493-5493",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Pretrained task-optimized convolutional neural networks are commonly used to predict brain responses to visual stimuli. Yet, they contain biases introduced by their training dataset and task objective (eg classification). Recent large-scale visual neuroimaging datasets have opened the avenue towards training modern convolutional neural networks with the objective of directly predicting brain responses measured with human neuroimaging data, which allows overcoming these biases. Here, we used the THINGS and the Natural Scenes Datasets\u2013both massive functional MRI datasets acquired during the presentation of object photographs\u2013to identify a suitable neural network architecture from the machine learning community from a set of candidate architectures (ResNet50, VGG-16, CORnet-S, and others) for predicting responses of individual regions in high-level visual cortex. Careful optimization of these \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:QoJ_w57xiyAC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791912",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "cneuromod-things: a large-scale fMRI dataset for task-and data-driven assessment of object representation and visual memory recognition in the human brain",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5424-5424, 2023",
+            "author": "Marie St-Laurent and Basile Pinsard and Oliver Contier and Katja Seeliger and Valentina Borghesani and Julie Boyle and Pierre Bellec and Martin Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5424-5424",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Understanding how the brain represents objects is a transdisciplinary endeavor that benefits from large and comprehensive datasets. The THINGS initiative is a global effort that aims to collect large-scale datasets with diverse neuroimaging techniques and in multiple species to advance our understanding of object processing in the mind and brain. At its core lies the THINGS database, which includes a thoroughly annotated set of images that are unique for their broad and systematic sampling of natural and man-made objects. Contributing to this growing initiative, we present cneuromod-things, an fMRI dataset acquired while four participants each completed between 33 and 36 sessions of a continuous recognition paradigm on thousands of THINGS images. The same~ 4k unique images were shown three times to every participant over the course of the experiment (18 repetitions for each of 720 image categories \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:6VlyvFCUEfcC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791977",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revealing the locus and content of behaviorally relevant information about real-world scenes in human visual cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4712-4712, 2023",
+            "author": "Johannes Singer and Agnessa Karapetian and Martin Hebart and Radoslaw Cichy",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4712-4712",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Scene information can be rapidly categorized and translated into appropriate actions. While there has been substantial progress in understanding how scene information is represented in the brain, it remains unknown to what extent particular scene representations are relevant for decision behavior. To address this question, we recorded fMRI data while human participants (N= 29) viewed manmade and natural scenes and paired it with behavioral data recorded in a separate session from participants (N= 30) performing either a categorization task or an orthogonal task on the same stimuli. In order to identify behaviorally relevant information, we correlated the reaction times (RTs) of individual scenes with the distances of scene-specific fMRI responses to a hyperplane derived from a multivariate pattern classifier. Our findings are threefold. First, we found negative distance-RT correlations for the categorization task in \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:Azgs6IHzeyYC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791785",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Assessing the feasibility of high stimulus presentation rates for contrasting conditions in functional MRI studies",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5070-5070, 2023",
+            "author": "Johannes Roth and Yoichi Miyawaki and Martin N Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5070-5070",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "It is commonly assumed that event-related functional MRI studies of the visual system require slow stimulus presentation rates, with stimuli typically presented every 3-5s. At this rate, the BOLD signal is expected to be linear and can therefore be analyzed in a linear modeling framework. However, this assumption conflicts with recent findings that have successfully mapped the content of video stimuli to brain responses and with other work using more rapidly changing stimuli, suggesting that higher presentation rates may be possible. To address these seemingly conflicting views, we used simulations and measured brain responses with 7 Tesla fMRI (TR= 500ms) to determine the extent to which rapid stimulus presentation is achievable. For fMRI, we varied presentation rates between 0.5 s and 4s and presented observers with images of faces, places, objects, and scrambled objects. Our simulations showed that \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:7Frjd3zlGBUC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791453",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A data-driven investigation of human action representations",
+            "pub_year": 2023,
+            "citation": "Scientific Reports 13 (1), 5171, 2023",
+            "author": "Diana C Dima and Martin N Hebart and Leyla Isik",
+            "journal": "Scientific Reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "5171",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Understanding actions performed by others requires us to integrate different types of information about people, scenes, objects, and their interactions. What organizing dimensions does the mind use to make sense of this complex action space? To address this question, we collected intuitive similarity judgments across two large-scale sets of naturalistic videos depicting everyday actions. We used cross-validated sparse non-negative matrix factorization to identify the structure underlying action similarity judgments. A low-dimensional representation, consisting of nine to ten dimensions, was sufficient to accurately reconstruct human similarity judgments. The dimensions were robust to stimulus set perturbations and reproducible in a separate odd-one-out experiment. Human labels mapped these dimensions onto semantic axes relating to food, work, and home life; social axes relating to people and emotions; and one \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:DXE8ND7PrJAC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-023-32192-5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ZiMKje3GGn8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Three Terms Task-an open benchmark to compare human and artificial semantic representations",
+            "pub_year": 2023,
+            "citation": "Scientific Data 10 (1), 117, 2023",
+            "author": "V Borghesani and J Armoza and Martin N Hebart and P Bellec and SM Brambati",
+            "journal": "Scientific Data",
+            "volume": "10",
+            "number": "1",
+            "pages": "117",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Word processing entails retrieval of a unitary yet multidimensional semantic representation (e.g., a lemon\u2019s colour, flavour, possible use) and has been investigated in both cognitive neuroscience and artificial intelligence. To enable the direct comparison of human and artificial semantic representations, and to support the use of natural language processing (NLP) for computational modelling of human understanding, a critical challenge is the development of benchmarks of appropriate size and complexity. Here we present a dataset probing semantic knowledge with a three-terms semantic associative task: which of two target words is more closely associated with a given anchor (e.g., is lemon closer to squeezer or sour?). The dataset includes both abstract and concrete nouns for a total of 10,107 triplets. For the 2,255 triplets with varying levels of agreement among NLP word embeddings, we additionally collected \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:WwIwg2wKZ0QC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41597-023-02015-3",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:rtU11RZxLSkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revealing interpretable object representations from human visual cortex and artificial neural networks",
+            "pub_year": 2023,
+            "citation": "2023 11th International Winter Conference on Brain-Computer Interface (BCI), 1-3, 2023",
+            "author": "Martin Hebart",
+            "conference": "2023 11th International Winter Conference on Brain-Computer Interface (BCI)",
+            "pages": "1-3",
+            "publisher": "IEEE",
+            "abstract": "Predictive models are often limited by their strong focus on prediction accuracy, leading to potential for shortcut learning and limited out-of-set generalization. Recent interpretability methods have focused primarily on understanding the contribution of individual features or image regions to classification performance, but have placed less emphasis on the larger set of representational motifs that are being learned by predictive models. In this talk, I will highlight recent work from our own group aimed at revealing interpretable object representations from human behavior, patterns of brain activity, and artificial neural networks. Our approach operates at the level of triplet similarities and yields low-dimensional human interpretable embeddings with excellent reconstruction accuracy, providing both perceptual as well as semantic representational dimensions. By providing a trade-off between complexity, interpretability and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:Vr2j17o0sqMC",
+        "num_citations": 0,
+        "pub_url": "https://ieeexplore.ieee.org/abstract/document/10078606/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:yyPcghleNEsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The link between visual representations and behavior in human scene perception",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.08. 17.553708, 2023",
+            "author": "Johannes JD Singer and Agnessa Karapetian and Martin N Hebart and Radoslaw Martin Cichy",
+            "journal": "bioRxiv",
+            "pages": "2023.08. 17.553708",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Scene recognition is a core sensory capacity that enables humans to adaptively interact with their environment. Despite substantial progress in the understanding of the neural representations underlying scene recognition, it remains unknown how these representations translate into behavior given different task demands. To address this, we aimed to identify behaviorally relevant scene representations, to characterize them in terms of their underlying visual features, and to reveal how they vary given different tasks. We recorded fMRI data while human participants viewed manmade and natural scenes and linked brain responses to behavior in one of two tasks acquired in a separate set of subjects: a manmade/natural categorization task or an orthogonal task on fixation. First, we found correlations between scene categorization response times (RTs) and scene-specific brain responses, quantified as the distance to a hyperplane derived from a multivariate classifier, in occipital and ventral-temporal, but not parahippocampal cortex. This suggests that representations in early visual and object-selective cortex are relevant for scene categorization. Next, we revealed that mid-level visual features, as quantified using deep convolutional neural networks, best explained the relationship between scene representations and behavior, indicating that these features are read out in scene categorization. Finally, we observed opposite patterns of correlations between brain responses and RTs in the categorization and orthogonal task, suggesting a critical influence of task on the behavioral relevance of scene representations. Together, these results reveal the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:KS-xo-ZNxMsC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.17.553708.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Decoding Toolbox (TDT): a versatile software package for multivariate analyses of functional imaging data",
+            "pub_year": 2014,
+            "citation": "Frontiers in Neuroinformatics 8, 2014",
+            "author": "Martin N Hebart and Kai G\u00f6rgen and John-Dylan Haynes",
+            "journal": "Frontiers in Neuroinformatics",
+            "volume": "8",
+            "publisher": "Frontiers Media SA",
+            "abstract": "The multivariate analysis of brain signals has recently sparked a great amount of interest, yet accessible and versatile tools to carry out decoding analyses are scarce. Here we introduce The Decoding Toolbox (TDT) which represents a user-friendly, powerful and flexible package for multivariate analysis of functional brain imaging data. TDT is written in Matlab and equipped with an interface to the widely used brain data analysis package SPM. The toolbox allows running fast whole-brain analyses, region-of-interest analyses and searchlight analyses, using machine learning classifiers, pattern correlation analysis, or representational similarity analysis. It offers automatic creation and visualization of diverse cross-validation schemes, feature scaling, nested parameter selection, a variety of feature selection methods, multiclass capabilities, and pattern reconstruction from classifier weights. While basic users can implement a generic analysis in one line of code, advanced users can extend the toolbox to their needs or exploit the structure to combine it with external high-performance classification toolboxes. The toolbox comes with an example data set which can be used to try out the various analysis methods. Taken together, TDT offers a promising option for researchers who want to employ multivariate analyses of brain activity patterns."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:dBIO0h50nwkC",
+        "num_citations": 376,
+        "citedby_url": "/scholar?hl=en&cites=8569701823223618276,4773626117136639304",
+        "cites_id": [
+            "8569701823223618276",
+            "4773626117136639304"
+        ],
+        "pub_url": "https://www.frontiersin.org/articles/10.3389/fninf.2014.00088/full",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:5NpCbGey7XYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2014": 2,
+            "2015": 13,
+            "2016": 22,
+            "2017": 33,
+            "2018": 47,
+            "2019": 46,
+            "2020": 53,
+            "2021": 49,
+            "2022": 53,
+            "2023": 56
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Decoding the contents of visual short-term memory from human visual and parietal cortex",
+            "pub_year": 2012,
+            "citation": "Journal of Neuroscience 32 (38), 12983-12989, 2012",
+            "author": "Thomas B Christophel and Martin N Hebart and John-Dylan Haynes",
+            "journal": "Journal of Neuroscience",
+            "volume": "32",
+            "number": "38",
+            "pages": "12983-12989",
+            "publisher": "Society for Neuroscience",
+            "abstract": "How content is stored in the human brain during visual short-term memory (VSTM) is still an open question. Different theories postulate storage of remembered stimuli in prefrontal, parietal, or visual areas. Aiming at a distinction between these theories, we investigated the content-specificity of BOLD signals from various brain regions during a VSTM task using multivariate pattern classification. To participate in memory maintenance, candidate regions would need to have information about the different contents held in memory. We identified two brain regions where local patterns of fMRI signals represented the remembered content. Apart from the previously established storage in visual areas, we also discovered an area in the posterior parietal cortex where activity patterns allowed us to decode the specific stimuli held in memory. Our results demonstrate that storage in VSTM extends beyond visual areas, but no \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:Tyk-4Ss8FVUC",
+        "num_citations": 302,
+        "citedby_url": "/scholar?hl=en&cites=14592265926503226609",
+        "cites_id": [
+            "14592265926503226609"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/32/38/12983.short",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:8dxCCYwkgsoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2011": 1,
+            "2012": 2,
+            "2013": 13,
+            "2014": 22,
+            "2015": 25,
+            "2016": 32,
+            "2017": 29,
+            "2018": 30,
+            "2019": 37,
+            "2020": 27,
+            "2021": 37,
+            "2022": 27,
+            "2023": 20
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deconstructing multivariate decoding for the study of brain function",
+            "pub_year": 2018,
+            "citation": "Neuroimage 180, 4-18, 2018",
+            "author": "Martin N Hebart and Chris I Baker",
+            "volume": "180",
+            "pages": "4-18",
+            "publisher": "Academic Press",
+            "abstract": "Multivariate decoding methods were developed originally as tools to enable accurate predictions in real-world applications. The realization that these methods can also be employed to study brain function has led to their widespread adoption in the neurosciences. However, prior to the rise of multivariate decoding, the study of brain function was firmly embedded in a statistical philosophy grounded on univariate methods of data analysis. In this way, multivariate decoding for brain interpretation grew out of two established frameworks: multivariate decoding for predictions in real-world applications, and classical univariate analysis based on the study and interpretation of brain activation. We argue that this led to two confusions, one reflecting a mixture of multivariate decoding for prediction or interpretation, and the other a mixture of the conceptual and statistical philosophies underlying multivariate decoding and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:OBSaB-F7qqsC",
+        "num_citations": 243,
+        "citedby_url": "/scholar?hl=en&cites=3186604928306649721",
+        "cites_id": [
+            "3186604928306649721"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811917306523",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:eRo6h0wYOSwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2017": 1,
+            "2018": 30,
+            "2019": 27,
+            "2020": 45,
+            "2021": 51,
+            "2022": 54,
+            "2023": 34
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Breaking continuous flash suppression: A new measure of unconscious processing during interocular suppression?",
+            "pub_year": 2011,
+            "citation": "Frontiers in Human Neuroscience 5, 167, 2011",
+            "author": "Timo Stein and Martin N Hebart and Philipp Sterzer",
+            "journal": "Frontiers in Human Neuroscience",
+            "volume": "5",
+            "pages": "167",
+            "publisher": "Frontiers",
+            "abstract": "Until recently, it has been thought that under interocular suppression high-level visual processing is strongly inhibited if not abolished. With the development of continuous flash suppression (CFS), a variant of binocular rivalry, this notion has now been challenged by a number of reports showing that even high-level aspects of visual stimuli, such as familiarity, affect the time stimuli need to overcome CFS and emerge into awareness. In this \u201cbreaking continuous flash suppression\u201d (b-CFS) paradigm, differential unconscious processing during suppression is inferred when (a) speeded detection responses to initially invisible stimuli differ, and (b) no comparable differences are found in non-rivalrous control conditions supposed to measure non-specific threshold differences between stimuli. The aim of the present study was to critically evaluate these assumptions. In six experiments we compared the detection of upright and inverted faces. We found that not only under CFS, but also in control conditions upright faces were detected faster and more accurately than inverted faces, although the effect was larger during CFS. However, reaction time (RT) distributions indicated critical differences between the CFS and the control condition. When RT distributions were matched, similar effect sizes were obtained in both conditions. Moreover, subjective ratings revealed that CFS and control conditions are not perceptually comparable. These findings cast doubt on the usefulness of non-rivalrous control conditions to rule out non-specific threshold differences as a cause of shorter detection latencies during CFS. Thus, at least in its present form, the b-CFS \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:d1gkVwhDpl0C",
+        "num_citations": 237,
+        "citedby_url": "/scholar?hl=en&cites=10296437984941228817",
+        "cites_id": [
+            "10296437984941228817"
+        ],
+        "pub_url": "https://www.frontiersin.org/articles/10.3389/fnhum.2011.00167/full",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:EcNCYMtL5I4J:scholar.google.com/",
+        "cites_per_year": {
+            "2011": 1,
+            "2012": 8,
+            "2013": 9,
+            "2014": 16,
+            "2015": 25,
+            "2016": 28,
+            "2017": 18,
+            "2018": 30,
+            "2019": 22,
+            "2020": 18,
+            "2021": 25,
+            "2022": 21,
+            "2023": 16
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revealing the multidimensional mental representations of natural objects underlying human similarity judgments",
+            "pub_year": 2020,
+            "citation": "Nature Human Behaviour 4, 1173\u20131185, 2020",
+            "author": "Martin N Hebart and Charles Y Zheng and Francisco Pereira and Chris I. Baker",
+            "journal": "Nature Human Behaviour",
+            "volume": "4",
+            "pages": "1173\u20131185",
+            "publisher": "Nature Publishing Group",
+            "abstract": "Objects can be characterized according to a vast number of possible criteria (such as animacy, shape, colour and function), but some dimensions are more useful than others for making sense of the objects around us. To identify these core dimensions of object representations, we developed a data-driven computational model of similarity judgements for real-world images of 1,854 objects. The model captured most explainable variance in similarity judgements and produced 49 highly reproducible and meaningful object dimensions that reflect various conceptual and perceptual properties of those objects. These dimensions predicted external categorization behaviour and reflected typicality judgements of those categories. Furthermore, humans can accurately rate objects along these dimensions, highlighting their interpretability and opening up a way to generate similarity estimates from object dimensions alone \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:8dzOF9BpDQoC",
+        "num_citations": 146,
+        "citedby_url": "/scholar?hl=en&cites=11497500576827150922",
+        "cites_id": [
+            "11497500576827150922"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41562-020-00951-3",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:SpKhtttTj58J:scholar.google.com/",
+        "cites_per_year": {
+            "2020": 3,
+            "2021": 31,
+            "2022": 52,
+            "2023": 59
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The relationship between perceptual decision variables and confidence in the human brain",
+            "pub_year": 2016,
+            "citation": "Cerebral Cortex 26 (1), 118-130, 2016",
+            "author": "Martin N Hebart and Yoren Schriever and Tobias H Donner and John-Dylan Haynes",
+            "journal": "Cerebral Cortex",
+            "volume": "26",
+            "number": "1",
+            "pages": "118-130",
+            "publisher": "Oxford University Press",
+            "abstract": "Perceptual confidence refers to the degree to which we believe in the accuracy of our percepts. Signal detection theory suggests that perceptual confidence is computed from an internal \u201cdecision variable,\u201d which reflects the amount of available information in favor of one or another perceptual interpretation of the sensory input. The neural processes underlying these computations have, however, remained elusive. Here, we used fMRI and multivariate decoding techniques to identify regions of the human brain that encode this decision variable and confidence during a visual motion discrimination task. We used observers' binary perceptual choices and confidence ratings to reconstruct the internal decision variable that governed the subjects' behavior. A number of areas in prefrontal and posterior parietal association cortex encoded this decision variable, and activity in the ventral striatum reflected the degree of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:9c2xU6iGI7YC",
+        "num_citations": 140,
+        "citedby_url": "/scholar?hl=en&cites=10728277949520532884",
+        "cites_id": [
+            "10728277949520532884"
+        ],
+        "pub_url": "https://academic.oup.com/cercor/article-abstract/26/1/118/2366355",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:lNXTSPR_4pQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2015": 11,
+            "2016": 16,
+            "2017": 12,
+            "2018": 15,
+            "2019": 23,
+            "2020": 17,
+            "2021": 17,
+            "2022": 14,
+            "2023": 14
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The representational dynamics of task and object processing in humans",
+            "pub_year": 2018,
+            "citation": "eLife 7, e32816, 2018",
+            "author": "Martin N Hebart and Brett B Bankson and Assaf Harel and Chris I Baker and Radoslaw M Cichy",
+            "journal": "eLife",
+            "volume": "7",
+            "pages": "e32816",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Despite the importance of an observer\u2019s goals in determining how a visual object is categorized, surprisingly little is known about how humans process the task context in which objects occur and how it may interact with the processing of objects. Using magnetoencephalography (MEG), functional magnetic resonance imaging (fMRI) and multivariate techniques, we studied the spatial and temporal dynamics of task and object processing. Our results reveal a sequence of separate but overlapping task-related processes spread across frontoparietal and occipitotemporal cortex. Task exhibited late effects on object processing by selectively enhancing task-relevant object features, with limited impact on the overall pattern of object representations. Combining MEG and fMRI data, we reveal a parallel rise in task-related signals throughout the cerebral cortex, with an increasing dominance of task over object representations from early to higher visual areas. Collectively, our results reveal the complex dynamics underlying task and object representations throughout human cortex."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:1DsIQWDZLl8C",
+        "num_citations": 138,
+        "citedby_url": "/scholar?hl=en&cites=4718065047870675209,17903040559651528508",
+        "cites_id": [
+            "4718065047870675209",
+            "17903040559651528508"
+        ],
+        "pub_url": "https://elifesciences.org/articles/32816",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:CZmE5SnveUEJ:scholar.google.com/",
+        "cites_per_year": {
+            "2018": 7,
+            "2019": 30,
+            "2020": 24,
+            "2021": 26,
+            "2022": 21,
+            "2023": 28
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Rapid fear detection relies on high spatial frequencies",
+            "pub_year": 2014,
+            "citation": "Psychological Science 25 (2), 566-574, 2014",
+            "author": "Timo Stein and Kiley Seymour and Martin N Hebart and Philipp Sterzer",
+            "journal": "Psychological Science",
+            "volume": "25",
+            "number": "2",
+            "pages": "566-574",
+            "publisher": "Sage Publications",
+            "abstract": "Signals of threat\u2014such as fearful faces\u2014are processed with priority and have privileged access to awareness. This fear advantage is commonly believed to engage a specialized subcortical pathway to the amygdala that bypasses visual cortex and processes predominantly low-spatial-frequency information but is largely insensitive to high spatial frequencies. We tested visual detection of low- and high-pass-filtered fearful and neutral faces under continuous flash suppression and sandwich masking, and we found consistently that the fear advantage was specific to high spatial frequencies. This demonstrates that rapid fear detection relies not on low- but on high-spatial-frequency information\u2014indicative of an involvement of cortical visual areas. These findings challenge the traditional notion that a subcortical pathway to the amygdala is essential for the initial processing of fear signals and support the emerging view \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:Y0pCki6q_DkC",
+        "num_citations": 138,
+        "citedby_url": "/scholar?hl=en&cites=16204500069375208756",
+        "cites_id": [
+            "16204500069375208756"
+        ],
+        "pub_url": "https://journals.sagepub.com/doi/abs/10.1177/0956797613512509",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:NO3mPfXy4eAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2014": 13,
+            "2015": 17,
+            "2016": 17,
+            "2017": 8,
+            "2018": 17,
+            "2019": 16,
+            "2020": 18,
+            "2021": 11,
+            "2022": 12,
+            "2023": 9
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Mesolimbic confidence signals guide perceptual learning in the absence of external feedback",
+            "pub_year": 2016,
+            "citation": "eLife 5, e13388, 2016",
+            "author": "Matthias Guggenmos and Gregor Wilbertz and Martin N. Hebart and Philipp Sterzer",
+            "journal": "eLife",
+            "volume": "5",
+            "pages": "e13388",
+            "abstract": "It is well established that learning can occur without external feedback, yet normative reinforcement learning theories have difficulties explaining such instances of learning. Here, we propose that human observers are capable of generating their own feedback signals by monitoring internal decision variables. We investigated this hypothesis in a visual perceptual learning task using fMRI and confidence reports as a measure for this monitoring process. Employing a novel computational model in which learning is guided by confidence-based reinforcement signals, we found that mesolimbic brain areas encoded both anticipation and prediction error of confidence\u2014in remarkable similarity to previous findings for external reward-based feedback. We demonstrate that the model accounts for choice and confidence reports and show that the mesolimbic confidence prediction error modulation derived through the model predicts individual learning success. These results provide a mechanistic neurobiological explanation for learning without external feedback by augmenting reinforcement models with confidence-based feedback.DOI: http://dx.doi.org/10.7554/eLife.13388.001"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:cWzG1nlazyYC",
+        "num_citations": 137,
+        "citedby_url": "/scholar?hl=en&cites=3241635773800251305",
+        "cites_id": [
+            "3241635773800251305"
+        ],
+        "pub_url": "https://elifesciences.org/articles/13388",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:qf-PtI-a_CwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2016": 7,
+            "2017": 8,
+            "2018": 18,
+            "2019": 22,
+            "2020": 18,
+            "2021": 12,
+            "2022": 24,
+            "2023": 27
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "THINGS: A database of 1,854 object concepts and more than 26,000 naturalistic object images",
+            "pub_year": 2019,
+            "citation": "PloS one 14 (10), e0223792, 2019",
+            "author": "Martin N Hebart and Adam H Dickter and Alexis Kidder and Wan Y Kwok and Anna Corriveau and Caitlin Van Wicklin and Chris I Baker",
+            "journal": "PloS one",
+            "volume": "14",
+            "number": "10",
+            "pages": "e0223792",
+            "publisher": "Public Library of Science",
+            "abstract": "In recent years, the use of a large number of object concepts and naturalistic object images has been growing strongly in cognitive neuroscience research. Classical databases of object concepts are based mostly on a manually curated set of concepts. Further, databases of naturalistic object images typically consist of single images of objects cropped from their background, or a large number of naturalistic images of varying quality, requiring elaborate manual image curation. Here we provide a set of 1,854 diverse object concepts sampled systematically from concrete picturable and nameable nouns in the American English language. Using these object concepts, we conducted a large-scale web image search to compile a database of 26,107 high-quality naturalistic images of those objects, with 12 or more object images per concept and all images cropped to square size. Using crowdsourcing, we provide higher-level category membership for the 27 most common categories and validate them by relating them to representations in a semantic embedding derived from large text corpora. Finally, by feeding images through a deep convolutional neural network, we demonstrate that they exhibit high selectivity for different object concepts, while at the same time preserving variability of different object images within each concept. Together, the THINGS database provides a rich resource of object concepts and object images and offers a tool for both systematic and large-scale naturalistic research in the fields of psychology, neuroscience, and computer science."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:qE4H1tSSYIIC",
+        "num_citations": 123,
+        "citedby_url": "/scholar?hl=en&cites=16188124389756205439",
+        "cites_id": [
+            "16188124389756205439"
+        ],
+        "pub_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223792",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:f3lBN13Fp-AJ:scholar.google.com/",
+        "cites_per_year": {
+            "2019": 2,
+            "2020": 7,
+            "2021": 23,
+            "2022": 41,
+            "2023": 50
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What Visual Information Is Processed in the Human Dorsal Stream?",
+            "pub_year": 2012,
+            "citation": "Journal of Neuroscience 32 (24), 8107-8109, 2012",
+            "author": "Martin N Hebart and Guido Hesselmann",
+            "journal": "Journal of Neuroscience",
+            "volume": "32",
+            "number": "24",
+            "pages": "8107-8109",
+            "publisher": "Society for Neuroscience",
+            "abstract": "The idea of a division between a dorsal and a ventral visual stream is one of the most basic principles of visual processing in the brain (Milner and Goodale, 1995). The ventral stream originates in primary visual cortex and extends along the ventral surface into the temporal cortex; the dorsal stream also arises in primary visual cortex, but continues along the dorsal surface into parietal cortex. The ventral stream (or \u201cvision-for-perception\u201d pathway) is believed to mainly subserve recognition and discrimination of visual shapes and objects, whereas the dorsal stream (or \u201cvision-for-action\u201d pathway) has been primarily associated with visually guided reaching and grasping based on the moment-to-moment analysis of the spatial location, shape, and orientation of objects. It has been proposed, however, that the dorsal stream also processes tools as a category, so that manipulable objects would be processed by those \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:qjMakFHDy7sC",
+        "num_citations": 103,
+        "citedby_url": "/scholar?hl=en&cites=11160343289924288826",
+        "cites_id": [
+            "11160343289924288826"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/32/24/8107.short",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:OgFalxeB4ZoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2013": 2,
+            "2014": 6,
+            "2015": 9,
+            "2016": 10,
+            "2017": 9,
+            "2018": 4,
+            "2019": 10,
+            "2020": 15,
+            "2021": 16,
+            "2022": 14,
+            "2023": 7
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Parietal and early visual cortices encode working memory content across mental transformations",
+            "pub_year": 2015,
+            "citation": "Neuroimage 106, 198-206, 2015",
+            "author": "Thomas B Christophel and Radoslaw M Cichy and Martin N Hebart and John-Dylan Haynes",
+            "journal": "Neuroimage",
+            "volume": "106",
+            "pages": "198-206",
+            "publisher": "Academic Press",
+            "abstract": "Active and flexible manipulations of memory contents \u201cin the mind's eye\u201d are believed to occur in a dedicated neural workspace, frequently referred to as visual working memory. Such a neural workspace should have two important properties: The ability to store sensory information across delay periods and the ability to flexibly transform sensory information. Here we used a combination of functional MRI and multivariate decoding to indentify such neural representations. Subjects were required to memorize a complex artificial pattern for an extended delay, then rotate the mental image as instructed by a cue and memorize this transformed pattern. We found that patterns of brain activity already in early visual areas and posterior parietal cortex encode not only the initially remembered image, but also the transformed contents after mental rotation. Our results thus suggest that the flexible and general neural workspace \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:QYdC8u9Cj1oC",
+        "num_citations": 98,
+        "citedby_url": "/scholar?hl=en&cites=17702522720011566286",
+        "cites_id": [
+            "17702522720011566286"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811914009355",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:zjySMp_-q_UJ:scholar.google.com/",
+        "cites_per_year": {
+            "2015": 5,
+            "2016": 6,
+            "2017": 10,
+            "2018": 17,
+            "2019": 19,
+            "2020": 14,
+            "2021": 13,
+            "2022": 10,
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Differential BOLD activity associated with subjective and objective reports during \u201cblindsight\u201d in normal observers",
+            "pub_year": 2011,
+            "citation": "Journal of Neuroscience 31 (36), 12936-12944, 2011",
+            "author": "Guido Hesselmann and Martin Hebart and Rafael Malach",
+            "journal": "Journal of Neuroscience",
+            "volume": "31",
+            "number": "36",
+            "pages": "12936-12944",
+            "publisher": "Society for Neuroscience",
+            "abstract": "The study of conscious visual perception invariably necessitates some means of report. Report can be either subjective, i.e., an introspective evaluation of conscious experience, or objective, i.e., a forced-choice discrimination regarding different stimulus states. However, the link between report type and fMRI-BOLD signals has remained unknown. Here we used continuous flash suppression to render target images invisible, and observed a long-lasting dissociation between subjective report of visibility and human subjects' forced-choice localization of targets (\u201cblindsight\u201d). Our results show a robust dissociation between brain regions and type of report. We find subjective visibility effects in high-order visual areas even under equal objective performance. No significant BOLD difference was found between correct and incorrect trials in these areas when subjective report was constant. On the other hand, objective \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:u5HHmVD_uO8C",
+        "num_citations": 96,
+        "citedby_url": "/scholar?hl=en&cites=17070655634265221586",
+        "cites_id": [
+            "17070655634265221586"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/31/36/12936.short",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:0ilm69om5-wJ:scholar.google.com/",
+        "cites_per_year": {
+            "2012": 5,
+            "2013": 10,
+            "2014": 11,
+            "2015": 13,
+            "2016": 13,
+            "2017": 6,
+            "2018": 6,
+            "2019": 11,
+            "2020": 4,
+            "2021": 5,
+            "2022": 10,
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Human visual and parietal cortex encode visual choices independent of motor plans",
+            "pub_year": 2012,
+            "citation": "Neuroimage 63 (3), 1393-1403, 2012",
+            "author": "Martin N Hebart and Tobias H Donner and John-Dylan Haynes",
+            "journal": "Neuroimage",
+            "volume": "63",
+            "number": "3",
+            "pages": "1393-1403",
+            "publisher": "Academic Press",
+            "abstract": "Perceptual decision-making entails the transformation of graded sensory signals into categorical judgments. Often, there is a direct mapping between these judgments and specific motor responses. However, when stimulus\u2013response mappings are fixed, neural activity underlying decision-making cannot be separated from neural activity reflecting motor planning. Several human neuroimaging studies have reported changes in brain activity associated with perceptual decisions. Nevertheless, to date it has remained unknown where and how specific choices are encoded in the human brain when motor planning is decoupled from the decision process. We addressed this question by having subjects judge the direction of motion of dynamic random dot patterns at various levels of motion strength while measuring their brain activity with fMRI. We used multivariate decoding analyses to search the whole brain for \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:zYLM7Y9cAGgC",
+        "num_citations": 71,
+        "citedby_url": "/scholar?hl=en&cites=4600744471924770029",
+        "cites_id": [
+            "4600744471924770029"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811912008233",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:7QRrr7gg2T8J:scholar.google.com/",
+        "cites_per_year": {
+            "2013": 6,
+            "2014": 7,
+            "2015": 8,
+            "2016": 8,
+            "2017": 9,
+            "2018": 4,
+            "2019": 7,
+            "2020": 7,
+            "2021": 3,
+            "2022": 7,
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The temporal evolution of conceptual object representations revealed through models of behavior, semantics and deep neural networks",
+            "pub_year": 2018,
+            "citation": "NeuroImage 178, 172-182, 2018",
+            "author": "Brett B Bankson and Martin N Hebart and Iris IA Groen and Chris I Baker",
+            "journal": "NeuroImage",
+            "volume": "178",
+            "pages": "172-182",
+            "publisher": "Academic Press",
+            "abstract": "Visual object representations are commonly thought to emerge rapidly, yet it has remained unclear to what extent early brain responses reflect purely low-level visual features of these objects and how strongly those features contribute to later categorical or conceptual representations. Here, we aimed to estimate a lower temporal bound for the emergence of conceptual representations by defining two criteria that characterize such representations: 1) conceptual object representations should generalize across different exemplars of the same object, and 2) these representations should reflect high-level behavioral judgments. To test these criteria, we compared magnetoencephalography (MEG) recordings between two groups of participants (n\u202f=\u202f16 per group) exposed to different exemplar images of the same object concepts. Further, we disentangled low-level from high-level MEG responses by estimating the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:uVUOdF_882EC",
+        "num_citations": 60,
+        "citedby_url": "/scholar?hl=en&cites=12283976236765695012",
+        "cites_id": [
+            "12283976236765695012"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811918304440",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JEzC1U1zeaoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2017": 1,
+            "2018": 5,
+            "2019": 8,
+            "2020": 13,
+            "2021": 9,
+            "2022": 11,
+            "2023": 12
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An efficient data partitioning to improve classification performance while keeping parameters interpretable",
+            "pub_year": 2016,
+            "citation": "PloS one 11 (8), e0161788, 2016",
+            "author": "Kristjan Korjus and Martin N Hebart and Raul Vicente",
+            "journal": "PloS one",
+            "volume": "11",
+            "number": "8",
+            "pages": "e0161788",
+            "publisher": "Public Library of Science",
+            "abstract": "Supervised machine learning methods typically require splitting data into multiple chunks for training, validating, and finally testing classifiers. For finding the best parameters of a classifier, training and validation are usually carried out with cross-validation. This is followed by application of the classifier with optimized parameters to a separate test set for estimating the classifier\u2019s generalization performance. With limited data, this separation of test data creates a difficult trade-off between having more statistical power in estimating generalization performance versus choosing better parameters and fitting a better model. We propose a novel approach that we term \u201cCross-validation and cross-testing\u201d improving this trade-off by re-using test data without biasing classifier performance. The novel approach is validated using simulated data and electrophysiological recordings in humans and rodents. The results demonstrate that the approach has a higher probability of discovering significant results than the standard approach of cross-validation and testing, while maintaining the nominal alpha level. In contrast to nested cross-validation, which is maximally efficient in re-using data, the proposed approach additionally maintains the interpretability of individual parameters. Taken together, we suggest an addition to currently used machine learning approaches which may be particularly useful in cases where model weights do not require interpretation, but parameters do."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:bKqednn6t2AC",
+        "num_citations": 59,
+        "citedby_url": "/scholar?hl=en&cites=13349420733322224767",
+        "cites_id": [
+            "13349420733322224767"
+        ],
+        "pub_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0161788",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:f-Tnvm2rQrkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2017": 2,
+            "2018": 2,
+            "2019": 5,
+            "2020": 14,
+            "2021": 16,
+            "2022": 12,
+            "2023": 8
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Serotonin and dopamine differentially affect appetitive and aversive general Pavlovian-to-instrumental transfer",
+            "pub_year": 2015,
+            "citation": "Psychopharmacology 232, 437-451, 2015",
+            "author": "Martin N Hebart and Jan Gl\u00e4scher",
+            "journal": "Psychopharmacology",
+            "volume": "232",
+            "pages": "437-451",
+            "publisher": "Springer Berlin Heidelberg",
+            "abstract": "Human motivation and decision-making is influenced by the interaction of Pavlovian and instrumental systems. The neurotransmitters dopamine and serotonin have been suggested to play a major role in motivation and decision-making, but how they affect this interaction in humans is largely unknown.We investigated the effect of these neurotransmitters in a general Pavlovian-to-instrumental transfer (PIT) task which measured the nonspecific effect of appetitive and aversive Pavlovian cues on instrumental responses.For that purpose, we used selective dietary depletion of the amino acid precursors of serotonin and dopamine: tryptophan (n\u2009=\u200934) and tyrosine/phenylalanine (n\u2009=\u200935), respectively, and compared the performance of these groups to a control group (n\u2009=\u200934) receiving a \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:IUKN3-7HHlwC",
+        "num_citations": 56,
+        "citedby_url": "/scholar?hl=en&cites=6971994539370328637",
+        "cites_id": [
+            "6971994539370328637"
+        ],
+        "pub_url": "https://link.springer.com/article/10.1007/s00213-014-3682-3",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:PbIhJxiAwWAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2015": 2,
+            "2016": 9,
+            "2017": 8,
+            "2018": 5,
+            "2019": 4,
+            "2020": 8,
+            "2021": 5,
+            "2022": 9,
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Mechanisms of offline motor learning at a microscale of seconds in large-scale crowdsourced data",
+            "pub_year": 2020,
+            "citation": "Science of Learning 5 (7), 2020",
+            "author": "Marlene B\u00f6nstrup and I\u00f1aki Iturrate and Martin N. Hebart and Nitzan Censor and Leonardo G. Cohen",
+            "journal": "Science of Learning",
+            "volume": "5",
+            "number": "7",
+            "abstract": "Performance improvements during early human motor skill learning are suggested to be driven by short periods of rest during practice, at the scale of seconds. To reveal the unknown mechanisms behind these \u201cmicro-offline\u201d gains, we leveraged the sampling power offered by online crowdsourcing (cumulative N over all experiments\u2009=\u2009951). First, we replicated the original in-lab findings, demonstrating generalizability to subjects learning the task in their daily living environment (N\u2009=\u2009389). Second, we show that offline improvements during rest are equivalent when significantly shortening practice period duration, thus confirming that they are not a result of recovery from performance fatigue (N\u2009=\u2009118). Third, retroactive interference immediately after each practice period reduced the learning rate relative to interference after passage of time (N\u2009=\u2009373), indicating stabilization of the motor memory at a microscale \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:-uzm3Y7AvW0C",
+        "num_citations": 40,
+        "citedby_url": "/scholar?hl=en&cites=8301597873450381636",
+        "cites_id": [
+            "8301597873450381636"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41539-020-0066-9",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:RPElO0gzNXMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 7,
+            "2022": 12,
+            "2023": 21
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Memory detection using fMRI\u2014Does the encoding context matter?",
+            "pub_year": 2015,
+            "citation": "NeuroImage 113, 164-174, 2015",
+            "author": "Judith Peth and Tobias Sommer and Martin N Hebart and Gerhard Vossel and Christian B\u00fcchel and Matthias Gamer",
+            "journal": "NeuroImage",
+            "volume": "113",
+            "pages": "164-174",
+            "publisher": "Academic Press",
+            "abstract": "Recent research revealed that the presentation of crime related details during the Concealed Information Test (CIT) reliably activates a network of bilateral inferior frontal, right medial frontal and right temporal\u2013parietal brain regions. However, the ecological validity of these findings as well as the influence of the encoding context are still unclear. To tackle these questions, three different groups of subjects participated in the current study. Two groups of guilty subjects encoded critical details either only by planning (guilty intention group) or by really enacting (guilty action group) a complex, realistic mock crime. In addition, a group of informed innocent subjects encoded half of the relevant details in a neutral context. Univariate analyses showed robust activation differences between known relevant compared to neutral details in the previously identified ventral frontal\u2013parietal network with no differences between \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:HIFyuExEbWQC",
+        "num_citations": 35,
+        "citedby_url": "/scholar?hl=en&cites=8515282133267077765",
+        "cites_id": [
+            "8515282133267077765"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811915002463",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:hVqd-_tbLHYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2016": 3,
+            "2017": 2,
+            "2018": 11,
+            "2019": 3,
+            "2020": 6,
+            "2021": 4,
+            "2022": 1,
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The same analysis approach: Practical protection against the pitfalls of novel neuroimaging analysis methods",
+            "pub_year": 2018,
+            "citation": "Neuroimage 180, 19-30, 2018",
+            "author": "Kai G\u00f6rgen and Martin N Hebart and Carsten Allefeld and John-Dylan Haynes",
+            "journal": "Neuroimage",
+            "volume": "180",
+            "pages": "19-30",
+            "publisher": "Academic Press",
+            "abstract": "Standard neuroimaging data analysis based on traditional principles of experimental design, modelling, and statistical inference is increasingly complemented by novel analysis methods, driven e.g. by machine learning methods. While these novel approaches provide new insights into neuroimaging data, they often have unexpected properties, generating a growing literature on possible pitfalls. We propose to meet this challenge by adopting a habit of systematic testing of experimental design, analysis procedures, and statistical inference. Specifically, we suggest to apply the analysis method used for experimental data also to aspects of the experimental design, simulated confounds, simulated null data, and control data. We stress the importance of keeping the analysis method the same in main and test analyses, because only this way possible confounds and unexpected properties can be reliably detected and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:Ade32sEp0pkC",
+        "num_citations": 32,
+        "citedby_url": "/scholar?hl=en&cites=5015361464743767961",
+        "cites_id": [
+            "5015361464743767961"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811917311072",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:mS88_q0kmkUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2017": 1,
+            "2018": 4,
+            "2019": 6,
+            "2020": 9,
+            "2021": 3,
+            "2022": 6,
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Representation of spatial information in key areas of the descending pain modulatory system",
+            "pub_year": 2014,
+            "citation": "Journal of Neuroscience 34 (13), 4634-4639, 2014",
+            "author": "Christoph Ritter and Martin N Hebart and Thomas Wolbers and Ulrike Bingel",
+            "journal": "Journal of Neuroscience",
+            "volume": "34",
+            "number": "13",
+            "pages": "4634-4639",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Behavioral studies have demonstrated that descending pain modulation can be spatially specific, as is evident in placebo analgesia, which can be limited to the location at which pain relief is expected. This suggests that higher-order cortical structures of the descending pain modulatory system carry spatial information about the site of stimulation. Here, we used functional magnetic resonance imaging and multivariate pattern analysis in 15 healthy human volunteers to test whether spatial information of painful stimuli is represented in areas of the descending pain modulatory system. We show that the site of nociceptive stimulation (arm or leg) can be successfully decoded from local patterns of brain activity during the anticipation and receipt of painful stimulation in the rostral anterior cingulate cortex, the dorsolateral prefrontal cortices, and the contralateral parietal operculum. These results demonstrate that \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:OTTXONDVkokC",
+        "num_citations": 26,
+        "citedby_url": "/scholar?hl=en&cites=5502853756382564338",
+        "cites_id": [
+            "5502853756382564338"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/34/13/4634?utm_source=TrendMD&utm_medium=cpc&utm_campaign=JNeurosci_TrendMD_0",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:8k8bCFYQXkwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2014": 1,
+            "2015": 4,
+            "2016": 6,
+            "2017": 2,
+            "2018": 1,
+            "2019": 4,
+            "2020": 2,
+            "2021": 4,
+            "2022": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The features underlying the memorability of objects",
+            "pub_year": 2023,
+            "citation": "Science Advances 9 (17), eadd2981, 2023",
+            "author": "Max A Kramer and Martin N Hebart and Chris I Baker and Wilma A Bainbridge",
+            "journal": "Science Advances",
+            "volume": "9",
+            "number": "17",
+            "pages": "eadd2981",
+            "abstract": "Despite decades of study of memory, it remains unclear what makes an image memorable. There is considerable debate surrounding the underlying determinants of memory, including the roles of semantic (e.g., animacy, utility) and visual features (e.g., brightness) as well as whether the most prototypical or most atypical items are best remembered. Prior studies have relied on constrained stimulus sets, limiting any generalized view of the features that may contribute to memory. Here, we collected over one million memory ratings (N=13,946) for THINGS , a naturalistic dataset of 26,107 object images designed to comprehensively sample concrete objects. First, we establish a model of object features that is predictive of image memorability, capturing over half of the explainable variance. For this model, we find that semantic features have a stronger influence than visual features on what people will remember. Second, we examined whether memorability could be accounted for by the typicality of the objects, by comparing human behavioral data, object feature dimensions, and deep neural network features. While prototypical objects tend to be the most memorable, the relationship between memorability and typicality is more complex than a simple positive or negative association and typicality alone cannot account for memorability.Why is it that we seem to remember and forget the same things? Our lived experiences differ, but there is remarkable consistency in what is remembered across people. Here, we collected memory performance scores for a comprehensive and diverse collection of natural object images to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:oTdOBqtIf_kC",
+        "num_citations": 23,
+        "citedby_url": "/scholar?hl=en&cites=5945500258311618340,10652378970080750051,12041836059132593332",
+        "cites_id": [
+            "5945500258311618340",
+            "10652378970080750051",
+            "12041836059132593332"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2022.04.29.490104.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JD-o_PuoglIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 1,
+            "2022": 5,
+            "2023": 17
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revealing interpretable object representations from human behavior",
+            "pub_year": 2019,
+            "citation": "arXiv preprint arXiv:1901.02915, 2019",
+            "author": "Charles Y Zheng and Francisco Pereira and Chris I Baker and Martin N Hebart",
+            "journal": "arXiv preprint arXiv:1901.02915",
+            "abstract": "To study how mental object representations are related to behavior, we estimated sparse, non-negative representations of objects using human behavioral judgments on images representative of 1,854 object categories. These representations predicted a latent similarity structure between objects, which captured most of the explainable variance in human behavioral judgments. Individual dimensions in the low-dimensional embedding were found to be highly reproducible and interpretable as conveying degrees of taxonomic membership, functionality, and perceptual attributes. We further demonstrated the predictive power of the embeddings for explaining other forms of human behavior, including categorization, typicality judgments, and feature ratings, suggesting that the dimensions reflect human conceptual representations of objects beyond the specific task."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:YlPif8NxrbYC",
+        "num_citations": 23,
+        "citedby_url": "/scholar?hl=en&cites=16835293067180738408",
+        "cites_id": [
+            "16835293067180738408"
+        ],
+        "pub_url": "https://arxiv.org/abs/1901.02915",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:aIfn7tj5oukJ:scholar.google.com/",
+        "cites_per_year": {
+            "2019": 2,
+            "2020": 7,
+            "2021": 3,
+            "2022": 4,
+            "2023": 7
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "THINGS-data, a multimodal collection of large-scale datasets for investigating object representations in human brain and behavior",
+            "pub_year": 2023,
+            "citation": "Elife 12, e82580, 2023",
+            "author": "Martin N Hebart and Oliver Contier and Lina Teichmann and Adam H Rockter and Charles Y Zheng and Alexis Kidder and Anna Corriveau and Maryam Vaziri-Pashkam and Chris I Baker",
+            "journal": "Elife",
+            "volume": "12",
+            "pages": "e82580",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Understanding object representations requires a broad, comprehensive sampling of the objects in our visual world with dense measurements of brain activity and behavior. Here, we present THINGS-data, a multimodal collection of large-scale neuroimaging and behavioral datasets in humans, comprising densely sampled functional MRI and magnetoencephalographic recordings, as well as 4.70 million similarity judgments in response to thousands of photographic images for up to 1,854 object concepts. THINGS-data is unique in its breadth of richly annotated objects, allowing for testing countless hypotheses at scale while assessing the reproducibility of previous findings. Beyond the unique insights promised by each individual dataset, the multimodality of THINGS-data allows combining datasets for a much broader view into object processing than previously possible. Our analyses demonstrate the high quality of the datasets and provide five examples of hypothesisdriven and data-driven applications. THINGS-data constitutes the core public release of the THINGS initiative (https://things-initiative. org) for bridging the gap between disciplines and the advancement of cognitive neuroscience."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:PQEM9vzQD9gC",
+        "num_citations": 22,
+        "citedby_url": "/scholar?hl=en&cites=11776019156333001843,12813796853124410588,11855572849486790520",
+        "cites_id": [
+            "11776019156333001843",
+            "12813796853124410588",
+            "11855572849486790520"
+        ],
+        "pub_url": "https://elifesciences.org/articles/82580",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:c3xs2QfTbKMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 1,
+            "2022": 4,
+            "2023": 17
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Human EEG recordings for 1,854 concepts presented in rapid serial visual presentation streams",
+            "pub_year": 2022,
+            "citation": "Scientific Data 9 (1), 3, 2022",
+            "author": "Tijl Grootswagers and Ivy Zhou and Amanda K Robinson and Martin N Hebart and Thomas A Carlson",
+            "journal": "Scientific Data",
+            "volume": "9",
+            "number": "1",
+            "pages": "3",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "The neural basis of object recognition and semantic knowledge has been extensively studied but the high dimensionality of object space makes it challenging to develop overarching theories on how the brain organises object knowledge. To help understand how the brain allows us to recognise, categorise, and represent objects and object categories, there is a growing interest in using large-scale image databases for neuroimaging experiments. In the current paper, we present THINGS-EEG, a dataset containing human electroencephalography responses from 50 subjects to 1,854 object concepts and 22,248 images in the THINGS stimulus set, a manually curated and high-quality image database that was specifically designed for studying human vision. The THINGS-EEG dataset provides neuroimaging recordings to a systematic collection of objects and concepts and can therefore support a wide array of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:_AeoHAGD03cC",
+        "num_citations": 18,
+        "citedby_url": "/scholar?hl=en&cites=9642470119352858745,17711199983776072423,3554651499783552169",
+        "cites_id": [
+            "9642470119352858745",
+            "17711199983776072423",
+            "3554651499783552169"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41597-021-01102-7",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:eXhYTXzv0IUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 5,
+            "2023": 13
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "From photos to sketches-how humans and deep neural networks process objects across different levels of visual abstraction",
+            "pub_year": 2022,
+            "citation": "Journal of vision 22 (2), 4-4, 2022",
+            "author": "Johannes JD Singer and Katja Seeliger and Tim C Kietzmann and Martin N Hebart",
+            "journal": "Journal of vision",
+            "volume": "22",
+            "number": "2",
+            "pages": "4-4",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Line drawings convey meaning with just a few strokes. Despite strong simplifications, humans can recognize objects depicted in such abstracted images without effort. To what degree do deep convolutional neural networks (CNNs) mirror this human ability to generalize to abstracted object images? While CNNs trained on natural images have been shown to exhibit poor classification performance on drawings, other work has demonstrated highly similar latent representations in the networks for abstracted and natural images. Here, we address these seemingly conflicting findings by analyzing the activation patterns of a CNN trained on natural images across a set of photographs, drawings, and sketches of the same objects and comparing them to human behavior. We find a highly similar representational structure across levels of visual abstraction in early and intermediate layers of the network. This similarity, however, does not translate to later stages in the network, resulting in low classification performance for drawings and sketches. We identified that texture bias in CNNs contributes to the dissimilar representational structure in late layers and the poor performance on drawings. Finally, by fine-tuning late network layers with object drawings, we show that performance can be largely restored, demonstrating the general utility of features learned on natural images in early and intermediate layers for the recognition of drawings. In conclusion, generalization to abstracted images, such as drawings, seems to be an emergent property of CNNs trained on natural images, which is, however, suppressed by domain-related biases that arise during later \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:RtRctb2lSbAC",
+        "num_citations": 17,
+        "citedby_url": "/scholar?hl=en&cites=14302096321849070772",
+        "cites_id": [
+            "14302096321849070772"
+        ],
+        "pub_url": "https://iovs.arvojournals.org/article.aspx?articleid=2778420",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:tBQ8N9RAe8YJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 1,
+            "2022": 4,
+            "2023": 12
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Analyzing neuroimaging data with subclasses: A shrinkage approach",
+            "pub_year": 2016,
+            "citation": "Neuroimage 124, 740-751, 2016",
+            "author": "Johannes H\u00f6hne and Daniel Bartz and Martin N Hebart and Klaus-Robert M\u00fcller and Benjamin Blankertz",
+            "journal": "Neuroimage",
+            "volume": "124",
+            "pages": "740-751",
+            "publisher": "Academic Press",
+            "abstract": "Among the numerous methods used to analyze neuroimaging data, Linear Discriminant Analysis (LDA) is commonly applied for binary classification problems. LDAs popularity derives from its simplicity and its competitive classification performance, which has been reported for various types of neuroimaging data.Yet the standard LDA approach proves less than optimal for binary classification problems when additional label information (i.e. subclass labels) is present. Subclass labels allow to model structure in the data, which can be used to facilitate the classification task. In this paper, we illustrate how neuroimaging data exhibit subclass labels that may contain valuable information. We also show that the standard LDA classifier is unable to exploit subclass labels.We introduce a novel method that allows subclass labels to be incorporated efficiently into the classifier. The novel method, which we call Relevance \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:4vMrXwiscB8C",
+        "num_citations": 17,
+        "citedby_url": "/scholar?hl=en&cites=2088462247293016983",
+        "cites_id": [
+            "2088462247293016983"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811915008460",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:l9u2SFm1-xwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2016": 3,
+            "2017": 9,
+            "2018": 1,
+            "2019": 2,
+            "2020": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "THINGSvision: a Python toolbox for streamlining the extraction of activations from deep neural networks",
+            "pub_year": 2021,
+            "citation": "Frontiers in Neuroinformatics 15, 679838, 2021",
+            "author": "Lukas Muttenthaler and Martin N Hebart",
+            "journal": "Frontiers in Neuroinformatics",
+            "volume": "15",
+            "pages": "679838",
+            "abstract": "Over the past decade, deep neural network (DNN) models have received a lot of attention due to their near-human object classification performance and their excellent prediction of signals recorded from biological visual systems. To better understand the function of these networks and relate them to hypotheses about brain activity and behavior, researchers need to extract the activations to images across different DNN layers. The abundance of different DNN variants, however, can often be unwieldy, and the task of extracting DNN activations from different layers may be non-trivial and error-prone for someone without a strong computational background. Thus, researchers in the fields of cognitive science and computational neuroscience would benefit from a library or package that supports a user in the extraction task. THINGSvision is a new Python module that aims at closing this gap by providing a simple and unified tool for extracting layer activations for a wide range of pretrained and randomly-initialized neural network architectures, even for users with little to no programming experience. We demonstrate the general utility of THINGsvision by relating extracted DNN activations to a number of functional MRI and behavioral datasets using representational similarity analysis, which can be performed as an integral part of the toolbox. Together, THINGSvision enables researchers across diverse fields to extract features in a streamlined manner for their custom image dataset, thereby improving the ease of relating DNNs, brain activity, and behavior, and improving the reproducibility of findings in these research fields."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:YB4bud6kWLwC",
+        "num_citations": 16,
+        "citedby_url": "/scholar?hl=en&cites=4964372690086386266",
+        "cites_id": [
+            "4964372690086386266"
+        ],
+        "pub_url": "https://www.frontiersin.org/articles/10.3389/fninf.2021.679838/full",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Wto_xaj-5EQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 1,
+            "2022": 4,
+            "2023": 11
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Feature-reweighted representational similarity analysis: A method for improving the fit between computational models, brains, and behavior",
+            "pub_year": 2022,
+            "citation": "NeuroImage 257, 119294, 2022",
+            "author": "Philipp Kaniuth and Martin N Hebart",
+            "journal": "NeuroImage",
+            "volume": "257",
+            "pages": "119294",
+            "publisher": "Academic Press",
+            "abstract": "Representational Similarity Analysis (RSA) has emerged as a popular method for relating representational spaces from human brain activity, behavioral data, and computational models. RSA is based on the comparison of representational (dis-)similarity matrices (RDMs or RSMs), which characterize the pairwise (dis-)similarities of all conditions across all features (e.g. fMRI voxels or units of a model). However, classical RSA treats each feature as equally important. This \u2018equal weights\u2019 assumption contrasts with the flexibility of multivariate decoding, which reweights individual features for predicting a target variable. As a consequence, classical RSA may lead researchers to underestimate the correspondence between a model and a brain region and, in case of model comparison, may lead them to select an inferior model. The aim of this work is twofold: First, we sought to broadly test feature-reweighted RSA (FR \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:s85pQhAUCrAC",
+        "num_citations": 15,
+        "citedby_url": "/scholar?hl=en&cites=12265315265060352664,13521693919617906117",
+        "cites_id": [
+            "12265315265060352664",
+            "13521693919617906117"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S105381192200413X",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:mDIZyD8nN6oJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 3,
+            "2022": 4,
+            "2023": 8
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Interaction of instrumental and goal-directed learning modulates prediction error representations in the ventral striatum",
+            "pub_year": 2016,
+            "citation": "Journal of Neuroscience 36 (50), 12650-12660, 2016",
+            "author": "Rong Guo and Wendelin B\u00f6hmer and Martin Hebart and Samson Chien and Tobias Sommer and Klaus Obermayer and Jan Gl\u00e4scher",
+            "journal": "Journal of Neuroscience",
+            "volume": "36",
+            "number": "50",
+            "pages": "12650-12660",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Goal-directed and instrumental learning are both important controllers of human behavior. Learning about which stimulus event occurs in the environment and the reward associated with them allows humans to seek out the most valuable stimulus and move through the environment in a goal-directed manner. Stimulus\u2013response associations are characteristic of instrumental learning, whereas response\u2013outcome associations are the hallmark of goal-directed learning. Here we provide behavioral, computational, and neuroimaging results from a novel task in which stimulus\u2013response and response\u2013outcome associations are learned simultaneously but dominate behavior at different stages of the experiment. We found that prediction error representations in the ventral striatum depend on which type of learning dominates. Furthermore, the amygdala tracks the time-dependent weighting of stimulus\u2013response versus \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:yFnVuubrUp4C",
+        "num_citations": 12,
+        "citedby_url": "/scholar?hl=en&cites=17285727328738213922",
+        "cites_id": [
+            "17285727328738213922"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/36/50/12650.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:IgC0-Ws94-8J:scholar.google.com/",
+        "cites_per_year": {
+            "2017": 2,
+            "2018": 1,
+            "2019": 2,
+            "2020": 1,
+            "2021": 4,
+            "2022": 1,
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The organizational principles of de-differentiated topographic maps in somatosensory cortex",
+            "pub_year": 2021,
+            "citation": "Elife 10, e60090, 2021",
+            "author": "Peng Liu and Anastasia Chrysidou and Juliane Doehler and Martin N Hebart and Thomas Wolbers and Esther Kuehn",
+            "journal": "Elife",
+            "volume": "10",
+            "pages": "e60090",
+            "publisher": "eLife Sciences Publications, Ltd",
+            "abstract": "Topographic maps are a fundamental feature of cortex architecture in the mammalian brain. One common theory is that the de-differentiation of topographic maps links to impairments in everyday behavior due to less precise functional map readouts. Here, we tested this theory by characterizing de-differentiated topographic maps in primary somatosensory cortex (SI) of younger and older adults by means of ultra-high resolution functional magnetic resonance imaging together with perceptual finger individuation and hand motor performance. Older adults\u2019 SI maps showed similar amplitude and size to younger adults\u2019 maps, but presented with less representational similarity between distant fingers. Larger population receptive field sizes in older adults\u2019 maps did not correlate with behavior, whereas reduced cortical distances between D2 and D3 related to worse finger individuation but better motor performance. Our data uncover the drawbacks of a simple de-differentiation model of topographic map function, and motivate the introduction of feature-based models of cortical reorganization."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:SxCCDk4iOpsC",
+        "num_citations": 11,
+        "citedby_url": "/scholar?hl=en&cites=8454323925256253869",
+        "cites_id": [
+            "8454323925256253869"
+        ],
+        "pub_url": "https://elifesciences.org/articles/60090",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:rTH8LNHKU3UJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 2,
+            "2022": 6,
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Semantic features of object concepts generated with GPT-3",
+            "pub_year": 2022,
+            "citation": "arXiv preprint arXiv:2202.03753, 2022",
+            "author": "Hannes Hansen and Martin N Hebart",
+            "journal": "arXiv preprint arXiv:2202.03753",
+            "abstract": "Semantic features have been playing a central role in investigating the nature of our conceptual representations. Yet the enormous time and effort required to empirically sample and norm features from human raters has restricted their use to a limited set of manually curated concepts. Given recent promising developments with transformer-based language models, here we asked whether it was possible to use such models to automatically generate meaningful lists of properties for arbitrary object concepts and whether these models would produce features similar to those found in humans. To this end, we probed a GPT-3 model to generate semantic features for 1,854 objects and compared automatically-generated features to existing human feature norms. GPT-3 generated many more features than humans, yet showed a similar distribution in the types of generated features. Generated feature norms rivaled human norms in predicting similarity, relatedness, and category membership, while variance partitioning demonstrated that these predictions were driven by similar variance in humans and GPT-3. Together, these results highlight the potential of large language models to capture important facets of human knowledge and yield a new approach for automatically generating interpretable feature sets, thus drastically expanding the potential use of semantic features in psychological and linguistic studies."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:jtI9f0ekYq0C",
+        "num_citations": 9,
+        "citedby_url": "/scholar?hl=en&cites=16958563995984242923",
+        "cites_id": [
+            "16958563995984242923"
+        ],
+        "pub_url": "https://arxiv.org/abs/2202.03753",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:66heoRrsWOsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 2,
+            "2023": 7
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "VICE: Variational Interpretable Concept Embeddings",
+            "pub_year": 2022,
+            "citation": "Advances in Neural Information Processing Systems 35, 33661-33675, 2022",
+            "author": "Lukas Muttenthaler and Charles Y Zheng and Patrick McClure and Robert A Vandermeulen and Martin N Hebart and Francisco Pereira",
+            "journal": "Advances in Neural Information Processing Systems",
+            "volume": "35",
+            "pages": "33661-33675",
+            "abstract": "A central goal in the cognitive sciences is the development of numerical models for mental representations of object concepts. This paper introduces Variational Interpretable Concept Embeddings (VICE), an approximate Bayesian method for embedding object concepts in a vector space using data collected from humans in a triplet odd-one-out task. VICE uses variational inference to obtain sparse, non-negative representations of object concepts with uncertainty estimates for the embedding values. These estimates are used to automatically select the dimensions that best explain the data. We derive a PAC learning bound for VICE that can be used to estimate generalization performance or determine a sufficient sample size for experimental design. VICE rivals or outperforms its predecessor, SPoSE, at predicting human behavior in the triplet odd-one-out task. Furthermore, VICE's object representations are more reproducible and consistent across random initializations, highlighting the unique advantage of using VICE for deriving interpretable embeddings from human behavior."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:nqdriD65xNoC",
+        "num_citations": 8,
+        "citedby_url": "/scholar?hl=en&cites=12914224895734200193,9994267900634479852",
+        "cites_id": [
+            "12914224895734200193",
+            "9994267900634479852"
+        ],
+        "pub_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da1a97b53eec1c763c6d06835538fe3e-Abstract-Conference.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:gTe-wx6LOLMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 7
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "THINGSplus: New norms and metadata for the THINGS database of 1,854 object concepts and 26,107 natural object images",
+            "pub_year": 2022,
+            "citation": "",
+            "author": "Laura Mai Stoinski and Jonas Perkuhn and Martin N Hebart",
+            "abstract": "To study visual and semantic object representations, the need for well-curated object concepts and images has grown significantly over the past years. To address this, we have previously developed THINGS, a large-scale database of 1854 systematically sampled object concepts with 26,107 high-quality naturalistic images of these concepts. With THINGSplus, we significantly extend THINGS by adding concept-and image-specific norms and metadata for all 1854 concepts and one copyright-free image example per concept. Concept-specific norms were collected for the properties of real-world size, manmadeness, preciousness, liveliness, heaviness, naturalness, ability to move or be moved, graspability, holdability, pleasantness, and arousal. Further, we provide 53 superordinate categories as well as typicality ratings for all their members. Image-specific metadata includes a nameability measure, based on human \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:37UQlXuwjP4C",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=13880564383392473745",
+        "cites_id": [
+            "13880564383392473745"
+        ],
+        "pub_url": "https://link.springer.com/article/10.3758/s13428-023-02110-8",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:kSIMqsOrocAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 4,
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Dimensions underlying human understanding of the reachable world",
+            "pub_year": 2023,
+            "citation": "Cognition 234, 105368, 2023",
+            "author": "Emilie L Josephs and Martin N Hebart and Talia Konkle",
+            "journal": "Cognition",
+            "volume": "234",
+            "pages": "105368",
+            "publisher": "Elsevier",
+            "abstract": "Near-scale environments, like work desks, restaurant place settings or lab benches, are the interface of our hand-based interactions with the world. How are our conceptual representations of these environments organized? What properties distinguish among reachspaces, and why? We obtained 1.25 million similarity judgments on 990 reachspace images, and generated a 30-dimensional embedding which accurately predicts these judgments. Examination of the embedding dimensions revealed key properties underlying these judgments, such as reachspace layout, affordance, and visual appearance. Clustering performed over the embedding revealed four distinct interpretable classes of reachspaces, distinguishing among spaces related to food, electronics, analog activities, and storage or display. Finally, we found that reachspace similarity ratings were better predicted by the function of the spaces than their \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:hNSvKAmkeYkC",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=16572595389553118791,9522837584176446662",
+        "cites_id": [
+            "16572595389553118791",
+            "9522837584176446662"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010027723000021",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Rw6XkLOv_eUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Core dimensions of human material perception",
+            "pub_year": 2022,
+            "citation": "",
+            "author": "Filipp Schmidt and Martin N Hebart and Roland W Fleming",
+            "abstract": "Visually categorizing and comparing materials is crucial for our everyday behaviour. Given the dramatic variability in their visual appearance and functional significance, what organizational principles underly the internal representation of materials? To address this question, here we use a large-scale data-driven approach to uncover the core latent dimensions in our mental representation of materials. In a first step, we assembled a new image dataset (STUFF dataset) consisting of 600 photographs of 200 systematically sampled material classes. Next, we used these images to crowdsource 1.87 million triplet similarity judgments. Based on the responses, we then modelled the assumed cognitive process underlying these choices by quantifying each image as a sparse, non-negative vector in a multidimensional embedding space. The resulting embedding predicted material similarity judgments in an independent test set close to the human noise ceiling and accurately reconstructed the similarity matrix of all 600 images in the STUFF dataset. We found that representations of individual material images were captured by a combination of 36 material dimensions that were highly reproducible and interpretable, comprising perceptual (eg,\u201cgrainy\u201d,\u201cblue\u201d) as well as conceptual (eg,\u201cmineral\u201d,\u201cviscous\u201d) dimensions. These results have broad implications for understanding material perception, its natural dimensions, and our ability to organize materials into classes."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:qmtmRrLr0tkC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=14431704811528360031",
+        "cites_id": [
+            "14431704811528360031"
+        ],
+        "pub_url": "https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_3477647",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:X5BxShC3R8gJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The representation of object drawings and sketches in deep convolutional neural networks",
+            "pub_year": 2020,
+            "citation": "NeurIPS Workshop SVRHM, 2020",
+            "author": "Johannes Singer and Katja Seeliger and Martin N Hebart",
+            "journal": "NeurIPS Workshop SVRHM",
+            "abstract": "Drawings are universal in human culture and serve as tools to efficiently convey meaning with little visual information. Humans are adept at recognizing even highly abstracted drawings of objects, and their visual system has been shown to respond similarly to different object depictions. Yet, the processing of object drawings in deep convolutional neural networks (CNNs) has yielded conflicting results. While CNNs have been shown to perform poorly on drawings, there is evidence that representations in CNNs are similar for object photographs and drawings. Here, we resolve these disparate findings by probing the generalization ability of a CNN trained on natural object images for a set of photos, drawings and sketches of the same objects, with each depiction representing a different level of abstraction. We demonstrate that despite poor classification performance on drawings and sketches, the network exhibits a similar representational structure across levels of abstraction in intermediate layers which, however, disappears in later layers. Further, we show that a texture bias found in CNNs contributes both to the poor classification performance for drawings and the dissimilar representational structure, specifically in the later layers of the network. By finetuning only those layers on a database of object drawings, we show that features in early and intermediate layers learned on natural object photographs are indeed sufficient for downstream recognition of drawings. Our findings reconcile previous investigations on the generalization ability of CNNs for drawings and reveal both opportunities and limitations of CNNs as models for the representation \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:RuPIJ_LgqDgC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=987936794730126648",
+        "cites_id": [
+            "987936794730126648"
+        ],
+        "pub_url": "https://openreview.net/forum?id=wXv6gtWnDO2",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:OF1tzkfbtQ0J:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 1,
+            "2022": 1,
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Facing up to stereotypes",
+            "pub_year": 2016,
+            "citation": "Nature Neuroscience 19 (6), 763-764, 2016",
+            "author": "Martin N Hebart and Chris I Baker",
+            "volume": "19",
+            "number": "6",
+            "pages": "763-764",
+            "publisher": "Nature Publishing Group",
+            "abstract": "Our understanding of faces reflects both our perception of their facial features and our social knowledge. This interaction of stereotypes and vision can be observed in brain signals in fusiform gyrus and orbitofrontal cortex."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:DJbcl8HfkQkC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=16292944344212402494",
+        "cites_id": [
+            "16292944344212402494"
+        ],
+        "pub_url": "https://www.nature.com/articles/nn.4309",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:PnH9rY4qHOIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2017": 1,
+            "2018": 0,
+            "2019": 0,
+            "2020": 0,
+            "2021": 1,
+            "2022": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Parallel cognitive maps for short-term statistical and long-term semantic relationships in the hippocampal formation",
+            "pub_year": 2022,
+            "citation": "bioRxiv, 2022.08. 29.505742, 2022",
+            "author": "Xiaochen Y Zheng and Martin N Hebart and Raymond J Dolan and Christian F Doeller and Roshan Cools and Mona M Garvert",
+            "journal": "bioRxiv",
+            "pages": "2022.08. 29.505742",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The hippocampal-entorhinal system uses cognitive maps to represent spatial knowledge and other types of relational information, such as the transition probabilities between objects. However, objects can often be characterized in terms of different types of relations simultaneously, e.g. semantic similarities learned over the course of a lifetime as well as transitions experienced over a brief timeframe in an experimental setting. Here we ask how the hippocampal formation handles the embedding of stimuli in multiple relational structures that differ vastly in terms of their mode and timescale of acquisition: Does it integrate the different stimulus dimensions into one conjunctive map, or is each dimension represented in a parallel map? To this end, we reanalyzed functional magnetic resonance imaging (fMRI) data from Garvert et al. (2017) that had previously revealed an entorhinal map which coded for newly learnt statistical regularities. We used a triplet odd-one-out task to construct a semantic distance matrix for presented items and applied fMRI adaptation analysis to show that the degree of similarity of representations in bilateral hippocampus decreases as a function of semantic distance between presented objects. Importantly, while both maps localize to the hippocampal formation, this semantic map is anatomically distinct from the originally described entorhinal map. This finding supports the idea that the hippocampal-entorhinal system forms parallel cognitive maps reflecting the embedding of objects in diverse relational structures."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:dAp6zn-oMfAC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=13425355848619918620",
+        "cites_id": [
+            "13425355848619918620"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2022.08.29.505742.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:HAU0hANyULoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The spatiotemporal neural dynamics of object recognition for natural images and line drawings",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience 43 (3), 484-500, 2023",
+            "author": "Johannes JD Singer and Radoslaw M Cichy and Martin N Hebart",
+            "journal": "Journal of Neuroscience",
+            "volume": "43",
+            "number": "3",
+            "pages": "484-500",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Drawings offer a simple and efficient way to communicate meaning. While line drawings capture only coarsely how objects look in reality, we still perceive them as resembling real-world objects. Previous work has shown that this perceived similarity is mirrored by shared neural representations for drawings and natural images, which suggests that similar mechanisms underlie the recognition of both. However, other work has proposed that representations of drawings and natural images become similar only after substantial processing has taken place, suggesting distinct mechanisms. To arbitrate between those alternatives, we measured brain responses resolved in space and time using fMRI and MEG, respectively, while human participants (female and male) viewed images of objects depicted as photographs, line drawings, or sketch-like drawings. Using multivariate decoding, we demonstrate that object category \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:Ic1VZgkJnDsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=14102090530843616330",
+        "cites_id": [
+            "14102090530843616330"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/43/3/484.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:SmRVKZ-wtMMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Synthesizing preferred stimuli for individual voxels in the human visual system",
+            "pub_year": 2021,
+            "citation": "Journal of Vision 21 (9), 2311-2311, 2021",
+            "author": "Katja Seeliger and J Roth and T Schmid and M Hebart",
+            "journal": "Journal of Vision",
+            "volume": "21",
+            "number": "9",
+            "pages": "2311-2311",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Investigating the function of the various subregions of the visual system is a major goal in neuroscience. One approach is specifying to which types of stimuli they show the strongest response to, however given the variety of the visual world it is impossible to present all possible stimuli in-vivo. We follow an alternative approach to reach this goal. We trained a convolutional neural network-based model of the occipitotemporal cortex to match the behaviour of an individual brain reacting to visual input, using a large-scale functional MRI dataset (Seeliger & Sommers 2019). This model allowed us to predict voxel responses in several areas defined functionally (such as FFA, LOC, PPA) and from an anatomical atlas (such as PHC, VO) in-silico. To identify the preferred stimuli for voxels in these areas we developed an interpretability technique for convolutional neural networks, based on a generative adversarial neural \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:hQUaER0FWQ4C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=16359812069177094422",
+        "cites_id": [
+            "16359812069177094422"
+        ],
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2777378",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:FvFyH2a6CeMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "On the neuronal systems underlying perceptual decision-making and confidence in humans",
+            "pub_year": 2014,
+            "citation": "Humboldt-Universit\u00e4t zu Berlin, Mathematisch-Naturwissenschaftliche Fakult\u00e4t II, 2014",
+            "author": "Martin Hebart",
+            "publisher": "Humboldt-Universit\u00e4t zu Berlin, Mathematisch-Naturwissenschaftliche Fakult\u00e4t II",
+            "abstract": "Perceptual decision-making refers to the ability to arrive at categorical judgments about states of the outside world. Here we use functional magnetic resonance imaging and multivariate pattern analysis to identify decision-related brain regions and address a number of open issues in the field of perceptual decision-making.  In the first study (Hebart et al., 2012), we demonstrated that perceptual decisions about motion direction are represented in both visual and parietal cortex, even when decoupled from motor plans. While in early visual cortex the amount of information about perceptual choices follows the amount of sensory evidence presented on the screen, the reverse pattern is observed in left posterior parietal cortex. These results reveal the brain regions involved when choices are encoded in an abstract format and suggest that these two brain regions are recruited differently depending on the amount of sensory evidence available.  In the second study (Hebart et al., submitted), we show that the perceptual decision variable (DV) is represented throughout fronto-parietal association cortices. The DV in right ventrolateral prefrontal cortex covaries specifically with brain signals in the ventral striatum representing confidence, demonstrating a close link between the two variables. This suggests that confidence is calculated from the perceptual DV encoded in ventrolateral prefrontal cortex.  In the third study (Christophel et al., 2012), using a visual short-term memory (VSTM) task, we demonstrate that the content of VSTM is represented in visual cortex and posterior parietal cortex, but not prefrontal cortex. These results constrain theories of VSTM \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:mlAyqtXpCwEC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=13716094592516800273",
+        "cites_id": [
+            "13716094592516800273"
+        ],
+        "pub_url": "https://edoc.hu-berlin.de/handle/18452/17576",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Eb-eZFxbWb4J:scholar.google.com/",
+        "cites_per_year": {
+            "2020": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Multidimensional object properties are dynamically represented in the human brain",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.09. 08.556679, 2023",
+            "author": "Lina Teichmann and Martin N Hebart and Chris I Baker",
+            "journal": "bioRxiv",
+            "pages": "2023.09. 08.556679",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Our visual world consists of an immense number of unique objects and yet, we are easily able to identify, distinguish, interact, and reason about the things we see within several hundred milliseconds. This requires that we flexibly integrate and focus on different object properties to support specific behavioral goals. In the current study, we examined how these rich object representations unfold in the human brain by modelling time-resolved MEG signals evoked by viewing thousands of objects. Using millions of behavioral judgments to guide our understanding of the neural representation of the object space, we find distinct temporal profiles across the object dimensions. These profiles fell into two broad types with either a distinct and early peak (~150 ms) or a slow rise to a late peak (~300 ms). Further, the early effects are stable across participants in contrast to later effects which show more variability across people. This highlights that early peaks may carry stimulus-specific and later peaks subject-specific information. Given that the dimensions with early peaks seem to be primarily visual dimensions and those with later peaks more conceptual, our results suggest that conceptual processing is more variable across people. Together, these data provide a comprehensive account of how a variety of object properties unfold in the human brain and contribute to the rich nature of object vision."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:cBPnxVikjH8C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.09.08.556679.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Distributed representations of behaviorally relevant object dimensions in the human visual system",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Oliver Contier and Chris I Baker and Martin N Hebart",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory Preprints",
+            "abstract": "Object vision is commonly thought to involve a hierarchy of brain regions processing increasingly complex image features, with high-level visual cortex supporting object recognition and categorization. However, object vision supports diverse behavioral goals, suggesting basic limitations of this category-centric framework. To address these limitations, here we map a series of behaviorally-relevant dimensions derived from a large-scale analysis of human similarity judgments directly onto the brain. Our results reveal broadly-distributed representations of behaviorally-relevant information, demonstrating selectivity to a wide variety of novel dimensions while capturing known selectivities for visual features and categories. Behaviorally-relevant dimensions were superior to categories at predicting brain responses, yielding mixed selectivity in much of visual cortex and sparse selectivity in category-selective clusters. This \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:xm0LlTxljI0C",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10473665/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revisiting the animacy, size, and curvature organization of human visual cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5072-5072, 2023",
+            "author": "Laura M Stoinski and Oliver Contier and Talia Konkle and Martin N Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5072-5072",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Previous research has uncovered a large-scale organization of object categories in occipitotemporal cortex by the dimensions of animacy and real-world size (Konkle & Caramazza, 2013). The tripartite division of cortical zones with a preference for large objects, all animals, and small objects has been robustly replicated and appears to be driven by the mid-level visual feature curvature, ie large objects tend to be boxier, and small objects and animals curvier (Long et al., 2017). However, given the factorial design in the original studies, it has remained open to what degree these findings generalize to larger stimulus sets. To address this question, we used THINGS-fMRI, a large-scale dataset comprising fMRI responses to 8,740 naturalistic images of 720 animate and inanimate object categories (Contier et al., 2021). We then collected and applied a rich behavioral dataset of perceived animacy, real-world size, and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:rCNdntzdTkkC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791451",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "THINGS-drawings: A large-scale dataset containing human sketches of 1,854 object concepts",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5975-5975, 2023",
+            "author": "Judith E Fan and Kushin Mukherjee and Holly Huey and Martin N Hebart and Wilma A Bainbridge",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5975-5975",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "People\u2019s knowledge about objects has traditionally been probed using a combination of feature-listing and rating tasks. However, feature listing fails to capture nuances in what people know about how objects look\u2014their visual knowledge\u2014which cannot easily be described in words. Moreover, rating tasks are limited by the set of attributes that researchers even think to consider. By contrast, freehand sketching provides a way for people to externalize their visual knowledge about objects in an open-ended fashion. As such, sketch behavior provides a versatile substrate for asking a wide range of questions about visual object knowledge that go beyond the scope of a typical study. Here we introduce THINGS-drawings, a new crowdsourced dataset containing multiple freehand sketches of the 1,854 object concepts in the THINGS database (Hebart et al., 2019). THINGS-drawings contains fine-grained information \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:EaFouW7jFu4C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792322",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revealing interpretable object dimensions from a high-throughput model of the fusiform face area",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5356-5356, 2023",
+            "author": "Oliver Contier and Shu Fujimori and Katja Seeliger and N Apurva Ratan Murty and Martin Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5356-5356",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "A central aim of visual neuroscience is to uncover the function of individual visually-responsive brain regions. A hallmark of occipitotemporal cortex is its functional organization into category-selective brain regions, and among these regions, it is well established that fusiform face area (FFA) responds highly selectively to the visual presentation of faces. At the same time, previous research has shown that FFA activity overlaps with several other feature maps that are not face specific, such as animacy, size, or curvature (Long et al., 2017), and FFA has been shown to carry above-chance information about non-face objects (Duchaine & Yovel, 2015). Thus, it remains an open question which other object dimensions may be represented in patterns of FFA responses. Here, we explored this question with a recent high-throughput neural-network model of FFA activity which has been shown to yield excellent predictive \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:x21FZCSn4ZoC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792039",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Uncovering high-level visual cortex preferences by training convolutional neural networks on large neuroimaging data",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5493-5493, 2023",
+            "author": "K Seeliger and R Leipe and J Roth and MN Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5493-5493",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Pretrained task-optimized convolutional neural networks are commonly used to predict brain responses to visual stimuli. Yet, they contain biases introduced by their training dataset and task objective (eg classification). Recent large-scale visual neuroimaging datasets have opened the avenue towards training modern convolutional neural networks with the objective of directly predicting brain responses measured with human neuroimaging data, which allows overcoming these biases. Here, we used the THINGS and the Natural Scenes Datasets\u2013both massive functional MRI datasets acquired during the presentation of object photographs\u2013to identify a suitable neural network architecture from the machine learning community from a set of candidate architectures (ResNet50, VGG-16, CORnet-S, and others) for predicting responses of individual regions in high-level visual cortex. Careful optimization of these \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:QoJ_w57xiyAC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791912",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "cneuromod-things: a large-scale fMRI dataset for task-and data-driven assessment of object representation and visual memory recognition in the human brain",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5424-5424, 2023",
+            "author": "Marie St-Laurent and Basile Pinsard and Oliver Contier and Katja Seeliger and Valentina Borghesani and Julie Boyle and Pierre Bellec and Martin Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5424-5424",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Understanding how the brain represents objects is a transdisciplinary endeavor that benefits from large and comprehensive datasets. The THINGS initiative is a global effort that aims to collect large-scale datasets with diverse neuroimaging techniques and in multiple species to advance our understanding of object processing in the mind and brain. At its core lies the THINGS database, which includes a thoroughly annotated set of images that are unique for their broad and systematic sampling of natural and man-made objects. Contributing to this growing initiative, we present cneuromod-things, an fMRI dataset acquired while four participants each completed between 33 and 36 sessions of a continuous recognition paradigm on thousands of THINGS images. The same~ 4k unique images were shown three times to every participant over the course of the experiment (18 repetitions for each of 720 image categories \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:6VlyvFCUEfcC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791977",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revealing the locus and content of behaviorally relevant information about real-world scenes in human visual cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4712-4712, 2023",
+            "author": "Johannes Singer and Agnessa Karapetian and Martin Hebart and Radoslaw Cichy",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4712-4712",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Scene information can be rapidly categorized and translated into appropriate actions. While there has been substantial progress in understanding how scene information is represented in the brain, it remains unknown to what extent particular scene representations are relevant for decision behavior. To address this question, we recorded fMRI data while human participants (N= 29) viewed manmade and natural scenes and paired it with behavioral data recorded in a separate session from participants (N= 30) performing either a categorization task or an orthogonal task on the same stimuli. In order to identify behaviorally relevant information, we correlated the reaction times (RTs) of individual scenes with the distances of scene-specific fMRI responses to a hyperplane derived from a multivariate pattern classifier. Our findings are threefold. First, we found negative distance-RT correlations for the categorization task in \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:Azgs6IHzeyYC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791785",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Assessing the feasibility of high stimulus presentation rates for contrasting conditions in functional MRI studies",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5070-5070, 2023",
+            "author": "Johannes Roth and Yoichi Miyawaki and Martin N Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5070-5070",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "It is commonly assumed that event-related functional MRI studies of the visual system require slow stimulus presentation rates, with stimuli typically presented every 3-5s. At this rate, the BOLD signal is expected to be linear and can therefore be analyzed in a linear modeling framework. However, this assumption conflicts with recent findings that have successfully mapped the content of video stimuli to brain responses and with other work using more rapidly changing stimuli, suggesting that higher presentation rates may be possible. To address these seemingly conflicting views, we used simulations and measured brain responses with 7 Tesla fMRI (TR= 500ms) to determine the extent to which rapid stimulus presentation is achievable. For fMRI, we varied presentation rates between 0.5 s and 4s and presented observers with images of faces, places, objects, and scrambled objects. Our simulations showed that \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:7Frjd3zlGBUC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791453",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A data-driven investigation of human action representations",
+            "pub_year": 2023,
+            "citation": "Scientific Reports 13 (1), 5171, 2023",
+            "author": "Diana C Dima and Martin N Hebart and Leyla Isik",
+            "journal": "Scientific Reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "5171",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Understanding actions performed by others requires us to integrate different types of information about people, scenes, objects, and their interactions. What organizing dimensions does the mind use to make sense of this complex action space? To address this question, we collected intuitive similarity judgments across two large-scale sets of naturalistic videos depicting everyday actions. We used cross-validated sparse non-negative matrix factorization to identify the structure underlying action similarity judgments. A low-dimensional representation, consisting of nine to ten dimensions, was sufficient to accurately reconstruct human similarity judgments. The dimensions were robust to stimulus set perturbations and reproducible in a separate odd-one-out experiment. Human labels mapped these dimensions onto semantic axes relating to food, work, and home life; social axes relating to people and emotions; and one \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:DXE8ND7PrJAC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-023-32192-5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ZiMKje3GGn8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Three Terms Task-an open benchmark to compare human and artificial semantic representations",
+            "pub_year": 2023,
+            "citation": "Scientific Data 10 (1), 117, 2023",
+            "author": "V Borghesani and J Armoza and Martin N Hebart and P Bellec and SM Brambati",
+            "journal": "Scientific Data",
+            "volume": "10",
+            "number": "1",
+            "pages": "117",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Word processing entails retrieval of a unitary yet multidimensional semantic representation (e.g., a lemon\u2019s colour, flavour, possible use) and has been investigated in both cognitive neuroscience and artificial intelligence. To enable the direct comparison of human and artificial semantic representations, and to support the use of natural language processing (NLP) for computational modelling of human understanding, a critical challenge is the development of benchmarks of appropriate size and complexity. Here we present a dataset probing semantic knowledge with a three-terms semantic associative task: which of two target words is more closely associated with a given anchor (e.g., is lemon closer to squeezer or sour?). The dataset includes both abstract and concrete nouns for a total of 10,107 triplets. For the 2,255 triplets with varying levels of agreement among NLP word embeddings, we additionally collected \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:WwIwg2wKZ0QC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41597-023-02015-3",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:rtU11RZxLSkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revealing interpretable object representations from human visual cortex and artificial neural networks",
+            "pub_year": 2023,
+            "citation": "2023 11th International Winter Conference on Brain-Computer Interface (BCI), 1-3, 2023",
+            "author": "Martin Hebart",
+            "conference": "2023 11th International Winter Conference on Brain-Computer Interface (BCI)",
+            "pages": "1-3",
+            "publisher": "IEEE",
+            "abstract": "Predictive models are often limited by their strong focus on prediction accuracy, leading to potential for shortcut learning and limited out-of-set generalization. Recent interpretability methods have focused primarily on understanding the contribution of individual features or image regions to classification performance, but have placed less emphasis on the larger set of representational motifs that are being learned by predictive models. In this talk, I will highlight recent work from our own group aimed at revealing interpretable object representations from human behavior, patterns of brain activity, and artificial neural networks. Our approach operates at the level of triplet similarities and yields low-dimensional human interpretable embeddings with excellent reconstruction accuracy, providing both perceptual as well as semantic representational dimensions. By providing a trade-off between complexity, interpretability and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:Vr2j17o0sqMC",
+        "num_citations": 0,
+        "pub_url": "https://ieeexplore.ieee.org/abstract/document/10078606/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:yyPcghleNEsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The link between visual representations and behavior in human scene perception",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.08. 17.553708, 2023",
+            "author": "Johannes JD Singer and Agnessa Karapetian and Martin N Hebart and Radoslaw Martin Cichy",
+            "journal": "bioRxiv",
+            "pages": "2023.08. 17.553708",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Scene recognition is a core sensory capacity that enables humans to adaptively interact with their environment. Despite substantial progress in the understanding of the neural representations underlying scene recognition, it remains unknown how these representations translate into behavior given different task demands. To address this, we aimed to identify behaviorally relevant scene representations, to characterize them in terms of their underlying visual features, and to reveal how they vary given different tasks. We recorded fMRI data while human participants viewed manmade and natural scenes and linked brain responses to behavior in one of two tasks acquired in a separate set of subjects: a manmade/natural categorization task or an orthogonal task on fixation. First, we found correlations between scene categorization response times (RTs) and scene-specific brain responses, quantified as the distance to a hyperplane derived from a multivariate classifier, in occipital and ventral-temporal, but not parahippocampal cortex. This suggests that representations in early visual and object-selective cortex are relevant for scene categorization. Next, we revealed that mid-level visual features, as quantified using deep convolutional neural networks, best explained the relationship between scene representations and behavior, indicating that these features are read out in scene categorization. Finally, we observed opposite patterns of correlations between brain responses and RTs in the categorization and orthogonal task, suggesting a critical influence of task on the behavioral relevance of scene representations. Together, these results reveal the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:KS-xo-ZNxMsC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.17.553708.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Interpretable object dimensions in deep neural networks and their similarities to human representations",
+            "pub_year": 2022,
+            "citation": "Journal of Vision 22 (14), 4516-4516, 2022",
+            "author": "Lukas Muttenthaler and Martin N Hebart",
+            "journal": "Journal of Vision",
+            "volume": "22",
+            "number": "14",
+            "pages": "4516-4516",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Convolutional neural networks (CNNs) have recently received a lot of attention in the vision sciences as candidate models of core visual object recognition. At the behavioral level, these models show near-human object classification performance, allow for oftentimes excellent prediction of object-related choices, and explain significant proportions of variance in object similarity judgments. Despite these parallels, CNNs continue to exhibit a performance gap in explaining object-based representations and behavior. Here we aimed at identifying what factors determine the similarities and differences between CNN and human object representations. Paralleling object similarity judgments in humans, we generated 20 million in-silico triplet odd-one-out choices on 22,248 natural object images, using the penultimate layer activations of a pretrained VGG-16 model. Next, we applied a gradient-based similarity embedding \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:nPTYJWkExTIC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2785038",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The effect of downsampling neural network activation patterns for improving their correspondence with brains and behavior",
+            "pub_year": 2022,
+            "citation": "Journal of Vision 22 (14), 3241-3241, 2022",
+            "author": "Yuxuan Dai and Martin N Hebart",
+            "journal": "Journal of Vision",
+            "volume": "22",
+            "number": "14",
+            "pages": "3241-3241",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Convolutional neural networks (CNNs) have been shown to bear representational similarities to neural activity patterns and behavior in response to visual stimuli, indicating their potential as computational models of visual processing. Typically, for a given convolutional layer in a CNN, feature maps are concatenated before comparing them with brains and behavior. However, feature maps contain a lot of redundant information, leaving open the question to what degree they can be reduced without losing information. Since feature maps contain spatial information, downsampling can reveal what level of spatial detail is required for comparisons to brains and behavior. Across numerous datasets, we evaluated how downsampling affects the correspondence between CNNs and human behavioral, fMRI, and MEG responses, using representational similarity analysis. Results show that in many cases, downsampling \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:jlhcAiayVhoC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2784070",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The role of gaze position in training visual brain encoders on free-viewing data",
+            "pub_year": 2022,
+            "citation": "Journal of Vision 22 (14), 4091-4091, 2022",
+            "author": "Marie St-Laurent and Katja Seeliger and Martin Hebart",
+            "journal": "Journal of Vision",
+            "volume": "22",
+            "number": "14",
+            "pages": "4091-4091",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Brain-encoding models can be trained to learn the correspondence between visual stimuli and the brain\u2019s response to those stimuli. To learn meaningful visual features, input images are commonly aligned with the participant\u2019s fovea, which complicates the use of training data acquired with free-viewing paradigms. Here, we tested whether an end-to-end brain encoder could be trained on movie-viewing fMRI data without requiring gaze fixation or image recentering. We trained a Neural Information Flow (NIF) model to predict responses in brain areas V1, V2, V3, hV4, V3a and V3b using data from a subject who watched 3 seasons of the sitcom Friends, from the Courtois-Neuromod project. With video stimuli as input, NIF couples brain areas with tensors that encode spatiotemporal features represented in its activity. As no eye-tracking data were acquired during viewing time, gaze position over movie frames was \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:1r-w4gtu6w8C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2784951",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Distributed representation of behaviorally-relevant object dimensions in the human brain",
+            "pub_year": 2022,
+            "citation": "Journal of Vision 22 (14), 3951-3951, 2022",
+            "author": "Oliver Contier and Martin N Hebart",
+            "journal": "Journal of Vision",
+            "volume": "22",
+            "number": "14",
+            "pages": "3951-3951",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "How does the human brain represent the behavioral significance of everyday objects? Previous research has focused on perceived similarity to compare object representations in brain and behavior. However, the similarity between objects could in principle be attributed to an unknown number of behaviorally-relevant object dimensions, and a focus on global similarity may obscure the fine-grained nature of brain-behavior correlations specific to individual dimensions. To address these challenges, here we targeted the relationship of brain activity and 49 interpretable object dimensions underlying human similarity judgments. We fit a voxel-wise encoding model on a large-scale fMRI dataset where three participants each saw 8740 unique images of 720 objects from the THINGS database. The model fit revealed highly distributed representations of object dimensions spanning across all regions of the visual system \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:4Yq6kJLCcecC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2784518",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What kinds of THINGS are SSVEPs (not) measuring?",
+            "pub_year": 2022,
+            "citation": "PERCEPTION 51, 79-80, 2022",
+            "author": "Helene Devillez and Bjorg Kara Elefsen and Lara Margret Palsdottir and Isabella Sigurdardottir and Martin N Hebart and Heida Maria Sigurdardottir",
+            "conference": "PERCEPTION",
+            "volume": "51",
+            "pages": "79-80",
+            "publisher": "SAGE PUBLICATIONS LTD"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:lg2tdxc6qMwC",
+        "num_citations": 0,
+        "pub_url": "https://scholar.google.com/scholar?cluster=1042256139226271541&hl=en&oi=scholarr",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Learning Cortical Magnification with Brain-Optimized Convolutional Neural Networks",
+            "pub_year": 2022,
+            "citation": "Conference on Cognitive Computational Neuroscience, 2022",
+            "author": "Florian Mahner and Katja Seeliger and G\u00fccl\u00fc Umut and Martin N Hebart",
+            "conference": "Conference on Cognitive Computational Neuroscience",
+            "abstract": "Computational modeling of visual information processing can lead to important new insights about the function of visual cortex. Here we asked whether we can build a proof-of-concept model that implicitly learns known cortical organization principles. We chose cortical magnification, which refers to the fact that more cortical tissue is dedicated to the processing of the foveal as compared to peripheral visual field. We built a brain-optimized convolutional neural network model trained to predict brain activity across twelve retinotopic regions as measured with functional MRI. We treated cortical magnification as a free parameter, using multivariate Gaussian distributions acting on the network\u2019s feature representations. Our results demonstrate that cortical magnification can, indeed, be learned implicitly, demonstrating the general feasibility of our computational modeling approach."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:JWITY9-sCbMC",
+        "num_citations": 0,
+        "pub_url": "https://2022.ccneuro.org/proceedings/0000303.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:jWoFRuIT_EEJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The THINGS initiative: A global large-scale effort for the representative study of objects in brains, behavior, and computational models",
+            "pub_year": 2022,
+            "citation": "47. Jahrestagung Psychologie und Gehirn 2022, 2022",
+            "author": "Martin N Hebart and Oliver Contier and CI Baker and L Teichmann",
+            "conference": "47. Jahrestagung Psychologie und Gehirn 2022",
+            "abstract": "The THINGS initiative: A global large-scale effort for the representative study of objects in \nbrains, behavior, and computational models :: MPG.PuRe Deutsch Hilfe \nDatenschutzhinweis Impressum Volltexte einbeziehen DetailsucheBrowse START ABLAGE \n(0)Werkzeuge Datensatz DATENSATZ AKTIONENEXPORT Zur Ablage hinzuf\u00fcgen Lokale \nTagsFreigabegeschichteDetails\u00dcbersicht Freigegeben Poster The THINGS initiative: A \nglobal large-scale effort for the representative study of objects in brains, behavior, and \ncomputational models MPG-Autoren /persons/resource/persons242545 Hebart, Martin N. \nMax Planck Research Group Vision and Computational Cognition, MPI for Human \nCognitive and Brain Sciences, Max Planck Society; /persons/resource/persons266000 \nContier, Oliver Max Planck Research Group Vision and Computational Cognition, MPI for \nHuman Cognitive and Brain Sciences, Max Planck \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:QVtou7C4vgoC",
+        "num_citations": 0,
+        "pub_url": "https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_3424129",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Preferred stimuli for individual voxels in the human visual system",
+            "pub_year": 2021,
+            "citation": "2021 Computational and Systems Neuroscience (Cosyne), 2021",
+            "author": "J Roth and Katja Seeliger and T Schmid and Martin N Hebart",
+            "conference": "2021 Computational and Systems Neuroscience (Cosyne)",
+            "abstract": "Preferred stimuli for individual voxels in the human visual system :: MPG.PuRe English Help \nPrivacy Policy Disclaimer Include files Advanced SearchBrowse START BASKET (0)Tools \nItem ITEM ACTIONSEXPORT Add to Basket Local TagsRelease HistoryDetailsSummary \nReleased Poster Preferred stimuli for individual voxels in the human visual system MPS-Authors \n/persons/resource/persons281113 Seeliger, Katja Max Planck Research Group Vision and \nComputational Cognition, MPI for Human Cognitive and Brain Sciences, Max Planck Society; \n/persons/resource/persons242545 Hebart, Martin N. Max Planck Research Group Vision and \nComputational Cognition, MPI for Human Cognitive and Brain Sciences, Max Planck Society; \nExternal Resource No external resources are shared Fulltext (restricted access) There are \ncurrently no full texts shared for your IP range. Fulltext (public) There are no public fulltexts \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:R-LXmdHK_14C",
+        "num_citations": 0,
+        "pub_url": "https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_3478509",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Current topics in computational cognitive neuroscience",
+            "pub_year": 2020,
+            "citation": "Neuropsychologia 147, 107621, 2020",
+            "author": "Martin N Hebart and Nicolas W Schuck",
+            "volume": "147",
+            "pages": "107621",
+            "abstract": "Current topics in Computational Cognitive Neuroscience Current topics in Computational \nCognitive Neuroscience Neuropsychologia. 2020 Oct;147:107621. doi: 10.1016/j.neuropsychologia.2020.107621. \nEpub 2020 Sep 6. Authors Martin N Hebart 1 , Nicolas W Schuck 2 Affiliations 1 Vision and \nComputational Cognition Group, Max Planck Institute for Human Cognitive and Brain \nSciences, 04103, Leipzig, Germany. Electronic address: hebart@cbs.mpg.de. 2 Max Planck \nResearch Group NeuroCode, Max Planck Institute for Human Development, 14195, Berlin, \nGermany; Max Planck UCL Centre for Computational Psychiatry and Ageing Research, \n14195, Berlin, Germany. Electronic address: schuck@mpib-berlin.mpg.de. PMID: 32898518 \nDOI: 10.1016/j.neuropsychologia.2020.107621 No abstract available Publication types \nEditorial Introductory Journal Article Research Support, Non-US Gov't MeSH terms Cognition \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:4aZ_i-5WJEQC",
+        "num_citations": 0,
+        "pub_url": "https://pubmed.ncbi.nlm.nih.gov/32898518/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:syPn_ls709EJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The effect of task on categorization behavior and its relationship to brain and deep neural networks",
+            "pub_year": 2018,
+            "citation": "Journal of Vision 18 (10), 395-395, 2018",
+            "author": "Martin Hebart and Charles Zheng and Chris Baker",
+            "journal": "Journal of Vision",
+            "volume": "18",
+            "number": "10",
+            "pages": "395-395",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "A key objective in neuroscience is to understand how brains produce behavior. For the visual processing of objects, one approach is to relate categorization behavior to object representations at different cortical processing stages. A popular method to assess behavior is the object arrangement task, in which participants arrange objects in a 2D\" arena\" based on their relative similarity. While this method is efficient in producing representational dissimilarity matrices (RDMs) and is well-suited for uncovering low-dimensional representations or clearly defined clusters, it is prone to contextual biases and may be suboptimal for higher-dimensional or more continuous representations. Here we investigate the triplet task as an alternative approach for studying behavioral similarity. In this task, on each trial a participant has to choose an\" odd-one out\" from a set of three stimuli, yielding three binary similarity measures per \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:mWEH9CqjF64C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2699387",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A Neuro-Computational Characterization of Theory of Mind Processes during Cooperative Interaction",
+            "citation": "",
+            "author": "Tessa Rusch and Prashant Doshi and Martin Hebart and Saurabh Kumar and Michael Spezio and Jan Gl\u00e4scher",
+            "abstract": "Humans are distinctly skilled at cooperation. To successfully engage with others they apply Theory of Mind (ToM). Here, we investigate neuro-computational mechanisms underlying ToM during real-time dyadic coordination in a probabilistic social decision game. To effectively coordinate participants have to represent the surrounding they interacted in and simultaneously simulate their partner\u2019s representation of the world. These cognitive computations are formalized with a decision framework that combines decision-making under uncertainty with intentional models of other agents. Using model-based EEG analyses, we identify oscillatory signals related to errors experienced by players when own expectations towards the surroundings are violated and simulations of errors experienced by the partner when the partner\u2019s predictions fail. Consistent with previous studies, we find positive correlations between power in frontal delta and theta oscillations and experienced errors. Most strikingly, these signals are also found in relation to simulations of the partner\u2019s error, at times when participants themselves experience no prediction error themselves. These findings unveil the neural signature of a crucial computational component of the mental model of a partner and demonstrate that the brain recruits similar mechanisms for simulation the decisions of others as for computing one\u2019s own decision."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:KWzIFqRkAKkC",
+        "num_citations": 0,
+        "pub_url": "https://ccneuro.org/2019/proceedings/0000243.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:8C_u8LW_8cIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Modeling models of others\u2019 mental states: characterizing Theory of Mind during cooperative interaction",
+            "citation": "",
+            "author": "Tessa Rusch and Prashant Doshi and Martin Hebart and Saurabh Kumar and Michael Spezio and Jan Gl\u00e4scher",
+            "abstract": "Humans are experts in cooperation. To effectively engage with others they have to apply Theory of Mind (ToM), that is they have to model others beliefs, desires, and intentions and predict their behavior from these mental states. Here, we investigate ToM processes during real-time reciprocal coordination between two players engaging in a cooperative decision game. The game consists of a noisy and unstable environment. To succeed participants have to model the state of the world and their partner\u2019s belief about it and integrate both pieces of information into a coherent decision. Thereby the game combines social and non-social learning into a single decision problem. To quantify the learning processes underlying participants\u2019 actions, we modeled the behavior with Interactive Partially Observable Markov Decisions Processes (I-POMDP). The I-POMDP framework extends single agent action planning under \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:tHtfpZlB6tUC",
+        "num_citations": 0,
+        "pub_url": "https://scholar.google.com/scholar?cluster=7612868553126098368&hl=en&oi=scholarr",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:wLXSRp1XpmkJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

@@ -19,10 +19,11 @@ from log_config import MIN, STANDARD
 DEBUG_FLAG = False
 
 # Configure logging
+logging.basicConfig(level=STANDARD)
+
 if DEBUG_FLAG:
     logging.basicConfig(level=STANDARD)
-else:
-    logging.basicConfig(level=MIN)
+
     
 def get_args():
     """
@@ -80,10 +81,10 @@ def main():
     # Reconfigure logging based on DEBUG_FLAG's value
     if DEBUG_FLAG:
         logging.basicConfig(level=STANDARD)
-        logging.log(STANDARD, "Debug mode activated.")
+        logging.log(STANDARD, "Debug log mode activated.")
     else:
         logging.basicConfig(level=MIN)
-        logging.log(MIN, "Standard mode activated.")
+        logging.log(MIN, "Minimal log mode activated.")
 
     # Sync the DEBUG_FLAG's value with the fetch_scholar module
     set_debug(DEBUG_FLAG)

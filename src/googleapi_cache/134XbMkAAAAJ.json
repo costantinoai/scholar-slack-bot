@@ -1,0 +1,148 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Using artificial neural networks to ask \u2018why\u2019 questions of minds and brains",
+            "pub_year": 2023,
+            "citation": "Trends in Neurosciences, 2023",
+            "author": "Nancy Kanwisher and Meenakshi Khosla and Katharina Dobs",
+            "publisher": "Elsevier Current Trends",
+            "abstract": "Neuroscientists have long characterized the properties and functions of the nervous system, and are increasingly succeeding in answering how brains perform the tasks they do. But the question \u2018why' brains work the way they do is asked less often. The new ability to optimize artificial neural networks (ANNs) for performance on human-like tasks now enables us to approach these \u2018why' questions by asking when the properties of networks optimized for a given task mirror the behavioral and neural characteristics of humans performing the same task. Here we highlight the recent success of this strategy in explaining why the visual and auditory systems work the way they do, at both behavioral and neural levels."
+        },
+        "filled": true,
+        "author_pub_id": "134XbMkAAAAJ:9ZlFYXVOiuMC",
+        "num_citations": 24,
+        "citedby_url": "/scholar?hl=en&cites=16034293729654481844",
+        "cites_id": [
+            "16034293729654481844"
+        ],
+        "pub_url": "https://www.cell.com/trends/neurosciences/fulltext/S0166-2236(22)00262-4?dgcid=raven_jbs_etoc_email",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:tCNUnDFBhd4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 22
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "CNNs reveal the computational implausibility of the expertise hypothesis",
+            "pub_year": 2023,
+            "citation": "Iscience 26 (2), 2023",
+            "author": "Nancy Kanwisher and Pranjul Gupta and Katharina Dobs",
+            "journal": "Iscience",
+            "volume": "26",
+            "number": "2",
+            "publisher": "Elsevier",
+            "abstract": "Face perception has long served as a classic example of domain specificity of mind and brain. But an alternative \"expertise\" hypothesis holds that putatively face-specific mechanisms are actually domain-general, and can be recruited for the perception of other objects of expertise (e.g., cars for car experts). Here, we demonstrate the computational implausibility of this hypothesis: Neural network models optimized for generic object categorization provide a better foundation for expert fine-grained discrimination than do models optimized for face recognition."
+        },
+        "filled": true,
+        "author_pub_id": "134XbMkAAAAJ:mVmsd5A6BfQC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=15203082623615532629",
+        "cites_id": [
+            "15203082623615532629"
+        ],
+        "pub_url": "https://www.cell.com/iscience/pdf/S2589-0042(23)00053-6.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VX6Exxgz_NIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Behavioral signatures of face perception emerge in deep neural networks optimized for face recognition",
+            "pub_year": 2023,
+            "citation": "Proceedings of the National Academy of Sciences 120 (32), e2220642120, 2023",
+            "author": "Katharina Dobs and Joanne Yuan and Julio Martinez and Nancy Kanwisher",
+            "journal": "Proceedings of the National Academy of Sciences",
+            "volume": "120",
+            "number": "32",
+            "pages": "e2220642120",
+            "publisher": "National Academy of Sciences",
+            "abstract": "Human face recognition is highly accurate and exhibits a number of distinctive and well-documented behavioral \u201csignatures\u201d such as the use of a characteristic representational space, the disproportionate performance cost when stimuli are presented upside down, and the drop in accuracy for faces from races the participant is less familiar with. These and other phenomena have long been taken as evidence that face recognition is \u201cspecial\u201d. But why does human face perception exhibit these properties in the first place? Here, we use deep convolutional neural networks (CNNs) to test the hypothesis that all of these signatures of human face perception result from optimization for the task of face recognition. Indeed, as predicted by this hypothesis, these phenomena are all found in CNNs trained on face recognition, but not in CNNs trained on object recognition, even when additionally trained to detect faces while \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "134XbMkAAAAJ:ZeXyd9-uunAC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=3262598981256413444,18368593613170745709",
+        "cites_id": [
+            "3262598981256413444",
+            "18368593613170745709"
+        ],
+        "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2220642120",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BAFXynwURy0J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Models of vision need some action",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Constantin Rothkopf and Frank Bremmer and Katja Fiehler and Katharina Dobs and Jochen Triesch",
+            "publisher": "PsyArXiv",
+            "abstract": "Bowers et al. focus their criticisms on research that compares behavioral and brain data from the ventral stream with a class of deep neural networks for object recognition. While they are right to identify issues with current benchmarking research programs, they overlook a much more fundamental limitation of this literature: disregarding the importance of action and interaction for perception."
+        },
+        "filled": true,
+        "author_pub_id": "134XbMkAAAAJ:hC7cP41nSMkC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=13975233778654291249",
+        "cites_id": [
+            "13975233778654291249"
+        ],
+        "pub_url": "https://psyarxiv.com/yhn26/download?format=pdf",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Using deep neural networks to test possible origins of human face perception",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4678-4678, 2023",
+            "author": "Katharina Dobs",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4678-4678",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Human face recognition is highly accurate, and exhibits a number of distinctive and well documented behavioral and neural\" signatures\" such as the face-inversion effect, the other-race effect and neural specialization for faces. How does the remarkable human ability of face recognition arise in development? Is experience with faces required, and if so, what kind of experience? We cannot straightforwardly manipulate visual experience during development in humans, but we can ask what is possible in machines. Here, I will present our work testing whether convolutional neural networks (CNNs) optimized on different tasks with varying visual experience capture key aspects of human face perception. We find that only face-trained\u2013not object-trained or untrained\u2013CNNs achieved human-level performance on face recognition and exhibited behavioral signatures of human face perception. Moreover, these signatures \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "134XbMkAAAAJ:qUcmZB5y_30C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791816",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Scene Previews Facilitate Face Detection Behavior",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5382-5382, 2023",
+            "author": "Sule Tasliyurt Celebi and Benjamin de Haas and Katharina Dobs",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5382-5382",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Humans are incredibly fast and accurate in detecting faces across different scene contexts. While scene information has been shown to affect object detection, it is unclear whether it also modulates the rapid detection of faces. To find out, we presented participants (n= 18) with 200 natural target scenes and recorded their eye movements during a face detection task. Each target scene came from a different natural indoor setting (eg, bathroom, basement) and contained a single face. For each scene, we created a corresponding face-less version by manually editing the image. Prior to each target scene, participants either saw an initial preview of the face-less version or a gray screen (no preview) for 250ms. Which half of the images was shown with preview was counterbalanced across participants. We found that participants\u2019 first saccade on the face was earlier in the face-less scene preview compared to the no \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "134XbMkAAAAJ:IWHjjKOFINEC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792017",
+        "cites_per_year": {}
+    }
+]

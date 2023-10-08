@@ -1,0 +1,814 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The neuroconnectionist research programme",
+            "pub_year": 2023,
+            "citation": "Nature Reviews Neuroscience, 1-20, 2023",
+            "author": "Adrien Doerig and Rowan P Sommers and Katja Seeliger and Blake Richards and Jenann Ismael and Grace W Lindsay and Konrad P Kording and Talia Konkle and Marcel AJ Van Gerven and Nikolaus Kriegeskorte and Tim C Kietzmann",
+            "pages": "1-20",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Artificial neural networks (ANNs) inspired by biology are beginning to be widely used to model behavioural and neural data, an approach we call \u2018neuroconnectionism\u2019. ANNs have been not only lauded as the current best models of information processing in the brain but also criticized for failing to account for basic cognitive functions. In this Perspective article, we propose that arguing about the successes and failures of a restricted set of current ANNs is the wrong approach to assess the promise of neuroconnectionism for brain science. Instead, we take inspiration from the philosophy of science, and in particular from Lakatos, who showed that the core of a scientific research programme is often not directly falsifiable but should be assessed by its capacity to generate novel insights. Following this view, we present neuroconnectionism as a general research programme centred around ANNs as a computational \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:M3ejUd6NZC8C",
+        "num_citations": 18,
+        "citedby_url": "/scholar?hl=en&cites=3334113232536501466",
+        "cites_id": [
+            "3334113232536501466"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41583-023-00705-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2nxE8lEmRS4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 3,
+            "2023": 15
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Consciousness in artificial intelligence: Insights from the Science of consciousness",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2308.08708, 2023",
+            "author": "Patrick Butlin and Robert Long and Eric Elmoznino and Yoshua Bengio and Jonathan Birch and Axel Constant and George Deane and Stephen M Fleming and Chris Frith and Xu Ji and Ryota Kanai and Colin Klein and Grace Lindsay and Matthias Michel and Liad Mudrik and Megan AK Peters and Eric Schwitzgebel and Jonathan Simon and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2308.08708",
+            "abstract": "Whether current or near-term AI systems could be conscious is a topic of scientific interest and increasing public concern. This report argues for, and exemplifies, a rigorous and empirically grounded approach to AI consciousness: assessing existing AI systems in detail, in light of our best-supported neuroscientific theories of consciousness. We survey several prominent scientific theories of consciousness, including recurrent processing theory, global workspace theory, higher-order theories, predictive processing, and attention schema theory. From these theories we derive \"indicator properties\" of consciousness, elucidated in computational terms that allow us to assess AI systems for these properties. We use these indicator properties to assess several recent AI systems, and we discuss how future systems might implement them. Our analysis suggests that no current AI systems are conscious, but also suggests that there are no obvious technical barriers to building AI systems which satisfy these indicators."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:mVmsd5A6BfQC",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=8239061011717183910",
+        "cites_id": [
+            "8239061011717183910"
+        ],
+        "pub_url": "https://arxiv.org/abs/2308.08708",
+        "cites_per_year": {
+            "2023": 6
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Testing methods of neural systems understanding",
+            "pub_year": 2023,
+            "citation": "Cognitive Systems Research 82, 101156, 2023",
+            "author": "Grace W Lindsay and David Bau",
+            "journal": "Cognitive Systems Research",
+            "volume": "82",
+            "pages": "101156",
+            "publisher": "Elsevier",
+            "abstract": "Neuroscientists apply a range of analysis tools to recorded neural activity in order to glean insights into how neural circuits drive behavior in organisms. Despite the fact that these tools shape the progress of the field as a whole, we have little empirical proof that they are effective at identifying the mechanisms of interest. At the same time, deep learning systems are trained to produce intelligent behavior using neural networks, and the resulting models are impressive but also largely impenetrable. Can the tools of neuroscience be applied to artificial neural networks (ANNs) and if so what would this process tell us about ANNs, brains, and \u2013 most importantly \u2013 the tools themselves? Here we argue that applying analysis methods from neuroscience to ANNs will provide a much-needed test of the abilities of these tools. It would also encourage the development of a unified field of neural systems understanding, which can \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:Wp0gIr-vW9MC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1389041723000906",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deep neural networks are not a single hypothesis but a language for expressing computational hypotheses",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Tal Golan and JohnMark Taylor and Heiko Sch\u00fctt and Benjamin Peters and Rowan Paolo Sommers and Katja Seeliger and Adrien Doerig and Paul Linton and Talia Konkle and Marcel van Gerven and Konrad Kording and Blake Richards and Tim Christian Kietzmann and Grace W Lindsay and Nikolaus Kriegeskorte",
+            "publisher": "PsyArXiv",
+            "abstract": "An ideal vision model accounts for behavior and neurophysiology in both naturalistic conditions and designed lab experiments. Unlike psychological theories, artificial neural networks (ANNs) actually perform visual tasks and generate testable predictions for arbitrary inputs. These advantages enable ANNs to engage the entire spectrum of the evidence. Failures of particular models drive progress in a vibrant ANN research program of human vision."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:aqlVkmm33-oC",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/tr7gx/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1VpvSvB-icIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A deep learning framework for neuroscience",
+            "pub_year": 2019,
+            "citation": "Nature neuroscience 22 (11), 1761-1770, 2019",
+            "author": "Blake A Richards and Timothy P Lillicrap and Philippe Beaudoin and Yoshua Bengio and Rafal Bogacz and Amelia Christensen and Claudia Clopath and Rui Ponte Costa and Archy de Berker and Surya Ganguli and Colleen J Gillon and Danijar Hafner and Adam Kepecs and Nikolaus Kriegeskorte and Peter Latham and Grace W Lindsay and Kenneth D Miller and Richard Naud and Christopher C Pack and Panayiota Poirazi and Pieter Roelfsema and Jo\u00e3o Sacramento and Andrew Saxe and Benjamin Scellier and Anna C Schapiro and Walter Senn and Greg Wayne and Daniel Yamins and Friedemann Zenke and Joel Zylberberg and Denis Therien and Konrad P Kording",
+            "volume": "22",
+            "number": "11",
+            "pages": "1761-1770",
+            "publisher": "Nature Publishing Group US",
+            "abstract": "Systems neuroscience seeks explanations for how the brain implements a wide variety of perceptual, cognitive and motor tasks. Conversely, artificial intelligence attempts to design computational systems based on the tasks they will have to solve. In artificial neural networks, the three components specified by design are the objective functions, the learning rules and the architectures. With the growing success of deep learning, which utilizes brain-inspired architectures, these three designed components have increasingly become central to how we model, engineer and optimize complex artificial learning systems. Here we argue that a greater focus on these components would also benefit systems neuroscience. We give examples of how this optimization-based framework can drive theoretical and experimental progress in neuroscience. We contend that this principled perspective on systems neuroscience will help \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:_FxGoFyzp5QC",
+        "num_citations": 737,
+        "citedby_url": "/scholar?hl=en&cites=7725910890799986835",
+        "cites_id": [
+            "7725910890799986835"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41593-019-0520-2",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:k3h0hAXzN2sJ:scholar.google.com/",
+        "cites_per_year": {
+            "2019": 12,
+            "2020": 104,
+            "2021": 223,
+            "2022": 218,
+            "2023": 174
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Convolutional neural networks as a model of the visual system: Past, present, and future",
+            "pub_year": 2021,
+            "citation": "Journal of cognitive neuroscience 33 (10), 2017-2031, 2021",
+            "author": "Grace W Lindsay",
+            "volume": "33",
+            "number": "10",
+            "pages": "2017-2031",
+            "publisher": "MIT Press",
+            "abstract": "Convolutional neural networks (CNNs) were inspired by early findings in the study of biological vision. They have since become successful tools in computer vision and state-of-the-art models of both neural activity and behavior on visual tasks. This review highlights what, in the context of CNNs, it means to be a good model in computational neuroscience and the various ways models can provide insight. Specifically, it covers the origins of CNNs and the methods by which we validate them as models of biological vision. It then goes on to elaborate on what we can learn about biological vision by understanding and experimenting on CNNs and discusses emerging opportunities for the use of CNNs in vision research beyond basic object recognition."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:roLk4NBRz8UC",
+        "num_citations": 380,
+        "citedby_url": "/scholar?hl=en&cites=5433304679135869108",
+        "cites_id": [
+            "5433304679135869108"
+        ],
+        "pub_url": "https://direct.mit.edu/jocn/article-abstract/33/10/2017/97402",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:tHhcnNH5ZksJ:scholar.google.com/",
+        "cites_per_year": {
+            "2020": 35,
+            "2021": 79,
+            "2022": 146,
+            "2023": 116
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Parallel processing by cortical inhibition enables context-dependent behavior",
+            "pub_year": 2017,
+            "citation": "Nature Neuroscience 20 (1), 62-71, 2017",
+            "author": "Kishore V Kuchibhotla and Jonathon V Gill and Grace W Lindsay and Eleni S Papadoyannis and Rachel E Field and Tom A Hindmarsh Sten and Kenneth D Miller and Robert C Froemke",
+            "journal": "Nature Neuroscience",
+            "volume": "20",
+            "number": "1",
+            "pages": "62-71",
+            "abstract": "Physical features of sensory stimuli are fixed, but sensory perception is context dependent. The precise mechanisms that govern contextual modulation remain unknown. Here, we trained mice to switch between two contexts: passively listening to pure tones and performing a recognition task for the same stimuli. Two-photon imaging showed that many excitatory neurons in auditory cortex were suppressed during behavior, while some cells became more active. Whole-cell recordings showed that excitatory inputs were affected only modestly by context, but inhibition was more sensitive, with PV+, SOM+, and VIP+ interneurons balancing inhibition and disinhibition within the network. Cholinergic modulation was involved in context switching, with cholinergic axons increasing activity during behavior and directly depolarizing inhibitory cells. Network modeling captured these findings, but only when modulation \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:u5HHmVD_uO8C",
+        "num_citations": 301,
+        "citedby_url": "/scholar?hl=en&cites=15717899631250225413",
+        "cites_id": [
+            "15717899631250225413"
+        ],
+        "pub_url": "https://www.nature.com/articles/nn.4436",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BbnpB3AyIdoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2016": 1,
+            "2017": 30,
+            "2018": 46,
+            "2019": 47,
+            "2020": 48,
+            "2021": 49,
+            "2022": 54,
+            "2023": 26
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Attention in psychology, neuroscience, and machine learning",
+            "pub_year": 2020,
+            "citation": "Frontiers in computational neuroscience 14, 29, 2020",
+            "author": "Grace W Lindsay",
+            "volume": "14",
+            "pages": "29",
+            "publisher": "Frontiers Media SA",
+            "abstract": "Attention is the important ability to flexibly control limited computational resources. It has been studied in conjunction with many other topics in neuroscience and psychology including awareness, vigilance, saliency, executive control, and learning. It has also recently been applied in several domains in machine learning. The relationship between the study of biological attention and its use as a tool to enhance artificial neural networks is not always clear. This review starts by providing an overview of how attention is conceptualized in the neuroscience and psychology literature. It then covers several use cases of attention in machine learning, indicating their biological counterparts where they exist. Finally, the ways in which artificial attention can be further inspired by biology for the production of complex and integrative systems is explored."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:0EnyYjriUFMC",
+        "num_citations": 192,
+        "citedby_url": "/scholar?hl=en&cites=5113972998818479353,6632781942749314308",
+        "cites_id": [
+            "5113972998818479353",
+            "6632781942749314308"
+        ],
+        "pub_url": "https://www.frontiersin.org/articles/10.3389/fncom.2020.00029/full",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-byD8Vh7-EYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2019": 1,
+            "2020": 13,
+            "2021": 39,
+            "2022": 75,
+            "2023": 63
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How biological attention mechanisms improve task performance in a large-scale visual system model",
+            "pub_year": 2018,
+            "citation": "eLife 7, e38105, 2018",
+            "author": "Grace W Lindsay and Kenneth D Miller",
+            "journal": "eLife",
+            "volume": "7",
+            "pages": "e38105",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "How does attentional modulation of neural activity enhance performance? Here we use a deep convolutional neural network as a large-scale model of the visual system to address this question. We model the feature similarity gain model of attention, in which attentional modulation is applied according to neural stimulus tuning. Using a variety of visual tasks, we show that neural modulations of the kind and magnitude observed experimentally lead to performance changes of the kind and magnitude observed experimentally. We find that, at earlier layers, attention applied according to tuning does not successfully propagate through the network, and has a weaker impact on performance than attention applied according to values computed for optimally modulating higher areas. This raises the question of whether biological attention might be applied at least in part to optimize function rather than strictly according to tuning. We suggest a simple experiment to distinguish these alternatives."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:Y0pCki6q_DkC",
+        "num_citations": 77,
+        "citedby_url": "/scholar?hl=en&cites=15150561091364056899,6822258242216427719",
+        "cites_id": [
+            "15150561091364056899",
+            "6822258242216427719"
+        ],
+        "pub_url": "https://elifesciences.org/articles/38105",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Q--bngqbQdIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2018": 2,
+            "2019": 9,
+            "2020": 19,
+            "2021": 14,
+            "2022": 18,
+            "2023": 15
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Hebbian learning in a random network captures selectivity properties of the prefrontal cortex",
+            "pub_year": 2017,
+            "citation": "Journal of Neuroscience 37 (45), 11021-11036, 2017",
+            "author": "Grace W Lindsay and Mattia Rigotti and Melissa R Warden and Earl K Miller and Stefano Fusi",
+            "journal": "Journal of Neuroscience",
+            "volume": "37",
+            "number": "45",
+            "pages": "11021-11036",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Complex cognitive behaviors, such as context-switching and rule-following, are thought to be supported by the prefrontal cortex (PFC). Neural activity in the PFC must thus be specialized to specific tasks while retaining flexibility. Nonlinear \u201cmixed\u201d selectivity is an important neurophysiological trait for enabling complex and context-dependent behaviors. Here we investigate (1) the extent to which the PFC exhibits computationally relevant properties, such as mixed selectivity, and (2) how such properties could arise via circuit mechanisms. We show that PFC cells recorded from male and female rhesus macaques during a complex task show a moderate level of specialization and structure that is not replicated by a model wherein cells receive random feedforward inputs. While random connectivity can be effective at generating mixed selectivity, the data show significantly more mixed selectivity than predicted by a \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:qjMakFHDy7sC",
+        "num_citations": 43,
+        "citedby_url": "/scholar?hl=en&cites=4439985707660068158",
+        "cites_id": [
+            "4439985707660068158"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/37/45/11021.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:PsXjIHr_nT0J:scholar.google.com/",
+        "cites_per_year": {
+            "2018": 4,
+            "2019": 3,
+            "2020": 15,
+            "2021": 7,
+            "2022": 9,
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Models of the mind: how physics, engineering and mathematics have shaped our understanding of the brain",
+            "pub_year": 2021,
+            "citation": "Bloomsbury Publishing, 2021",
+            "author": "Grace Lindsay",
+            "publisher": "Bloomsbury Publishing",
+            "abstract": "The human brain is made up of 85 billion neurons, which are connected by over 100 trillion synapses. For more than a century, a diverse array of researchers searched for a language that could be used to capture the essence of what these neurons do and how they communicate\u2013and how those communications create thoughts, perceptions and actions. The language they were looking for was mathematics, and we would not be able to understand the brain as we do today without it. In Models of the Mind, author and computational neuroscientist Grace Lindsay explains how mathematical models have allowed scientists to understand and describe many of the brain's processes, including decision-making, sensory processing, quantifying memory, and more. She introduces readers to the most important concepts in modern neuroscience, and highlights the tensions that arise when the abstract world of mathematical modelling collides with the messy details of biology. Each chapter of Models of the Mind focuses on mathematical tools that have been applied in a particular area of neuroscience, progressing from the simplest building block of the brain\u2013the individual neuron\u2013through to circuits of interacting neurons, whole brain areas and even the behaviours that brains command. In addition, Grace examines the history of the field, starting with experiments done on frog legs in the late eighteenth century and building to the large models of artificial neural networks that form the basis of modern artificial intelligence. Throughout, she reveals the value of using the elegant language of mathematics to describe the machinery of neuroscience."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:3fE2CSJIrl8C",
+        "num_citations": 22,
+        "citedby_url": "/scholar?hl=en&cites=7164897888637285063",
+        "cites_id": [
+            "7164897888637285063"
+        ],
+        "pub_url": "https://books.google.com/books?hl=en&lr=&id=ieYdEAAAQBAJ&oi=fnd&pg=PA3&dq=info:x_IrIKvUbmMJ:scholar.google.com&ots=fLcire9wnu&sig=rA4JV73ylBq0pBt6zsvi4oUF9Tg",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:x_IrIKvUbmMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 1,
+            "2022": 13,
+            "2023": 8
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neuromatch Academy: Teaching computational neuroscience with global accessibility",
+            "pub_year": 2021,
+            "citation": "Trends in cognitive sciences 25 (7), 535-538, 2021",
+            "author": "Tara van Viegen and Athena Akrami and Kathryn Bonnen and Eric DeWitt and Alexandre Hyafil and Helena Ledmyr and Grace W Lindsay and Patrick Mineault and John D Murray and Xaq Pitkow and Aina Puce and Madineh Sedigh-Sarvestani and Carsen Stringer and Titipat Achakulvisut and Elnaz Alikarami and Melvin Selim Atay and Eleanor Batty and Jeffrey C Erlich and Byron V Galbraith and Yueqi Guo and Ashley L Juavinett and Matthew R Krause and Songting Li and Marius Pachitariu and Elizabeth Straley and Davide Valeriani and Emma Vaughan and Maryam Vaziri-Pashkam and Michael L Waskom and Gunnar Blohm and Konrad Kording and Paul Schrater and Brad Wyble and Sean Escola and Megan AK Peters",
+            "volume": "25",
+            "number": "7",
+            "pages": "535-538",
+            "publisher": "Elsevier",
+            "abstract": "Neuromatch Academy (NMA) designed and ran a fully online 3-week Computational Neuroscience Summer School for 1757 students with 191 teaching assistants (TAs) working in virtual inverted (or flipped) classrooms and on small group projects. Fourteen languages, active community management, and low cost allowed for an unprecedented level of inclusivity and universal accessibility."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:MXK_kJrjxJIC",
+        "num_citations": 19,
+        "citedby_url": "/scholar?hl=en&cites=2865906861561423202",
+        "cites_id": [
+            "2865906861561423202"
+        ],
+        "pub_url": "https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(21)00095-4",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YiW5Ohu_xScJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 7,
+            "2022": 8,
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The neuroconnectionist research programme",
+            "pub_year": 2023,
+            "citation": "Nature Reviews Neuroscience, 1-20, 2023",
+            "author": "Adrien Doerig and Rowan P Sommers and Katja Seeliger and Blake Richards and Jenann Ismael and Grace W Lindsay and Konrad P Kording and Talia Konkle and Marcel AJ Van Gerven and Nikolaus Kriegeskorte and Tim C Kietzmann",
+            "pages": "1-20",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Artificial neural networks (ANNs) inspired by biology are beginning to be widely used to model behavioural and neural data, an approach we call \u2018neuroconnectionism\u2019. ANNs have been not only lauded as the current best models of information processing in the brain but also criticized for failing to account for basic cognitive functions. In this Perspective article, we propose that arguing about the successes and failures of a restricted set of current ANNs is the wrong approach to assess the promise of neuroconnectionism for brain science. Instead, we take inspiration from the philosophy of science, and in particular from Lakatos, who showed that the core of a scientific research programme is often not directly falsifiable but should be assessed by its capacity to generate novel insights. Following this view, we present neuroconnectionism as a general research programme centred around ANNs as a computational \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:M3ejUd6NZC8C",
+        "num_citations": 18,
+        "citedby_url": "/scholar?hl=en&cites=3334113232536501466",
+        "cites_id": [
+            "3334113232536501466"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41583-023-00705-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2nxE8lEmRS4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 3,
+            "2023": 15
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Feature Based Attention in Convolutional Neural Networks",
+            "pub_year": 2015,
+            "citation": "arXiv, 2015",
+            "author": "Grace W Lindsay",
+            "journal": "arXiv",
+            "abstract": "Convolutional neural networks (CNNs) have proven effective for image processing tasks, such as object recognition and classification. Recently, CNNs have been enhanced with concepts of attention, similar to those found in biology. Much of this work on attention has focused on effective serial spatial processing. In this paper, I introduce a simple procedure for applying feature-based attention (FBA) to CNNs and compare multiple implementation options. FBA is a top-down signal applied globally to an input image which aides in detecting chosen objects in cluttered or noisy settings. The concept of FBA and the implementation details tested here were derived from what is known (and debated) about biological object- and feature-based attention. The implementations of FBA described here increase performance on challenging object detection tasks using a procedure that is simple, fast, and does not require additional iterative training. Furthermore, the comparisons performed here suggest that a proposed model of biological FBA (the \"feature similarity gain model\") is effective in increasing performance."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:u-x6o8ySG0sC",
+        "num_citations": 18,
+        "citedby_url": "/scholar?hl=en&cites=102379476558906322",
+        "cites_id": [
+            "102379476558906322"
+        ],
+        "pub_url": "https://arxiv.org/abs/1511.06408",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:0oOVbJe5awEJ:scholar.google.com/",
+        "cites_per_year": {
+            "2017": 3,
+            "2018": 6,
+            "2019": 1,
+            "2020": 1,
+            "2021": 1,
+            "2022": 2,
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A unified circuit model of attention: neural and behavioral effects",
+            "pub_year": 2019,
+            "citation": "bioRxiv, 2019.12. 13.875534, 2019",
+            "author": "Grace W Lindsay and Daniel B Rubin and Kenneth D Miller",
+            "journal": "bioRxiv",
+            "pages": "2019.12. 13.875534",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Selective visual attention modulates neural activity in the visual system in complex ways and leads to enhanced performance on difficult visual tasks. Here, we show that a simple circuit model, the stabilized supralinear network, gives a unified account of a wide variety of effects of attention on neural responses. We replicate results from studies of both feature and spatial attention, addressing findings in a variety of experimental paradigms on changes both in firing rates and in correlated neural variability. Finally, we expand this circuit model into an architecture that can perform visual tasks\u2014a convolutional neural network\u2014in order to show that these neural effects can enhance detection performance. This work provides the first unified mechanistic account of the effects of attention on neural and behavioral responses."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:5nxA0vEk-isC",
+        "num_citations": 10,
+        "citedby_url": "/scholar?hl=en&cites=17172140807129102996,6718013152759704502",
+        "cites_id": [
+            "17172140807129102996",
+            "6718013152759704502"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2019.12.13.875534.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:lHrrCRWzT-4J:scholar.google.com/",
+        "cites_per_year": {
+            "2020": 3,
+            "2021": 1,
+            "2022": 4,
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Consciousness in artificial intelligence: Insights from the Science of consciousness",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2308.08708, 2023",
+            "author": "Patrick Butlin and Robert Long and Eric Elmoznino and Yoshua Bengio and Jonathan Birch and Axel Constant and George Deane and Stephen M Fleming and Chris Frith and Xu Ji and Ryota Kanai and Colin Klein and Grace Lindsay and Matthias Michel and Liad Mudrik and Megan AK Peters and Eric Schwitzgebel and Jonathan Simon and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2308.08708",
+            "abstract": "Whether current or near-term AI systems could be conscious is a topic of scientific interest and increasing public concern. This report argues for, and exemplifies, a rigorous and empirically grounded approach to AI consciousness: assessing existing AI systems in detail, in light of our best-supported neuroscientific theories of consciousness. We survey several prominent scientific theories of consciousness, including recurrent processing theory, global workspace theory, higher-order theories, predictive processing, and attention schema theory. From these theories we derive \"indicator properties\" of consciousness, elucidated in computational terms that allow us to assess AI systems for these properties. We use these indicator properties to assess several recent AI systems, and we discuss how future systems might implement them. Our analysis suggests that no current AI systems are conscious, but also suggests that there are no obvious technical barriers to building AI systems which satisfy these indicators."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:mVmsd5A6BfQC",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=8239061011717183910",
+        "cites_id": [
+            "8239061011717183910"
+        ],
+        "pub_url": "https://arxiv.org/abs/2308.08708",
+        "cites_per_year": {
+            "2023": 6
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Bio-inspired neural networks implement different recurrent visual processing strategies than task-trained ones do",
+            "pub_year": 2022,
+            "citation": "bioRxiv, 2022.03. 07.483196, 2022",
+            "author": "Grace W Lindsay and Thomas D Mrsic-Flogel and Maneesh Sahani",
+            "journal": "bioRxiv",
+            "pages": "2022.03. 07.483196",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Behavioral studies suggest that recurrence in the visual system is important for processing degraded stimuli. There are two broad anatomical forms this recurrence can take, lateral or feedback, each with different assumed functions. Here we add four different kinds of recurrence\u2014two of each anatomical form\u2014to a feedforward convolutional neural network and find all forms capable of increasing the ability of the network to classify noisy digit images. Specifically, we take inspiration from findings in biology by adding predictive feedback and lateral surround suppression. To compare these forms of recurrence to anatomically-matched counterparts we also train feedback and lateral connections directly to classify degraded images. Counter-intuitively, we find that the anatomy of the recurrence is not related to its function: both forms of task-trained recurrence change neural activity and behavior similarly to each other and differently from their bio-inspired anatomical counterparts. By using several analysis tools frequently applied to neural data, we identified the distinct strategies used by the predictive versus task-trained networks. Specifically, predictive feedback de-noises the representation of noisy images at the first layer of the network and decreases its dimensionality, leading to an expected increase in classification performance. Surprisingly, in the task-trained networks, representations are not de-noised over time at the first layer (in fact, they become \u2018noiser\u2019 and dimensionality increases) yet these dynamics do lead to de-noising at later layers. The analyses used here can be applied to real neural recordings to identify the strategies at play in the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:4TOpqqG69KYC",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=13818219761019559035",
+        "cites_id": [
+            "13818219761019559035"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2022.03.07.483196.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:e5zaG6ktxL8J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 3,
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Divergent representations of ethological visual inputs emerge from supervised, unsupervised, and reinforcement learning",
+            "pub_year": 2021,
+            "citation": "arXiv preprint arXiv:2112.02027, 2021",
+            "author": "Grace W Lindsay and Josh Merel and Tom Mrsic-Flogel and Maneesh Sahani",
+            "journal": "arXiv preprint arXiv:2112.02027",
+            "abstract": "Artificial neural systems trained using reinforcement, supervised, and unsupervised learning all acquire internal representations of high dimensional input. To what extent these representations depend on the different learning objectives is largely unknown. Here we compare the representations learned by eight different convolutional neural networks, each with identical ResNet architectures and trained on the same family of egocentric images, but embedded within different learning systems. Specifically, the representations are trained to guide action in a compound reinforcement learning task; to predict one or a combination of three task-related targets with supervision; or using one of three different unsupervised objectives. Using representational similarity analysis, we find that the network trained with reinforcement learning differs most from the other networks. Using metrics inspired by the neuroscience literature, we find that the model trained with reinforcement learning has a sparse and high-dimensional representation wherein individual images are represented with very different patterns of neural activity. Further analysis suggests these representations may arise in order to guide long-term behavior and goal-seeking in the RL agent. Finally, we compare the representations learned by the RL agent to neural activity from mouse visual cortex and find it to perform as well or better than other models. Our results provide insights into how the properties of neural representations are influenced by objective functions and can inform transfer learning approaches."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:ULOm3_A8WrAC",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=12501658453892356070",
+        "cites_id": [
+            "12501658453892356070"
+        ],
+        "pub_url": "https://arxiv.org/abs/2112.02027",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:5leDjyDQfq0J:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 1,
+            "2022": 3,
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Testing the tools of systems neuroscience on artificial neural networks",
+            "pub_year": 2022,
+            "citation": "arXiv preprint arXiv:2202.07035, 2022",
+            "author": "Grace W Lindsay",
+            "journal": "arXiv preprint arXiv:2202.07035",
+            "abstract": "Neuroscientists apply a range of common analysis tools to recorded neural activity in order to glean insights into how neural circuits implement computations. Despite the fact that these tools shape the progress of the field as a whole, we have little empirical evidence that they are effective at quickly identifying the phenomena of interest. Here I argue that these tools should be explicitly tested and that artificial neural networks (ANNs) are an appropriate testing grounds for them. The recent resurgence of the use of ANNs as models of everything from perception to memory to motor control stems from a rough similarity between artificial and biological neural networks and the ability to train these networks to perform complex high-dimensional tasks. These properties, combined with the ability to perfectly observe and manipulate these systems, makes them well-suited for vetting the tools of systems and cognitive neuroscience. I provide here both a roadmap for performing this testing and a list of tools that are suitable to be tested on ANNs. Using ANNs to reflect on the extent to which these tools provide a productive understanding of neural systems -- and on exactly what understanding should mean here -- has the potential to expedite progress in the study of the brain."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:_kc_bZDykSQC",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=14415382786736885245",
+        "cites_id": [
+            "14415382786736885245"
+        ],
+        "pub_url": "https://arxiv.org/abs/2202.07035",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:_Y27wES6DcgJ:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 1,
+            "2022": 3,
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Recent Advances at the Interface of Neuroscience and Artificial Neural Networks",
+            "pub_year": 2022,
+            "citation": "Journal of Neuroscience 42 (45), 8514-8523, 2022",
+            "author": "Yarden Cohen and Tatiana A Engel and Christopher Langdon and Grace W Lindsay and Torben Ott and Megan AK Peters and James M Shine and Vincent Breton-Provencher and Srikanth Ramaswamy",
+            "volume": "42",
+            "number": "45",
+            "pages": "8514-8523",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Biological neural networks adapt and learn in diverse behavioral contexts. Artificial neural networks (ANNs) have exploited biological properties to solve complex problems. However, despite their effectiveness for specific tasks, ANNs are yet to realize the flexibility and adaptability of biological cognition. This review highlights recent advances in computational and experimental research to advance our understanding of biological and artificial intelligence. In particular, we discuss critical mechanisms from the cellular, systems, and cognitive neuroscience fields that have contributed to refining the architecture and training algorithms of ANNs. Additionally, we discuss how recent work used ANNs to understand complex neuronal correlates of cognition and to process high throughput behavioral data."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:qxL8FJ1GzNcC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=429196699663029045",
+        "cites_id": [
+            "429196699663029045"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/42/45/8514.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:NVMv1h_Q9AUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deep Convolutional Neural Networks as Models of the Visual System: Q&A. Neurdiness-Thinking about brains",
+            "pub_year": 2018,
+            "citation": "",
+            "author": "Grace Lindsay"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:8k81kl-MbHgC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=11450928708617806942",
+        "cites_id": [
+            "11450928708617806942"
+        ],
+        "pub_url": "https://scholar.google.com/scholar?cluster=11450928708617806942&hl=en&oi=scholarr",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:XqR8qf3e6Z4J:scholar.google.com/",
+        "cites_per_year": {
+            "2017": 1,
+            "2018": 0,
+            "2019": 1,
+            "2020": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Corrigendum: Attention in Psychology, Neuroscience, and Machine Learning",
+            "pub_year": 2021,
+            "citation": "Frontiers in Computational Neuroscience 15, 698574, 2021",
+            "author": "Grace W Lindsay",
+            "journal": "Frontiers in Computational Neuroscience",
+            "volume": "15",
+            "pages": "698574",
+            "publisher": "Frontiers Media SA",
+            "abstract": "Activities would likely need to flexibly decide which of several possible goals should be achieved at any time and therefore where attention should be placed. This problem clearly interacts closely with issues around reinforcement learning\u2014particularly hierarchical reinforcement learning which involves the choosing of subtasks\u2014as such decisions must be based on expected positive or negative outcomes. Indeed, there is a close relationship between attention and reward as previously rewarded stimuli attract attention even in contexts where they no longer provide reward (Camara et al., 2013). A better understanding of how humans choose which tasks to engage in and when should allow human behavior to inform the design of a multi-task AI."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:kNdYIx-mwKoC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=10673635755170214089",
+        "cites_id": [
+            "10673635755170214089"
+        ],
+        "pub_url": "https://www.frontiersin.org/articles/10.3389/fncom.2021.698574/full",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:yTDUACtfIJQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Understanding the functional and structural differences across excitatory and inhibitory neurons",
+            "pub_year": 2019,
+            "citation": "bioRxiv, 680439, 2019",
+            "author": "Sun Minni and Li Ji-An and Theodore Moskovitz and Grace Lindsay and Kenneth Miller and Mario Dipoppa and Guangyu Robert Yang",
+            "journal": "bioRxiv",
+            "pages": "680439",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "One of the most fundamental organizational principles of the brain is the separation of excitatory (E) and inhibitory (I) neurons. In addition to their opposing effects on post-synaptic neurons, E and I cells tend to differ in their selectivity and connectivity. Although many such differences have been characterized experimentally, it is not clear why they exist in the first place. We studied this question in an artificial neural network equipped with multiple E and I cell types. We found that a deep convolutional recurrent network trained to perform an object classification task was able to capture salient distinctions between E and I neurons. We explored the necessary conditions for the network to develop distinct selectivity and connectivity across cell types. We found that neurons that project to higher-order areas will have greater stimulus selectivity, regardless of whether they are excitatory or not. Sparser connectivity is required for higher selectivity, but only when the recurrent connections are excitatory. These findings demonstrate that the differences observed across E and I neurons are not independent, and can be explained using a smaller number of factors."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:ufrVoPGSRksC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=8987681322271819056",
+        "cites_id": [
+            "8987681322271819056"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/680439.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:MMVsOIuounwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2020": 1,
+            "2021": 0,
+            "2022": 0,
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Connecting scene statistics to probabilistic population codes and tuning properties of V1 neurons",
+            "pub_year": 2010,
+            "citation": "Soc Neurosci Abstr 36 (531.3), 2010",
+            "author": "Ben Poole and Ian Lenz and Grace Lindsay and Jason M Samonds and Tai Sing Lee",
+            "journal": "Soc Neurosci Abstr",
+            "volume": "36",
+            "number": "531.3",
+            "abstract": "Populations of V1 neurons recorded from three macaque monkeys were analyzed to evaluate the relationship between the distribution of the disparity tuning properties and the scene statistics of depth distribution relative to fixation depth. We found that there are more neurons preferring disparities with a higher probability of occurrence in the natural environment, and fewer neurons preferring disparities with a lower probability of occurrence. The tuning curves of neurons selective to the more probable disparities tend to be sharper than those for less probable disparities. Both the distribution of preferred disparities and the distribution of relative scene depth can be fit with similar Laplacian distributions, but with an asymmetry favoring near disparities. This finding is consistent with the hypothesis that neurons are performing optimal sampling of the natural environment based on the information maximization principle \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:Se3iqnhoufwC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=10485537339152245109",
+        "cites_id": [
+            "10485537339152245109"
+        ],
+        "pub_url": "https://scholar.google.com/scholar?cluster=10485537339152245109&hl=en&oi=scholarr",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:daFDu6cchJEJ:scholar.google.com/",
+        "cites_per_year": {
+            "2013": 1,
+            "2014": 0,
+            "2015": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deep Learning Networks and Visual Perception",
+            "pub_year": 2021,
+            "citation": "Oxford Research Encyclopedia of Psychology, 2021",
+            "author": "Grace W Lindsay and Thomas Serre",
+            "abstract": "Deep learning is an approach to artificial intelligence (AI) centered on the training of deep artificial neural networks to perform complex tasks. Since the early 21st century, this approach has led to record-breaking advances in AI, allowing computers to solve complex board games, video games, natural language-processing tasks, and vision problems. Neuroscientists and psychologists have also utilized these networks as models of biological information processing to understand language, motor control, cognition, audition, and\u2014most commonly\u2014vision. Specifically, early feedforward network architectures were inspired by visual neuroscience and are used to model neural activity and human behavior. They also provide useful representations of the perceptual space of images. The extent to which these models match data, however, depends on the methods used to characterize and compare them. The limitations \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:Zph67rFs4hoC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=4090442923130372735",
+        "cites_id": [
+            "4090442923130372735"
+        ],
+        "pub_url": "https://oxfordre.com/psychology/display/10.1093/acrefore/9780190236557.001.0001/acrefore-9780190236557-e-841",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:f0IynyosxDgJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Do Biologically-Realistic Recurrent Architectures Produce Biologically-Realistic Models?",
+            "pub_year": 2019,
+            "citation": "Cognitive Computational Neuroscience, 2019",
+            "author": "Grace W Lindsay and Theodore H Moskovitz and Guangyu Robert Yang and Kenneth D Miller",
+            "conference": "Cognitive Computational Neuroscience",
+            "abstract": "Many details are known about microcircuitry in visual cortices. For example, neurons have supralinear activation functions, they're either excitatory (E) or inhibitory (I), connection strengths fall off with distance, and the output cells of an area are excitatory. This circuitry is important as it's believed to support core functions such as normalization and surround suppression. Yet, multi-area models of the visual processing stream don't usually include these details. Here, we introduce known-features of recurrent processing into the architecture of a convolutional neural network and observe how connectivity and activity change as a result. We find that certain E-I differences found in data emerge in the models, though the details depend on which architectural elements are included. We also compare the representations learned by these models to data, and perform analyses on the learned weight structures to assess the nature of the neural interactions."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:hqOjcs7Dif8C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=10480622936232223671",
+        "cites_id": [
+            "10480622936232223671"
+        ],
+        "pub_url": "https://par.nsf.gov/biblio/10213175",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:t-PuIgincpEJ:scholar.google.com/",
+        "cites_per_year": {
+            "2020": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Membrane potential statistics reveal detailed correlation structure",
+            "pub_year": 2012,
+            "citation": "Front. Comput. Neurosci. Conference Abstract: Bernstein Conference, 2012",
+            "author": "Grace Lindsay and Alejandro F Bujan and Ad Aertsen and Arvind Kumar",
+            "journal": "Front. Comput. Neurosci. Conference Abstract: Bernstein Conference",
+            "abstract": "Much focus has been placed on determining the causes and functional roles of pairwise-correlations that are observed amongst neurons (Cohen and Kohn, 2011). In the pursuit of an understanding of the impact of correlations on network activity, an important division amongst them can be made, that of'within'versus' between'. These types of correlations are structurally defined, with'within'(W) referring to the amount of correlated activity within the pre-synaptic pool of neurons projecting to a given neuron, and'between'(B) referring to the amount of correlation between two pre-synaptic pools, each projecting to a differentpost-synaptic cell. This distinction is important because these two types of correlations have different functional consequences: the later can serve to propagate existing correlations while the former influences firing rates (see Bujan et al. 2012)."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:UebtZRa9Y70C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=15180227610442716523",
+        "cites_id": [
+            "15180227610442716523"
+        ],
+        "pub_url": "https://www.frontiersin.org/10.3389/conf.fncom.2012.55.00135/event_abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:a9UDWpUAq9IJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Testing methods of neural systems understanding",
+            "pub_year": 2023,
+            "citation": "Cognitive Systems Research 82, 101156, 2023",
+            "author": "Grace W Lindsay and David Bau",
+            "journal": "Cognitive Systems Research",
+            "volume": "82",
+            "pages": "101156",
+            "publisher": "Elsevier",
+            "abstract": "Neuroscientists apply a range of analysis tools to recorded neural activity in order to glean insights into how neural circuits drive behavior in organisms. Despite the fact that these tools shape the progress of the field as a whole, we have little empirical proof that they are effective at identifying the mechanisms of interest. At the same time, deep learning systems are trained to produce intelligent behavior using neural networks, and the resulting models are impressive but also largely impenetrable. Can the tools of neuroscience be applied to artificial neural networks (ANNs) and if so what would this process tell us about ANNs, brains, and \u2013 most importantly \u2013 the tools themselves? Here we argue that applying analysis methods from neuroscience to ANNs will provide a much-needed test of the abilities of these tools. It would also encourage the development of a unified field of neural systems understanding, which can \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:Wp0gIr-vW9MC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1389041723000906",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deep neural networks are not a single hypothesis but a language for expressing computational hypotheses",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Tal Golan and JohnMark Taylor and Heiko Sch\u00fctt and Benjamin Peters and Rowan Paolo Sommers and Katja Seeliger and Adrien Doerig and Paul Linton and Talia Konkle and Marcel van Gerven and Konrad Kording and Blake Richards and Tim Christian Kietzmann and Grace W Lindsay and Nikolaus Kriegeskorte",
+            "publisher": "PsyArXiv",
+            "abstract": "An ideal vision model accounts for behavior and neurophysiology in both naturalistic conditions and designed lab experiments. Unlike psychological theories, artificial neural networks (ANNs) actually perform visual tasks and generate testable predictions for arbitrary inputs. These advantages enable ANNs to engage the entire spectrum of the evidence. Failures of particular models drive progress in a vibrant ANN research program of human vision."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:aqlVkmm33-oC",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/tr7gx/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1VpvSvB-icIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Modeling the impact of internal state on sensory processing",
+            "pub_year": 2018,
+            "citation": "Columbia University, 2018",
+            "author": "Grace Wilhelmina Lindsay",
+            "abstract": "This thesis takes a computational approach to the task of understanding how internal brain states and representations of sensory inputs combine. In particular, mathematical models of neural circuits are built to replicate and elucidate the physical processes by which internal state modulates sensory processing. Ultimately, this work should contribute to an understanding of how complex behavior arises from neural circuits."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:IjCSPb-OGe4C",
+        "num_citations": 0,
+        "pub_url": "https://academiccommons.columbia.edu/doi/10.7916/D8R2277B",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:juUYED5JS5sJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "'Within' versus 'between' pairwise correlations and their relation to the network structure",
+            "pub_year": 2012,
+            "citation": "Society for Neuroscience, 2012",
+            "author": "Grace W Lindsay and Alejandro F Bujan and Ad Aertsen and Arvind Kumar",
+            "conference": "Society for Neuroscience"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:2osOgNQ5qMEC",
+        "num_citations": 0,
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Quality of tuning curves and their effect on population coding",
+            "pub_year": 2011,
+            "citation": "Cosyne, 2011",
+            "author": "Grace W Lindsay and Benjamin Poole and Brent Doiron and Jason Samonds and Tai Sing Lee",
+            "conference": "Cosyne"
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:9yKSN-GCB0IC",
+        "num_citations": 0,
+        "cites_per_year": {}
+    }
+]

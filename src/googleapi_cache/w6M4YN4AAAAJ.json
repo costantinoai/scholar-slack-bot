@@ -1,0 +1,392 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The neuroconnectionist research programme",
+            "pub_year": 2023,
+            "citation": "Nature Reviews Neuroscience, 1-20, 2023",
+            "author": "Adrien Doerig and Rowan P Sommers and Katja Seeliger and Blake Richards and Jenann Ismael and Grace W Lindsay and Konrad P Kording and Talia Konkle and Marcel AJ Van Gerven and Nikolaus Kriegeskorte and Tim C Kietzmann",
+            "pages": "1-20",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Artificial neural networks (ANNs) inspired by biology are beginning to be widely used to model behavioural and neural data, an approach we call \u2018neuroconnectionism\u2019. ANNs have been not only lauded as the current best models of information processing in the brain but also criticized for failing to account for basic cognitive functions. In this Perspective article, we propose that arguing about the successes and failures of a restricted set of current ANNs is the wrong approach to assess the promise of neuroconnectionism for brain science. Instead, we take inspiration from the philosophy of science, and in particular from Lakatos, who showed that the core of a scientific research programme is often not directly falsifiable but should be assessed by its capacity to generate novel insights. Following this view, we present neuroconnectionism as a general research programme centred around ANNs as a computational \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:HfY9tUF4VgMC",
+        "num_citations": 18,
+        "citedby_url": "/scholar?hl=en&cites=3334113232536501466",
+        "cites_id": [
+            "3334113232536501466"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41583-023-00705-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2nxE8lEmRS4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 3,
+            "2023": 15
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Statistical inference on representational geometries",
+            "pub_year": 2023,
+            "citation": "Elife 12, e82566, 2023",
+            "author": "Heiko H Sch\u00fctt and Alexander D Kipnis and J\u00f6rn Diedrichsen and Nikolaus Kriegeskorte",
+            "journal": "Elife",
+            "volume": "12",
+            "pages": "e82566",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Neuroscience has recently made much progress, expanding the complexity of both neural activity measurements and brain-computational models. However, we lack robust methods for connecting theory and experiment by evaluating our new big models with our new big data. Here, we introduce new inference methods enabling researchers to evaluate and compare models based on the accuracy of their predictions of representational geometries: A good model should accurately predict the distances among the neural population representations (eg of a set of stimuli). Our inference methods combine novel 2-factor extensions of crossvalidation (to prevent overfitting to either subjects or conditions from inflating our estimates of model accuracy) and bootstrapping (to enable inferential model comparison with simultaneous generalization to both new subjects and new conditions). We validate the inference methods on data where the ground-truth model is known, by simulating data with deep neural networks and by resampling of calcium-imaging and functional MRI data. Results demonstrate that the methods are valid and conclusions generalize correctly. These data analysis methods are available in an open-source Python toolbox (rsatoolbox. readthedocs. io)."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:-3_NAp5WSNkC",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=13540717859312847037",
+        "cites_id": [
+            "13540717859312847037"
+        ],
+        "pub_url": "https://elifesciences.org/articles/82566",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vUghuCZL6rsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The selfish scientist's guide to preprint posting",
+            "pub_year": 2023,
+            "citation": "Authorea Preprints, 2023",
+            "author": "Nikolaus Kriegeskorte",
+            "journal": "Authorea Preprints",
+            "publisher": "Authorea",
+            "abstract": "The selfish scientist\u2019s guide to preprint posting Page 1 P osted on 17 Apr 2023 \u2014 The cop yrigh t \nholder is the author/funder. All righ ts reserv ed. No reuse without p ermission. \u2014 h \nttps://doi.org/10.15200/winn.145838.88372 \u2014 This a preprin t and has not b een p ee r review ed. \nData ma y b e preliminary . The selfish scientist\u2019s guide to preprint posting Nikolaus \nKriegeskorte1 1Affiliation not available April 17, 2023 1 Page 2 READ REVIEWS WRITE A \nREVIEW CORRESPONDENCE: nikokriegeskorte@gmail.com DATE RECEIVED: March 18, 2016 \nDOI: 10.15200/winn.145838.88372 ARCHIVED: March 19, 2016 KEYWORDS: preprints, open \naccess, scholarly communication CITATION: Nikolaus Kriegeskorte, The selfish scientist\u2019s guide \nto preprint posting, The Winnower 3:e145838.88372 , 2016 , DOI: 10.15200/winn.145838.88372 \n\u00a9 Kriegeskorte This article is distributed under the terms of the Creative Commons \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:H2XcuePHLsAC",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=399328248193780758",
+        "cites_id": [
+            "399328248193780758"
+        ],
+        "pub_url": "https://www.authorea.com/doi/pdf/10.15200/winn.145838.88372",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:FoxeDu2yigUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Testing the limits of natural language models for predicting human language judgements",
+            "pub_year": 2023,
+            "citation": "Nature Machine Intelligence, 1-13, 2023",
+            "author": "Tal Golan and Matthew Siegelman and Nikolaus Kriegeskorte and Christopher Baldassano",
+            "journal": "Nature Machine Intelligence",
+            "pages": "1-13",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Neural network language models appear to be increasingly aligned with how humans process and generate language, but identifying their weaknesses through adversarial examples is challenging due to the discrete nature of language and the complexity of human language perception. We bypass these limitations by turning the models against each other. We generate controversial sentence pairs where two language models disagree about which sentence is more likely to occur. Considering nine language models (including n-gram, recurrent neural networks and transformers), we created hundreds of controversial sentence pairs through synthetic optimization or by selecting sentences from a corpus. Controversial sentence pairs proved highly effective at revealing model failures and identifying models that aligned most closely with human judgements of which sentence is more likely. The most human \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:rMiSbtrAJs8C",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=16742959179608825855",
+        "cites_id": [
+            "16742959179608825855"
+        ],
+        "pub_url": "https://www.nature.com/articles/s42256-023-00718-1",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:_x9zdarwWugJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deep neural networks and visuo-semantic models explain complementary components of human ventral-stream representational dynamics",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience 43 (10), 1731-1741, 2023",
+            "author": "Kamila M Jozwik and Tim C Kietzmann and Radoslaw M Cichy and Nikolaus Kriegeskorte and Marieke Mur",
+            "journal": "Journal of Neuroscience",
+            "volume": "43",
+            "number": "10",
+            "pages": "1731-1741",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Deep neural networks (DNNs) are promising models of the cortical computations supporting human object recognition. However, despite their ability to explain a significant portion of variance in neural data, the agreement between models and brain representational dynamics is far from perfect. We address this issue by asking which representational features are currently unaccounted for in neural time series data, estimated for multiple areas of the ventral stream via source-reconstructed magnetoencephalography data acquired in human participants (nine females, six males) during object viewing. We focus on the ability of visuo-semantic models, consisting of human-generated labels of object features and categories, to explain variance beyond the explanatory power of DNNs alone. We report a gradual reversal in the relative importance of DNN versus visuo-semantic features as ventral-stream object \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:P7PM_jyRRcwC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=16634044447513850",
+        "cites_id": [
+            "16634044447513850"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/43/10/1731.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-tx4RpMYOwAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Affinity-based Attention in Self-supervised Transformers Predicts Dynamics of Object Grouping in Humans",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2306.00294, 2023",
+            "author": "Hossein Adeli and Seoyoung Ahn and Nikolaus Kriegeskorte and Gregory Zelinsky",
+            "journal": "arXiv preprint arXiv:2306.00294",
+            "abstract": "The spreading of attention has been proposed as a mechanism for how humans group features to segment objects. However, such a mechanism has not yet been implemented and tested in naturalistic images. Here, we leverage the feature maps from self-supervised vision Transformers and propose a model of human object-based attention spreading and segmentation. Attention spreads within an object through the feature affinity signal between different patches of the image. We also collected behavioral data on people grouping objects in natural images by judging whether two dots are on the same object or on two different objects. We found that our models of affinity spread that were built on feature maps from the self-supervised Transformers showed significant improvement over baseline and CNN based models on predicting reaction time patterns of humans, despite not being trained on the task or with any other object labels. Our work provides new benchmarks for evaluating models of visual representation learning including Transformers."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:jYy9R3AkpWgC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=11016673895008731220",
+        "cites_id": [
+            "11016673895008731220"
+        ],
+        "pub_url": "https://arxiv.org/abs/2306.00294",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VIBQ5okW45gJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Topology and Geometry of Neural Representations",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2309.11028, 2023",
+            "author": "Baihan Lin and Nikolaus Kriegeskorte",
+            "journal": "arXiv preprint arXiv:2309.11028",
+            "abstract": "A central question for neuroscience is how to characterize brain representations of perceptual and cognitive content. An ideal characterization should distinguish different functional regions with robustness to noise and idiosyncrasies of individual brains that do not correspond to computational differences. Previous studies have characterized brain representations by their representational geometry, which is defined by the representational dissimilarity matrix (RDM), a summary statistic that abstracts from the roles of individual neurons (or responses channels) and characterizes the discriminability of stimuli. Here we explore a further step of abstraction: from the geometry to the topology of brain representations. We propose topological representational similarity analysis (tRSA), an extension of representational similarity analysis (RSA) that uses a family of geo-topological summary statistics that generalizes the RDM to characterize the topology while de-emphasizing the geometry. We evaluate this new family of statistics in terms of the sensitivity and specificity for model selection using both simulations and functional MRI (fMRI) data. In the simulations, the ground truth is a data-generating layer representation in a neural network model and the models are the same and other layers in different model instances (trained from different random seeds). In fMRI, the ground truth is a visual area and the models are the same and other areas measured in different subjects. Results show that topology-sensitive characterizations of population codes are robust to noise and interindividual variability and maintain excellent sensitivity to the unique representational \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:UCVoGz2p8ukC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2309.11028",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Extracting and visualizing hidden activations and computational graphs of PyTorch models with TorchLens",
+            "pub_year": 2023,
+            "citation": "Scientific Reports 13 (1), 14375, 2023",
+            "author": "JohnMark Taylor and Nikolaus Kriegeskorte",
+            "journal": "Scientific Reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "14375",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Deep neural network models (DNNs) are essential to modern AI and provide powerful models of information processing in biological neural networks. Researchers in both neuroscience and engineering are pursuing a better understanding of the internal representations and operations that undergird the successes and failures of DNNs. Neuroscientists additionally evaluate DNNs as models of brain computation by comparing their internal representations to those found in brains. It is therefore essential to have a method to easily and exhaustively extract and characterize the results of the internal operations of any DNN. Many models are implemented in PyTorch, the leading framework for building DNN models. Here we introduce TorchLens, a new open-source Python package for extracting and characterizing hidden-layer activations in PyTorch models. Uniquely among existing approaches to this problem \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:SkU8VjQp03IC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-023-40807-0",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neural representation of occluded objects in visual cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4594-4594, 2023",
+            "author": "Courtney Mansfield and Tim Kietzmann and Jasper van den Bosch and Ian Charest and Marieke Mur and Nikolaus Kriegeskorte and Fraser Smith",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4594-4594",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "The ability of the human visual system to recognize occluded objects is striking, yet current models of vision struggle to account for this successfully. Previous studies investigating occlusion at both the behavioural and neural levels typically used simple shapes or cut outs as occluders, rather than other objects. The goal of the present study was to understand what best explains neural representations of occluded objects under more realistic occlusion ie, when objects occlude other objects. We approached this by explicitly relating activity patterns of occluded objects (eg a cup occluding a face) with those generated when viewing the same objects in isolation (the cup or the face). In an event-related fMRI design, participants (N= 12) performed a one-back task while being presented with objects presented in isolation (un-occluded), occluded by another object, or cut out by a corresponding object silhouette. We \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:eK4aujBuqBIC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791854",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Torchlens: A Python package for extracting and visualizing all hidden layer activations from arbitrary PyTorch models with minimal code",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5769-5769, 2023",
+            "author": "JohnMark Taylor and Nikolaus Kriegeskorte",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5769-5769",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Deep neural networks (DNNs) remain the dominant AI models at many visual tasks, and as models for biological vision, making it crucial to better understand the internal representations and operations undergirding their successes and failures, and to carefully compare these processing stages to those found in the brain. PyTorch has emerged as the leading framework for building DNN models; it would thus be highly desirable to have a method for easily and exhaustively extracting and characterizing the results of the internal operations of any arbitrary PyTorch model. Here we introduce Torchlens, a new open source Python package for extracting and characterizing hidden layer activations from PyTorch models. Uniquely among existing approaches for this task, Torchlens has the following features: 1) it exhaustively extracts the results of all intermediate operations, not just those associated with PyTorch module \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:x9HjRiAMpasC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792507",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Modeling the dynamics of spreading attention in objects: Do transformers behave like humans?",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5978-5978, 2023",
+            "author": "Hossein Adeli and Seoyoung Ahn and Nikolaus Kriegeskorte and Gregory Zelinsky",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5978-5978",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Transformers have recently achieved state-of-the-art performance in many domains, including in solving the problems of object detection and grouping in images. However, despite their success, transformers are controversial as models of the human brain. Importantly, these models have not been shown to capture the way humans group and perceive objects. Here we explore the potential for the attention mechanism in transformers to map onto the dynamics of human object-based attention and grouping. We probe the mechanisms of object-based attention using a two-dot paradigm, where two markers are placed on an image and the task is to indicate whether they are on the same or different objects. Previous related work found that human reaction time in this task varies with the difficulty of object grouping and the spread of attention within an object. Our model first processes images through a convolutional \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:fXbrI0tPCuEC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792319",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Experientially-grounded and distributional semantic vectors uncover dissociable representations of conceptual categories",
+            "pub_year": 2023,
+            "citation": "Language, Cognition and Neuroscience, 1-25, 2023",
+            "author": "Francesca Carota and Hamed Nili and Nikolaus Kriegeskorte and Friedemann Pulverm\u00fcller",
+            "journal": "Language, Cognition and Neuroscience",
+            "pages": "1-25",
+            "publisher": "Routledge",
+            "abstract": "Neuronal populations code similar concepts by similar activity patterns across the human brain's semantic networks. However, it is unclear to what extent such meaning-to-symbol mapping reflects distributional statistics, or experiential information grounded in sensorimotor and emotional knowledge. We asked whether integrating distributional and experiential data better distinguished conceptual categories than each method taken separately. We examined the similarity structure of fMRI patterns elicited by visually presented action- and object-related words using representational similarity analysis (RSA). We found that the distributional and experiential/integrative models respectively mapped the high-dimensional semantic space in left inferior frontal, anterior temporal, and in left precentral, posterior inferior/middle temporal cortex. Furthermore, results from model comparisons uncovered category-specific similarity \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:LHWLPdAD5FMC",
+        "num_citations": 0,
+        "pub_url": "https://www.tandfonline.com/doi/abs/10.1080/23273798.2023.2232481",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Experientially-grounded and distributional semantic vectors uncover dissociable representations of semantic categories",
+            "pub_year": 2023,
+            "citation": "Language, Cognition and Neuroscience. Advance online publication, 2023",
+            "author": "Francesca Carota and Hamed Nili and Nikolaus Kriegeskorte and Friedemann Pulverm\u00fcller",
+            "journal": "Language, Cognition and Neuroscience. Advance online publication",
+            "publisher": "Routledge",
+            "abstract": "Neuronal populations code similar concepts by similar activity patterns across the human brain's semantic networks. However, it is unclear to what extent such meaning-to-symbol mapping reflects distributional statistics, or experiential information grounded in sensorimotor and emotional knowledge. We asked whether integrating distributional and experiential data better distinguished conceptual categories than each method taken separately. We examined the similarity structure of fMRI patterns elicited by visually presented action-and object-related words using representational similarity analysis (RSA). We found that the distributional and experiential/integrative models respectively mapped the high-dimensional semantic space in left inferior frontal, anterior temporal, and in left precentral, posterior inferior/middle temporal cortex. Furthermore, results from model comparisons uncovered category-specific similarity patterns, as both distributional and experiential models matched the similarity patterns for action concepts in left fronto-temporal cortex, whilst the experiential/integrative (but not distributional) models matched the similarity patterns for object concepts in left fusiform and angular gyrus."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:USX2HHcnDqcC",
+        "num_citations": 0,
+        "pub_url": "https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_3517871",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deep neural networks are not a single hypothesis but a language for expressing computational hypotheses",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Tal Golan and JohnMark Taylor and Heiko Sch\u00fctt and Benjamin Peters and Rowan Paolo Sommers and Katja Seeliger and Adrien Doerig and Paul Linton and Talia Konkle and Marcel van Gerven and Konrad Kording and Blake Richards and Tim Christian Kietzmann and Grace W Lindsay and Nikolaus Kriegeskorte",
+            "publisher": "PsyArXiv",
+            "abstract": "An ideal vision model accounts for behavior and neurophysiology in both naturalistic conditions and designed lab experiments. Unlike psychological theories, artificial neural networks (ANNs) actually perform visual tasks and generate testable predictions for arbitrary inputs. These advantages enable ANNs to engage the entire spectrum of the evidence. Failures of particular models drive progress in a vibrant ANN research program of human vision."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:Z98IfIjqAwMC",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/tr7gx/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1VpvSvB-icIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predicting brain activity using Transformers",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.08. 02.551743, 2023",
+            "author": "Hossein Adeli and Sun Minni and Nikolaus Kriegeskorte",
+            "journal": "bioRxiv",
+            "pages": "2023.08. 02.551743",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The Algonauts challenge (Gifford et al. [2023]) called on the community to provide novel solutions for predicting brain activity of humans viewing natural scenes. This report provides an overview and technical details of our submitted solution. We use a general transformer encoder-decoder model to map images to fMRI responses. The encoder model is a vision transformer trained using self-supervised methods (DINOv2). The decoder uses queries corresponding to different brain regions of interests (ROI) in different hemispheres to gather relevant information from the encoder output for predicting neural activity in each ROI. The output tokens from the decoder are then linearly mapped to the fMRI activity. The predictive success (challenge score: 63.5229, rank 2) suggests that features from self-supervised transformers may deserve consideration as models of human visual brain representations and shows the effectiveness of transformer mechanisms (self and cross-attention) to learn the mapping from features to brain responses."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:OWslULmvb_UC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.02.551743.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Experientially-grounded and distributional semantic vectors uncover dissociable representations of semantic with conceptual categories",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Francesca Carota and Hamed Nili and Nikolaus Kriegeskorte and Friedemann Pulvermueller",
+            "abstract": "Neuronal populations code similar concepts by similar activity patterns across the human brain\u2019s semantic networks. However, it is unclear to what extent such meaning-to-symbol mapping reflects distributional statistics, or experiential information grounded in sensorimotor and emotional knowledge. We asked whether integrating distributional and experiential data better distinguished conceptual categories than each method taken separately. We examined the similarity structure of fMRI patterns elicited by visually presented action-and object-related words using representational similarity analysis (RSA). We found that the distributional and experiential/integrative models respectively mapped the high-dimensional semantic space in left inferior frontal, anterior temporal, and in left precentral, posterior inferior/middle temporal cortex. Furthermore, results from model comparisons uncovered category-specific similarity patterns, as both distributional and experiential models matched the similarity patterns for action concepts in left fronto-temporal cortex, whilst the experiential/integrative (but not distributional) models matched the similarity patterns for object concepts in left fusiform and angular gyrus."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:q2HS4OCVtYIC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/295392/295392.pdf?sequence=1",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "TorchLens: A Python package for extracting and visualizing hidden activations of PyTorch models",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.03. 16.532916, 2023",
+            "author": "JohnMark E Taylor and Nikolaus Kriegeskorte",
+            "journal": "bioRxiv",
+            "pages": "2023.03. 16.532916",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Deep neural network models (DNNs) are essential to modern AI and provide powerful models of information processing in biological neural networks. Researchers in both neuroscience and engineering are pursuing a better understanding of the internal representations and operations that undergird the successes and failures of DNNs. Neuroscientists additionally evaluate DNNs as models of brain computation by comparing their internal representations to those found in brains. It is therefore essential to have a method to easily and exhaustively extract and characterize the results of the internal operations of any DNN. Many models are implemented in PyTorch, the leading framework for building DNN models. Here we introduce TorchLens, a new open-source Python package for extracting and characterizing hidden-layer activations in PyTorch models. Uniquely among existing approaches to this problem, TorchLens has the following features: (1) it exhaustively extracts the results of all intermediate operations, not just those associated with PyTorch module objects, yielding a full record of every step in the model's computational graph, (2) it provides an intuitive visualization of the model's complete computational graph along with metadata about each computational step in a model's forward pass for further analysis, (3) it contains a built-in validation procedure to algorithmically verify the accuracy of all saved hidden-layer activations, and (4) the approach it uses can be automatically applied to any PyTorch model with no modifications, including models with conditional (if-then) logic in their forward pass, recurrent models, branching models where \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:ealulPZkXgsC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.03.16.532916.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:kIx1MolL5-MJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Emergence of brain-like mirror-symmetric viewpoint tuning in convolutional neural networks",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.01. 05.522909, 2023",
+            "author": "Amirhossein Farzmahdi and Wilbert Zarco and Winrich Freiwald and Nikolaus Kriegeskorte and Tal Golan",
+            "journal": "bioRxiv",
+            "pages": "2023.01. 05.522909",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Primates can recognize objects despite 3D geometric variations such as in-depth rotations. The computational mechanisms that give rise to such invariances are yet to be fully understood. A curious case of partial invariance occurs in the macaque face-patch AL and in fully connected layers of deep convolutional networks in which neurons respond similarly to mirror-symmetric views (e.g., left and right profiles). Why does this tuning develop? Here, we propose a simple learning-driven explanation for mirror-symmetric viewpoint tuning. We show that mirror-symmetric viewpoint tuning for faces emerges in the fully connected layers of convolutional deep neural networks trained on object recognition tasks, even when the training dataset does not include faces. First, using 3D objects rendered from multiple views as test stimuli, we demonstrate that mirror-symmetric viewpoint tuning in convolutional neural network models is not unique to faces: it emerges for multiple object categories with bilateral symmetry. Second, we show why this invariance emerges in the models. Learning to discriminate among bilaterally symmetric object categories induces reflection-equivariant intermediate representations. AL-like mirror-symmetric tuning is achieved when such equivariant responses are spatially pooled by downstream units with sufficiently large receptive fields. These results explain how mirror-symmetric viewpoint tuning can emerge in neural networks, providing a theory of how they might emerge in the primate brain. Our theory predicts that mirror-symmetric viewpoint tuning can emerge as a consequence of exposure to bilaterally symmetric objects \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:JjBZBFkNMTQC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.01.05.522909.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:W2e38C0w7IsJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

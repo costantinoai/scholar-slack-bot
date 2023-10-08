@@ -89,7 +89,7 @@ def clean_pubs(fetched_pubs, to_year=2023, exclude_not_cited_papers=False):
         # Only include publications that have a specified publication year and meet the year criterion
         # Optionally exclude publications that haven't been cited based on the exclude_not_cited_papers flag
         if pub["bib"].get("pub_year")
-        and int(pub["bib"]["pub_year"]) >= int(to_year)
+        and int(pub["bib"]["pub_year"]) <= int(to_year)
         and (not exclude_not_cited_papers or pub["num_citations"] > 0)
     ]
 

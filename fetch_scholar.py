@@ -20,6 +20,8 @@ from log_config import MIN, STANDARD
 
 # Get global debug flag
 DEBUG = False
+MAX_RETRIES = 3
+DELAYS = [20, 40, 60]
 
 def set_debug(state):
     global DEBUG
@@ -47,148 +49,207 @@ def fetch_publication_details(pub):
         logging.error(f"Error fetching publication: {e}")
         return None
 
-def fetch_publications_by_id(author_id, output_folder, to_year=2023, exclude_not_cited_papers=False):
+def ensure_output_folder(output_folder):
     """
-    Fetches publications for an author using their Google Scholar ID and caches the data.
-
-    Parameters:
-        author_id (str): Google Scholar ID of the author.
-        output_folder (str): Directory where the publication cache will be stored.
-        to_year (int, optional): Fetch articles up to this year. Defaults to 2023.
-        exclude_not_cited_papers (bool, optional): If True, exclude uncited papers. Defaults to False.
-
-    Returns:
-        list: Filtered, sorted, and sliced list of relevant publications.
+    Checks for the existence of the output folder, and if it doesn't exist, creates it.
 
     Raises:
-        FileNotFoundError: If the output folder doesn't exist.
-        Exception: For unexpected errors during the process.
-
-    Example:
-        publications = fetch_publications_by_id("some_google_scholar_id", "/path/to/output/folder")
+    - Exception: If there's any error during folder creation.
     """
+    if not os.path.exists(output_folder):  # Check if directory exists
+        logging.info(f"Output folder '{output_folder}' does not exist. Creating it.")
+        os.makedirs(output_folder)  # Create directory
 
-    # Check if the specified output folder exists
-    if not os.path.exists(output_folder):
-        logging.error(f"Output folder '{output_folder}' does not exist.")
-        raise FileNotFoundError(f"Output folder '{output_folder}' not found.")
+def fetch_author_details(author_id):
+    """
+    Fetches author details using the scholarly library.
 
-    # Log the initiation of the fetch process
-    logging.log(STANDARD, f"Initiating fetch for author ID: {author_id}")
+    Returns:
+    - dict: Details of the author.
 
-    # Construct the path for the cached publications for the author
-    cache_path = os.path.join(output_folder, f"{author_id}.json")
-
-    # Fetch author details from Google Scholar
+    Raises:
+    - Exception: If there's any error during the fetching process.
+    """
     try:
         author = scholarly.search_author_id(author_id)
         author = scholarly.fill(author)
-        author_pubs = author['publications']
+        return author["publications"]
     except Exception as e:
-        logging.error(f"Error fetching details for author ID: {author_id}. Error: {e}")
-        raise
+        logging.error(f"Error fetching author details for ID: {author_id}. {e}")
+        raise e
+        
+def load_cache(author_id, output_folder):
+    """
+    Loads cached publications details from the file system, if available.
 
-    # Load cached publications, if available
-    cached_pubs = []
+    Returns:
+    - list: List of cached publications or an empty list if cache is not present or corrupted.
+
+    Raises:
+    - Exception: If there's any error during the loading process.
+    """
+    # Load cached publications if they exist
+    cache_path = os.path.join(output_folder, f"{author_id}.json")  # Determine the cache file path
     if os.path.exists(cache_path):
-        logging.log(STANDARD, f"Attempting to load cache for author {author_id}.")
+        logging.log(STANDARD, f"Cache exists for author {author_id}. Loading...")
         try:
             with open(cache_path, "r") as f:
-                cached_pubs = json.load(f)
+                return json.load(f)
         except Exception as e:
-            logging.warning(f"Failed to load cache for author {author_id}. Error: {e}")
+            logging.warning(f"Error loading cache for author {author_id}. {e}")
+            return []
+    else:
+        logging.log(STANDARD, f"No cache for author {author_id}. Fetching all.")
+        return []
 
-    # Extract titles from cached publications for comparison
-    cached_titles = [pub['bib']['title'] for pub in cached_pubs]
+def get_pubs_to_fetch(author_pubs, cached_pubs, from_year):
+    """
+    Determines the publications that need to be fetched based on cached data and the specified year.
 
-    # Filter the author's publications to exclude cached ones and those before the desired year
-    pubs_to_fetch = [item for item in author_pubs if item['bib']['title'] not in cached_titles and item['bib']['pub_year'] >= to_year]
+    Returns:
+    - list: List of publications to fetch.
+    """ 
+    if DEBUG:
+        logging.warning(f"DEBUG flag True. Loading only cached papers >= {str(from_year)}")
+        
+    # Extract titles from cached publications
+    cached_titles = (
+            [pub["bib"]["title"] for pub in cached_pubs]
+            if not DEBUG
+            else [
+                pub["bib"]["title"]
+                for pub in cached_pubs
+                if 'pub_year' in pub["bib"].keys()
+                and int(pub["bib"]["pub_year"]) < int(from_year)
+            ]
+        )       
+    
+    # Filter out publications to fetch based on title and year
+    pubs_to_fetch = [
+        item
+        for item in author_pubs
+        if item["bib"]["title"] not in cached_titles
+        and 'pub_year' in item["bib"].keys()
+        and int(item["bib"]["pub_year"]) >= int(from_year)
+    ]
+    
+    return pubs_to_fetch
 
-    # List to store fetched publications
-    fetched_pubs = []
+def fetch_selected_pubs(pubs_to_fetch):
+    """
+    Fetches selected publications using parallel processing.
 
-    # Display tqdm progress bar if logging level is set to MIN
-    show_progress = logging.getLogger().getEffectiveLevel() == MIN
+    Parameters:
+    - pubs_to_fetch (list): List of publications to fetch.
 
-    # Determine the iterable based on whether to show progress
-    iterable = tqdm(pubs_to_fetch, desc="\tFetching new publications..") if show_progress else pubs_to_fetch
+    Returns:
+    - list: List of fetched publications.
 
-    # Define maximum number of retry attempts if fetching fails
-    max_retries = 5
-    
-    # Define delay (in seconds) between each retry attempt
-    retry_delay = 60
-    
-    # Iterate through each publication that needs to be fetched
-    for pub in iterable:
-    
-        # Flag to determine if the publication was successfully fetched
-        success = False
-    
-        # Counter to keep track of the number of retry attempts made
-        retries = 0
-    
-        # Retry fetching until either successful or max retries are reached
-        while not success and retries < max_retries:
-            try:
-                # Use ThreadPoolExecutor to fetch publication details concurrently
-                with ThreadPoolExecutor() as executor:
-                    # Fetch details for the current publication and store the result
-                    fetched_pub = next(executor.map(fetch_publication_details, [pub]))
-                
-                # If successfully fetched, add the publication to the fetched_pubs list
-                fetched_pubs.append(fetched_pub)
-                
-                # Update success flag
-                success = True
-    
-            # Handle exceptions during the fetch attempt
-            except Exception as e:
-                # Increment retry counter
-                retries += 1
-                
-                # Log a warning message with details of the failed fetch attempt
-                logging.warning(f"Error fetching '{pub['bib']['title']}'. Attempt {retries}/{max_retries}. Error: {e}")
-                
-                # If not reached the max retry limit, wait for a defined delay before retrying
-                if retries < max_retries:
-                    logging.info(f"Pausing for {retry_delay} seconds before retrying...")
-                    time.sleep(retry_delay)
-    
-        # If max retries are reached and publication is still not fetched, log an error
-        if not success:
-            logging.error(f"Failed fetching '{pub['bib']['title']}' after {max_retries} attempts. Skipping.")
-    
-    # Try to cache (save) the fetched publications
-    try:
-        # Open the cache file in write mode
-        with open(cache_path, "w") as f:
-            # Save both newly fetched and previously cached publications to the file
-            # Check if DEBUG_FLAG is set
-            if DEBUG_FLAG:
-                json.dump(cached_pubs, f, indent=4)
+    Raises:
+    - Exception: If there's any error during the fetching process.
+    """
+    # Loop through the retry attempts
+    for retry in range(MAX_RETRIES):
+        try:
+            # Use a ThreadPoolExecutor to parallelize the fetching of publications
+            with ThreadPoolExecutor() as executor:
+                # Check if logging level is set to MIN. If so, display a progress bar
+                if logging.getLogger().getEffectiveLevel() == MIN and pubs_to_fetch !=[]:
+                    fetched_pubs = list(
+                        tqdm(
+                            # Execute fetch_publication_details for each item in pubs_to_fetch concurrently
+                            executor.map(fetch_publication_details, pubs_to_fetch),
+                            total=len(pubs_to_fetch),
+                            desc="Fetching publications",
+                        )
+                    )
+                elif logging.getLogger().getEffectiveLevel() != MIN and pubs_to_fetch !=[]:
+                    # If not using a progress bar, simply map the function across the publications
+                    fetched_pubs = list(executor.map(fetch_publication_details, pubs_to_fetch))
+                else:
+                    logging.log(STANDARD, "No new publications. Skipping..")
+                    fetched_pubs = []
+            # Return the fetched publications
+            return fetched_pubs
+        except Exception as e:
+            # If an exception occurs and it's not the last retry attempt, log a warning and delay
+            if retry < MAX_RETRIES - 1:
+                logging.warning(
+                    f"Error fetching publications. Retrying in {DELAYS[retry]} seconds. Error: {e}"
+                )
+                time.sleep(DELAYS[retry])  # Delay for a specified amount of time before retrying
             else:
-                json.dump(fetched_pubs + cached_pubs, f, indent=4)        
-                # Log a message indicating successful caching
-                logging.log(STANDARD, f"Publications for author {author_id} cached.")
-    
-    # Handle exceptions during caching
-    except Exception as e:
-        # Log an error message with details of the caching failure
-        logging.error(f"Error caching publications for {author_id}. Error: {e}")
-    
-    # Process the fetched publications (e.g., filter, sort) using a helper function
-    clean_pubs_list = clean_pubs(fetched_pubs, to_year, exclude_not_cited_papers)
-    
-    # Return the processed list of publications
-    return clean_pubs_list
+                # If it's the last retry attempt, log an error and return an empty list
+                logging.error(f"Max retries reached. Exiting fetch process. Error: {e}")
+                return []                
+
+def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder):
+    """
+    Updates the cache by saving the combined list of fetched and cached publications.
+
+    Parameters:
+    - fetched_pubs (list): List of newly fetched publications.
+    - cached_pubs (list): List of previously cached publications.
+    - output_folder (str): Directory to save the cache.
+    """
+    if not DEBUG:
+        cache_path = os.path.join(output_folder, f"{author_id}.json")
+        logging.info(f"Updating cache for author {author_id}.")
+        with open(cache_path, "w") as f:
+            combined_pubs = fetched_pubs + cached_pubs
+            json.dump(combined_pubs, f, indent=4)
+            
+def fetch_publications_by_id(author_id, output_folder, from_year=2023, exclude_not_cited_papers=False):
+    """
+    Fetches and caches publications of a specific author using their Google Scholar ID.
+
+    Parameters:
+    - author_id (str): Google Scholar ID of the author.
+    - output_folder (str): Directory where the fetched publications will be cached.
+    - from_year (int, optional): Limit publications to this year. Defaults to 2023.
+    - exclude_not_cited_papers (bool, optional): If True, only return papers that have been cited. Defaults to False.
+
+    Returns:
+    - list: A list of publications, filtered and processed based on given parameters.
+
+    Raises:
+    - FileNotFoundError: If the specified output folder doesn't exist.
+    - Exception: For unexpected errors during the fetch process.
+
+    How it works:
+    1. Check if the output folder exists. If not, it creates it.
+    2. Fetch author details from Google Scholar.
+    3. Load cached publications if available.
+    4. Filter out already cached publications.
+    5. Fetch details of the new publications in parallel.
+    6. Cache the updated list of publications.
+    7. Process the fetched list based on parameters (e.g., year, citations).
+
+    Note:
+    - This function uses the 'scholarly' library to interact with Google Scholar.
+    - Fetching too many papers in a short time might lead to a temporary block by Google Scholar.
+    """
+    # Check if the output folder exists or create it
+    ensure_output_folder(output_folder)
+    # Fetch author details from Google Scholar
+    author_pubs = fetch_author_details(author_id)
+    # Load cached publications if available
+    cached_pubs = load_cache(author_id, output_folder)
+    # Determine the list of publications to fetch
+    pubs_to_fetch = get_pubs_to_fetch(author_pubs, cached_pubs, from_year)
+    # Fetch selected publications
+    fetched_pubs = fetch_selected_pubs(pubs_to_fetch)
+    # Update cache with newly fetched publications
+    save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder)
+    # Return cleaned list of publications
+    return clean_pubs(fetched_pubs, from_year, exclude_not_cited_papers)
 
 def fetch_pubs_dictionary(authors, output_dir="./src"):
     """
-    Fetch publications for a list of authors for the current year, 
-    and store them in a cache. Only non-duplicate publications compared 
+    Fetch publications for a list of authors for the current year,
+    and store them in a cache. Only non-duplicate publications compared
     to the cache are returned.
-    
+
     :param authors: List of tuples containing author name and author ID.
     :param output_dir: Directory where the cache file will be saved/loaded from.
     :return: A dictionary containing non-duplicate publications.
@@ -197,7 +258,7 @@ def fetch_pubs_dictionary(authors, output_dir="./src"):
     current_year = time.strftime("%Y")  # Get the current year
     params = {
         "authors": authors,
-        "to_year": current_year,
+        "from_year": current_year,
         "output_root": output_dir,
     }
 
@@ -223,10 +284,8 @@ def fetch_pubs_dictionary(authors, output_dir="./src"):
     for i, (author, author_id) in enumerate(params["authors"]):
         logging.log(MIN, f"Progress: {i+1}/{total_authors} - {author}")
         author_publications = fetch_publications_by_id(
-            author_id,
-            output_folder,
-            to_year=params["to_year"]
+            author_id, output_folder, from_year=params["from_year"]
         )
         authors_publications = authors_publications + author_publications
-       
+
     return authors_publications

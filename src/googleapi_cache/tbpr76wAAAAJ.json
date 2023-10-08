@@ -1,0 +1,384 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Understanding human object vision: a picture is worth a thousand representations",
+            "pub_year": 2023,
+            "citation": "Annual review of psychology 74, 113-135, 2023",
+            "author": "Stefania Bracci and Hans P Op de Beeck",
+            "volume": "74",
+            "pages": "113-135",
+            "publisher": "Annual Reviews",
+            "abstract": "Objects are the core meaningful elements in our visual environment. Classic theories of object vision focus upon object recognition and are elegant and simple. Some of their proposals still stand, yet the simplicity is gone. Recent evolutions in behavioral paradigms, neuroscientific methods, and computational modeling have allowed vision scientists to uncover the complexity of the multidimensional representational space that underlies object vision. We review these findings and propose that the key to understanding this complexity is to relate object vision to the full repertoire of behavioral goals that underlie human behavior, running far beyond object recognition. There might be no such thing as core object recognition, and if it exists, then its importance is more limited than traditionally thought."
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:FiytvqdAVhgC",
+        "num_citations": 11,
+        "citedby_url": "/scholar?hl=en&cites=10144377921907637776",
+        "cites_id": [
+            "10144377921907637776"
+        ],
+        "pub_url": "https://www.annualreviews.org/doi/abs/10.1146/annurev-psych-032720-041031",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:EL6eBvkRyIwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 10
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Category trumps shape as an organizational principle of object space in the human occipitotemporal cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience 43 (16), 2960-2972, 2023",
+            "author": "Hans Op de Beeck",
+            "journal": "Journal of Neuroscience",
+            "volume": "43",
+            "number": "16",
+            "pages": "2960-2972",
+            "publisher": "Society for Neuroscience",
+            "abstract": "The organizational principles of the object space represented in the human ventral visual cortex are debated. Here we contrast two prominent proposals that, in addition to an organization in terms of animacy, propose either a representation related to aspect ratio (stubby-spiky) or to the distinction between faces and bodies. We designed a critical test that dissociates the latter two categories from aspect ratio and investigated responses from human fMRI (of either sex) and deep neural networks (BigBiGAN). Representational similarity and decoding analyses showed that the object space in the occipitotemporal cortex and BigBiGAN was partially explained by animacy but not by aspect ratio. Data-driven approaches showed clusters for face and body stimuli and animate-inanimate separation in the representational space of occipitotemporal cortex and BigBiGAN, but no arrangement related to aspect ratio. In sum, the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:MhiOAD_qIWkC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=10652240416414833317",
+        "cites_id": [
+            "10652240416414833317"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/43/16/2960.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:pRp3gjhc1JMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The importance of contrast features in rat vision",
+            "pub_year": 2023,
+            "citation": "Scientific Reports 13 (1), 459, 2023",
+            "author": "Anna Elisabeth Schnell and Kasper Vinken and Hans Op de Beeck",
+            "journal": "Scientific Reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "459",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Models of object recognition have mostly focused upon the hierarchical processing of objects from local edges up to more complex shape features. An alternative strategy that might be involved in pattern recognition centres around coarse-level contrast features. In humans and monkeys, the use of such features is most documented in the domain of face perception. Given prior suggestions that, generally, rodents might rely upon contrast features for object recognition, we hypothesized that they would pick up the typical contrast features relevant for face detection. We trained rats in a face-nonface categorization task with stimuli previously used in computer vision and tested for generalization with new, unseen stimuli by including manipulations of the presence and strength of a range of contrast features previously identified to be relevant for face detection. Although overall generalization performance was low, it was \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:7H_MAutzIkAC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=17878630964225576408",
+        "cites_id": [
+            "17878630964225576408"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41598-023-27533-3",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2A33DCOoHfgJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Color-Dependent Prediction Stability of Popular CNN Image Classification Architectures",
+            "pub_year": 2023,
+            "citation": "International Conference on Artificial Neural Networks, 491-503, 2023",
+            "author": "Laurent Mertens and Elahe\u2019 Yargholi and Jan Van den Stock and Hans Op de Beeck and Joost Vennekens",
+            "pages": "491-503",
+            "publisher": "Springer Nature Switzerland",
+            "abstract": "The ImageNet-1k dataset has been a major contributor to the development of novel CNN-based image classification architectures over the past 10 years. This has led to the advent of a number of models, pre-trained on this dataset, that form a popular basis for creating custom image classifiers by means of transfer learning. A corollary of this process is that whatever weaknesses and biases the original model possesses, the derived model will also have. Some of these have already been extensively covered, but color sensitivity has so far been understudied. This paper explores the prediction stability of several popular CNN architectures when input images are subjected to hue or saturation shifts. We show that even small shifts in image hue can alter a model\u2019s initial prediction, with larger shifts introducing changes up to 60% and 40% of the time for AlexNet and VGG16 respectively. For all models considered \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:MAUkC_7iAq8C",
+        "num_citations": 0,
+        "pub_url": "https://link.springer.com/chapter/10.1007/978-3-031-44207-0_41",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The emergence of object representations in the human visual cortex: Effects of temporal contiguity and part-whole relationships",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Chayenne Van Meel and Hans Op de Beeck and C\u00e9line Gillebert",
+            "abstract": "The visual system comprises two distinct hierarchically organized pathways: the dorsal and the ventral stream. As we move up along the hierarchy in the ventral stream, the size of neurons' receptive fields increases and the features to which neurons respond become more complex. Finally, neural responses in the lateral occipital and ventral temporal cortex contain elaborate representations of the identity of visual stimuli, thus playing an invaluable role in object recognition. Accurate object recognition is both selective and tolerant. On the one hand, object representations should be selective enough to ensure that objects with a highly similar appearance can be distinguished from one another. On the other hand, object representations should also be sufficiently tolerant to changes in appearance that are caused by different viewing conditions. In this doctoral project, we aimed to improve our understanding of how object representations that are tolerant to transformations emerge in the brain, and more specifically what role temporal contiguity training plays in this process. In a second part of the project, we took a step back from our primary focus on high-level vision, and instead broadened our scope of attention to the entire ventral visual stream. Concretely, we investigated how symmetry perception is related to visual representations and neural communication between specific brain regions across the ventral visual pathway. The first study (Chapter 2) investigated whether viewpoint tolerance is reflected in the neural visual system and whether it can be manipulated through training (Van Meel & Op de Beeck, 2018). The behavioral results indicated \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:OBSaB-F7qqsC",
+        "num_citations": 0,
+        "pub_url": "https://lirias.kuleuven.be/handle/20.500.12942/724025",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neuronal tuning and population representations of shape and category in human visual cortex.",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Peter Janssen and Vasiliki Bougou and Micha\u00ebl Vanhoyland and Alexander Bertrand and Wim Van Paesschen and Hans Op de Beeck and Tom Theys",
+            "abstract": "Object recognition and categorization are essential cognitive processes which engage considerable neural resources in the human ventral visual stream. However, the tuning properties of human ventral stream neurons for object shape and category are virtually unknown. We performed the first large-scale recordings of spiking activity in human Lateral Occipital Complex (LOC) in response to stimuli in which the shape dimension was manipulated independently from the category dimension. The neuronal representations in LOC were primarily shape-based, although we also observed category-like encoding for images of animals. Surprisingly, linear decoders could reliably classify stimulus category even in data sets that were entirely shape-based. In addition, many tuning curves showed an interaction between shape and category tuning. These results represent the first detailed study on shape and category coding at the neuronal level in the human ventral visual stream, furnishing essential evidence that reconciles human imaging and macaque single-cell studies."
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:mKu_rENv82IC",
+        "num_citations": 0,
+        "pub_url": "https://www.researchsquare.com/article/rs-3121050/latest",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The role of action-related properties in shaping the object space in the biological and artificial brain",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4868-4868, 2023",
+            "author": "Davide Cortinovis and Hans Op de Beeck and Stefania Bracci",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4868-4868",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Accumulating evidence supports the idea that visual cortex object space reflects behaviorally-relevant dimensions beyond those necessary for object recognition; for instance, the overlap between hands and tools cannot be explained by either visual (eg, shape) or semantic (eg, animacy) accounts of object recognition. Instead, this representational overlap can be explained by action-related properties common to both categories. Convolutional neural networks (CNNs) have been proposed as a model of visual cortex, but most of these networks are trained in object recognition and might lack the ability to model representations that go beyond identification of objects. Here, we characterize the action-related representational space in occipitotemporal cortex (OTC) and test the degree to which current state-of-the-art models of human vision capture this organization. We analyzed an fMRI dataset in which participants \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:sszUF3NjhM4C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791637",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The role of behavioral goals in shaping object representations in the two visual pathways.",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4608-4608, 2023",
+            "author": "Stefania Bracci and Hans Op de Beeck",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4608-4608",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Classic theories in object vision propose a division between ventral and dorsal stream computations. This standpoint has influenced the way scientists have studied object perception characterizing, in the ventral pathway, representations that support recognition of \u201cwhat\u201d we see, and in the dorsal pathway, spatial-and action-related representations that support \u201chow\u201d we interact with objects. Recent studies, however, show that this distinction might not fully capture the complexity of ventral and dorsal stream object representations. What if instead to understand this complexity we need to consider object vision in the context of the full repertoire of behavioral goals that underlie human behavior, running far beyond the \u201cwhat\u201d and \u201cwhere/how\u201d distinction? In this talk, I will discuss the role of behavioral goals in shaping the organization of object space in the two visual pathways. Complementary, I will show that although \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:U_HPUtbDl20C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791840",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Recurrent processing in the visual cortex during object recognition",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4876-4876, 2023",
+            "author": "Timoth\u00e9e Maniquet and Andrea Costantino and Hans Op de Beeck",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4876-4876",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Visual recognition is achieved in the brain by a series of hierarchical processing stages across areas of the ventral stream. Decoding object identity in this hierarchy is partially a bottom-up process, which accounts well for the recognition of easy, canonical appearances. Most natural settings, however, are visually complex, and present challenging viewing conditions. In the presence of visual uncertainty, the recognition of object identity is hence a hard decoding problem that cannot be solved by a purely bottom-up process. The human brain, however, is highly non-feedforward, and each area sends its connections downward or horizontally in the hierarchy. This non bottom-up, recurrent connectivity is thought to provide the necessary computational power to solve object recognition in the face of visual complexity. While evidence for this role is accumulating, the exact mechanisms of recurrent processing remain \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:NDuN12AVoxsC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791631",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Top-down and within-layer recurrent connections in artificial networks are needed to solve challenging visual tasks",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5008-5008, 2023",
+            "author": "Andrea Ivan Costantino and Hans Op de Beeck",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5008-5008",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Research in human vision has shown that visual recognition is achieved through the interaction of a number of specialized brain areas in the ventral and dorsal visual stream. The most influential models of visual perception theorize a feedforward, unidirectional flow of information from low-level to high-level areas. However, growing evidence suggests, on the one hand, that lateral connections and connections from high-to low-level areas (ie, top-down connections) may be crucially involved in more challenging object recognition tasks, and on the other hand that recurrent networks show higher correlation and have better predictivity of brain data. In this study, we explore the functional role of feedback connections in computational models of vision. To do so, we trained several Convolutional Neural Networks (CNNs) with and without recurrent connections (within layers, top-down, top-down+ within) to perform object \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:PyEswDtIyv0C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791506",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The visual word form area engages in processing Braille in expert visual readers",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4992-4992, 2023",
+            "author": "Filippo Cerpelloni and Alice Van Audenhaege and Ceren Battal and Remi Gau and Federica Falagiarda and Hans Op de Beeck and Olivier Collignon",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4992-4992",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "In the ventral occipito-temporal cortex reside numerous areas specialized to identify different categories of stimuli. Among them, the visual word form area (VWFA) preferentially responds to written words. What drives this selectivity for orthographic material remains debated. One popular account suggests that VWFA\u2019s selectivity builds on the intrinsic preference this region has for low-level features shared among most orthographic systems, like specific line junctions (eg T, L, Y). Alternatively, the VWFA could be sensitive to any type of alphabetic material, irrespective of these specific low-level features. We present new data showing that VWFA engages in processing Braille, a script developed for touch that does not share some low-level characteristic of classical alphabets like line junctions, in expert visual readers. In a first session, we show that the region showing preferential activity for roman-based French word \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:-jrNzM816MMC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791520",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Psychiatrische toepassingsmogelijkheden van Artifici\u00eble Neurale Netwerken",
+            "pub_year": 2023,
+            "citation": "Tijdschrift voor Psychiatrie, 2023",
+            "author": "Laurent Mertens and Joost Vennekens and Hans Op de Beeck and Elahe' Yargholi and Jan Van den Stock",
+            "journal": "Tijdschrift voor Psychiatrie",
+            "publisher": "Uitgeverij Boom",
+            "abstract": "Artifici\u00eble Intelligentie (AI) evolueerde enorm tijdens het voorbije decennium en kent steeds meer toepassingsgebieden, inclusief psychiatrie. AI omvat verschillende modaliteiten, waaronder Artifici\u00eble Neurale Netwerken (ANNs), verwijzend naar computermodellen die gebaseerd zijn op de werking van het brein. Hoewel ANNs sinds de jaren'50 beschreven zijn, werden ze pas\" mainstream\" sinds een tiental jaren. Momenteel worden ANNs als een van de meest effici\u00ebnte en bruikbare AI modaliteiten beschouwd. Het feit dat ANNs inspiratie halen uit de werking van het brein doet de vraag rijzen of ze gebruikt kunnen worden om het (dys) functioneren van het brein en bijgevolg cognitie en gedrag te simuleren. Deze vraag heeft geleid tot de opkomst van het domein\" Computationele Psychiatrie\"."
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:HGTzPopzzJcC",
+        "num_citations": 0,
+        "pub_url": "https://lirias.kuleuven.be/4092987?limo=0",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "I spy with my little eye... But what can rats spy? Investigating the rodent model for high-level visual processing",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Anna-Elisabeth Schnell and Hans Op de Beeck and Val\u00e9rie Goffaux",
+            "abstract": "I spy with my little eye, a well-loved childhood game that many people like to play. As scientists, we were wondering how the brain solves such a task, where certain objects have to be found in a scene, or known objects have to be recognized from different viewpoints. This is exactly what the domain of invariant object recognition focuses on. To understand how the human vision system performs this task, we have to take a closer look at the neural underpinnings of the human brain. From previous studies, we know that the brain processes visual information through two functionally and anatomically distinct pathways. The pathway we focused on in this dissertation is the ventral visual pathway, or the what stream, as it focuses on object identity and recognition. Visual information consists of two different kinds of features: low-level features and high-level features and these features are processed differently in the human brain. In this dissertation, we wanted to investigate this ventral visual stream by using two models with which we can or try to model high-level visual processing. The first model is the rat model, and we have used this animal model throughout all three studies. In our first two studies, the animals were trained in a face categorization task, using stimuli of human faces as targets and random objects (Chapter 2) or noisy stimuli (Chapter 3) as distractors. We found that rats were capable of learning these complex categorization tasks and that they were able to generalize to new, unseen stimuli, even after applying transformations to these stimuli. In our second study, we focused on contrast features, a low-level feature that has been \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:Ade32sEp0pkC",
+        "num_citations": 0,
+        "pub_url": "https://lirias.kuleuven.be/4080292?limo=0",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Frequency-Tagging EEG Reveals Similar Neural Sensitivity in Men with and without Autism to Subtle Differences in Facial Identities and Expressions",
+            "pub_year": 2023,
+            "citation": "INSAR 2023, 2023",
+            "author": "Stephanie Van der Donck and Michelle Hendriks and Silke Vos and Hans Op de Beeck and Bart Boets",
+            "journal": "INSAR 2023",
+            "publisher": "INSAR"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:SjuI4pbJlxcC",
+        "num_citations": 0,
+        "pub_url": "https://insar.confex.com/insar/2023/meetingapp.cgi/Paper/44498",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The representational hierarchy in human and artificial visual systems in the presence of object-scene regularities",
+            "pub_year": 2023,
+            "citation": "PLOS Computational Biology 19 (4), e1011086, 2023",
+            "author": "Stefania Bracci and Jakob Mraz and Astrid Zeman and Ga\u00eblle Leys and Hans Op de Beeck",
+            "journal": "PLOS Computational Biology",
+            "volume": "19",
+            "number": "4",
+            "pages": "e1011086",
+            "publisher": "Public Library of Science",
+            "abstract": "Human vision is still largely unexplained. Computer vision made impressive progress on this front, but it is still unclear to which extent artificial neural networks approximate human object vision at the behavioral and neural levels. Here, we investigated whether machine object vision mimics the representational hierarchy of human object vision with an experimental design that allows testing within-domain representations for animals and scenes, as well as across-domain representations reflecting their real-world contextual regularities such as animal-scene pairs that often co-occur in the visual environment. We found that DCNNs trained in object recognition acquire representations, in their late processing stage, that closely capture human conceptual judgements about the co-occurrence of animals and their typical scenes. Likewise, the DCNNs representational hierarchy shows surprising similarities with the representational transformations emerging in domain-specific ventrotemporal areas up to domain-general frontoparietal areas. Despite these remarkable similarities, the underlying information processing differs. The ability of neural networks to learn a human-like high-level conceptual representation of object-scene co-occurrence depends upon the amount of object-scene co-occurrence present in the image set thus highlighting the fundamental role of training history. Further, although mid/high-level DCNN layers represent the category division for animals and scenes as observed in VTC, its information content shows reduced domain-specific representational richness. To conclude, by testing within- and between-domain selectivity while \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:WC9gN4BGCRcC",
+        "num_citations": 0,
+        "pub_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011086",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2p4_EIVs9mAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Visual Expertise: A computational understanding of visual object recognition in the human brain and convolutional neural networks",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Stefanie Duyck and Hans Op de Beeck",
+            "abstract": "Visual Perceptual Learning takes up a great deal of our lives, where for some of us, it leads to becoming an expert (eg, radiology). The tradition of training specific outcomes is challenged by generalization to other features, retinal locations or other general domains (eg, multi-tasking). Yet, the mechanisms underlying transfer lead to inconsistent findings, such as whether playing video games results in transfer. The first study aimed to integrate as many factors known to contribute to transfer, which resulted in a gamified perceptual learning paradigm. A simple game was given to the control group, whilst the experimental group was trained with the paradigm for 10 hours. We observed effects of transfer to other objects, locations, and domains (eg, executive functioning), which were stronger in the experimental group for object transfer. These positive effects led to an investigation of the neural underpinnings of these findings in a second fMRI study. Before and after a 15 hour training on the same paradigm/game, subjects participated in a fMRI session. Results showed enhanced neural sensitivity for low-level stimuli in the brain's object region with training. An unfortunate lack of signal in the scanning paradigm caused problems picking up expected and more subtle sensitivity differences. The surge of Convolutional Neural Networks (CNNs) in VPL resulted in two more studies with a computational approach on visual object expertise. Study three aimed to investigate intra-class specificity in different instances of a CNN and correlate these representations with the behavioral and neural representations in novices and experts. The same CNN architecture is \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:3NQIlFlcGxIC",
+        "num_citations": 0,
+        "pub_url": "https://lirias.kuleuven.be/handle/20.500.12942/716276",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A computationally informed comparison between the strategies of rodents and humans in visual object recognition",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.03. 15.532720, 2023",
+            "author": "Anna Elisabeth Schnell and Maarten Leemans and Kasper Vinken and Hans Op de Beeck",
+            "journal": "bioRxiv",
+            "pages": "2023.03. 15.532720",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Many species are able to recognize objects, but it has been proven difficult to pinpoint and compare how different species solve this task. Recent research suggested to combine computational and animal modelling in order to obtain a more systematic understanding of task complexity and compare strategies between species. In the present study, we created a large multidimensional stimulus set and designed a visual discrimination task partially based upon modelling with a convolutional deep neural network (CNN). Experiments included rats (N = 11; 1115 daily sessions in total for all rats together) and humans (N = 45). Each species was able to master the task and generalize to a variety of new images. Nevertheless, rats and humans showed very little convergence in terms of which object pairs were associated with high and low performance, suggesting the use of different strategies. There was an interaction between species and whether stimulus pairs favoured early or late processing in a CNN. A direct comparison with CNN representations and visual feature analyses revealed that rat performance was best captured by late convolutional layers and partially by visual features such as brightness and pixel-level similarity, while human performance related more to the higher-up fully connected layers. These findings highlight the additional value of using a computational approach for the design of object recognition tasks. Overall, this computationally informed investigation of object recognition behaviour reveals a strong discrepancy in strategies between rodent and human vision."
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:yxmsSjX2EkcC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.03.15.532720.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neuronal tuning and population representations of shape and category in human visual cortex.",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.08. 25.554796, 2023",
+            "author": "Vasiliki Bougou and Michael Vanhoyland and Alexander Bertrand and Wim Van Paesschen and Hans Op de Beeck and Peter Janssen and Tom Theys",
+            "journal": "bioRxiv",
+            "pages": "2023.08. 25.554796",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Object recognition and categorization are essential cognitive processes which engage considerable neural resources in the human ventral visual stream. However, the tuning properties of human ventral stream neurons for object shape and category are virtually unknown. We performed the first large-scale recordings of spiking activity in human Lateral Occipital Complex in response to stimuli in which the shape dimension was dissociated from the category dimension. Consistent with studies in nonhuman primates, the neuronal representations were primarily shape-based, although we also observed category-like encoding for images of animals. Surprisingly, linear decoders could reliably classify stimulus category even in data sets that were entirely shape-based. In addition, many tuning curves showed an interaction between shape and category tuning. These results represent the first detailed study on shape and category coding at the neuronal level in the human ventral visual stream, furnishing essential evidence that reconciles human imaging and macaque single-cell studies."
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:QyXJ3EUuO1IC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.25.554796.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The representational dynamics of the animal appearance bias in human visual cortex are indicative of fast feedforward processing",
+            "pub_year": 2023,
+            "citation": "Imaging Neuroscience, 2023",
+            "author": "Chiu-Yueh Chen and Ga\u00eblle Leys and Stefania Bracci and Hans Op de Beeck",
+            "journal": "Imaging Neuroscience",
+            "abstract": "The human visual system has a seemingly unique tendency to interpret zoomorphic objects as animals, not as objects. This animal appearance bias is very strong in the ventral visual pathway as measured through functional magnetic resonance imaging (fMRI), but it is absent in feedforward deep convolutional neural networks. Here we investigate how this bias emerges over time by probing its representational dynamics through multivariate electroencephalography (EEG). The initially activated representations to lookalike zoomorphic objects are very similar to the representations activated by animal pictures and very different from the neural responses to regular objects. Neural responses that reflect the true identity of the zoomorphic objects as inanimate objects are weaker and appear later, as do effects of task context. The strong early emergence of an animal appearance bias strongly supports a feedforward \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:L1USKYWJimsC",
+        "num_citations": 0,
+        "pub_url": "https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00006/116700",
+        "cites_per_year": {}
+    }
+]
