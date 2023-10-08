@@ -39,7 +39,7 @@ def get_args():
     parser.add_argument('--verbose', action='store_true', help='Verbose output.')
 
     # Mutually exclusive arguments group
-    group = parser.add_mutually_exclusive_group(required=True)
+    group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument('--test_fetching', action='store_true', help='Test fetching functions (do not send message or save cache).')
     group.add_argument('--test_message', action='store_true', help='Send test message (do not fetch, send message or save cache).')
     group.add_argument('--add_scholar_id', help='Add a new scholar by Google Scholar ID to the file specified in --authors_path, fetch publications and save them to cache (do not send message).')
