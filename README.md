@@ -80,16 +80,6 @@ channel_name = YOUR-CHANNEL-NAME
 
 Add author details in `src/authors.json` or `src/authors_short.json`.
 
-
-Now, update the `slack.config` file with your bot's API token, channel name, and channel ID. The structure should look like:
-
-```ini
-[slack]
-api_token = xoxb-YOUR-API-TOKEN
-channel_name = YOUR-CHANNEL-NAME
-channel_id = YOUR-CHANNEL-ID
-```
-
 With everything set up, you can now run the code. The bot will send messages to the Slack channel based on the fetched publications.
 
 ## 🚀 Usage
