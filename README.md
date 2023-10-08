@@ -105,10 +105,11 @@ The script accepts several command-line arguments (flags) to customize its behav
   ```python main.py --verbose```
 
 - `--test_fetching`: (Optional) Test fetching functions. Do not send message (unless --test_message) or save cache. Mutually exclusive with `--add_scholar_id`.
-  - Example:
+  - Example (fetch only):
   Fetch last year's data for two authors in `./src/authors.json`. Do not send messages or update cache.
   ```python main.py --test_fetching```
   
+  - Example (fetch and send message)
   Fetch last year's data for two authors in `./src/authors.json`. Send messages with fetched papers, but do not update cache.
   ```python main.py --test_fetching --test_message```
 
