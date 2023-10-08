@@ -110,23 +110,23 @@ The script accepts several command-line arguments (flags) to customize its behav
   - Example: 
   ```python main.py --slack_config_path="./path/to/your/slack.config"```
 
-- `--verbose`: Provides verbose output for detailed logging and debugging.
+- `--verbose`: (Optional) Provides verbose output for detailed logging and debugging.
   - Example:
   ```python main.py --verbose```
 
-#### Mutually Exclusive Flags
-
-The script also contains a group of mutually exclusive flags. This means you can use only one of the following flags at a time:
-
-- `--test_fetching`: Test fetching functions (do not send message or save cache).
+- `--test_fetching`: (Optional) Test fetching functions. Do not send message (unless --test_message) or save cache. Mutually exclusive with `--add_scholar_id`.
   - Example:
+  Fetch last year's data for two authors in `./src/authors.json`. Do not send messages or update cache.
   ```python main.py --test_fetching```
+  
+  Fetch last year's data for two authors in `./src/authors.json`. Send messages with fetched papers, but do not update cache.
+  ```python main.py --test_fetching --test_message```
 
-- `--test_message`: Send test message (do not fetch or save cache).
+- `--test_message`: (Optional) Send test message. Do not fetch, send message (unless --test_fetching) or save cache. Mutually exclusive with `--add_scholar_id`.
   - Example:
   ```python main.py --test_message```
 
-- `--add_scholar_id`: Add a new scholar by Google Scholar ID to the file specified in `--authors_path`, fetch publications and save them to cache (do not send message).
+- `--add_scholar_id`: (Optional) Add a new scholar by Google Scholar ID to the file specified in `--authors_path`, fetch publications and save them to cache (do not send message).
   - Example:
   ```python main.py --add_scholar_id="YourGoogleScholarID"```
 

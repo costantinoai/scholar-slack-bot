@@ -37,14 +37,13 @@ def get_args():
     parser.add_argument('--authors_path', default='./src/authors.json', help='Path to authors.json')
     parser.add_argument('--slack_config_path', default='./src/slack.config', help='Path to slack.config')
     parser.add_argument('--verbose', action='store_true', help='Verbose output.')
+    parser.add_argument('--test_fetching', action='store_true', help='Test fetching functions. Do not send message (unless --test_message) or save cache.')
+    parser.add_argument('--test_message', action='store_true', help='Send test message. Do not fetch, send message (unless --test_fetching) or save cache.')
+    parser.add_argument('--add_scholar_id', help='Add a new scholar by Google Scholar ID to the file specified in --authors_path, fetch publications and save them to cache (do not send message).')
 
-    # Mutually exclusive arguments group
-    group = parser.add_mutually_exclusive_group(required=False)
-    group.add_argument('--test_fetching', action='store_true', help='Test fetching functions (do not send message or save cache).')
-    group.add_argument('--test_message', action='store_true', help='Send test message (do not fetch, send message or save cache).')
-    group.add_argument('--add_scholar_id', help='Add a new scholar by Google Scholar ID to the file specified in --authors_path, fetch publications and save them to cache (do not send message).')
+    args = parser.parse_args()
 
-    return parser.parse_args()
+    return parser, args
 
 def main():
     """
@@ -68,7 +67,7 @@ def main():
     # Check if the script is executed via command line or from an IDE
     if len(sys.argv) > 1:
         # Parse command-line arguments
-        args = get_args()
+        parser, args = get_args()
         logging.log(MIN, "Parsed command-line arguments.")
     else:
         class IDEArgs:
@@ -81,7 +80,14 @@ def main():
                 self.add_scholar_id = None
 
         args = IDEArgs()
-        logging.log(MIN, "Using hardcoded configurations for IDE execution.")
+        logging.log(MIN, "Using default configurations.")
+    
+    # Manually checking for mutual exclusivity
+    if args.add_scholar_id and (args.test_fetching or args.test_message):
+        if len(sys.argv) > 1:
+             raise ValueError("--add_scholar_id cannot be used with --test_fetching or --test_message")
+        else:
+            parser.error("--add_scholar_id cannot be used with --test_fetching or --test_message")
         
     # Reconfigure logging based on DEBUG_FLAG's value
     if args.verbose:
@@ -100,7 +106,7 @@ def main():
     ch_name = slack_config['channel_name']
     logging.log(MIN, f"Target Slack channel: {ch_name}.")
     
-    if args.test_message == True:
+    if args.test_message == True and args.test_fetching == False:
         send_test_msg(token, ch_name)
         return
         
@@ -124,15 +130,30 @@ def main():
     articles = fetch_pubs_dictionary(authors, args)
     logging.log(MIN, f"Fetched {len(articles)} articles for the provided authors.")
 
-    if args.add_scholar_id == None and args.test_message == False and args.test_fetching == False:
-        # Create Slack messages for each author using the provided articles' details
+    if not args.add_scholar_id and args.test_fetching == args.test_message:
+		# This block is entered under the following scenarios:
+		# 1. When `add_scholar_id` is not provided (i.e., its value is None).
+		#    This means that we are not in the mode to add a scholar by ID.
+		# 
+		# AND
+		#
+		# 2a. Both `test_fetching` and `test_message` are True.
+		#     This indicates that we want to perform a test fetch and also send a test message.
+		#
+		# OR
+		#
+		# 2b. Both `test_fetching` and `test_message` are False.
+		#     This is the normal situation where no specific "test" flags are active.
+
+		# Create Slack messages for each author using the provided articles' details
         formatted_messages = make_slack_msg(authors, articles)
         logging.log(MIN, f"Formatted messages for {len(authors)} authors.")
-    
-        # Send each of the formatted messages to the configured Slack channel
+
+		# Send each of the formatted messages to the configured Slack channel
         for formatted_message in formatted_messages:
             send_to_slack(ch_name, formatted_message, token)
             logging.log(STANDARD, "Sent message to Slack.")  # Preview first 50 chars for brevity
+
 
 if __name__ == "__main__":
     main()

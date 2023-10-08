@@ -1,0 +1,348 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "THINGS-data, a multimodal collection of large-scale datasets for investigating object representations in human brain and behavior",
+            "pub_year": 2023,
+            "citation": "Elife 12, e82580, 2023",
+            "author": "Martin N Hebart and Oliver Contier and Lina Teichmann and Adam H Rockter and Charles Y Zheng and Alexis Kidder and Anna Corriveau and Maryam Vaziri-Pashkam and Chris I Baker",
+            "journal": "Elife",
+            "volume": "12",
+            "pages": "e82580",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Understanding object representations requires a broad, comprehensive sampling of the objects in our visual world with dense measurements of brain activity and behavior. Here, we present THINGS-data, a multimodal collection of large-scale neuroimaging and behavioral datasets in humans, comprising densely sampled functional MRI and magnetoencephalographic recordings, as well as 4.70 million similarity judgments in response to thousands of photographic images for up to 1,854 object concepts. THINGS-data is unique in its breadth of richly annotated objects, allowing for testing countless hypotheses at scale while assessing the reproducibility of previous findings. Beyond the unique insights promised by each individual dataset, the multimodality of THINGS-data allows combining datasets for a much broader view into object processing than previously possible. Our analyses demonstrate the high quality of the datasets and provide five examples of hypothesisdriven and data-driven applications. THINGS-data constitutes the core public release of the THINGS initiative (https://things-initiative. org) for bridging the gap between disciplines and the advancement of cognitive neuroscience."
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:7BrZ7Jt4UNcC",
+        "num_citations": 13,
+        "citedby_url": "/scholar?hl=en&cites=11776019156333001843",
+        "cites_id": [
+            "11776019156333001843"
+        ],
+        "pub_url": "https://elifesciences.org/articles/82580",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:c3xs2QfTbKMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 13
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A database of heterogeneous faces for studying naturalistic expressions",
+            "pub_year": 2023,
+            "citation": "Scientific Reports 13 (1), 5383, 2023",
+            "author": "Houqiu Long and Natalie Peluso and Chris I Baker and Shruti Japee and Jessica Taubert",
+            "journal": "Scientific Reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "5383",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Facial expressions are thought to be complex visual signals, critical for communication between social agents. Most prior work aimed at understanding how facial expressions are recognized has relied on stimulus databases featuring posed facial expressions, designed to represent putative emotional categories (such as \u2018happy\u2019 and \u2018angry\u2019). Here we use an alternative selection strategy to develop the Wild Faces Database (WFD); a set of one thousand images capturing a diverse range of ambient facial behaviors from outside of the laboratory. We characterized the perceived emotional content in these images using a standard categorization task in which participants were asked to classify the apparent facial expression in each image. In addition, participants were asked to indicate the intensity and genuineness of each expression. While modal scores indicate that the WFD captures a range of different emotional \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:kw52XkFRtyQC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=6931476500676889934",
+        "cites_id": [
+            "6931476500676889934"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41598-023-32659-5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Tk3QHyeNMWAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Should bionic limb control mimic the human body? Impact of control strategy on bionic hand skill learning",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.02. 07.525548, 2023",
+            "author": "Hunter R Schone and Malcolm Udeozor and Mae Moninghoff and Beth Rispoli and James Vandersea and Blair Lock and Levi Hargrove and Tamar R Makin and Chris I Baker",
+            "journal": "bioRxiv",
+            "pages": "2023.02. 07.525548",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "A longstanding engineering ambition has been to design anthropomorphic bionic limbs: devices that look like and are controlled in the same way as the biological body (biomimetic). The untested assumption is that biomimetic motor control enhances device embodiment, learning, generalization, and automaticity. To test this, we compared biomimetic and non-biomimetic control strategies for able-bodied participants when learning to operate a wearable myoelectric bionic hand. We compared motor learning across days and behavioural tasks for two training groups: Biomimetic (mimicking the desired bionic hand gesture with biological hand) and Arbitrary control (mapping an unrelated biological hand gesture with the desired bionic gesture). For both trained groups, training improved bionic limb control, reduced cognitive reliance, and increased embodiment over the bionic hand. Biomimetic users had more intuitive and faster control early in training. Arbitrary users matched biomimetic performance later in training. Further, arbitrary users showed increased generalization to a novel control strategy. Collectively, our findings suggest that biomimetic and arbitrary control strategies provide different benefits. The optimal strategy is likely not strictly biomimetic, but rather a flexible strategy within the biomimetic to arbitrary spectrum, depending on the user, available training opportunities and user requirements."
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:nRpfm8aw39MC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=8831858640212016999",
+        "cites_id": [
+            "8831858640212016999"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.02.07.525548.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Zz9N3KMQkXoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Inability to move one\u2019s face dampens facial expression perception",
+            "pub_year": 2023,
+            "citation": "Cortex, 2023",
+            "author": "Shruti Japee and Jessica Jordan and Judith Licht and Savannah Lokey and Gang Chen and Joseph Snow and Ethylin Wang Jabs and Bryn D Webb and Elizabeth C Engle and Irini Manoli and Chris Baker and Leslie G Ungerleider",
+            "journal": "Cortex",
+            "publisher": "Elsevier",
+            "abstract": "Humans rely heavily on facial expressions for social communication to convey their thoughts and emotions and to understand them in others. One prominent but controversial view is that humans learn to recognize the significance of facial expressions by mimicking the expressions of others. This view predicts that an inability to make facial expressions (e.g., facial paralysis) would result in reduced perceptual sensitivity to others\u2019 facial expressions. To test this hypothesis, we developed a diverse battery of sensitive emotion recognition tasks to characterize expression perception in individuals with Moebius Syndrome (MBS), a congenital neurological disorder that causes facial palsy. Using computer-based detection tasks we systematically assessed expression perception thresholds for static and dynamic face and body expressions. We found that while MBS individuals were able to perform challenging perceptual \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:prdVHNxh-e8C",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S001094522300223X",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Multidimensional object properties are dynamically represented in the human brain",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.09. 08.556679, 2023",
+            "author": "Lina Teichmann and Martin N Hebart and Chris I Baker",
+            "journal": "bioRxiv",
+            "pages": "2023.09. 08.556679",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Our visual world consists of an immense number of unique objects and yet, we are easily able to identify, distinguish, interact, and reason about the things we see within several hundred milliseconds. This requires that we flexibly integrate and focus on different object properties to support specific behavioral goals. In the current study, we examined how these rich object representations unfold in the human brain by modelling time-resolved MEG signals evoked by viewing thousands of objects. Using millions of behavioral judgments to guide our understanding of the neural representation of the object space, we find distinct temporal profiles across the object dimensions. These profiles fell into two broad types with either a distinct and early peak (~150 ms) or a slow rise to a late peak (~300 ms). Further, the early effects are stable across participants in contrast to later effects which show more variability across people. This highlights that early peaks may carry stimulus-specific and later peaks subject-specific information. Given that the dimensions with early peaks seem to be primarily visual dimensions and those with later peaks more conceptual, our results suggest that conceptual processing is more variable across people. Together, these data provide a comprehensive account of how a variety of object properties unfold in the human brain and contribute to the rich nature of object vision."
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:XUvXOeBm_78C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.09.08.556679.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Distributed representations of behaviorally relevant object dimensions in the human visual system",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Oliver Contier and Chris I Baker and Martin N Hebart",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory Preprints",
+            "abstract": "Object vision is commonly thought to involve a hierarchy of brain regions processing increasingly complex image features, with high-level visual cortex supporting object recognition and categorization. However, object vision supports diverse behavioral goals, suggesting basic limitations of this category-centric framework. To address these limitations, here we map a series of behaviorally-relevant dimensions derived from a large-scale analysis of human similarity judgments directly onto the brain. Our results reveal broadly-distributed representations of behaviorally-relevant information, demonstrating selectivity to a wide variety of novel dimensions while capturing known selectivities for visual features and categories. Behaviorally-relevant dimensions were superior to categories at predicting brain responses, yielding mixed selectivity in much of visual cortex and sparse selectivity in category-selective clusters. This \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:WC23djZS0W4C",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10473665/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Temporal dynamics of facial identity and expression processing from magnetoencephalography",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5629-5629, 2023",
+            "author": "Rohini Kumar and Kyla Brannigan and Lina Teichmann and Chris Baker and Shruti Japee",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5629-5629",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Recognition of facial identity and facial expression are both critical for social communication. One model (Bruce & Young, 1986) proposes that invariant (like identity) and changeable aspects of a face (like expression) are processed by distinct neural pathways (Haxby, Hoffman & Gobbini, 2000). Evidence for this dissociation comes from functional neuroimaging studies, which have implicated the fusiform gyrus in the processing of invariant aspects (Grill-Spector et al., 2004) and the superior temporal sulcus in the processing of changeable aspects of a face (Pitcher et al., 2011). However, the timing of this dissociation has been less studied. Thus, the current study used magnetoencephalography (MEG) and time-resolved classification methods to examine how facial identity and expression processing unfolds in the human brain. Participants viewed videos of emotional faces that varied along two dimensions (six \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:L1USKYWJimsC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792638",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Behaviourally relevant image structure linked with visual sampling and perception of materials",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5888-5888, 2023",
+            "author": "Alexandra C Schmid and Matthias Nau and Chris I Baker",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5888-5888",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "The perceived material of an object is inherently tied to its environmental affordances, whether we are avoiding a wet, slippery floor or handling a fragile, crystal vase. Moreover, the way we interact with an object also affects how we visually sample it, as our gaze is guided to behaviorally relevant features. We hypothesized that human gaze behavior during object viewing should therefore be guided by the object\u2019s perceived material and, if so, visual sampling of the object should reflect regularities in image structure that perceptually define the material. To test this, we characterised the relationship between human gaze behaviour, image structure, and material perception by combining eye tracking and deep-learning-based gaze predictions for 924 rendered photorealistic object stimuli. These stimuli were complex glossy objects rendered in natural illumination fields with varying reflectance properties, leading to a \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:jU7OWUQzBzMC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792403",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Is the processing of facial expression and head orientation dissociated in the human brain?",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5627-5627, 2023",
+            "author": "Kyla Brannigan and Rohini Kumar and Hannah Wild and Shivani Goyal and Chris Baker and Jessica Taubert and Shruti Japee",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5627-5627",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Facial dynamics communicate a considerable amount of social information. For example, the fine movements that create facial expressions convey a person\u2019s emotional state, while other changes, like adjustments of head orientation, signal the focus of a person\u2019s attention. A prominent theory of face processing (Bruce & Young, 1986; Haxby, Hoffman, & Gobbini, 2000) posits that dynamic facial information, like expression, is processed primarily by the superior temporal sulcus (STS; Pitcher et al., 2011) while invariant aspects of a face, like identity, are processed primarily by the fusiform face area (FFA; Grill-Spector et al., 2004). While the role of STS in processing facial expressions is well characterized, less is known about its sensitivity to other dynamic information such as changes in head orientation. In a recent fMRI-adaptation study in rhesus macaques (Taubert et. al., 2020), we found greater sensitivity to facial \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:CB2v5VPnA5kC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792640",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Linking brain activity during viewing and recall of movie events through gaze behavior",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4757-4757, 2023",
+            "author": "Matthias Nau and Hannah Tarder-Stoll and Austin Greene and Janice Chen and Christopher Baldassano and Juan Antonio Lossio-Ventura and Francisco Pereira and Chris Baker",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4757-4757",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Viewing and recall engage overlapping neural systems in the human brain. They are further linked through gaze reinstatement, the recapitulation of encoding-related gaze patterns during recall. Here, we characterize the relationship between these phenomena for continuous narratives. Specifically, we investigate whether eye movements reflect the event structure of a movie, and whether the observed neural overlap is grounded in shared gaze patterns. We tested this by combining eye tracking and model-based gaze predictions with fMRI data acquired while participants watched and recalled an episode of the BBC show Sherlock. First, we found that gaze patterns during movie viewing were indeed event specific. Further, these patterns were consistent across participants and in-scanner and out-of-scanner eye tracking, predicted by frame-wise saliency, and predictive of how memorable each event was. Second \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:owLR8QvbtFgC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791742",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Representation of an object through visual occlusion",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5912-5912, 2023",
+            "author": "Austin Behel and Lina Teichmann and Grace Edwards and Chris Baker",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5912-5912",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "We have strong predictions about what happens to an object when it becomes occluded during motion. Here, we used three separate tasks to examine the underlying mechanisms supporting object tracking through periods of occlusion. In the first experiment (n= 21), we tested if accurate extrapolation of an object's position into the occluder was modulated by time. In each trial, an object moved horizontally before becoming occluded. Object movement was associated with a sound, traveling at one of three speeds. Behind the occluder, the sound stopped indicating that the object stopped moving. Participants indicated where the object stopped moving, revealing they consistently lagged behind the true object position. The error increased with occlusion time and faster speeds. Estimated positions and eye movements were highly correlated. In the second experiment (n= 20), we tested whether spatiotemporal \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:PYBJJbyH-FwC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792380",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Human see, human do: comparing visual and motor representations of hand gestures",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5628-5628, 2023",
+            "author": "Hunter Schone and Tamar Makin and Chris Baker",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5628-5628",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Our hands are the primary means for interacting with our surroundings. As such, they are supported by a plethora of relevant representations in the brain, most notable are the somatosensory and motor representations in sensorimotor cortex and visual representations within occipitotemporal cortex, respectively. Here, we compared the representational structure when observing and executing hand gestures within and across visual and sensorimotor cortices using 3T functional MRI and 8-channel electromyography in human participants (n= 60). To characterize both visual and motor features of hand representation, participants performed a visuomotor task that required them to either execute a specific hand gesture (8 gestures: open, close, pinch, tripod, one finger, two finger, three fingers, four fingers) or to observe a first-person video of a biological or robotic hand perform the same gesture. First, when visualizing \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:wKETBy42zhYC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792639",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Exploring Similarities in Human and Macaque Representational Structure using fMRI",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5893-5893, 2023",
+            "author": "Kurt Braunlich and Marianne Duyck and Kyle Behel and Stuart Duffield and Bevil Conway and Chris Baker",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5893-5893",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "The validity of using the macaque brain as a model of the human brain assumes that the two brains share relevant functional characteristics. One challenge is that the methods used in each species can have substantial differences in spatial and temporal resolution, precluding a direct comparison. To bridge the gaps imposed by this limitation, several groups have collected data in both species using the same technique (fMRI) and similar experimental paradigms. This has allowed researchers to establish qualitative similarities in brain organization showing that the topographic maps for early visual regions (V1, V2, V3, and MT) are consistent with results from invasive techniques used in monkeys (eg, tract tracing and micro-electrode recording). However, the extent to which\" higher-order\" cortical regions (eg, inferior temporal cortex, prefrontal cortex) are similar has been more difficult to determine. Here, we describe \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:7H_MAutzIkAC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792398",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Children perceive illusory faces in objects as male more often than female",
+            "pub_year": 2023,
+            "citation": "Cognition 235, 105398, 2023",
+            "author": "Susan G Wardle and Louise Ewing and George L Malcolm and Sanika Paranjape and Chris I Baker",
+            "journal": "Cognition",
+            "volume": "235",
+            "pages": "105398",
+            "publisher": "Elsevier",
+            "abstract": "Face pareidolia is the experience of seeing illusory faces in inanimate objects. While children experience face pareidolia, it is unknown whether they perceive gender in illusory faces, as their face evaluation system is still developing in the first decade of life. In a sample of 412 children and adults from 4 to 80 years of age we found that like adults, children perceived many illusory faces in objects to have a gender and had a strong bias to see them as male rather than female, regardless of their own gender identification. These results provide evidence that the male bias for face pareidolia emerges early in life, even before the ability to discriminate gender from facial cues alone is fully developed. Further, the existence of a male bias in children suggests that any social context that elicits the cognitive bias to see faces as male has remained relatively consistent across generations."
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:gKiMpY-AVTkC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S001002772300032X",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:5tU3FV70TYcJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Motion-selective areas V5/MT and MST appear resistant to deterioration in choroideremia",
+            "pub_year": 2023,
+            "citation": "NeuroImage: Clinical 38, 103384, 2023",
+            "author": "Edward H Silson and Chris I Baker and Tomas S Aleman and Albert M Maguire and Jean Bennett and Manzar Ashtari",
+            "journal": "NeuroImage: Clinical",
+            "volume": "38",
+            "pages": "103384",
+            "publisher": "Elsevier",
+            "abstract": "Choroideremia (CHM) is an X-linked recessive form of hereditary retinal degeneration, which preserves only small islands of central retinal tissue. Previously, we demonstrated the relationship between central vision and structure and population receptive fields (pRF) using functional magnetic resonance imaging (fMRI) in untreated CHM subjects. Here, we replicate and extend this work, providing a more in-depth analysis of the visual responses in a cohort of CHM subjects who participated in a retinal gene therapy clinical trial. fMRI was conducted in six CHM subjects and six age-matched healthy controls (HC\u2019s) while they viewed drifting contrast pattern stimuli monocularly. A single \u223c3-minute fMRI run was collected for each eye. Participants also underwent ophthalmic evaluations of visual acuity and static automatic perimetry (SAP). Consistent with our previous report, a single \u223c 3 min fMRI run accurately \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:j7_hQOaDUrUC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S2213158223000736",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:8NJUqrhobNgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Sustained neural representations of personally familiar people and places during cued recall",
+            "pub_year": 2023,
+            "citation": "Cortex 158, 71-82, 2023",
+            "author": "Anna Corriveau and Alexis Kidder and Lina Teichmann and Susan G Wardle and Chris I Baker",
+            "journal": "Cortex",
+            "volume": "158",
+            "pages": "71-82",
+            "publisher": "Elsevier",
+            "abstract": "The recall and visualization of people and places from memory is an everyday occurrence, yet the neural mechanisms underpinning this phenomenon are not well understood. In particular, the temporal characteristics of the internal representations generated by active recall are unclear. Here, we used magnetoencephalography (MEG) and multivariate pattern analysis to measure the evolving neural representation of familiar places and people across the whole brain when human participants engage in active recall. To isolate self-generated imagined representations, we used a retro-cue paradigm in which participants were first presented with two possible labels before being cued to recall either the first or second item. We collected personalized labels for specific locations and people familiar to each participant. Importantly, no visual stimuli were presented during the recall period, and the retro-cue paradigm \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:otzGkya1bYkC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010945222002842",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Asbxt_81MPcJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]
