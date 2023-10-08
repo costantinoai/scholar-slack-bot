@@ -1,14 +1,54 @@
 [
-    {"name": "HS Scholte", "id": "ph4erJcAAAAJ"},
-    {"name": "Daniel Kaiser", "id": "v4CvWHgAAAAJ"},
-    {"name": "Galit Yovel", "id": "-SBe4c0AAAAJ"},
-    {"name": "Martin N. Hebart", "id": "Q-n9_FgAAAAJ"},
-    {"name": "Tim C Kietzmann", "id": "JXcWFkgAAAAJ"},
-    {"name": "Nikolaus Kriegeskorte", "id": "w6M4YN4AAAAJ"},
-    {"name": "Katharina Dobs", "id": "134XbMkAAAAJ"},
-    {"name": "Adrien Doerig", "id": "YA6DPIcAAAAJ"},
-    {"name": "Grace Lindsay", "id": "4kETHY4AAAAJ"},
-    {"name": "Talia Konkle", "id": "QxV9vroAAAAJ"},
-    {"name": "Hans Op de Beeck", "id": "tbpr76wAAAAJ"},
-    {"name": "Stefania Bracci", "id": "ECBBsv8AAAAJ"}
+    {
+        "name": "HS Scholte",
+        "id": "ph4erJcAAAAJ"
+    },
+    {
+        "name": "Daniel Kaiser",
+        "id": "v4CvWHgAAAAJ"
+    },
+    {
+        "name": "Galit Yovel",
+        "id": "-SBe4c0AAAAJ"
+    },
+    {
+        "name": "Martin N. Hebart",
+        "id": "Q-n9_FgAAAAJ"
+    },
+    {
+        "name": "Tim C Kietzmann",
+        "id": "JXcWFkgAAAAJ"
+    },
+    {
+        "name": "Nikolaus Kriegeskorte",
+        "id": "w6M4YN4AAAAJ"
+    },
+    {
+        "name": "Katharina Dobs",
+        "id": "134XbMkAAAAJ"
+    },
+    {
+        "name": "Adrien Doerig",
+        "id": "YA6DPIcAAAAJ"
+    },
+    {
+        "name": "Grace Lindsay",
+        "id": "4kETHY4AAAAJ"
+    },
+    {
+        "name": "Talia Konkle",
+        "id": "QxV9vroAAAAJ"
+    },
+    {
+        "name": "Hans Op de Beeck",
+        "id": "tbpr76wAAAAJ"
+    },
+    {
+        "name": "Stefania Bracci",
+        "id": "ECBBsv8AAAAJ"
+    },
+    {
+        "name": "Andrea Costantino",
+        "id": "MG9cVagAAAAJ"
+    }
 ]

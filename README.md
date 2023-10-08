@@ -101,33 +101,38 @@ With everything set up, you can now run the code. The bot will send messages to 
 The script accepts several command-line arguments (flags) to customize its behavior:
 
 - `--authors_path`: Specifies the path to the `authors.json` file.
-  - Default: `./src/authors_short.json`
+  - Default: `./src/authors.json`
   - Example: 
-  ```sh
-  python main.py --authors_path="./path/to/your/authors.json"
-  ```
+  ``python main.py --authors_path="./path/to/your/authors.json"``
 
 - `--slack_config_path`: Sets the path to the `slack.config` file which contains Slack API token and channel information.
   - Default: `./src/slack.config`
   - Example: 
-  ```sh
-  python main.py --slack_config_path="./path/to/your/slack.config"
-  ```
+  ```python main.py --slack_config_path="./path/to/your/slack.config"```
 
-- `--debug`: Enables debug mode which has specific behaviors intended primarily for testing the fetching mechanism of the bot.
-  - Sets logging to STANDARD (higher) level.
-  - Utilizes the `authors_short.json` file which contains only two authors to speed up and simplify tests.
-  - When loading articles from cache, it doesn't load articles in last year. This ensures that on each call, the bot has to fetch and send something to Slack, allowing for repeated testing of the fetching mechanism.
-  - No data is saved, ensuring that newly fetched data isn't stored and so leaving the cache unaltered. 
-  
+- `--verbose`: Provides verbose output for detailed logging and debugging.
   - Example:
-  ```sh
-  python main.py --debug
-  ```
+  ```python main.py --verbose```
+
+#### Mutually Exclusive Flags
+
+The script also contains a group of mutually exclusive flags. This means you can use only one of the following flags at a time:
+
+- `--test_fetching`: Test fetching functions (do not send message or save cache).
+  - Example:
+  ```python main.py --test_fetching```
+
+- `--test_message`: Send test message (do not fetch or save cache).
+  - Example:
+  ```python main.py --test_message```
+
+- `--add_scholar_id`: Add a new scholar by Google Scholar ID to the file specified in `--authors_path`, fetch publications and save them to cache (do not send message).
+  - Example:
+  ```python main.py --add_scholar_id="YourGoogleScholarID"```
 
 ### Within the IDE:
 
-If you're running the script from an IDE, the default settings are taken from hardcoded configurations in the `main()` function of `main.py`. If you need to adjust paths or enable the debug mode for IDE execution, modify the corresponding variables in the `main()` function.
+If you're running the script from an IDE, the default settings are taken from hardcoded configurations in the `IDEargs` class in the `main()` function of `main.py`. If you need to adjust paths or enable the debug mode for IDE execution, modify the corresponding variables in the `main()` function.
 
 ## 📂 Directory Structure
 

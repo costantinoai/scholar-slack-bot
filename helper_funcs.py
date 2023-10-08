@@ -6,7 +6,50 @@ Created on Sat Oct  7 14:04:23 2023
 @author: costantino_ai
 """
 import json
+from scholarly import scholarly
 
+def add_new_author_to_json(authors_path, scholar_id):
+    """
+    Add a new author to the existing authors JSON file using the provided Google Scholar ID.
+
+    Parameters:
+    - authors_path (str): Path to the authors JSON file.
+    - scholar_id (str): Google Scholar ID of the author to be added.
+
+    Returns:
+    None
+
+    Raises:
+    - Exception: If an error occurs while fetching the author using the `scholarly` module.
+    """
+
+    # Get the old authors json
+    with open(authors_path, "r") as f:
+        old_authors_json = json.load(f)
+
+    # Fetch the author's details from Google Scholar using the provided ID
+    try:
+        author_fetched = scholarly.search_author_id(scholar_id)
+    except Exception as e:
+        print(f"Error encountered: {e}")
+        raise  # this will raise the caught exception and stop the code
+
+    # Extract the name of the author and create a dictionary entry
+    author_name = author_fetched['name']
+    author_dict = {
+        'name': author_name,
+        'id': scholar_id
+    }
+
+    # Append the new author's details to the existing list
+    old_authors_json.append(author_dict)
+
+    # Save the updated list of authors back to the JSON file
+    with open(authors_path, "w") as f:
+        json.dump(old_authors_json, f, indent=4)
+        
+    return author_dict
+        
 def convert_json_to_tuple(authors_json: list) -> list:
     """
     Converts the authors' details from a JSON file into a Python tuple representation.

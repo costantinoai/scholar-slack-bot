@@ -19,13 +19,8 @@ from helper_funcs import clean_pubs
 from log_config import MIN, STANDARD
 
 # Get global debug flag
-DEBUG = False
 MAX_RETRIES = 3
 DELAYS = [20, 40, 60]
-
-def set_debug(state):
-    global DEBUG
-    DEBUG = state
 
 
 def fetch_publication_details(pub):
@@ -102,20 +97,20 @@ def load_cache(author_id, output_folder):
         logging.log(STANDARD, f"No cache for author {author_id}. Fetching all.")
         return []
 
-def get_pubs_to_fetch(author_pubs, cached_pubs, from_year):
+def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
     """
     Determines the publications that need to be fetched based on cached data and the specified year.
 
     Returns:
     - list: List of publications to fetch.
     """ 
-    if DEBUG:
-        logging.warning(f"DEBUG flag True. Loading only cached papers >= {str(from_year)}")
+    if args.test_fetching:
+        logging.warning(f"Test fetching flag True. Loading only cached papers < {str(from_year)}")
         
-    # Extract titles from cached publications
+    # Extract titles from cached publications, only titles before from_year if args.test_fetchin == True
     cached_titles = (
             [pub["bib"]["title"] for pub in cached_pubs]
-            if not DEBUG
+            if not args.test_fetching
             else [
                 pub["bib"]["title"]
                 for pub in cached_pubs
@@ -124,7 +119,7 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year):
             ]
         )       
     
-    # Filter out publications to fetch based on title and year
+    # Filter out publications to fetch based on title and year, only titles >= from_year if args.test_fetchin == True
     pubs_to_fetch = [
         item
         for item in author_pubs
@@ -192,14 +187,13 @@ def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder):
     - cached_pubs (list): List of previously cached publications.
     - output_folder (str): Directory to save the cache.
     """
-    if not DEBUG:
-        cache_path = os.path.join(output_folder, f"{author_id}.json")
-        logging.info(f"Updating cache for author {author_id}.")
-        with open(cache_path, "w") as f:
-            combined_pubs = fetched_pubs + cached_pubs
-            json.dump(combined_pubs, f, indent=4)
+    cache_path = os.path.join(output_folder, f"{author_id}.json")
+    logging.info(f"Updating cache for author {author_id}.")
+    with open(cache_path, "w") as f:
+        combined_pubs = fetched_pubs + cached_pubs
+        json.dump(combined_pubs, f, indent=4)
             
-def fetch_publications_by_id(author_id, output_folder, from_year=2023, exclude_not_cited_papers=False):
+def fetch_publications_by_id(author_id, output_folder, args, from_year=2023, exclude_not_cited_papers=False):
     """
     Fetches and caches publications of a specific author using their Google Scholar ID.
 
@@ -236,15 +230,16 @@ def fetch_publications_by_id(author_id, output_folder, from_year=2023, exclude_n
     # Load cached publications if available
     cached_pubs = load_cache(author_id, output_folder)
     # Determine the list of publications to fetch
-    pubs_to_fetch = get_pubs_to_fetch(author_pubs, cached_pubs, from_year)
+    pubs_to_fetch = get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args)
     # Fetch selected publications
     fetched_pubs = fetch_selected_pubs(pubs_to_fetch)
     # Update cache with newly fetched publications
-    save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder)
+    if not args.test_fetching:
+        save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder)
     # Return cleaned list of publications
     return clean_pubs(fetched_pubs, from_year, exclude_not_cited_papers)
 
-def fetch_pubs_dictionary(authors, output_dir="./src"):
+def fetch_pubs_dictionary(authors, args, output_dir="./src"):
     """
     Fetch publications for a list of authors for the current year,
     and store them in a cache. Only non-duplicate publications compared
@@ -257,7 +252,7 @@ def fetch_pubs_dictionary(authors, output_dir="./src"):
 
     current_year = time.strftime("%Y")  # Get the current year
     params = {
-        "authors": authors,
+        "authors": authors if not args.test_fetching else authors[:2],
         "from_year": current_year,
         "output_root": output_dir,
     }
@@ -284,7 +279,7 @@ def fetch_pubs_dictionary(authors, output_dir="./src"):
     for i, (author, author_id) in enumerate(params["authors"]):
         logging.log(MIN, f"Progress: {i+1}/{total_authors} - {author}")
         author_publications = fetch_publications_by_id(
-            author_id, output_folder, from_year=params["from_year"]
+            author_id, output_folder, args, from_year=params["from_year"]
         )
         authors_publications = authors_publications + author_publications
 

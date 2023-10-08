@@ -1,0 +1,44 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Recurrent processing in the visual cortex during object recognition",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4876-4876, 2023",
+            "author": "Timoth\u00e9e Maniquet and Andrea Costantino and Hans Op de Beeck",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4876-4876",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Visual recognition is achieved in the brain by a series of hierarchical processing stages across areas of the ventral stream. Decoding object identity in this hierarchy is partially a bottom-up process, which accounts well for the recognition of easy, canonical appearances. Most natural settings, however, are visually complex, and present challenging viewing conditions. In the presence of visual uncertainty, the recognition of object identity is hence a hard decoding problem that cannot be solved by a purely bottom-up process. The human brain, however, is highly non-feedforward, and each area sends its connections downward or horizontally in the hierarchy. This non bottom-up, recurrent connectivity is thought to provide the necessary computational power to solve object recognition in the face of visual complexity. While evidence for this role is accumulating, the exact mechanisms of recurrent processing remain \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "MG9cVagAAAAJ:UeHWp8X0CEIC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791631",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Top-down and within-layer recurrent connections in artificial networks are needed to solve challenging visual tasks",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5008-5008, 2023",
+            "author": "Andrea Ivan Costantino and Hans Op de Beeck",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5008-5008",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Research in human vision has shown that visual recognition is achieved through the interaction of a number of specialized brain areas in the ventral and dorsal visual stream. The most influential models of visual perception theorize a feedforward, unidirectional flow of information from low-level to high-level areas. However, growing evidence suggests, on the one hand, that lateral connections and connections from high-to low-level areas (ie, top-down connections) may be crucially involved in more challenging object recognition tasks, and on the other hand that recurrent networks show higher correlation and have better predictivity of brain data. In this study, we explore the functional role of feedback connections in computational models of vision. To do so, we trained several Convolutional Neural Networks (CNNs) with and without recurrent connections (within layers, top-down, top-down+ within) to perform object \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "MG9cVagAAAAJ:qjMakFHDy7sC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791506",
+        "cites_per_year": {}
+    }
+]
