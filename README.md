@@ -136,7 +136,6 @@ slack-bot
 ├── slack_bot.py
 └── src
     ├── authors.json
-    ├── authors_short.json
     ├── googleapi_cache
     └── slack.config
 
