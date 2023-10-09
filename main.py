@@ -19,9 +19,17 @@ from log_config import MIN, STANDARD
 logging.basicConfig(level=STANDARD)
 
 def send_test_msg(token, ch_name):  
-    formatted_message = ['This is a test message.']
-    send_to_slack(ch_name, formatted_message, token)
-    logging.log(MIN, f"Test message sent to #{ch_name}")
+    unformatted_msg = 'This is a test message'
+    width = len(unformatted_msg) + 2  # Adding 2 for the padding on left and right
+    top_bottom = '#' * width
+	
+    formatted_msg = f"```\n{top_bottom}\n#{unformatted_msg}#\n{top_bottom}```"
+
+    response_json = send_to_slack(ch_name, formatted_msg, token)
+    
+    if response_json['ok'] == True:
+        logging.log(MIN, f"Test message successfully sent to #{ch_name}")
+    
     return
 
 def get_args():
@@ -148,12 +156,16 @@ def main():
 		# Create Slack messages for each author using the provided articles' details
         formatted_messages = make_slack_msg(authors, articles)
         logging.log(MIN, f"Formatted messages for {len(authors)} authors.")
-
-		# Send each of the formatted messages to the configured Slack channel
+            
         for formatted_message in formatted_messages:
+    		# Send each of the formatted messages to the configured Slack channel
+    		# If both args are True, it means we want to send a test message with the fetched pubs.
+    		# Therefore we are going to send a first warning that this is a test message and not the real fetch.
+            if args.test_fetching == args.test_message == True:
+                test_header = '!!! This is a test message !!!'
+                formatted_message = f'```\n{test_header}\n{formatted_message}\n```'
+                
             send_to_slack(ch_name, formatted_message, token)
-            logging.log(STANDARD, "Sent message to Slack.")  # Preview first 50 chars for brevity
-
 
 if __name__ == "__main__":
     main()

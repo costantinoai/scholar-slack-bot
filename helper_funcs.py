@@ -85,13 +85,13 @@ def get_authors_json(authors_path: str) -> list:
         authors = json.load(file)
     return authors
 
-def clean_pubs(fetched_pubs, to_year=2023, exclude_not_cited_papers=False):
+def clean_pubs(fetched_pubs, from_year=2023, exclude_not_cited_papers=False):
     """
     Filters and processes the fetched publications based on specified criteria.
     
     Parameters:
         fetched_pubs (list): List of raw publication data fetched from Google Scholar.
-        to_year (int, optional): Minimum year to include publications. Defaults to 2023.
+        from_year (int, optional): Minimum year to include publications. Defaults to 2023.
         exclude_not_cited_papers (bool, optional): If True, excludes papers that haven't been cited. Defaults to False.
     
     Returns:
@@ -101,43 +101,36 @@ def clean_pubs(fetched_pubs, to_year=2023, exclude_not_cited_papers=False):
         cleaned_publications = clean_pubs(raw_publications, 2020, True)
     """
     
+    # Set to keep track of seen titles to avoid double publications
+    seen_titles = set()
+
     # Initialize a list to hold publications that match the specified criteria
-    relevant_pubs = [
-        {
-            # Extract and store the title of the publication
-            "title": pub["bib"]["title"],
-            
-            # Extract authors, replace 'and' with ', ', and store them
-            "authors": pub["bib"]["author"].replace(" and ", ", "),
-            
-            # Extract and store the abstract, or provide a default if it doesn't exist
-            "abstract": pub["bib"].get("abstract", "No abstract available"),
-            
-            # Extract and store the publication year
-            "year": pub["bib"]["pub_year"],
-            
-            # Extract and store the number of citations
-            "num_citations": pub["num_citations"],
-            
-            # Extract and store the citation (often represents the journal or conference)
-            "journal": pub["bib"]["citation"],
-            
-            # Extract and store the URL for the publication, or None if not present
-            "pub_url": pub["pub_url"] if "pub_url" in pub.keys() else None,
-        }
-        
-        # Loop through each publication in fetched_pubs
-        for pub in fetched_pubs
-        
-        # Only include publications that have a specified publication year and meet the year criterion
-        # Optionally exclude publications that haven't been cited based on the exclude_not_cited_papers flag
-        if pub["bib"].get("pub_year")
-        and int(pub["bib"]["pub_year"]) <= int(to_year)
-        and (not exclude_not_cited_papers or pub["num_citations"] > 0)
-    ]
+    relevant_pubs = []
+
+    for pub in fetched_pubs:
+        # Check if the publication meets the year criterion and hasn't been seen before
+        if (pub["bib"].get("pub_year") # if the publication has a 'year' field
+        and int(pub["bib"]["pub_year"]) <= int(from_year) # if the pub year is >= from_year
+        and (not exclude_not_cited_papers or pub["num_citations"] > 0) # if exclude_not_cited_papers is True, then we select only papers with citations
+        and pub["bib"]["title"] not in seen_titles): # only add the pub if it is the only pub with this title (avoid dupes)
+
+            # Add the title to the seen set
+            seen_titles.add(pub["bib"]["title"])
+
+            # Append the relevant publication to the list
+            relevant_pubs.append({
+                "title": pub["bib"]["title"],
+                "authors": pub["bib"]["author"].replace(" and ", ", "),
+                "abstract": pub["bib"].get("abstract", "No abstract available"),
+                "year": pub["bib"]["pub_year"],
+                "num_citations": pub["num_citations"],
+                "journal": pub["bib"]["citation"],
+                "pub_url": pub["pub_url"] if "pub_url" in pub.keys() else None,
+            })
 
     # Sort the list of relevant publications by the number of citations in descending order
     sorted_pubs = sorted(relevant_pubs, key=lambda x: x["num_citations"], reverse=True)
     
     # Return the cleaned and sorted list of publications
     return sorted_pubs
+

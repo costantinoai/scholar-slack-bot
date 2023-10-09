@@ -7,6 +7,8 @@ Created on Fri Oct  6 21:07:18 2023
 """
 import requests
 import configparser
+import logging
+from log_config import MIN, STANDARD
 
 def make_slack_msg(authors: list, articles: list) -> list:
     """
@@ -27,8 +29,11 @@ def make_slack_msg(authors: list, articles: list) -> list:
     authors_msg = format_authors_message(authors)
     
     # For each article, create a message using the provided formatting function
-    pubs_messages = ['List of publications since my last check:\n'] + [format_pub_message(article) for article in articles]
-    
+    if len(articles) > 0:
+        pubs_messages = ['List of publications since my last check:\n'] + [format_pub_message(article) for article in articles]
+    else:
+        pubs_messages = ['No new publications since my last check.']
+        
     # Combine the authors' message with their respective articles' messages
     formatted_messages = [authors_msg] + pubs_messages
     
@@ -50,7 +55,6 @@ def get_slack_config(slack_config_path='./src/slack.config'):
     slack_config = {
         'api_token': config.get('slack', 'api_token'),
         'channel_name': config.get('slack', 'channel_name'),
-        'channel_id': config.get('slack', 'channel_id')
     }
     
     return slack_config
@@ -80,7 +84,14 @@ def send_to_slack(channel_id, message, token):
     response = requests.post(url, headers=headers, json=data)
     
     # Return the JSON response from the Slack API
-    return response.json()
+    response_json = response.json()
+    
+    if response_json['ok'] == False:
+        logging.error(f"Sending message to #{channel_id} failed. Error: {response_json['error']}. Message:\n{message}")
+    else:
+        logging.log(STANDARD, f"Message succesfully sent to #{channel_id}.")
+    
+    return response_json        
 
 def format_pub_message(pub):
     """
@@ -107,6 +118,8 @@ def format_pub_message(pub):
     - str: A formatted string suitable for Slack of the last article in the list.
     """
     details = []  # Initializing an empty list to store formatted details of the article
+    details.append("-" * 50)  # Appending a line with 50 dashes
+    details.append("")  # Adding an empty line at the end
     
     # Adding the title with year in bold, formatted as a clickable link to the details list
     title = f"*<{pub['pub_url']}|{pub['title']}>*"
@@ -126,8 +139,7 @@ def format_pub_message(pub):
     # Adding the article abstract in smaller text
     details.append(f"Abstract: _{pub['abstract']}_")
     details.append("")  # Adding an empty line at the end
-    details.append("-" * 50)  # Appending a line with 50 dashes
-    details.append("")  # Adding an empty line at the end
+    
 
     # Joining the details list into a single string separated by newline characters
     message = "\n".join(details)
@@ -145,7 +157,7 @@ def format_authors_message(authors: list) -> str:
     """
     
     # Construct the message by listing each author with their ID on separate lines, indented
-    formatted_authors = '\n'.join([f"\t{author[0]}, Google Scholar ID: {author[1]}" for author in authors])
+    formatted_authors = '\n'.join([f"\t{author[0]},\t\tGoogle Scholar ID: {author[1]}" for author in authors])
 
     # Add the code block delimiters and the description
     formatted_message = 'List of monitored authors:\n```\n' + formatted_authors + '\n```'
