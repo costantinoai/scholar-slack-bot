@@ -32,7 +32,6 @@ Slack apps use scopes to request specific sets of permissions. To send messages 
 2. Under the **Scopes** section, add the following bot token scopes:
    - `channels:read` - To view basic information about public channels in the workspace.
    - `chat:write` - To send messages to channels.
-   - `chat:write.customize` - To send messages as the bot with a customized username and avatar, if needed.
 
 It's essential to only request the permissions necessary for your bot to function, following the principle of least privilege.
 
