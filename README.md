@@ -104,7 +104,7 @@ The script accepts several command-line arguments (flags) to customize its behav
   - Example:
   ```python main.py --verbose```
 
-- `--test_fetching`: (Optional) Test fetching functions. Do not send message (unless --test_message) or save cache. Mutually exclusive with `--add_scholar_id`.
+- `--test_fetching`: (Optional) Test fetching functions. Do not send message (unless --test_message) or save cache. Mutually exclusive with `--add_scholar_id` and `--update_cache`.
   - Example (fetch only):
   Fetch last year's data for two authors in `./src/authors.json`. Do not send messages or update cache.
   ```python main.py --test_fetching```
@@ -113,13 +113,17 @@ The script accepts several command-line arguments (flags) to customize its behav
   Fetch last year's data for two authors in `./src/authors.json`. Send messages with fetched papers, but do not update cache.
   ```python main.py --test_fetching --test_message```
 
-- `--test_message`: (Optional) Send test message. Do not fetch, send message (unless --test_fetching) or save cache. Mutually exclusive with `--add_scholar_id`.
+- `--test_message`: (Optional) Send test message. Do not fetch, send message (unless --test_fetching) or save cache. Mutually exclusive with `--add_scholar_id` and `--update_cache`.
   - Example:
   ```python main.py --test_message```
 
-- `--add_scholar_id`: (Optional) Add a new scholar by Google Scholar ID to the file specified in `--authors_path`, fetch publications and save them to cache (do not send message).
+- `--add_scholar_id`: (Optional) Add a new scholar by Google Scholar ID to the file specified in `--authors_path`, fetch publications and save them to cache (do not send message). Mutually exclusive with `--test_message`, `--test_fetching` and `--update_cache`.
   - Example:
   ```python main.py --add_scholar_id="YourGoogleScholarID"```
+
+- `--update_cache`: (Optional) Re-fetch and save publications for all authors (do not send message). It overwrites the old cache. Mutually exclusive with `--test_message`, `--test_fetching` and `--add_scholar_id`.
+  - Example:
+  ```python main.py --update_cache```
 
 ### Within the IDE:
 
