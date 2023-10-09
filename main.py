@@ -10,27 +10,13 @@ import sys
 import argparse
 import logging
 
-from slack_bot import send_to_slack, get_slack_config, make_slack_msg
+from slack_bot import send_to_slack, get_slack_config, make_slack_msg, send_test_msg
 from fetch_scholar import fetch_pubs_dictionary
 from helper_funcs import convert_json_to_tuple, get_authors_json, add_new_author_to_json
 from log_config import MIN, STANDARD
 
 # Configure logging
 logging.basicConfig(level=STANDARD)
-
-def send_test_msg(token, ch_name):  
-    unformatted_msg = 'This is a test message'
-    width = len(unformatted_msg) + 2  # Adding 2 for the padding on left and right
-    top_bottom = '#' * width
-	
-    formatted_msg = f"```\n{top_bottom}\n#{unformatted_msg}#\n{top_bottom}```"
-
-    response_json = send_to_slack(ch_name, formatted_msg, token)
-    
-    if response_json['ok'] == True:
-        logging.log(MIN, f"Test message successfully sent to #{ch_name}")
-    
-    return
 
 def get_args():
     """
@@ -47,6 +33,7 @@ def get_args():
     parser.add_argument('--verbose', action='store_true', help='Verbose output.')
     parser.add_argument('--test_fetching', action='store_true', help='Test fetching functions. Do not send message (unless --test_message) or save cache.')
     parser.add_argument('--test_message', action='store_true', help='Send test message. Do not fetch, send message (unless --test_fetching) or save cache.')
+    parser.add_argument('--update_cache', action='store_true', help='Re-fetch pubs for all authors and save them to cache. Do not send message.')
     parser.add_argument('--add_scholar_id', help='Add a new scholar by Google Scholar ID to the file specified in --authors_path, fetch publications and save them to cache (do not send message).')
 
     args = parser.parse_args()
@@ -86,17 +73,18 @@ def main():
                 self.test_fetching = False
                 self.test_message = False
                 self.add_scholar_id = None
+                self.update_cache = False
 
         args = IDEArgs()
         logging.log(MIN, "Using default configurations.")
     
     # Manually checking for mutual exclusivity
-    if args.add_scholar_id and (args.test_fetching or args.test_message):
+    if args.add_scholar_id and (args.test_fetching or args.test_message or args.update_cache):
         if len(sys.argv) > 1:
-             raise ValueError("--add_scholar_id cannot be used with --test_fetching or --test_message")
+             raise ValueError("--add_scholar_id and --update_cache cannot be used together or with --test_fetching, --test_message")
         else:
-            parser.error("--add_scholar_id cannot be used with --test_fetching or --test_message")
-        
+            parser.error("--add_scholar_id and --update_cache cannot be used together or with --test_fetching, --test_message")
+            
     # Reconfigure logging based on DEBUG_FLAG's value
     if args.verbose:
         logging.basicConfig(level=STANDARD)
@@ -118,8 +106,8 @@ def main():
         send_test_msg(token, ch_name)
         return
         
-    # Retrieve authors' details from the given JSON path
-    if args.add_scholar_id != None:
+    
+    if args.add_scholar_id != None: # In this case we want to add a new author and fetch
         # Save new json with added author
         author_dict = add_new_author_to_json(args.authors_path, args.add_scholar_id)
             
@@ -127,6 +115,7 @@ def main():
         authors_json = [author_dict]
 
     else: 
+        # Retrieve authors' details from the given JSON path
         authors_json = get_authors_json(args.authors_path)
         logging.log(STANDARD, f"Fetched authors' details from {args.authors_path}.")
 
@@ -138,7 +127,7 @@ def main():
     articles = fetch_pubs_dictionary(authors, args)
     logging.log(MIN, f"Fetched {len(articles)} articles for the provided authors.")
 
-    if not args.add_scholar_id and args.test_fetching == args.test_message:
+    if not args.add_scholar_id and not args.update_cache and args.test_fetching == args.test_message:
 		# This block is entered under the following scenarios:
 		# 1. When `add_scholar_id` is not provided (i.e., its value is None).
 		#    This means that we are not in the mode to add a scholar by ID.

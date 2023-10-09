@@ -8,7 +8,21 @@ Created on Fri Oct  6 21:07:18 2023
 import requests
 import configparser
 import logging
+
 from log_config import MIN, STANDARD
+
+def send_test_msg(token, ch_name):  
+    unformatted_msg = 'This is a test message'
+    width = len(unformatted_msg) + 2  # Adding 2 for the padding on left and right
+    top_bottom = '#' * width
+	
+    formatted_msg = f"```\n{top_bottom}\n#{unformatted_msg}#\n{top_bottom}```"
+
+    response_json = send_to_slack(ch_name, formatted_msg, token)
+    
+    if response_json['ok'] == True:
+        logging.log(MIN, f"Test message successfully sent to #{ch_name}")
+    return
 
 def make_slack_msg(authors: list, articles: list) -> list:
     """

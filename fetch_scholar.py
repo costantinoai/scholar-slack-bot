@@ -13,12 +13,11 @@ from scholarly import scholarly
 from concurrent.futures import ThreadPoolExecutor
 import logging
 import time
-from tqdm import tqdm  # Progress bar library
+from tqdm import tqdm 
 
 from helper_funcs import clean_pubs
 from log_config import MIN, STANDARD
 
-# Get global debug flag
 MAX_RETRIES = 3
 DELAYS = [20, 40, 60]
 
@@ -105,9 +104,9 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
     - list: List of publications to fetch.
     """ 
     if args.test_fetching:
-        logging.warning(f"Test fetching flag True. Loading only cached papers < {str(from_year)}")
+        logging.warning(f"--test_fetching flag True. Loading only cached papers < {str(from_year)}")
         
-    # Extract titles from cached publications, only titles before from_year if args.test_fetchin == True
+    # Extract titles from cached publications, only titles before from_year if args.test_fetching == True
     cached_titles = (
             [pub["bib"]["title"] for pub in cached_pubs]
             if not args.test_fetching
@@ -119,14 +118,25 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
             ]
         )       
     
-    # Filter out publications to fetch based on title and year, only titles >= from_year if args.test_fetchin == True
-    pubs_to_fetch = [
-        item
-        for item in author_pubs
-        if item["bib"]["title"] not in cached_titles
-        and 'pub_year' in item["bib"].keys()
-        and int(item["bib"]["pub_year"]) >= int(from_year)
-    ]
+    if args.update_cache == True:
+        # Do not filter pubs. If this is True, it means we want to update the cache. So we fetch
+        # all the author's pubs for the last year
+        logging.log(MIN, "--update_cache flag True. Re-fetching author's pubs and generating new cache.")
+        pubs_to_fetch = [
+            item
+            for item in author_pubs
+            if 'pub_year' in item["bib"].keys()
+            and int(item["bib"]["pub_year"]) >= int(from_year)
+        ]
+    else:
+        # Filter out publications to fetch based on title and year, only titles >= from_year if args.test_fetchin == True
+        pubs_to_fetch = [
+            item
+            for item in author_pubs
+            if item["bib"]["title"] not in cached_titles
+            and 'pub_year' in item["bib"].keys()
+            and int(item["bib"]["pub_year"]) >= int(from_year)
+        ]
     
     return pubs_to_fetch
 
@@ -178,7 +188,7 @@ def fetch_selected_pubs(pubs_to_fetch):
                 logging.error(f"Max retries reached. Exiting fetch process. Error: {e}")
                 return []                
 
-def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder):
+def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args):
     """
     Updates the cache by saving the combined list of fetched and cached publications.
 
@@ -188,9 +198,9 @@ def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder):
     - output_folder (str): Directory to save the cache.
     """
     cache_path = os.path.join(output_folder, f"{author_id}.json")
-    logging.info(f"Updating cache for author {author_id}.")
+    logging.log(STANDARD, f"Updating cache for author {author_id}.")
     with open(cache_path, "w") as f:
-        combined_pubs = fetched_pubs + cached_pubs
+        combined_pubs = fetched_pubs + cached_pubs if not args.update_cache else fetched_pubs
         json.dump(combined_pubs, f, indent=4)
             
 def fetch_publications_by_id(author_id, output_folder, args, from_year=2023, exclude_not_cited_papers=False):
@@ -235,7 +245,7 @@ def fetch_publications_by_id(author_id, output_folder, args, from_year=2023, exc
     fetched_pubs = fetch_selected_pubs(pubs_to_fetch)
     # Update cache with newly fetched publications
     if not args.test_fetching:
-        save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder)
+        save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args)
     # Return cleaned list of publications
     return clean_pubs(fetched_pubs, from_year, exclude_not_cited_papers)
 
@@ -257,7 +267,7 @@ def fetch_pubs_dictionary(authors, args, output_dir="./src"):
         "output_root": output_dir,
     }
 
-    # Determine cache directory.
+    # Determine cache directory
     if params["output_root"] is None:
         if platform.system() == "Windows":
             desktop = os.path.join(os.path.join(os.environ["USERPROFILE"]), "Desktop")
