@@ -1,0 +1,262 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Different computational relations in language are captured by distinct brain systems",
+            "pub_year": 2023,
+            "citation": "Cerebral Cortex 33 (4), 997-1013, 2023",
+            "author": "Ze Fu and Xiaosha Wang and Xiaoying Wang and Huichao Yang and Jiahuan Wang and Tao Wei and Xuhong Liao and Zhiyuan Liu and Huimin Chen and Yanchao Bi",
+            "journal": "Cerebral Cortex",
+            "volume": "33",
+            "number": "4",
+            "pages": "997-1013",
+            "publisher": "Oxford University Press",
+            "abstract": "A critical way for humans to acquire information is through language, yet whether and how language experience drives specific neural semantic representations is still poorly understood. We considered statistical properties captured by 3 different computational principles of language (simple co-occurrence, network-(graph)-topological relations, and neural-network-vector-embedding relations) and tested the extent to which they can explain the neural patterns of semantic representations, measured by 2 functional magnetic resonance imaging experiments that shared common semantic processes. Distinct graph-topological word relations, and not simple co-occurrence or neural-network-vector-embedding relations, had unique explanatory power for the neural patterns in the anterior temporal lobe (capturing graph-common-neighbors), inferior frontal gyrus, and posterior middle/inferior temporal gyrus (capturing \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:Fu2w8maKXqMC",
+        "num_citations": 7,
+        "citedby_url": "/scholar?hl=en&cites=17774770436935113454",
+        "cites_id": [
+            "17774770436935113454"
+        ],
+        "pub_url": "https://academic.oup.com/cercor/article-abstract/33/4/997/6553592",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:7tqhoYmrrPYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 7
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Early language exposure affects neural mechanisms of semantic representations",
+            "pub_year": 2023,
+            "citation": "Elife 12, e81681, 2023",
+            "author": "Xiaosha Wang and Bijun Wang and Yanchao Bi",
+            "journal": "Elife",
+            "volume": "12",
+            "pages": "e81681",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "One signature of the human brain is its ability to derive knowledge from language inputs, in addition to nonlinguistic sensory channels such as vision and touch. How does human language experience modulate the mechanism by which semantic knowledge is stored in the human brain? We investigated this question using a unique human model with varying amounts and qualities of early language exposure: early deaf adults who were born to hearing parents and had reduced early exposure and delayed acquisition of any natural human language (speech or sign), with early deaf adults who acquired sign language from birth as the control group that matches on nonlinguistic sensory experiences. Neural responses in a semantic judgment task with 90 written words that were familiar to both groups were measured using fMRI. The deaf group with reduced early language exposure, compared with the deaf control group, showed reduced semantic sensitivity, in both multivariate pattern (semantic structure encoding) and univariate (abstractness effect) analyses, in the left dorsal anterior temporal lobe (dATL). These results provide positive, causal evidence that language experience drives the neural semantic representation in the dATL, highlighting the roles of language in forming human neural semantic structures beyond nonverbal sensory experiences."
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:nrtMV_XWKgEC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=15549212095258009779",
+        "cites_id": [
+            "15549212095258009779"
+        ],
+        "pub_url": "https://elifesciences.org/articles/81681",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:s6APcwTmydcJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A social-semantic-working-memory account for two canonical language areas",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Guangyao Zhang and Yangwen Xu and Xiuyi Wang and Jixing Li and Weiting Shi and Yanchao Bi and Nan Lin",
+            "abstract": "Language and social cognition are traditionally studied as separate cognitive domains, yet accumulative studies reveal overlapping neural correlates at the left ventral temporoparietal junction (vTPJ) and lateral anterior temporal lobe (lATL), which have been attributed to sentence processing and social concept activation. We propose a common cognitive component underlying both effects--social-semantic working memory. We confirmed two key predictions of our hypothesis using fMRI: First, the left vTPJ and lATL showed sensitivity to sentences only when the sentences conveyed social meaning.; second, these regions showed persistent social-semantic-selective activity after the linguistic stimuli disappeared. We additionally found that both regions were sensitive to the socialness of nonlinguistic stimuli and were more tightly connected with the social-semantic-processing areas than with the sentence-processing areas. The converging evidence indicates the social-semantic-working-memory function of the left vTPJ and lATL and challenges the general-semantic and/or syntactic accounts for the neural activity of these regions."
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:XD-gHx7UXLsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=7796229065218047594",
+        "cites_id": [
+            "7796229065218047594"
+        ],
+        "pub_url": "https://www.researchsquare.com/article/rs-2537489/latest",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ar7lUwfFMWwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neural substrate underlying the learning of a passage with unfamiliar vocabulary and syntax",
+            "pub_year": 2023,
+            "citation": "Cerebral Cortex 33 (18), 10036-10046, 2023",
+            "author": "Jing Wang and Xiaosha Wang and Jiajie Zou and Jipeng Duan and Zhuowen Shen and Nannan Xu and Yan Chen and Jianfeng Zhang and Hongjian He and Yanchao Bi and Nai Ding",
+            "journal": "Cerebral Cortex",
+            "volume": "33",
+            "number": "18",
+            "pages": "10036-10046",
+            "publisher": "Oxford University Press",
+            "abstract": "Speech comprehension is a complex process involving multiple stages, such as decoding of phonetic units, recognizing words, and understanding sentences and passages. In this study, we identify cortical networks beyond basic phonetic processing using a novel passage learning paradigm. Participants learn to comprehend a story composed of syllables of their native language, but containing unfamiliar vocabulary and syntax. Three learning methods are employed, each resulting in some degree of learning within a 12-min learning session. Functional magnetic resonance imaging results reveal that, when listening to the same story, the classic temporal-frontal language network is significantly enhanced by learning. Critically, activation of the left anterior and posterior temporal lobe correlates with the learning outcome that is assessed behaviorally through, e.g. word recognition and passage comprehension \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:zLWjf1WUPmwC",
+        "num_citations": 0,
+        "pub_url": "https://academic.oup.com/cercor/article-abstract/33/18/10036/7230536",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Functional connectome through the human life span",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.09. 12.557193, 2023",
+            "author": "Lianglong Sun and Tengda Zhao and Xinyuan Liang and Mingrui Xia and Qiongling Li and Xuhong Liao and Gaolang Gong and Qian Wang and Chenxuan Pang and Qian Yu and Yanchao Bi and Pindong Chen and Rui Chen and Yuan Chen and Taolin Chen and Jingliang Cheng and Yuqi Cheng and Zaixu Cui and Zhengjia Dai and Yao Deng and Yuyin Ding and Qi Dong and Dingna Duan and Jia-Hong Gao and Qiyong Gong and Ying Han and Zaizhu Han and Chu-Chung Huang and Ruiwang Huang and Ran Huo and Lingjiang Li and Ching-Po Lin and Qixiang Lin and Bangshan Liu and Chao Liu and Ningyu Liu and Ying Liu and Yong Liu and Jing Lu and Leilei Ma and Weiwei Men and Shaozheng Qin and Jiang Qiu and Shijun Qiu and Tianmei Si and Shuping Tan and Yanqing Tang and Sha Tao and Dawei Wang and Fei Wang and Jiali Wang and Pan Wang and Xiaoqin Wang and Yanpei Wang and Dongtao Wei and Yankun Wu and Peng Xie and Xiufeng Xu and Yuehua Xu and Zhilei Xu and Liyuan Yang and Huishu Yuan and Zilong Zeng and Haibo Zhang and Xi Zhang and Gai Zhao and Yanting Zheng and Suyu Zhong and Alzheimer\u2019s Disease Neuroimaging Initiative and Cam-CAN and Developing Human Connectome Project and DIDA-MDD Working Group and MCADI and NSPN and Yong He",
+            "journal": "bioRxiv",
+            "pages": "2023.09. 12.557193",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The functional connectome of the human brain represents the fundamental network architecture of neural activity, but its normative growth trajectory over the life course remains unknown. Here, we aggregate the largest, quality-controlled multimodal neuroimaging dataset across 119 global sites, including 33,809 task-free fMRI and structural MRI scans of 32,328 individuals aged from 32 postmenstrual weeks to 80 years old. The lifespan growth charts of the connectome are quantified at the whole cortex, system, and regional levels using generalized additive models for location, scale, and shape. We find critical inflection points in the nonlinear growth trajectories of the whole-brain functional connectome, notably peaking in the fourth decade of life. After establishing the first fine-grained, lifespan-spanning suite of system-level brain atlases, we generate person-specific parcellation maps and further elucidate distinct timelines of maturation for functional segregation within various subsystems. We identify a spatiotemporal gradient axis that governs the life-course growth of regional connectivity, transitioning from primary sensory cortices to higher-order association regions. Using the connectome-based normative model, we demonstrate substantial individual heterogeneities at the network level in patients with autism spectrum disorder and patients with major depressive disorder, respectively. Our findings shed light on the functional connectome's life-course evolution, serving as normative references for understanding network growth principles of the human brain and assessing individual variations of patients with neuropsychiatric conditions."
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:epqYDVWIO7EC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.09.12.557193.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Spoken language processing activates the primary visual cortex",
+            "pub_year": 2023,
+            "citation": "Plos one 18 (8), e0289671, 2023",
+            "author": "Anna Seydell-Greenwald and Xiaoying Wang and Elissa L Newport and Yanchao Bi and Ella Striem-Amit",
+            "journal": "Plos one",
+            "volume": "18",
+            "number": "8",
+            "pages": "e0289671",
+            "publisher": "Public Library of Science",
+            "abstract": "Primary visual cortex (V1) is generally thought of as a low-level sensory area that primarily processes basic visual features. Although there is evidence for multisensory effects on its activity, these are typically found for the processing of simple sounds and their properties, for example spatially or temporally-congruent simple sounds. However, in congenitally blind individuals, V1 is involved in language processing, with no evidence of major changes in anatomical connectivity that could explain this seemingly drastic functional change. This is at odds with current accounts of neural plasticity, which emphasize the role of connectivity and conserved function in determining a neural tissue\u2019s role even after atypical early experiences. To reconcile what appears to be unprecedented functional reorganization with known accounts of plasticity limitations, we tested whether V1\u2019s multisensory roles include responses to spoken language in sighted individuals. Using fMRI, we found that V1 in normally sighted individuals was indeed activated by comprehensible spoken sentences as compared to an incomprehensible reversed speech control condition, and more strongly so in the left compared to the right hemisphere. Activation in V1 for language was also significant and comparable for abstract and concrete words, suggesting it was not driven by visual imagery. Last, this activation did not stem from increased attention to the auditory onset of words, nor was it correlated with attentional arousal ratings, making general attention accounts an unlikely explanation. Together these findings suggest that V1 responds to spoken language even in sighted individuals \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:ipzZ9siozwsC",
+        "num_citations": 0,
+        "pub_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0289671",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Simple shape feature computation across modalities: convergence and divergence between the ventral and dorsal visual streams",
+            "pub_year": 2023,
+            "citation": "Cerebral Cortex, bhad200, 2023",
+            "author": "Shuang Tian and Yuankun Chen and Ze Fu and Xiaoying Wang and Yanchao Bi",
+            "journal": "Cerebral Cortex",
+            "pages": "bhad200",
+            "publisher": "Oxford University Press",
+            "abstract": "Shape processing, whether by seeing or touching, is pivotal to object recognition and manipulation. Although the low-level signals are initially processed by different modality-specific neural circuits, multimodal responses to object shapes have been reported along both ventral and dorsal visual pathways. To understand this transitional process, we conducted visual and haptic shape perception fMRI experiments to test basic shape features (i.e. curvature and rectilinear) across the visual pathways. Using a combination of region-of-interest-based support vector machine decoding analysis and voxel selection method, we found that the top visual-discriminative voxels in the left occipital cortex (OC) could also classify haptic shape features, and the top haptic-discriminative voxels in the left posterior parietal cortex (PPC) could also classify visual shape features. Furthermore, these voxels could decode shape \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:0KyAp5RtaNEC",
+        "num_citations": 0,
+        "pub_url": "https://academic.oup.com/cercor/advance-article-abstract/doi/10.1093/cercor/bhad200/7190929",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2R0Uvip-9VIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Gravity matters for the neural representations of action semantics",
+            "pub_year": 2023,
+            "citation": "Cerebral Cortex 33 (11), 6862-6871, 2023",
+            "author": "Ziyi Xiong and Yu Tian and Xiaosha Wang and Kunlin Wei and Yanchao Bi",
+            "journal": "Cerebral Cortex",
+            "volume": "33",
+            "number": "11",
+            "pages": "6862-6871",
+            "publisher": "Oxford University Press",
+            "abstract": "The dynamic relationship between the neural representation of action word semantics and specific sensorimotor experience remains controversial. Here, we temporarily altered human subjects\u2019 sensorimotor experience in a 15-day head-down tilt bed rest setting, a ground-based analog of microgravity that disproportionally affects sensorimotor experiences of the lower limbs, and examined whether such effector-dependent activity deprivation specifically affected the neural processes of comprehending verbs of lower-limb actions (e.g. to kick) relative to upper-limb ones (e.g. to pinch). Using functional magnetic resonance imaging, we compared the multivoxel neural patterns for such action words prior to and after bed rest. We found an effector-specific (lower vs. upper limb) experience modulation in subcortical sensorimotor-related and anterior temporal regions. The neural action semantic representations in \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:VLnqNzywnoUC",
+        "num_citations": 0,
+        "pub_url": "https://academic.oup.com/cercor/article-pdf/33/11/6862/50433601/bhad006.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2iamBgxotNUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Not clear what properties are found or should be: a commentary on Calzavarini (2023)",
+            "pub_year": 2023,
+            "citation": "Language, Cognition and Neuroscience, 1-3, 2023",
+            "author": "Ziyi Xiong and Haoyang Chen and Yanchao Bi",
+            "journal": "Language, Cognition and Neuroscience",
+            "pages": "1-3",
+            "publisher": "Routledge",
+            "abstract": "This is a commentary on Calzavarini , Rethinking Modality-Specificity in the Cognitive Neuroscience of Concrete Word Meaning: A Position Paper. DOI: 10.1080/23273798.2023.2173789 ."
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:yB1At4FlUx8C",
+        "num_citations": 0,
+        "pub_url": "https://www.tandfonline.com/doi/abs/10.1080/23273798.2023.2210235",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:U4tmIUmOnS8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Pulvinar Response Profiles and Connectivity Patterns to Object Domains",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience 43 (5), 812-826, 2023",
+            "author": "Haojie Wen and Yingchao Song and Meng Liang and Peng Zhang and Xiaoying Wang and Yanchao Bi",
+            "journal": "Journal of Neuroscience",
+            "volume": "43",
+            "number": "5",
+            "pages": "812-826",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Distributed cortical regions show differential responses to visual objects belonging to different domains varying by animacy (e.g., animals vs tools), yet it remains unclear whether this is an organization principle also applying to the subcortical structures. Combining multiple fMRI activation experiments (two main experiments and six validation datasets; 12 females and 9 males in the main Experiment 1; 10 females and 10 males in the main Experiment 2), resting-state functional connectivity, and task-based dynamic causal modeling analysis in human subjects, we found that visual processing of images of animals and tools elicited different patterns of response in the pulvinar, with robust left lateralization for tools, and distinct, bilateral (with rightward tendency) clusters for animals. Such domain-preferring activity distribution in the pulvinar was associated with the magnitude with which the voxels were intrinsically \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:fEOibwPWpKIC",
+        "num_citations": 0,
+        "pub_url": "https://www.jneurosci.org/content/43/5/812.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:xNhjoFebCz4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Pathogen stress shapes universal human collective conceptual changes in history",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Ze Fu and Huimin Chen and Zhan Liu and Maosong Sun and Zhiyuan Liu and Yanchao Bi",
+            "abstract": "Infectious disease has been a major cause of death throughout human history. The human cultural evolution framework assumes that these stress variables have broadly shaped human psychology. However, how it affects conceptual processing, a basic cognitive component, is largely unknown. Using historical data from the past century in the US, UK, Italy, and China, the research found that pathogen severity variation across time was associated with significant changes in the collective semantic space, as reflected in language, in significantly similar ways across the countries with varying sociocultural properties. In all four countries, increasing pathogen severity was associated with increased use of words about sensory-motor properties, tight social relations and traditional values, robust against alternative stress variables, such as war, natural disaster or general economic growth. These results highlight the universal dynamic mechanisms of collective semantics, such that pathogens stresses potentially drive sensorial, tight/traditional-value oriented semantic processing."
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:z_wVstp3MssC",
+        "num_citations": 0,
+        "pub_url": "https://www.researchsquare.com/article/rs-2357008/latest",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:O5gRihXCA2IJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The neural organization of visual information in the auditory cortex of the congenitally deaf",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.04. 17.537188, 2023",
+            "author": "Zohar Tal and Joana Sayal and Fang Fang and Yanchao Bi and Jorge Almeida and Alessio Fracasso",
+            "journal": "bioRxiv",
+            "pages": "2023.04. 17.537188",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Neuroplasticity is the ability of the human brain to reorganize and modify its activity throughout life. In congenital deafness, sensory-deprived cortex can be recruited to represent sensory information belonging to other modalities, a process known as cross-modal plasticity. Previous studies have indicated that the auditory cortex of congenitally deaf, but not of hearing individuals, is recruited during visual tasks. However, it is not clear to what extent, and how, these cross-modal responses in the deprived auditory cortex represent low-level visual spatial information or map the visual field. Here, we addressed this question directly in an fMRI case-study, aiming to map retinotopic features in the auditory cortex. Two congenitally deaf and one hearing participant went through a conventional retinotopy fMRI experiment with visual stimuli designed to map the visual system. Using population receptive field (pRF) modelling, we revealed retinotopic-related responses in the auditory cortex of the deaf, but not in the hearing. These responses, that were mostly lateralized to the right hemisphere, represented the contralateral visual field, and were characterized by large receptive fields, centred to near foveal areas. Interestingly, we found that these responses to visual stimuli predominantly reflected negative BOLD signals in the auditory cortex of the deaf, suggesting that visual information might be represented through cross-modal deactivation signals."
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:9Nmd_mFXekcC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.04.17.537188.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:S7HEf4DeWsIJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

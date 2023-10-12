@@ -1,0 +1,99 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Diagnosing Catastrophe: Large parts of accuracy loss in continual learning can be accounted for by readout misalignment",
+            "pub_year": 2023,
+            "citation": "Conference on Cognitive Computational Neuroscience (CCN), 748-751, 2023",
+            "author": "Daniel Anthes and Sushrut Thorat and Peter Konig and Tim C Kietzmann",
+            "conference": "Conference on Cognitive Computational Neuroscience (CCN)",
+            "pages": "748-751",
+            "abstract": "Unlike primates, training artificial neural networks on changing data distributions leads to a rapid decrease in performance on old tasks. This phenomenon is commonly referred to as catastrophic forgetting. In this paper, we investigate the representational changes that underlie this performance decrease and identify three distinct processes that together account for the phenomenon. The largest component is a misalignment between hidden representations and readout layers. Misalignment occurs due to learning on additional tasks and causes internal representations to shift. Representational geometry is partially conserved under this misalignment and only a small part of the information is irrecoverably lost. All types of representational changes scale with the dimensionality of hidden representations. These insights have implications for deep learning applications that need to be continuously updated, but may also aid aligning ANN models to the rather robust biological vision."
+        },
+        "filled": true,
+        "author_pub_id": "MPFzJQgAAAAJ:hFOr9nPyWt4C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=6253538686981636241",
+        "cites_id": [
+            "6253538686981636241"
+        ],
+        "pub_url": "https://arxiv.org/abs/2310.05644",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Balancing stability and plasticity in continual learning: the readout-decomposition of activation change (RDAC) framework",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2310.04741, 2023",
+            "author": "Daniel Anthes and Sushrut Thorat and Tim C Kietzmann and Peter K\u00f6nig",
+            "journal": "arXiv preprint arXiv:2310.04741",
+            "abstract": "Continual learning (CL) algorithms strive to acquire new knowledge while preserving prior information. However, this stability-plasticity trade-off remains a central challenge. This paper introduces a framework that dissects this trade-off, offering valuable insights into CL algorithms. The Readout-Decomposition of Activation Change (RDAC) framework first addresses the stability-plasticity dilemma and its relation to catastrophic forgetting. It relates learning-induced activation changes in the range of prior readouts to the degree of stability and changes in the null space to the degree of plasticity. In deep non-linear networks tackling split-CIFAR-110 tasks, the framework clarifies the stability-plasticity trade-offs of the popular regularization algorithms Synaptic intelligence (SI), Elastic-weight consolidation (EWC), and learning without Forgetting (LwF), and replay-based algorithms Gradient episodic memory (GEM), and data replay. GEM and data replay preserved stability and plasticity, while SI, EWC, and LwF traded off plasticity for stability. The inability of the regularization algorithms to maintain plasticity was linked to them restricting the change of activations in the null space of the prior readout. Additionally, for one-hidden-layer linear neural networks, we derived a gradient decomposition algorithm to restrict activation change only in the range of the prior readouts, to maintain high stability while not further sacrificing plasticity. Results demonstrate that the algorithm maintained stability without significant plasticity loss. The RDAC framework informs the behavior of existing CL algorithms and paves the way for novel CL approaches. Finally, it sheds light \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "MPFzJQgAAAAJ:R3hNpaxXUhUC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2310.04741",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Searching near and far: the attentional template incorporates viewing distance",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Surya Gayet and Elisa Battistoni and Sushrut Thorat and Marius Peelen",
+            "publisher": "PsyArXiv",
+            "abstract": "According to theories of visual search, observers generate a visual representation of the search target (the \u2018attentional template\u2019) that guides spatial attention towards target-like visual input. In real-world vision, however, objects produce vastly different visual input depending on their location: your car produces a retinal image that is ten times smaller when it\u2019s parked fifty compared to five meters away. Across four experiments, we investigated whether the attentional template incorporates viewing distance when observers search for familiar object categories. On each trial, participants were pre-cued to search for a car or person in the near or far plane of an outdoor scene. In \u2018search trials\u2019, the scene reappeared and participants had to indicate whether the search target was present or absent. In intermixed \u2018catch-trials\u2019, two silhouettes were briefly presented on either side of fixation (matching the shape and/or predicted size of the search target), one of which was followed by a probe-stimulus. We found that participants were more accurate at reporting the location (Exp. 1&2) and orientation (Exp. 3) of probe-stimuli when they were presented at the location of size-matching silhouettes. Thus, attentional templates incorporate the predicted size of an object based on the current viewing distance. This was only the case, however, when silhouettes also matched the shape of the search target (Exp 2). We conclude that attentional templates for finding objects in scenes are shaped by a combination of category-specific attributes (shape) and context-dependent expectations about the likely appearance (size) of these objects at the current viewing location."
+        },
+        "filled": true,
+        "author_pub_id": "MPFzJQgAAAAJ:qUcmZB5y_30C",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/ktayb/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Y_cR6ougf0MJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Characterising representation dynamics in recurrent neural networks for object recognition",
+            "pub_year": 2023,
+            "citation": "Conference on Cognitive Computational Neuroscience (CCN), 645-647, 2023",
+            "author": "Sushrut Thorat and Adrien Doerig and Tim C Kietzmann",
+            "conference": "Conference on Cognitive Computational Neuroscience (CCN)",
+            "pages": "645-647",
+            "abstract": "Recurrent neural networks (RNNs) have yielded promising results for both recognizing objects in challenging conditions and modeling aspects of primate vision. However, the representational dynamics of recurrent computations remain poorly understood, especially in large-scale visual models. Here, we studied such dynamics in RNNs trained for object classification on MiniEcoset, a novel subset of ecoset. We report two main insights. First, upon inference, representations continued to evolve after correct classification, suggesting a lack of the notion of being ``done with classification''. Second, focusing on ``readout zones'' as a way to characterize the activation trajectories, we observe that misclassified representations exhibit activation patterns with lower L2 norm, and are positioned more peripherally in the readout zones. Such arrangements help the misclassified representations move into the correct zones as time progresses. Our findings generalize to networks with lateral and top-down connections, and include both additive and multiplicative interactions with the bottom-up sweep. The results therefore contribute to a general understanding of RNN dynamics in naturalistic tasks. We hope that the analysis framework will aid future investigations of other types of RNNs, including understanding of representational dynamics in primate vision."
+        },
+        "filled": true,
+        "author_pub_id": "MPFzJQgAAAAJ:-f6ydRqryjwC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2308.12435",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predicting cued and oddball visual search performance from neural representational similarity",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.06. 15.545065, 2023",
+            "author": "Lu-Chun Yeh and Sushrut Thorat and Marius V Peelen",
+            "journal": "bioRxiv",
+            "pages": "2023.06. 15.545065",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Capacity limitations in visual tasks can be observed when the number of task-related objects increases. An influential idea is that such capacity limitations are determined by competition at the neural level: two objects that are encoded by shared neural populations interfere more in behavior (e.g., visual search) than two objects encoded by separate neural populations. However, the neural representational similarity of objects varies across brain regions and across time, raising the question of where and when competition determines task performance. Furthermore, it is unclear whether the association between neural representational similarity and task performance is common or unique across tasks. Here, we used neural representational similarity derived from fMRI, MEG, and deep neural networks (DNN) to predict performance on two visual search tasks involving the same objects and requiring the same responses but differing in instructions: cued visual search and oddball visual search. Separate groups of participants viewed the individual objects in neuroimaging experiments to establish the neural representational similarity between those objects. Results showed that performance on both search tasks could be predicted by neural representational similarity throughout the visual system (fMRI), from 80 msec after onset (MEG), and in all DNN layers. Stepwise regression analysis, however, revealed task-specific associations, with unique variability in oddball visual search performance predicted by early/posterior neural similarity, and unique variability in cued visual search task performance predicted by late/anterior neural similarity. These \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "MPFzJQgAAAAJ:hC7cP41nSMkC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.15.545065.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Z_bqCQEAs_wJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

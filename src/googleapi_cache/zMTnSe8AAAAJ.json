@@ -1,0 +1,106 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Hierarchical organization of social action features along the lateral visual pathway",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Emalie McMahon and Michael F Bonner and Leyla Isik",
+            "publisher": "PsyArXiv",
+            "abstract": "Recent theoretical work has argued that in addition to the classical ventral (what) and dorsal (where/how) visual streams, there is a third visual stream on the lateral surface of the brain specialized for processing social information. Like visual representations in the ventral and dorsal streams, representations in the lateral stream are thought to be hierarchically organized. However, no prior studies have comprehensively investigated the organization of naturalistic, social visual content in the lateral stream. Here we used a data-rich approach to test the hypothesis that social action information is extracted hierarchically along this pathway. Social scenes pose several computational challenges beyond those of object recognition: they are often highly dynamic and involve relations between two or more people. To address these challenges, we curated a naturalistic stimulus set of 250 three-second videos of two people engaged in everyday actions. Each clip was richly annotated for its low-level visual features, mid-level scene & object properties, visual social primitives (including the distance between people and the extent to which they were facing), and high-level information about social interactions and affective content. Using a condition-rich fMRI experiment and a within-subject encoding model approach, we found that low-level visual features are represented in early visual cortex (EVC) and middle temporal area (MT), mid-level visual-social features in extrastriate body area (EBA) and lateral occipital complex (LOC), and high-level social interaction information along the superior temporal sulcus (STS). Communicative interactions, in particular \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:VRfTbSk87rEC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=16072428916932549311",
+        "cites_id": [
+            "16072428916932549311"
+        ],
+        "pub_url": "https://psyarxiv.com/x3avb/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vxp7z_G8DN8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Scene context is predictive of unconstrained object similarity judgments",
+            "pub_year": 2023,
+            "citation": "Cognition 239, 105535, 2023",
+            "author": "Caterina Magri and Eric Elmoznino and Michael F Bonner",
+            "journal": "Cognition",
+            "volume": "239",
+            "pages": "105535",
+            "publisher": "Elsevier",
+            "abstract": "What makes objects alike in the human mind? Computational approaches for characterizing object similarity have largely focused on the visual forms of objects or their linguistic associations. However, intuitive notions of object similarity may depend heavily on contextual reasoning\u2014that is, objects may be grouped together in the mind if they occur in the context of similar scenes or events. Using large-scale analyses of natural scene statistics and human behavior, we found that a computational model of the associations between objects and their scene contexts is strongly predictive of how humans spontaneously group objects by similarity. Specifically, we learned contextual prototypes for a diverse set of object categories by taking the average response of a convolutional neural network (CNN) to the scene contexts in which the objects typically occurred. In behavioral experiments, we found that contextual \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:kUhpeDhEZMUC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010027723001695",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The spatiotemporal dynamics of social scene perception in the human brain",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4628-4628, 2023",
+            "author": "Emalie McMahon and Taylor Abel and Jorge Gonzalez-Martinez and Michael F Bonner and Avniel Ghuman and Leyla Isik",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4628-4628",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Social perception is an important part of everyday life that develops early and is shared with non-human primates. To understand the spatiotemporal dynamics of naturalistic social perception in the human brain, we first curated a dataset of 250 500-ms video clips of two people performing everyday actions. We densely labeled these videos with features of visual social scene, including scene and object features, visual social primitives, and higher-level social/affective features. To investigate when and where these features are represented in the brain, patients with implanted stereoelectroencephalography electrodes viewed the videos. We used time-resolved encoding models in individual channels to investigate the time course of representations across the human brain. We find that an encoding model based on all of our social scene features predicts responses in a subset of channels around 400 ms after video \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:lbI08cpqPnQC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791837",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Toward a computational neuroscience of visual cortex without deep learning",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5455-5455, 2023",
+            "author": "Atlas Kazemian and Eric Elmoznino and Michael Bonner",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5455-5455",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "The performance of convolutional neural networks (CNNs) as representational models of visual cortex is thought to be associated with their optimization on ethologically relevant tasks. Here, we show that this view is incorrect and that there are other architectural and statistical factors that primarily account for their performance. We show this by developing a novel statistically inspired neural network that yields accurate predictions of cortical image representation without the need for optimization on supervised or self-supervised tasks. Our architecture is characterized by a core module of convolutions and max pooling, which can be stacked in a deep hierarchy. An important characteristic of our model is the use of thousands of random filters to sample the high-dimensional space of natural image statistics. These filters can be mapped to cortical responses through a simple linear-regression procedure, which we \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:I858iXPj1OkC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791949",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Contextual coherence increases perceived numerosity independent of semantic content",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Chuyan Qu and Michael F Bonner and Nicholas K DeWind and Elizabeth M Brannon",
+            "publisher": "PsyArXiv",
+            "abstract": "Understanding if and how visual features systematically bias numerosity perception is central to understanding the processes that give rise to our visual number sense. Recent work demonstrated that reducing coherence of low-level visual attributes such as color and orientation systematically reduces perceived number. Here we ask when in the visual processing hierarchy coherence affects numerosity perception and specifically whether the coherence effect is exclusive to low-level visual features or instead whether it can be driven by contextual or semantic relationships. We tested adults in an ordinal numerical comparison task with contextual coherence mathematically manipulated using a statistical model of visual object co-occurrence. Across several experiments, we found that arrays with high contextual coherence were perceived as numerically larger than arrays with low contextual coherence. This contextual coherence effect was not attenuated even when we reduced objects to texforms (unrecognizable images that preserve mid-level visual features) or removed semantic content from the images through box scrambling and diffeomorphic warping. Together, these results suggest that visual coherence derived from natural statistics of object co-occurrence systematically alters perceived numerosity at low-level visual processing, even before later stages at which items can be explicitly categorized and identified."
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:U0iAMwwPxtsC",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/tcn8q/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:H4ULqxOMXEsJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

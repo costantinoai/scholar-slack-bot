@@ -1,0 +1,233 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Mouse visual cortex as a limited resource system that self-learns an ecologically-general representation",
+            "pub_year": 2023,
+            "citation": "PLOS Computational Biology 19 (10), e1011506, 2023",
+            "author": "Aran Nayebi and Nathan CL Kong and Chengxu Zhuang and Justin L Gardner and Anthony M Norcia and Daniel LK Yamins",
+            "journal": "PLOS Computational Biology",
+            "volume": "19",
+            "number": "10",
+            "pages": "e1011506",
+            "publisher": "Public Library of Science",
+            "abstract": "Studies of the mouse visual system have revealed a variety of visual brain areas that are thought to support a multitude of behavioral capacities, ranging from stimulus-reward associations, to goal-directed navigation, and object-centric discriminations. However, an overall understanding of the mouse\u2019s visual cortex, and how it supports a range of behaviors, remains unknown. Here, we take a computational approach to help address these questions, providing a high-fidelity quantitative model of mouse visual cortex and identifying key structural and functional principles underlying that model\u2019s success. Structurally, we find that a comparatively shallow network structure with a low-resolution input is optimal for modeling mouse visual cortex. Our main finding is functional\u2014that models trained with task-agnostic, self-supervised objective functions based on the concept of contrastive embeddings are much better matches to mouse cortex, than models trained on supervised objectives or alternative self-supervised methods. This result is very much unlike in primates where prior work showed that the two were roughly equivalent, naturally leading us to ask the question of why these self-supervised objectives are better matches than supervised ones in mouse. To this end, we show that the self-supervised, contrastive objective builds a general-purpose visual representation that enables the system to achieve better transfer on out-of-distribution visual scene understanding and reward-based navigation tasks. Our results suggest that mouse visual cortex is a low-resolution, shallow network that makes best use of the mouse\u2019s limited resources to create a light \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:t6usbXjVLHcC",
+        "num_citations": 7,
+        "citedby_url": "/scholar?hl=en&cites=2488019056342353188",
+        "cites_id": [
+            "2488019056342353188"
+        ],
+        "pub_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011506",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JEWwTyY4hyIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 2,
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The BabyView camera: Designing a new head-mounted camera to capture children\u2019s early social and visual environments",
+            "pub_year": 2023,
+            "citation": "Behavior Research Methods, 1-12, 2023",
+            "author": "Bria Long and Sarah Goodin and George Kachergis and Virginia A Marchman and Samaher F Radwan and Robert Z Sparks and Violet Xiang and Chengxu Zhuang and Oliver Hsu and Brett Newman and Daniel LK Yamins and Michael C Frank",
+            "journal": "Behavior Research Methods",
+            "pages": "1-12",
+            "publisher": "Springer US",
+            "abstract": "Head-mounted cameras have been used in developmental psychology research for more than a decade to provide a rich and comprehensive view of what infants see during their everyday experiences. However, variation between these devices has limited the field\u2019s ability to compare results across studies and across labs. Further, the video data captured by these cameras to date has been relatively low-resolution, limiting how well machine learning algorithms can operate over these rich video data. Here, we provide a well-tested and easily constructed design for a head-mounted camera assembly\u2014the BabyView\u2014developed in collaboration with Daylight Design, LLC., a professional product design firm. The BabyView collects high-resolution video, accelerometer, and gyroscope data from children approximately 6\u201330 months of age via a GoPro camera custom mounted on a soft child-safety helmet. The \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:08ZZubdj9fEC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=5355374867511737620",
+        "cites_id": [
+            "5355374867511737620"
+        ],
+        "pub_url": "https://link.springer.com/article/10.3758/s13428-023-02206-1",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:FH0XaREdUkoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A Unifying Principle for the Functional Organization of Visual Cortex",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.05. 18.541361, 2023",
+            "author": "Eshed Margalit and Hyodong Lee and Dawn Finzi and James J DiCarlo and Kalanit Grill-Spector and Daniel LK Yamins",
+            "journal": "bioRxiv",
+            "pages": "2023.05. 18.541361",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "A key feature of many cortical systems is functional organization: the arrangement of neurons with specific functional properties in characteristic spatial patterns across the cortical surface. However, the principles underlying the emergence and utility of functional organization are poorly understood. Here we develop the Topographic Deep Artificial Neural Network (TDANN), the first unified model to accurately predict the functional organization of multiple cortical areas in the primate visual system. We analyze the key factors responsible for the TDANN's success and find that it strikes a balance between two specific objectives: achieving a task-general sensory representation that is self-supervised, and maximizing the smoothness of responses across the cortical sheet according to a metric that scales relative to cortical surface area. In turn, the representations learned by the TDANN are lower dimensional and more brain-like than those in models that lack a spatial smoothness constraint. Finally, we provide evidence that the TDANN's functional organization balances performance with inter-area connection length, and use the resulting models for a proof-of-principle optimization of cortical prosthetic design. Our results thus offer a unified principle for understanding functional organization and a novel view of the functional role of the visual system in particular."
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:q3oQSFYPqjQC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=615012094074270269",
+        "cites_id": [
+            "615012094074270269"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.05.18.541361.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:PbLdtz32iAgJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Evaluating physical scene understanding with objects consisting of different physical attributes in humans and machines",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5622-5622, 2023",
+            "author": "Hsiao-Yu Tung and Mingyu Ding and Zhenfang Chen and Daniel Bear and Chuang Gan and Joshua Tenenbaum and Daniel Yamins and Judith Fan and Kevin Smith",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5622-5622",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Human physical scene understanding requires more than simply localizing and recognizing objects\u2014we can quickly adapt our predictions about how a scene will unfold by incorporating objects' latent physics properties, such as the masses of the objects in the scene. What are the underlying computational mechanisms that allow humans to infer these physical properties and adapt their physical predictions so efficiently from visual inputs? One hypothesis is that general intuitive physics knowledge can be learned from enough raw data, instantiated as computational models that predict future video frames in large datasets of complex scenes. To test this hypothesis, we evaluated how well two state-of-the-art video models\u2014MCVD (Voleti et al., 2022) and ALOE (Ding et al., 2021)\u2014could approximate human-level physical scene understanding. We measured both model and human performance on Physion++, a \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:XiVPGOgt02cC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792645",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Physion++: Evaluating Physical Scene Understanding that Requires Online Inference of Different Physical Properties",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2306.15668, 2023",
+            "author": "Hsiao-Yu Tung and Mingyu Ding and Zhenfang Chen and Daniel Bear and Chuang Gan and Joshua B Tenenbaum and Daniel LK Yamins and Judith E Fan and Kevin A Smith",
+            "journal": "arXiv preprint arXiv:2306.15668",
+            "abstract": "General physical scene understanding requires more than simply localizing and recognizing objects -- it requires knowledge that objects can have different latent properties (e.g., mass or elasticity), and that those properties affect the outcome of physical events. While there has been great progress in physical and video prediction models in recent years, benchmarks to test their performance typically do not require an understanding that objects have individual physical properties, or at best test only those properties that are directly observable (e.g., size or color). This work proposes a novel dataset and benchmark, termed Physion++, that rigorously evaluates visual physical prediction in artificial systems under circumstances where those predictions rely on accurate estimates of the latent physical properties of objects in the scene. Specifically, we test scenarios where accurate prediction relies on estimates of properties such as mass, friction, elasticity, and deformability, and where the values of those properties can only be inferred by observing how objects move and interact with other objects or fluids. We evaluate the performance of a number of state-of-the-art prediction models that span a variety of levels of learning vs. built-in knowledge, and compare that performance to a set of human predictions. We find that models that have been trained using standard regimes and datasets do not spontaneously learn to make inferences about latent properties, but also that models that encode objectness and physical states tend to make better predictions. However, there is still a huge gap between all models and human performance, and all models' \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:5ugPr518TE4C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2306.15668",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Unifying (Machine) Vision via Counterfactual World Modeling",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2306.01828, 2023",
+            "author": "Daniel M Bear and Kevin Feigelis and Honglin Chen and Wanhee Lee and Rahul Venkatesh and Klemen Kotar and Alex Durango and Daniel LK Yamins",
+            "journal": "arXiv preprint arXiv:2306.01828",
+            "abstract": "Leading approaches in machine vision employ different architectures for different tasks, trained on costly task-specific labeled datasets. This complexity has held back progress in areas, such as robotics, where robust task-general perception remains a bottleneck. In contrast, \"foundation models\" of natural language have shown how large pre-trained neural networks can provide zero-shot solutions to a broad spectrum of apparently distinct tasks. Here we introduce Counterfactual World Modeling (CWM), a framework for constructing a visual foundation model: a unified, unsupervised network that can be prompted to perform a wide variety of visual computations. CWM has two key components, which resolve the core issues that have hindered application of the foundation model concept to vision. The first is structured masking, a generalization of masked prediction methods that encourages a prediction model to capture the low-dimensional structure in visual data. The model thereby factors the key physical components of a scene and exposes an interface to them via small sets of visual tokens. This in turn enables CWM's second main idea -- counterfactual prompting -- the observation that many apparently distinct visual representations can be computed, in a zero-shot manner, by comparing the prediction model's output on real inputs versus slightly modified (\"counterfactual\") inputs. We show that CWM generates high-quality readouts on real-world images and videos for a diversity of tasks, including estimation of keypoints, optical flow, occlusions, object segments, and relative depth. Taken together, our results show that CWM is a promising path \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:J-pR_7NvFogC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2306.01828",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:_Br_hSX_2dgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Measuring and Modeling Physical Intrinsic Motivation",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2305.13452, 2023",
+            "author": "Julio Martinez and Felix Binder and Haoliang Wang and Nicker Haber and Judith Fan and Daniel LK Yamins",
+            "journal": "arXiv preprint arXiv:2305.13452",
+            "abstract": "Humans are interactive agents driven to seek out situations with interesting physical dynamics. Here we formalize the functional form of physical intrinsic motivation. We first collect ratings of how interesting humans find a variety of physics scenarios. We then model human interestingness responses by implementing various hypotheses of intrinsic motivation including models that rely on simple scene features to models that depend on forward physics prediction. We find that the single best predictor of human responses is adversarial reward, a model derived from physical prediction loss. We also find that simple scene feature models do not generalize their prediction of human responses across all scenarios. Finally, linearly combining the adversarial model with the number of collisions in a scene leads to the greatest improvement in predictivity of human responses, suggesting humans are driven towards scenarios that result in high information gain and physical activity."
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:kRWSkSYxWN8C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2305.13452",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:8QuZVygSmpMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Developmental Curiosity and Social Interaction in Virtual Agents",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2305.13396, 2023",
+            "author": "Chris Doyle and Sarah Shader and Michelle Lau and Megumi Sano and Daniel LK Yamins and Nick Haber",
+            "journal": "arXiv preprint arXiv:2305.13396",
+            "abstract": "Infants explore their complex physical and social environment in an organized way. To gain insight into what intrinsic motivations may help structure this exploration, we create a virtual infant agent and place it in a developmentally-inspired 3D environment with no external rewards. The environment has a virtual caregiver agent with the capability to interact contingently with the infant agent in ways that resemble play. We test intrinsic reward functions that are similar to motivations that have been proposed to drive exploration in humans: surprise, uncertainty, novelty, and learning progress. These generic reward functions lead the infant agent to explore its environment and discover the contingencies that are embedded into the caregiver agent. The reward functions that are proxies for novelty and uncertainty are the most successful in generating diverse experiences and activating the environment contingencies. We also find that learning a world model in the presence of an attentive caregiver helps the infant agent learn how to predict scenarios with challenging social and physical dynamics. Taken together, our findings provide insight into how curiosity-like intrinsic rewards and contingent social interaction lead to dynamic social behavior and the creation of a robust predictive world model."
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:mvPsJ3kp5DgC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2305.13396",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:XyLvMJA_IigJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Medial temporal cortex supports compositional visual inferences",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.09. 07.556737, 2023",
+            "author": "Tyler Bonnen and Anthony D Wagner and Daniel LK Yamins",
+            "journal": "bioRxiv",
+            "pages": "2023.09. 07.556737",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Perception unfolds across multiple timescales. For humans and other primates, many object-centric visual attributes can be inferred 'at a glance' (i.e., with <200ms of visual information), an ability supported by ventral temporal cortex (VTC). Other perceptual inferences require more time; to determine a novel object's identity, we might need to represent its unique configuration of visual features, requiring multiple 'glances.' Here we evaluate whether medial temporal cortex (MTC), downstream from VTC, supports object perception by integrating over such visuospatial sequences. We first compare human visual inferences directly to electrophysiological recordings from macaque VTC. While human performance 'at a glance' is approximated by a linear readout of VTC, participants radically outperform VTC given longer viewing times (i.e.,  >200ms). Next, we demonstrate the causal role of MTC in these temporally extended visual inferences: just as time restricted performance can be approximated by a linear readout of VTC, the performance of (time unrestricted) MTC-lesioned humans resembles a computational proxy for VTC. Finally, we characterize these visual abilities through a series of eyetracking experiments. With extended viewing times participants sequentially sample task-relevant features via multiple saccades\u2014visuospatial patterns that are reliable across participants and necessary for performance. From these data, we suggest that MTC transforms visuospatial sequences into 'compositional' representations that support visual object perception."
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:olpn-zPbct0C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.09.07.556737.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Advancing Cognitive Science and AI with Cognitive-AI Benchmarking",
+            "pub_year": 2023,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society 45 (45), 2023",
+            "author": "Felix Jedidja Binder and Logan Matthew Cross and Yoni Friedman and Robert Hawkins and Daniel LK Yamins and Judith E Fan",
+            "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+            "volume": "45",
+            "number": "45",
+            "abstract": "What are the current limits of AI models in explaining human cognition and behavior? How might approaches from the cognitive sciences drive the development of more robust and reliable AI systems? The goal of this workshop is bring together researchers across cognitive science and artificial intelligence (AI) to engage with these questions and identify opportunities to work together to advance progress in both fields. In particular, we propose Cognitive-AI Benchmarking as a particularly promising strategy --- that is, the community-coordinated establishment of common benchmarks, tools, and best practices for model-human comparisons across diverse and ecologically relevant domains and tasks. We will host a combination of talks, panel discussion, and breakout activities to: highlight past successes in Cognitive-AI Benchmarking and limitations of current approaches, share tools and best practices, and outline future challenges and goals for the field."
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:bnK-pcrLprsC",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/5v56249j",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "3D-IntPhys: Towards More Generalized 3D-grounded Visual Intuitive Physics under Challenging Scenes",
+            "pub_year": 2023,
+            "citation": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern \u2026, 2023",
+            "author": "Haotian Xue and Antonio Torralba and Joshua Tenenbaum and Daniel Yamins and Yunzhu Li and Hsiao-Yu Tung",
+            "conference": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+            "pages": "3624-3634",
+            "abstract": "Given a visual scene, humans have strong intuitions about how a scene can evolve over time under given actions. The intuition, often termed visual intuitive physics, is a critical ability that allows us to make effective plans to manipulate the scene to achieve desired outcomes without relying on extensive trial and error. In this paper, we present a framework capable of learning 3D-grounded visual intuitive physics models from videos of complex scenes with fluids. Our method is composed of a conditional Neural Radiance Field (NeRF)-style visual frontend and a 3D point-based dynamics prediction backend, using which we can impose strong relational and structural inductive bias to capture the structure of the underlying environment. Unlike existing intuitive point-based dynamics works that rely on the supervision of dense point trajectory from simulators, we relax the requirements and only assume access to multi-view RGB images and (imperfect) instance masks acquired using color prior. This enables the proposed model to handle scenarios where accurate point estimation and tracking are hard or impossible. We generate datasets including three challenging scenarios involving fluid, granular materials, and rigid objects in the simulation. The datasets do not include any dense particle information so most previous 3D-based intuitive physics pipelines can barely deal with that. We show our model can make long-horizon future predictions by learning from raw images and significantly outperforms models that do not employ an explicit 3D representation space. We also show that once trained, our model can achieve strong generalization in complex \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:BrmTIyaxlBUC",
+        "num_citations": 0,
+        "pub_url": "https://openaccess.thecvf.com/content/CVPR2023W/Precognition/html/Xue_3D-IntPhys_Towards_More_Generalized_3D-Grounded_Visual_Intuitive_Physics_Under_Challenging_CVPRW_2023_paper.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:V0m9MxS-jCMJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

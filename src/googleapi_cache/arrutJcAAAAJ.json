@@ -1,0 +1,109 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Interference between items stored for distinct tasks in visual working memory",
+            "pub_year": 2023,
+            "citation": "Attention, Perception, & Psychophysics, 1-13, 2023",
+            "author": "Stefan Czoschke and Benjamin Peters and Jochen Kaiser and Christoph Bledowski",
+            "journal": "Attention, Perception, & Psychophysics",
+            "pages": "1-13",
+            "publisher": "Springer US",
+            "abstract": "The action perspective on working memory suggests that memory representations are coded according to their specific temporal and behavioral task demands. This stands in contrast to theories that assume representations are stored in a task-agnostic format within a \u201ccommon workspace\u201d. Here, we tested whether visual items that are memorized for different tasks are stored separately from one another or show evidence of inter-item interference during concurrent maintenance, indicating a common storage. In two experiments, we combined a framing memory task (memorize a motion direction for continuous direction report) with an embedded memory task (memorize a motion direction for a binary direction discrimination) that was placed within the retention period of the framing task. Even though the temporal and action demands were item specific, we observed two types of interference effects between the items \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "arrutJcAAAAJ:mVmsd5A6BfQC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=8203210097365044547",
+        "cites_id": [
+            "8203210097365044547"
+        ],
+        "pub_url": "https://link.springer.com/article/10.3758/s13414-023-02657-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Q01X_x6o13EJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Beholder\u2019s Share: Cross-subject Variability in Responses to Abstract Art",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5556-5556, 2023",
+            "author": "Celia Durkin and Benjamin Peters and Christopher Baldassano and Eric Kandel and Daphna Shohamy",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5556-5556",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Subjective experience of art emerges from an interaction between external input, which is shared across individuals, and internal associations, which vary across individuals and give art its personal meaning. In art theory, the Beholder\u2019s Share refers to the contribution a viewer makes to the meaning of a painting by drawing on a set of unique prior experiences. A key tenet of the Beholder\u2019s Share is that a viewer brings more personal meaning to abstract art than to representational art. Here, we interrogate this theory. We reason that more personal meaning brought to a painting should manifest in variability across subjects in neural responses to the same painting. To test this, we scanned participants with fMRI while they viewed abstract or representational paintings. To determine whether subjects respond more subjectively to abstract vs. representational paintings, we measured cross-subject variability in patterns of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "arrutJcAAAAJ:ZeXyd9-uunAC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792703",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Naturalistic primate vision combines generative and discriminative computations",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4660-4660, 2023",
+            "author": "Benjamin Peters",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4660-4660",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Biological and machine vision needs to be statistically and computationally efficient, enabling both robust and rapid perception from sensory evidence. The normative ideal, as embodied by the generative approach, interprets evidence optimally in the context of a statistical model of the world. This ideal is computationally expensive or even intractable for naturalistic and dynamic vision. The discriminative approach emphasizes rapid inference without the use of an explicit generative model. I will introduce generative and discriminative models as an explanatory framework characterizing visual inference at different levels of analysis. Models of primate vision can be understood as points in a vast space of possible inference models that contains classical algorithms like predictive coding, the feedforward cascade of filters in a convolutional neural network, along with more novel concepts from engineering such as \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "arrutJcAAAAJ:L8Ckcad2t8MC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791827",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deep neural networks are not a single hypothesis but a language for expressing computational hypotheses",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Tal Golan and JohnMark Taylor and Heiko Sch\u00fctt and Benjamin Peters and Rowan Paolo Sommers and Katja Seeliger and Adrien Doerig and Paul Linton and Talia Konkle and Marcel van Gerven and Konrad Kording and Blake Richards and Tim Christian Kietzmann and Grace W Lindsay and Nikolaus Kriegeskorte",
+            "publisher": "PsyArXiv",
+            "abstract": "An ideal vision model accounts for behavior and neurophysiology in both naturalistic conditions and designed lab experiments. Unlike psychological theories, artificial neural networks (ANNs) actually perform visual tasks and generate testable predictions for arbitrary inputs. These advantages enable ANNs to engage the entire spectrum of the evidence. Failures of particular models drive progress in a vibrant ANN research program of human vision."
+        },
+        "filled": true,
+        "author_pub_id": "arrutJcAAAAJ:QIV2ME_5wuYC",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/tr7gx/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1VpvSvB-icIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Exogenous cues enhance attentional prioritization during working memory encoding in schizophrenia",
+            "pub_year": 2023,
+            "citation": "Neuroscience Applied 2, 101089, 2023",
+            "author": "C Barnes-Scheufler and L R\u00f6sler and M Schaum and C Schiweck and B Peters and J Mayer and M Wibral and R Bittner",
+            "journal": "Neuroscience Applied",
+            "volume": "2",
+            "pages": "101089",
+            "publisher": "Elsevier",
+            "abstract": "Background: Visuospatial working memory (VWM) and attention are two intricately and bi-directionally related cognitive domains essential for elucidating the basis of perturbed information processing in people with schizophrenia (PSZ)[1]. During VWM encoding, top-down attention, which is driven by stimulus relevance, competes with bottom-up attention, which is driven by stimulus salience [2]. Behavioral VWM experiments using flickering stimuli indicate an attentional bias in PSZ toward highly salient stimuli, even if they are behaviorally irrelevant [3]. Conversely, patients\u2019 ability to utilize external spatial cues to guide top-down attention and to prioritize information correctly is intact [4]. However, it remains unknown whether top-down attentional control of PSZ aided by external cues can prevail when directly challenged by highly salient distractors.Methods: We employed a visuospatial change-detection task using \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "arrutJcAAAAJ:dhFuZR0502QC",
+        "num_citations": 0,
+        "pub_url": "https://scholar.google.com/scholar?cluster=15922581923636003557&hl=en&oi=scholarr",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:5UJh6eVf-NwJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

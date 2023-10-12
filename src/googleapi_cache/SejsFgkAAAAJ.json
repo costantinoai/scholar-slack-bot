@@ -1,0 +1,153 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Catalyzing next-generation artificial intelligence through neuroai",
+            "pub_year": 2023,
+            "citation": "Nature communications 14 (1), 1597, 2023",
+            "author": "Anthony Zador and Sean Escola and Blake Richards and Bence \u00d6lveczky and Yoshua Bengio and Kwabena Boahen and Matthew Botvinick and Dmitri Chklovskii and Anne Churchland and Claudia Clopath and James DiCarlo and Surya Ganguli and Jeff Hawkins and Konrad K\u00f6rding and Alexei Koulakov and Yann LeCun and Timothy Lillicrap and Adam Marblestone and Bruno Olshausen and Alexandre Pouget and Cristina Savin and Terrence Sejnowski and Eero Simoncelli and Sara Solla and David Sussillo and Andreas S Tolias and Doris Tsao",
+            "volume": "14",
+            "number": "1",
+            "pages": "1597",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Neuroscience has long been an essential driver of progress in artificial intelligence (AI). We propose that to accelerate progress in AI, we must invest in fundamental research in NeuroAI. A core component of this is the embodied Turing test, which challenges AI animal models to interact with the sensorimotor world at skill levels akin to their living counterparts. The embodied Turing test shifts the focus from those capabilities like game playing and language that are especially well-developed or uniquely human to those capabilities \u2013 inherited from over 500 million years of evolution \u2013 that are shared with all animals. Building models that can pass the embodied Turing test will provide a roadmap for the next generation of AI."
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:P5F9QuxV20EC",
+        "num_citations": 37,
+        "citedby_url": "/scholar?hl=en&cites=7012396176970419900",
+        "cites_id": [
+            "7012396176970419900"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41467-023-37180-x",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vA6hcCsJUWEJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 35
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Large-scale high-density brain-wide neural recording in nonhuman primates",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.02. 01.526664, 2023",
+            "author": "Eric M Trautmann and Janis K Hesse and Gabriel M Stine and Ruobing Xia and Shude Zhu and Daniel J O\u2019Shea and Bill Karsh and Jennifer Colonell and Frank F Lanfranchi and Saurabh Vyas and Andrew Zimnik and Natalie A Steinmann and Daniel A Wagenaar and Alexandru Andrei and Carolina Mora Lopez and John O\u2019Callaghan and Jan Putzeys and Bogdan C Raducanu and Marleen Welkenhuysen and Mark Churchland and Tirin Moore and Michael Shadlen and Krishna Shenoy and Doris Tsao and Barundeb Dutta and Timothy Harris",
+            "journal": "bioRxiv",
+            "pages": "2023.02. 01.526664",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "High-density, integrated silicon electrodes have begun to transform systems neuroscience, by enabling large-scale neural population recordings with single cell resolution. Existing technologies, however, have provided limited functionality in nonhuman primate species such as macaques, which offer close models of human cognition and behavior. Here, we report the design, fabrication, and performance of Neuropixels 1.0-NHP, a high channel count linear electrode array designed to enable large-scale simultaneous recording in superficial and deep structures within the macaque or other large animal brain. These devices were fabricated in two versions: 4416 electrodes along a 45 mm shank, and 2496 along a 25 mm shank. For both versions, users can programmatically select 384 channels, enabling simultaneous multi-area recording with a single probe. We demonstrate recording from over 3000 single neurons within a session, and simultaneous recordings from over 1000 neurons using multiple probes. This technology represents a significant increase in recording access and scalability relative to existing technologies, and enables new classes of experiments involving fine-grained electrophysiological characterization of brain areas, functional connectivity between cells, and simultaneous brain-wide recording at scale."
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:CHSYGLWDkRkC",
+        "num_citations": 9,
+        "citedby_url": "/scholar?hl=en&cites=14695758275896022210",
+        "cites_id": [
+            "14695758275896022210"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.02.01.526664.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:whTKW0rS8csJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 8
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Mice and primates use distinct strategies for visual segmentation",
+            "pub_year": 2023,
+            "citation": "Elife 12, e74394, 2023",
+            "author": "Francisco J Luongo and Lu Liu and Chun Lum Andy Ho and Janis K Hesse and Joseph B Wekselblatt and Frank F Lanfranchi and Daniel Huber and Doris Y Tsao",
+            "journal": "Elife",
+            "volume": "12",
+            "pages": "e74394",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "The rodent visual system has attracted great interest in recent years due to its experimental tractability, but the fundamental mechanisms used by the mouse to represent the visual world remain unclear. In the primate, researchers have argued from both behavioral and neural evidence that a key step in visual representation is \u2018figure-ground segmentation\u2019, the delineation of figures as distinct from backgrounds. To determine if mice also show behavioral and neural signatures of figure-ground segmentation, we trained mice on a figure-ground segmentation task where figures were defined by gratings and naturalistic textures moving counterphase to the background. Unlike primates, mice were severely limited in their ability to segment figure from ground using the opponent motion cue, with segmentation behavior strongly dependent on the specific carrier pattern. Remarkably, when mice were forced to localize naturalistic patterns defined by opponent motion, they adopted a strategy of brute force memorization of texture patterns. In contrast, primates, including humans, macaques, and mouse lemurs, could readily segment figures independent of carrier pattern using the opponent motion cue. Consistent with mouse behavior, neural responses to the same stimuli recorded in mouse visual areas V1, RL, and LM also did not support texture-invariant segmentation of figures using opponent motion. Modeling revealed that the texture dependence of both the mouse\u2019s behavior and neural responses could be explained by a feedforward neural network lacking explicit segmentation capabilities. These findings reveal a fundamental limitation in the ability of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:4OULZ7Gr8RgC",
+        "num_citations": 7,
+        "citedby_url": "/scholar?hl=en&cites=6538156090045081983",
+        "cites_id": [
+            "6538156090045081983"
+        ],
+        "pub_url": "https://elifesciences.org/articles/74394",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:f6kxwVIyvFoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 2,
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Effects of focused ultrasound in a\" clean\" mouse model of ultrasonic neuromodulation",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.05. 22.541780, 2023",
+            "author": "Hongsun Guo and Hossein Salahshoor and Di Wu and Sangjin Yoo and Tomokazu Sato and Doris Tsao and Mikhail Shapiro",
+            "journal": "bioRxiv",
+            "pages": "2023.05. 22.541780",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Recent studies on ultrasonic neuromodulation (UNM) in rodents have shown that focused ultrasound (FUS) can activate peripheral auditory pathways, leading to off-target and brain-wide excitation, which obscures the direct activation of the target area by FUS. To address this issue, we developed a new mouse model, the double transgenic Pou4f3+/DTR x Thy1-GCaMP6s, which allows for inducible deafening using diphtheria toxin and minimizes off-target effects of UNM while allowing effects on neural activity to be visualized with fluorescent calcium imaging. Using this model, we found that the auditory confounds caused by FUS can be significantly reduced or eliminated within a certain pressure range. At higher pressures, FUS can result in focal fluorescence dips at the target, elicit non-auditory sensory confounds, and damage tissue, leading to spreading depolarization. Under the acoustic conditions we tested, we did not observe direct calcium responses in the mouse cortex. Our findings provide a cleaner animal model for UNM and sonogenetics research, establish a parameter range within which off-target effects are confidently avoided, and reveal the non-auditory side effects of higher-pressure stimulation."
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:KxtntwgDAa4C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=15380824828870224721",
+        "cites_id": [
+            "15380824828870224721"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.05.22.541780.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:UWtR1bCqc9UJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Functional modules for visual scene segmentation in macaque visual cortex",
+            "pub_year": 2023,
+            "citation": "Proceedings of the National Academy of Sciences 120 (32), e2221122120, 2023",
+            "author": "Janis K Hesse and Doris Y Tsao",
+            "journal": "Proceedings of the National Academy of Sciences",
+            "volume": "120",
+            "number": "32",
+            "pages": "e2221122120",
+            "publisher": "National Academy of Sciences",
+            "abstract": "Segmentation, the computation of object boundaries, is one of the most important steps in intermediate visual processing. Previous studies have reported cells across visual cortex that are modulated by segmentation features, but the functional role of these cells remains unclear. First, it is unclear whether these cells encode segmentation consistently since most studies used only a limited variety of stimulus types. Second, it is unclear whether these cells are organized into specialized modules or instead randomly scattered across the visual cortex: the former would lend credence to a functional role for putative segmentation cells. Here, we used fMRI-guided electrophysiology to systematically characterize the consistency and spatial organization of segmentation-encoding cells across the visual cortex. Using fMRI, we identified a set of patches in V2, V3, V3A, V4, and V4A that were more active for stimuli containing \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:UxriW0iASnsC",
+        "num_citations": 0,
+        "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2221122120",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Probing for the existence of a generative model in the macaque face patch system",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4663-4663, 2023",
+            "author": "Doris Tsao",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4663-4663",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "The idea that the brain contains a generative model of reality is highly attractive, explaining both how a perceptual system can converge on the correct interpretation of a scene through an iterative generate-and-compare process, and how it can learn to represent the world in a self-supervised way. Moreover, if consciousness corresponds directly to top-down generated contents, this would elegantly explain the mystery of why our perception of ambiguous images is always consistent across all levels. However, experimental evidence for the existence of a generative model in the visual system remains lacking. I will discuss efforts by my lab to fill this gap through experiments in the macaque face patch system, a set of regions in inferotemporal cortex dedicated to processing faces. This system is strongly connected in both feedforward and feedback directions, providing an ideal testbed to probe for the existence of a \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:SP6oXDckpogC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791824",
+        "cites_per_year": {}
+    }
+]

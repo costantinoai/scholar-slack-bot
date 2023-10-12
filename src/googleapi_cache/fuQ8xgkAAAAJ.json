@@ -1,0 +1,241 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Stimulus expectations do not modulate visual event-related potentials in probabilistic cueing designs",
+            "pub_year": 2023,
+            "citation": "Neuroimage 280, 120347, 2023",
+            "author": "Carla den Ouden and Andong Zhou and Vinay Mepani and Gyula Kov\u00e1cs and Rufin Vogels and Daniel Feuerriegel",
+            "journal": "Neuroimage",
+            "volume": "280",
+            "pages": "120347",
+            "publisher": "Academic Press",
+            "abstract": "Humans and other animals can learn and exploit repeating patterns that occur within their environments. These learned patterns can be used to form expectations about future sensory events. Several influential predictive coding models have been proposed to explain how learned expectations influence the activity of stimulus-selective neurons in the visual system. These models specify reductions in neural response measures when expectations are fulfilled (termed expectation suppression) and increases following surprising sensory events. However, there is currently scant evidence for expectation suppression in the visual system when confounding factors are taken into account. Effects of surprise have been observed in blood oxygen level dependent (BOLD) signals, but not when using electrophysiological measures. To provide a strong test for expectation suppression and surprise effects we performed a \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:LgRImbQfgY4C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=5765047738741043066",
+        "cites_id": [
+            "5765047738741043066"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811923004986",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ei_UtF-QAVAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Inferior temporal cortex leads prefrontal cortex in response to a violation of a learned sequence",
+            "pub_year": 2023,
+            "citation": "Cerebral Cortex 33 (6), 3124-3141, 2023",
+            "author": "Hamideh Esmailpour and Rajani Raman and Rufin Vogels",
+            "journal": "Cerebral Cortex",
+            "volume": "33",
+            "number": "6",
+            "pages": "3124-3141",
+            "publisher": "Oxford University Press",
+            "abstract": "Primates learn statistical regularities that are embedded in visual sequences, a form of statistical learning. Single-unit recordings in macaques showed that inferior temporal (IT) neurons are sensitive to statistical regularities in visual sequences. Here, we asked whether ventrolateral prefrontal cortex (VLPFC), which is connected to IT, is also sensitive to the transition probabilities in visual sequences and whether the statistical learning signal in IT originates in VLPFC. We recorded simultaneously multiunit activity (MUA) and local field potentials (LFPs) in IT and VLPFC after monkeys were exposed to triplets of images with a fixed presentation order. In both areas, the MUA was stronger to images that violated the learned sequence (deviants) compared to the same images presented in the learned triplets. The high-gamma and beta LFP power showed an enhanced and suppressed response, respectively, to the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:nZcligLrVowC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=14217881240871746126",
+        "cites_id": [
+            "14217881240871746126"
+        ],
+        "pub_url": "https://academic.oup.com/cercor/article-abstract/33/6/3124/6627271",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:TrrZtKgPUMUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Categorization learning induced changes in action representations in the macaque STS",
+            "pub_year": 2023,
+            "citation": "Neuroimage 265, 119780, 2023",
+            "author": "Ding Cui and Lotte Sypr\u00e9 and Mathias Vissers and Saloni Sharma and Rufin Vogels and Koen Nelissen",
+            "journal": "Neuroimage",
+            "volume": "265",
+            "pages": "119780",
+            "publisher": "Academic Press",
+            "abstract": "Neuroimaging and single cell recordings have demonstrated the presence of STS body category-selective regions (body patches) containing neurons responding to presentation of static bodies and body parts. To date, it remains unclear if these body patches and additional STS regions respond during observation of different categories of dynamic actions and to what extent categorization learning influences representations of observed actions in the STS. In the present study, we trained monkeys to discriminate videos depicting three different actions categories (grasping, touching and reaching) with a forced-choice action categorization task. Before and after categorization training, we performed fMRI recordings while monkeys passively observed the same action videos. At the behavioral level, after categorization training, monkeys generalized to untrained action exemplars, in particular for grasping actions \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:u-coK7KVo8oC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=15317405063571523490",
+        "cites_id": [
+            "15317405063571523490"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811922009016",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:okfzDsBaktQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The contribution of dynamics to macaque body and face patch responses",
+            "pub_year": 2023,
+            "citation": "Neuroimage 269, 119907, 2023",
+            "author": "A Bogn\u00e1r and R Raman and N Taubert and Y Zafirova and B Li and M Giese and B De Gelder and R Vogels",
+            "journal": "Neuroimage",
+            "volume": "269",
+            "pages": "119907",
+            "publisher": "Academic Press",
+            "abstract": "Previous functional imaging studies demonstrated body-selective patches in the primate visual temporal cortex, comparing activations to static bodies and static images of other categories. However, the use of static instead of dynamic displays of moving bodies may have underestimated the extent of the body patch network. Indeed, body dynamics provide information about action and emotion and may be processed in patches not activated by static images. Thus, to map with fMRI the full extent of the macaque body patch system in the visual temporal cortex, we employed dynamic displays of natural-acting monkey bodies, dynamic monkey faces, objects, and scrambled versions of these videos, all presented during fixation. We found nine body patches in the visual temporal cortex, starting posteriorly in the superior temporal sulcus (STS) and ending anteriorly in the temporal pole. Unlike for static images, body \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:tH6gc1N1XXoC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=7701685660026719543",
+        "cites_id": [
+            "7701685660026719543"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811923000551",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:N82ccU3i4WoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A large-scale brain network of species-specific dynamic human body perception",
+            "pub_year": 2023,
+            "citation": "Progress in Neurobiology 221, 102398, 2023",
+            "author": "Baichen Li and Marta Poyo Solanas and Giuseppe Marrazzo and Rajani Raman and Nick Taubert and Martin Giese and Rufin Vogels and Beatrice de Gelder",
+            "journal": "Progress in Neurobiology",
+            "volume": "221",
+            "pages": "102398",
+            "publisher": "Pergamon",
+            "abstract": "This ultrahigh field 7 T fMRI study addressed the question of whether there exists a core network of brain areas at the service of different aspects of body perception. Participants viewed naturalistic videos of monkey and human faces, bodies, and objects along with mosaic-scrambled videos for control of low-level features. Independent component analysis (ICA) based network analysis was conducted to find body and species modulations at both the voxel and the network levels. Among the body areas, the highest species selectivity was found in the middle frontal gyrus and amygdala. Two large-scale networks were highly selective to bodies, dominated by the lateral occipital cortex and right superior temporal sulcus (STS) respectively. The right STS network showed high species selectivity, and its significant human body-induced node connectivity was focused around the extrastriate body area (EBA), STS \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:ZzlSgRqYykMC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=9141486741999660572",
+        "cites_id": [
+            "9141486741999660572"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0301008222001848",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:HC7VF8IV3X4J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neurodynamical Model of the Visual Recognition of Dynamic Bodily Actions from Silhouettes",
+            "pub_year": 2023,
+            "citation": "International Conference on Artificial Neural Networks, 533-544, 2023",
+            "author": "Prerana Kumar and Nick Taubert and Rajani Raman and Anna Bogn\u00e1r and Ghazaleh Ghamkhari Nejad and Rufin Vogels and Martin A Giese",
+            "pages": "533-544",
+            "publisher": "Springer Nature Switzerland",
+            "abstract": "For social species, including primates, the recognition of dynamic body actions is crucial for survival. However, the detailed neural circuitry underlying this process is currently not well understood. In monkeys, body-selective patches in the visual temporal cortex may contribute to this processing. We propose a physiologically-inspired neural model of the visual recognition of body movements, which combines an existing image-computable model (\u2018ShapeComp\u2019) that produces high-dimensional shape vectors of object silhouettes, with a neurodynamical model that encodes dynamic image sequences exploiting sequence-selective neural fields. The model successfully classifies videos of body silhouettes performing different actions. At the population level, the model reproduces characteristics of macaque single-unit responses from the rostral dorsal bank of the Superior Temporal Sulcus (Anterior Medial Upper Body \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:otzGkya1bYkC",
+        "num_citations": 0,
+        "pub_url": "https://link.springer.com/chapter/10.1007/978-3-031-44210-0_43",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Comparing motion and static feature selectivity between the macaque dorsal and ventral temporal visual cortical body patches",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5389-5389, 2023",
+            "author": "Rajani Raman and Anna Bogn\u00e1r and Ghazaleh Ghamkhari Nejad and Nick Taubert and Beatrice de Gelder and Martin A Giese and Rufin Vogels",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5389-5389",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Previous studies identified body patches in the macaque inferotemporal cortex that were activated more strongly by static images of bodies compared to faces and objects (Vogels, 2022). Recently we mapped'dynamic body patches' using twenty 1 s videos of dynamic monkey bodies, 20 dynamic monkey faces, and 20 dynamic objects (Bognar et al., SfN 2022). In this fMRI-guided single-unit study, we investigated the contribution of shape and motion to the neural representations underlying the visual processing of moving bodies. We recorded single neurons, using the same videos and monkey subjects as for the fMRI mapping, in the dorsal (upper bank/fundus Superior Temporal Sulcus (STS)) and ventral (ventral bank/ventral to STS) dynamic body patches in the anterior temporal visual cortex. Most neurons responded more to body videos in both ventral and dorsal patches. Many neurons responded equally well \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:4xDN1ZYqzskC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792010",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Simultaneous recordings from posterior and anterior body-responsive regions in the macaque Superior Temporal Sulcus.",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5403-5403, 2023",
+            "author": "Anna Bognar and Albert Mukovskiy and Ghazal Ghamkhari Nejad and Nick Taubert and Michael Stettler and Rajani Raman and Martin Giese and Rufin Vogels",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5403-5403",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Using fMRI we mapped body patches in the macaque temporal visual cortex with videos of acting monkeys contrasted to dynamic monkey faces and objects. These patches are located in the upper bank/fundus and lower bank of the Superior Temporal Sulcus (STS) and ventral to the STS. The anatomical organization of body-responsive regions can reflect functional differences, namely a difference in motion sensitivity along the dorso-ventral axis (VSS, Raman et al., 2023) and a difference in the complexity of feature coding along the visual hierarchy. To address the static feature selectivity of single neurons and recurrent interaction between these patches, we created a stimulus set of 720 stimuli, in which the same monkey avatar had 45 different body postures, rendered from a horizontal and top view from 8 different viewing angles. We targeted simultaneously both the fMRI-defined mid-STS (MSB) and anterior \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:uDGL6kOW6j0C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791998",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neurodynamical model for IT responses during the anorthoscopic perception of bodies",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5496-5496, 2023",
+            "author": "Martin A Giese and Anna Bognar and Rufin Vogels",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5496-5496",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Humans can recognize objects that are presented sequentially, translating them behind a narrow slit (anorthoscopic perception). This implies that never the whole object is visible at the same time. This capability is strongly impaired if the information provided by the individual slit views is presented in randomized temporal order. Electrophysiological data from area IT helps to narrow down the possible underlying computations. METHODS We demonstrate that standard deep neural network models for visual processing fail at this task. We present a novel deep model that recognizes anorthoscopically presented body shapes, and also reproduces properties of IT neurons during anorthoscopic perception (Bognar & Vogels, 2021). The initial levels of this model are imported from the VGG16 architecture, trained on ImageNet. The intermediate levels are formed by special local nonlinear recognition units, which assess \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:PVgj2kMGcgYC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791909",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Perceptual learning: Breaking specificity by variability",
+            "pub_year": 2023,
+            "citation": "Current Biology 33 (5), R182-R185, 2023",
+            "author": "Rufin Vogels",
+            "journal": "Current Biology",
+            "volume": "33",
+            "number": "5",
+            "pages": "R182-R185",
+            "publisher": "Elsevier",
+            "abstract": "A new psychophysical study in humans suggests that increasing the variability of task-irrelevant features during training enhances the generalization of visual perceptual learning to untrained stimuli and locations."
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:BJbdYPG6LGMC",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/current-biology/pdf/S0960-9822(23)00059-3.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:rNQa2hbsyjkJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

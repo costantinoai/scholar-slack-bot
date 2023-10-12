@@ -1,0 +1,355 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Color-biased regions in the ventral visual pathway are food selective",
+            "pub_year": 2023,
+            "citation": "Current Biology 33 (1), 134-146. e4, 2023",
+            "author": "Ian ML Pennock and Chris Racey and Emily J Allen and Yihan Wu and Thomas Naselaris and Kendrick N Kay and Anna Franklin and Jenny M Bosten",
+            "journal": "Current Biology",
+            "volume": "33",
+            "number": "1",
+            "pages": "134-146. e4",
+            "publisher": "Elsevier",
+            "abstract": "Color-biased regions have been found between face- and place-selective areas in the ventral visual pathway. To investigate the function of the color-biased regions in a pathway responsible for object recognition, we analyzed the natural scenes dataset (NSD), a large 7T fMRI dataset from 8 participants who each viewed up to 30,000 trials of images of colored natural scenes over more than 30 scanning sessions. In a whole-brain analysis, we correlated the average color saturation of the images with voxel responses, revealing color-biased regions that diverge into two streams, beginning in V4 and extending medially and laterally relative to the fusiform face area in both hemispheres. We drew regions of interest (ROIs) for the two streams and found that the images for each ROI that evoked the largest responses had certain characteristics: they contained food, circular objects, warmer hues, and had higher color \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:4oJvMfeQlr8C",
+        "num_citations": 17,
+        "citedby_url": "/scholar?hl=en&cites=14760881193956490843",
+        "cites_id": [
+            "14760881193956490843"
+        ],
+        "pub_url": "https://www.cell.com/current-biology/pdf/S0960-9822(22)01893-0.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Wz6FST0v2cwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 5,
+            "2023": 12
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Brain-optimized deep neural network models of human visual areas learn non-hierarchical representations",
+            "pub_year": 2023,
+            "citation": "Nature communications 14 (1), 3329, 2023",
+            "author": "Ghislain St-Yves and Emily J Allen and Yihan Wu and Kendrick Kay and Thomas Naselaris",
+            "journal": "Nature communications",
+            "volume": "14",
+            "number": "1",
+            "pages": "3329",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Deep neural networks (DNNs) optimized for visual tasks learn representations that align layer depth with the hierarchy of visual areas in the primate brain. One interpretation of this finding is that hierarchical representations are necessary to accurately predict brain activity in the primate visual system. To test this interpretation, we optimized DNNs to directly predict brain activity measured with fMRI in human visual areas V1-V4. We trained a single-branch DNN to predict activity in all four visual areas jointly, and a multi-branch DNN to predict each visual area independently. Although it was possible for the multi-branch DNN to learn hierarchical representations, only the single-branch DNN did so. This result shows that hierarchical representations are not necessary to accurately predict human brain activity in V1-V4, and that DNNs that encode brain-like visual representations may differ widely in their architecture \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:U5uP8zs9lfgC",
+        "num_citations": 14,
+        "citedby_url": "/scholar?hl=en&cites=6141181245822400566,17972173413820481557,17238899201251323378",
+        "cites_id": [
+            "6141181245822400566",
+            "17972173413820481557",
+            "17238899201251323378"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41467-023-38674-4",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:NviIQs7bOVUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 6,
+            "2023": 8
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Driving and suppressing the human language network using large language models",
+            "pub_year": 2023,
+            "citation": "BioRxiv, 2023",
+            "author": "Greta Tuckute and Aalok Sathe and Shashank Srikant and Maya Taliaferro and Mingye Wang and Martin Schrimpf and Kendrick Kay and Evelina Fedorenko",
+            "journal": "BioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory Preprints",
+            "abstract": "Transformer language models are today\u2019s most accurate models of language processing in the brain. Here, using fMRI-measured brain responses to 1,000 diverse sentences, we develop a GPT-based encoding model and use this model to identify new sentences that are predicted to drive or suppress responses in the human language network. We demonstrate that these model-selected novel sentences indeed drive and suppress activity of human language areas in new individuals (86% increase and 98% decrease relative to the average response to diverse naturalistic sentences). A systematic analysis of the model-selected sentences reveals that surprisal and well-formedness of linguistic input are key determinants of response strength in the language network. These results establish the ability of brain-aligned models to noninvasively control neural activity in higher-level cortical areas, like the language network."
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:ehoypfNsBj8C",
+        "num_citations": 10,
+        "citedby_url": "/scholar?hl=en&cites=7567262626771322004",
+        "cites_id": [
+            "7567262626771322004"
+        ],
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10120732/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:lETLFkRRBGkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 9
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The algonauts project 2023 challenge: How the human brain makes sense of natural scenes",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2301.03198, 2023",
+            "author": "Alessandro T Gifford and Benjamin Lahner and Sari Saba-Sadiya and Martina G Vilas and Alex Lascelles and Aude Oliva and Kendrick Kay and Gemma Roig and Radoslaw M Cichy",
+            "journal": "arXiv preprint arXiv:2301.03198",
+            "abstract": "The sciences of biological and artificial intelligence are ever more intertwined. Neural computational principles inspire new intelligent machines, which are in turn used to advance theoretical understanding of the brain. To promote further exchange of ideas and collaboration between biological and artificial intelligence researchers, we introduce the 2023 installment of the Algonauts Project challenge: How the Human Brain Makes Sense of Natural Scenes (http://algonauts.csail.mit.edu). This installment prompts the fields of artificial and biological intelligence to come together towards building computational models of the visual brain using the largest and richest dataset of fMRI responses to visual scenes, the Natural Scenes Dataset (NSD). NSD provides high-quality fMRI responses to ~73,000 different naturalistic colored scenes, making it the ideal candidate for data-driven model building approaches promoted by the 2023 challenge. The challenge is open to all and makes results directly comparable and transparent through a public leaderboard automatically updated after each submission, thus allowing for rapid model development. We believe that the 2023 installment will spark symbiotic collaborations between biological and artificial intelligence scientists, leading to a deeper understanding of the brain through cutting-edge computational models and to novel ways of engineering artificial intelligent agents through inductive biases from biological systems."
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:E8ajGqO0XoUC",
+        "num_citations": 7,
+        "citedby_url": "/scholar?hl=en&cites=1174422521076802658",
+        "cites_id": [
+            "1174422521076802658"
+        ],
+        "pub_url": "https://arxiv.org/abs/2301.03198",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YmQAgQ9jTBAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 7
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Engaging in word recognition elicits highly specific modulations in visual cortex",
+            "pub_year": 2023,
+            "citation": "Current Biology 33 (7), 1308-1320. e5, 2023",
+            "author": "Alex L White and Kendrick N Kay and Kenny A Tang and Jason D Yeatman",
+            "journal": "Current Biology",
+            "volume": "33",
+            "number": "7",
+            "pages": "1308-1320. e5",
+            "publisher": "Elsevier",
+            "abstract": "A person's cognitive state determines how their brain responds to visual stimuli. The most common such effect is a response enhancement when stimuli are task relevant and attended rather than ignored. In this fMRI study, we report a surprising twist on such attention effects in the visual word form area (VWFA), a region that plays a key role in reading. We presented participants with strings of letters and visually similar shapes, which were either relevant for a specific task (lexical decision or gap localization) or ignored (during a fixation dot color task). In the VWFA, the enhancement of responses to attended stimuli occurred only for letter strings, whereas non-letter shapes evoked smaller responses when attended than when ignored. The enhancement of VWFA activity was accompanied by strengthened functional connectivity with higher-level language regions. These task-dependent modulations of response \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:u_mOZUIutIEC",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=4579613347677357370,7548440592051275250,11166909288252570575",
+        "cites_id": [
+            "4579613347677357370",
+            "7548440592051275250",
+            "11166909288252570575"
+        ],
+        "pub_url": "https://www.cell.com/current-biology/pdf/S0960-9822(23)00182-3.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:OkXybBMOjj8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 6
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Tasks and their role in visual neuroscience",
+            "pub_year": 2023,
+            "citation": "Neuron, 2023",
+            "author": "Kendrick Kay and Kathryn Bonnen and Rachel N Denison and Mike J Arcaro and David L Barack",
+            "publisher": "Elsevier",
+            "abstract": "Vision is widely used as a model system to gain insights into how sensory inputs are processed and interpreted by the brain. Historically, careful quantification and control of visual stimuli have served as the backbone of visual neuroscience. There has been less emphasis, however, on how an observer's task influences the processing of sensory inputs. Motivated by diverse observations of task-dependent activity in the visual system, we propose a framework for thinking about tasks, their role in sensory processing, and how we might formally incorporate tasks into our models of vision."
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:KqnX2w3egDsC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=680015172987332971",
+        "cites_id": [
+            "680015172987332971"
+        ],
+        "pub_url": "https://www.cell.com/neuron/pdf/S0896-6273(23)00218-0.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:aynJazLmbwkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Re-expression of CA1 and entorhinal activity patterns preserves temporal context memory at long timescales",
+            "pub_year": 2023,
+            "citation": "Nature communications 14 (1), 4350, 2023",
+            "author": "Futing Zou and Guo Wanjia and Emily J Allen and Yihan Wu and Ian Charest and Thomas Naselaris and Kendrick Kay and Brice A Kuhl and J Benjamin Hutchinson and Sarah DuBrow",
+            "journal": "Nature communications",
+            "volume": "14",
+            "number": "1",
+            "pages": "4350",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Converging, cross-species evidence indicates that memory for time is supported by hippocampal area CA1 and entorhinal cortex. However, limited evidence characterizes how these regions preserve temporal memories over long timescales (e.g., months). At long timescales, memoranda may be encountered in multiple temporal contexts, potentially creating interference. Here, using 7T fMRI, we measured CA1 and entorhinal activity patterns as human participants viewed thousands of natural scene images distributed, and repeated, across many months. We show that memory for an image\u2019s original temporal context was predicted by the degree to which CA1/entorhinal activity patterns from the first encounter with an image were re-expressed during re-encounters occurring minutes to months later. Critically, temporal memory signals were dissociable from predictors of recognition confidence, which were carried by \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:tgTmbKTkO1IC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=14254960025153904444",
+        "cites_id": [
+            "14254960025153904444"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41467-023-40100-8",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:PB-x6p3K08UJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Comparison of Signal to Noise in Vision and Imagery for qualitatively different kinds of stimuli",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5961-5961, 2023",
+            "author": "Tiasha Saha Roy and Jesse Breedlove and Ghislain St-Yves and Kendrick Kay and Thomas Naselaris",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5961-5961",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Brain activity during mental imagery is often characterized as a reactivation of visual activity. Brain areas vary considerably in their response to qualitatively different visual stimuli, but it is currently unknown if these effects are preserved during mental imagery. To investigate this issue, we tested if the activity profile across different visually responsive brain areas remains stable when subjects imagine two qualitatively different kinds of stimuli. Specifically, we conducted a 7T fMRI experiment in which subjects viewed and imagined simple (bars and crosses) and complex (natural scene images and artwork) stimuli, and calculated signal-to-noise ratios (SNR) in individual voxels during imagery and vision. All 8 subjects of the Natural Scenes Dataset (NSD) experiment (Allen et al., 2022) took part in this additional scan session. For every vision run, there were 2 corresponding imagery runs. Significant differences in the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:KsTgnNRry18C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792335",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Spatial Frequency Maps in Human Visual Cortex: A Replication and Extension",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5624-5624, 2023",
+            "author": "Jiyeong Ha and William Broderick and Kendrick Kay and Jonathan Winawer",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5624-5624",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Neurons in primary visual cortex (V1) of non-human primates are tuned to spatial frequency, with preferred frequency declining with eccentricity. fMRI studies show that spatial frequency tuning can be measured at the mm scale in humans (single voxels), and confirm that preferred frequency declines with eccentricity. Recently, fMRI-based quantitative models of spatial frequency have been developed, both at the scale of voxels (Aghajari, Vinke, & Ling, 2020, J Neurophys) and maps (Broderick, Simoncelli, & Winawer, 2022, JoV). For the voxel-level approach, independent spatial frequency tuning curves were fit to each voxel. For the map-level approach, a low dimensional parameterization (9 parameters) described spatial frequency tuning across all of V1 as a function of voxel eccentricity, voxel polar angle, and stimulus orientation. Here, we sought to replicate and extend Broderick et al.\u2019s results using an \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:lRPiJ3GhvscC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792643",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Brain-optimized models reveal increase in few-shot concept learning accuracy across human visual cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5913-5913, 2023",
+            "author": "Ghislain St-Yves and Kendrick Kay and Thomas Naselaris",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5913-5913",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "A concept manifold is the collection of all possible brain activity patterns evoked by stimuli exemplifying the concept. A recent theory (Sorscher et al., 2022) identified several geometric elements of concept manifolds that accurately predicts their distinguishability under few-shot learning. Here, we use this theory to characterize the representational geometry of the same set of visual concepts in direct brain data (the Natural Scene Dataset, a large fMRI dataset of response to natural images), in accurate end-to-end encoding models predicting this neural activity, and in neural networks trained to classify a separate set of concepts. This direct comparison demonstrates that the brain organizes concepts in a manner very different from artificial networks trained as visual concept classifiers. Although few-shot accuracy of visual concepts tends to increase in both brains and artificial networks with generalized ascension \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:kvJssbFybhEC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792379",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Improved Quantitative Parameter Estimation for Prostate T2 Relaxometry using Convolutional Neural Networks",
+            "pub_year": 2023,
+            "citation": "medRxiv, 2023.01. 11.23284194, 2023",
+            "author": "Patrick J Bolan and Sara L Saunders and Kendrick Kay and Mitchell Gross and Mehmet Akcakaya and Gregory J Metzger",
+            "journal": "medRxiv",
+            "pages": "2023.01. 11.23284194",
+            "publisher": "Cold Spring Harbor Laboratory Press",
+            "abstract": "Purpose This work seeks to evaluate multiple methods for quantitative parameter estimation from standard T2 mapping acquisitions in the prostate. The T2 estimation performance of methods based on neural networks (NN) was quantitatively compared to that of conventional curve fitting techniques.  Methods Large physics-based synthetic datasets simulating T2 mapping acquisitions were generated for training NNs and for quantitative performance comparisons. Ten combinations of different NN architectures, training strategies, and training corpora were implemented and compared with four different curve fitting strategies. All methods were compared quantitatively using synthetic data with known ground truth, and further compared on in vivo test data, with and without noise augmentation, to evaluate feasibility and noise robustness.  Results In the evaluation on synthetic data, a convolutional neural network (CNN), trained in a supervised fashion using synthetic data generated from naturalistic images, showed the highest overall accuracy and precision amongst all the methods. On in vivo data, this best-performing method produced low-noise T2 maps and showed the least deterioration with increasing input noise levels.    Conclusion This study showed that a CNN, trained with synthetic data in a supervised manner, may provide superior T2 estimation performance compared to conventional curve fitting, especially in low signal-to-noise regions."
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:L7vk9XBBNxgC",
+        "num_citations": 0,
+        "pub_url": "https://www.medrxiv.org/content/10.1101/2023.01.11.23284194.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:eEFMMcoIu0IJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Situating the parietal memory network in the context of multiple parallel distributed networks using high-resolution functional connectivity",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.08. 16.553585, 2023",
+            "author": "Young Hye Kwon and Joseph J Salvo and Nathan Anderson and Ania M Holubecki and Maya Lakshman and Kwangsun Yoo and Kendrick Kay and Caterina Gratton and Rodrigo M Braga",
+            "journal": "bioRxiv",
+            "pages": "2023.08. 16.553585",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "A principle of brain organization is that networks serving higher cognitive functions are widely distributed across the brain. One exception has been the parietal memory network (PMN), which plays a role in recognition memory but is often defined as being restricted to posteromedial association cortex. We hypothesized that high-resolution estimates of the PMN would reveal small regions that had been missed by prior approaches. High-field 7T functional magnetic resonance imaging (fMRI) data from extensively sampled participants was used to define the PMN within individuals. The PMN consistently extended beyond the core posteromedial set to include regions in the inferior parietal lobule; rostral, dorsal, medial, and ventromedial prefrontal cortex; the anterior insula; and ramus marginalis of the cingulate sulcus. The results suggest that, when fine-scale anatomy is considered, the PMN matches the expected distributed architecture of other association networks, reinforcing that parallel distributed networks are an organizing principle of association cortex."
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:PZE8UkGerEcC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.16.553585.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Expansion of a frontostriatal salience network in individuals with depression",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.08. 09.551651, 2023",
+            "author": "Charles Joseph Lynch Jr and Immanuel Elbau and Tommy Ng and Aliza Ayaz and Shasha Zhu and Nicola Manfredi and Megan Johnson and Danielle Wolk and Jonathan D Power and Evan M Gordon and Kendrick Kay and Amy Aloysi and Stefano Moia and Cesar Caballero Gaudes and Lindsa W Victoria and Nili Solomonov and Eric Goldwaser and Benjamin Zebley and Logan Grosenick and Jonathan Downar and Fidel Vila-Rodriguez and Zafiris J Daskalakis and Daniel M Blumberger and Nolan Williams and Faith Gunning and Conor Liston",
+            "journal": "bioRxiv",
+            "pages": "2023.08. 09.551651",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Hundreds of neuroimaging studies spanning two decades have revealed only modest differences in brain structure and functional connectivity in depression, complicating efforts to derive mechanistic pathophysiologic insights or develop biomarkers. Furthermore, although depression is a fundamentally episodic condition, few neuroimaging studies have taken a longitudinal approach, which is critical for understanding cause and effect and delineating mechanisms that drive mood state transitions over time. The emerging field of precision functional mapping using densely-sampled longitudinal neuroimaging data has revealed unexpected, functionally meaningful individual differences in brain network topology in healthy individuals, but these approaches have never been applied to individuals with depression. Here, using precision functional mapping techniques and 11 datasets comprising n=187 repeatedly-sampled individuals and >21,000 minutes of fMRI data, we show that the frontostriatal salience network is expanded two-fold in most individuals with depression. This effect was replicable in multiple samples and caused primarily by network border shifts affecting specific functional systems, with three distinct modes of encroachment occurring in different individuals. Salience network expansion was unexpectedly stable over time, unaffected by changes in mood state, and detectable in children before the subsequent onset of depressive symptoms in adolescence. Longitudinal analyses of individuals scanned up to 62 times over 1.5 years identified connectivity changes in specific frontostriatal circuits that tracked fluctuations in specific \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:9VeumLvkZSQC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.09.551651.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Stacked regressions and structured variance partitioning for interpretable brain maps",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.04. 23.537988, 2023",
+            "author": "Ruogu Lin and Thomas Naselaris and Kendrick Kay and Leila Wehbe",
+            "journal": "bioRxiv",
+            "pages": "2023.04. 23.537988",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Relating brain activity associated with a complex stimulus to different properties of that stimulus is a powerful approach for constructing functional brain maps. However, when stimuli are naturalistic, their properties are often correlated (e.g., visual and semantic features of natural images, or different layers of a convolutional neural network that are used as features of images). Correlated properties can act as confounders for each other and complicate the interpretability of brain maps, and can impact the robustness of statistical estimators. Here, we present an approach for brain mapping based on two proposed methods: stacking different encoding models and structured variance partitioning. Our stacking algorithm combines encoding models that each use as input a feature space that describes a different stimulus attribute. The algorithm learns to predict the activity of a voxel as a linear combination of the outputs of different encoding models. We show that the resulting combined model can predict held-out brain activity better or at least as well as the individual encoding models. Further, the weights of the linear combination are readily interpretable; they show the importance of each feature space for predicting a voxel. We then build on our stacking models to introduce structured variance partitioning, a new type of variance partitioning that takes into account the known relationships between features. Our approach constrains the size of the hypothesis space and allows us to ask targeted questions about the similarity between feature spaces and brain regions even in the presence of correlations between the feature spaces. We validate our \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:4E1Y8I9HL1wC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.04.23.537988.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:RJtQce89zbsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "BOLD Moments: modeling short visual events through a video fMRI dataset and metadata",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.03. 12.530887, 2023",
+            "author": "Benjamin Lahner and Kshitij Dwivedi and Polina Iamshchinina and Monika Graumann and Alex Lascelles and Gemma Roig and Alessandro Thomas Gifford and Bowen Pan and SouYoung Jin and N Apurva Ratan Murty and Kendrick Kay and Aude Oliva and Radoslaw Cichy",
+            "journal": "bioRxiv",
+            "pages": "2023.03. 12.530887",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Grasping the meaning of everyday visual events is a fundamental feat of human intelligence that hinges on diverse neural processes ranging from vision to higher-level cognition. Deciphering the neural basis of visual event understanding requires rich, extensive, and appropriately designed experimental data. However, this type of data is hitherto missing. To fill this gap, we introduce the BOLD Moments Dataset (BMD), a large dataset of whole-brain fMRI responses to over 1,000 short (3s) naturalistic video clips and accompanying metadata. We show visual events interface with an array of processes, extending even to memory, and we reveal a match in hierarchical processing between brains and video-computable deep neural networks. Furthermore, we showcase that BMD successfully captures temporal dynamics of visual events at second resolution. BMD thus establishes a critical groundwork for investigations of the neural basis of visual event understanding."
+        },
+        "filled": true,
+        "author_pub_id": "hlthz-YAAAAJ:GHsHDPAyICYC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.03.12.530887.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:jESFCRR-e_wJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

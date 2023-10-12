@@ -1,0 +1,258 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Solving the binding problem: Assemblies form when neurons enhance their firing rate\u2014they don\u2019t need to oscillate or synchronize",
+            "pub_year": 2023,
+            "citation": "Neuron 111 (7), 1003-1019, 2023",
+            "author": "Pieter R Roelfsema",
+            "volume": "111",
+            "number": "7",
+            "pages": "1003-1019",
+            "publisher": "Elsevier",
+            "abstract": "When we look at an image, its features are represented in our visual system in a highly distributed manner, calling for a mechanism that binds them into coherent object representations. There have been different proposals for the neuronal mechanisms that can mediate binding. One hypothesis is that binding is achieved by oscillations that synchronize neurons representing features of the same perceptual object. This view allows separate communication channels between different brain areas. Another hypothesis is that binding of features that are represented in different brain regions occurs when the neurons in these areas that respond to the same object simultaneously enhance their firing rate, which would correspond to directing object-based attention to these features. This review summarizes evidence in favor of and against these two hypotheses, examining the neuronal correlates of binding and assessing \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:QsaTk4IG4EwC",
+        "num_citations": 9,
+        "citedby_url": "/scholar?hl=en&cites=2288615768140591546",
+        "cites_id": [
+            "2288615768140591546"
+        ],
+        "pub_url": "https://www.cell.com/neuron/pdf/S0896-6273(23)00212-X.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:urFgX-rLwh8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 9
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Contextual drive of neuronal responses in mouse V1 in the absence of feedforward input",
+            "pub_year": 2023,
+            "citation": "Science advances 9 (3), eadd2498, 2023",
+            "author": "Lisa Kirchberger and Sreedeep Mukherjee and Matthew W Self and Pieter R Roelfsema",
+            "journal": "Science advances",
+            "volume": "9",
+            "number": "3",
+            "pages": "eadd2498",
+            "publisher": "American Association for the Advancement of Science",
+            "abstract": "Neurons in the primary visual cortex (V1) respond to stimuli in their receptive field (RF), which is defined by the feedforward input from the retina. However, V1 neurons are also sensitive to contextual information outside their RF, even if the RF itself is unstimulated. Here, we examined the cortical circuits for V1 contextual responses to gray disks superimposed on different backgrounds. Contextual responses began late and were strongest in the feedback-recipient layers of V1. They differed between the three main classes of inhibitory neurons, with particularly strong contextual drive of VIP neurons, indicating a contribution of disinhibitory circuits to contextual drive. Contextual drive was strongest when the gray disk was perceived as figure, occluding its background, rather than a hole. Our results link contextual drive in V1 to perceptual organization and provide previously unknown insight into how recurrent \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:IsPWOBWtZBwC",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=8778649558919739203",
+        "cites_id": [
+            "8778649558919739203"
+        ],
+        "pub_url": "https://www.science.org/doi/abs/10.1126/sciadv.add2498",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Q_cMN0MH1HkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Inversion of pop-out for a distracting feature dimension in monkey visual cortex",
+            "pub_year": 2023,
+            "citation": "Proceedings of the National Academy of Sciences 120 (9), e2210839120, 2023",
+            "author": "P Christiaan Klink and Rob RM Teeuwen and Jeannette AM Lorteije and Pieter R Roelfsema",
+            "journal": "Proceedings of the National Academy of Sciences",
+            "volume": "120",
+            "number": "9",
+            "pages": "e2210839120",
+            "publisher": "National Academy of Sciences",
+            "abstract": "During visual search, it is important to reduce the interference of distracting objects in the scene. The neuronal responses elicited by the search target stimulus are typically enhanced. However, it is equally important to suppress the representations of distracting stimuli, especially if they are salient and capture attention. We trained monkeys to make an eye movement to a unique \u201cpop-out\u201d shape stimulus among an array of distracting stimuli. One of these distractors had a salient color that varied across trials and differed from the color of the other stimuli, causing it to also pop-out. The monkeys were able to select the pop-out shape target with high accuracy and actively avoided the pop-out color distractor. This behavioral pattern was reflected in the activity of neurons in area V4. Responses to the shape targets were enhanced, while the activity evoked by the pop-out color distractor was only briefly enhanced, directly \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:zGdJYJv2LkUC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=13730932481341475604",
+        "cites_id": [
+            "13730932481341475604"
+        ],
+        "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2210839120",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:FEs7mVcSjr4J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Visuomotor experience induces functional and structural plasticity of chandelier cells",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.04. 21.537780, 2023",
+            "author": "Koen Seignette and Nora Jamann and Paolo Papale and Huub Terra and Ralph PO Porneso and Leander de Kraker and Chris van der Togt and Maaike van der Aa and Paul Neering and Emma Ruimschotel and Pieter R Roelfsema and Jorrit S Montijn and Matthew W Self and Maarten HP Kole and Christiaan N Levelt",
+            "journal": "bioRxiv",
+            "pages": "2023.04. 21.537780",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Detailed characterization of interneuron subtypes in primary visual cortex (V1) has greatly contributed to understanding visual perception, yet the role of chandelier cells (ChCs) in visual processing remains poorly characterized. Using viral tracing we found that V1 ChCs predominantly receive monosynaptic input from local layer 5 pyramidal cells and higher-order cortical regions. Two-photon calcium imaging and convolutional neural network modelling revealed that ChCs are visually responsive but weakly selective for stimulus content. In mice running in a virtual tunnel, ChCs respond strongly to locomotion and halting visual flow, suggesting arousal-related activity. Visuomotor experience in the tunnel diminished visual responses of ChCs and induced structural plasticity of ChC boutons and axon initial segment length. Finally, ChCs only weakly inhibited pyramidal cells. These findings suggest that ChCs provide an arousal-related signal to layer 2/3 pyramidal cells that may modulate their activity and/or gate plasticity of their axon initial segments during behaviorally relevant events."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:Xl6nMSl579sC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=2831701787653823794",
+        "cites_id": [
+            "2831701787653823794"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.04.21.537780.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Mt3x2sU5TCcJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Modulatory feedback explain object segmentation by attention",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.01. 19.524712, 2023",
+            "author": "Paolo Papale and Jonathan R Williford and Stijn Balk and Pieter R Roelfsema",
+            "journal": "bioRxiv",
+            "pages": "2023.01. 19.524712",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Studies in neuroscience inspired progress in the design of artificial neural networks (ANNs) and vice versa ANNs have also started to provide new insights into the functioning of brain circuits. So far, the focus has been on how ANNs can help to explain the tuning of neurons at various stages of the visual cortical hierarchy. However, the role of modulatory feedback connections, which play a role in attention and perceptual organization, has not been tested yet. Here, we present a biologically plausible neural network that performs scene segmentation and can shift attention using modulatory feedback connections from higher to lower brain areas. The model replicates several neurophysiological signatures of recurrent processing. Specifically, figural regions elicit more neuronal activity in model units than the background. The modulation of neuronal activity by figure and ground occurs at a delay after the first feedforward response, because it depends on a loop through the higher model areas. Importantly, the enhancement of the figural response is controlled by object-based attention, which stays focused on the figural regions and does not spill over to the adjacent background, as observed in the visual cortex. Our results indicate how progress in deep learning can be used to garner insight into the recurrent cortical processing for scene segmentation and object-based attention."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:rbm3iO8VlycC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=6757599711214461944",
+        "cites_id": [
+            "6757599711214461944"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.01.19.524712.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-GM4USLRx10J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The representation of occluded image regions in area V1 of monkeys and humans",
+            "pub_year": 2023,
+            "citation": "Current Biology 33 (18), 3865-3871. e3, 2023",
+            "author": "Paolo Papale and Feng Wang and A Tyler Morgan and Xing Chen and Amparo Gilhuis and Lucy S Petro and Lars Muckli and Pieter R Roelfsema and Matthew W Self",
+            "journal": "Current Biology",
+            "volume": "33",
+            "number": "18",
+            "pages": "3865-3871. e3",
+            "publisher": "Elsevier",
+            "abstract": "Neuronal activity in the primary visual cortex (V1) is driven by feedforward input from within the neurons' receptive fields (RFs) and modulated by contextual information in regions surrounding the RF. The effect of contextual information on spiking activity occurs rapidly and is therefore challenging to dissociate from feedforward input. To address this challenge, we recorded the spiking activity of V1 neurons in monkeys viewing either natural scenes or scenes where the information in the RF was occluded, effectively removing the feedforward input. We found that V1 neurons responded rapidly and selectively to occluded scenes. V1 responses elicited by occluded stimuli could be used to decode individual scenes and could be predicted from those elicited by non-occluded images, indicating that there is an overlap between visually driven and contextual responses. We used representational similarity analysis to show \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:CYCckWUYoCcC",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/current-biology/pdf/S0960-9822(23)01053-9.pdf",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Recurrent neural networks that learn multi-step visual routines with reinforcement learning",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.07. 03.547198, 2023",
+            "author": "Sami Mollard and Catherine Wacongne and Sander M Bohte and Pieter R Roelfsema",
+            "journal": "bioRxiv",
+            "pages": "2023.07. 03.547198",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Many cognitive problems can be decomposed into series of subproblems that are solved sequentially by the brain. When subproblems are solved, relevant intermediate results need to be stored by neurons and propagated to the next subproblem, until the overarching goal has been completed. We will here consider visual tasks, which can be decomposed into sequences of elemental visual operations. Experimental evidence suggests that intermediate results of the elemental operations are stored in working memory as an enhancement of neural activity in the visual cortex. The focus of enhanced activity is then available for subsequent operations to act upon. The main question at stake is how the elemental operations and their sequencing can emerge in neural networks that are trained with only rewards, in a reinforcement learning setting.We here propose a new recurrent neural network architecture that can learn composite visual tasks that require the application of successive elemental operations. Specifically, we selected three tasks for which electrophysiological recordings of monkeys\u2019 visual cortex are available. To train the networks, we used RELEARNN, a biologically plausible four-factor Hebbian learning rule, which is local both in time and space. We report that networks learn elemental operations, such as contour grouping and visual search, and to execute sequences of operations, solely based on the characteristics of the visual stimuli and the reward structure of a task.After training was completed, the activity of the units of the neural network resembled the activity of neurons in the visual cortex of monkeys solving the same tasks \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:UmS_249rOGwC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.07.03.547198.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Chronic stability of a neuroprosthesis comprising multiple adjacent Utah arrays in monkeys",
+            "pub_year": 2023,
+            "citation": "Journal of neural engineering 20 (3), 036039, 2023",
+            "author": "Xing Chen and Feng Wang and Roxana Kooijmans and Peter Christiaan Klink and Christian Boehler and Maria Asplund and Pieter Roelf Roelfsema",
+            "journal": "Journal of neural engineering",
+            "volume": "20",
+            "number": "3",
+            "pages": "036039",
+            "publisher": "IOP Publishing",
+            "abstract": "Objective Electrical stimulation of visual cortex via a neuroprosthesis induces the perception of dots of light ('phosphenes'), potentially allowing recognition of simple shapes even after decades of blindness. However, restoration of functional vision requires large numbers of electrodes, and chronic, clinical implantation of intracortical electrodes in the visual cortex has only been achieved using devices of up to 96 channels. We evaluated the efficacy and stability of a 1024-channel neuroprosthesis system in non-human primates (NHPs) over more than 3 years to assess its suitability for long-term vision restoration. Approach We implanted 16 microelectrode arrays (Utah arrays) consisting of 8\u00d7 8 electrodes with iridium oxide tips in the primary visual cortex (V1) and visual area 4 (V4) of two sighted macaques. We monitored the animals' health and measured electrode impedances and neuronal signal quality by \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:SIv7DqKytYAC",
+        "num_citations": 0,
+        "pub_url": "https://iopscience.iop.org/article/10.1088/1741-2552/ace07e/meta",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Biologically plausible gated recurrent neural networks for working memory and learning-to-learn",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.07. 06.547911, 2023",
+            "author": "Alexandra R van den Berg and Pieter R Roelfsema and Sander M Bohte",
+            "journal": "bioRxiv",
+            "pages": "2023.07. 06.547911",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The acquisition of knowledge does not occur in isolation; rather, learning experiences in the same or similar domains amalgamate. This process through which learning can accelerate over time is referred to as learning-to-learn or meta-learning. While meta-learning can be implemented in recurrent neural networks, these networks tend to be trained with architectures that are not easily interpretable or mappable to the brain and with learning rules that are biologically implausible. Specifically, these rules employ backpropagation-through-time for learning, which relies on information that is unavailable at synapses that are undergoing plasticity in the brain. While memory models that exclusively use local information for their weight updates have been developed, they have limited capacity to integrate information over long timespans and therefore cannot easily learn-to-learn. Here, we propose a novel gated recurrent network named RECOLLECT, which can flexibly retain or forget information by means of a single memory gate and biologically plausible trial-and-error-learning that requires only local information. We demonstrate that RECOLLECT successfully learns to represent task-relevant information over increasingly long memory delays in a pro-/anti-saccade task, and that it learns to flush its memory at the end of a trial. Moreover, we show that RECOLLECT can learn-to-learn an effective policy on a reversal bandit task. Finally, we show that the solutions acquired by RECOLLECT resemble how animals learn similar tasks."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:DyXnQzXoVgIC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.07.06.547911.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Brain2GAN: Feature-disentangled neural coding of visual perception in the primate brain",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.04. 26.537962, 2023",
+            "author": "Thirza Dado and Paolo Papale and Antonio Lozano and Lynn Le and Feng Wang and Marcel van Gerven and Pieter Roelfsema and Ya\u011fmur G\u00fc\u00e7l\u00fct\u00fcrk and Umut G\u00fc\u00e7l\u00fc",
+            "journal": "bioRxiv",
+            "pages": "2023.04. 26.537962",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "A challenging goal of neural coding is to characterize the neural representations underlying visual perception. To this end, we analyzed the relationship between multi-unit activity of macaque visual cortex and latent representations of state-of-the-art deep generative models, including feature-disentangled representations of generative adversarial networks (i.e., w-latents of StyleGAN) and language-contrastive representations of latent diffusion networks (i.e., CLIP-latents of Stable Diffusion). A mass univariate neural encoding analysis of the latent representations showed that feature-disentangled representations explain increasingly more variance than the alternative representations over the ventral stream. Subsequently, a multivariate neural decoding analysis of the feature-disentangled representations resulted in state-of-the-art spatiotemporal reconstructions of visual perception. Taken together, our results not only highlight the important role of feature-disentanglement in shaping high-level neural representations underlying visual perception but also serve as an important benchmark for the future of neural coding."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:aIdbFUkbNIkC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.04.26.537962.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:u3DnD1Aw34wJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Restoring vision via electrical stimulation through a 1024-channel microelectrode array implanted in visual cortex",
+            "pub_year": 2023,
+            "citation": "Brain Stimulation: Basic, Translational, and Clinical Research in \u2026, 2023",
+            "author": "Xing Chen and Feng Wang and Roxana Kooijmans and Chris Klink and Eduardo Fernandez and Pieter Roelfsema",
+            "journal": "Brain Stimulation: Basic, Translational, and Clinical Research in Neuromodulation",
+            "volume": "16",
+            "number": "1",
+            "pages": "181-182",
+            "publisher": "Elsevier",
+            "abstract": "Blindness affects 40 million people worldwide, and a neuroprosthesis may restore functional vision in the future. We developed a 1024-channel, chronically implantable prosthesis for the monkey visual cortex, using electrical stimulation to elicit percepts of dots of light (\u2018phosphenes\u2019) across hundreds of electrodes. Phosphene locations matched the receptive fields of stimulated neurons, and V4 activity predicted phosphene detection during stimulation in V1. Lastly, we stimulated multiple electrodes simultaneously to generate percepts composed of multiple phosphenes. The monkeys could immediately recognize simple phosphene shapes, directions of motion, and letters, demonstrating the potential of electrical stimulation to restore life-enhancing vision in the blind."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:jSAVyFp_754C",
+        "num_citations": 0,
+        "pub_url": "https://www.brainstimjrnl.com/article/S1935-861X(23)00202-4/abstract",
+        "cites_per_year": {}
+    }
+]

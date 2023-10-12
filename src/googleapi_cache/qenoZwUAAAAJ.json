@@ -1,0 +1,121 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Catalyzing next-generation artificial intelligence through neuroai",
+            "pub_year": 2023,
+            "citation": "Nature communications 14 (1), 1597, 2023",
+            "author": "Anthony Zador and Sean Escola and Blake Richards and Bence \u00d6lveczky and Yoshua Bengio and Kwabena Boahen and Matthew Botvinick and Dmitri Chklovskii and Anne Churchland and Claudia Clopath and James DiCarlo and Surya Ganguli and Jeff Hawkins and Konrad K\u00f6rding and Alexei Koulakov and Yann LeCun and Timothy Lillicrap and Adam Marblestone and Bruno Olshausen and Alexandre Pouget and Cristina Savin and Terrence Sejnowski and Eero Simoncelli and Sara Solla and David Sussillo and Andreas S Tolias and Doris Tsao",
+            "volume": "14",
+            "number": "1",
+            "pages": "1597",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Neuroscience has long been an essential driver of progress in artificial intelligence (AI). We propose that to accelerate progress in AI, we must invest in fundamental research in NeuroAI. A core component of this is the embodied Turing test, which challenges AI animal models to interact with the sensorimotor world at skill levels akin to their living counterparts. The embodied Turing test shifts the focus from those capabilities like game playing and language that are especially well-developed or uniquely human to those capabilities \u2013 inherited from over 500 million years of evolution \u2013 that are shared with all animals. Building models that can pass the embodied Turing test will provide a roadmap for the next generation of AI."
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:VLnqNzywnoUC",
+        "num_citations": 37,
+        "citedby_url": "/scholar?hl=en&cites=7012396176970419900",
+        "cites_id": [
+            "7012396176970419900"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41467-023-37180-x",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vA6hcCsJUWEJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 35
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A Unifying Principle for the Functional Organization of Visual Cortex",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.05. 18.541361, 2023",
+            "author": "Eshed Margalit and Hyodong Lee and Dawn Finzi and James J DiCarlo and Kalanit Grill-Spector and Daniel LK Yamins",
+            "journal": "bioRxiv",
+            "pages": "2023.05. 18.541361",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "A key feature of many cortical systems is functional organization: the arrangement of neurons with specific functional properties in characteristic spatial patterns across the cortical surface. However, the principles underlying the emergence and utility of functional organization are poorly understood. Here we develop the Topographic Deep Artificial Neural Network (TDANN), the first unified model to accurately predict the functional organization of multiple cortical areas in the primate visual system. We analyze the key factors responsible for the TDANN's success and find that it strikes a balance between two specific objectives: achieving a task-general sensory representation that is self-supervised, and maximizing the smoothness of responses across the cortical sheet according to a metric that scales relative to cortical surface area. In turn, the representations learned by the TDANN are lower dimensional and more brain-like than those in models that lack a spatial smoothness constraint. Finally, we provide evidence that the TDANN's functional organization balances performance with inter-area connection length, and use the resulting models for a proof-of-principle optimization of cortical prosthetic design. Our results thus offer a unified principle for understanding functional organization and a novel view of the functional role of the visual system in particular."
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:nrtMV_XWKgEC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=615012094074270269",
+        "cites_id": [
+            "615012094074270269"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.05.18.541361.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:PbLdtz32iAgJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An empirical assay of view-invariant object learning in humans and comparison with baseline image-computable models",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2022.12. 31.522402, 2023",
+            "author": "Michael J Lee and James J DiCarlo",
+            "journal": "bioRxiv",
+            "pages": "2022.12. 31.522402",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "How humans learn new visual objects is a longstanding scientific problem. Previous work has led to a diverse collection of models for how it is accomplished, but a current limitation in the field is a lack of empirical benchmarks which can be used to evaluate and compare specific models against each other. Here, we use online psychophysics to measure human behavioral learning trajectories over a set of tasks involving novel 3D objects. Consistent with intuition, these results show that humans generally require very few images (~ 6) to approach their asymptotic accuracy, find some object discriminations more easy to learn than others, and generalize quite well over a range of image transformations after even one view of each object. We then use those data to develop benchmarks that may be used to evaluate a learning model's similarity to humans. We make these data and benchmarks publicly available [http://www.github.com/mlee3142/hobj], and, to our knowledge, they are currently the largest publicly-available collection of learning-related psychophysics data in humans. Additionally, to serve as baselines for those benchmarks, we implement and test a large number of baseline models (n=1,932), each based on a standard cognitive theory of learning: that humans re-represent images in a fixed, Euclidean space, then learn linear decision boundaries in that space to identify objects in future images. We find some of these baseline models make surprisingly accurate predictions. However, we also find reliable prediction gaps between all baseline models and humans, particularly in the few-shot learning setting."
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:fEOibwPWpKIC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=11538048138746159234",
+        "cites_id": [
+            "11538048138746159234"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2022.12.31.522402.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:gmBSp6ZhH6AJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Robustified ANNs Reveal Wormholes Between Human Category Percepts",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2308.06887, 2023",
+            "author": "Guy Gaziv and Michael J Lee and James J DiCarlo",
+            "journal": "arXiv preprint arXiv:2308.06887",
+            "abstract": "The visual object category reports of artificial neural networks (ANNs) are notoriously sensitive to tiny, adversarial image perturbations. Because human category reports (aka human percepts) are thought to be insensitive to those same small-norm perturbations -- and locally stable in general -- this argues that ANNs are incomplete scientific models of human visual perception. Consistent with this, we show that when small-norm image perturbations are generated by standard ANN models, human object category percepts are indeed highly stable. However, in this very same \"human-presumed-stable\" regime, we find that robustified ANNs reliably discover low-norm image perturbations that strongly disrupt human percepts. These previously undetectable human perceptual disruptions are massive in amplitude, approaching the same level of sensitivity seen in robustified ANNs. Further, we show that robustified ANNs support precise perceptual state interventions: they guide the construction of low-norm image perturbations that strongly alter human category percepts toward specific prescribed percepts. These observations suggest that for arbitrary starting points in image space, there exists a set of nearby \"wormholes\", each leading the subject from their current category perceptual state into a semantically very different state. Moreover, contemporary ANN models of biological visual processing are now accurate enough to consistently guide us to those portals."
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:uc_IGeMz5qoC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2308.06887",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "fROI-level computational models enable broad-scale experimental testing and expose key divergences between models and brains",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5788-5788, 2023",
+            "author": "Elizabeth Mieczkowski and Alex Abate and Willian De Faria and Kirsten Lydic and James DiCarlo and Nancy Kanwisher and N Apurva Ratan Murty",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5788-5788",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Deep convolutional neural network (DNN)-based models have emerged as our leading hypotheses of human vision. Here we describe, and expand upon, our latest effort to use DNN models of brain regions to explain key results from previous cognitive neuroscience and psychology experiments. Many stimuli in these prior experiments were highly manipulated (eg scrambled body parts, face parts, re-arranged spatial positions) often outside the domain of natural stimuli. These results can therefore be considered as tests of model generalization beyond naturalistic stimuli. We first performed these tests on the fusiform face area (FFA), parahippocampal place area (PPA) and the extrastriate body area (EBA). Our previous results (presented in VSS2022) showed that our fROI-level models recapitulate several key results from prior studies. We also observed that models did not perform as well on non-naturalistic stimuli \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:ipzZ9siozwsC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792491",
+        "cites_per_year": {}
+    }
+]

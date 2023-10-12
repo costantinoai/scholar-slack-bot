@@ -1,0 +1,406 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An adversarial collaboration protocol for testing contrasting predictions of global neuronal workspace and integrated information theory",
+            "pub_year": 2023,
+            "citation": "Plos one 18 (2), e0268577, 2023",
+            "author": "Lucia Melloni and Liad Mudrik and Michael Pitts and Katarina Bendtz and Oscar Ferrante and Urszula Gorska and Rony Hirschhorn and Aya Khalaf and Csaba Kozma and Alex Lepauvre and Ling Liu and David Mazumder and David Richter and Hao Zhou and Hal Blumenfeld and Melanie Boly and David J Chalmers and Sasha Devore and Francis Fallon and Floris P de Lange and Ole Jensen and Gabriel Kreiman and Huan Luo and Theofanis I Panagiotaropoulos and Stanislas Dehaene and Christof Koch and Giulio Tononi",
+            "journal": "Plos one",
+            "volume": "18",
+            "number": "2",
+            "pages": "e0268577",
+            "publisher": "Public Library of Science",
+            "abstract": "The relationship between conscious experience and brain activity has intrigued scientists and philosophers for centuries. In the last decades, several theories have suggested different accounts for these relationships. These theories have developed in parallel, with little to no cross-talk among them. To advance research on consciousness, we established an adversarial collaboration between proponents of two of the major theories in the field, Global Neuronal Workspace and Integrated Information Theory. Together, we devised and preregistered two experiments that test contrasting predictions of these theories concerning the location and timing of correlates of visual consciousness, which have been endorsed by the theories\u2019 proponents. Predicted outcomes should either support, refute, or challenge these theories. Six theory-impartial laboratories will follow the study protocol specified here, using three complementary methods: Functional Magnetic Resonance Imaging (fMRI), Magneto-Electroencephalography (M-EEG), and intracranial electroencephalography (iEEG). The study protocol will include built-in replications, both between labs and within datasets. Through this ambitious undertaking, we hope to provide decisive evidence in favor or against the two theories and clarify the footprints of conscious visual perception in the human brain, while also providing an innovative model of large-scale, collaborative, and open science practice."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:fbc8zXXH2BUC",
+        "num_citations": 13,
+        "citedby_url": "/scholar?hl=en&cites=7914041899117919303",
+        "cites_id": [
+            "7914041899117919303"
+        ],
+        "pub_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0268577",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Rzx7Ri1T1G0J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 12
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Successor-like representation guides the prediction of future events in human visual cortex and hippocampus",
+            "pub_year": 2023,
+            "citation": "Elife 12, e78904, 2023",
+            "author": "Matthias Ekman and Sarah Kusch and Floris P de Lange",
+            "journal": "Elife",
+            "volume": "12",
+            "pages": "e78904",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Human agents build models of their environment, which enable them to anticipate and plan upcoming events. However, little is known about the properties of such predictive models. Recently, it has been proposed that hippocampal representations take the form of a predictive maplike structure, the so-called successor representation (SR). Here, we used human functional magnetic resonance imaging to probe whether activity in the early visual cortex (V1) and hippocampus adhere to the postulated properties of the SR after visual sequence learning. Participants were exposed to an arbitrary spatiotemporal sequence consisting of four items (A-B-C-D). We found that after repeated exposure to the sequence, merely presenting single sequence items (eg,-B--) resulted in V1 activation at the successor locations of the full sequence (eg, C-D), but not at the predecessor locations (eg, A). This highlights that visual representations are skewed toward future states, in line with the SR. Similar results were also found in the hippocampus. Moreover, the hippocampus developed a coactivation profile that showed sensitivity to the temporal distance in sequence space, with fading representations for sequence events in the more distant past and future. V1, in contrast, showed a coactivation profile that was only sensitive to spatial distance in stimulus space. Taken together, these results provide empirical evidence for the proposition that both visual and hippocampal cortex represent a predictive map of the visual world akin to the SR."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:DJbcl8HfkQkC",
+        "num_citations": 10,
+        "citedby_url": "/scholar?hl=en&cites=3694631022955904409",
+        "cites_id": [
+            "3694631022955904409"
+        ],
+        "pub_url": "https://elifesciences.org/articles/78904",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:mb1sI1f3RTMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 10
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Stubborn predictions in primary visual cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Cognitive Neuroscience 35 (7), 1133-1143, 2023",
+            "author": "Daniel Yon and Emily R Thomas and Sam J Gilbert and Floris P de Lange and Peter Kok and Clare Press",
+            "journal": "Journal of Cognitive Neuroscience",
+            "volume": "35",
+            "number": "7",
+            "pages": "1133-1143",
+            "publisher": "MIT Press",
+            "abstract": "Perceivers can use past experiences to make sense of ambiguous sensory signals. However, this may be inappropriate when the world changes and past experiences no longer predict what the future holds. Optimal learning models propose that observers decide whether to stick with or update their predictions by tracking the uncertainty or \u201cprecision\u201d of their expectations. However, contrasting theories of prediction have argued that we are prone to misestimate uncertainty\u2014leading to stubborn predictions that are difficult to dislodge. To compare these possibilities, we had participants learn novel perceptual predictions before using fMRI to record visual brain activity when predictive contingencies were disrupted\u2014meaning that previously \u201cexpected\u201d events became objectively improbable. Multivariate pattern analyses revealed that expected events continued to be decoded with greater fidelity from primary visual \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:OcBU2YAGkTUC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=9295859663534185249",
+        "cites_id": [
+            "9295859663534185249"
+        ],
+        "pub_url": "https://direct.mit.edu/jocn/article-abstract/35/7/1133/115713",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:IVvWxhyHAYEJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Conceptual associations generate sensory predictions",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience 43 (20), 3733-3742, 2023",
+            "author": "Chuyao Yan and Floris P de Lange and David Richter",
+            "journal": "Journal of Neuroscience",
+            "volume": "43",
+            "number": "20",
+            "pages": "3733-3742",
+            "publisher": "Society for Neuroscience",
+            "abstract": "A crucial ability of the human brain is to learn and exploit probabilistic associations between stimuli to facilitate perception and behavior by predicting future events. Although studies have shown how perceptual relationships are used to predict sensory inputs, relational knowledge is often between concepts rather than percepts (e.g., we learned to associate cats with dogs, rather than specific images of cats and dogs). Here, we asked if and how sensory responses to visual input may be modulated by predictions derived from conceptual associations. To this end we exposed participants of both sexes to arbitrary word\u2013word pairs (e.g., car\u2013dog) repeatedly, creating an expectation of the second word, conditional on the occurrence of the first. In a subsequent session, we exposed participants to novel word\u2013picture pairs, while measuring fMRI BOLD responses. All word\u2013picture pairs were equally likely, but half of the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:tH6gc1N1XXoC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=625771233333066186",
+        "cites_id": [
+            "625771233333066186"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/43/20/3733.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:yrl5CZ8vrwgJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predictive processing of scenes and objects",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Marius Peelen and Eva Berlot and Floris de Lange",
+            "publisher": "PsyArXiv",
+            "abstract": "Real-world visual input consists of rich scenes that are meaningfully composed of multiple objects which interact in complex, but predictable, ways. Despite this complexity, we recognize scenes, and objects within these scenes, from a brief glance at an image. In this review, we synthesize recent behavioral and neural findings that elucidate the mechanisms underlying this impressive ability. First, we review evidence that visual object and scene processing is partly implemented in parallel, allowing for a rapid initial gist of both objects and scenes concurrently. Next, we discuss recent evidence for bidirectional interactions between object and scene processing, with scene information modulating the visual processing of objects, and object information modulating the visual processing of scenes. Finally, we review evidence that objects also combine with each other to form object constellations, modulating the processing of individual objects within the object pathway. Altogether, these findings can be understood by conceptualizing object and scene perception as the outcome of a joint probabilistic inference, in which \u201cbest guesses\u201d about objects act as priors for scene perception and vice versa, in order to concurrently optimize visual inference of objects and scenes."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:5icHVeHT4IsC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=10223297898015311038",
+        "cites_id": [
+            "10223297898015311038"
+        ],
+        "pub_url": "https://psyarxiv.com/nuf59/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vkQz3EVz4I0J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Choice boosts curiosity",
+            "pub_year": 2023,
+            "citation": "Psychological Science 34 (1), 99-110, 2023",
+            "author": "Patricia Romero Verdugo and Lieke LF van Lieshout and Floris P de Lange and Roshan Cools",
+            "journal": "Psychological Science",
+            "volume": "34",
+            "number": "1",
+            "pages": "99-110",
+            "publisher": "SAGE Publications",
+            "abstract": "In our connected era, we spend significant time and effort satisfying our curiosity. Often, we choose which information we seek, but sometimes the selection is made for us. We hypothesized that humans exhibit enhanced curiosity in the context of choice. We designed a task in which healthy participants saw two lotteries on each trial. On some trials, participants chose which lottery to play. On other trials, the lottery was selected for them. Participants then indicated their curiosity about the outcome of the to-be-played lottery via self-report ratings (Experiment 1, N = 34) or willingness-to-wait decisions (Experiment 2, N = 34). We found that participants exhibited higher curiosity ratings and greater willingness to wait for the outcome of lotteries they had chosen than for lotteries that had been selected for them (controlling for initial preference). This demonstrates that choice boosts curiosity, which may have implications for \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:_OXeSy2IsFwC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=3834080611550090697",
+        "cites_id": [
+            "3834080611550090697"
+        ],
+        "pub_url": "https://journals.sagepub.com/doi/abs/10.1177/09567976221082637",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ydWnmwBkNTUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2020": 1,
+            "2021": 1,
+            "2022": 0,
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Expected distractor context biases the attentional template for target shapes.",
+            "pub_year": 2023,
+            "citation": "Journal of Experimental Psychology: Human Perception and Performance 49 (9 \u2026, 2023",
+            "author": "Ma\u00eblle Lerebourg and Floris P de Lange and Marius V Peelen",
+            "journal": "Journal of Experimental Psychology: Human Perception and Performance",
+            "volume": "49",
+            "number": "9",
+            "pages": "1236",
+            "publisher": "American Psychological Association",
+            "abstract": "Visual search is supported by an internal representation of the target, the attentional template. However, which features are diagnostic of target presence critically depends on the distractors. Accordingly, previous research showed that consistent distractor context shapes the attentional template for simple targets, with the template emphasizing diagnostic dimensions (eg, color or orientation) in blocks of trials. Here, we investigated how distractor expectations bias attentional templates for complex shapes, and tested whether such biases reflect intertrial priming or can be instantiated flexibly. Participants searched for novel shapes (cued by name) in two probabilistic distractor contexts: Either the target\u2019s orientation or rectilinearity was unique (80% validity). Across four experiments, performance was better when the distractor context was expected, indicating that target features in the expected diagnostic dimension \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:GFxP56DSvIMC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=14611045779834165439",
+        "cites_id": [
+            "14611045779834165439"
+        ],
+        "pub_url": "https://psycnet.apa.org/journals/xhp/49/9/1236/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:v1j8X7ncxMoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An adversarial collaboration to critically evaluate theories of consciousness",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.06. 23.546249, 2023",
+            "author": "Cogitate Consortium and Oscar Ferrante and Urszula Gorska-Klimowska and Simon Henin and Rony Hirschhorn and Aya Khalaf and Alex Lepauvre and Ling Liu and David Richter and Yamil Vidal and Niccolo Bonacchi and Tanya Brown and Praveen Sripad and Marcelo Armendariz and Katarina Bendtz and Tara Ghafari and Dorottya Hetenyi and Jay Jeschke and Csaba Kozma and David Rahul Mazumder and Stephanie Montenegro and Alia Seedat and Abdelrahman Sharafeldin and Shujun Yang and Sylvain Baillet and David J Chalmers and Radoslaw M Cichy and Francis Fallon and Theofanis I Panagiotaropoulos and Hal Blumenfeld and Sasha Devore and Ole Jensen and Gabriel Kreiman and Floris P de Lange and Huan Luo and Melanie Boly and Stanislas Dehaene and Christof Koch and Giulio Tononi and Michael Pitts and Liad Mudrik and Lucia Melloni",
+            "journal": "bioRxiv",
+            "pages": "2023.06. 23.546249",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Different theories explain how subjective experience arises from brain activity. These theories have independently accrued evidence, yet, confirmation bias and dependence on design choices hamper progress in the field. Here, we present an open science adversarial collaboration which directly juxtaposes Integrated Information Theory (IIT) and Global Neuronal Workspace Theory (GNWT), employing a theory-neutral consortium approach. We investigate neural correlates of the content and duration of visual experience. The theory proponents and the consortium developed and preregistered the experimental design, divergent predictions, expected outcomes, and their interpretation. 256 human subjects viewed suprathreshold stimuli for variable durations while neural activity was measured with functional magnetic resonance imaging, magnetoencephalography, and electrocorticography. We find information about conscious content in visual, ventro-temporal and inferior frontal cortex, with sustained responses in occipital and lateral temporal cortex reflecting stimulus duration, and content-specific synchronization between frontal and early visual areas. These results confirm some predictions of IIT and GNWT, while substantially challenging both theories: for IIT, a lack of sustained synchronization within posterior cortex contradicts the claim that network connectivity specifies consciousness. GNWT is challenged by the general lack of ignition at stimulus offset and limited representation of certain conscious dimensions in prefrontal cortex. Beyond challenging the theories themselves, we present an alternative approach to advance cognitive \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:artPoR2Yc-kC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=1934370548687779377",
+        "cites_id": [
+            "1934370548687779377"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.23.546249.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:MTaD6sND2BoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Perceptual confirmation bias and decision bias underlie adaptation to sequential regularities",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Magdalena del Rio and Floris de Lange and Matthias Fritsche and Jamie Ward",
+            "publisher": "PsyArXiv",
+            "abstract": "Our perception does not depend exclusively on the immediate sensory input. It is also influenced by our internal predictions derived from prior observations and the temporal regularities of the environment, which can result in choice history biases. However, the mechanisms facilitating this flexible use of prior information to predict the future are unclear. Prior information may offset evidence accumulation independently of the current sensory input, or it may modulate the weight of current sensory input based on its consistency with the expectation. To address this question, we used a visual decision-making task and manipulated the transitional probabilities between successive noisy grating stimuli. Using a reverse correlation analysis, we evaluated the contribution of stimulus-independent bias and stimulus-dependent sensitivity modulations to choice history biases. We found that both mechanisms coexist, whereby there was increased bias to respond in line with the predicted orientation alongside modulations in perceptual sensitivity to favour perceptual information consistent with the prediction, akin to selective attention. Furthermore, at the individual differences level, we investigated the relationship between autistic-like traits and the adaptation of choice history biases to the sequential statistics of the environment. Over two studies, we found no convincing evidence of reduced adaptation to sequential regularities in individuals with high autistic-like traits. In sum, we present robust evidence for both perceptual confirmation bias and decision bias supporting adaptation to sequential regularities in the environment."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:Bg7qf7VwUHIC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=1550490945803621789",
+        "cites_id": [
+            "1550490945803621789"
+        ],
+        "pub_url": "https://psyarxiv.com/ak4b7/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Humans predict the forest, not the trees: statistical learning of spatiotemporal structure in visual scenes",
+            "pub_year": 2023,
+            "citation": "Cerebral Cortex, bhad115, 2023",
+            "author": "Chuyao Yan and Benedikt V Ehinger and Alexis P\u00e9rez-Bellido and Marius V Peelen and Floris P de Lange",
+            "journal": "Cerebral Cortex",
+            "pages": "bhad115",
+            "publisher": "Oxford University Press",
+            "abstract": "The human brain is capable of using statistical regularities to predict future inputs. In the real world, such inputs typically comprise a collection of objects (e.g. a forest constitutes numerous trees). The present study aimed to investigate whether perceptual anticipation relies on lower-level or higher-level information. Specifically, we examined whether the human brain anticipates each object in a scene individually or anticipates the scene as a whole. To explore this issue, we first trained participants to associate co-occurring objects within fixed spatial arrangements. Meanwhile, participants implicitly learned temporal regularities between these displays. We then tested how spatial and temporal violations of the structure modulated behavior and neural activity in the visual system using fMRI. We found that participants only showed a behavioral advantage of temporal regularities when the displays conformed to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:nVrZBo8bIpAC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=5308912277080890693",
+        "cites_id": [
+            "5308912277080890693"
+        ],
+        "pub_url": "https://academic.oup.com/cercor/advance-article-abstract/doi/10.1093/cercor/bhad115/7099491",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Rd0dk5YLrUkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Lexical Processing Strongly Affects Reading Times But Not Skipping During Natural Reading",
+            "pub_year": 2023,
+            "citation": "Open Mind 7, 757-783, 2023",
+            "author": "Micha Heilbron and Jorie van Haren and Peter Hagoort and Floris P de Lange",
+            "journal": "Open Mind",
+            "volume": "7",
+            "pages": "757-783",
+            "publisher": "MIT Press",
+            "abstract": "In a typical text, readers look much longer at some words than at others, even skipping many altogether. Historically, researchers explained this variation via low-level visual or oculomotor factors, but today it is primarily explained via factors determining a word\u2019s lexical processing ease, such as how well word identity can be predicted from context or discerned from parafoveal preview. While the existence of these effects is well established in controlled experiments, the relative importance of prediction, preview and low-level factors in natural reading remains unclear. Here, we address this question in three large naturalistic reading corpora (n = 104, 1.5 million words), using deep neural networks and Bayesian ideal observers to model linguistic prediction and parafoveal preview from moment to moment in natural reading. Strikingly, neither prediction nor preview was important for explaining word skipping\u2014the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:LgRImbQfgY4C",
+        "num_citations": 0,
+        "pub_url": "https://direct.mit.edu/opmi/article/doi/10.1162/opmi_a_00099/117729",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Curiosity in cognitive science and personality psychology: Individual differences in information demand have a low dimensional structure that is predicted by personality traits",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Hayley Jach and Roshan Cools and Alex Frisvold and Michael Grubb and Catherine Hartley and Jochen Hartmann and Laura Hunter and Ruonan Jia and Floris de Lange and Ruby Larisch and Rosa Ellen Lavelle-Hill and Ifat Levy and Yutong Li and Lieke van Lieshout and Kate Nussenbaum and Silvio Ravaioli and Siyu Wang and Robert Wilson and Michael Woodford and Kou Murayama and Jacqueline Gottlieb",
+            "publisher": "PsyArXiv",
+            "abstract": "To understand human learning and progress, it is crucial to understand curiosity. But what is curiosity? We present the results of a collaborative project assessing the correspondence between curiosity measures in personality psychology and cognitive science. 820 participants completed 15 personality trait measures and 9 cognitive tasks that tested multiple aspects of information demand. Shared variance across the cognitive tasks was captured by a dimension reflecting directed (uncertainty-driven) versus random (stochasticity-driven) exploration. Individual differences along this axis were significantly and consistently predicted by personality traits. However, the personality predictors were not the core elements of trait curiosity, but instead included stress tolerance, thrill seeking, extraversion, need for cognition, and behavioral inhibition. The results inform our emerging understanding of curiosity and suggest that indices of curiosity in cognitive tasks are not isomorphic with common measures of curiosity in personality psychology."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:F1b5ZUV5XREC",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/aj3rp/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An adversarial collaboration to critically evaluate theories of consciousness",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Lucia Melloni and Oscar Ferrante and Urszula Gorska-Klimowska and Simon Henin and Rony Hirschhorn and Aya Khalaf and Alex Lepauvre and Ling Liu and David Richter and Yamil Vidal and Niccol\u00f2 Bonacchi and Tanya Brown and Praveen Sripad and Marcelo Armendariz and Katarina Bendtz and Tara Ghafari and Dorottya Hetenyi and Jay Jeschke and Csaba Kozma and David Mazumder and Stephanie Montenegro and Alia Seedat and Abdelrahman Sharafeldin and Shujun Yang and Sylvain Baillet and David Chalmers and Radoslaw Cichy and Francis Fallon and Theofanis Panagiotaropoulos and Hal Blumenfeld and Sasha Devore and Ole Jensen and Gabriel Kreiman and Floris de Lange and Huan Luo and Melanie Boly and Stanislas Dehaene and Christof Koch and Giulio Tononi and Michael Pitts and Liad Mudrik and Cogitate Consortium",
+            "abstract": "Different theories explain how subjective experience arises from brain activity1, 2. These theories have independently accrued evidence, yet, confirmation bias and dependence on design choices hamper progress in the field3. Here, we present an open science adversarial collaboration which directly juxtaposes Integrated Information Theory (IIT) 4, 5 and Global Neuronal Workspace Theory (GNWT) 6-10, employing a theory-neutral consortium approach11, 12. We investigate neural correlates of the content and duration of visual experience. The theory proponents and the consortium developed and preregistered the experimental design, divergent predictions, expected outcomes, and their interpretation12. 256 human subjects viewed suprathreshold stimuli for variable durations while neural activity was measured with functional magnetic resonance imaging, magnetoencephalography, and electrocorticography. We find information about conscious content in visual, ventro-temporal and inferior frontal cortex, with sustained responses in occipital and lateral temporal cortex reflecting stimulus duration, and content-specific synchronization between frontal and early visual areas. These results confirm some predictions of IIT and GNWT, while substantially challenging both theories: for IIT, a lack of sustained synchronization within posterior cortex contradicts the claim that network connectivity specifies consciousness. GNWT is challenged by the general lack of ignition at stimulus offset and limited representation of certain conscious dimensions in prefrontal cortex. Beyond challenging the theories themselves, we present an alternative approach to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:vDZJ-YLwNdEC",
+        "num_citations": 0,
+        "pub_url": "https://www.researchsquare.com/article/rs-3101836/latest",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Magnetoencephalography recordings reveal the neural mechanisms of auditory contributions to improved visual detection",
+            "pub_year": 2023,
+            "citation": "Communications Biology 6 (1), 12, 2023",
+            "author": "Alexis P\u00e9rez-Bellido and Eelke Spaak and Floris P de Lange",
+            "journal": "Communications Biology",
+            "volume": "6",
+            "number": "1",
+            "pages": "12",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Sounds enhance the detection of visual stimuli while concurrently biasing an observer\u2019s decisions. To investigate the neural mechanisms that underlie such multisensory interactions, we decoded time-resolved Signal Detection Theory sensitivity and criterion parameters from magneto-encephalographic recordings of participants that performed a visual detection task. We found that sounds improved visual detection sensitivity by enhancing the accumulation and maintenance of perceptual evidence over time. Meanwhile, criterion decoding analyses revealed that sounds induced brain activity patterns that resembled the patterns evoked by an actual visual stimulus. These two complementary mechanisms of audiovisual interplay differed in terms of their automaticity: Whereas the sound-induced enhancement in visual sensitivity depended on participants being actively engaged in a detection task, we found that \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:Aul-kAQHnToC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s42003-022-04335-3",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:P-hLz8dP3P8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "High-level prediction errors in low-level visual cortex",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.08. 21.554095, 2023",
+            "author": "David Richter and Tim C Kietzmann and Floris P de Lange",
+            "journal": "bioRxiv",
+            "pages": "2023.08. 21.554095",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Perception and behaviour are significantly moulded by expectations derived from our prior knowledge. Hierarchical predictive processing theories provide a principled account of the neural mechanisms underpinning these processes, casting perception as a hierarchical inference process. While numerous studies have shown stronger neural activity for surprising inputs, in line with this account, it is unclear what predictions are made across the cortical hierarchy, and therefore what kind of surprise drives this upregulation of activity. Here we leveraged fMRI and visual dissimilarity metrics derived from a deep neural network to arbitrate between two hypotheses: prediction errors may signal a local mismatch between input and expectation at each level of the cortical hierarchy, or prediction errors may incorporate feedback signals and thereby inherit complex tuning properties from higher areas. Our results are in line with this second hypothesis. Prediction errors in both low- and high-level visual cortex primarily scaled with high-level, but not low-level, visual surprise. This scaling with high-level surprise in early visual cortex strongly diverges from feedforward tuning, indicating a shift induced by predictive contexts. Mechanistically, our results suggest that high-level predictions may help constrain perceptual interpretations in earlier areas thereby aiding perceptual inference. Combined, our results elucidate the feature tuning of visual prediction errors and bolster a core hypothesis of hierarchical predictive processing theories, that predictions are relayed top-down to facilitate perception."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:Ak0FvsSvgGUC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.21.554095.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Spatial predictive context speeds up visual search by biasing local attentional competition",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.07. 14.548976, 2023",
+            "author": "Floortje G Bouwkamp and Floris de Lange and Eelke Spaak",
+            "journal": "bioRxiv",
+            "pages": "2023.07. 14.548976",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The human visual system is equipped to rapidly and implicitly learn and exploit the statistical regularities in our environment. Within visual search, contextual cueing demonstrates how implicit knowledge of scenes can improve search performance. This is commonly interpreted as spatial context in the scenes becoming predictive of the target location, which leads to a more efficient guidance of attention during search. However, what drives this enhanced guidance is unknown. First, it is unclear whether improved attentional guidance is enabled by target enhancement or distractor suppression. Second, it is unknown whether the entire scene (global context) or more local drives this phenomenon. In the present MEG experiment, we leveraged Rapid Invisible Frequency Tagging (RIFT) to answer these two outstanding questions. We found that the improved performance when searching implicitly familiar scenes was accompanied by a stronger neural representation of the target stimulus, at the cost specifically of those distractors directly surrounding the target. Crucially, this biasing of local attentional competition was behaviorally relevant when searching familiar scenes, indicating that it is the local, and not global, spatial context that is modulated, culminating in a search advantage for familiar scenes. Taken together, we conclude that implicitly learned spatial predictive context improves how we search our environment by sharpening the attentional field."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:BJbdYPG6LGMC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.07.14.548976.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Typical neural adaptation for familiar images in autistic adolescents",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.04. 05.535670, 2023",
+            "author": "Britta U Westner and Ella Bosch and Christian Utzerath and Jan Buitelaar and Floris P de Lange",
+            "journal": "bioRxiv",
+            "pages": "2023.04. 05.535670",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "It has been proposed that autistic perception may be marked by a reduced influence of temporal context. Under this hypothesis, prior exposure to a stimulus should lead to a weaker or absent alteration of the behavioral and neural response to the stimulus in autism, compared to a typical population. To examine this hypothesis, we recruited two samples of human volunteers: a student sample (N=26), which we used to establish our analysis pipeline, and an adolescent sample (N=36), which consisted of a group of autistic (N=18) and a group of non-autistic (N=18) participants. All participants were presented with visual stimulus streams consisting of novel and familiar image pairs, while they attentively monitored each stream. We recorded task performance and used magnetoencephalography (MEG) to measure neural responses, and to compare the responses to familiar and novel images. We found behavioral facilitation as well as a reduction of event-related field (ERF) amplitude for familiar, compared to novel, images in both samples. Crucially, we found statistical evidence against between-group effects of familiarity on both behavioral and neural responses in the adolescent sample, suggesting that the influence of familiarity is comparable between autistic and non-autistic adolescents. These findings challenge the notion that perception in autism is marked by a reduced influence of prior exposure."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:gVv57TyPmFsC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.04.05.535670.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JF7XMglNONwJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

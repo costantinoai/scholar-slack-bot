@@ -1,0 +1,141 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Scaling vision transformers to 22 billion parameters",
+            "pub_year": 2023,
+            "citation": "Oral @ International Conference on Machine Learning (ICML 2023), 2023",
+            "author": "Mostafa Dehghani and Josip Djolonga and Basil Mustafa and Piotr Padlewski and Jonathan Heek and Justin Gilmer and Andreas Steiner and Mathilde Caron and Robert Geirhos and Ibrahim Alabdulmohsin and Rodolphe Jenatton and Lucas Beyer and Michael Tschannen and Anurag Arnab and Xiao Wang and Carlos Riquelme and Matthias Minderer and Joan Puigcerver and Utku Evci and Manoj Kumar and Sjoerd van Steenkiste and Gamaleldin F Elsayed and Aravindh Mahendran and Fisher Yu and Avital Oliver and Fantine Huot and Jasmijn Bastings and Mark Patrick Collier and Alexey Gritsenko and Vighnesh Birodkar and Cristina Vasconcelos and Yi Tay and Thomas Mensink and Alexander Kolesnikov and Filip Paveti\u0107 and Dustin Tran and Thomas Kipf and Mario Lu\u010di\u0107 and Xiaohua Zhai and Daniel Keysers and Jeremiah Harmsen and Neil Houlsby",
+            "conference": "Oral @ International Conference on Machine Learning (ICML 2023)",
+            "abstract": "The scaling of Transformers has driven breakthrough capabilities for language models. At present, the largest large language models (LLMs) contain upwards of 100B parameters. Vision Transformers (ViT) have introduced the same architecture to image and video modelling, but these have not yet been successfully scaled to nearly the same degree; the largest dense ViT contains 4B parameters (Chen et al., 2022). We present a recipe for highly efficient and stable training of a 22B-parameter ViT (ViT-22B) and perform a wide variety of experiments on the resulting model. When evaluated on downstream tasks (often with a lightweight linear model on frozen features), ViT-22B demonstrates increasing performance with scale. We further observe other interesting benefits of scale, including an improved tradeoff between fairness and performance, state-of-the-art alignment to human visual perception in terms of shape/texture bias, and improved robustness. ViT-22B demonstrates the potential for\" LLM-like\" scaling in vision, and provides key steps towards getting there."
+        },
+        "filled": true,
+        "author_pub_id": "w3kGtMIAAAAJ:2P1L_qKh6hAC",
+        "num_citations": 97,
+        "citedby_url": "/scholar?hl=en&cites=10337440426415537279",
+        "cites_id": [
+            "10337440426415537279"
+        ],
+        "pub_url": "https://proceedings.mlr.press/v202/dehghani23a.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:f7xCN0z3dY8J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 96
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The developmental trajectory of object recognition robustness: Children are like small adults but unlike big deep neural networks",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (7), 4-4, 2023",
+            "author": "Lukas S Huber and Robert Geirhos and Felix A Wichmann",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "7",
+            "pages": "4-4",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "In laboratory object recognition tasks based on undistorted photographs, both adult humans and Deep Neural Networks (DNNs) perform close to ceiling. Unlike adults', whose object recognition performance is robust against a wide range of image distortions, DNNs trained on standard ImageNet (1.3M images) perform poorly on distorted images. However, the last two years have seen impressive gains in DNN distortion robustness, predominantly achieved through ever-increasing large-scale datasets$\\unicode{x2014}$orders of magnitude larger than ImageNet. While this simple brute-force approach is very effective in achieving human-level robustness in DNNs, it raises the question of whether human robustness, too, is simply due to extensive experience with (distorted) visual input during childhood and beyond. Here we investigate this question by comparing the core object recognition performance of 146 children (aged 4$\\unicode{x2013}$15) against adults and against DNNs. We find, first, that already 4$\\unicode{x2013}$6 year-olds showed remarkable robustness to image distortions and outperform DNNs trained on ImageNet. Second, we estimated the number of $\\unicode{x201C}$images$\\unicode{x201D}$ children have been exposed to during their lifetime. Compared to various DNNs, children's high robustness requires relatively little data. Third, when recognizing objects children$\\unicode{x2014}$like adults but unlike DNNs$\\unicode{x2014}$rely heavily on shape but not on texture cues. Together our results suggest that the remarkable robustness to distortions emerges early in the developmental trajectory of human object \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w3kGtMIAAAAJ:zA6iFVUQeVQC",
+        "num_citations": 9,
+        "citedby_url": "/scholar?hl=en&cites=10650409145062585026,1703505891390463570,1426305078765597264",
+        "cites_id": [
+            "10650409145062585026",
+            "1703505891390463570",
+            "1426305078765597264"
+        ],
+        "pub_url": "https://arxiv.org/abs/2205.10144",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:wvIGbLDazZMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 3,
+            "2023": 6
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Are Deep Neural Networks Adequate Behavioral Models of Human Visual Perception?",
+            "pub_year": 2023,
+            "citation": "Annual Review of Vision Science 9, 2023",
+            "author": "Felix A Wichmann and Robert Geirhos",
+            "volume": "9",
+            "publisher": "Annual Reviews",
+            "abstract": "Deep neural networks (DNNs) are machine learning algorithms that have revolutionized computer vision due to their remarkable successes in tasks like object classification and segmentation. The success of DNNs as computer vision algorithms has led to the suggestion that DNNs may also be good models of human visual perception. In this article, we review evidence regarding current DNNs as adequate behavioral models of human core object recognition. To this end, we argue that it is important to distinguish between statistical tools and computational models and to understand model quality as a multidimensional concept in which clarity about modeling goals is key. Reviewing a large number of psychophysical and computational explorations of core object recognition performance in humans and DNNs, we argue that DNNs are highly valuable scientific tools but that, as of today, DNNs should only be \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w3kGtMIAAAAJ:ldfaerwXgEUC",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=8870502238731100164",
+        "cites_id": [
+            "8870502238731100164"
+        ],
+        "pub_url": "https://www.annualreviews.org/doi/abs/10.1146/annurev-vision-120522-031739",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BODfxslaGnsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 6
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Patch n'Pack: NaViT, a Vision Transformer for any Aspect Ratio and Resolution",
+            "pub_year": 2023,
+            "citation": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023), 2023",
+            "author": "Mostafa Dehghani and Basil Mustafa and Josip Djolonga and Jonathan Heek and Matthias Minderer and Mathilde Caron and Andreas Steiner and Joan Puigcerver and Robert Geirhos and Ibrahim Alabdulmohsin and Avital Oliver and Piotr Padlewski and Alexey Gritsenko and Mario Lu\u010di\u0107 and Neil Houlsby",
+            "conference": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
+            "abstract": "The ubiquitous and demonstrably suboptimal choice of resizing images to a fixed resolution before processing them with computer vision models has not yet been successfully challenged. However, models such as the Vision Transformer (ViT) offer flexible sequence-based modeling, and hence varying input sequence lengths. We take advantage of this with NaViT (Native Resolution ViT) which uses sequence packing during training to process inputs of arbitrary resolutions and aspect ratios. Alongside flexible model usage, we demonstrate improved training efficiency for large-scale supervised and contrastive image-text pretraining. NaViT can be efficiently transferred to standard tasks such as image and video classification, object detection, and semantic segmentation and leads to improved results on robustness and fairness benchmarks. At inference time, the input resolution flexibility can be used to smoothly navigate the test-time cost-performance trade-off. We believe that NaViT marks a departure from the standard, CNN-designed, input and modelling pipeline used by most computer vision models, and represents a promising direction for ViTs."
+        },
+        "filled": true,
+        "author_pub_id": "w3kGtMIAAAAJ:pqnbT2bcN3wC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=2081084367415143760",
+        "cites_id": [
+            "2081084367415143760"
+        ],
+        "pub_url": "https://arxiv.org/abs/2307.06304",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Intriguing properties of generative classifiers",
+            "pub_year": 2023,
+            "citation": "Oral @ OOD-CV Workshop (ICCV 2023), 2023",
+            "author": "Priyank Jaini and Kevin Clark and Robert Geirhos",
+            "journal": "Oral @ OOD-CV Workshop (ICCV 2023)",
+            "abstract": "What is the best paradigm to recognize objects -- discriminative inference (fast but potentially prone to shortcut learning) or using a generative model (slow but potentially more robust)? We build on recent advances in generative modeling that turn text-to-image models into classifiers. This allows us to study their behavior and to compare them against discriminative models and human psychophysical data. We report four intriguing emergent properties of generative classifiers: they show a record-breaking human-like shape bias (99% for Imagen), near human-level out-of-distribution accuracy, state-of-the-art alignment with human classification errors, and they understand certain perceptual illusions. Our results indicate that while the current dominant paradigm for modeling human object recognition is discriminative inference, zero-shot generative models approximate human object recognition data surprisingly well."
+        },
+        "filled": true,
+        "author_pub_id": "w3kGtMIAAAAJ:u_35RYKgDlwC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2309.16779",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Don't trust your eyes: on the (un) reliability of feature visualizations",
+            "pub_year": 2023,
+            "citation": "New Frontiers in Adversarial Machine Learning Workshop (ICML 2023), 2023",
+            "author": "Robert Geirhos and Roland S Zimmermann and Blair Bilodeau and Wieland Brendel and Been Kim",
+            "journal": "New Frontiers in Adversarial Machine Learning Workshop (ICML 2023)",
+            "abstract": "How do neural networks extract patterns from pixels? Feature visualizations attempt to answer this important question by visualizing highly activating patterns through optimization. Today, visualization methods form the foundation of our knowledge about the internal workings of neural networks, as a type of mechanistic interpretability. Here we ask: How reliable are feature visualizations? We start our investigation by developing network circuits that trick feature visualizations into showing arbitrary patterns that are completely disconnected from normal network behavior on natural input. We then provide evidence for a similar phenomenon occurring in standard, unmanipulated networks: feature visualizations are processed very differently from standard input, casting doubt on their ability to \"explain\" how neural networks process natural images. We underpin this empirical finding by theory proving that the set of functions that can be reliably understood by feature visualization is extremely small and does not include general black-box neural networks. Therefore, a promising way forward could be the development of networks that enforce certain structures in order to ensure more reliable feature visualizations."
+        },
+        "filled": true,
+        "author_pub_id": "w3kGtMIAAAAJ:g5m5HwL7SMYC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2306.04719",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:hRmC1xuGRrsJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

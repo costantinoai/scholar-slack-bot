@@ -1,0 +1,68 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Effect of deep gray matter atrophy on information processing speed in early relapsing-remitting multiple sclerosis",
+            "pub_year": 2023,
+            "citation": "Multiple Sclerosis and Related Disorders 71, 104560, 2023",
+            "author": "Saba Naghavi and Fereshteh Ashtari and Iman Adibi and Vahid Shaygannejad and Neda Ramezani and Ahmad Pourmohammadi and Fariba Davanian and Zahra Karimi and Seyed-Mahdi Khaligh-Razavi and Mehdi Sanayei",
+            "journal": "Multiple Sclerosis and Related Disorders",
+            "volume": "71",
+            "pages": "104560",
+            "publisher": "Elsevier",
+            "abstract": "Cognitive dysfunction, including reduced Information processing speed (IPS), is relatively common in multiple sclerosis(MS). IPS deficits have profound effects on several aspects of patients\u2019 life. Previous studies showed that deep gray matter atrophy is highly correlated with overall cognitive impairment in MS. However, the effect of deep gray matter atrophy on IPS deficits is not well understood. In this study, we evaluated the effects of deep gray matter volume changes on IPS in people with early relapse-remitting MS (RRMS) compared to healthy control.In this case-control study, we enrolled 63 case with RRMS and 36 healthy controls. All patients were diagnosed within 6 years. IPS was evaluated using the Integrated Cognitive Assessment (ICA) test. We also performed a 1.5T MRI to evaluate deep gray matter structures.People with RRMS had lower accuracy in the ICA test (p = .01 \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "3HbeiywAAAAJ:AvfA0Oy_GE0C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=5423015183667389954",
+        "cites_id": [
+            "5423015183667389954"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S2211034823000640",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:AmYLwpNrQksJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Using the Integrated Cognitive Assessment (ICA) to improve the efficiency of primary care referrals to memory services",
+            "pub_year": 2023,
+            "citation": "Alzheimer's & Dementia 19, e065748, 2023",
+            "author": "Chris Kalafatis and Judith Shore and Mohammad Hadi Modarres and Panos Apostolou and Naji Tabet and Seyed\u2010Mahdi Khaligh\u2010Razavi",
+            "journal": "Alzheimer's & Dementia",
+            "volume": "19",
+            "pages": "e065748",
+            "abstract": "Existing primary care cognitive assessment tools are crude or time\u2010consuming screening instruments which can only detect cognitive impairment when it is well established, impacting carers and patient quality\u2010of\u2010life.We initiated the Accelerating Dementia Pathway Technologies (ADePT) study to develop a real\u2010world evidence basis to support the adoption of the Integrated Cognitive Assessment (ICA), a 5 minute computerised cognitive test that employs artificial intelligence to improve its accuracy, as an inexpensive screening tool for the detection of cognitive impairment and improving the efficiency of the dementia care pathway.Patients referred to memory clinics from primary care General Practitioners (GPs) were recruited. Participants completed the ICA either at home or in the clinic along with medical history and usability questionnaires. The GP referral and ICA outcome were compared \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "3HbeiywAAAAJ:epqYDVWIO7EC",
+        "num_citations": 0,
+        "pub_url": "https://alz-journals.onlinelibrary.wiley.com/doi/abs/10.1002/alz.065748",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Use of the Integrated Cognitive Assessment (ICA) to Improve the Efficiency of Primary Care Referrals to Memory Services in the Accelerating Dementia Pathway Technologies (ADePT) Study",
+            "pub_year": 2023,
+            "citation": "medRxiv, 2023.05. 31.23290793, 2023",
+            "author": "Mohammad Hadi Modarres and Chris Kalafatis and Panos Apostolou and Naji Tabet and Seyed-Mahdi Khaligh-Razavi",
+            "journal": "medRxiv",
+            "pages": "2023.05. 31.23290793",
+            "publisher": "Cold Spring Harbor Laboratory Press",
+            "abstract": "Background Current primary care cognitive assessment tools are either crude or time-consuming instruments that can only detect cognitive impairment when it is well established. This leads to unnecessary or late referrals to memory services, by which time the disease may have already progressed into more severe stages. Due to the COVID-19 pandemic, some memory services have adapted to the new environment by shifting to remote assessments of patients to meet service user demand. However, the use of remote cognitive assessments has been inconsistent, and there has been little evaluation of the outcome of such a change in clinical practice. Emerging research has highlighted computerised cognitive tests, such as the Integrated Cognitive Assessment (ICA), as the leading candidates for adoption in clinical practice. This is true both during the pandemic and in the post-COVID-19 era as part of healthcare innovation.   Objectives The Accelerating Dementias Pathways Technologies (ADePT) Study was initiated in order to address this challenge and develop a real-world evidence basis to support the adoption of ICA as an inexpensive screening tool for the detection of cognitive impairment and improving the efficiency of the dementia care pathway.  Methods Ninety-nine patients aged 55-90 who have been referred to a memory clinic by a general practitioner (GP) were recruited. Participants completed the ICA either at home or in the clinic along with medical history and usability questionnaires. The GP referral and ICA outcome were compared with the specialist diagnosis obtained at the memory clinic.  Participants were given the option to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "3HbeiywAAAAJ:Z5m8FVwuT1cC",
+        "num_citations": 0,
+        "pub_url": "https://www.medrxiv.org/content/10.1101/2023.05.31.23290793.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:qVzDKedE_VQJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

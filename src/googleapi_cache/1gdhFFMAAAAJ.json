@@ -1,0 +1,64 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Semantic representations of human actions across vision and language",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5511-5511, 2023",
+            "author": "Diana C Dima and Jody Culham and Yalda Mohsenzadeh",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5511-5511",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Humans can visually recognize many actions performed by others, as well as communicate about them. How are action concepts organized in the mind? Recent work has uncovered shared neural representations of actions across vision and language, yet the semantic structure of these representations is not well understood. To address this, we curated a multimodal, naturalistic action set containing 95 videos of everyday actions from the Moments in Time dataset (Monfort et al., 2019) and 95 naturalistic sentences describing the same actions. We labeled each action with four semantic features: a specific action verb (eg, chopping); an everyday activity (representing a set of actions; eg, preparing food); the target of the action (eg, an object); and a broad action class (eg, manipulation; Orban et al., 2021). We also annotated the actions with other relevant social and action-related features. We used these features to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1gdhFFMAAAAJ:8k81kl-MbHgC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791896",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Atypical cortical networks in children at high-genetic risk of psychiatric and neurodevelopmental disorders",
+            "pub_year": 2023,
+            "citation": "Neuropsychopharmacology, 1-9, 2023",
+            "author": "Joanne L Doherty and Adam C Cunningham and Samuel JRA Chawner and Hayley M Moss and Diana C Dima and David EJ Linden and Michael J Owen and Marianne BM van den Bree and Krish D Singh",
+            "journal": "Neuropsychopharmacology",
+            "pages": "1-9",
+            "publisher": "Springer International Publishing",
+            "abstract": "Although many genetic risk factors for psychiatric and neurodevelopmental disorders have been identified, the neurobiological route from genetic risk to neuropsychiatric outcome remains unclear. 22q11.2 deletion syndrome (22q11.2DS) is a copy number variant (CNV) syndrome associated with high rates of neurodevelopmental and psychiatric disorders including autism spectrum disorder (ASD), attention deficit hyperactivity disorder (ADHD) and schizophrenia. Alterations in neural integration and cortical connectivity have been linked to the spectrum of neuropsychiatric disorders seen in 22q11.2DS and may be a mechanism by which the CNV acts to increase risk. In this study, magnetoencephalography (MEG) was used to investigate electrophysiological markers of local and global network function in 34 children with 22q11.2DS and 25 controls aged 10\u201317 years old. Resting-state oscillatory activity and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1gdhFFMAAAAJ:5nxA0vEk-isC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41386-023-01628-x",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A data-driven investigation of human action representations",
+            "pub_year": 2023,
+            "citation": "Scientific Reports 13 (1), 5171, 2023",
+            "author": "Diana C Dima and Martin N Hebart and Leyla Isik",
+            "journal": "Scientific Reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "5171",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Understanding actions performed by others requires us to integrate different types of information about people, scenes, objects, and their interactions. What organizing dimensions does the mind use to make sense of this complex action space? To address this question, we collected intuitive similarity judgments across two large-scale sets of naturalistic videos depicting everyday actions. We used cross-validated sparse non-negative matrix factorization to identify the structure underlying action similarity judgments. A low-dimensional representation, consisting of nine to ten dimensions, was sufficient to accurately reconstruct human similarity judgments. The dimensions were robust to stimulus set perturbations and reproducible in a separate odd-one-out experiment. Human labels mapped these dimensions onto semantic axes relating to food, work, and home life; social axes relating to people and emotions; and one \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1gdhFFMAAAAJ:hqOjcs7Dif8C",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-023-32192-5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ZiMKje3GGn8J:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

@@ -1,0 +1,289 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Dissociating language and thought in large language models: a cognitive perspective",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2301.06627, 2023",
+            "author": "Kyle Mahowald and Anna A Ivanova and Idan A Blank and Nancy Kanwisher and Joshua B Tenenbaum and Evelina Fedorenko",
+            "journal": "arXiv preprint arXiv:2301.06627",
+            "abstract": "Today's large language models (LLMs) routinely generate coherent, grammatical and seemingly meaningful paragraphs of text. This achievement has led to speculation that these networks are -- or will soon become -- \"thinking machines\", capable of performing tasks that require abstract knowledge and reasoning. Here, we review the capabilities of LLMs by considering their performance on two different aspects of language use: 'formal linguistic competence', which includes knowledge of rules and patterns of a given language, and 'functional linguistic competence', a host of cognitive abilities required for language understanding and use in the real world. Drawing on evidence from cognitive neuroscience, we show that formal competence in humans relies on specialized language processing mechanisms, whereas functional competence recruits multiple extralinguistic capacities that comprise human thought, such as formal reasoning, world knowledge, situation modeling, and social cognition. In line with this distinction, LLMs show impressive (although imperfect) performance on tasks requiring formal linguistic competence, but fail on many tests requiring functional competence. Based on this evidence, we argue that (1) contemporary LLMs should be taken seriously as models of formal linguistic skills; (2) models that master real-life language use would need to incorporate or develop not only a core language module, but also multiple non-language-specific cognitive capacities required for modeling thought. Overall, a distinction between formal and functional linguistic competence helps clarify the discourse surrounding LLMs' potential and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:ji7lAbPyDbYC",
+        "num_citations": 94,
+        "citedby_url": "/scholar?hl=en&cites=6177737427708702812",
+        "cites_id": [
+            "6177737427708702812"
+        ],
+        "pub_url": "https://arxiv.org/abs/2301.06627",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:XHA2nnW7u1UJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 2,
+            "2023": 90
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Using artificial neural networks to ask \u2018why\u2019questions of minds and brains",
+            "pub_year": 2023,
+            "citation": "Trends in Neurosciences 46 (3), 240-254, 2023",
+            "author": "Nancy Kanwisher and Meenakshi Khosla and Katharina Dobs",
+            "volume": "46",
+            "number": "3",
+            "pages": "240-254",
+            "publisher": "Elsevier",
+            "abstract": "Neuroscientists have long characterized the properties and functions of the nervous system, and are increasingly succeeding in answering how brains perform the tasks they do. But the question \u2018why' brains work the way they do is asked less often. The new ability to optimize artificial neural networks (ANNs) for performance on human-like tasks now enables us to approach these \u2018why' questions by asking when the properties of networks optimized for a given task mirror the behavioral and neural characteristics of humans performing the same task. Here we highlight the recent success of this strategy in explaining why the visual and auditory systems work the way they do, at both behavioral and neural levels."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:iyewoVqAXLQC",
+        "num_citations": 25,
+        "citedby_url": "/scholar?hl=en&cites=16034293729654481844",
+        "cites_id": [
+            "16034293729654481844"
+        ],
+        "pub_url": "https://www.cell.com/trends/neurosciences/fulltext/S0166-2236(22)00262-4?dgcid=raven_jbs_etoc_email",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:tCNUnDFBhd4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 22
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "CNNs reveal the computational implausibility of the expertise hypothesis",
+            "pub_year": 2023,
+            "citation": "Iscience 26 (2), 2023",
+            "author": "Nancy Kanwisher and Pranjul Gupta and Katharina Dobs",
+            "journal": "Iscience",
+            "volume": "26",
+            "number": "2",
+            "publisher": "Elsevier",
+            "abstract": "Face perception has long served as a classic example of domain specificity of mind and brain. But an alternative \"expertise\" hypothesis holds that putatively face-specific mechanisms are actually domain-general, and can be recruited for the perception of other objects of expertise (e.g., cars for car experts). Here, we demonstrate the computational implausibility of this hypothesis: Neural network models optimized for generic object categorization provide a better foundation for expert fine-grained discrimination than do models optimized for face recognition."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:wUn16MOA3RoC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=15203082623615532629",
+        "cites_id": [
+            "15203082623615532629"
+        ],
+        "pub_url": "https://www.cell.com/iscience/pdf/S2589-0042(23)00053-6.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VX6Exxgz_NIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Preliminary evidence for selective cortical responses to music in one\u2010month\u2010old infants",
+            "pub_year": 2023,
+            "citation": "Developmental Science, e13387, 2023",
+            "author": "Heather L Kosakowski and Samuel Norman\u2010Haignere and Anna Mynick and Atsushi Takahashi and Rebecca Saxe and Nancy Kanwisher",
+            "journal": "Developmental Science",
+            "pages": "e13387",
+            "abstract": "Prior studies have observed selective neural responses in the adult human auditory cortex to music and speech that cannot be explained by the differing lower\u2010level acoustic properties of these stimuli. Does infant cortex exhibit similarly selective responses to music and speech shortly after birth? To answer this question, we attempted to collect functional magnetic resonance imaging (fMRI) data from 45 sleeping infants (2.0\u2010 to 11.9\u2010weeks\u2010old) while they listened to monophonic instrumental lullabies and infant\u2010directed speech produced by a mother. To match acoustic variation between music and speech sounds we (1) recorded music from instruments that had a similar spectral range as female infant\u2010directed speech, (2) used a novel excitation\u2010matching algorithm to match the cochleagrams of music and speech stimuli, and (3) synthesized \u201cmodel\u2010matched\u201d stimuli that were matched in spectrotemporal \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:4e5Qn2KL_jwC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=18080781322115500175",
+        "cites_id": [
+            "18080781322115500175"
+        ],
+        "pub_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/desc.13387",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:j0g2_tDW6_oJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Approaching human 3D shape perception with neurally mappable models",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2308.11300, 2023",
+            "author": "Thomas P O'Connell and Tyler Bonnen and Yoni Friedman and Ayush Tewari and Josh B Tenenbaum and Vincent Sitzmann and Nancy Kanwisher",
+            "journal": "arXiv preprint arXiv:2308.11300",
+            "abstract": "Humans effortlessly infer the 3D shape of objects. What computations underlie this ability? Although various computational models have been proposed, none of them capture the human ability to match object shape across viewpoints. Here, we ask whether and how this gap might be closed. We begin with a relatively novel class of computational models, 3D neural fields, which encapsulate the basic principles of classic analysis-by-synthesis in a deep neural network (DNN). First, we find that a 3D Light Field Network (3D-LFN) supports 3D matching judgments well aligned to humans for within-category comparisons, adversarially-defined comparisons that accentuate the 3D failure cases of standard DNN models, and adversarially-defined comparisons for algorithmically generated shapes with no category structure. We then investigate the source of the 3D-LFN's ability to achieve human-aligned performance through a series of computational experiments. Exposure to multiple viewpoints of objects during training and a multi-view learning objective are the primary factors behind model-human alignment; even conventional DNN architectures come much closer to human behavior when trained with multi-view objectives. Finally, we find that while the models trained with multi-view learning objectives are able to partially generalize to new object categories, they fall short of human alignment. This work provides a foundation for understanding human shape inferences within neurally mappable computational architectures and highlights important questions for future work."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:nPTYJWkExTIC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2308.11300",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Behavioral signatures of face perception emerge in deep neural networks optimized for face recognition",
+            "pub_year": 2023,
+            "citation": "Proceedings of the National Academy of Sciences 120 (32), e2220642120, 2023",
+            "author": "Katharina Dobs and Joanne Yuan and Julio Martinez and Nancy Kanwisher",
+            "journal": "Proceedings of the National Academy of Sciences",
+            "volume": "120",
+            "number": "32",
+            "pages": "e2220642120",
+            "publisher": "National Academy of Sciences",
+            "abstract": "Human face recognition is highly accurate and exhibits a number of distinctive and well-documented behavioral \u201csignatures\u201d such as the use of a characteristic representational space, the disproportionate performance cost when stimuli are presented upside down, and the drop in accuracy for faces from races the participant is less familiar with. These and other phenomena have long been taken as evidence that face recognition is \u201cspecial\u201d. But why does human face perception exhibit these properties in the first place? Here, we use deep convolutional neural networks (CNNs) to test the hypothesis that all of these signatures of human face perception result from optimization for the task of face recognition. Indeed, as predicted by this hypothesis, these phenomena are all found in CNNs trained on face recognition, but not in CNNs trained on object recognition, even when additionally trained to detect faces while \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:R-LXmdHK_14C",
+        "num_citations": 0,
+        "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2220642120",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:bSGN-JFa6v4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Humans and 3D neural field models make similar 3D shape judgements",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5676-5676, 2023",
+            "author": "Thomas OConnell and Tyler Bonnen and Yoni Friedman and Ayush Tewari and Josh Tenenbaum and Vincent Sitzmann and Nancy Kanwisher",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5676-5676",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Human visual perception captures the 3D shape of objects. While convolutional neural networks (CNNs) are similar to aspects of human visual processing, there is a well-documented gap in performance between CNNs and humans on shape processing tasks. A new deep learning approach, 3D neural fields (3D-NFs), has driven remarkable recent progress in 3D computer vision. 3D-NFs encode the geometry of objects in a coordinate-based representation (eg input: xyz coordinate, output: volume density and RGB at that position). Here, we investigate whether humans and 3D-NFs display similar behavior on 3D match-to-sample tasks. In each trial, a participant sees a rendered sample image of a manmade object, then matches it to a target image of the same object from a different viewpoint versus a lure image of a different object. We trained 3D-NFs that take an image as input, then output a rendered image of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:ymY9cBF3mdcC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792594",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Decoding the Mass of Familiar Objects from MEG",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5508-5508, 2023",
+            "author": "Willian De Faria and RT Pramod and Nancy Kanwisher",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5508-5508",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Successful engagement with the world requires an intuitive understanding of the physical properties of objects including their mass. Previous behavioral and neuroimaging studies have shown that people can infer the mass of an object by observing its interactions with other objects. But people also learn and remember the mass of familiar objects. Here we used magnetoencephalography (MEG) to test whether and when the mass of familiar objects can be decoded from neural responses to static images of familiar objects. Specifically, we showed participants (N= 20) sequences of images at the center of the screen and instructed them to make relative mass judgements on randomly interspersed cued trials (\u201cis this object lighter or heavier than the object in the previous trial?\u201d), which were discarded from further analysis. We collected MEG responses to 80 object images (20-32 trials/image in each subject) in which \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:pYKElYtJMmwC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791899",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Visual experience is necessary for selectivity of faces over language in the fusiform",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5848-5848, 2023",
+            "author": "Elizabeth Saccone and N Apurva Ratan Murty and Judy Kim and LNU Akshi and Mengyu Tian and Nancy Kanwisher and Marina Bedny",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5848-5848",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "The contribution of innate constraints and experience to the development of face selectivity in human cortex is hotly debated. Unlike the sighted, people born blind report little interaction with faces in any modality. A recent study with blind adults found preferential responses to tactile faces over scenes and objects in the location of the fusiform face area (FFA)(Ratan Murty et al., 2020, PNAS). Blind adults also show responses to spoken and written language in a similar location (Kanjlia et al., 2016, PNAS; Tian et al., 2022, Cerebral Cortex). Does the FFA develop equivalently regardless of visual experience or does it respond to both faces and language in blind people? Congenitally blind adults (n= 8) performed both \u2018face touching\u2019and language tasks during fMRI. Participants felt 3D-printed models of faces, one at a time, and pressed a button if the same face repeated. In a control condition, participants touched 3D \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:M0leSnx2MbUC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792438",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Development of navigational affordance perception in infancy",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5716-5716, 2023",
+            "author": "Frederik Kamps and Emily Chen and Adele Mah and Stephanie Washburn and Nancy Kanwisher and Rebecca Saxe",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5716-5716",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Shortly after learning to crawl or walk, toddlers successfully use vision to guide navigation through the local visual space. How does this ability develop? One hypothesis is that the emergence of navigational affordance perception depends on active navigation experience (eg, crawling). However, this hypothesis has never been tested, as almost all prior work conflates perception of navigational affordances with the integration of this information into a motor plan. Here we developed a measure of navigational affordance perception based only on preferential looking. Infants and toddlers viewed 10s videos depicting an egocentric perspective of navigation toward the corner of a room, with one wall containing an open doorway affording further navigation, and the other containing a perceptually similar distractor. Across three experiments, 16-month-old toddlers looked significantly more toward doorways (i) relative to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:hNSvKAmkeYkC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792558",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Things versus Stuff in the Brain",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5096-5096, 2023",
+            "author": "Vivian C Paulun and RT Pramod and Nancy Kanwisher",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5096-5096",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "In a seminal paper published two decades ago, Adelson (2001) noted that\" Our world contains both things and stuff, but things tend to get the attention.\" This remains the case today in the field of cognitive neuroscience. The large number of publications using fMRI to explore the lateral occipital complex (LOC) have focused almost exclusively on the role of this region in extracting the 3D shape of Things, without asking whether this region may also respond to Stuff with no fixed shape like honey, sand, or water. Similarly, investigations of the\" physics network\" previously implicated in visual intuitive physics (Fischer et al, 2016) have to date tested only Things, even though the physics of Stuff plays a comparable role in everyday life. Here, we asked whether LOC and the physics network are engaged when observing Stuff. We created 120 photorealistic short movie clips of four different computer-simulated substances \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:n3vGvpFsckwC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792274",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "fROI-level computational models enable broad-scale experimental testing and expose key divergences between models and brains",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5788-5788, 2023",
+            "author": "Elizabeth Mieczkowski and Alex Abate and Willian De Faria and Kirsten Lydic and James DiCarlo and Nancy Kanwisher and N Apurva Ratan Murty",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5788-5788",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Deep convolutional neural network (DNN)-based models have emerged as our leading hypotheses of human vision. Here we describe, and expand upon, our latest effort to use DNN models of brain regions to explain key results from previous cognitive neuroscience and psychology experiments. Many stimuli in these prior experiments were highly manipulated (eg scrambled body parts, face parts, re-arranged spatial positions) often outside the domain of natural stimuli. These results can therefore be considered as tests of model generalization beyond naturalistic stimuli. We first performed these tests on the fusiform face area (FFA), parahippocampal place area (PPA) and the extrastriate body area (EBA). Our previous results (presented in VSS2022) showed that our fROI-level models recapitulate several key results from prior studies. We also observed that models did not perform as well on non-naturalistic stimuli \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:9DLIHnF0jcYC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792491",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Testing the Selectivity of the Visual Food Component",
+            "pub_year": 2023,
+            "citation": "OSF, 2023",
+            "author": "Cyn X Fang and Nancy Kanwisher and Meenakshi Khosla",
+            "publisher": "OSF",
+            "abstract": "Recently, analyses of the NSD dataset (Allen, EJ, St-Yves, G., Wu, Y. et al., 2022) revealed food selectivity in the visual stream.(Khosla et al, 2022; Jain et al, 2022; Pennock et al, 2023). This experiment seeks to further characterize the selectivity of the food component in the brain. Specifically, we seek to understand the effects of context (natural vs. cutout images), color (color vs. greyscale images), and reachability on food selectivity."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:jlhcAiayVhoC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/xrg8t/resources",
+        "cites_per_year": {}
+    }
+]

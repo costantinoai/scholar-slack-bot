@@ -1,0 +1,170 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Empirical evidence for perspectival similarity",
+            "pub_year": 2023,
+            "citation": "Psychological Review, 2023",
+            "author": "Jorge Morales and Chaz Firestone",
+            "publisher": "Psychological Review",
+            "abstract": "When a circular coin is rotated in depth, is there any sense in which it comes to resemble an ellipse? While this question is at the center of a rich and divided philosophical tradition (with some scholars answering affirmatively and some negatively), Morales et al.(2020, 2021) took an empirical approach, reporting 10 experiments whose results favor such perspectival similarity. Recently, Burge and Burge (2022) offered a vigorous critique of this work, objecting to its approach and conclusions on both philosophical and empirical grounds. Here, we answer these objections on both fronts. We show that Burge and Burge\u2019s critique rests on misunderstandings of Morales et al.\u2019s claims; of the relation between the data and conclusions; and of the philosophical context in which the work appears. Specifically, Burge and Burge attribute to us a much stronger (and stranger) view than we hold, involving the introduction of \u201ca new \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:gsN89kCJA0AC",
+        "num_citations": 7,
+        "citedby_url": "/scholar?hl=en&cites=844283432460210274",
+        "cites_id": [
+            "844283432460210274"
+        ],
+        "pub_url": "https://psycnet.apa.org/record/2023-37047-001",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YtCJAU9_twsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Philosophy of perception in the psychologist\u2019s laboratory",
+            "pub_year": 2023,
+            "citation": "Current Directions in Psychological Science, 2023",
+            "author": "Jorge Morales and Chaz Firestone",
+            "journal": "Current Directions in Psychological Science",
+            "abstract": "Perception is our primary means of accessing the external world. What is the nature of this core mental process? Although this question is at the center of scientific research on perception, it has also long been explored by philosophers, who ask fundamental questions about our capacity to perceive: Do our different senses represent the world in commensurable ways? How much of our environment are we aware of at one time? Which aspects of perception are \u201cobjective\u201d and which \u201csubjective\u201d? What properties count as perceptual in the first place? Although these parallel research programs typically proceed independently in contemporary scholarship, previous eras recognized more active collaboration across philosophical and scientific approaches to perception. Here, we review an emerging research focus that aims to reunite these approaches by putting long-standing philosophical questions to empirical test \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:b1wdh0AR-JQC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=8244500262808062858",
+        "cites_id": [
+            "8244500262808062858"
+        ],
+        "pub_url": "https://journals.sagepub.com/doi/abs/10.1177/09637214231158345",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:igtKy05ZanIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "When will AI misclassify? Intuiting failures on natural images",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (4), 4, 1\u201315, 2023",
+            "author": "Makaela Nartker and Zhenglong Zhou and Chaz Firestone",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "4",
+            "pages": "4, 1\u201315",
+            "abstract": "Machine recognition systems now rival humans in their ability to classify natural images. However, their success is accompanied by a striking failure: a tendency to commit bizarre misclassifications on inputs specifically selected to fool them. What do ordinary people know about the nature and prevalence of such classification errors? Here, five experiments exploit the recent discovery of \u201cnatural adversarial examples\u201d to ask whether naive observers can predict when and how machines will misclassify natural images. Whereas classical adversarial examples are inputs that have been minimally perturbed to induce misclassifications, natural adversarial examples are simply unmodified natural photographs that consistently fool a wide variety of machine recognition systems. For example, a bird casting a shadow might be misclassified as a sundial, or a beach umbrella made of straw might be misclassified as a broom. In Experiment 1, subjects accurately predicted which natural images machines would misclassify and which they would not. Experiments 2 through 4 extended this ability to how the images would be misclassified, showing that anticipating machine misclassifications goes beyond merely identifying an image as nonprototypical. Finally, Experiment 5 replicated these findings under more ecologically valid conditions, demonstrating that subjects can anticipate misclassifications not only under two-alternative forced-choice conditions (as in Experiments 1\u20134), but also when the images appear one at a time in a continuous stream\u2014a skill that may be of value to human\u2013machine teams. We suggest that ordinary people can intuit how easy or \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:tYavs44e6CUC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=4614680701254090174,5590172884805701895,5671617363569099666",
+        "cites_id": [
+            "4614680701254090174",
+            "5590172884805701895",
+            "5671617363569099666"
+        ],
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2785508",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vr0Z7qWjCkAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Compositionality in visual perception",
+            "pub_year": 2023,
+            "citation": "Behavioral and Brain Sciences, 2023",
+            "author": "Alon Hafri and EJ Green and Chaz Firestone",
+            "journal": "Behavioral and Brain Sciences",
+            "abstract": "Quilty-Dunn et al.\u2019s wide-ranging defense of LoT argues that vision traffics in abstract, structured representational formats. We agree: Vision, like language, is compositional\u2014just as words compose into phrases, many visual representations contain discrete constituents that combine in systematic ways. Here, we amass evidence extending this proposal, and explore its implications for how vision interfaces with the rest of the mind."
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:tuHXwOkdijsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=15945809328228306562",
+        "cites_id": [
+            "15945809328228306562"
+        ],
+        "pub_url": "https://psyarxiv.com/trg7q/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:go4oeRnlSt0J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The perception of silence",
+            "pub_year": 2023,
+            "citation": "Proceedings of the National Academy of Sciences, 2023",
+            "author": "Rui Zhe Goh and Ian Phillips and Chaz Firestone",
+            "journal": "Proceedings of the National Academy of Sciences",
+            "abstract": "Auditory perception is traditionally conceived as the perception of sounds\u2014a friend\u2019s voice, a clap of thunder, a minor chord. However, daily life also seems to present us with experiences characterized by the absence of sound\u2014a moment of silence, a gap between thunderclaps, the hush after a musical performance. In these cases, do we positively hear silence? Or do we just fail to hear, and merely judge or infer that it is silent? This longstanding question remains controversial in both the philosophy and science of perception, with prominent theories holding that sounds are the only objects of auditory experience and thus that our encounter with silence is cognitive, not perceptual. However, this debate has largely remained theoretical, without a key empirical test. Here, we introduce an empirical approach to this theoretical dispute, presenting experimental evidence that silence can be genuinely perceived (not just \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:WZBGuue-350C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=6819661125384027707",
+        "cites_id": [
+            "6819661125384027707"
+        ],
+        "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2301463120",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Oz4OU6lNpF4J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Cortical response to expectation of tactile stimulation from external anthropomorphic and non-anthropomorphic systems",
+            "pub_year": 2023,
+            "citation": "2023 11th International IEEE/EMBS Conference on Neural Engineering (NER), 1-4, 2023",
+            "author": "Luke E Osborn and Breanne Christie and Adam CG Crego and Dayann D'almeida and David P McMullen and Robert W Nickl and Ambarish S Pawar and Jeremy D Brown and Brock A Wester and Chaz Firestone and Pablo A Celnik and Matthew S Fifer and Francesco V Tenore",
+            "conference": "2023 11th International IEEE/EMBS Conference on Neural Engineering (NER)",
+            "pages": "1-4",
+            "publisher": "IEEE",
+            "abstract": "Complete sensorimotor integration and user acceptance of a neural prosthesis relies on system embodiment - the incorporation of an external system into one's own body schema and representation. Embodiment of neural prostheses is an ambiguous concept with limited approaches for quantifying human and machine integration in a meaningful way. In an attempt to understand human sensory integration with external systems, we measured neural activity in the somatosensory cortex of a participant with chronically implanted microelectrode arrays during sensory events tied to either a virtual robotic hand touching an object or a virtual lamp lighting up. Sensory stimulation was delivered using either skin vibration or intracortical microstimulation (ICMS) and was mapped to the virtual systems. Through the brain-machine interface, we observed quantifiable cortical activity corresponding to tactile sensations perceived \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:oNZyr7d5Mn4C",
+        "num_citations": 0,
+        "pub_url": "https://ieeexplore.ieee.org/abstract/document/10123891/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:39d-uvMUFNUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Seeing fast and thinking slow",
+            "pub_year": 2023,
+            "citation": "Science 379, 1196, 2023",
+            "author": "Chaz Firestone and Ian Phillips",
+            "journal": "Science",
+            "volume": "379",
+            "pages": "1196",
+            "publisher": "American Association for the Advancement of Science",
+            "abstract": "A philosopher explores perception and cognition"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:LI9QrySNdTsC",
+        "num_citations": 0,
+        "pub_url": "https://www.science.org/doi/full/10.1126/science.adg8153",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-MB_RLLypKgJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

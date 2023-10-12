@@ -1,0 +1,288 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predictive processing of scene layout depends on naturalistic depth of field",
+            "pub_year": 2023,
+            "citation": "Psychological Science 34 (3), 394-405, 2023",
+            "author": "Marco Gandolfo and Hendrik N\u00e4gele and Marius V Peelen",
+            "journal": "Psychological Science",
+            "volume": "34",
+            "number": "3",
+            "pages": "394-405",
+            "publisher": "SAGE Publications",
+            "abstract": "Boundary extension is a classic memory illusion in which observers remember more of a scene than was presented. According to predictive-processing accounts, boundary extension reflects the integration of visual input and expectations of what is beyond a scene\u2019s boundaries. According to normalization accounts, boundary extension rather reflects one end of a normalization process toward a scene\u2019s typically experienced viewing distance, such that close-up views give boundary extension but distant views give boundary contraction. Here, across four experiments (N = 125 adults), we found that boundary extension strongly depends on depth of field, as determined by the aperture settings on a camera. Photographs with naturalistic depth of field led to larger boundary extension than photographs with unnaturalistic depth of field, even when distant views were shown. We propose that boundary extension reflects a \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:9vf0nzSNQJEC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=2530075161668183991,12064890586816029019",
+        "cites_id": [
+            "2530075161668183991",
+            "12064890586816029019"
+        ],
+        "pub_url": "https://journals.sagepub.com/doi/abs/10.1177/09567976221140341",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:t2dFYvShHCMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Testing cognitive theories with multivariate pattern analysis of neuroimaging data",
+            "pub_year": 2023,
+            "citation": "Nature human behaviour, 1-12, 2023",
+            "author": "Marius V Peelen and Paul E Downing",
+            "pages": "1-12",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Multivariate pattern analysis (MVPA) has emerged as a powerful method for the analysis of functional magnetic resonance imaging, electroencephalography and magnetoencephalography data. The new approaches to experimental design and hypothesis testing afforded by MVPA have made it possible to address theories that describe cognition at the functional level. Here we review a selection of studies that have used MVPA to test cognitive theories from a range of domains, including perception, attention, memory, navigation, emotion, social cognition and motor control. This broad view reveals properties of MVPA that make it suitable for understanding the \u2018how\u2019 of human cognition, such as the ability to test predictions expressed at the item or event level. It also reveals limitations and points to future directions."
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:BwyfMAYsbu0C",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=12029598008849054893,5506719857488973539",
+        "cites_id": [
+            "12029598008849054893",
+            "5506719857488973539"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41562-023-01680-z",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:rbwxTKe38aYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predictive processing of scenes and objects",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Marius Peelen and Eva Berlot and Floris de Lange",
+            "publisher": "PsyArXiv",
+            "abstract": "Real-world visual input consists of rich scenes that are meaningfully composed of multiple objects which interact in complex, but predictable, ways. Despite this complexity, we recognize scenes, and objects within these scenes, from a brief glance at an image. In this review, we synthesize recent behavioral and neural findings that elucidate the mechanisms underlying this impressive ability. First, we review evidence that visual object and scene processing is partly implemented in parallel, allowing for a rapid initial gist of both objects and scenes concurrently. Next, we discuss recent evidence for bidirectional interactions between object and scene processing, with scene information modulating the visual processing of objects, and object information modulating the visual processing of scenes. Finally, we review evidence that objects also combine with each other to form object constellations, modulating the processing of individual objects within the object pathway. Altogether, these findings can be understood by conceptualizing object and scene perception as the outcome of a joint probabilistic inference, in which \u201cbest guesses\u201d about objects act as priors for scene perception and vice versa, in order to concurrently optimize visual inference of objects and scenes."
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:uWiczbcajpAC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=10223297898015311038",
+        "cites_id": [
+            "10223297898015311038"
+        ],
+        "pub_url": "https://psyarxiv.com/nuf59/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vkQz3EVz4I0J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Objects sharpen visual scene representations: Evidence from MEG decoding",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "T Brandman Ghitis and Marius V Peelen",
+            "abstract": "Real-world scenes consist of objects, defined by local information, and scene background, defined by global information. Although objects and scenes are processed in separate pathways in visual cortex, their processing interacts. Specifically, previous studies have shown that scene context makes blurry objects look sharper, an effect that can be observed as a sharpening of object representations in visual cortex from around 300 ms after stimulus onset. Here, we use MEG to show that objects can also sharpen scene representations, with the same temporal profile. Photographs of indoor (closed) and outdoor (open) scenes were blurred such that they were difficult to categorize on their own but easily disambiguated by the inclusion of an object. Classifiers were trained to distinguish MEG response patterns to intact indoor and outdoor scenes, presented in an independent run, and tested on degraded scenes in the main experiment. Results revealed better decoding of scenes with objects than scenes alone and objects alone from 300 ms after stimulus onset. This effect was strongest over left posterior sensors. These findings show that the influence of objects on scene representations occurs at similar latencies as the influence of scenes on object representations, in line with a common predictive processing mechanism."
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:4MWp96NkSFoC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=1432359231714343574,9028723366443844862",
+        "cites_id": [
+            "1432359231714343574",
+            "9028723366443844862"
+        ],
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/294583/294583.pdf?sequence=1",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:lroV3SHD4BMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Scene context automatically drives predictions of object transformations",
+            "pub_year": 2023,
+            "citation": "Cognition 238, 105521, 2023",
+            "author": "Giacomo Aldegheri and Surya Gayet and Marius V Peelen",
+            "journal": "Cognition",
+            "volume": "238",
+            "pages": "105521",
+            "publisher": "Elsevier",
+            "abstract": "As our viewpoint changes, the whole scene around us rotates coherently. This allows us to predict how one part of a scene (e.g., an object) will change by observing other parts (e.g., the scene background). While human object perception is known to be strongly context-dependent, previous research has largely focused on how scene context can disambiguate fixed object properties, such as identity (e.g., a car is easier to recognize on a road than on a beach). It remains an open question whether object representations are updated dynamically based on the surrounding scene context, for example across changes in viewpoint. Here, we tested whether human observers dynamically and automatically predict the appearance of objects based on the orientation of the background scene. In three behavioral experiments (N = 152), we temporarily occluded objects within scenes that rotated. Upon the objects' \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:URolC5Kub84C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=16575312163803865896",
+        "cites_id": [
+            "16575312163803865896"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010027723001555",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:KKO93JdWB-YJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Expected distractor context biases the attentional template for target shapes.",
+            "pub_year": 2023,
+            "citation": "Journal of Experimental Psychology: Human Perception and Performance 49 (9 \u2026, 2023",
+            "author": "Ma\u00eblle Lerebourg and Floris P de Lange and Marius V Peelen",
+            "journal": "Journal of Experimental Psychology: Human Perception and Performance",
+            "volume": "49",
+            "number": "9",
+            "pages": "1236",
+            "publisher": "American Psychological Association",
+            "abstract": "Visual search is supported by an internal representation of the target, the attentional template. However, which features are diagnostic of target presence critically depends on the distractors. Accordingly, previous research showed that consistent distractor context shapes the attentional template for simple targets, with the template emphasizing diagnostic dimensions (eg, color or orientation) in blocks of trials. Here, we investigated how distractor expectations bias attentional templates for complex shapes, and tested whether such biases reflect intertrial priming or can be instantiated flexibly. Participants searched for novel shapes (cued by name) in two probabilistic distractor contexts: Either the target\u2019s orientation or rectilinearity was unique (80% validity). Across four experiments, performance was better when the distractor context was expected, indicating that target features in the expected diagnostic dimension \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:tzM49s52ZIMC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=14611045779834165439",
+        "cites_id": [
+            "14611045779834165439"
+        ],
+        "pub_url": "https://psycnet.apa.org/journals/xhp/49/9/1236/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:v1j8X7ncxMoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Objects in familiar constellations evoke high-level representations of real-world size",
+            "pub_year": 2023,
+            "citation": "BioRxiv, 2023.05. 30.542965, 2023",
+            "author": "Genevieve Quek and Alexandra Theodorou and Marius V Peelen",
+            "journal": "BioRxiv",
+            "pages": "2023.05. 30.542965",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "High-level vision is frequently studied at the level of either individual objects or full scenes. An intermediate level of visual organisation that has received less attention is the \u201cobject constellation\u201d, defined here as a familiar configuration of contextually-associated objects (e.g., plate + spoon). Recent work has shown that information from multiple objects can be integrated to support observers\u2019 high-level understanding of a \u201cscene\u201d. Here we used EEG to test when the visual system integrates information across objects to support representations of real-world size. To this end, we briefly presented masked object constellations consisting of either large (e.g., chair + table) or small (e.g., plate + spoon) object silhouettes, while independently varying retinal size. As a control, observers also saw each object silhouette presented in isolation. Behavioural results showed that observers recognized the objects\u2019 real-world size more easily when the silhouettes appeared in pairs than when they appeared in isolation. Representational similarity analysis of EEG data revealed that neural activity patterns captured information about the real-world size of object constellations from \u223c200 ms after stimulus onset. This representation was stronger for, and specific to, object pairs as compared to single objects, and remained significant after regressing out visual similarity models derived from computational models. These results reveal the neural time course of real-world size extracted from familiar constellations of objects. More generally, they provide evidence for inter-object facilitation of visual processing, leading to a qualitatively different high-level representation of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:BUYA1_V_uYcC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=5730406085388674804",
+        "cites_id": [
+            "5730406085388674804"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.05.30.542965.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:9CZUQvl9hk8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Humans predict the forest, not the trees: statistical learning of spatiotemporal structure in visual scenes",
+            "pub_year": 2023,
+            "citation": "Cerebral Cortex, bhad115, 2023",
+            "author": "Chuyao Yan and Benedikt V Ehinger and Alexis P\u00e9rez-Bellido and Marius V Peelen and Floris P de Lange",
+            "journal": "Cerebral Cortex",
+            "pages": "bhad115",
+            "publisher": "Oxford University Press",
+            "abstract": "The human brain is capable of using statistical regularities to predict future inputs. In the real world, such inputs typically comprise a collection of objects (e.g. a forest constitutes numerous trees). The present study aimed to investigate whether perceptual anticipation relies on lower-level or higher-level information. Specifically, we examined whether the human brain anticipates each object in a scene individually or anticipates the scene as a whole. To explore this issue, we first trained participants to associate co-occurring objects within fixed spatial arrangements. Meanwhile, participants implicitly learned temporal regularities between these displays. We then tested how spatial and temporal violations of the structure modulated behavior and neural activity in the visual system using fMRI. We found that participants only showed a behavioral advantage of temporal regularities when the displays conformed to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:zLWjf1WUPmwC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=5308912277080890693",
+        "cites_id": [
+            "5308912277080890693"
+        ],
+        "pub_url": "https://academic.oup.com/cercor/advance-article-abstract/doi/10.1093/cercor/bhad115/7099491",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Rd0dk5YLrUkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Feedback processing shapes the categorical organization of the ventral stream",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4919-4919, 2023",
+            "author": "Yuanfang Zhao and Simen Hagen and Marius Peelen",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4919-4919",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "The human ventral stream shows a categorical organization, with distinct regions responding selectively to faces, houses, tools, etc. Recent neuroimaging and computational studies have shown that this organization partly reflects the feedforward processing of category-specific visual features. However, other work has provided evidence for a similar categorical organization in the absence of visual input, suggesting that it may also be shaped by top-down feedback processing. Here, to reveal such feedback processing, we focus on the selective response to large objects (buildings) in the scene-selective parahippocampal place area (PPA). Specifically, we tested whether the selective response to buildings in the PPA: 1) can be observed when controlling for visual features typical of buildings (eg, rectilinearity), 2) is delayed relative to the PPA response to scenes, and 3) reflects top-down activation of scene \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:p__nRnzSRKYC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791590",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Searching near and far: the attentional template incorporates viewing distance",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Surya Gayet and Elisa Battistoni and Sushrut Thorat and Marius Peelen",
+            "publisher": "PsyArXiv",
+            "abstract": "According to theories of visual search, observers generate a visual representation of the search target (the \u2018attentional template\u2019) that guides spatial attention towards target-like visual input. In real-world vision, however, objects produce vastly different visual input depending on their location: your car produces a retinal image that is ten times smaller when it\u2019s parked fifty compared to five meters away. Across four experiments, we investigated whether the attentional template incorporates viewing distance when observers search for familiar object categories. On each trial, participants were pre-cued to search for a car or person in the near or far plane of an outdoor scene. In \u2018search trials\u2019, the scene reappeared and participants had to indicate whether the search target was present or absent. In intermixed \u2018catch-trials\u2019, two silhouettes were briefly presented on either side of fixation (matching the shape and/or predicted size of the search target), one of which was followed by a probe-stimulus. We found that participants were more accurate at reporting the location (Exp. 1&2) and orientation (Exp. 3) of probe-stimuli when they were presented at the location of size-matching silhouettes. Thus, attentional templates incorporate the predicted size of an object based on the current viewing distance. This was only the case, however, when silhouettes also matched the shape of the search target (Exp 2). We conclude that attentional templates for finding objects in scenes are shaped by a combination of category-specific attributes (shape) and context-dependent expectations about the likely appearance (size) of these objects at the current viewing location."
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:AvfA0Oy_GE0C",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/ktayb/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Y_cR6ougf0MJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What drives the automatic retrieval of real-world object size knowledge?",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Simen Hagen and Yuanfang Zhao and Lydia Moonen and Neele Ulken and Marius Peelen",
+            "publisher": "PsyArXiv",
+            "abstract": "Real-world object size is a behaviorally relevant object property that is automatically retrieved when viewing object images: participants are faster to indicate the bigger of two object images when this object is also bigger in the real world. What drives this size Stroop effect? One possibility is that real-world size is automatically retrieved after the objects are recognized. Alternatively, the effect may be driven by automatic associations between mid-level visual features (eg, rectilinearity) and real-world size, bypassing object recognition. Here, we tested both accounts. In Experiment 1, objects were displayed upright and inverted, disrupting recognition while equating visual features. Inversion strongly reduced the Stroop effect. In Experiment 2, the Stroop effect was compared between manmade objects (for which rectilinearity was associated with size) and animals (no association between rectilinearity and size). The size Stroop effect was larger for animals than for manmade objects, indicating that rectilinearity was not primarily driving the Stroop effect. Finally, in Experiment 3, unrecognizable \u201ctexform\u201d objects that maintained size-related visual feature differences were displayed upright and inverted. Results revealed a relatively small Stroop effect for both upright and inverted conditions. Altogether, these results indicate that the automatic retrieval of real-world object size knowledge primarily follows object recognition with an additional contribution from visual feature associations."
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:vDijr-p_gm4C",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/b6zes/download?format=pdf",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predicting cued and oddball visual search performance from neural representational similarity",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.06. 15.545065, 2023",
+            "author": "Lu-Chun Yeh and Sushrut Thorat and Marius V Peelen",
+            "journal": "bioRxiv",
+            "pages": "2023.06. 15.545065",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Capacity limitations in visual tasks can be observed when the number of task-related objects increases. An influential idea is that such capacity limitations are determined by competition at the neural level: two objects that are encoded by shared neural populations interfere more in behavior (e.g., visual search) than two objects encoded by separate neural populations. However, the neural representational similarity of objects varies across brain regions and across time, raising the question of where and when competition determines task performance. Furthermore, it is unclear whether the association between neural representational similarity and task performance is common or unique across tasks. Here, we used neural representational similarity derived from fMRI, MEG, and deep neural networks (DNN) to predict performance on two visual search tasks involving the same objects and requiring the same responses but differing in instructions: cued visual search and oddball visual search. Separate groups of participants viewed the individual objects in neuroimaging experiments to establish the neural representational similarity between those objects. Results showed that performance on both search tasks could be predicted by neural representational similarity throughout the visual system (fMRI), from 80 msec after onset (MEG), and in all DNN layers. Stepwise regression analysis, however, revealed task-specific associations, with unique variability in oddball visual search performance predicted by early/posterior neural similarity, and unique variability in cued visual search task performance predicted by late/anterior neural similarity. These \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:Z5m8FVwuT1cC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.15.545065.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Z_bqCQEAs_wJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

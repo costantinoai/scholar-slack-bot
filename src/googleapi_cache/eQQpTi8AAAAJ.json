@@ -1,0 +1,20 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Decoding reach direction in early \u201cvisual\u201d cortex of congenitally blind individuals",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience, 2023",
+            "author": "\u0141ukasz Bola and Petra Vetter and Mohr Wenger and Amir Amedi",
+            "journal": "Journal of Neuroscience",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Motor actions, such as reaching or grasping, can be decoded from fMRI activity of early visual cortex in sighted humans. This effect can depend on vision or visual imagery, or alternatively, could be driven by mechanisms independent of visual experience. Here, we show that the actions of reaching in different directions can be reliably decoded from fMRI activity of early visual cortex in congenitally blind humans (both sexes). Thus, neither visual experience nor visual imagery is necessary for early visual cortex to represent action-related information. We also demonstrate that, within early visual cortex of blind humans, the accuracy of reach direction decoding is highest in areas typically representing foveal vision and gradually decreases in areas typically representing peripheral vision. We propose that this might indicate the existence of a predictive, hard-wired mechanism of aligning action and visual spaces. This \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "eQQpTi8AAAAJ:4TOpqqG69KYC",
+        "num_citations": 0,
+        "pub_url": "https://www.jneurosci.org/content/early/2023/09/21/JNEUROSCI.0376-23.2023.abstract",
+        "cites_per_year": {}
+    }
+]

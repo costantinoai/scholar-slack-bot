@@ -1,0 +1,162 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Detecting mild traumatic brain injury for athletes using SSVEP classification: A case study",
+            "pub_year": 2023,
+            "citation": "Biomedical Signal Processing and Control 86, 105274, 2023",
+            "author": "Quang Thien Hoang and Ken-Tye Yong and Xiaochen Liu and Dylan Mahony and Alissa Chaitarvornkit and Adrian Cohen and Tijl Grootswagers",
+            "journal": "Biomedical Signal Processing and Control",
+            "volume": "86",
+            "pages": "105274",
+            "publisher": "Elsevier",
+            "abstract": "Mild traumatic brain injury (mTBI) can have detrimental impacts on the well-being of individuals, especially athletes with millions of injury cases reported per year. Nevertheless, the current assessment and diagnostic tools for mTBI have limitations due to their subjectivity and the lack of accessibility. This study aimed to evaluate the potential of machine learning algorithms in combination with steady-state visual evoked potentials (SSVEP) to provide mTBI diagnoses. The participants of this study included 36 athletes diagnosed with mTBI, aged 17\u201354, and 400 matched healthy controls without mTBI. Altogether, we extracted 51 SSVEP-based features from the collected observations and transformed them via principal component analysis (PCA) for feature reduction. Several machine learning algorithms were trained and validated using the transformed features for further analysis and comparison. Linear Discriminant \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:SeFeTyx0c_EC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1746809423007073",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An online browser-based attentional blink replication using visual objects",
+            "pub_year": 2023,
+            "citation": "Plos one 18 (8), e0289623, 2023",
+            "author": "Deena Sharabas and Manuel Varlet and Tijl Grootswagers",
+            "journal": "Plos one",
+            "volume": "18",
+            "number": "8",
+            "pages": "e0289623",
+            "publisher": "Public Library of Science",
+            "abstract": "The complex relationship between attention and visual perception can be exemplified and investigated through the Attentional Blink. The attentional blink is characterised by impaired attention to the second of two target stimuli, when both occur within 200 \u2013 500ms. The attentional blink has been well studied in experimental lab settings. However, despite the rise of online methods for behavioural research, their suitability for studying the attentional blink has not been fully addressed yet, the main concern being the lack of control and timing variability for stimulus presentation. Here, we investigated the suitability of online testing for studying the attentional blink with visual objects. Our results show a clear attentional blink effect between 200 to 400ms following the distractor including a Lag 1 sparing effect in line with previous research despite significant inter-subject and timing variability. This work demonstrates the suitability of online methods for studying the attentional blink with visual objects, opening new avenues to explore its underlying processes."
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:ZHo1McVdvXMC",
+        "num_citations": 0,
+        "pub_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0289623",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "No evidence that attentionally demanding dual tasks disrupt visual processing capacity in a gamified orientation-averaging task",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4985-4985, 2023",
+            "author": "Wing Hong Fu and Gabrielle Weidemann and Tijl Grootswagers and Larissa Cahill and John Cass",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4985-4985",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "How do task demands influence visual processing capacity? Previous studies (eg Dakin et al., 2009) conclude that attentionally demanding dual-tasks reduce functional sampling efficiency when performing concurrent visual ensemble processing tasks with a fixed number of visual elements. The current study examined this general claim more directly using an orientation averaging paradigm by systematically varying the number of visual elements to (1-16 Gabors). Orientation averaging accuracy and reaction time were obtained using a gamified first-person shooter task in a virtual reality environment (enemy on left vs right as informed by average Gabor orientation\u00b15 degrees from vertical). We implemented cognitive load using an auditory n-back letter task (n= 1, 2, or 3) which was either self-paced (Experiment 1), proceeded automatically (Experiment 2), or performed via an ongoing auditory mathematical verbal \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:rO6llkc54NcC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791527",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The dynamics of object coding within and across the hemispheres",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5973-5973, 2023",
+            "author": "Amanda K Robinson and Tijl Grootswagers and Sophia M Shatek and Marlene Behrmann and Thomas A Carlson",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5973-5973",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "The human brain integrates information across the hemispheres to construct a coherent representation of the world. Characterising how visual information is coded in each hemisphere is crucial for understanding the nature of information transfer in the brain. Here, we investigated information processing within each hemisphere and its distinctiveness across hemispheres. We presented participants (N= 20) with images of faces, words and objects in rapid sequences while neural responses were measured using electroencephalography (EEG). To drive distinct responses in each hemisphere, stimuli were presented either centrally or lateralised to the left or right visual fields. Participants performed an orthogonal colour change task on dots that marked possible image positions. Multivariate pattern analyses were applied to the neural data to assess coding of object information in the brain, separately for electrode \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:3s1wT3WcHBgC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792324",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Optimising analysis choices for multivariate decoding: creating pseudotrials using trial averaging and resampling",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.10. 04.560678, 2023",
+            "author": "Catriona L Scrivener and Tijl Grootswagers and Alexandra Woolgar",
+            "journal": "bioRxiv",
+            "pages": "2023.10. 04.560678",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Multivariate pattern analysis (MVPA) is a popular technique that can distinguish between condition-specific patterns of activation. Applied to neuroimaging data, MVPA decoding for inference uses above chance decoding to identify statistically reliable condition-specific information in neuroimaging data which may be missed by univariate methods. However, several analysis choices influence decoding success, and the combined effects of these choices have not been fully evaluated. We systematically assessed the influence of trial averaging and resampling on decoding accuracy and subsequent statistical outcome on simulated data. Although the optimal parameters varied with the classifier and cross-validation approach used, we found that modest trial averaging using 5-10% of the total number of trials per condition improved accuracy and associated t-statistics. In addition, a resampling value of 2 could improve t-statistics and classification performance, but was not always necessary. We provide code to allow researchers to optimise analyses for the parameters of their data."
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:zA6iFVUQeVQC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.10.04.560678.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Minimal condition repetitions required in rapid serial visual presentation decoding paradigms",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.05. 30.542960, 2023",
+            "author": "Tijl Grootswagers",
+            "journal": "bioRxiv",
+            "pages": "2023.05. 30.542960",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Rapid Serial Visual Presentation (RSVP) decoding paradigms allow testing a greater number of conditions than was previously possible within short experimental sessions. However, in these designs individual neural responses may be more susceptible to noise due to responses overlapping with adjacent epochs. This study investigates the minimum number of repetitions required for reliable decoding accuracies in RSVP decoding paradigms. We used previously published EEG data and conducted a standard decoding analysis while varying the number of repetitions used. We found that it is possible to obtain reliable decoding accuracies with only around six repetitions of each condition, which has important implications for research questions that require short experiments, particularly for studying populations who may not be able to tolerate longer or more demanding protocols. These findings highlight the potential benefits of using efficient RSVP decoding designs and conducting short experiments and may have far-reaching impacts in cognitive neuroscience, by providing insights into optimizing data collection methods for diverse populations and experimental protocols."
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:HoB7MX3m0LUC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.05.30.542960.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Mapping the Dynamics of Visual Feature Coding: Insights into Perception and Integration",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.04. 26.538486, 2023",
+            "author": "Tijl Grootswagers and Amanda K Robinson and Sophia M Shatek and Thomas Carlson",
+            "journal": "bioRxiv",
+            "pages": "2023.04. 26.538486",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The basic computations performed in the human early visual cortex are the foundation for visual perception. While we know a lot about these computations from work in non-human animals, a key missing piece is how the coding of visual features relates to our perceptual experience. To investigate visual feature coding, interactions, and their relationship to human perception, we investigated neural responses and perceptual similarity judgements to a large set of visual stimuli that varied parametrically along four feature dimensions. We measured neural responses using electroencephalography (N=16) to 256 grating stimuli that varied in orientation, spatial frequency, contrast, and colour. We then mapped the response profiles of the neural coding of each visual feature and their interactions, and related these to independently obtained behavioural judgements of stimulus similarity. The results confirmed fundamental principles of feature coding in the visual system, such that all four features were processed simultaneously but differed in their dynamics, and there was distinctive conjunction coding for different combinations of features in the neural responses. Importantly, modelling of the behaviour revealed that every feature contributed to perceptual experience, despite the untargeted nature of the behavioural task. Further, the relationship between neural coding and behaviour was evident from initial processing stages, signifying that the fundamental features, not just their interactions, are crucial for perceptual experience. This study highlights the importance of understanding how feature coding progresses through the visual hierarchy and the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:pqnbT2bcN3wC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.04.26.538486.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Movement trajectories as a window into the dynamics of emerging neural representations.",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.03. 15.532848, 2023",
+            "author": "Roger Koenig-Robert and Genevieve Quek and Tijl Grootswagers and Manuel Varlet",
+            "journal": "bioRxiv",
+            "pages": "2023.03. 15.532848",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Transforming sensory inputs into meaningful neural representations is critical to adaptive behaviour in everyday environments. While non-invasive neuroimaging methods are the de-facto method for investigating neural representations, they remain expensive, not widely available, time-consuming, and restrictive in terms of the experimental conditions and participant populations they can be used with. Here we show that movement trajectories collected in online behavioural experiments can be used to measure the emergence and dynamics of neural representations with fine temporal resolution. By combining online computer mouse-tracking and publicly available neuroimaging (MEG and fMRI) data via Representational Similarity Analysis (RSA), we show that movement trajectories track the evolution of visual representations over time. We used a time constrained face/object categorization task on a previously published set of images containing human faces, illusory faces and objects to demonstrate that time-resolved representational structures derived from movement trajectories correlate with those derived from MEG, revealing the unfolding of category representations in comparable temporal detail (albeit delayed) to MEG. Furthermore, we show that movement-derived representational structures correlate with those derived from fMRI in most task-relevant brain areas, faces and objects selective areas in this proof of concept. Our results highlight the richness of movement trajectories and the power of the RSA framework to reveal and compare their information content, opening new avenues to better understand human perception."
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:M05iB0D1s5AC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.03.15.532848.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:MQHsZBL4zMcJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

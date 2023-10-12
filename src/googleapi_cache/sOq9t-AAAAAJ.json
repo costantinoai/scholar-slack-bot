@@ -1,0 +1,172 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Intracerebral Electrophysiological Recordings to Understand the Neural Basis of Human Face Recognition",
+            "pub_year": 2023,
+            "citation": "Brain Sciences 13, 10.3390/brainsci13020354, 2023",
+            "author": "B Rossion and C Jacques and J Jonas",
+            "journal": "Brain Sciences",
+            "volume": "13",
+            "pages": "10.3390/brainsci13020354",
+            "abstract": "Understanding how the human brain recognizes faces is a primary scientific goal in cognitive neuroscience. Given the limitations of the monkey model of human face recognition, a key approach in this endeavor is the recording of electrophysiological activity with electrodes implanted inside the brain of human epileptic patients. However, this approach faces a number of challenges that must be overcome for meaningful scientific knowledge to emerge. Here we synthesize a 10 year research program combining the recording of intracerebral activity (StereoElectroEncephaloGraphy, SEEG) in the ventral occipito-temporal cortex (VOTC) of large samples of participants and fast periodic visual stimulation (FPVS), to objectively define, quantify, and characterize the neural basis of human face recognition. These large-scale studies reconcile the wide distribution of neural face recognition activity with its (right) hemispheric and regional specialization and extend face-selectivity to anterior regions of the VOTC, including the ventral anterior temporal lobe (VATL) typically affected by magnetic susceptibility artifacts in functional magnetic resonance imaging (fMRI). Clear spatial dissociations in category-selectivity between faces and other meaningful stimuli such as landmarks (houses, medial VOTC regions) or written words (left lateralized VOTC) are found, confirming and extending neuroimaging observations while supporting the validity of the clinical population tested to inform about normal brain function. The recognition of face identity \u2013 arguably the ultimate form of recognition for the human brain \u2013 beyond mere differences in physical features is \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:SuREjsGmJT0C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=14587553738616009007",
+        "cites_id": [
+            "14587553738616009007"
+        ],
+        "pub_url": "https://www.mdpi.com/2076-3425/13/2/354",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:L_EgTNZmccoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Towards an optimization of functional localizers in non-human primate neuroimaging with (fMRI) frequency-tagging",
+            "pub_year": 2023,
+            "citation": "NeuroImage 270, 119959, 2023",
+            "author": "M-A Laurent and P Audurier and V De Castro and X Gao and J-B Durand and J Jonas and B Rossion and BR Cottereau",
+            "journal": "NeuroImage",
+            "volume": "270",
+            "pages": "119959",
+            "abstract": "Non-human primate (NHP) neuroimaging can provide essential insights into the neural basis of human cognitive functions. While functional magnetic resonance imaging (fMRI) localizers can play an essential role in reaching this objective (Russ et al., 2021), they often differ substantially across species in terms of paradigms, measured signals, and data analysis, biasing the comparisons. Here we introduce a functional frequency-tagging face localizer for NHP imaging, successfully developed in humans and outperforming standard face localizers (Gao et al., 2018). FMRI recordings were performed in two awake macaques. Within a rapid 6 Hz stream of natural non-face objects images, human or monkey face stimuli were presented in bursts every 9 s. We also included control conditions with phase-scrambled versions of all images. As in humans, face-selective activity was objectively identified and quantified at the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:scjTk0LcRdsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=16111065146861704271",
+        "cites_id": [
+            "16111065146861704271"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811923001052",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:T1TeF2QAlt8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A neural marker of the human face identity familiarity effect",
+            "pub_year": 2023,
+            "citation": "Scientific Reports 13 (1), 16294, 2023",
+            "author": "Xiaoqian Yan and Ang\u00e9lique Volfart and Bruno Rossion",
+            "journal": "Scientific Reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "16294",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Human adults associate different views of an identity much better for familiar than for unfamiliar faces. However, a robust and consistent neural index of this behavioral face identity familiarity effect (FIFE)\u2014not found in non-human primate species\u2014is lacking. Here we provide such a neural FIFE index, measured implicitly and with one fixation per face. Fourteen participants viewed 70 s stimulation sequences of a large set (n\u2009=\u200940) of widely variable natural images of a face identity at a rate of 6 images/second (6 Hz). Different face identities appeared every 5th image (1.2 Hz). In a sequence, face images were either familiar (i.e., famous) or unfamiliar, participants performing a non-periodic task unrelated to face recognition. The face identity recognition response identified at 1.2 Hz over occipital-temporal regions in the frequency-domain electroencephalogram was 3.4 times larger for familiar than unfamiliar faces \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:LyOydA3uxaIC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-023-40852-9",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Single neuron responses underlying face recognition in the human midfusiform face-selective cortex",
+            "pub_year": 2023,
+            "citation": "Nature Communications 14 (1), 5661, 2023",
+            "author": "Rodrigo Quian Quiroga and Marta Boscaglia and Jacques Jonas and Hernan G Rey and Xiaoqian Yan and Louis Maillard and Sophie Colnat-Coulbois and Laurent Koessler and Bruno Rossion",
+            "journal": "Nature Communications",
+            "volume": "14",
+            "number": "1",
+            "pages": "5661",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Faces are critical for social interactions and their recognition constitutes one of the most important and challenging functions of the human brain. While neurons responding selectively to faces have been recorded for decades in the monkey brain, face-selective neural activations have been reported with neuroimaging primarily in the human midfusiform gyrus. Yet, the cellular mechanisms producing selective responses to faces in this hominoid neuroanatomical structure remain unknown. Here we report single neuron recordings performed in 5 human subjects (1 male, 4 females) implanted with intracerebral microelectrodes in the face-selective midfusiform gyrus, while they viewed pictures of familiar and unknown faces and places. We observed similar responses to faces and places at the single cell level, but a significantly higher number of neurons responding to faces, thus offering a mechanistic account for the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:tVzLobxzA7YC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41467-023-41323-5",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Automatic, early color-specific neural responses to object color knowledge",
+            "pub_year": 2023,
+            "citation": "Brain Topography 36 (5), 710-726, 2023",
+            "author": "Talia L Retter and Yi Gao and Fang Jiang and Bruno Rossion and Michael A Webster",
+            "journal": "Brain Topography",
+            "volume": "36",
+            "number": "5",
+            "pages": "710-726",
+            "publisher": "Springer US",
+            "abstract": "Some familiar objects are associated with specific colors, e.g., rubber ducks with yellow. Whether and at what stage neural responses occur to these color associations remain open questions. We recorded frequency-tagged electroencephalogram (EEG) responses to periodic presentations of yellow-associated objects, shown among sequences of non-periodic blue-, red-, and green-associated objects. Both color and grayscale versions of the objects elicited yellow-specific responses, indicating an automatic activation of color knowledge from object shape. Follow-up experiments replicated these effects with green-specific responses, and demonstrated modulated responses for incongruent color/object associations. Importantly, the onset of color-specific responses was as early to grayscale as actually colored stimuli (before 100 ms), the latter additionally eliciting a conventional later response (approximately 140 \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:2lgwpy1Hu6IC",
+        "num_citations": 0,
+        "pub_url": "https://link.springer.com/article/10.1007/s10548-023-00979-4",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What Are the Contributions and Challenges of Direct Intracranial Electrical Stimulation in Human Cognitive Neuroscience?",
+            "pub_year": 2023,
+            "citation": "Intracranial EEG: A Guide for Cognitive Neuroscientists, 607-638, 2023",
+            "author": "Jacques Jonas and Bruno Rossion",
+            "pages": "607-638",
+            "publisher": "Springer International Publishing",
+            "abstract": "Direct electrical stimulation (DES) is an old and powerful technique to causally inform about the localization of human brain function for clinical and research purposes. However, DES faces important challenges particularly in research: poorly known mechanisms and localization of the effects, methodological limitations due to clinical settings, etc. Through contributions of DES studies performed in the ventral occipito-temporal cortex, in particular to understand human face recognition, this chapter illustrates how future DES studies can overcome these challenges. At the methodological level, increasing the value of DES in cognitive neuroscience will depend on the use of well-controlled and diverse experimental paradigms across enough trials and stimulations to objectively evaluate DES effects. The combination of DES with independent or simultaneous measurements with functional magnetic resonance imaging \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:lVu93_cgYy4C",
+        "num_citations": 0,
+        "pub_url": "https://link.springer.com/chapter/10.1007/978-3-031-20910-9_39",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Stability of face recognition abilities after left or right anterior temporal lobectomy",
+            "pub_year": 2023,
+            "citation": "Journal of Neuropsychology, 2023",
+            "author": "Ang\u00e9lique Volfart and Bruno Rossion and H\u00e9l\u00e8ne Brissart and Thomas Busigny and Sophie Colnat\u2010Coulbois and Louis Maillard and Jacques Jonas",
+            "journal": "Journal of Neuropsychology",
+            "abstract": "Patients with anterior temporal lobe (ATL) resection due to mesial temporal lobe epilepsy (MTLE) have difficulties at identifying familiar faces and explicitly remembering newly learned faces but their ability to individuate unfamiliar faces remains largely unknown. Moreover, the extent to which their difficulties with familiar face identity recognition and learning is truly due to the ATL resection remains unknown. Here, we report a study of 24 MTLE patients and matched healthy controls tested with an extensive set of seven face and visual object recognition tasks (including three tasks evaluating unfamiliar face individuation) before and about 6\u2009months after unilateral (nine left, 15 right) ATL resection. We found that ATL resection has little or no effect on the patients' preserved pre\u2010surgical ability to perform unfamiliar face individuation, both at the group and individual levels. More surprisingly, ATL resection also has little \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:cwugQcE3IssC",
+        "num_citations": 0,
+        "pub_url": "https://bpspsychub.onlinelibrary.wiley.com/doi/abs/10.1111/jnp.12337",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Spatial Resolution Evaluation Based on Experienced Visual Categories With Sweep Evoked Periodic EEG Activity",
+            "pub_year": 2023,
+            "citation": "Invest Ophthalmol Vis Sci . 64, 10.1167/iovs.64.3.17., 2023",
+            "author": "C Hemptinne and H Hupin and A Lochy and D Y\u00fcksel and B Rossion",
+            "journal": "Invest Ophthalmol Vis Sci .",
+            "volume": "64",
+            "pages": "10.1167/iovs.64.3.17.",
+            "abstract": "Purpose: Visual function is typically evaluated in clinical settings with visual acuity (VA), a test requiring to behaviorally match or name optotypes such as tumbling E or Snellen letters. The ability to recognize these symbols has little in common with the automatic and rapid visual recognition of socially important stimuli in real life. Here we use sweep visual evoked potentials to assess spatial resolution objectively based on the recognition of human faces and written words.Methods: To this end, we tested unfamiliar face individuation 1 and visual word recognition 2 in 15 normally sighted adult volunteers with a 68-electrode electroencephalogram system.Results: Unlike previous measures of low-level visual function including VA, the most sensitive electrode was found at an electrode different from Oz in a majority of participants. Thresholds until which faces and words could be recognized were evaluated at the most sensitive electrode defined individually for each participant. Word recognition thresholds corresponded with the VA level expected from normally sighted participants, and even a VA significantly higher than expected from normally sighted individuals for a few participants.Conclusions: Spatial resolution can be evaluated based on high-level stimuli encountered in day-to-day life, such as faces or written words with sweep visual evoked potentials."
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:8k3R5ScbChQC",
+        "num_citations": 0,
+        "pub_url": "https://iovs.arvojournals.org/article.aspx?articleid=2785423",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:QxyJMCxs9dEJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

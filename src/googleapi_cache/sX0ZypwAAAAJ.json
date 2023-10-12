@@ -1,0 +1,255 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The neuroconnectionist research programme",
+            "pub_year": 2023,
+            "citation": "Nature Reviews Neuroscience, 1-20, 2023",
+            "author": "Adrien Doerig and Rowan P Sommers and Katja Seeliger and Blake Richards and Jenann Ismael and Grace W Lindsay and Konrad P Kording and Talia Konkle and Marcel AJ Van Gerven and Nikolaus Kriegeskorte and Tim C Kietzmann",
+            "pages": "1-20",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Artificial neural networks (ANNs) inspired by biology are beginning to be widely used to model behavioural and neural data, an approach we call \u2018neuroconnectionism\u2019. ANNs have been not only lauded as the current best models of information processing in the brain but also criticized for failing to account for basic cognitive functions. In this Perspective article, we propose that arguing about the successes and failures of a restricted set of current ANNs is the wrong approach to assess the promise of neuroconnectionism for brain science. Instead, we take inspiration from the philosophy of science, and in particular from Lakatos, who showed that the core of a scientific research programme is often not directly falsifiable but should be assessed by its capacity to generate novel insights. Following this view, we present neuroconnectionism as a general research programme centred around ANNs as a computational \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:9Gmr9OE0IYAC",
+        "num_citations": 19,
+        "citedby_url": "/scholar?hl=en&cites=3334113232536501466",
+        "cites_id": [
+            "3334113232536501466"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41583-023-00705-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2nxE8lEmRS4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 3,
+            "2023": 16
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "PhenoScore quantifies phenotypic variation for rare genetic diseases by combining facial analysis with other clinical features using a machine-learning framework",
+            "pub_year": 2023,
+            "citation": "Nature Genetics, 1-10, 2023",
+            "author": "Alexander JM Dingemans and Max Hinne and Kim MG Truijen and Lia Goltstein and Jeroen Van Reeuwijk and Nicole De Leeuw and Janneke Schuurs-Hoeijmakers and Rolph Pfundt and Illja J Diets and Joery Den Hoed and Elke De Boer and Jet Coenen-van Der Spek and Sandra Jansen and Bregje W Van Bon and Noraly Jonis and Charlotte W Ockeloen and Anneke T Vulto-van Silfhout and Tjitske Kleefstra and David A Koolen and Philippe M Campeau and Elizabeth E Palmer and Hilde Van Esch and Gholson J Lyon and Fowzan S Alkuraya and Anita Rauch and Ronit Marom and Diana Baralle and Pleuntje J Van Der Sluijs and Gijs WE Santen and R Frank Kooy and Marcel AJ Van Gerven and Lisenka ELM Vissers and Bert BA de Vries",
+            "journal": "Nature Genetics",
+            "pages": "1-10",
+            "publisher": "Nature Publishing Group US",
+            "abstract": "Several molecular and phenotypic algorithms exist that establish genotype\u2013phenotype correlations, including facial recognition tools. However, no unified framework that investigates both facial data and other phenotypic data directly from individuals exists. We developed PhenoScore: an open-source, artificial intelligence-based phenomics framework, combining facial recognition technology with Human Phenotype Ontology data analysis to quantify phenotypic similarity. Here we show PhenoScore\u2019s ability to recognize distinct phenotypic entities by establishing recognizable phenotypes for 37 of 40 investigated syndromes against clinical features observed in individuals with other neurodevelopmental disorders and show it is an improvement on existing approaches. PhenoScore provides predictions for individuals with variants of unknown significance and enables sophisticated genotype\u2013phenotype studies by \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:yWe6nybXSkwC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=2969395117191689818",
+        "cites_id": [
+            "2969395117191689818"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41588-023-01469-w",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How does artificial intelligence contribute to iEEG research?",
+            "pub_year": 2023,
+            "citation": "Intracranial EEG: A Guide for Cognitive Neuroscientists, 761-802, 2023",
+            "author": "Julia Berezutskaya and Anne-Lise Saive and Karim Jerbi and Marcel van Gerven",
+            "pages": "761-802",
+            "publisher": "Springer International Publishing",
+            "abstract": "Artificial intelligence (AI) is a fast-growing field focused on modeling and machine implementation of various cognitive functions with an increasing number of applications in computer vision, text processing, robotics, neurotechnology, bio-inspired computing and others. In this chapter, we describe how AI methods can be applied in the context of intracranial electroencephalography (iEEG) research. IEEG data is unique as it provides extremely high-quality signals recorded directly from brain tissue. Applying advanced AI models to this data carries the potential to further our understanding of many fundamental questions in neuroscience. At the same time, as an invasive technique, iEEG lends itself well to long-term, mobile brain-computer interface applications, particularly for communication in severely paralyzed individuals. We provide a detailed overview of these two research directions in the application of AI \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:jM2XaDTMsSgC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=3953036552226278355",
+        "cites_id": [
+            "3953036552226278355"
+        ],
+        "pub_url": "https://link.springer.com/chapter/10.1007/978-3-031-20910-9_47",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:0wuV18wB3DYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An In-Silico Framework for Modeling Optimal Control of Neural Systems",
+            "pub_year": 2023,
+            "citation": "Frontiers in Neuroscience 17, 332, 2023",
+            "author": "Bodo Rueckauer and Marcel van Gerven",
+            "journal": "Frontiers in Neuroscience",
+            "volume": "17",
+            "pages": "332",
+            "publisher": "Frontiers",
+            "abstract": "Brain-machine interfaces have reached an unprecedented capacity to measure and drive activity in the brain, allowing restoration of impaired sensory, cognitive or motor function. Classical control theory is pushed to its limit when aiming to design control laws that are suitable for large-scale, complex neural systems. This work proposes a scalable, data-driven, unified approach to study brain-machine-environment interaction using established tools from dynamical systems, optimal control theory, and deep learning. To unify the methodology, we define the environment, neural system, and prosthesis in terms of differential equations with learnable parameters, which effectively reduce to recurrent neural networks in the discrete-time case. Drawing on tools from optimal control, we describe three ways to train the system: Direct optimization of an objective function, oracle-based learning, and reinforcement learning. These approaches are adapted to different assumptions about knowledge of system equations, linearity, differentiability, and observability. We apply the proposed framework to train an in-silico neural system to perform tasks in a linear and a nonlinear environment, namely particle stabilization and pole balancing. After training, this model is perturbed to simulate impairment of sensor and motor function. We show how a prosthetic controller can be trained to restore the behavior of the neural system under increasing levels of perturbation. We expect that the proposed framework will enable rapid and flexible synthesis of control algorithms for neural prostheses that reduce the need for in-vivo testing. We further highlight implications for sparse \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:JpYjwmnXVqYC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=17315527689099129839",
+        "cites_id": [
+            "17315527689099129839"
+        ],
+        "pub_url": "https://www.frontiersin.org/articles/10.3389/fnins.2023.1141884/full",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:77MxD7EcTfAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Gradient-adjusted incremental target propagation provides effective credit assignment in deep neural networks",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "SJPJ Dalm and Nasir Ahmad and Luca Ambrogioni and MAJ van Gerven",
+            "abstract": "Many of the recent advances in the field of artificial intelligence have been fueled by the highly successful backpropagation of error (BP) algorithm, which efficiently solves the credit assignment problem in artificial neural networks. However, it is unlikely that BP is implemented in its usual form within biological neural networks, because of its reliance on non-local information in propagating error gradients. Since biological neural networks are capable of highly efficient learning and responses from BP trained models can be related to neural responses, it seems reasonable that a biologically viable approximation of BP underlies synaptic plasticity in the brain. Gradient-adjusted incremental target propagation (GAIT-prop or GP for short) has recently been derived directly from BP and has been shown to successfully train networks in a more biologically plausible manner. However, so far, GP has only been shown to work on relatively low-dimensional problems, such as handwritten-digit recognition. This work addresses some of the scaling issues in GP and shows it to perform effective multi-layer credit assignment in deeper networks and on the much more challenging ImageNet dataset."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:T-SPRlcIgBMC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=13981516798980506664",
+        "cites_id": [
+            "13981516798980506664"
+        ],
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/292165/292165.pdf?sequence=1",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:KMRjkHNTCMIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Advancements in spiking neural network communication and synchronization techniques for event-driven neuromorphic systems",
+            "pub_year": 2023,
+            "citation": "Array, 100323, 2023",
+            "author": "Mahyar Shahsavari and David Thomas and Marcel van Gerven and Andrew Brown and Wayne Luk",
+            "journal": "Array",
+            "pages": "100323",
+            "publisher": "Elsevier",
+            "abstract": "Neuromorphic event-driven systems emulate the computational mechanisms of the brain through the utilization of spiking neural networks (SNN). Neuromorphic systems serve two primary application domains: simulating neural information processing in neuroscience and acting as accelerators for cognitive computing in engineering applications. A distinguishing characteristic of neuromorphic systems is their asynchronous or event-driven nature, but even event-driven systems require some synchronous time management of the neuron populations to guarantee sufficient time for the proper delivery of spiking messages. In this study, we assess three distinct algorithms proposed for adding a synchronization capability to asynchronous event-driven compute systems. We run these algorithms on POETS (Partially Ordered Event-Triggered Systems), a custom-built FPGA-based hardware platform, as a neuromorphic \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:KxNY-X0OflYC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S2590005623000486",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Effective Learning with Node Perturbation in Deep Neural Networks",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2310.00965, 2023",
+            "author": "Sander Dalm and Marcel van Gerven and Nasir Ahmad",
+            "journal": "arXiv preprint arXiv:2310.00965",
+            "abstract": "Backpropagation (BP) is the dominant and most successful method for training parameters of deep neural network models. However, BP relies on two computationally distinct phases, does not provide a satisfactory explanation of biological learning, and can be challenging to apply for training of networks with discontinuities or noisy node dynamics. By comparison, node perturbation (NP) proposes learning by the injection of noise into the network activations, and subsequent measurement of the induced loss change. NP relies on two forward (inference) passes, does not make use of network derivatives, and has been proposed as a model for learning in biological systems. However, standard NP is highly data inefficient and unstable due to its unguided, noise-based, activity search. In this work, we investigate different formulations of NP and relate it to the concept of directional derivatives as well as combining it with a decorrelating mechanism for layer-wise inputs. We find that a closer alignment with directional derivatives, and induction of decorrelation of inputs at every layer significantly enhances performance of NP learning making it competitive with BP."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:OVe_t5h5bhEC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2310.00965",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deep neural networks are not a single hypothesis but a language for expressing computational hypotheses",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Tal Golan and JohnMark Taylor and Heiko Sch\u00fctt and Benjamin Peters and Rowan Paolo Sommers and Katja Seeliger and Adrien Doerig and Paul Linton and Talia Konkle and Marcel van Gerven and Konrad Kording and Blake Richards and Tim Christian Kietzmann and Grace W Lindsay and Nikolaus Kriegeskorte",
+            "publisher": "PsyArXiv",
+            "abstract": "An ideal vision model accounts for behavior and neurophysiology in both naturalistic conditions and designed lab experiments. Unlike psychological theories, artificial neural networks (ANNs) actually perform visual tasks and generate testable predictions for arbitrary inputs. These advantages enable ANNs to engage the entire spectrum of the evidence. Failures of particular models drive progress in a vibrant ANN research program of human vision."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:d9ydBXnamCkC",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/tr7gx/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1VpvSvB-icIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Gaze-contingent processing improves mobility performance and visual orientation in simulated head-steered prosthetic vision",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.09. 18.558225, 2023",
+            "author": "Jaap de Ruyter van Steveninck and Mo Nipshagen and Marcel van Gerven and Umut Guclu and Yagmur Gucluturk and Richard van Wezel",
+            "journal": "bioRxiv",
+            "pages": "2023.09. 18.558225",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The enabling technology of visual prosthetics for the blind is making rapid progress. However, there are still uncertainties regarding the functional outcomes, which can depend on many design choices in the development. In visual prostheses with a head-mounted camera, a particularly challenging question is how to deal with the gaze-locked visual percept associated with spatial updating conflicts in the brain. A recently proposed compensation strategy is gaze-contingent image processing with eye-tracking, which enables natural visual scanning and reestablished spatial updating based on eye movements. The current study evaluates the benefits of gaze-contingent processing versus gaze-locked and gaze-ignored simulations in the context of mobility and orientation, using a simulated prosthetic vision paradigm with sighted subjects. Compared to gaze-locked vision, gaze-contingent processing was found to improve the speed in all experimental tasks, as well as the subjective quality of vision. Similar or further improvements were found in a control condition that ignores gaze-depended effects, a simulation that is unattainable in the clinical reality. Our results suggest that gaze-locked vision and spatial updating conflicts can be debilitating for complex visually-guided activities of daily living such as mobility and orientation. Therefore, for prospective users of head-steered prostheses with an unimpaired oculomotor system, the inclusion of a compensatory eye-tracking system is strongly endorsed."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:he8YCnfqqkoC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.09.18.558225.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Disentangling rodent behaviors to improve automated behavior recognition",
+            "pub_year": 2023,
+            "citation": "Frontiers in Neuroscience 17, 2023",
+            "author": "Elsbeth A Van Dam and Lucas PJJ Noldus and Marcel AJ Van Gerven",
+            "journal": "Frontiers in Neuroscience",
+            "volume": "17",
+            "publisher": "Frontiers Media SA",
+            "abstract": "Automated observation and analysis of behavior is important to facilitate progress in many fields of science. Recent developments in deep learning have enabled progress in object detection and tracking, but rodent behavior recognition struggles to exceed 75\u201380% accuracy for ethologically relevant behaviors. We investigate the main reasons why and distinguish three aspects of behavior dynamics that are difficult to automate. We isolate these aspects in an artificial dataset and reproduce effects with the state-of-the-art behavior recognition models. Having an endless amount of labeled training data with minimal input noise and representative dynamics will enable research to optimize behavior recognition architectures and get closer to human-like recognition performance for behaviors with challenging dynamics."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:gQbQcM3rmFsC",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10366600/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Brain2GAN: Feature-disentangled neural coding of visual perception in the primate brain",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.04. 26.537962, 2023",
+            "author": "Thirza Dado and Paolo Papale and Antonio Lozano and Lynn Le and Feng Wang and Marcel van Gerven and Pieter Roelfsema and Ya\u011fmur G\u00fc\u00e7l\u00fct\u00fcrk and Umut G\u00fc\u00e7l\u00fc",
+            "journal": "bioRxiv",
+            "pages": "2023.04. 26.537962",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "A challenging goal of neural coding is to characterize the neural representations underlying visual perception. To this end, we analyzed the relationship between multi-unit activity of macaque visual cortex and latent representations of state-of-the-art deep generative models, including feature-disentangled representations of generative adversarial networks (i.e., w-latents of StyleGAN) and language-contrastive representations of latent diffusion networks (i.e., CLIP-latents of Stable Diffusion). A mass univariate neural encoding analysis of the latent representations showed that feature-disentangled representations explain increasingly more variance than the alternative representations over the ventral stream. Subsequently, a multivariate neural decoding analysis of the feature-disentangled representations resulted in state-of-the-art spatiotemporal reconstructions of visual perception. Taken together, our results not only highlight the important role of feature-disentanglement in shaping high-level neural representations underlying visual perception but also serve as an important benchmark for the future of neural coding."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:lrH_6YXCPtsC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.04.26.537962.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:u3DnD1Aw34wJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Behavioral assessment of the quality of speech reconstructions from intracranial neural activity",
+            "pub_year": 2023,
+            "citation": "Radboud Data Repository, 2023",
+            "author": "Y Berezutskaya and MAJ van Gerven",
+            "publisher": "Radboud Data Repository",
+            "abstract": "The collection contains behavioral data for the manuscript \"Direct Speech Reconstruction from Sensorimotor Brain Activity with Optimized Deep Learning Models\". Behavioral data was collected from three experiments: a word recognition experiment (I), a speaker recognition experiment (II) and an audio quality assessment (III). The aim of the experiments was to collect human perceptual judgments of speech reconstructed from sensorimotor human brain activity."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:IyMil-iDmu0C",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/handle/2066/289544",
+        "cites_per_year": {}
+    }
+]

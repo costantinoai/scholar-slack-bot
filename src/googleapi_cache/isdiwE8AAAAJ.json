@@ -1,0 +1,108 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Intermodulation responses show integration of interacting bodies in a new whole",
+            "pub_year": 2023,
+            "citation": "Cortex 165, 129-140, 2023",
+            "author": "Nicolas Goupil and Jean-R\u00e9my Hochmann and Liuba Papeo",
+            "journal": "Cortex",
+            "volume": "165",
+            "pages": "129-140",
+            "publisher": "Elsevier",
+            "abstract": "People are often seen among other people, relating to and interacting with one another. Recent studies suggest that socially relevant spatial relations between bodies, such as the face-to-face positioning, or facingness, change the visual representation of those bodies, relative to when the same items appear unrelated (e.g., back-to-back) or in isolation. The current study addresses the hypothesis that face-to-face bodies give rise to a new whole, an integrated representation of individual bodies in a new perceptual unit. Using frequency-tagging EEG, we targeted, as a measure of integration, an EEG correlate of the non-linear combination of the neural responses to each of two individual bodies presented either face-to-face as if interacting, or back-to-back. During EEG recording, participants (N = 32) viewed two bodies, either face-to-face or back-to-back, flickering at two different frequencies (F1 and F2), yielding two \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "isdiwE8AAAAJ:NMxIlDl6LWMC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=11379490925539417874",
+        "cites_id": [
+            "11379490925539417874"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010945223001156",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Et-OpbQS7J0J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Category-specific effects of high-level relations in visual search",
+            "pub_year": 2023,
+            "citation": "OSF Preprints, 2023",
+            "author": "Nicolas Goupil and Daniel Kaiser and Liuba Papeo",
+            "publisher": "OSF Preprints",
+            "abstract": "Recent empirical findings demonstrate that, in visual search for a target in an array of distractors, observers exploit information about object relations to increase search efficiency. We investigated how people searched for interacting people in a crowd, and how the eccentricity of the target affected the search (Experiments 1-3). Participants briefly viewed crowded arrays and had to search for an interacting dyad (two bodies face-to-face) among non-interacting dyads (back-to-back distractors) or vice versa, with the target presented in the attended central location or at peripheral locations. With central targets, we found a search asymmetry, whereby interacting people among non-interacting people were detected better than non-interacting people among interacting people. With peripheral targets, non-interacting targets were detected better than interacting targets. In Experiment 4, we asked whether these asymmetries generalized to object pairs whose spatial relations did or did not form functionally interacting sets (computer screen above keyboard). Results showed that non-interacting targets were detected better than interacting targets, whether presented in central or peripheral locations. Thus, the effect of relational information on visual search is contingent on both stimulus category and attentional focus. Across both stimulus categories (bodies and objects), search is facilitated when individual distractor-items can be organized in larger structured units (social interaction or functional set), effectively reducing the number of distractors. The presentation of social interaction at the attended (central) location breaks this search pattern by readily \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "isdiwE8AAAAJ:hMod-77fHWUC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=9316523349721484676",
+        "cites_id": [
+            "9316523349721484676"
+        ],
+        "pub_url": "https://osf.io/n7uvk/download",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:hA3IIaDwSoEJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Visual preference for socially relevant spatial relations in humans and monkeys",
+            "pub_year": 2023,
+            "citation": "OSF Preprints, 2023",
+            "author": "Nicolas Goupil and Holly Rayson and Emilie Serraille and Alice Massera and Pier Francesco Ferrari and Jean-R\u00e9my Hochmann and Liuba Papeo",
+            "publisher": "OSF Preprints",
+            "abstract": "As an extremely relevant social signal, a body/face/gaze facing towards oneself holds an individual\u2019s attention. We asked whether, going beyond an egocentric stance, facingness between others has a similar effect, and why. Using a preferential-looking time paradigm, we showed that human adults looked preferentially at two bodies facing each other, relative to the same bodies presented back-to-back. Moreover, facing dyads were rated higher in social semantic dimensions, showing that facingness adds social value to stimuli. The preference for facing dyads thus reflects the ability to understand the social content of facingness beyond first-person interactions. In showing the same preference in macaques and in young children, anticipated by particularly efficient processing of facing dyads in early infancy, we propose that this ability is part of the fabric of a social mind."
+        },
+        "filled": true,
+        "author_pub_id": "isdiwE8AAAAJ:RGFaLdJalmkC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/preprints/8zsc9/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Converging evidence that left extrastriate body area supports visual sensitivity to social interactions",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.05. 23.541943, 2023",
+            "author": "Marco Gandolfo and Etienne Abassi and Eva Balgova and Paul E Downing and Liuba Papeo and Kami Koldewyn",
+            "journal": "bioRxiv",
+            "pages": "2023.05. 23.541943",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Navigating our complex social world requires processing the interactions we observe. Recent psychophysical and neuroimaging studies provide parallel evidence that the human visual system may be attuned to efficiently perceive dyadic interactions. This work implies, but has not yet demonstrated, that activity in body-selective cortical regions causally supports efficient visual perception of interactions. We adopt a multi-method approach to close this important gap. First, using a large fMRI dataset (N=92), we found that the left-hemisphere Extrastriate Body Area (EBA) responds more to face-to-face than non-facing dyads. Second, we replicated a behavioural marker of visual sensitivity to interactions: categorisation of facing dyads is more impaired by inversion than non-facing dyads. Third, we used fMRI-guided transcranial magnetic stimulation to show that online stimulation of the left EBA, but not a nearby control region, abolishes this selective inversion effect. Activity in left EBA, thus, causally supports the efficient perception of social interactions."
+        },
+        "filled": true,
+        "author_pub_id": "isdiwE8AAAAJ:BqipwSGYUEgC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.05.23.541943.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:a_ezTuPJ_xoJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The effect of ostensive communication on immediate and delayed memory of novel and familiar action patterns",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Cristina Ioana Galusca and Liuba Papeo and Luca Lorenzo Bonatti",
+            "publisher": "PsyArXiv",
+            "abstract": "Actions are often learnt incidentally by observing other individuals. How aspects inherent to the social context in which an action is seen affect action learning remains poorly understood. Here we study the effect of a special social signal, the eye gaze of the demonstrator, on the immediate and delayed memory and execution of observed actions. In Experiment 1, healthy young adult volunteers watched short videos of a demonstrator performing novel actions with novel objects only once, and were tested for immediate and delayed recall of those actions through action execution. Overall, novel actions on novel objects were recalled more accurately if, during demonstration, the demonstrator had repeatedly gazed towards the participant (direct gaze) vs. towards an object (control condition). Experiment 2 investigated the immediate and delayed recall of novel and familiar object-use actions performed on familiar objects. In this condition, which involved familiar information, direct gaze had no effect or was even detrimental for recall. These findings show that direct gaze benefits incidental learning and retention of novel information only (novel actions paired with novel objects in Experiment 1), and interferes with the retention of familiar information (familiar objects paired with familiar actions in Experiment 2). This study suggests a role of ostensive eye contact in incidentally learning new actions. At the same time, it limits its beneficial role to a specific type of learning scenario, one involving only novel (as opposed to familiar) information, unveiling the selective function of ostensive eye contact in the transmission of novel cultural behaviors."
+        },
+        "filled": true,
+        "author_pub_id": "isdiwE8AAAAJ:maZDTaKrznsC",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/vaegk/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:AkKrVnfIxz0J:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

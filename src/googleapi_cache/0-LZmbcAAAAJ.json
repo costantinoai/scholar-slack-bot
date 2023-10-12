@@ -1,0 +1,89 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The importance of contrast features in rat vision",
+            "pub_year": 2023,
+            "citation": "Scientific Reports 13 (1), 459, 2023",
+            "author": "Anna Elisabeth Schnell and Kasper Vinken and Hans Op de Beeck",
+            "journal": "Scientific Reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "459",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Models of object recognition have mostly focused upon the hierarchical processing of objects from local edges up to more complex shape features. An alternative strategy that might be involved in pattern recognition centres around coarse-level contrast features. In humans and monkeys, the use of such features is most documented in the domain of face perception. Given prior suggestions that, generally, rodents might rely upon contrast features for object recognition, we hypothesized that they would pick up the typical contrast features relevant for face detection. We trained rats in a face-nonface categorization task with stimuli previously used in computer vision and tested for generalization with new, unseen stimuli by including manipulations of the presence and strength of a range of contrast features previously identified to be relevant for face detection. Although overall generalization performance was low, it was \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "0-LZmbcAAAAJ:TFP_iSt0sucC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=17878630964225576408",
+        "cites_id": [
+            "17878630964225576408"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41598-023-27533-3",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2A33DCOoHfgJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Establishing functional homology across species using a common set of natural images",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5758-5758, 2023",
+            "author": "Kasper Vinken and Saloni Sharma and Margaret Livingstone",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5758-5758",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Much of our understanding of human visual processing stems from measures of neural activity in the macaque visual system. However, to enable inference across species, it is critical to determine functional homologies of the different stages of processing. This is usually determined based on a conceptual understanding of functional specialization, which can be tricky for higher stages of processing where little is understood about what functionally distinguishes one stage from another. For example, the homologies of individual face-selective areas are not firmly established. The macaque middle-lateral and anterior-lateral face regions (ML/AL) have been suggested to correspond to:(a) the human occipital and fusiform face areas (OFA/FFA), respectively,(b) posterior and anterior FFA (FFA1/FFA2), or (c) FFA and the anterior temporal lobe face region (FFA/ATL). Here, we apply a data-driven approach that does not \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "0-LZmbcAAAAJ:maZDTaKrznsC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792517",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A computationally informed comparison between the strategies of rodents and humans in visual object recognition",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.03. 15.532720, 2023",
+            "author": "Anna Elisabeth Schnell and Maarten Leemans and Kasper Vinken and Hans Op de Beeck",
+            "journal": "bioRxiv",
+            "pages": "2023.03. 15.532720",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Many species are able to recognize objects, but it has been proven difficult to pinpoint and compare how different species solve this task. Recent research suggested to combine computational and animal modelling in order to obtain a more systematic understanding of task complexity and compare strategies between species. In the present study, we created a large multidimensional stimulus set and designed a visual discrimination task partially based upon modelling with a convolutional deep neural network (CNN). Experiments included rats (N = 11; 1115 daily sessions in total for all rats together) and humans (N = 45). Each species was able to master the task and generalize to a variety of new images. Nevertheless, rats and humans showed very little convergence in terms of which object pairs were associated with high and low performance, suggesting the use of different strategies. There was an interaction between species and whether stimulus pairs favoured early or late processing in a CNN. A direct comparison with CNN representations and visual feature analyses revealed that rat performance was best captured by late convolutional layers and partially by visual features such as brightness and pixel-level similarity, while human performance related more to the higher-up fully connected layers. These findings highlight the additional value of using a computational approach for the design of object recognition tasks. Overall, this computationally informed investigation of object recognition behaviour reveals a strong discrepancy in strategies between rodent and human vision."
+        },
+        "filled": true,
+        "author_pub_id": "0-LZmbcAAAAJ:k_IJM867U9cC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.03.15.532720.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "When the whole is only the parts: non-holistic object parts predominate face-cell responses to illusory faces.",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.09. 22.558887, 2023",
+            "author": "Saloni Sharma and Kasper Vinken and Margaret S Livingstone",
+            "journal": "bioRxiv",
+            "pages": "2023.09. 22.558887",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Humans are naturally inclined to perceive faces in everyday objects with a face-like configuration. This illusion, known as face pareidolia, is often attributed to a specialized network of 'face cells' in primates. We found that face cells in macaque inferotemporal cortex responded selectively to pareidolia images, but this selectivity did not require a holistic, face-like configuration, nor did it encode human faceness ratings. Instead, it was driven mostly by isolated object parts that are defined as eyes only within a face-like context. These object parts lack usual characteristics of primate eyes, pointing to the role of lower-level features. Our results suggest that face-cell responses are dominated by local, generic features, unlike primate visual perception, which requires holistic information. These findings caution against interpreting neural activity through the lens of human perception. Doing so could impose human perceptual biases, like seeing faces where none exist, onto our understanding of neural activity."
+        },
+        "filled": true,
+        "author_pub_id": "0-LZmbcAAAAJ:M3NEmzRMIkIC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.09.22.558887.abstract",
+        "cites_per_year": {}
+    }
+]

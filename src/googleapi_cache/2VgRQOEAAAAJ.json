@@ -1,0 +1,123 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Concurrent contextual and time-distant mnemonic information co-exist as feedback in the human visual cortex",
+            "pub_year": 2023,
+            "citation": "Neuroimage 265, 119778, 2023",
+            "author": "Javier Ortiz-Tudela and Johanna Bergmann and Matthew Bennett and Isabelle Ehrlich and Lars Muckli and Yee Lee Shing",
+            "journal": "Neuroimage",
+            "volume": "265",
+            "pages": "119778",
+            "publisher": "Academic Press",
+            "abstract": "Efficient processing of the visual environment necessitates the integration of incoming sensory evidence with concurrent contextual inputs and mnemonic content from our past experiences. To examine how this integration takes place in the brain, we isolated different types of feedback signals from the neural patterns of non-stimulated areas of the early visual cortex in humans (i.e., V1 and V2). Using multivariate pattern analysis, we showed that both contextual and time-distant information, coexist in V1 and V2 as feedback signals. In addition, we found that the extent to which mnemonic information is reinstated in V1 and V2 depends on whether the information is retrieved episodically or semantically. Critically, this reinstatement was independent on the retrieval route in the object-selective cortex. These results demonstrate that our early visual processing contains not just direct and indirect information from the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:ipzZ9siozwsC",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=6347096138518681194",
+        "cites_id": [
+            "6347096138518681194"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811922008990",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ataoQ09qFVgJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The representation of occluded image regions in area V1 of monkeys and humans",
+            "pub_year": 2023,
+            "citation": "Current Biology 33 (18), 3865-3871. e3, 2023",
+            "author": "Paolo Papale and Feng Wang and A Tyler Morgan and Xing Chen and Amparo Gilhuis and Lucy S Petro and Lars Muckli and Pieter R Roelfsema and Matthew W Self",
+            "journal": "Current Biology",
+            "volume": "33",
+            "number": "18",
+            "pages": "3865-3871. e3",
+            "publisher": "Elsevier",
+            "abstract": "Neuronal activity in the primary visual cortex (V1) is driven by feedforward input from within the neurons' receptive fields (RFs) and modulated by contextual information in regions surrounding the RF. The effect of contextual information on spiking activity occurs rapidly and is therefore challenging to dissociate from feedforward input. To address this challenge, we recorded the spiking activity of V1 neurons in monkeys viewing either natural scenes or scenes where the information in the RF was occluded, effectively removing the feedforward input. We found that V1 neurons responded rapidly and selectively to occluded scenes. V1 responses elicited by occluded stimuli could be used to decode individual scenes and could be predicted from those elicited by non-occluded images, indicating that there is an overlap between visually driven and contextual responses. We used representational similarity analysis to show \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:MLfJN-KU85MC",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/current-biology/pdf/S0960-9822(23)01053-9.pdf",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Advancing the science of consciousness: from ethics to clinical care",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Michele Farisco and Kathinka Evers and Jitka Annen and Veronique Blandin and Alessandra Camassa and Benedetta Cecconi and Vanessa Charland and Gustavo Deco and Olivia Gosseries and Steven Laureys and Arnau Manasanch Berengu\u00e9 and Marcello Massimini and Lars Muckli and Rajanikant Panda and Cyriel Pennartz and Andrea Pigorini and Melody Torao and Maria V Sanchez-Vives and Jennifer Goldman and Gorka Zamora-Lopez",
+            "publisher": "PsyArXiv",
+            "abstract": "Significant advances in the scientific investigation of the neurobiology of consciousness have been slow to be translated into clinical settings, limited by factors of conceptual (eg, what is consciousness?), methodological (eg, how to identify reliable indicators of consciousness?), and technical (eg, how to improve sensitivity and specificity of the technological identification of consciousness?) nature. In the present paper we aim at reducing the gap between research, clinical practice, patients\u2019 and their caregivers\u2019 needs regarding disorders of consciousness. By implementing a multidisciplinary and multidimensional approach, the paper focuses on disorders of consciousness: it starts from the review of some of the most promising measures of consciousness from brain activity (ie, spectral measures, measures of functional connectivity, complexity-based measures). Next the paper introduces brain responses to illusions as a new indicator of consciousness (ie, a feature that facilitates the attribution of consciousness), and illustrates the clinical operationalization of the indicators of consciousness through the case of virtual reality. Finally, the paper analyzes a set of urgent ethical issues and describes a model for assessing and dealing with those issues, concluding by elaborating key recommendations for improving the clinical treatment of patients with disorders of consciousness through a better translation of research into clinics."
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:lmc2jWPfTJgC",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/sutrc/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The spatial precision of contextual feedback signals in human V1",
+            "pub_year": 2023,
+            "citation": "Biology 12 (7), 1022, 2023",
+            "author": "Lucy S Petro and Fraser W Smith and Clement Abbatecola and Lars Muckli",
+            "journal": "Biology",
+            "volume": "12",
+            "number": "7",
+            "pages": "1022",
+            "publisher": "MDPI",
+            "abstract": "Higher levels of our visual systems process information from broad regions of our visual space, recognising scenes, objects, and faces, often regardless of their location. In contrast, earlier levels of our visual system respond to small detailed visual features, such as lines oriented in a certain direction and at precise spatial locations. High- and low-level visual areas are reciprocally connected, and visual perception emerges from recurrent neuronal computations between these areas. When tuning our brain imaging analysis to the spatial precision of the top-down connections from higher- to lower-level visual areas, do higher areas project their coarse spatial tuning or is this processing translated to the high-precision coding of the lower-level target region they are projecting to? For example, while neurons in early visual areas respond to the precise location of a cup on your desk, and higher-level areas continue to respond to the cup even when the cup is slightly moved, how is communication between higher-level visual areas and lower-level visual areas resolved? We hypothesised that the more generalised contextual information of \u2018the cup is somewhere here\u2019 is broadcast to cells in lower visual areas that would otherwise not respond, and those that are responding with the information \u2018an object boundary is precisely detected here\u2019 can now confirm whether it is consistent with the explanation that this contour belongs to a cup. In line with this hypothesis, we found that early visual areas receive feedback information that generalises across images in which the features have been spatially displaced. The data inform \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:kuK5TVdYjLIC",
+        "num_citations": 0,
+        "pub_url": "https://www.mdpi.com/2079-7737/12/7/1022",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Optimized Signal Saturation for Fast Functional Line-Scanning of Cortical Layers",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Nils Nothnagel and Tyler Morgan and Alison Symon and Lars Muckli and Jozien Goense",
+            "abstract": "Layer-dependent fMRI is typically performed at sampling rates below 1 Hz and voxel sizes of 0.7-0.9 mm3 containing signal from multiple anatomical layers. Line-scanning can enhance spatial resolution to 0.2-0.4 mm while maintaining sub-second TR. It is therefore an ideal method to study temporal evolution of BOLD responses across cortical layers. However, current saturation schemes for human line-scanning suffer from broad saturation profiles that lead to signal contamination of BOLD responses from adjacent areas. We implemented line-scanning in humans with sharp line-profiles of 3 mm. Using this method, we show that cortical layers of M1 have unique BOLD time courses."
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:b1wdh0AR-JQC",
+        "num_citations": 0,
+        "pub_url": "https://eprints.gla.ac.uk/304241/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Perceptual priors add sensory detail to contextual feedback processing in V1",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.09. 23.559098, 2023",
+            "author": "Yulia Lazarova and Yingying Huang and Lars Muckli and Lucy Petro",
+            "journal": "bioRxiv",
+            "pages": "2023.09. 23.559098",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "How do we develop models of the world? Contextualising ambiguous information with previous experience allows us to form an enriched perception. Contextual information and prior knowledge facilitate perceptual processing, improving our recognition of even distorted or obstructed visual inputs. As a result, neuronal processing elicited by identical sensory inputs varies depending on the context in which we encounter those inputs. This modulation is in line with predictive processing accounts of vision which suggest that the brain uses internal models of the world to predict sensory inputs, with cortical feedback processing in sensory areas encoding beliefs about those inputs. As such, acquiring knowledge should enhance our internal models that we use to resolve sensory ambiguities, and feedback signals should encode more accurate estimates of sensory inputs. We used partially occluded Mooney images, ambiguous two-tone images which are difficult to recognise without prior knowledge of the image content, in behavioural and 3T fMRI experiments to measure if contextual feedback signals in early visual areas are modulated by learning. We show that perceptual priors add sensory detail to contextual feedback processing in early visual areas in response to subsequent presentations of previously ambiguous images."
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:LI9QrySNdTsC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.09.23.559098.abstract",
+        "cites_per_year": {}
+    }
+]

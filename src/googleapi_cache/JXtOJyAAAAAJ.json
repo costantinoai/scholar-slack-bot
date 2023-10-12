@@ -1,0 +1,118 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Early reading skills and the ventral occipito-temporal cortex organization",
+            "pub_year": 2023,
+            "citation": "Cortex 160, 134-151, 2023",
+            "author": "Katarzyna Chyl and Francesco Gentile and Agnieszka D\u0119bska and Agnieszka Dynak and Magdalena \u0141uniewska and Marta W\u00f3jcik and Milene Bonte and Katarzyna Jednor\u00f3g",
+            "journal": "Cortex",
+            "volume": "160",
+            "pages": "134-151",
+            "publisher": "Elsevier",
+            "abstract": "Learning to read impacts the way the ventral occipitotemporal cortex (VOT) reorganizes. The postulated underlying mechanism of neuronal recycling was recently revisited. Neuroimaging data showed that voxels weakly specialized for visual processing keep their initial category selectivity (i.e., object or face processing) while acquiring an additional and stronger responsivity to written words. Here, we examined a large and diverse group of six-year-olds prior to formal literacy training (N = 72) using various data analysis techniques (univariate, multivariate, rapid adaptation) and types of stimuli (print, false fonts, houses, faces) to further explore how VOT changes and adapts to the novel skill of reading. We found that among several visual stimuli categories only print activated a wide network of language related areas outside of the bilateral visual cortex, and the level of reading skill was related to the strength of this \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:NXb4pA-qfm4C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=7519360569498333536",
+        "cites_id": [
+            "7519360569498333536"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010945223000151",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YPEGQ5kiWmgJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Cognitive correlates of reading: comparison of Braille and print readers",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Gabriela Dzi\u0119giel and Joanna Beck and Marcin Szczerbinski and Katarzyna Jednor\u00f3g",
+            "publisher": "PsyArXiv",
+            "abstract": "The cognitive correlates of reading are similar between different writing systems, however, the strength of the relationships may vary. We compared Braille to print reading in 53 blind and 53 sighted Polish-speaking subjects (age: 9-60). Blind subjects were more proficient in PA tasks than sighted subjects. Additionally, the relationship between PA and reading was different between the groups and interacted with age. In the blind, PA explained a significant proportion of variance in reading efficiency in school-aged Braille readers only. RAN turned out to explain a significant amount of reading skills variance, independently of the modality. Tactile reading seems to alter cognitive correlates of reading. It may also influence the pace at which reading is acquired"
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:dBIO0h50nwkC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=4113780071399473549",
+        "cites_id": [
+            "4113780071399473549"
+        ],
+        "pub_url": "https://psyarxiv.com/e49wa/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:jcHY3y0VFzkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Beyond the Visual Word Form Area\u2013a cognitive characterization of the left ventral occipitotemporal cortex",
+            "pub_year": 2023,
+            "citation": "Frontiers in Human Neuroscience 17, 2023",
+            "author": "Agnieszka D\u0229bska and Marta W\u00f3jcik and Katarzyna Chyl and Gabriela Dzi\u0229giel-Fivet and Katarzyna Jednor\u00f3g",
+            "volume": "17",
+            "publisher": "Frontiers Media SA",
+            "abstract": "The left ventral occipitotemporal cortex has been traditionally viewed as a pathway for visual object recognition including written letters and words. Its crucial role in reading was strengthened by the studies on the functionally localized \u201cVisual Word Form Area\u201d responsible for processing word-like information. However, in the past 20 years, empirical studies have challenged the assumptions of this brain region as processing exclusively visual or even orthographic stimuli. In this review, we aimed to present the development of understanding of the left ventral occipitotemporal cortex from the visually based letter area to the modality-independent symbolic language related region. We discuss theoretical and empirical research that includes orthographic, phonological, and semantic properties of language. Existing results showed that involvement of the left ventral occipitotemporal cortex is not limited to unimodal activity \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:HIFyuExEbWQC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=14571784631694634443",
+        "cites_id": [
+            "14571784631694634443"
+        ],
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10416454/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Similarities and differences in the neural correlates of letter and speech sound integration in blind and sighted readers",
+            "pub_year": 2023,
+            "citation": "NeuroImage 278, 120296, 2023",
+            "author": "Joanna Beck and Gabriela Dzi\u0119giel-Fivet and Katarzyna Jednor\u00f3g",
+            "journal": "NeuroImage",
+            "volume": "278",
+            "pages": "120296",
+            "publisher": "Academic Press",
+            "abstract": "Learning letter and speech sound (LS) associations is a major step in reading acquisition common for all alphabetic scripts, including Braille used by blind readers. The left superior temporal cortex (STC) plays an important role in audiovisual LS integration in sighted people, but it is still unknown what neural mechanisms are responsible for audiotactile LS integration in blind individuals. Here, we investigated the similarities and differences between LS integration in blind Braille (N = 42, age range: 9\u201360 y.o.) and sighted print (N = 47, age range: 9\u201360 y.o.) readers who acquired reading using different sensory modalities. In both groups, the STC responded to both isolated letters and isolated speech sounds, showed enhanced activation when they were presented together, and distinguished between congruent and incongruent letter and speech sound pairs. However, the direction of the congruency effect was \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:4vMrXwiscB8C",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811923004470",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Overlapping but separate number representations in the intraparietal sulcus\u2014Probing format-and modality-independence in sighted Braille readers",
+            "pub_year": 2023,
+            "citation": "Cortex 162, 65-80, 2023",
+            "author": "Maria Czarnecka and Katarzyna R\u0105czy and Jakub Szewczyk and Ma\u0142gorzata Papli\u0144ska and Katarzyna Jednor\u00f3g and Artur Marchewka and Guido Hesselmann and Andr\u00e9 Knops and Marcin Szwed",
+            "journal": "Cortex",
+            "volume": "162",
+            "pages": "65-80",
+            "publisher": "Elsevier",
+            "abstract": "The Triple-Code Model stipulates that numerical information from different formats and modalities converges on a common magnitude representation in the Intraparietal Sulcus (IPS). To what extent the representations of all numerosity forms overlap remains unsolved. It has been postulated that the representation of symbolic numerosities (for example, Arabic digits) is sparser and grounded in an existing representation that codes for non-symbolic numerosity information (i.e., sets of objects). Other theories argue that numerical symbols represent a separate number category that emerges only during education. Here, we tested a unique group of sighted tactile Braille readers with numerosities 2, 4, 6 and 8 in three number notations: Arabic digits, sets of dots, tactile Braille numbers. Using univariate methods, we showed a consistent overlap in activations evoked by these three number notations. This result shows that \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:a9-T7VOCCH8C",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010945223000436",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:xr0A2Hhk1iIJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How Do Adults with Dyslexia Recognize Spoken Words? Evidence from Behavioral and EEG Data",
+            "pub_year": 2023,
+            "citation": "Scientific Studies of Reading, 1-21, 2023",
+            "author": "Ambre Denis-No\u00ebl and Pascale Col\u00e9 and Deirdre Bolger and Chotiga Pattamadilok",
+            "journal": "Scientific Studies of Reading",
+            "pages": "1-21",
+            "publisher": "Routledge",
+            "abstract": "In adults with dyslexia (DYS), the persistent influence of phonological deficits on spoken language processing has mainly been examined in either perceptual tasks or those tapping complex cognitive operations. Much less attention is devoted to spoken word recognition per se. Our study aimed to fill this gap.Adults with and without dyslexia (for both groups: N\u2009=\u200930, mean age\u2009=\u200921\u2009years, 50% female, 100% white European) performed an auditory lexical decision task. Performance and ERP were recorded.Reaction times showed a lexicality effect in both groups although they differed in ERP responses to stimulus lexicality. Skilled readers showed the typical amplitude enhancement for pseudowords compared to words in a late phase of N400 (414-581msec) whereas DYS showed the opposite pattern in an earlier phase of N400 (246-413msec). Both groups showed a stronger negativity \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "CL7jAd8AAAAJ:a0OBvERweLwC",
+        "num_citations": 0,
+        "pub_url": "https://www.tandfonline.com/doi/abs/10.1080/10888438.2023.2218503",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:319lkeaFYFcJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

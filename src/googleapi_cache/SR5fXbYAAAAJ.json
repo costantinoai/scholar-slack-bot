@@ -1,0 +1,64 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Category trumps shape as an organizational principle of object space in the human occipitotemporal cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience, 2023",
+            "author": "Elahe Yargholi and Hans Op de Beeck",
+            "journal": "Journal of Neuroscience",
+            "publisher": "Society for Neuroscience",
+            "abstract": "The organizational principles of the object space represented in the human ventral visual cortex are debated. Here we contrast two prominent proposals that, in addition to an organization in terms of animacy, propose either a representation related to aspect ratio (stubby-spiky) or to the distinction between faces and bodies. We designed a critical test that dissociates the latter two categories from aspect ratio and investigated responses from human fMRI (of either sex) and deep neural networks (BigBiGAN). Representational similarity and decoding analyses showed that the object space in the occipitotemporal cortex and BigBiGAN was partially explained by animacy but not by aspect ratio. Data-driven approaches showed clusters for face and body stimuli and animate-inanimate separation in the representational space of occipitotemporal cortex and BigBiGAN, but no arrangement related to aspect ratio. In sum, the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "SR5fXbYAAAAJ:W7OEmFMy1HYC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=10652240416414833317",
+        "cites_id": [
+            "10652240416414833317"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/43/16/2960.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:pRp3gjhc1JMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Psychiatrische toepassingsmogelijkheden van Artifici\u00eble Neurale Netwerken",
+            "pub_year": 2023,
+            "citation": "Tijdschrift voor Psychiatrie, 2023",
+            "author": "Laurent Mertens and Joost Vennekens and Hans Op de Beeck and Elahe' Yargholi and Jan Van den Stock",
+            "journal": "Tijdschrift voor Psychiatrie",
+            "publisher": "Uitgeverij Boom",
+            "abstract": "Artifici\u00eble Intelligentie (AI) evolueerde enorm tijdens het voorbije decennium en kent steeds meer toepassingsgebieden, inclusief psychiatrie. AI omvat verschillende modaliteiten, waaronder Artifici\u00eble Neurale Netwerken (ANNs), verwijzend naar computermodellen die gebaseerd zijn op de werking van het brein. Hoewel ANNs sinds de jaren'50 beschreven zijn, werden ze pas\" mainstream\" sinds een tiental jaren. Momenteel worden ANNs als een van de meest effici\u00ebnte en bruikbare AI modaliteiten beschouwd. Het feit dat ANNs inspiratie halen uit de werking van het brein doet de vraag rijzen of ze gebruikt kunnen worden om het (dys) functioneren van het brein en bijgevolg cognitie en gedrag te simuleren. Deze vraag heeft geleid tot de opkomst van het domein\" Computationele Psychiatrie\"."
+        },
+        "filled": true,
+        "author_pub_id": "SR5fXbYAAAAJ:M3ejUd6NZC8C",
+        "num_citations": 0,
+        "pub_url": "https://lirias.kuleuven.be/4092987?limo=0",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Color-Dependent Prediction Stability of Popular CNN Image Classification Architectures",
+            "pub_year": 2023,
+            "citation": "Lecture Notes in Computer Science, 1-12, 2023",
+            "author": "Laurent Mertens and Elahe' Yargholi and Jan Van den Stock and Hans Op de Beeck and Joost Vennekens",
+            "journal": "Lecture Notes in Computer Science",
+            "pages": "1-12",
+            "publisher": "Springer Nature",
+            "abstract": "The ImageNet-1k dataset has been a major contributor to the development of novel CNN-based image classification architectures over the past 10 years. This has led to the advent of a number of models, pre-trained on this dataset, that form a popular basis for creating custom image classifiers by means of transfer learning. A corollary of this process is that whatever weaknesses and biases the original model possesses, the derived model will also have. Some of these have already been extensively covered, but color sensitivity has so far been understudied. This paper explores the prediction stability of several popular CNN architectures when input images are subjected to hue or saturation shifts. We show that even small shifts in image hue can alter a model\u2019s initial prediction, with larger shifts introducing changes up to 60% and 40% of the time for AlexNet and VGG16 respectively. For all models considered \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "SR5fXbYAAAAJ:4TOpqqG69KYC",
+        "num_citations": 0,
+        "pub_url": "https://link.springer.com/chapter/10.1007/978-3-031-44207-0_41",
+        "cites_per_year": {}
+    }
+]

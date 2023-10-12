@@ -1,0 +1,146 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The algonauts project 2023 challenge: How the human brain makes sense of natural scenes",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2301.03198, 2023",
+            "author": "Alessandro T Gifford and Benjamin Lahner and Sari Saba-Sadiya and Martina G Vilas and Alex Lascelles and Aude Oliva and Kendrick Kay and Gemma Roig and Radoslaw M Cichy",
+            "journal": "arXiv preprint arXiv:2301.03198",
+            "abstract": "The sciences of biological and artificial intelligence are ever more intertwined. Neural computational principles inspire new intelligent machines, which are in turn used to advance theoretical understanding of the brain. To promote further exchange of ideas and collaboration between biological and artificial intelligence researchers, we introduce the 2023 installment of the Algonauts Project challenge: How the Human Brain Makes Sense of Natural Scenes (http://algonauts.csail.mit.edu). This installment prompts the fields of artificial and biological intelligence to come together towards building computational models of the visual brain using the largest and richest dataset of fMRI responses to visual scenes, the Natural Scenes Dataset (NSD). NSD provides high-quality fMRI responses to ~73,000 different naturalistic colored scenes, making it the ideal candidate for data-driven model building approaches promoted by the 2023 challenge. The challenge is open to all and makes results directly comparable and transparent through a public leaderboard automatically updated after each submission, thus allowing for rapid model development. We believe that the 2023 installment will spark symbiotic collaborations between biological and artificial intelligence scientists, leading to a deeper understanding of the brain through cutting-edge computational models and to novel ways of engineering artificial intelligent agents through inductive biases from biological systems."
+        },
+        "filled": true,
+        "author_pub_id": "FNhl50sAAAAJ:dBIO0h50nwkC",
+        "num_citations": 7,
+        "citedby_url": "/scholar?hl=en&cites=1174422521076802658",
+        "cites_id": [
+            "1174422521076802658"
+        ],
+        "pub_url": "https://arxiv.org/abs/2301.03198",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YmQAgQ9jTBAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 7
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Going beyond nouns with vision & language models using synthetic data",
+            "pub_year": 2023,
+            "citation": "Proceedings of the IEEE/CVF International Conference on Computer Vision \u2026, 2023",
+            "author": "Paola Cascante-Bonilla and Khaled Shehada and James Seale Smith and Sivan Doveh and Donghyun Kim and Rameswar Panda and Gul Varol and Aude Oliva and Vicente Ordonez and Rogerio Feris and Leonid Karlinsky",
+            "conference": "Proceedings of the IEEE/CVF International Conference on Computer Vision",
+            "pages": "20155-20165",
+            "abstract": "Large-scale pre-trained Vision & Language (VL) models have shown remarkable performance in many applications, enabling replacing a fixed set of supported classes with zero-shot open vocabulary reasoning over (almost arbitrary) natural language prompts. However, recent works have uncovered a fundamental weakness of these models. For example, their difficulty to understand Visual Language Concepts (VLC) that go'beyond nouns' such as the meaning of non-object words (eg, attributes, actions, relations, states, etc.), or difficulty in performing compositional reasoning such as understanding the significance of the order of the words in a sentence. In this work, we investigate to which extent purely synthetic data could be leveraged to teach these models to overcome such shortcomings without compromising their zero-shot capabilities. We contribute Synthetic Visual Concepts (SyViC)-a million-scale synthetic dataset and data generation codebase allowing to generate additional suitable data to improve VLC understanding and compositional reasoning of VL models. Additionally, we propose a general VL finetuning strategy for effectively leveraging SyViC towards achieving these improvements. Our extensive experiments and ablations on VL-Checklist, Winoground, and ARO benchmarks demonstrate that it is possible to adapt strong pre-trained VL models with synthetic data significantly enhancing their VLC understanding (eg by 9.9% on ARO and 4.3% on VL-Checklist) with under 1% drop in their zero-shot accuracy."
+        },
+        "filled": true,
+        "author_pub_id": "FNhl50sAAAAJ:HIFyuExEbWQC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=3904652032954906011",
+        "cites_id": [
+            "3904652032954906011"
+        ],
+        "pub_url": "http://openaccess.thecvf.com/content/ICCV2023/html/Cascante-Bonilla_Going_Beyond_Nouns_With_Vision__Language_Models_Using_Synthetic_ICCV_2023_paper.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:m7XIE1YcMDYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Leveraging Temporal Context in Low Representational Power Regimes",
+            "pub_year": 2023,
+            "citation": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern \u2026, 2023",
+            "author": "Camilo L Fosco and SouYoung Jin and Emilie Josephs and Aude Oliva",
+            "conference": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+            "pages": "10693-10703",
+            "abstract": "Computer vision models are excellent at identifying and exploiting regularities in the world. However, it is computationally costly to learn these regularities from scratch. This presents a challenge for low-parameter models, like those running on edge devices (eg smartphones). Can the performance of models with low representational power be improved by supplementing training with additional information about these statistical regularities? We explore this in the domains of action recognition and action anticipation, leveraging the fact that actions are typically embedded in stereotypical sequences. We introduce the Event Transition Matrix (ETM), computed from action labels in an untrimmed video dataset, which captures the temporal context of a given action, operationalized as the likelihood that it was preceded or followed by each other action in the set. We show that including information from the ETM during training improves action recognition and anticipation performance on various egocentric video datasets. Through ablation and control studies, we show that the coherent sequence of information captured by our ETM is key to this effect, and we find that the benefit of this explicit representation of temporal context is most pronounced for smaller models. Code, matrices and models are available in our project page: https://camilofosco. com/etm_website."
+        },
+        "filled": true,
+        "author_pub_id": "FNhl50sAAAAJ:4vMrXwiscB8C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=6865103784530314443",
+        "cites_id": [
+            "6865103784530314443"
+        ],
+        "pub_url": "http://openaccess.thecvf.com/content/CVPR2023/html/Fosco_Leveraging_Temporal_Context_in_Low_Representational_Power_Regimes_CVPR_2023_paper.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:y4Qe54S_RV8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "INTERPRETABILITY-AWARE REDUNDANCY REDUCTION FOR VISION TRANSFORMERS",
+            "pub_year": 2023,
+            "citation": "US Patent App. 17/559,053, 2023",
+            "author": "Bowen Pan and Rameswar Panda and Rogerio Schmidt Feris and Aude Jeanne Oliva",
+            "abstract": "A sequence of patch tokens representing an image can be received. A network can be trained to learn informative patch tokens and uninformative patch tokens in the sequence of patch tokens, in learning to recognize an object in the image. The sequence of patch tokens can be reduced by removing the uninformative patch tokens from the sequence of patch tokens. The reduced sequence of patch tokens can be input to an attention-based deep learning neural network. The attention-based deep learning neural network can be fine-tuned to recognize the object in the image using the reduced sequence of patch tokens."
+        },
+        "filled": true,
+        "author_pub_id": "FNhl50sAAAAJ:Dem6FJhTUoYC",
+        "num_citations": 0,
+        "pub_url": "https://www.freepatentsonline.com/y2023/0196710.html",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Artifact magnification on deepfake videos increases human detection and subjective confidence",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2304.04733, 2023",
+            "author": "Emilie Josephs and Camilo Fosco and Aude Oliva",
+            "journal": "arXiv preprint arXiv:2304.04733",
+            "abstract": "The development of technologies for easily and automatically falsifying video has raised practical questions about people's ability to detect false information online. How vulnerable are people to deepfake videos? What technologies can be applied to boost their performance? Human susceptibility to deepfake videos is typically measured in laboratory settings, which do not reflect the challenges of real-world browsing. In typical browsing, deepfakes are rare, engagement with the video may be short, participants may be distracted, or the video streaming quality may be degraded. Here, we tested deepfake detection under these ecological viewing conditions, and found that detection was lowered in all cases. Principles from signal detection theory indicated that different viewing conditions affected different dimensions of detection performance. Overall, this suggests that the current literature underestimates people's susceptibility to deepfakes. Next, we examined how computer vision models might be integrated into users' decision process to increase accuracy and confidence during deepfake detection. We evaluated the effectiveness of communicating the model's prediction to the user by amplifying artifacts in fake videos. We found that artifact amplification was highly effective at making fake video distinguishable from real, in a manner that was robust across viewing conditions. Additionally, compared to a traditional text-based prompt, artifact amplification was more convincing: people accepted the model's suggestion more often, and reported higher final confidence in their model-supported decision, particularly for more challenging videos. Overall \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "FNhl50sAAAAJ:mNrWkgRL2YcC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2304.04733",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ES4SYfMgEWAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Adaptive redundancy reduction for efficient video understanding",
+            "pub_year": 2023,
+            "citation": "US Patent App. 17/476,437, 2023",
+            "author": "Bowen Pan and Rameswar Panda and Camilo Luciano Fosco and Rogerio Schmidt Feris and Aude Jeanne Oliva",
+            "abstract": "For each convolution layer of a plurality of convolution layers of a convolutional neural network (CNN), apply an input-dependent policy network to determine: a first fraction of input feature maps to the given layer for which first corresponding output feature maps are to be fully computed by the layer; and a second fraction of input feature maps to the layer for which second corresponding output feature maps are not to be fully computed, but to be reconstructed from the first corresponding output feature maps. Fully computing the first corresponding output feature maps and reconstruct the second corresponding output feature maps. For a final one of the convolution layers of the plurality of convolution layers of the neural network, input the first corresponding output feature maps and the second corresponding output feature maps to an output layer to obtain an inference result."
+        },
+        "filled": true,
+        "author_pub_id": "FNhl50sAAAAJ:SGW5VrABaM0C",
+        "num_citations": 0,
+        "pub_url": "https://patents.google.com/patent/US20230082448A1/en",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "BOLD Moments: modeling short visual events through a video fMRI dataset and metadata",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.03. 12.530887, 2023",
+            "author": "Benjamin Lahner and Kshitij Dwivedi and Polina Iamshchinina and Monika Graumann and Alex Lascelles and Gemma Roig and Alessandro Thomas Gifford and Bowen Pan and SouYoung Jin and N Apurva Ratan Murty and Kendrick Kay and Aude Oliva and Radoslaw Cichy",
+            "journal": "bioRxiv",
+            "pages": "2023.03. 12.530887",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Grasping the meaning of everyday visual events is a fundamental feat of human intelligence that hinges on diverse neural processes ranging from vision to higher-level cognition. Deciphering the neural basis of visual event understanding requires rich, extensive, and appropriately designed experimental data. However, this type of data is hitherto missing. To fill this gap, we introduce the BOLD Moments Dataset (BMD), a large dataset of whole-brain fMRI responses to over 1,000 short (3s) naturalistic video clips and accompanying metadata. We show visual events interface with an array of processes, extending even to memory, and we reveal a match in hierarchical processing between brains and video-computable deep neural networks. Furthermore, we showcase that BMD successfully captures temporal dynamics of visual events at second resolution. BMD thus establishes a critical groundwork for investigations of the neural basis of visual event understanding."
+        },
+        "filled": true,
+        "author_pub_id": "FNhl50sAAAAJ:cWzG1nlazyYC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.03.12.530887.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:jESFCRR-e_wJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

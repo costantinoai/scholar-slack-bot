@@ -1,0 +1,158 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The neural code for \u201cface cells\u201d is not face-specific",
+            "pub_year": 2023,
+            "citation": "Science Advances 9 (35), eadg1736, 2023",
+            "author": "Kasper Vinken and Jacob S Prince and Talia Konkle and Margaret S Livingstone",
+            "journal": "Science Advances",
+            "volume": "9",
+            "number": "35",
+            "pages": "eadg1736",
+            "publisher": "American Association for the Advancement of Science",
+            "abstract": "Face cells are neurons that respond more to faces than to non-face objects. They are found in clusters in the inferotemporal cortex, thought to process faces specifically, and, hence, studied using faces almost exclusively. Analyzing neural responses in and around macaque face patches to hundreds of objects, we found graded response profiles for non-face objects that predicted the degree of face selectivity and provided information on face-cell tuning beyond that from actual faces. This relationship between non-face and face responses was not predicted by color and simple shape properties but by information encoded in deep neural networks trained on general objects rather than face classification. These findings contradict the long-standing assumption that face versus non-face selectivity emerges from face-specific features and challenge the practice of focusing on only the most effective stimulus. They provide \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:hCrLmN-GePgC",
+        "num_citations": 7,
+        "citedby_url": "/scholar?hl=en&cites=18445614144556874267",
+        "cites_id": [
+            "18445614144556874267"
+        ],
+        "pub_url": "https://www.science.org/doi/abs/10.1126/sciadv.adg1736",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:G7o73lX8-_8J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 2,
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Performance-optimized deep neural networks are evolving into worse models of inferotemporal visual cortex",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2306.03779, 2023",
+            "author": "Drew Linsley and Ivan F Rodriguez and Thomas Fel and Michael Arcaro and Saloni Sharma and Margaret Livingstone and Thomas Serre",
+            "journal": "arXiv preprint arXiv:2306.03779",
+            "abstract": "One of the most impactful findings in computational neuroscience over the past decade is that the object recognition accuracy of deep neural networks (DNNs) correlates with their ability to predict neural responses to natural images in the inferotemporal (IT) cortex. This discovery supported the long-held theory that object recognition is a core objective of the visual cortex, and suggested that more accurate DNNs would serve as better models of IT neuron responses to images. Since then, deep learning has undergone a revolution of scale: billion parameter-scale DNNs trained on billions of images are rivaling or outperforming humans at visual tasks including object recognition. Have today's DNNs become more accurate at predicting IT neuron responses to images as they have grown more accurate at object recognition? Surprisingly, across three independent experiments, we find this is not the case. DNNs have become progressively worse models of IT as their accuracy has increased on ImageNet. To understand why DNNs experience this trade-off and evaluate if they are still an appropriate paradigm for modeling the visual system, we turn to recordings of IT that capture spatially resolved maps of neuronal activity elicited by natural images. These neuronal activity maps reveal that DNNs trained on ImageNet learn to rely on different visual features than those encoded by IT and that this problem worsens as their accuracy increases. We successfully resolved this issue with the neural harmonizer, a plug-and-play training routine for DNNs that aligns their learned representations with humans. Our results suggest that harmonized DNNs break the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:mNrWkgRL2YcC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=3024302051792673399",
+        "cites_id": [
+            "3024302051792673399"
+        ],
+        "pub_url": "https://arxiv.org/abs/2306.03779",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:d1qWUrF6-CkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Harmonizing the visual strategies of image-computable models with humans yields more performant and interpretable models of primate visual system function.",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5768-5768, 2023",
+            "author": "Ivan Felipe Rodriguez and Drew Linsley and Jay Gopal and Thomas Fel and Michael J Acaro and Saloni Sharma and Margaret Livingstone and Thomas Serre",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5768-5768",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Over the past decade, deep neural networks (DNNs) have been the standard paradigm for modeling biological brains and behavior. While initial reports suggested that the ability of DNNs to model biology correlated with their object classification accuracy (Yamins et al., 2014), this no longer appears to be the case: image-evoked activity in a self-supervised ResNet50\u2014an architecture introduced seven years ago\u2014has the highest correlation with IT recordings on Brain-Score. com. We recently discovered that DNNs are also becoming progressively less aligned with human perception as their object classification accuracy has increased. This problem however can be resolved through \u201cneural harmonization\u201d: a drop-in training module for DNNs that forces their learned visual strategies to be consistent with those of humans (Fel et al., 2022). DNNs that are trained for object classification and harmonized with behavioral \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:OR75R8vi5nAC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792508",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Configural selectivity for faces in IT cortex is experience-dependent",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5482-5482, 2023",
+            "author": "Akshay V Jagadeesh and Margaret S Livingstone",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5482-5482",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Humans are perceptually sensitive to the configuration of features in faces and objects and can accurately distinguish a real face or object from a scrambled one. In contrast, for textures, humans are relatively insensitive to variation in feature configuration. However, the cortical representation of objects in human ventral visual cortex is non-selective for feature configuration, suggesting objects are encoded as a texture-like feature representation. It is widely believed that faces are a special category, so it is possible face-selective domains of visual cortex are uniquely selective for face feature configuration. Further, it remains unknown whether this configural selectivity is dependent on exposure to faces during early visual development. Here, we recorded multi-unit electrophysiological activity from inferior temporal (IT) cortex of 6 macaques\u20144 reared typically and 2 reared without experience of faces during infancy\u2014as \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:OcBU2YAGkTUC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791923",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Strobe-rearing preserves motion selectivity but disrupts direction selectivity in macaque area MT",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5675-5675, 2023",
+            "author": "Saloni Sharma and Michael Arcaro and Margaret Livingstone",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5675-5675",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Temporal continuity of visual input plays a fundamental role in the development of the visual system. Thus far, disrupting temporal continuity by strobe-rearing has been studied in only cats and other non-primates, targeting mainly early visual cortex. It remains unclear how strobe-rearing impacts the development of the visual system in primates, particularly beyond early visual areas. Here, we raised 2 infant macaques from birth wearing helmets during the day fitted with optical shutters, which were controlled by a small circuit that opens and closes at 1Hz (200ms open). Using such helmets allowed us to simulate stroboscopic vision, while maintaining a visually complex social environment, including interactions with monkeys housed in the same room and humans. After 1.5 years of strobe-rearing, we conducted resting-state and task-based fMRI experiments under light sedation to study the brain-wide impact of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:ODE9OILHJdcC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792595",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Establishing functional homology across species using a common set of natural images",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5758-5758, 2023",
+            "author": "Kasper Vinken and Saloni Sharma and Margaret Livingstone",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5758-5758",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Much of our understanding of human visual processing stems from measures of neural activity in the macaque visual system. However, to enable inference across species, it is critical to determine functional homologies of the different stages of processing. This is usually determined based on a conceptual understanding of functional specialization, which can be tricky for higher stages of processing where little is understood about what functionally distinguishes one stage from another. For example, the homologies of individual face-selective areas are not firmly established. The macaque middle-lateral and anterior-lateral face regions (ML/AL) have been suggested to correspond to:(a) the human occipital and fusiform face areas (OFA/FFA), respectively,(b) posterior and anterior FFA (FFA1/FFA2), or (c) FFA and the anterior temporal lobe face region (FFA/ATL). Here, we apply a data-driven approach that does not \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:yFnVuubrUp4C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792517",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "When the whole is only the parts: non-holistic object parts predominate face-cell responses to illusory faces.",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.09. 22.558887, 2023",
+            "author": "Saloni Sharma and Kasper Vinken and Margaret S Livingstone",
+            "journal": "bioRxiv",
+            "pages": "2023.09. 22.558887",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Humans are naturally inclined to perceive faces in everyday objects with a face-like configuration. This illusion, known as face pareidolia, is often attributed to a specialized network of 'face cells' in primates. We found that face cells in macaque inferotemporal cortex responded selectively to pareidolia images, but this selectivity did not require a holistic, face-like configuration, nor did it encode human faceness ratings. Instead, it was driven mostly by isolated object parts that are defined as eyes only within a face-like context. These object parts lack usual characteristics of primate eyes, pointing to the role of lower-level features. Our results suggest that face-cell responses are dominated by local, generic features, unlike primate visual perception, which requires holistic information. These findings caution against interpreting neural activity through the lens of human perception. Doing so could impose human perceptual biases, like seeing faces where none exist, onto our understanding of neural activity."
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:3htObqc8RwsC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.09.22.558887.abstract",
+        "cites_per_year": {}
+    }
+]

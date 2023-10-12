@@ -1,0 +1,70 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Spikiness and animacy as potential organizing principles of human ventral visual cortex",
+            "pub_year": 2023,
+            "citation": "Cerebral Cortex, bhad108, 2023",
+            "author": "David D Coggan and Frank Tong",
+            "journal": "Cerebral Cortex",
+            "pages": "bhad108",
+            "publisher": "Oxford University Press",
+            "abstract": "Considerable research has been devoted to understanding the fundamental organizing principles of the ventral visual pathway. A recent study revealed a series of 3\u20134 topographical maps arranged along the macaque inferotemporal (IT) cortex. The maps articulated a two-dimensional space based on the spikiness and animacy of visual objects, with \u201cinanimate-spiky\u201d and \u201cinanimate-stubby\u201d regions of the maps constituting two previously unidentified cortical networks. The goal of our study was to determine whether a similar functional organization might exist in human IT. To address this question, we presented the same object stimuli and images from \u201cclassic\u201d object categories (bodies, faces, houses) to humans while recording fMRI activity at 7 Tesla. Contrasts designed to reveal the spikiness-animacy object space evoked extensive significant activation across human IT. However, unlike the macaque, we did \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "c4n_l-gAAAAJ:_FxGoFyzp5QC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=192480849805182636",
+        "cites_id": [
+            "192480849805182636"
+        ],
+        "pub_url": "https://academic.oup.com/cercor/advance-article-abstract/doi/10.1093/cercor/bhad108/7084655",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:rAa0JlDUqwIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Unsupervised contrastive learning and supervised classification training have opposite effects on the human-likeness of CNNs during occluded object processing",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5448-5448, 2023",
+            "author": "David Coggan and Frank Tong",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5448-5448",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Human observers can readily perceive and recognize visual objects even when occluding stimuli obscure much of the object from view. By contrast, state-of-the-art convolutional neural network (CNN) models of primate vision perform poorly at classifying occluded objects (Coggan and Tong, VSS, 2022). A key difference between biological and artificial visual systems is how they learn from visual examples. CNNs are typically trained using supervised methods to classify images by object category based on labelled data. By contrast, humans learn about objects with a broader range of learning objectives and fewer opportunities for supervised feedback. Here, we asked whether a more naturalistic approach to training CNNs might yield more occlusion-robust models that better predict human neural and behavioural responses to occluded objects. To address this question, we trained an array of CORnet-S model \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "c4n_l-gAAAAJ:roLk4NBRz8UC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791955",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Discovery of sharper orientation-tuned surround suppression for oblique than cardinal orientations provides support for a multi-stage model of normalization",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5426-5426, 2023",
+            "author": "Hui-Yuan Miao and David Coggan and Frank Tong",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5426-5426",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Surround suppression can reduce the perceived contrast of a stimulus when the neighboring surround is visually similar due to inhibitory neural interactions. While human observers are much better at discriminating small differences in orientation that are near cardinal rather than oblique (ie, the oblique effect), it is unknown whether surround suppression might reveal a similar orientation-tuned anisotropy. To address this question, we conducted an intensive psychophysical study (5280 trials/observer, N= 12) in which participants reported which of two identically oriented circular figures appeared higher in contrast: one was isolated while the other was surrounded by a bandpass-filtered pattern that differed in mean orientation (range, 0-90). Surround suppression at each relative orientation was measured using an adaptive staircase to adjust the contrast of the isolated figure until it matched the perceived contrast of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "c4n_l-gAAAAJ:LkGwnXOMwfcC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791975",
+        "cites_per_year": {}
+    }
+]

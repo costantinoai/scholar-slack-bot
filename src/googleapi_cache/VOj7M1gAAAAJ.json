@@ -1,0 +1,30 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Macaques recognize features in synthetic images derived from ventral stream neurons",
+            "pub_year": 2023,
+            "citation": "Proceedings of the National Academy of Sciences 120 (10), e2213034120, 2023",
+            "author": "Katherine N Mueller and Mary C Carter and Jeevun A Kansupada and Carlos R Ponce",
+            "journal": "Proceedings of the National Academy of Sciences",
+            "volume": "120",
+            "number": "10",
+            "pages": "e2213034120",
+            "publisher": "National Academy of Sciences",
+            "abstract": "Primates can recognize features in virtually all types of images, an ability that still requires a comprehensive computational explanation. One hypothesis is that visual cortex neurons learn patterns from scenes, objects, and textures, and use these patterns to interpolate incoming visual information. We have used machine learning algorithms to instantiate visual patterns stored by neurons\u2014we call these highly activating images prototypes. Prototypes from inferotemporal (IT) neurons often resemble parts of real-world objects, such as monkey faces and body parts, a similarity established via pretrained neural networks [C. R. Ponce et al., Cell 177, 999\u20131009.e10 (2019)] and na\u00efve human participants [A. Bardon, W. Xiao, C. R. Ponce, M. S. Livingstone, G. Kreiman, Proc. Natl. Acad. Sci. U.S.A. 119, e2118705119 (2022)]. However, it is not known whether monkeys themselves perceive similarities between neuronal \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "VOj7M1gAAAAJ:M3ejUd6NZC8C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=6215382101029684899",
+        "cites_id": [
+            "6215382101029684899"
+        ],
+        "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2213034120",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:owYyIxd5QVYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    }
+]

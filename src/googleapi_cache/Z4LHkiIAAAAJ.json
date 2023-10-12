@@ -1,0 +1,335 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neurodegenerative disease of the brain: a survey of interdisciplinary approaches",
+            "pub_year": 2023,
+            "citation": "Journal of the Royal Society Interface 20 (198), 20220406, 2023",
+            "author": "Franca Davenport and John Gallacher and Zoe Kourtzi and Ivan Koychev and Paul M Matthews and Neil P Oxtoby and Laura M Parkes and Viola Priesemann and James B Rowe and Stephen W Smye and Henrik Zetterberg",
+            "volume": "20",
+            "number": "198",
+            "pages": "20220406",
+            "publisher": "The Royal Society",
+            "abstract": "Neurodegenerative diseases of the brain pose a major and increasing global health challenge, with only limited progress made in developing effective therapies over the last decade. Interdisciplinary research is improving understanding of these diseases and this article reviews such approaches, with particular emphasis on tools and techniques drawn from physics, chemistry, artificial intelligence and psychology."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:ZzlSgRqYykMC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=15509722436224081650",
+        "cites_id": [
+            "15509722436224081650"
+        ],
+        "pub_url": "https://royalsocietypublishing.org/doi/abs/10.1098/rsif.2022.0406",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:8t4KuGGaPdcJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Study protocol: How does cognitive flexibility relate to other executive functions and learning in healthy young adults?",
+            "pub_year": 2023,
+            "citation": "PloS one 18 (7), e0286208, 2023",
+            "author": "Ke Tong and Yuan Ni Chan and Xiaoqin Cheng and Bobby Cheon and Michelle Ellefson and Restria Fauziana and Shengchuang Feng and Nastassja Fischer and Bal\u00e1zs Guly\u00e1s and Natalie Hoo and David Hung and Kastoori Kalaivanan and Christelle Langley and Kean Mun Lee and Li Ling Lee and Timothy Lee and Irene Melani and Nadhilla Melia and Jia Ying Pei and Lisha Raghani and Yoke Loo Sam and Peter Seow and John Suckling and Yan Fen Tan and Chew Lee Teo and Ryutaro Uchiyama and Hui Shan Yap and Georgios Christopoulos and Henriette Hendriks and Annabel Chen and Trevor Robbins and Barbara Sahakian and Zoe Kourtzi and Victoria Leong and CLIC Phase 1 Consortium",
+            "journal": "PloS one",
+            "volume": "18",
+            "number": "7",
+            "pages": "e0286208",
+            "publisher": "Public Library of Science",
+            "abstract": "Cognitive flexibility (CF) enables individuals to readily shift from one concept or mode of practice/thoughts to another in response to changes in the environment and feedback, making CF vital to optimise success in obtaining goals. However, how CF relates to other executive functions (e.g., working memory, response inhibition), mental abilities (e.g., creativity, literacy, numeracy, intelligence, structure learning), and social factors (e.g., multilingualism, tolerance of uncertainty, perceived social support, social decision-making) is less well understood. The current study aims to (1) establish the construct validity of CF in relation to other executive function skills and intelligence, and (2) elucidate specific relationships between CF, structure learning, creativity, career decision making and planning, and other life skills.This study will recruit up to 400 healthy Singaporean young adults (age 18\u201330) to complete a wide range of cognitive tasks and social questionnaires/tasks. The richness of the task/questionnaire battery and within-participant administration enables us to use computational modelling and structural equation modelling to examine connections between the latent constructs of interest.The current study is the first systematic investigation into the construct validity of CF and its interrelationship with other important cognitive skills such as learning and creativity, within an Asian context. The study will further explore the concept of CF as a non-unitary construct, a novel theoretical proposition in the field. The inclusion of a structure learning paradigm is intended to inform future development of a novel \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:Bg7qf7VwUHIC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=16234955933334866351",
+        "cites_id": [
+            "16234955933334866351"
+        ],
+        "pub_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0286208",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Ultra-High Field Imaging of Human Visual Cognition",
+            "pub_year": 2023,
+            "citation": "Annual Review of Vision Science 9, 2023",
+            "author": "Ke Jia and Rainer Goebel and Zoe Kourtzi",
+            "volume": "9",
+            "publisher": "Annual Reviews",
+            "abstract": "Functional magnetic resonance imaging (fMRI), the key methodology for mapping the functions of the human brain in a noninvasive manner, is limited by low temporal and spatial resolution. Recent advances in ultra-high field (UHF) fMRI provide a mesoscopic (i.e., submillimeter resolution) tool that allows us to probe laminar and columnar circuits, distinguish bottom-up versus top-down pathways, and map small subcortical areas. We review recent work demonstrating that UHF fMRI provides a robust methodology for imaging the brain across cortical depths and columns that provides insights into the brain's organization and functions at unprecedented spatial resolution, advancing our understanding of the fine-scale computations and interareal communication that support visual cognition.Expected final online publication date for the Annual Review of Vision Science, Volume 9 is September 2023. Please see http \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:fbc8zXXH2BUC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=6823233917919260094",
+        "cites_id": [
+            "6823233917919260094"
+        ],
+        "pub_url": "https://www.annualreviews.org/doi/abs/10.1146/annurev-vision-111022-123830",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vm356Bj_sF4J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Learning at your brain\u2019s rhythm: individualized entrainment boosts learning for perceptual decisions",
+            "pub_year": 2023,
+            "citation": "Cerebral Cortex 33 (9), 5382-5394, 2023",
+            "author": "Elizabeth Michael and Lorena Santamaria Covarrubias and Victoria Leong and Zoe Kourtzi",
+            "journal": "Cerebral Cortex",
+            "volume": "33",
+            "number": "9",
+            "pages": "5382-5394",
+            "publisher": "Oxford University Press",
+            "abstract": "Training is known to improve our ability to make decisions when interacting in complex environments. However, individuals vary in their ability to learn new tasks and acquire new skills in different settings. Here, we test whether this variability in learning ability relates to individual brain oscillatory states. We use a visual flicker paradigm to entrain individuals at their own brain rhythm (i.e. peak alpha frequency) as measured by resting-state electroencephalography (EEG). We demonstrate that this individual frequency-matched brain entrainment results in faster learning in a visual identification task (i.e. detecting targets embedded in background clutter) compared to entrainment that does not match an individual\u2019s alpha frequency. Further, we show that learning is specific to the phase relationship between the entraining flicker and the visual target stimulus. EEG during entrainment showed that individualized alpha \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:P7Ujq4OLJYoC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=14563727097722960506",
+        "cites_id": [
+            "14563727097722960506"
+        ],
+        "pub_url": "https://academic.oup.com/cercor/article/33/9/5382/6814397?login=false",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:evqBKaLAHMoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Potential cognitive and neural benefits of a computerised cognitive training programme based on Structure Learning in healthy adults: study protocol for a randomised controlled trial",
+            "pub_year": 2023,
+            "citation": "Trials 24 (1), 1-22, 2023",
+            "author": "Chia-Lun Liu and Xiaoqin Cheng and Boon Linn Choo and Min Hong and Jia Li Teo and Wei Ler Koo and Jia Yuan Janet Tan and Marisha Barth Ubrani and John Suckling and Bal\u00e1zs Guly\u00e1s and Victoria Leong and Zoe Kourtzi and Barbara Sahakian and Trevor Robbins and Annabel Shen-Hsing Chen",
+            "journal": "Trials",
+            "volume": "24",
+            "number": "1",
+            "pages": "1-22",
+            "publisher": "BioMed Central",
+            "abstract": "Cognitive flexibility refers to the capacity to shift between conceptual representations particularly in response to changes in instruction and feedback. It enables individuals to swiftly adapt to changes in their environment and has significant implications for learning. The present study focuses on investigating changes in cognitive flexibility following an intervention programme\u2014Structure Learning training. Participants are pseudo-randomised to either the Training or Control group, while matched on age, sex, intelligence and cognitive flexibility performance. In the Training group, participants undergo around 2 weeks of training (at least 13 sessions) on Structure Learning. In the Control group, participants do not have to undergo any training and are never exposed to the Structure Learning task. The effects of Structure Learning training are investigated at both the behavioural and neural level. We measured covariates that can influence an individual\u2019s training performance before the training phase and outcome measures that can potentially show training benefits after the training phase. At the behavioural level, we investigated outcomes in both cognitive and social aspects with a primary focus on executive functions. At the neural level, we employed a multimodality approach and investigated potential changes to functional connectivity patterns, neurometabolite concentration in the frontal brain regions, and brain microstructure and myelination.  We reported the development of a novel training programme based on Structure Learning that aims to hone a general learning ability to potentially achieve extensive transfer benefits across various cognitive \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:BJbdYPG6LGMC",
+        "num_citations": 0,
+        "pub_url": "https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-023-07551-2",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Flexible structure learning under uncertainty",
+            "pub_year": 2023,
+            "citation": "Frontiers Media SA, 2023",
+            "author": "Zoe Kourtzi",
+            "publisher": "Frontiers Media SA",
+            "abstract": "Experience is known to facilitate our ability to interpret sequences of events and make predictions about the future by extracting temporal regularities in our environments. Here, we ask whether uncertainty in dynamic environments affects our ability to learn predictive structures. We exposed participants to sequences of symbols determined by first-order Markov models and asked them to indicate which symbol they expected to follow each sequence. We introduced uncertainty in this prediction task by manipulating the: a) probability of symbol co-occurrence, b) stimulus presentation rate. Further, we manipulated feedback, as it is known to play a key role in resolving uncertainty. Our results demonstrate that increasing the similarity in the probabilities of symbol co-occurrence impaired performance on the prediction task. In contrast, increasing uncertainty in stimulus presentation rate by introducing temporal jitter resulted in participants adopting a strategy closer to probability maximization than matching and improving in the prediction tasks. Next, we show that feedback plays a key role in learning predictive statistics. Trial-by-trial feedback yielded stronger improvement than block feedback or no feedback; that is, participants adopted a strategy closer to probability maximization and showed stronger improvement when trained with trial-by-trial feedback. Further, correlating individual strategy with learning performance showed better performance in structure learning for observers who adopted a strategy closer to maximization. Our results indicate that executive cognitive functions (ie selective attention) may account for this individual variability in \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:Ak0FvsSvgGUC",
+        "num_citations": 0,
+        "pub_url": "https://scholar.google.com/scholar?cluster=5655966349939748647&hl=en&oi=scholarr",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "AI-guided patient stratification for neurodegenerative disorders using unsupervised trajectory modelling",
+            "pub_year": 2023,
+            "citation": "Alzheimer's Association International Conference, 2023",
+            "author": "Michael C Burkhart and Liz Yuanxi Lee and Delshad Vaghari and Jenny Venton and Spencer Thomas and Nadia Smith and Richard Everson and Peter Tino and Zoe Kourtzi",
+            "conference": "Alzheimer's Association International Conference",
+            "publisher": "ALZ"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:AHdEip9mkN0C",
+        "num_citations": 0,
+        "pub_url": "https://alz.confex.com/alz/2023/meetingapp.cgi/Paper/74696",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Validating the clinical utility of AI-guided tools for early dementia prediction",
+            "pub_year": 2023,
+            "citation": "Alzheimer's Association International Conference, 2023",
+            "author": "Delshad Vaghari and Liz Yuanxi Lee and Michael C Burkhart and Marcella Montagnese and Katharina Zuhlsdorff and Joseph Giorgio and Eddie Chong and William J Jagust and Christopher Li-Hsian Chen and Guy B Williams and Timothy Rittman and Peter Tino and Zoe Kourtzi",
+            "conference": "Alzheimer's Association International Conference",
+            "publisher": "ALZ"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:F1b5ZUV5XREC",
+        "num_citations": 0,
+        "pub_url": "https://alz.confex.com/alz/2023/meetingapp.cgi/Paper/74628",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A robust harmonization approach for cognitive data from multiple aging and dementia cohorts",
+            "pub_year": 2023,
+            "citation": "Alzheimer's & Dementia: Diagnosis, Assessment & Disease Monitoring 15 (3 \u2026, 2023",
+            "author": "Joseph Giorgio and Ankeet Tanna and Maura Malpetti and Simon R White and Jingshen Wang and Suzanne Baker and Susan Landau and Tomotaka Tanaka and Christopher Chen and James B Rowe and John O'Brien and Jurgen Fripp and Michael Breakspear and William Jagust and Zoe Kourtzi and Alzheimer's Disease Neuroimaging Initiative and Australian Imaging Biomarkers and Lifestyle flagship study",
+            "journal": "Alzheimer's & Dementia: Diagnosis, Assessment & Disease Monitoring",
+            "volume": "15",
+            "number": "3",
+            "pages": "e12453",
+            "abstract": "Although many cognitive measures have been developed to assess cognitive decline due to Alzheimer's disease (AD), there is little consensus on optimal measures, leading to varied assessments across research cohorts and clinical trials making it difficult to pool cognitive measures across studies.We used a two\u2010stage approach to harmonize cognitive data across cohorts and derive a cross\u2010cohort score of cognitive impairment due to AD. First, we pool and harmonize cognitive data from international cohorts of varying size and ethnic diversity. Next, we derived cognitive composites that leverage maximal data from the harmonized dataset.We show that our cognitive composites are robust across cohorts and achieve greater or comparable sensitivity to AD\u2010related cognitive decline compared to the Mini\u2010Mental State Examination and Preclinical Alzheimer Cognitive \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:LgRImbQfgY4C",
+        "num_citations": 0,
+        "pub_url": "https://alz-journals.onlinelibrary.wiley.com/doi/abs/10.1002/dad2.12453",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Early Detection of Neurodegenerative diseases initiative: an international and multidisciplinary effort for transforming the early detection of dementia\u2010causing diseases",
+            "pub_year": 2023,
+            "citation": "Alzheimer's & Dementia 19, e062434, 2023",
+            "author": "Federica Marinaro and Claire Morvan and Rhoda Au and Simon Bond and Michael C Burkhart and Nomi Carlebach and Dennis Chan and Daniel Delbarre and Lisa Farier and Aaron Lacey and Haley LaMonica and Claire L Lancaster and Liz Yuanxi Lee and David J Llewellyn and Ann\u2010Marie Mallon and Ralph N Martins and R\u00edona Mc Ardle and Catherine J Mummery and Sharon L Naismith and Mike Oldham and Stephanie Rainey\u2010Smith and Luis Santos and Sarah Slight and Nadia Smith and Spencer Thomas and Jenny Venton and Clare Tolley and Kirstie Whitaker and Joshua Wright and Sarah Wilson and Kieran Wing and John Crawford and Paul Dagum and Carol Routledge and Zuzana Walker and Richard Everson and Chris Hinds and Zoe Kourtzi",
+            "journal": "Alzheimer's & Dementia",
+            "volume": "19",
+            "pages": "e062434",
+            "abstract": "Around 50 million people have dementia worldwide, with nearly 10 million new cases every year. Diagnosis is complex and often relies on expensive and invasive measures, with most patients accessing medical support when they already experience symptoms.The Early Detection of Neurodegenerative diseases (EDoN) initiative, spearheaded by Alzheimer\u2019s Research UK, brings together over 60 experts from 49 universities, research projects, patient cohorts and technology providers to create machine learning models to detect the earliest stages of dementia\u2010causing diseases. EDoN has reviewed behavioural and physiological modalities with the strongest association with pre\u2010clinical disease.Over 140 modalities were identified from the review and were shortlisted to create the version 1 digital toolkit. This first version includes Mezurio and Longevity smartphone apps, a Fitbit \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:a3BOlSfXSfwC",
+        "num_citations": 0,
+        "pub_url": "https://alz-journals.onlinelibrary.wiley.com/doi/abs/10.1002/alz.062434",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A robust harmonisation approach for cognitive data from multiple ageing and dementia cohorts",
+            "pub_year": 2023,
+            "citation": "Wiley, 2023",
+            "author": "Zoe Kourtzi",
+            "publisher": "Wiley",
+            "abstract": "INTRODUCTION Many measures have been developed to assess cognitive decline due to Alzheimer\u2019s disease with little consensus on optimal measures. As such, there are varied assessments across research cohorts and clinical trials making it difficult to pool cognitive measures across studies. METHODS We employed a two-stage approach to harmonise cognitive data. First, we impute cognitive data from international cohorts of varying size and ethnicity. Next, we derived cognitive composites that leverage maximal data from this harmonised dataset. RESULTS Our cognitive composites are robust across cohorts and achieve greater or comparable sensitivity to Alzheimer\u2019s disease related cognitive decline than the MMSE and PACC. We validated both our harmonisation approach and composites in an independent cohort. DISCUSSION Our easy to implement pipeline allows researchers to harmonise cognitive data with large publicly available cohorts, allowing pooling of data for the development or validation of findings related to cognitive decline due to Alzheimer\u2019s disease."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:gKiMpY-AVTkC",
+        "num_citations": 0,
+        "pub_url": "https://scholar.google.com/scholar?cluster=16896768395205250020&hl=en&oi=scholarr",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "HGIB: Prognosis for Alzheimer's Disease via Hypergraph Information Bottleneck",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2303.10390, 2023",
+            "author": "Shujun Wang and Angelica I Aviles-Rivero and Zoe Kourtzi and Carola-Bibiane Sch\u00f6nlieb",
+            "journal": "arXiv preprint arXiv:2303.10390",
+            "abstract": "Alzheimer's disease prognosis is critical for early Mild Cognitive Impairment patients for timely treatment to improve the patient's quality of life. Whilst existing prognosis techniques demonstrate potential results, they are highly limited in terms of using a single modality. Most importantly, they fail in considering a key element for prognosis: not all features extracted at the current moment may contribute to the prognosis prediction several years later. To address the current drawbacks of the literature, we propose a novel hypergraph framework based on an information bottleneck strategy (HGIB). Firstly, our framework seeks to discriminate irrelevant information, and therefore, solely focus on harmonising relevant information for future MCI conversion prediction e.g., two years later). Secondly, our model simultaneously accounts for multi-modal data based on imaging and non-imaging modalities. HGIB uses a hypergraph structure to represent the multi-modality data and accounts for various data modality types. Thirdly, the key of our model is based on a new optimisation scheme. It is based on modelling the principle of information bottleneck into loss functions that can be integrated into our hypergraph neural network. We demonstrate, through extensive experiments on ADNI, that our proposed HGIB framework outperforms existing state-of-the-art hypergraph neural networks for Alzheimer's disease prognosis. We showcase our model even under fewer labels. Finally, we further support the robustness and generalisation capabilities of our framework under both topological and feature perturbations."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:lvd772isFD0C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2303.10390",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:D_9hkAx5_FQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Microstructural and neurochemical plasticity mechanisms interact to enhance human perceptual decision-making",
+            "pub_year": 2023,
+            "citation": "Plos Biology 21 (3), e3002029, 2023",
+            "author": "Joseph J Ziminski and Polytimi Frangou and Vasilis M Karlaftis and Uzay Emir and Zoe Kourtzi",
+            "journal": "Plos Biology",
+            "volume": "21",
+            "number": "3",
+            "pages": "e3002029",
+            "publisher": "Public Library of Science",
+            "abstract": "Experience and training are known to boost our skills and mold the brain\u2019s organization and function. Yet, structural plasticity and functional neurotransmission are typically studied at different scales (large-scale networks, local circuits), limiting our understanding of the adaptive interactions that support learning of complex cognitive skills in the adult brain. Here, we employ multimodal brain imaging to investigate the link between microstructural (myelination) and neurochemical (GABAergic) plasticity for decision-making. We test (in males, due to potential confounding menstrual cycle effects on GABA measurements in females) for changes in MRI-measured myelin, GABA, and functional connectivity before versus after training on a perceptual decision task that involves identifying targets in clutter. We demonstrate that training alters subcortical (pulvinar, hippocampus) myelination and its functional connectivity to visual cortex and relates to decreased visual cortex GABAergic inhibition. Modeling interactions between MRI measures of myelin, GABA, and functional connectivity indicates that pulvinar myelin plasticity interacts\u2014through thalamocortical connectivity\u2014with GABAergic inhibition in visual cortex to support learning. Our findings propose a dynamic interplay of adaptive microstructural and neurochemical plasticity in subcortico-cortical circuits that supports learning for optimized decision-making in the adult human brain."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:5MTHONV0fEkC",
+        "num_citations": 0,
+        "pub_url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002029",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:HeeF1uHsZyIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Microstructural and neurochemical plasticity mechanisms interact to enhance human perceptual decision making.",
+            "pub_year": 2023,
+            "citation": "Department of Psychology, 2023",
+            "author": "Zoe Kourtzi",
+            "publisher": "Department of Psychology",
+            "abstract": "Experience and training are known to boost our skills and mold the brain\u2019s organization and function. Yet, structural plasticity and functional neurotransmission are typically studied at different scales (large-scale networks, local circuits), limiting our understanding of the adaptive interactions that support learning of complex cognitive skills in the adult brain. Here, we employ multimodal brain imaging to investigate the link between microstructural (myelination) and neurochemical (GABAergic) plasticity for decision making. We test (in males, due to potential confounding menstrual cycle effects on GABA measurements in females) for changes in MRI-measured myelin, GABA and functional connectivity before vs. after training on a perceptual decision task that involves identifying targets in clutter. We demonstrate that training alters subcortical (pulvinar, hippocampus) myelination and its functional connectivity to visual cortex and relates to decreased visual cortex GABAergic inhibition. Modeling interactions between MRI measures of myelin, GABA and functional connectivity indicates that pulvinar myelin plasticity interacts\u2014 through thalamocortical connectivity\u2014 with GABAergic inhibition in visual cortex to support learning. Our findings propose a dynamic interplay of adaptive microstructural and neurochemical plasticity in subcortico-cortical circuits that supports learning for optimized decision making in the adult human brain."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:u-coK7KVo8oC",
+        "num_citations": 0,
+        "pub_url": "https://scholar.google.com/scholar?cluster=8166631187710117662&hl=en&oi=scholarr",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predicting incident dementia in cerebral small vessel disease: comparison of machine learning and traditional statistical models",
+            "pub_year": 2023,
+            "citation": "Cerebral Circulation-Cognition and Behavior 5, 100179, 2023",
+            "author": "Rui Li and Eric L Harshfield and Steven Bell and Michael Burkhart and Anil M Tuladhar and Saima Hilal and Daniel J Tozer and Francesca M Chappell and Stephen DJ Makin and Jessica W Lo and Joanna M Wardlaw and Frank-Erik de Leeuw and Christopher Chen and Zoe Kourtzi and Hugh S Markus",
+            "journal": "Cerebral Circulation-Cognition and Behavior",
+            "volume": "5",
+            "pages": "100179",
+            "publisher": "Elsevier",
+            "abstract": "Cerebral small vessel disease (SVD) contributes to 45% of dementia cases worldwide, yet we lack a reliable model for predicting dementia in SVD. Past attempts largely relied on traditional statistical approaches. Here, we investigated whether machine learning (ML) methods improved prediction of incident dementia in SVD from baseline SVD-related features over traditional statistical methods.We included three cohorts with varying SVD severity (RUN DMC, n = 503; SCANS, n = 121; HARMONISATION, n = 265). Baseline demographics, vascular risk factors, cognitive scores, and magnetic resonance imaging (MRI) features of SVD were used for prediction. We conducted both survival analysis and classification analysis predicting 3-year dementia risk. For each analysis, several ML methods were evaluated against standard Cox or logistic regression. Finally, we compared the feature \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:5icHVeHT4IsC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S2666245023000235",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:jtW5TtqjXx0J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Flexible structure learning under uncertainty",
+            "pub_year": 2023,
+            "citation": "Frontiers in Neuroscience 17, 2023",
+            "author": "Rui Wang and Vael Gates and Yuan Shen and Peter Tino and Zoe Kourtzi",
+            "journal": "Frontiers in Neuroscience",
+            "volume": "17",
+            "publisher": "Frontiers Media SA",
+            "abstract": "Experience is known to facilitate our ability to interpret sequences of events and make predictions about the future by extracting temporal regularities in our environments. Here, we ask whether uncertainty in dynamic environments affects our ability to learn predictive structures. We exposed participants to sequences of symbols determined by first-order Markov models and asked them to indicate which symbol they expected to follow each sequence. We introduced uncertainty in this prediction task by manipulating the:(a) probability of symbol co-occurrence,(b) stimulus presentation rate. Further, we manipulated feedback, as it is known to play a key role in resolving uncertainty. Our results demonstrate that increasing the similarity in the probabilities of symbol co-occurrence impaired performance on the prediction task. In contrast, increasing uncertainty in stimulus presentation rate by introducing temporal jitter \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:IUKN3-7HHlwC",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10437075/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ca1ILlYwg1AJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

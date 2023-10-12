@@ -1,0 +1,282 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Brain-diffuser: Natural scene reconstruction from fmri signals using generative latent diffusion",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2303.05334, 2023",
+            "author": "Furkan Ozcelik and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2303.05334",
+            "abstract": "In neural decoding research, one of the most intriguing topics is the reconstruction of perceived natural images based on fMRI signals. Previous studies have succeeded in re-creating different aspects of the visuals, such as low-level properties (shape, texture, layout) or high-level features (category of objects, descriptive semantics of scenes) but have typically failed to reconstruct these properties together for complex scene images. Generative AI has recently made a leap forward with latent diffusion models capable of generating high-complexity images. Here, we investigate how to take advantage of this innovative technology for brain decoding. We present a two-stage scene reconstruction framework called ``Brain-Diffuser''. In the first stage, starting from fMRI signals, we reconstruct images that capture low-level properties and overall layout using a VDVAE (Very Deep Variational Autoencoder) model. In the second stage, we use the image-to-image framework of a latent diffusion model (Versatile Diffusion) conditioned on predicted multimodal (text and visual) features, to generate final reconstructed images. On the publicly available Natural Scenes Dataset benchmark, our method outperforms previous models both qualitatively and quantitatively. When applied to synthetic fMRI patterns generated from individual ROI (region-of-interest) masks, our trained model creates compelling ``ROI-optimal'' scenes consistent with neuroscientific knowledge. Thus, the proposed methodology can have an impact on both applied (e.g. brain-computer interface) and fundamental neuroscience."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:5icHVeHT4IsC",
+        "num_citations": 9,
+        "citedby_url": "/scholar?hl=en&cites=5828055210287727240",
+        "cites_id": [
+            "5828055210287727240"
+        ],
+        "pub_url": "https://arxiv.org/abs/2303.05334",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:iIKQ3FVp4VAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 9
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Consciousness in artificial intelligence: Insights from the Science of consciousness",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2308.08708, 2023",
+            "author": "Patrick Butlin and Robert Long and Eric Elmoznino and Yoshua Bengio and Jonathan Birch and Axel Constant and George Deane and Stephen M Fleming and Chris Frith and Xu Ji and Ryota Kanai and Colin Klein and Grace Lindsay and Matthias Michel and Liad Mudrik and Megan AK Peters and Eric Schwitzgebel and Jonathan Simon and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2308.08708",
+            "abstract": "Whether current or near-term AI systems could be conscious is a topic of scientific interest and increasing public concern. This report argues for, and exemplifies, a rigorous and empirically grounded approach to AI consciousness: assessing existing AI systems in detail, in light of our best-supported neuroscientific theories of consciousness. We survey several prominent scientific theories of consciousness, including recurrent processing theory, global workspace theory, higher-order theories, predictive processing, and attention schema theory. From these theories we derive \"indicator properties\" of consciousness, elucidated in computational terms that allow us to assess AI systems for these properties. We use these indicator properties to assess several recent AI systems, and we discuss how future systems might implement them. Our analysis suggests that no current AI systems are conscious, but also suggests that there are no obvious technical barriers to building AI systems which satisfy these indicators."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:F1b5ZUV5XREC",
+        "num_citations": 7,
+        "citedby_url": "/scholar?hl=en&cites=8239061011717183910",
+        "cites_id": [
+            "8239061011717183910"
+        ],
+        "pub_url": "https://arxiv.org/abs/2308.08708",
+        "cites_per_year": {
+            "2023": 7
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Distinct roles of forward and backward alpha-band waves in spatial visual attention",
+            "pub_year": 2023,
+            "citation": "Elife 12, e85035, 2023",
+            "author": "Andrea Alamia and Lucie Terral and Malo Renaud D'ambra and Rufin VanRullen",
+            "journal": "Elife",
+            "volume": "12",
+            "pages": "e85035",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Previous research has associated alpha-band [8\u201312 Hz] oscillations with inhibitory functions: for instance, several studies showed that visual attention increases alpha-band power in the hemisphere ipsilateral to the attended location. However, other studies demonstrated that alpha oscillations positively correlate with visual perception, hinting at different processes underlying their dynamics. Here, using an approach based on traveling waves, we demonstrate that there are two functionally distinct alpha-band oscillations propagating in different directions. We analyzed EEG recordings from three datasets of human participants performing a covert visual attention task (one new dataset with N= 16, two previously published datasets with N= 16 and N= 31). Participants were instructed to detect a brief target by covertly attending to the screen\u2019s left or right side. Our analysis reveals two distinct processes: allocating attention to one hemifield increases top-down alpha-band waves propagating from frontal to occipital regions ipsilateral to the attended location, both with and without visual stimulation. These top-down oscillatory waves correlate positively with alpha-band power in frontal and occipital regions. Yet, different alpha-band waves propagate from occipital to frontal regions and contralateral to the attended location. Crucially, these forward waves were present only during visual stimulation, suggesting a separate mechanism related to visual processing. Together, these results reveal two distinct processes reflected by different propagation directions, demonstrating the importance of considering oscillations as traveling waves when characterizing \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:ZzlSgRqYykMC",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=5854450739036230356",
+        "cites_id": [
+            "5854450739036230356"
+        ],
+        "pub_url": "https://elifesciences.org/articles/85035",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1BJHz-0vP1EJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Brain Captioning: Decoding human brain activity into images and text",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2305.11560, 2023",
+            "author": "Matteo Ferrante and Furkan Ozcelik and Tommaso Boccato and Rufin VanRullen and Nicola Toschi",
+            "journal": "arXiv preprint arXiv:2305.11560",
+            "abstract": "Every day, the human brain processes an immense volume of visual information, relying on intricate neural mechanisms to perceive and interpret these stimuli. Recent breakthroughs in functional magnetic resonance imaging (fMRI) have enabled scientists to extract visual information from human brain activity patterns. In this study, we present an innovative method for decoding brain activity into meaningful images and captions, with a specific focus on brain captioning due to its enhanced flexibility as compared to brain decoding into images. Our approach takes advantage of cutting-edge image captioning models and incorporates a unique image reconstruction pipeline that utilizes latent diffusion models and depth estimation. We utilized the Natural Scenes Dataset, a comprehensive fMRI dataset from eight subjects who viewed images from the COCO dataset. We employed the Generative Image-to-text Transformer (GIT) as our backbone for captioning and propose a new image reconstruction pipeline based on latent diffusion models. The method involves training regularized linear regression models between brain activity and extracted features. Additionally, we incorporated depth maps from the ControlNet model to further guide the reconstruction process. We evaluate our methods using quantitative metrics for both generated captions and images. Our brain captioning approach outperforms existing methods, while our image reconstruction pipeline generates plausible images with improved spatial relationships. In conclusion, we demonstrate significant progress in brain decoding, showcasing the enormous potential of integrating vision and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:artPoR2Yc-kC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=3766769288517777644",
+        "cites_id": [
+            "3766769288517777644"
+        ],
+        "pub_url": "https://arxiv.org/abs/2305.11560",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:7Pjz8LVARjQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "On the role of feedback in image recognition under noise and adversarial attacks: A predictive coding perspective",
+            "pub_year": 2023,
+            "citation": "Neural Networks 157, 280-287, 2023",
+            "author": "Andrea Alamia and Milad Mozafari and Bhavin Choksi and Rufin VanRullen",
+            "journal": "Neural Networks",
+            "volume": "157",
+            "pages": "280-287",
+            "publisher": "Pergamon",
+            "abstract": "Brain-inspired machine learning is gaining increasing consideration, particularly in computer vision. Several studies investigated the inclusion of top-down feedback connections in convolutional networks; however, it remains unclear how and when these connections are functionally helpful. Here we address this question in the context of object recognition under noisy conditions. We consider deep convolutional networks (CNNs) as models of feed-forward visual processing and implement Predictive Coding (PC) dynamics through feedback connections (predictive feedback) trained for reconstruction or classification of clean images. First, we show that the accuracy of the network implementing PC dynamics is significantly larger compared to its equivalent forward network. Importantly, to directly assess the computational role of predictive feedback in various experimental situations, we optimize and interpret the hyper \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:u-coK7KVo8oC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=7270655545322486933",
+        "cites_id": [
+            "7270655545322486933"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0893608022004166",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:lbwrZ7KO5mQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Random Tactile Noise Stimulation Reveals Beta-Rhythmic Impulse Response Function of the Somatosensory System",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience 43 (17), 3107-3119, 2023",
+            "author": "Samson Chota and Rufin VanRullen and Rasa Gulbinaite",
+            "journal": "Journal of Neuroscience",
+            "volume": "43",
+            "number": "17",
+            "pages": "3107-3119",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Both passive tactile stimulation and motor actions result in dynamic changes in beta band (15\u201330 Hz Hz) oscillations over somatosensory cortex. Similar to alpha band (8\u201312 Hz) power decrease in the visual system, beta band power also decreases following stimulation of the somatosensory system. This relative suppression of \u03b1 and \u03b2 oscillations is generally interpreted as an increase in cortical excitability. Here, next to traditional single-pulse stimuli, we used a random intensity continuous right index finger tactile stimulation (white noise), which enabled us to uncover an impulse response function of the somatosensory system. Contrary to previous findings, we demonstrate a burst-like initial increase rather than decrease of beta activity following white noise stimulation (human participants, N = 18, 8 female). These \u03b2 bursts, on average, lasted for 3 cycles, and their frequency was correlated with resonant frequency \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:Aul-kAQHnToC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=9228367352374605559",
+        "cites_id": [
+            "9228367352374605559"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/43/17/3107.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:97YZhza_EYAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Natural scene reconstruction from fMRI signals using generative latent diffusion",
+            "pub_year": 2023,
+            "citation": "Scientific Reports 13 (1), 15666, 2023",
+            "author": "Furkan Ozcelik and Rufin VanRullen",
+            "journal": "Scientific Reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "15666",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "In neural decoding research, one of the most intriguing topics is the reconstruction of perceived natural images based on fMRI signals. Previous studies have succeeded in re-creating different aspects of the visuals, such as low-level properties (shape, texture, layout) or high-level features (category of objects, descriptive semantics of scenes) but have typically failed to reconstruct these properties together for complex scene images. Generative AI has recently made a leap forward with latent diffusion models capable of generating high-complexity images. Here, we investigate how to take advantage of this innovative technology for brain decoding. We present a two-stage scene reconstruction framework called \u201cBrain-Diffuser\u201d. In the first stage, starting from fMRI signals, we reconstruct images that capture low-level properties and overall layout using a VDVAE (Very Deep Variational Autoencoder) model. In the second \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:AHdEip9mkN0C",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-023-42891-8",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Gradient strikes back: How filtering out high frequencies improves explanations",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2307.09591, 2023",
+            "author": "Sabine Muzellec and Leo Andeol and Thomas Fel and Rufin VanRullen and Thomas Serre",
+            "journal": "arXiv preprint arXiv:2307.09591",
+            "abstract": "Recent years have witnessed an explosion in the development of novel prediction-based attribution methods, which have slowly been supplanting older gradient-based methods to explain the decisions of deep neural networks. However, it is still not clear why prediction-based methods outperform gradient-based ones. Here, we start with an empirical observation: these two approaches yield attribution maps with very different power spectra, with gradient-based methods revealing more high-frequency content than prediction-based methods. This observation raises multiple questions: What is the source of this high-frequency information, and does it truly reflect decisions made by the system? Lastly, why would the absence of high-frequency information in prediction-based methods yield better explainability scores along multiple metrics? We analyze the gradient of three representative visual classification models and observe that it contains noisy information emanating from high-frequencies. Furthermore, our analysis reveals that the operations used in Convolutional Neural Networks (CNNs) for downsampling appear to be a significant source of this high-frequency content -- suggesting aliasing as a possible underlying basis. We then apply an optimal low-pass filter for attribution maps and demonstrate that it improves gradient-based attribution methods. We show that (i) removing high-frequency noise yields significant improvements in the explainability scores obtained with gradient-based methods across multiple models -- leading to (ii) a novel ranking of state-of-the-art methods with gradient-based methods at the top. We believe that our \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:LgRImbQfgY4C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2307.09591",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "CLIP-based image captioning via unsupervised cycle-consistency in the latent space",
+            "pub_year": 2023,
+            "citation": "Proceedings of the 8th Workshop on Representation Learning for NLP (RepL4NLP \u2026, 2023",
+            "author": "Romain Bielawski and Rufin Vanrullen",
+            "conference": "Proceedings of the 8th Workshop on Representation Learning for NLP (RepL4NLP 2023)",
+            "pages": "266-275",
+            "abstract": "Image captioning typically involves an image encoder to extract meaningful image features, and a text decoder to generate appropriate sentences. Powerful pretrained models can be used for both image encoding and text decoding; but in this case, a separate multimodal translation stage between image-encoder output features and text-decoder input features must be learned. One exception is when image and text features are already aligned by construction, as in the CLIP model (Contrastive Language and Image Pretraining\u2013a bimodal network pretrained on 400M image-text pairs). Pretrained CLIP-image features can be directly fed to a textdecoder trained to reconstruct captions from their pretrained CLIP-text features. Here we show that this direct captioning method is in fact sub-optimal. Instead, we propose an alternative method to translate CLIP-image features into CLIP-text features in a strictly unsupervised way, using the CycleGAN architecture\u2013originally designed for unpaired imageto-image translation. Our Latent CycleGAN, optimized solely for an unsupervised cycleconsistency objective, generates CLIP-text latent features conditioned on CLIP-image latent features and vice-versa. Using these CLIP-text latent features as input to the text decoder, our method largely outperforms the direct captioning method that uses CLIP-image features\u2013despite the fact that CLIP\u2019s large-scale pretraining should have already aligned the two feature spaces. This implies that cycle-consistency on unmatched multimodal data can be efficiently implemented in a bimodal latent space, and that CLIP-based image captioning can be improved without \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:Ak0FvsSvgGUC",
+        "num_citations": 0,
+        "pub_url": "https://aclanthology.org/2023.repl4nlp-1.22.pdf",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Semi-supervised Multimodal Representation Learning through a Global Workspace",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2306.15711, 2023",
+            "author": "Benjamin Devillers and L\u00e9opold Mayti\u00e9 and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2306.15711",
+            "abstract": "Recent deep learning models can efficiently combine inputs from different modalities (e.g., images and text) and learn to align their latent representations, or to translate signals from one domain to another (as in image captioning, or text-to-image generation). However, current approaches mainly rely on brute-force supervised training over large multimodal datasets. In contrast, humans (and other animals) can learn useful multimodal representations from only sparse experience with matched cross-modal data. Here we evaluate the capabilities of a neural network architecture inspired by the cognitive notion of a \"Global Workspace\": a shared representation for two (or more) input modalities. Each modality is processed by a specialized system (pretrained on unimodal data, and subsequently frozen). The corresponding latent representations are then encoded to and decoded from a single shared workspace. Importantly, this architecture is amenable to self-supervised training via cycle-consistency: encoding-decoding sequences should approximate the identity function. For various pairings of vision-language modalities and across two datasets of varying complexity, we show that such an architecture can be trained to align and translate between two modalities with very little need for matched data (from 4 to 7 times less than a fully supervised approach). The global workspace representation can be used advantageously for downstream classification tasks and for robust transfer learning. Ablation studies reveal that both the shared workspace and the self-supervised cycle-consistency training are critical to the system's performance."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:Bg7qf7VwUHIC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2306.15711",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A Traveling Waves Perspective on Temporal Binding",
+            "pub_year": 2023,
+            "citation": "Journal of Cognitive Neuroscience, 1-9, 2023",
+            "author": "Andrea Alamia and Rufin VanRullen",
+            "journal": "Journal of Cognitive Neuroscience",
+            "pages": "1-9",
+            "abstract": "Brain oscillations are involved in many cognitive processes, and several studies have investigated their role in cognition. In particular, the phase of certain oscillations has been related to temporal binding and integration processes, with some authors arguing that perception could be an inherently rhythmic process. However, previous research on oscillations mostly overlooked their spatial component: how oscillations propagate through the brain as traveling waves, with systematic phase delays between brain regions. Here, we argue that interpreting oscillations as traveling waves is a useful paradigm shift to understand their role in temporal binding and address controversial results. After a brief definition of traveling waves, we propose an original view on temporal integration that considers this new perspective. We first focus on cortical dynamics, then speculate about the role of thalamic nuclei in modulating the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:tH6gc1N1XXoC",
+        "num_citations": 0,
+        "pub_url": "https://direct.mit.edu/jocn/article-abstract/doi/10.1162/jocn_a_02004/115974",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VM8EKmwVqHsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Mathematical derivation of wave propagation properties in hierarchical neural networks with predictive coding feedback dynamics",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2304.05676, 2023",
+            "author": "Gr\u00e9gory Faye and Guilhem Fouilh\u00e9 and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2304.05676",
+            "abstract": "Sensory perception (e.g. vision) relies on a hierarchy of cortical areas, in which neural activity propagates in both directions, to convey information not only about sensory inputs but also about cognitive states, expectations and predictions. At the macroscopic scale, neurophysiological experiments have described the corresponding neural signals as both forward and backward-travelling waves, sometimes with characteristic oscillatory signatures. It remains unclear, however, how such activity patterns relate to specific functional properties of the perceptual apparatus. Here, we present a mathematical framework, inspired by neural network models of predictive coding, to systematically investigate neural dynamics in a hierarchical perceptual system. We show that stability of the system can be systematically derived from the values of hyper-parameters controlling the different signals (related to bottom-up inputs, top-down prediction and error correction). Similarly, it is possible to determine in which direction, and at what speed neural activity propagates in the system. Different neural assemblies (reflecting distinct eigenvectors of the connectivity matrices) can simultaneously and independently display different properties in terms of stability, propagation speed or direction. We also derive continuous-limit versions of the system, both in time and in neural space. Finally, we analyze the possible influence of transmission delays between layers, and reveal the emergence of oscillations at biologically plausible frequencies."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:gKiMpY-AVTkC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2304.05676",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:f8cmTB-ifQwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Learning Functional Transduction",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2302.00328, 2023",
+            "author": "Mathieu Chalvidal and Thomas Serre and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2302.00328",
+            "abstract": "Research in Machine Learning has polarized into two general regression approaches: Transductive methods derive estimates directly from available data but are usually problem unspecific. Inductive methods can be much more particular, but generally require tuning and compute-intensive searches for solutions. In this work, we adopt a hybrid approach: We leverage the theory of Reproducing Kernel Banach Spaces (RKBS) and show that transductive principles can be induced through gradient descent to form efficient \\textit{in-context} neural approximators. We apply this approach to RKBS of function-valued operators and show that once trained, our \\textit{Transducer} model can capture on-the-fly relationships between infinite-dimensional input and output functions, given a few example pairs, and return new function estimates. We demonstrate the benefit of our transductive approach to model complex physical systems influenced by varying external factors with little data at a fraction of the usual deep learning training computation cost for partial differential equations and climate modeling applications."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:gVv57TyPmFsC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2302.00328",
+        "cites_per_year": {}
+    }
+]

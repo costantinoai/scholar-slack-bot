@@ -1,0 +1,73 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Evidence for multiscale multiplexed representation of visual features in EEG",
+            "pub_year": 2023,
+            "citation": "BioRxiv, 2023.07. 09.548296, 2023",
+            "author": "Hamid Karimi-Rouzbahani",
+            "journal": "BioRxiv",
+            "pages": "2023.07. 09.548296",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Distinct neural processes are often encoded across distinct time scales of neural activations. However, it has remained unclear if this multiscale coding strategy is also implemented for separate features of the same process. One difficulty is that the conventional methods of time scale analysis provide imperfect estimations of time scales when several components are active during a single process. Developing a novel decoding-based time scale estimation method, we detected distinct time scales for simultaneously present features of visual stimuli in electroencephalography. We observed that orientation and colour of grating stimuli were encoded in shorter whereas the spatial frequency and contrast of those stimuli were encoded in longer time scales. The conventional autocorrelation-based estimation of time scale was unable to detect these distinguishable time scales. These results provide new evidence for a multiscale multiplexed neural code in the human visual system and introduces a flexible method for estimating neural time scales."
+        },
+        "filled": true,
+        "author_pub_id": "j0AZtowAAAAJ:PR6Y55bgFSsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=4783401526965324413",
+        "cites_id": [
+            "4783401526965324413"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.07.09.548296.abstract",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deeper neural network models better reflect how humans cope with contrast variation in object recognition",
+            "pub_year": 2023,
+            "citation": "Neuroscience Research 192, 48-55, 2023",
+            "author": "Masoumeh Mokari-Mahallati and Reza Ebrahimpour and Nasour Bagheri and Hamid Karimi-Rouzbahani",
+            "journal": "Neuroscience Research",
+            "volume": "192",
+            "pages": "48-55",
+            "publisher": "Elsevier",
+            "abstract": "Visual inputs are far from ideal in everyday situations such as in the fog where the contrasts of input stimuli are low. However, human perception remains relatively robust to contrast variations. To provide insights about the underlying mechanisms of contrast invariance, we addressed two questions. Do contrast effects disappear along the visual hierarchy? Do later stages of the visual hierarchy contribute to contrast invariance? We ran a behavioral experiment where we manipulated the level of stimulus contrast and the involvement of higher-level visual areas through immediate and delayed backward masking of the stimulus. Backward masking led to significant drop in performance in our visual categorization task, supporting the role of higher-level visual areas in contrast invariance. To obtain mechanistic insights, we ran the same categorization task on three state-of the-art computational models of human vision \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "j0AZtowAAAAJ:1yQoGdGgb4wC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=358871834395533022",
+        "cites_id": [
+            "358871834395533022"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S016801022300007X",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:3t4JMQj4-gQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Generalisability of epileptiform patterns across time and patients",
+            "pub_year": 2023,
+            "citation": "medRxiv, 2023.08. 29.23294708, 2023",
+            "author": "Hamid Karimi-Rouzbahani and Aileen McGonigal",
+            "journal": "medRxiv",
+            "pages": "2023.08. 29.23294708",
+            "publisher": "Cold Spring Harbor Laboratory Press",
+            "abstract": "Complexity of epileptogenic zone (EZ) localisation contributes to failure of surgical resection to produce seizure freedom. This is to some extent a result of distinct patterns of epileptiform activity between (i.e., interictal) and during seizures (i.e., ictal) and their diversity across patients. This often leads to suboptimal localisation based on inspection of electroencephalography (EEG) features. We asked two under-investigated questions. First, whether neural signal reflecting epileptogenicity would be generalisable from interictal to ictal time window within each patient. This would be critical for patients who are monitored in hospital without having a seizure to help with EZ localisation, and more generally for understanding the predictive power of resting state (interictal) EEG data in determining EZ. Second, whether epileptiform patterns would generalise across patients, and if so, which aspects of those patterns are the most generalisable. We used an intracranial EEG dataset that included fifty-five patients with lesional and non-lesional pathology, who had subsequently undergone cortical resection in frontal or temporal lobe with different levels of seizure freedom. We extracted a large set of simple to complex features from stereo-EEG (SEEG) and electrocorticographic (ECoG) neural signals recorded during interictal and ictal time windows. We fed those features to decision-tree classifiers for EZ localisation and to quantify the diversity of ictal and interictal epileptiform patterns through a cross-time and cross-patient generalisation procedure. We observed significant evidence (Bayes factor >> 10) for generalisability of patterns from interictal to ictal time \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "j0AZtowAAAAJ:dQ2og3OwTAUC",
+        "num_citations": 0,
+        "pub_url": "https://www.medrxiv.org/content/10.1101/2023.08.29.23294708.abstract",
+        "cites_per_year": {}
+    }
+]

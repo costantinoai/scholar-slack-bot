@@ -1,0 +1,159 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A domain-relevant framework for the development of face processing",
+            "pub_year": 2023,
+            "citation": "Nature Reviews Psychology 2 (3), 183-195, 2023",
+            "author": "Lisa S Scott and Michael J Arcaro",
+            "volume": "2",
+            "number": "3",
+            "pages": "183-195",
+            "publisher": "Nature Publishing Group US",
+            "abstract": "Faces are thought to have a privileged status for processing relative to other visual images. Humans use faces to identify people, learn language, and to communicate and understand intentions, meaning and emotions. An enduring debate within the fields of developmental psychology and cognitive neuroscience is whether human face processing is specialized owing to domain-specific neural circuitry driven primarily by evolutionary mechanisms or whether it emerges from a domain-general architecture through experience. In this Perspective, we argue for an experience-based account based on associative and non-associative learning and supported by general neurobiological mechanisms. We posit that face-processing specialization emerges from activity-dependent, self-organizing processes where neuronal connectivity is shaped by the environment and constrained by intrinsic yet malleable neural \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "07tNFdgAAAAJ:Tfl4UtY-dJUC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=7195350307727156914",
+        "cites_id": [
+            "7195350307727156914"
+        ],
+        "pub_url": "https://www.nature.com/articles/s44159-023-00152-5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:siaTdvsE22MJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Tasks and their role in visual neuroscience",
+            "pub_year": 2023,
+            "citation": "Neuron, 2023",
+            "author": "Kendrick Kay and Kathryn Bonnen and Rachel N Denison and Mike J Arcaro and David L Barack",
+            "publisher": "Elsevier",
+            "abstract": "Vision is widely used as a model system to gain insights into how sensory inputs are processed and interpreted by the brain. Historically, careful quantification and control of visual stimuli have served as the backbone of visual neuroscience. There has been less emphasis, however, on how an observer's task influences the processing of sensory inputs. Motivated by diverse observations of task-dependent activity in the visual system, we propose a framework for thinking about tasks, their role in sensory processing, and how we might formally incorporate tasks into our models of vision."
+        },
+        "filled": true,
+        "author_pub_id": "07tNFdgAAAAJ:17ZO-CJnx_8C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=680015172987332971",
+        "cites_id": [
+            "680015172987332971"
+        ],
+        "pub_url": "https://www.cell.com/neuron/pdf/S0896-6273(23)00218-0.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:aynJazLmbwkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Performance-optimized deep neural networks are evolving into worse models of inferotemporal visual cortex",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2306.03779, 2023",
+            "author": "Drew Linsley and Ivan F Rodriguez and Thomas Fel and Michael Arcaro and Saloni Sharma and Margaret Livingstone and Thomas Serre",
+            "journal": "arXiv preprint arXiv:2306.03779",
+            "abstract": "One of the most impactful findings in computational neuroscience over the past decade is that the object recognition accuracy of deep neural networks (DNNs) correlates with their ability to predict neural responses to natural images in the inferotemporal (IT) cortex. This discovery supported the long-held theory that object recognition is a core objective of the visual cortex, and suggested that more accurate DNNs would serve as better models of IT neuron responses to images. Since then, deep learning has undergone a revolution of scale: billion parameter-scale DNNs trained on billions of images are rivaling or outperforming humans at visual tasks including object recognition. Have today's DNNs become more accurate at predicting IT neuron responses to images as they have grown more accurate at object recognition? Surprisingly, across three independent experiments, we find this is not the case. DNNs have become progressively worse models of IT as their accuracy has increased on ImageNet. To understand why DNNs experience this trade-off and evaluate if they are still an appropriate paradigm for modeling the visual system, we turn to recordings of IT that capture spatially resolved maps of neuronal activity elicited by natural images. These neuronal activity maps reveal that DNNs trained on ImageNet learn to rely on different visual features than those encoded by IT and that this problem worsens as their accuracy increases. We successfully resolved this issue with the neural harmonizer, a plug-and-play training routine for DNNs that aligns their learned representations with humans. Our results suggest that harmonized DNNs break the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "07tNFdgAAAAJ:wuD5JclIwkYC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=3024302051792673399",
+        "cites_id": [
+            "3024302051792673399"
+        ],
+        "pub_url": "https://arxiv.org/abs/2306.03779",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:d1qWUrF6-CkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Topographic constraints on visual development",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4677-4677, 2023",
+            "author": "Michael J Arcaro",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4677-4677",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Primates are remarkably good at recognizing faces and objects in their visual environment, even after just a brief glimpse. How do we develop the neural circuitry that supports such robust perception? The anatomical consistency and apparent modularity of face and object processing regions indicate that intrinsic constraints play an important role in the formation of these brain regions. Yet, the neonate visual system is limited and develops throughout childhood. Here, I will discuss work on the development of the human and nonhuman primate visual systems. These studies demonstrate that regions specialized in the processing of faces are the result of experience acting on an intrinsic but malleable neural architecture. Subcortical and cortical topographic connectivity play a fundamental role, providing an early scaffolding that guides experience-driven modifications. Within the visual system, this connectivity reflects \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "07tNFdgAAAAJ:9LpHyFPp1DQC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791817",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Strobe-rearing preserves motion selectivity but disrupts direction selectivity in macaque area MT",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5675-5675, 2023",
+            "author": "Saloni Sharma and Michael Arcaro and Margaret Livingstone",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5675-5675",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Temporal continuity of visual input plays a fundamental role in the development of the visual system. Thus far, disrupting temporal continuity by strobe-rearing has been studied in only cats and other non-primates, targeting mainly early visual cortex. It remains unclear how strobe-rearing impacts the development of the visual system in primates, particularly beyond early visual areas. Here, we raised 2 infant macaques from birth wearing helmets during the day fitted with optical shutters, which were controlled by a small circuit that opens and closes at 1Hz (200ms open). Using such helmets allowed us to simulate stroboscopic vision, while maintaining a visually complex social environment, including interactions with monkeys housed in the same room and humans. After 1.5 years of strobe-rearing, we conducted resting-state and task-based fMRI experiments under light sedation to study the brain-wide impact of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "07tNFdgAAAAJ:T8_be82Iz5gC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792595",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The building blocks of vision: evidence for a hierarchical, retinotopic organization in the human neonate brain",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5535-5535, 2023",
+            "author": "Michael Arcaro",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5535-5535",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Topographic maps of the sensory periphery are a fundamental feature of information processing in the primate brain. The adult visual system comprises several retinotopic maps. Here, we investigated whether these topographic maps are present at birth in humans and how the neonatal visual system compares to that of adults. We performed seed-based correlation analyses on resting-state fMRI data from the developing (neonates) and young adult (22-35 years old) human connectome projects. Visual areas were identified from adult probabilistic atlases of 22 retinotopic maps (Wang et al. 2015) and 7 category-selective (faces, scenes, bodies) areas. To map putative visual areas in neonates, each neonate\u2019s cortical surface was registered to an adult cortical surface template (fsaverage) and the adult probabilistic atlases were projected onto each neonate\u2019s cortical surface. To evaluate areal organization \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "07tNFdgAAAAJ:Gpwnp1kGG20C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791874",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Movies reveal the fine-grained organization of infant visual cortex",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.08. 22.554318, 2023",
+            "author": "Cameron T Ellis and Tristan S Yates and Michael J Arcaro and Nicholas B Turk-Browne",
+            "journal": "bioRxiv",
+            "pages": "2023.08. 22.554318",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Studying infant minds with movies is a promising way to increase engagement relative to traditional tasks. However, the spatial specificity and functional significance of movie-evoked activity in infants remains unclear. Here we investigated what movies can reveal about the organization of the infant visual system. We collected fMRI data from 15 awake infants aged 5-23 months who attentively watched a movie. The activity evoked by the movie reflected the functional profile of visual areas. Namely, homotopic areas from the two hemispheres responded similarly to the movie, whereas distinct areas responded dissimilarly, especially across dorsal and ventral visual cortex. Moreover, visual maps that typically require time-intensive and complicated retinotopic mapping could be predicted from movie-evoked activity in both data-driven analyses (i.e., independent components analysis) at the individual level and by using functional alignment into a common low-dimensional embedding to generalize across participants. These results suggest that the infant visual system is already structured to process dynamic, naturalistic information and that fine-grained cortical organization can be discovered from movie data."
+        },
+        "filled": true,
+        "author_pub_id": "07tNFdgAAAAJ:3vbIHxFL9FgC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.22.554318.abstract",
+        "cites_per_year": {}
+    }
+]

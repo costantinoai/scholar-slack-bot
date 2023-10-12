@@ -1,0 +1,368 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What is the intention to move and when does it occur?",
+            "pub_year": 2023,
+            "citation": "Neuroscience & Biobehavioral Reviews 151, 105199, 2023",
+            "author": "Antonio I Triggiani and Gabriel Kreiman and Cara Lewis and Uri Maoz and Alfred Mele and Liad Mudrik and Adina L Roskies and Aaron Schurger and Mark Hallett",
+            "volume": "151",
+            "pages": "105199",
+            "publisher": "Pergamon",
+            "abstract": "In 1983 Benjamin Libet and colleagues published a paper apparently challenging the view that the conscious intention to move precedes the brain\u2019s preparation for movement. The experiment initiated debates about the nature of intention, the neurophysiology of movement, and philosophical and legal understanding of free will and moral responsibility. Here we review the concept of \u201cconscious intention\u201d and attempts to measure its timing. Scalp electroencephalographic activity prior to movement, the Bereitschaftspotential, clearly begins prior to the reported onset of conscious intent. However, the interpretation of this finding remains controversial. Numerous studies show that the Libet method for determining intent, W time, is not accurate and may be misleading. We conclude that intention has many different aspects, and although we now understand much more about how the brain makes movements, identifying \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:HeT0ZceujKMC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=9496731344003356411,13263222840944129071",
+        "cites_id": [
+            "9496731344003356411",
+            "13263222840944129071"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0149763423001689",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-1ajbtcqy4MJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Sparse Distributed Memory is a Continual Learner",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2303.11934, 2023",
+            "author": "Trenton Bricken and Xander Davies and Deepak Singh and Dmitry Krotov and Gabriel Kreiman",
+            "journal": "arXiv preprint arXiv:2303.11934",
+            "abstract": "Continual learning is a problem for artificial neural networks that their biological counterparts are adept at solving. Building on work using Sparse Distributed Memory (SDM) to connect a core neural circuit with the powerful Transformer model, we create a modified Multi-Layered Perceptron (MLP) that is a strong continual learner. We find that every component of our MLP variant translated from biology is necessary for continual learning. Our solution is also free from any memory replay or task information, and introduces novel methods to train sparse networks that may be broadly applicable."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:OcBU2YAGkTUC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=6419799684933930936",
+        "cites_id": [
+            "6419799684933930936"
+        ],
+        "pub_url": "https://arxiv.org/abs/2303.11934",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uM-mxcy1F1kJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Forward Learning with Top-Down Feedback: Empirical and Analytical Characterization",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2302.05440, 2023",
+            "author": "Ravi Francesco Srinivasan and Francesca Mignacco and Martino Sorbaro and Maria Refinetti and Avi Cooper and Gabriel Kreiman and Giorgia Dellaferrera",
+            "journal": "arXiv preprint arXiv:2302.05440",
+            "abstract": "\"Forward-only\" algorithms, which train neural networks while avoiding a backward pass, have recently gained attention as a way of solving the biologically unrealistic aspects of backpropagation. Here, we first discuss the similarities between two \"forward-only\" algorithms, the Forward-Forward and PEPITA frameworks, and demonstrate that PEPITA is equivalent to a Forward-Forward with top-down feedback connections. Then, we focus on PEPITA to address compelling challenges related to the \"forward-only\" rules, which include providing an analytical understanding of their dynamics and reducing the gap between their performance and that of backpropagation. We propose a theoretical analysis of the dynamics of PEPITA. In particular, we show that PEPITA is well-approximated by an \"adaptive-feedback-alignment\" algorithm and we analytically track its performance during learning in a prototype high-dimensional setting. Finally, we develop a strategy to apply the weight mirroring algorithm on \"forward-only\" algorithms with top-down feedback and we show how it impacts PEPITA's accuracy and convergence rate."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:yFnVuubrUp4C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=8417474447308979922",
+        "cites_id": [
+            "8417474447308979922"
+        ],
+        "pub_url": "https://arxiv.org/abs/2302.05440",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:0n7HgWng0HQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Cross-task specificity and within-task invariance of cognitive control processes",
+            "pub_year": 2023,
+            "citation": "Cell reports 42 (1), 2023",
+            "author": "Yuchen Xiao and Chien-Chen Chou and Garth Rees Cosgrove and Nathan E Crone and Scellig Stone and Joseph R Madsen and Ian Reucroft and Yen-Cheng Shih and Daniel Weisholtz and Hsiang-Yu Yu and William S Anderson and Gabriel Kreiman",
+            "journal": "Cell reports",
+            "volume": "42",
+            "number": "1",
+            "publisher": "Elsevier",
+            "abstract": "Cognitive control involves flexibly combining multiple sensory inputs with task-dependent goals during decision making. Several tasks involving conflicting sensory inputs and motor outputs have been proposed to examine cognitive control, including the Stroop, Flanker, and multi-source interference task. Because these tasks have been studied independently, it remains unclear whether the neural signatures of cognitive control reflect abstract control mechanisms or specific combinations of sensory and behavioral aspects of each task. To address these questions, we record invasive neurophysiological signals from 16 patients with pharmacologically intractable epilepsy and compare neural responses within and between tasks. Neural signals differ between incongruent and congruent conditions, showing strong modulation by conflicting task demands. These neural signals are mostly specific to each task \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:OTTXONDVkokC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=551795995164767554,4225027482402105025",
+        "cites_id": [
+            "551795995164767554",
+            "4225027482402105025"
+        ],
+        "pub_url": "https://www.cell.com/cell-reports/pdf/S2211-1247(22)01817-4.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:QnVHuIhfqAcJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An adversarial collaboration to critically evaluate theories of consciousness",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.06. 23.546249, 2023",
+            "author": "Cogitate Consortium and Oscar Ferrante and Urszula Gorska-Klimowska and Simon Henin and Rony Hirschhorn and Aya Khalaf and Alex Lepauvre and Ling Liu and David Richter and Yamil Vidal and Niccolo Bonacchi and Tanya Brown and Praveen Sripad and Marcelo Armendariz and Katarina Bendtz and Tara Ghafari and Dorottya Hetenyi and Jay Jeschke and Csaba Kozma and David Rahul Mazumder and Stephanie Montenegro and Alia Seedat and Abdelrahman Sharafeldin and Shujun Yang and Sylvain Baillet and David J Chalmers and Radoslaw M Cichy and Francis Fallon and Theofanis I Panagiotaropoulos and Hal Blumenfeld and Sasha Devore and Ole Jensen and Gabriel Kreiman and Floris P de Lange and Huan Luo and Melanie Boly and Stanislas Dehaene and Christof Koch and Giulio Tononi and Michael Pitts and Liad Mudrik and Lucia Melloni",
+            "journal": "bioRxiv",
+            "pages": "2023.06. 23.546249",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Different theories explain how subjective experience arises from brain activity. These theories have independently accrued evidence, yet, confirmation bias and dependence on design choices hamper progress in the field. Here, we present an open science adversarial collaboration which directly juxtaposes Integrated Information Theory (IIT) and Global Neuronal Workspace Theory (GNWT), employing a theory-neutral consortium approach. We investigate neural correlates of the content and duration of visual experience. The theory proponents and the consortium developed and preregistered the experimental design, divergent predictions, expected outcomes, and their interpretation. 256 human subjects viewed suprathreshold stimuli for variable durations while neural activity was measured with functional magnetic resonance imaging, magnetoencephalography, and electrocorticography. We find information about conscious content in visual, ventro-temporal and inferior frontal cortex, with sustained responses in occipital and lateral temporal cortex reflecting stimulus duration, and content-specific synchronization between frontal and early visual areas. These results confirm some predictions of IIT and GNWT, while substantially challenging both theories: for IIT, a lack of sustained synchronization within posterior cortex contradicts the claim that network connectivity specifies consciousness. GNWT is challenged by the general lack of ignition at stimulus offset and limited representation of certain conscious dimensions in prefrontal cortex. Beyond challenging the theories themselves, we present an alternative approach to advance cognitive \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:a3BOlSfXSfwC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=1934370548687779377",
+        "cites_id": [
+            "1934370548687779377"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.23.546249.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:MTaD6sND2BoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Emergence of Sparse Representations from Noise",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Trenton Bricken and Rylan Schaeffer and Bruno Olshausen and Gabriel Kreiman",
+            "abstract": "A hallmark of biological neural networks, which distinguishes them from their artificial counterparts, is the high degree of sparsity in their activations. This discrepancy raises three questions our work helps to answer: (i) Why are biological networks so sparse? (ii) What are the benefits of this sparsity? (iii) How can these benefits be utilized by deep learning models? Our answers to all of these questions center around training networks to handle random noise. Surprisingly, we discover that noisy training introduces three implicit loss terms that result in sparsely firing neurons specializing to high variance features of the dataset. When trained to reconstruct noisy-CIFAR10, neurons learn biological receptive fields. More broadly, noisy training presents a new approach to potentially increase model interpretability with additional benefits to robustness and computational efficiency."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:LhH-TYMQEocC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=8009836068523355118",
+        "cites_id": [
+            "8009836068523355118"
+        ],
+        "pub_url": "https://openreview.net/forum?id=cxYaBAXVKg",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:7ityZXenKG8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "BrainBERT: Self-supervised representation learning for intracranial recordings",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2302.14367, 2023",
+            "author": "Christopher Wang and Vighnesh Subramaniam and Adam Uri Yaari and Gabriel Kreiman and Boris Katz and Ignacio Cases and Andrei Barbu",
+            "journal": "arXiv preprint arXiv:2302.14367",
+            "abstract": "We create a reusable Transformer, BrainBERT, for intracranial recordings bringing modern representation learning approaches to neuroscience. Much like in NLP and speech recognition, this Transformer enables classifying complex concepts, i.e., decoding neural data, with higher accuracy and with much less data by being pretrained in an unsupervised manner on a large corpus of unannotated neural recordings. Our approach generalizes to new subjects with electrodes in new positions and to unrelated tasks showing that the representations robustly disentangle the neural signal. Just like in NLP where one can study language by investigating what a language model learns, this approach opens the door to investigating the brain by what a model of the brain learns. As a first step along this path, we demonstrate a new analysis of the intrinsic dimensionality of the computations in different areas of the brain. To construct these representations, we combine a technique for producing super-resolution spectrograms of neural data with an approach designed for generating contextual representations of audio by masking. In the future, far more concepts will be decodable from neural recordings by using representation learning, potentially unlocking the brain like language models unlocked language."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:ODE9OILHJdcC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=18064882885290118103",
+        "cites_id": [
+            "18064882885290118103"
+        ],
+        "pub_url": "https://arxiv.org/abs/2302.14367",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:10vAtkVbs_oJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Decoding of human identity by computer vision and neuronal vision",
+            "pub_year": 2023,
+            "citation": "Scientific reports 13 (1), 651, 2023",
+            "author": "Yipeng Zhang and Zahra M Aghajan and Matias Ison and Qiujing Lu and Hanlin Tang and Guldamla Kalender and Tonmoy Monsoor and Jie Zheng and Gabriel Kreiman and Vwani Roychowdhury and Itzhak Fried",
+            "journal": "Scientific reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "651",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Extracting meaning from a dynamic and variable flow of incoming information is a major goal of both natural and artificial intelligence. Computer vision (CV) guided by deep learning (DL) has made significant strides in recognizing a specific identity despite highly variable attributes. This is the same challenge faced by the nervous system and partially addressed by the concept cells\u2014neurons exhibiting selective firing in response to specific persons/places, described in the human medial temporal lobe (MTL) \u2060. Yet, access to neurons representing a particular concept is limited due to these neurons\u2019 sparse coding. It is conceivable, however, that the information required for such decoding is present in relatively small neuronal populations. To evaluate how well neuronal populations encode identity information in natural settings, we recorded neuronal activity from multiple brain regions of nine neurosurgical epilepsy \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:FPJr55Dyh1AC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=10075974297138011235",
+        "cites_id": [
+            "10075974297138011235"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41598-022-26946-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Y5zgCj0N1YsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Learning to Learn: How to Continuously Teach Humans and Machines",
+            "pub_year": 2023,
+            "citation": "Proceedings of the IEEE/CVF International Conference on Computer Vision \u2026, 2023",
+            "author": "Parantak Singh and You Li and Ankur Sikarwar and Stan Weixian Lei and Difei Gao and Morgan B Talbot and Ying Sun and Mike Zheng Shou and Gabriel Kreiman and Mengmi Zhang",
+            "conference": "Proceedings of the IEEE/CVF International Conference on Computer Vision",
+            "pages": "11708-11719",
+            "abstract": "Curriculum design is a fundamental component of education. For example, when we learn mathematics at school, we build upon our knowledge of addition to learn multiplication. These and other concepts must be mastered before our first algebra lesson, which also reinforces our addition and multiplication skills. Designing a curriculum for teaching either a human or a machine shares the underlying goal of maximizing knowledge transfer from earlier to later tasks, while also minimizing forgetting of learned tasks. Prior research on curriculum design for image classification focuses on the ordering of training examples during a single offline task. Here, we investigate the effect of the order in which multiple distinct tasks are learned in a sequence. We focus on the online class-incremental continual learning setting, where algorithms or humans must learn image classes one at a time during a single pass through a dataset. We find that curriculum consistently influences learning outcomes for humans and for multiple continual machine learning algorithms across several benchmark datasets. We introduce a novel-object recognition dataset for human curriculum learning experiments and observe that curricula that are effective for humans are highly correlated with those that are effective for machines. As an initial step towards automated curriculum design for online class-incremental learning, we propose a novel algorithm, dubbed Curriculum Designer (CD), that designs and ranks curricula based on inter-class feature similarities. We find significant overlap between curricula that are empirically highly effective and those that are highly ranked by our CD \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:IRz6iEL74y4C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=8939048949218297746",
+        "cites_id": [
+            "8939048949218297746"
+        ],
+        "pub_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Singh_Learning_to_Learn_How_to_Continuously_Teach_Humans_and_Machines_ICCV_2023_paper.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:kkf8f6jhDXwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Visual angle and image context alter the alignment between deep convolutional neural networks and the macaque ventral stream",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5539-5539, 2023",
+            "author": "Sara Djambazovska and Gabriel Kreiman and Kohitij Kar",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5539-5539",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "A family of deep convolutional neural networks (DCNNs) currently best explains primate ventral stream activity that supports object recognition. Such models are often evaluated with neurobehavioral datasets where the stimuli are presented in the subjects\u2019 central field of view (FOV). However, the exact visual angle often varies widely across studies (eg, 8 degrees for Yamins et al., 2014; 2.9 degrees for Khaligh-Razavi et al., 2014; catered to V1 neuronal receptive field, 2 degrees for Cadena et al., 2019). A unified model of the primate visual system cannot have a varying FOV. Similarly, the type of images used for model evaluation vary across studies, ranging from objects embedded in randomized contexts (Yamins et al., 2014) to objects with no contexts (Khaligh-Razavi et al., 2014). Here we systematically tested how the predictivity of macaque inferior temporal (IT) neurons by DCNNs depends on the FOV and the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:GFxP56DSvIMC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791870",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An adversarial collaboration to critically evaluate theories of consciousness",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Lucia Melloni and Oscar Ferrante and Urszula Gorska-Klimowska and Simon Henin and Rony Hirschhorn and Aya Khalaf and Alex Lepauvre and Ling Liu and David Richter and Yamil Vidal and Niccol\u00f2 Bonacchi and Tanya Brown and Praveen Sripad and Marcelo Armendariz and Katarina Bendtz and Tara Ghafari and Dorottya Hetenyi and Jay Jeschke and Csaba Kozma and David Mazumder and Stephanie Montenegro and Alia Seedat and Abdelrahman Sharafeldin and Shujun Yang and Sylvain Baillet and David Chalmers and Radoslaw Cichy and Francis Fallon and Theofanis Panagiotaropoulos and Hal Blumenfeld and Sasha Devore and Ole Jensen and Gabriel Kreiman and Floris de Lange and Huan Luo and Melanie Boly and Stanislas Dehaene and Christof Koch and Giulio Tononi and Michael Pitts and Liad Mudrik and Cogitate Consortium",
+            "abstract": "Different theories explain how subjective experience arises from brain activity1, 2. These theories have independently accrued evidence, yet, confirmation bias and dependence on design choices hamper progress in the field3. Here, we present an open science adversarial collaboration which directly juxtaposes Integrated Information Theory (IIT) 4, 5 and Global Neuronal Workspace Theory (GNWT) 6-10, employing a theory-neutral consortium approach11, 12. We investigate neural correlates of the content and duration of visual experience. The theory proponents and the consortium developed and preregistered the experimental design, divergent predictions, expected outcomes, and their interpretation12. 256 human subjects viewed suprathreshold stimuli for variable durations while neural activity was measured with functional magnetic resonance imaging, magnetoencephalography, and electrocorticography. We find information about conscious content in visual, ventro-temporal and inferior frontal cortex, with sustained responses in occipital and lateral temporal cortex reflecting stimulus duration, and content-specific synchronization between frontal and early visual areas. These results confirm some predictions of IIT and GNWT, while substantially challenging both theories: for IIT, a lack of sustained synchronization within posterior cortex contradicts the claim that network connectivity specifies consciousness. GNWT is challenged by the general lack of ignition at stimulus offset and limited representation of certain conscious dimensions in prefrontal cortex. Beyond challenging the theories themselves, we present an alternative approach to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:P7Ujq4OLJYoC",
+        "num_citations": 0,
+        "pub_url": "https://www.researchsquare.com/article/rs-3101836/latest",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Workshop Submission: Using Multimodal DNNs to Study Vision-Language Integration in the Brain",
+            "pub_year": 2023,
+            "citation": "ICLR 2023 Workshop on Multimodal Representation Learning: Perks and Pitfalls, 2023",
+            "author": "Vighnesh Subramaniam and Colin Conwell and Christopher Wang and Gabriel Kreiman and Boris Katz and Ignacio Cases and Andrei Barbu",
+            "conference": "ICLR 2023 Workshop on Multimodal Representation Learning: Perks and Pitfalls",
+            "abstract": "We leverage a large stereoelectroencephalography (SEEG) dataset consisting of neural recordings during movie viewing and a battery of unimodal and multimodal deep neural network models (SBERT, BEIT, SIMCLR, CLIP, SLIP) to identify candidate sites of multimodal integration in the human brain. Our data-driven method involves three steps: first, we parse the neural data into discrete, distinct event-structures, i.e., image-text pairs defined either by word onset times or visual scene cuts. We then use the activity generated by these event-structures in our candidate models to predict the activity generated in the brain. Finally, using contrasts between models with or without multimodal learning signals, we isolate those neural arrays driven more by multimodal representations than by unimodal representations. Using this method, we identify a sizable set of candidate neural sites that our model predictions suggest are shaped by multimodality (from 3\\%-29\\%, depending on increasingly conservative statistical inclusion criteria). We note a meaningful cluster of these multimodal electrodes in and around the temporoparietal junction, long theorized to be a hub of multimodal integration."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:r_AWSJRzSzQC",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=OQQ1p0pFP4",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:cbJElHoBydgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neural coding: Stimulating cortex to alter visual perception",
+            "pub_year": 2023,
+            "citation": "Current Biology 33 (3), R117-R118, 2023",
+            "author": "Gabriel Kreiman",
+            "journal": "Current Biology",
+            "volume": "33",
+            "number": "3",
+            "pages": "R117-R118",
+            "publisher": "Elsevier",
+            "abstract": "A new study has shown that monkeys detect transient external pulses delivered to the highest echelons of visual cortex in a way that depends on concomitant visual inputs. This new work, a technical tour de force, has implications for the development of future visual prosthetic devices."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:dBIO0h50nwkC",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/current-biology/pdf/S0960-9822(22)01984-4.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:5olWBJj9DgsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Hippocampal Theta Phase Precession Supports Memory Formation and Retrieval of Naturalistic Experience in Humans",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.06. 05.543539, 2023",
+            "author": "Jie Zheng and Mar Yebra and Andrea GP Schjetnan and Clayton Mosher and Suneil K Kalia and Jeffrey M Chung and Chrystal M Reed and Taufik A Valiante and Adam N Mamelak and Gabriel Kreiman and Ueli Rutishauser",
+            "journal": "bioRxiv",
+            "pages": "2023.06. 05.543539",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Linking different experiences together is a key aspect of episodic memory. A potential neural mechanism for linking sequential events over time is phase precession, which causes neurons to fire progressively earlier in time relative to theta-frequency local field potential oscillations. However, no direct link between phase precession and behaviorally assessed memory encoding or retrieval success has been established. We recorded the activity of single neurons and local field potentials in the human medial temporal lobe (MTL) while participants encoded and retrieved memories of movie clips. Transient brief theta bouts and theta phase precession were observed following cognitive boundaries during movie watching as well as following stimulus onset during memory retrieval. Phase precession was dynamic, with different neurons exhibiting phase precession in different task periods. The strength of phase precession provided information about memory encoding and retrieval success that was not available in firing rates, thereby linking the temporal code established by phase precession to behaviorally assessed memory strength. These data reveal phase precession during non-spatial memory in humans and provide direct neural evidence for a functional role of phase precession in episodic memory."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:yqoGN6RLRZoC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.05.543539.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:x0RVy75Pb1sJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Integration of recognition, episodic, and associative memories during complex human behavior",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.03. 27.534384, 2023",
+            "author": "Yuchen Xiao and Paula Sanchez Lopez and Ruijie Wu and Peng-Hu Wei and Yong-Zhi Shan and Daniel Weisholtz and William R Cosgrove and Joseph R Madsen and Scellig Stone and Guo-Guang Zhao and Gabriel Kreiman",
+            "journal": "bioRxiv",
+            "pages": "2023.03. 27.534384",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The ability to remember what happened where and when constitutes the basic fabric of our memories and who we are. Forming and recalling memories depends on detecting novelty, building associations to prior knowledge, and dynamically retrieving context-relevant information. Previous studies have scrutinized the neural machinery for individual components of recognition or associative memory under laboratory conditions, such as recalling elements from arbitrary lists of words or pictures. In this study, we implemented a well-known card-matching game that integrates multiple components of memory formation together in a naturalistic setting to investigate the dynamic neural processes underlying complex natural human memory. We recorded intracranial field potentials from 1,750 depth or subdural electrodes implanted in 20 patients with pharmacologically-intractable epilepsy while they were performing the task. We leveraged generalized linear models to simultaneously assess the relative contribution of neural responses to distinct task components. Neural activity in the gamma frequency band signaled novelty and graded degrees of familiarity, represented the strength and outcome of associative recall, and finally reflected visual feedback on a trial-by-trial basis. The large-scale data and models enable dissociating and at the same time dynamically tracing the different cognitive components during fast, complex, and natural human memory behaviors."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:KbBQZpvPDL4C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.03.27.534384.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:DKBzkT8PhqUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Out of sight, out of mind: Responses in primate ventral visual cortex track individual fixations during natural vision",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.02. 08.527666, 2023",
+            "author": "Will Xiao and Saloni Sharma and Gabriel Kreiman and Margaret Livignstone",
+            "journal": "bioRxiv",
+            "pages": "2023.02. 08.527666",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "During natural vision, primates shift their gaze several times per second with large, ballistic eye movements known as saccades. Open questions remain as to whether visual neurons retain their classical retinotopic response properties during natural vision or whether neurons integrate information across fixations and predict the consequences of impending saccades. Answers are especially wanting for vision in complex scenes relevant to natural behavior. We let 13 monkeys freely view thousands of large natural images, recorded over 883 hours of neuronal responses throughout the ventral visual pathway across 4.7 million fixations, and designed flexible analyses to reveal the spatial, temporal, and feature selectivity of the responses. Ventral visual responses followed each fixation and did not become gaze-invariant as monkeys examined an image over seconds. Computational models revealed that neuronal responses corresponded to eye-centered receptive fields. The results suggest that ventral visual cortex remains predominantly retinotopic during natural vision and does not establish a gaze-independent representation of the world."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:HtS1dXgVpQUC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.02.08.527666.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:UTJAow0yoEEJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

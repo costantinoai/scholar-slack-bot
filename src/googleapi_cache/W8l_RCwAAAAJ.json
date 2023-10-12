@@ -1,0 +1,57 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The tricky business of defining brain functions",
+            "pub_year": 2023,
+            "citation": "Trends in Neurosciences 46 (1), 3-4, 2023",
+            "author": "Nicole C Rust and Joseph E LeDoux",
+            "volume": "46",
+            "number": "1",
+            "pages": "3-4",
+            "publisher": "Elsevier",
+            "abstract": "Neuroscience has a long history of investigating the neural correlates of brain functions. One example is fear, which has been studied intensely in a variety of species. In parallel, unease about definitions of brain functions has existed for over 100 years. Because the translational impact of basic research hinges on how we define these functions, these definitions should be carefully considered."
+        },
+        "filled": true,
+        "author_pub_id": "W8l_RCwAAAAJ:vV6vV6tmYwMC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=9764075804684725248",
+        "cites_id": [
+            "9764075804684725248"
+        ],
+        "pub_url": "https://www.cell.com/trends/neurosciences/fulltext/S0166-2236%2822%2900213-2?dgcid=raven_jbs_etoc_email",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ACw4Sjb3gIcJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Unraveling the entangled brain: How do we go about it?",
+            "pub_year": 2023,
+            "citation": "Journal of Cognitive Neuroscience 35 (3), 368-371, 2023",
+            "author": "Shaul Druckmann and Nicole C Rust",
+            "journal": "Journal of Cognitive Neuroscience",
+            "volume": "35",
+            "number": "3",
+            "pages": "368-371",
+            "publisher": "MIT Press",
+            "abstract": "An impactful understanding of the brain will require entirely new approaches and unprecedented collaborative efforts. The next steps will require brain researchers to develop theoretical frameworks that allow them to tease apart dependencies and causality in complex dynamical systems, as well as the ability to maintain awe while not getting lost in the effort. The outstanding question is: How do we go about it?"
+        },
+        "filled": true,
+        "author_pub_id": "W8l_RCwAAAAJ:RYcK_YlVTxYC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=17870007435590227806",
+        "cites_id": [
+            "17870007435590227806"
+        ],
+        "pub_url": "https://direct.mit.edu/jocn/article-abstract/35/3/368/114112",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:XtfxUxUF__cJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    }
+]
