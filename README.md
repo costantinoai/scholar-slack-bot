@@ -132,12 +132,15 @@ If you're running the script from an IDE, the default settings are taken from ha
 
 ```
 slack-bot
+├── add_authors_batch.sh
+├── fetch_and_send.sh
 ├── fetch_scholar.py
 ├── helper_funcs.py
 ├── log_config.py
 ├── main.py
 ├── README.md
 ├── slack_bot.py
+├── streams_funcs.py
 └── src
     ├── authors.json
     ├── googleapi_cache
@@ -147,9 +150,14 @@ slack-bot
 
 ## 📝 Files Descriptions
 
+- **add_authors_batch.sh**: Bash script to add authors in batch. You need to set the correct `ids`, conda environment and conda.sh path to use this script.
+- **fetch_and_send.sh**: Bash script to run the main workflow with default flags. You need to set the correct conda environment and conda.sh path to use this script.
 - **fetch_scholar.py**: Functions to fetch comprehensive details for scholarly publications.
 - **helper_funcs.py**: Collection of helper functions.
+- **log_config.py**: Set logging levels for all the scripts.
+- **main.py**: The main script. Run this file from terminal or IDE to run the bot.
 - **slack_bot.py**: Functions to connect to format and send messages to a Slack channel.
+- **streams_funcs.py**: Functions for every branch/scenario in main.py (depending on the active flags).
 - **authors.json**: A file containing the list of authors' names and their corresponding Google Scholar IDs. Here's how you should structure the contents:
 
   ```json
