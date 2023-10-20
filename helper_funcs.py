@@ -5,9 +5,82 @@ Created on Sat Oct  7 14:04:23 2023
 
 @author: costantino_ai
 """
+import os
+import shutil
+import logging
 import json
 from scholarly import scholarly
+from log_config import MIN, STANDARD
 
+def confirm_temp_cache(temp_cache_path='./src/temp_cache', old_cache_path='./src/googleapi_cache'):
+    """
+    Moves the contents of the temporary cache directory to the old cache directory.
+
+    After ensuring that both paths exist, this function moves every file from the 
+    temp_cache_path to the old_cache_path, overwriting files with the same name. 
+    Once all files are moved, the temporary cache directory is deleted.
+
+    Parameters:
+    - temp_cache_path (str): Path to the temporary cache directory.
+    - old_cache_path (str): Path to the old cache directory (to be updated with new files).
+
+    Returns:
+    None
+    """
+    
+    # Check if temp_cache_path exists
+    if not os.path.exists(temp_cache_path):
+        logging.warning(f"Temporary cache path '{temp_cache_path}' does not exist. New articles are NOT saved to cache.")
+        return
+
+    # Check if old_cache_path exists
+    if not os.path.exists(old_cache_path):
+        logging.log(MIN, f"Cache path '{old_cache_path}' does not exist. Creating.")
+        os.makedirs(old_cache_path, exist_ok=True)
+
+    # Log the beginning of the process
+    logging.log(STANDARD, "Starting to move files from temporary cache to old cache.")
+
+    # Iterate over every file in the temporary cache path
+    for file_name in os.listdir(temp_cache_path):
+        source_path = os.path.join(temp_cache_path, file_name)
+        destination_path = os.path.join(old_cache_path, file_name)
+
+        # Move file from temporary cache to old cache, overwriting if necessary
+        shutil.move(source_path, destination_path)
+        logging.log(STANDARD, f"Moved '{file_name}' from temporary cache to old cache.")
+
+    # After moving all files, remove the temporary cache directory
+    os.rmdir(temp_cache_path)
+    logging.log(STANDARD, f"Temporary cache path '{temp_cache_path}' has been deleted.")
+    
+    return
+
+def has_conflicting_args(args):
+    """
+    Check if any of the conflicting arguments are set to True or have values.
+    
+    Args:
+        args (argparse.Namespace): The argument object.
+        
+    Returns:
+        bool: True if any conflicting arguments are set, otherwise False.
+    """
+    
+    # Check if test_fetching and test_message are used together without any other conflicting arguments
+    if args.test_fetching and args.test_message:
+        return any([args.add_scholar_id, args.update_cache])
+
+    # Check if add_scholar_id is used alone
+    if args.add_scholar_id:
+        return any([args.test_fetching, args.test_message, args.update_cache])
+
+    # Check if update_cache is used alone
+    if args.update_cache:
+        return any([args.test_fetching, args.test_message, args.add_scholar_id])
+
+    return False
+   
 def add_new_author_to_json(authors_path, scholar_id):
     """
     Add a new author to the existing authors JSON file using the provided Google Scholar ID.
@@ -22,7 +95,8 @@ def add_new_author_to_json(authors_path, scholar_id):
     Raises:
     - Exception: If an error occurs while fetching the author using the `scholarly` module.
     """
-
+    
+    logging.log(MIN, f"Adding author ID {scholar_id} to {authors_path}.")
     # Get the old authors json
     with open(authors_path, "r") as f:
         old_authors_json = json.load(f)
@@ -42,11 +116,21 @@ def add_new_author_to_json(authors_path, scholar_id):
     }
 
     # Append the new author's details to the existing list
-    old_authors_json.append(author_dict)
+    # Check if the author with the given scholar_id already exists in the old_authors_json
+    if not any(author['id'] == scholar_id for author in old_authors_json):
+        # Append the new author's details to the existing list
+        old_authors_json.append(author_dict)
+    else:
+        # Handle the case where the author already exists, e.g., log a message
+        logging.log(MIN, f"Author with ID {scholar_id} already exists in the list and will not be added again.")
 
-    # Save the updated list of authors back to the JSON file
-    with open(authors_path, "w") as f:
-        json.dump(old_authors_json, f, indent=4)
+    try:
+        # Save the updated list of authors back to the JSON file
+        with open(authors_path, "w") as f:
+            json.dump(old_authors_json, f, indent=4)
+        logging.log(STANDARD, f"Author {author_name} added to {authors_path}.")   
+    except:
+        logging.error(f"There was an error adding {author_name} to {authors_path}.")   
         
     return author_dict
         
@@ -133,4 +217,17 @@ def clean_pubs(fetched_pubs, from_year=2023, exclude_not_cited_papers=False):
     
     # Return the cleaned and sorted list of publications
     return sorted_pubs
+
+
+def ensure_output_folder(output_folder):
+    """
+    Checks for the existence of the output folder, and if it doesn't exist, creates it.
+
+    Raises:
+    - Exception: If there's any error during folder creation.
+    """
+    if not os.path.exists(output_folder):  # Check if directory exists
+        logging.info(f"Output folder '{output_folder}' does not exist. Creating it.")
+        os.makedirs(output_folder)  # Create directory
+        
 

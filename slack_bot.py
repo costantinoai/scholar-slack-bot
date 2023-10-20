@@ -11,18 +11,42 @@ import logging
 
 from log_config import MIN, STANDARD
 
-def send_test_msg(token, ch_name):  
+def send_test_msg(token, ch_name):
+    """
+    Send a test message to a specified Slack channel.
+
+    The message will be framed with '#' characters for visibility. 
+    It's intended for testing purposes only and does not perform 
+    any fetch or save operations.
+
+    Parameters:
+    - token (str): The Slack API token.
+    - ch_name (str): The name of the Slack channel to send the message to.
+
+    Returns:
+    None
+    """
+    
+    # Initialize the test message to be sent.
     unformatted_msg = 'This is a test message'
-    width = len(unformatted_msg) + 2  # Adding 2 for the padding on left and right
+    
+    # Calculate the width for the formatted message. 
+    # The '+2' is added to account for the '#' characters padding on either side of the message.
+    width = len(unformatted_msg) + 2
+    
+    # Create a string of '#' characters of calculated width for the top and bottom borders.
     top_bottom = '#' * width
 	
+    # Format the message to be sent with markdown-like code blocks and '#' borders.
     formatted_msg = f"```\n{top_bottom}\n#{unformatted_msg}#\n{top_bottom}```"
-
+    
+    # Send the formatted message to the Slack channel using the send_to_slack function.
     response_json = send_to_slack(ch_name, formatted_msg, token)
     
-    if response_json['ok'] == True:
+    # Check if the message was sent successfully and log the outcome.
+    if response_json['ok']:
         logging.log(MIN, f"Test message successfully sent to #{ch_name}")
-    return
+
 
 def make_slack_msg(authors: list, articles: list) -> list:
     """
@@ -71,16 +95,13 @@ def get_slack_config(slack_config_path='./src/slack.config'):
         'channel_name': config.get('slack', 'channel_name'),
     }
     
+    logging.log(STANDARD, f"Fetched Slack configuration from {slack_config_path}.")
     return slack_config
 
 def send_to_slack(channel_id, message, token):
     """
     Sends a given message to a specified Slack channel using the provided authorization token.
     
-    :param channel_id: The ID of the Slack channel to send the message to.
-    :param message: The content of the message to be sent.
-    :param token: The Slack API authorization token.
-    :return: A dictionary containing the response from the Slack API.
     """
     
     url = "https://slack.com/api/chat.postMessage"  # The Slack API endpoint for posting messages
@@ -101,7 +122,7 @@ def send_to_slack(channel_id, message, token):
     response_json = response.json()
     
     if response_json['ok'] == False:
-        logging.error(f"Sending message to #{channel_id} failed. Error: {response_json['error']}. Message:\n{message}")
+        logging.warning(f"Sending message to #{channel_id} failed. Error: {response_json['error']}. Message:\n{message}")
     else:
         logging.log(STANDARD, f"Message succesfully sent to #{channel_id}.")
     
@@ -166,12 +187,18 @@ def format_authors_message(authors: list) -> str:
     """
     Formats a list of authors into a pretty message suitable for Slack. 
     
-    :param authors: List of authors where each author is a dictionary with 'name' and 'id' keys.
-    :return: A string message with each author and their associated ID, each on a new line.
-    """
+    Parameters:
+    - authors: List of authors where each author is a dictionary with 'name' and 'id' keys.
     
+    Returns:
+    - str: A string message with each author and their associated ID, each on a new line.
+    """
+
+    # Order the authors alphabetically by name
+    authors_sorted = sorted(authors, key=lambda x: x[0].lower())
+
     # Construct the message by listing each author with their ID on separate lines, indented
-    formatted_authors = '\n'.join([f"\t{author[0]},\t\tGoogle Scholar ID: {author[1]}" for author in authors])
+    formatted_authors = '\n'.join([f"\t{author[0]},\t\tGoogle Scholar ID: {author[1]}" for author in authors_sorted])
 
     # Add the code block delimiters and the description
     formatted_message = 'List of monitored authors:\n```\n' + formatted_authors + '\n```'

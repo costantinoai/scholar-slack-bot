@@ -15,12 +15,58 @@ import logging
 import time
 from tqdm import tqdm 
 
-from helper_funcs import clean_pubs
+from helper_funcs import clean_pubs, get_authors_json, convert_json_to_tuple, ensure_output_folder
 from log_config import MIN, STANDARD
 
 MAX_RETRIES = 3
 DELAYS = [20, 40, 60]
 
+def fetch_from_json(args, idx=None):
+    """
+    Fetch author and publication details based on a specified index.
+    
+    This function retrieves author details from a given JSON path, converts this 
+    data into a tuple representation, and fetches publication details for a subset 
+    of these authors from a scholarly database. The subset size is determined by the 
+    provided index (idx).
+    
+    Parameters:
+    - args: Arguments containing the path to the authors' JSON and other relevant data.
+    - idx (int, optional): The number of authors for which to fetch publications. 
+      Defaults to None, which fetches for all authors.
+    
+    Returns:
+    - tuple: A tuple containing:
+        1. A list of selected authors' details.
+        2. A dictionary with publication details for each selected author.
+    """
+    
+    # Retrieve authors' details from the specified JSON path.
+    authors_json = get_authors_json(args.authors_path)
+    logging.log(STANDARD, f"Fetched authors' details from {args.authors_path}.")
+
+    # Convert the retrieved JSON data into a tuple representation for easier handling.
+    authors = convert_json_to_tuple(authors_json)
+    logging.log(STANDARD, "Converted authors' JSON data into tuple representation.")
+    
+    # Determine the number of authors to process.
+    if idx is not None:
+        if idx > len(authors):
+            logging.log(STANDARD, f"Requested {idx} authors but only {len(authors)} available. Using all available authors.")
+            idx = len(authors)
+    else:
+        idx = len(authors)
+        
+    if idx == 0:
+        logging.error('No authors listed in the authors.json file.')
+        return
+
+    # Fetch publication details for the determined number of authors from the scholarly database.
+    articles = fetch_pubs_dictionary(authors[:idx], args)
+    logging.log(MIN, f"Fetched {len(articles)} articles for the provided authors.")
+    logging.log(MIN, "Publications fetched correctly")
+    
+    return authors[:idx], articles
 
 def fetch_publication_details(pub):
     """
@@ -42,17 +88,6 @@ def fetch_publication_details(pub):
     except Exception as e:
         logging.error(f"Error fetching publication: {e}")
         return None
-
-def ensure_output_folder(output_folder):
-    """
-    Checks for the existence of the output folder, and if it doesn't exist, creates it.
-
-    Raises:
-    - Exception: If there's any error during folder creation.
-    """
-    if not os.path.exists(output_folder):  # Check if directory exists
-        logging.info(f"Output folder '{output_folder}' does not exist. Creating it.")
-        os.makedirs(output_folder)  # Create directory
 
 def fetch_author_details(author_id):
     """
@@ -226,15 +261,17 @@ def fetch_publications_by_id(author_id, output_folder, args, from_year=2023, exc
     3. Load cached publications if available.
     4. Filter out already cached publications.
     5. Fetch details of the new publications in parallel.
-    6. Cache the updated list of publications.
+    6. Cache the updated list of publications to a temporary folder.
     7. Process the fetched list based on parameters (e.g., year, citations).
 
     Note:
     - This function uses the 'scholarly' library to interact with Google Scholar.
     - Fetching too many papers in a short time might lead to a temporary block by Google Scholar.
     """
+    # Make temp dir path
+    temp_output_folder = os.path.join(output_folder, 'tmp')
     # Check if the output folder exists or create it
-    ensure_output_folder(output_folder)
+    ensure_output_folder(temp_output_folder)
     # Fetch author details from Google Scholar
     author_pubs = fetch_author_details(author_id)
     # Load cached publications if available
@@ -245,7 +282,7 @@ def fetch_publications_by_id(author_id, output_folder, args, from_year=2023, exc
     fetched_pubs = fetch_selected_pubs(pubs_to_fetch)
     # Update cache with newly fetched publications
     if not args.test_fetching:
-        save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args)
+        save_updated_cache(fetched_pubs, cached_pubs, author_id, temp_output_folder, args)
     # Return cleaned list of publications
     return clean_pubs(fetched_pubs, from_year, exclude_not_cited_papers)
 
