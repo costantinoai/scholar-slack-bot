@@ -3,6 +3,27 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Invited Session III: Neural network models of the visual system: Exploring the function of different forms of visual recurrence with artificial neural networks",
+            "pub_year": 2023,
+            "citation": "Journal of vision 23 (11), 16-16, 2023",
+            "author": "Grace Lindsay",
+            "journal": "Journal of vision",
+            "volume": "23",
+            "number": "11",
+            "pages": "16-16",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Behavioral studies suggest that recurrence in the visual system is important for processing degraded stimuli. There are two broad anatomical forms this recurrence can take, lateral or feedback, each with different assumed functions. I'll discuss work wherein I add four different kinds of recurrence\u2014two of each anatomical form\u2014to a feedforward convolutional neural network and find all forms capable of increasing the ability of the network to classify noisy digit images. By using several analysis tools frequently applied to neural data, the distinct strategies used by different networks were identified. The analyses used here can be applied to real neural recordings to identify the strategies at play in the brain. An analysis of an fMRI dataset weakly supports the predictive feedback model but points to a need for higher-resolution cross-regional data to understand recurrent visual processing."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:9ZlFYXVOiuMC",
+        "num_citations": 0,
+        "pub_url": "https://iovs.arvojournals.org/article.aspx?articleid=2792850",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The neuroconnectionist research programme",
             "pub_year": 2023,
             "citation": "Nature Reviews Neuroscience, 1-20, 2023",

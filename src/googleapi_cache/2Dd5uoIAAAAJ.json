@@ -3,6 +3,25 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Transient brain activity dynamics discriminate levels of consciousness during anesthesia",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.10. 09.560209, 2023",
+            "author": "Scott Ensel and Lynn Uhrig and Ayberk Ozkirli and Guylaine Hoffner and Jordy Tasserie and Stanislas Dehaene and Dimitri Van De Ville and B\u00e9chir Jarraya and Elvira Pirondini",
+            "journal": "bioRxiv",
+            "pages": "2023.10. 09.560209",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The awake mammalian brain is functionally organized in terms of large-scale distributed networks that are constantly interacting. Loss of consciousness might disrupt this temporal organization leaving patients unresponsive. We hypothesized that characterizing brain activity in terms of transient events may provide a signature of consciousness. For this, we analyzed temporal dynamics of spatiotemporally overlapping functional networks obtained from fMRI transient activity across different states of consciousness. We first show a striking homology in spatial organization of networks between monkeys and humans, indicating cross-species similarities in resting-state fMRI structure. We then tracked how network organization shifts under different anesthesia conditions in macaque monkeys. While the spatial aspect of the networks was preserved, their temporal dynamics were highly affected by anesthesia. Networks expressed for longer durations and co-activated in an anesthetic-specific configuration. Additionally, hierarchical brain organization was disrupted with a consciousness-level-signature role of the default mode network. In conclusion, network temporal dynamics is a reliable and robust cortical signature of consciousness, paving the way to its clinical translation."
+        },
+        "filled": true,
+        "author_pub_id": "2Dd5uoIAAAAJ:gWwPWYJ7j-oC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.10.09.560209.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "An adversarial collaboration protocol for testing contrasting predictions of global neuronal workspace and integrated information theory",
             "pub_year": 2023,
             "citation": "Plos one 18 (2), e0268577, 2023",

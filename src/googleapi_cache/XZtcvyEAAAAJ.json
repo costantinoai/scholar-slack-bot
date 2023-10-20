@@ -3,6 +3,33 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Empirically Identifying and Computationally Modeling the Brain\u2013Behavior Relationship for Human Scene Categorization",
+            "pub_year": 2023,
+            "citation": "Journal of Cognitive Neuroscience 35 (11), 1879-1897, 2023",
+            "author": "Agnessa Karapetian and Antoniya Boyanova and Muthukumar Pandaram and Klaus Obermayer and Tim C Kietzmann and Radoslaw M Cichy",
+            "journal": "Journal of Cognitive Neuroscience",
+            "volume": "35",
+            "number": "11",
+            "pages": "1879-1897",
+            "publisher": "MIT Press",
+            "abstract": "Humans effortlessly make quick and accurate perceptual decisions about the nature of their immediate visual environment, such as the category of the scene they face. Previous research has revealed a rich set of cortical representations potentially underlying this feat. However, it remains unknown which of these representations are suitably formatted for decision-making. Here, we approached this question empirically and computationally, using neuroimaging and computational modeling. For the empirical part, we collected EEG data and RTs from human participants during a scene categorization task (natural vs. man-made). We then related EEG data to behavior to behavior using a multivariate extension of signal detection theory. We observed a correlation between neural data and behavior specifically between \u223c100 msec and \u223c200 msec after stimulus onset, suggesting that the neural scene \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:t7zJ5fGR-2UC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=6540615712862677034",
+        "cites_id": [
+            "6540615712862677034"
+        ],
+        "pub_url": "https://direct.mit.edu/jocn/article/doi/10.1162/jocn_a_02043/117201",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The algonauts project 2023 challenge: How the human brain makes sense of natural scenes",
             "pub_year": 2023,
             "citation": "arXiv preprint arXiv:2301.03198, 2023",

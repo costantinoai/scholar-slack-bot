@@ -3,6 +3,21 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Seeing and understanding epistemic actions",
+            "pub_year": 2023,
+            "citation": "Proceedings of the National Academy of Sciences, 2023",
+            "author": "Sholei Croom and Hanbei Zhou and Chaz Firestone",
+            "journal": "Proceedings of the National Academy of Sciences"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:-FonjvnnhkoC",
+        "num_citations": 0,
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Empirical evidence for perspectival similarity",
             "pub_year": 2023,
             "citation": "Psychological Review, 2023",

@@ -3,6 +3,34 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Association of residential and school green-and bluespace with academic performance in 10-13-year-old Polish schoolchildren with and without attention deficit hyperactivity disorder",
+            "pub_year": 2023,
+            "citation": "Science of The Total Environment 859, 160123, 2023",
+            "author": "Nitika Singh and Clemens Baumbach and Dorota Buczy\u0142owska and Jakub Bratkowski and Yarema Mysak and Maja Wierzba-\u0141ukaszyk and Katarzyna Sitnik-Warchulska and Krzysztof Skotak and Ma\u0142gorzata Lipowska and Bernadetta Izydorczyk and Marcin Szwed and Iana Markevych",
+            "journal": "Science of The Total Environment",
+            "volume": "859",
+            "pages": "160123",
+            "publisher": "Elsevier",
+            "abstract": "Several studies, mostly based on the USA data, have reported that school greenspace was associated with better academic performance. However, nearly all of them were conducted on aggregated data. We are among the first individual data-based studies worldwide to examine whether exposure to school and residential green- and bluespace can boost academic performance.NeuroSmog is an ongoing case-control study investigating the impact of air pollution on brain development in children with and without attention deficit hyperactivity disorder (ADHD). 658 children aged 10 to 13 years from 18 large and small towns in southern Poland constituted the analytical sample. Information about latest end-of-year school grades in Polish and maths was collected by the parent report while perceived academic performance in these subjects was collected by the Youth Self-Report. Tree, grass, and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:NMxIlDl6LWMC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=8797492699601888581",
+        "cites_id": [
+            "8797492699601888581"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0048969722072230",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ReXcyf_4FnoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The perception of affective and discriminative touch in blind individuals",
             "pub_year": 2023,
             "citation": "Behavioural Brain Research 444, 114361, 2023",

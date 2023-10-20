@@ -3,6 +3,25 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Testing the Disconnectome Symptom Discoverer model on out-of-sample post-stroke language outcomes",
+            "pub_year": 2023,
+            "citation": "Brain, awad352, 2023",
+            "author": "Thomas MH Hope and Douglas Neville and Lia Talozzi and Chris Foulon and Stephanie J Forkel and Michel Thiebaut de Schotten and Cathy J Price",
+            "journal": "Brain",
+            "pages": "awad352",
+            "publisher": "Oxford University Press",
+            "abstract": "Stroke is common, and its consequent brain damage can cause various cognitive impairments. 3 Associations between where and how much brain lesion damage a patient has suffered, and the 4 particular impairments that injury has caused (lesion-symptom associations) offer potentially 5 compelling insights into how the brain implements cognition1. A better understanding of those 6 associations can also fill a gap in current stroke medicine by helping us to predict how individual 7 patients might recover from post-stroke impairments 2. Most recent work in this area employs 8 machine learning models trained with data from stroke patients whose mid-to-long-term 9 outcomes are known 2-4. These machine learning models are tested by predicting new outcomes\u201310 typically scores on standardised tests of post-stroke impairment\u2013for patients whose data was not 11 used to train the model. Traditionally, these \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "gyfMndoAAAAJ:eI34FqJmdUoC",
+        "num_citations": 0,
+        "pub_url": "https://academic.oup.com/brain/advance-article-pdf/doi/10.1093/brain/awad352/52014976/awad352.pdf",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "SARS-CoV-2-specific nasal IgA wanes 9 months after hospitalisation with COVID-19 and is not induced by subsequent vaccination",
             "pub_year": 2023,
             "citation": "EBioMedicine 87, 2023",

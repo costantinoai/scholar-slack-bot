@@ -3,6 +3,35 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "The neural code for \u201cface cells\u201d is not face-specific",
+            "pub_year": 2023,
+            "citation": "Science Advances 9 (35), eadg1736, 2023",
+            "author": "Kasper Vinken and Jacob S Prince and Talia Konkle and Margaret S Livingstone",
+            "journal": "Science Advances",
+            "volume": "9",
+            "number": "35",
+            "pages": "eadg1736",
+            "publisher": "American Association for the Advancement of Science",
+            "abstract": "Face cells are neurons that respond more to faces than to non-face objects. They are found in clusters in the inferotemporal cortex, thought to process faces specifically, and, hence, studied using faces almost exclusively. Analyzing neural responses in and around macaque face patches to hundreds of objects, we found graded response profiles for non-face objects that predicted the degree of face selectivity and provided information on face-cell tuning beyond that from actual faces. This relationship between non-face and face responses was not predicted by color and simple shape properties but by information encoded in deep neural networks trained on general objects rather than face classification. These findings contradict the long-standing assumption that face versus non-face selectivity emerges from face-specific features and challenge the practice of focusing on only the most effective stimulus. They provide \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "0-LZmbcAAAAJ:j3f4tGmQtD8C",
+        "num_citations": 8,
+        "citedby_url": "/scholar?hl=en&cites=18445614144556874267",
+        "cites_id": [
+            "18445614144556874267"
+        ],
+        "pub_url": "https://www.science.org/doi/abs/10.1126/sciadv.adg1736",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:G7o73lX8-_8J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 2,
+            "2023": 6
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The importance of contrast features in rat vision",
             "pub_year": 2023,
             "citation": "Scientific Reports 13 (1), 459, 2023",

@@ -3,6 +3,27 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Potential cognitive and neural benefits of a computerised cognitive training programme based on Structure Learning in healthy adults: study protocol for a randomised controlled trial",
+            "pub_year": 2023,
+            "citation": "Trials 24 (1), 1-22, 2023",
+            "author": "Chia-Lun Liu and Xiaoqin Cheng and Boon Linn Choo and Min Hong and Jia Li Teo and Wei Ler Koo and Jia Yuan Janet Tan and Marisha Barth Ubrani and John Suckling and Bal\u00e1zs Guly\u00e1s and Victoria Leong and Zoe Kourtzi and Barbara Sahakian and Trevor Robbins and Annabel Shen-Hsing Chen",
+            "journal": "Trials",
+            "volume": "24",
+            "number": "1",
+            "pages": "1-22",
+            "publisher": "BioMed Central",
+            "abstract": "Cognitive flexibility refers to the capacity to shift between conceptual representations particularly in response to changes in instruction and feedback. It enables individuals to swiftly adapt to changes in their environment and has significant implications for learning. The present study focuses on investigating changes in cognitive flexibility following an intervention programme\u2014Structure Learning training. Participants are pseudo-randomised to either the Training or Control group, while matched on age, sex, intelligence and cognitive flexibility performance. In the Training group, participants undergo around 2 weeks of training (at least 13 sessions) on Structure Learning. In the Control group, participants do not have to undergo any training and are never exposed to the Structure Learning task. The effects of Structure Learning training are investigated at both the behavioural and neural level. We measured covariates that can influence an individual\u2019s training performance before the training phase and outcome measures that can potentially show training benefits after the training phase. At the behavioural level, we investigated outcomes in both cognitive and social aspects with a primary focus on executive functions. At the neural level, we employed a multimodality approach and investigated potential changes to functional connectivity patterns, neurometabolite concentration in the frontal brain regions, and brain microstructure and myelination.  We reported the development of a novel training programme based on Structure Learning that aims to hone a general learning ability to potentially achieve extensive transfer benefits across various cognitive \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:BJbdYPG6LGMC",
+        "num_citations": 0,
+        "pub_url": "https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-023-07551-2",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Neurodegenerative disease of the brain: a survey of interdisciplinary approaches",
             "pub_year": 2023,
             "citation": "Journal of the Royal Society Interface 20 (198), 20220406, 2023",

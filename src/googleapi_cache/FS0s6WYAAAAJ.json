@@ -1,0 +1,29 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "ICC++: Explainable feature learning for art history using image compositions",
+            "pub_year": 2023,
+            "citation": "Pattern Recognition 136, 109153, 2023",
+            "author": "Prathmesh Madhu and Tilman Marquart and Ronak Kosti and Dirk Suckow and Peter Bell and Andreas Maier and Vincent Christlein",
+            "journal": "Pattern Recognition",
+            "volume": "136",
+            "pages": "109153",
+            "publisher": "Pergamon",
+            "abstract": "Image compositions are helpful in the study of image structures and assist in discovering the semantics of the underlying scene portrayed across art forms and styles. With the digitization of artworks in recent years, thousands of images of a particular scene or narrative could potentially be linked together. However, manually linking this data with consistent objectiveness can be a highly challenging and time-consuming task. In this work, we present a novel approach called Image Composition Canvas (ICC++) to compare and retrieve images having similar compositional elements. ICC++ is an improvement over ICC, specializing in generating low and high-level features (compositional elements) motivated by Max Imdahl\u2019s work. To this end, we present a rigorous quantitative and qualitative comparison of our approach with traditional and state-of-the-art (SOTA) methods showing that our proposed method outperforms \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "FS0s6WYAAAAJ:KlAtU1dfN6UC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=8546654442512468228",
+        "cites_id": [
+            "8546654442512468228"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S003132032200632X",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BEn47-7Qm3YJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    }
+]
