@@ -188,7 +188,7 @@ def format_authors_message(authors: list) -> str:
     Formats a list of authors into a pretty message suitable for Slack. 
     
     Parameters:
-    - authors: List of authors where each author is a dictionary with 'name' and 'id' keys.
+    - authors: List of items where each item is a tuple (author_name, author_id)
     
     Returns:
     - str: A string message with each author and their associated ID, each on a new line.
@@ -201,7 +201,7 @@ def format_authors_message(authors: list) -> str:
     formatted_authors = '\n'.join([f"\t{author[0]},\t\tGoogle Scholar ID: {author[1]}" for author in authors_sorted])
 
     # Add the code block delimiters and the description
-    formatted_message = 'List of monitored authors:\n```\n' + formatted_authors + '\n```'
+    formatted_message = 'List of monitored authors:\n```' + formatted_authors + '```'
 
     # Return the formatted message
     return formatted_message
