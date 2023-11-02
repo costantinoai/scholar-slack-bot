@@ -1,0 +1,406 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Getting aligned on representational alignment",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2310.13018, 2023",
+            "author": "Ilia Sucholutsky and Lukas Muttenthaler and Adrian Weller and Andi Peng and Andreea Bobu and Been Kim and Bradley C Love and Erin Grant and Jascha Achterberg and Joshua B Tenenbaum and Katherine M Collins and Katherine L Hermann and Kerem Oktar and Klaus Greff and Martin N Hebart and Nori Jacoby and Raja Marjieh and Robert Geirhos and Sherol Chen and Simon Kornblith and Sunayana Rane and Talia Konkle and Thomas P O'Connell and Thomas Unterthiner and Andrew K Lampinen and Klaus-Robert M\u00fcller and Mariya Toneva and Thomas L Griffiths",
+            "journal": "arXiv preprint arXiv:2310.13018",
+            "abstract": "Biological and artificial information processing systems form representations of the world that they can use to categorize, reason, plan, navigate, and make decisions. To what extent do the representations formed by these diverse systems agree? Can diverging representations still lead to the same behaviors? And how can systems modify their representations to better match those of another system? These questions pertaining to the study of \\textbf{\\emph{representational alignment}} are at the heart of some of the most active research areas in contemporary cognitive science, neuroscience, and machine learning. Unfortunately, there is limited knowledge-transfer between research communities interested in representational alignment, and much of the progress in one field ends up being rediscovered independently in another, when greater cross-field communication would be advantageous. To improve communication between fields, we propose a unifying framework that can serve as a common language between researchers studying representational alignment. We survey the literature from the fields of cognitive science, neuroscience, and machine learning, and demonstrate how prior work fits into this framework. Finally, we lay out open problems in representational alignment where progress can benefit all three fields. We hope that our work can catalyze cross-disciplinary collaboration and accelerate progress for all communities studying and developing information processing systems. We note that this is a working paper and encourage readers to reach out with their suggestions for future revisions."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:0KyAp5RtaNEC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2310.13018",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What can 1.8 billion regressions tell us about the pressures shaping high-level visual representation in brains and machines",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Colin Conwell and Jacob S Prince and Kendrick N Kay and George A Alvarez and Talia Konkle",
+            "journal": "bioRxiv"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:SdhP9T11ey4C",
+        "num_citations": 14,
+        "citedby_url": "/scholar?hl=en&cites=5144354779593428434,18396007521698555041",
+        "cites_id": [
+            "5144354779593428434",
+            "18396007521698555041"
+        ],
+        "pub_url": "https://scholar.google.com/scholar?cluster=5144354779593428434&hl=en&oi=scholarr",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oaRB8F-_S_8J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 4,
+            "2023": 10
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The neuroconnectionist research programme",
+            "pub_year": 2023,
+            "citation": "Nature Reviews Neuroscience, 1-20, 2023",
+            "author": "Adrien Doerig and Rowan P Sommers and Katja Seeliger and Blake Richards and Jenann Ismael and Grace W Lindsay and Konrad P Kording and Talia Konkle and Marcel AJ Van Gerven and Nikolaus Kriegeskorte and Tim C Kietzmann",
+            "pages": "1-20",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Artificial neural networks (ANNs) inspired by biology are beginning to be widely used to model behavioural and neural data, an approach we call \u2018neuroconnectionism\u2019. ANNs have been not only lauded as the current best models of information processing in the brain but also criticized for failing to account for basic cognitive functions. In this Perspective article, we propose that arguing about the successes and failures of a restricted set of current ANNs is the wrong approach to assess the promise of neuroconnectionism for brain science. Instead, we take inspiration from the philosophy of science, and in particular from Lakatos, who showed that the core of a scientific research programme is often not directly falsifiable but should be assessed by its capacity to generate novel insights. Following this view, we present neuroconnectionism as a general research programme centred around ANNs as a computational \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:JQOojiI6XY0C",
+        "num_citations": 18,
+        "citedby_url": "/scholar?hl=en&cites=3334113232536501466",
+        "cites_id": [
+            "3334113232536501466"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41583-023-00705-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2nxE8lEmRS4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 3,
+            "2023": 15
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The neural code for \u201cface cells\u201d is not face-specific",
+            "pub_year": 2023,
+            "citation": "Science Advances 9 (35), eadg1736, 2023",
+            "author": "Kasper Vinken and Jacob S Prince and Talia Konkle and Margaret S Livingstone",
+            "journal": "Science Advances",
+            "volume": "9",
+            "number": "35",
+            "pages": "eadg1736",
+            "publisher": "American Association for the Advancement of Science",
+            "abstract": "Face cells are neurons that respond more to faces than to non-face objects. They are found in clusters in the inferotemporal cortex, thought to process faces specifically, and, hence, studied using faces almost exclusively. Analyzing neural responses in and around macaque face patches to hundreds of objects, we found graded response profiles for non-face objects that predicted the degree of face selectivity and provided information on face-cell tuning beyond that from actual faces. This relationship between non-face and face responses was not predicted by color and simple shape properties but by information encoded in deep neural networks trained on general objects rather than face classification. These findings contradict the long-standing assumption that face versus non-face selectivity emerges from face-specific features and challenge the practice of focusing on only the most effective stimulus. They provide \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:9vf0nzSNQJEC",
+        "num_citations": 7,
+        "citedby_url": "/scholar?hl=en&cites=18445614144556874267",
+        "cites_id": [
+            "18445614144556874267"
+        ],
+        "pub_url": "https://www.science.org/doi/abs/10.1126/sciadv.adg1736",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:G7o73lX8-_8J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 2,
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Dimensions underlying human understanding of the reachable world",
+            "pub_year": 2023,
+            "citation": "Cognition 234, 105368, 2023",
+            "author": "Emilie L Josephs and Martin N Hebart and Talia Konkle",
+            "journal": "Cognition",
+            "volume": "234",
+            "pages": "105368",
+            "publisher": "Elsevier",
+            "abstract": "Near-scale environments, like work desks, restaurant place settings or lab benches, are the interface of our hand-based interactions with the world. How are our conceptual representations of these environments organized? What properties distinguish among reachspaces, and why? We obtained 1.25 million similarity judgments on 990 reachspace images, and generated a 30-dimensional embedding which accurately predicts these judgments. Examination of the embedding dimensions revealed key properties underlying these judgments, such as reachspace layout, affordance, and visual appearance. Clustering performed over the embedding revealed four distinct interpretable classes of reachspaces, distinguishing among spaces related to food, electronics, analog activities, and storage or display. Finally, we found that reachspace similarity ratings were better predicted by the function of the spaces than their \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:tzM49s52ZIMC",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=16572595389553118791",
+        "cites_id": [
+            "16572595389553118791"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010027723000021",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Rw6XkLOv_eUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Cortical topographic motifs emerge in a self-organized map of object space",
+            "pub_year": 2023,
+            "citation": "Science Advances 9 (25), eade8187, 2023",
+            "author": "Fenil R Doshi and Talia Konkle",
+            "journal": "Science Advances",
+            "volume": "9",
+            "number": "25",
+            "pages": "eade8187",
+            "publisher": "American Association for the Advancement of Science",
+            "abstract": "The human ventral visual stream has a highly systematic organization of object information, but the causal pressures driving these topographic motifs are highly debated. Here, we use self-organizing principles to learn a topographic representation of the data manifold of a deep neural network representational space. We find that a smooth mapping of this representational space showed many brain-like motifs, with a large-scale organization by animacy and real-world object size, supported by mid-level feature tuning, with naturally emerging face- and scene-selective regions. While some theories of the object-selective cortex posit that these differently tuned regions of the brain reflect a collection of distinctly specified functional modules, the present work provides computational support for an alternate hypothesis that the tuning and topography of the object-selective cortex reflect a smooth mapping of a unified \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:fEOibwPWpKIC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=16053399732533703419",
+        "cites_id": [
+            "16053399732533703419"
+        ],
+        "pub_url": "https://www.science.org/doi/abs/10.1126/sciadv.ade8187",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-7IFjwAiyd4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Lesioning category-selective units in silico yields functionally specialized deficits",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5657-5657, 2023",
+            "author": "Jacob S Prince and George A Alvarez and Talia Konkle",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5657-5657",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Hallmark neuropsychological findings show that lesions within the ventral visual stream yield dissociable visual recognition deficits for different categories. It has remained unclear how to reconcile these observations with distributed population coding theories, which suggest that neurons decode object category information from multivariate (high, low, and medium) activity patterns. Here, we clarify the relationship between these prominent theoretical frameworks by simulating the functional impact of lesions applied to category-selective units that emerge within self-supervised deep neural networks. Using fMRI-inspired localizer techniques, we identified groups of units with selectivity for faces, scenes, bodies, and words along the hierarchy of AlexNet trained with a domain-general instance discrimination objective (Barlow Twins). After fitting a linear classifier to assess the model\u2019s ImageNet performance, we \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:uJ-U7cs_P_0C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=6318384500374812169",
+        "cites_id": [
+            "6318384500374812169"
+        ],
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792612",
+        "cites_per_year": {
+            "2022": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Face-deprived networks show distributed but not clustered face-selective maps",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5435-5435, 2023",
+            "author": "Fenil R Doshi and Talia Konkle",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5435-5435",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Faces, as a class, have a particular set of image statistics (eg, reflecting the commonalities of two eyes and a nose and mouth in a particular spatial configuration). Do you need visual experience with faces to arrive at visual face-selectivity? On one hand, empirical studies have shown that face experience is required to see the emergence of visual face-selective patches along the cortex (Arcaro & Livingstone, 2017). On the other hand, modeling studies have shown that face-selective tuning can emerge in deep neural networks trained without face experience (Xu et al., 2021), and even in untrained deep neural networks (Baek et al., 2021). How do we reconcile these findings? We leveraged deep neural networks trained to do object categorization, using either the Imagenet database or the same experience with all human faces blurred (Yang et al., 2022). Critically, we mapped the learned final feature space with a \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:yB1At4FlUx8C",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791966",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revisiting the animacy, size, and curvature organization of human visual cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5072-5072, 2023",
+            "author": "Laura M Stoinski and Oliver Contier and Talia Konkle and Martin N Hebart",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5072-5072",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Previous research has uncovered a large-scale organization of object categories in occipitotemporal cortex by the dimensions of animacy and real-world size (Konkle & Caramazza, 2013). The tripartite division of cortical zones with a preference for large objects, all animals, and small objects has been robustly replicated and appears to be driven by the mid-level visual feature curvature, ie large objects tend to be boxier, and small objects and animals curvier (Long et al., 2017). However, given the factorial design in the original studies, it has remained open to what degree these findings generalize to larger stimulus sets. To address this question, we used THINGS-fMRI, a large-scale dataset comprising fMRI responses to 8,740 naturalistic images of 720 animate and inanimate object categories (Contier et al., 2021). We then collected and applied a rich behavioral dataset of perceived animacy, real-world size, and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:nrtMV_XWKgEC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791451",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Uncovering the hidden computations of deep neural networks by tracing the trajectory manifold from images to feature activations",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5671-5671, 2023",
+            "author": "Christopher Hamblin and Talia Konkle and George Alvarez",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5671-5671",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Vision researchers have long sought to understand a \u2018neural code\u2019that facilitates object recognition. The typical framework supposes visual processing transforms a pixel representation of an image into a more pragmatic feature space, directions in which encode high level visual concepts. In this framework, populations of neurons represent images in a \u2018complex\u2019way, as points on a high-dimensional manifold, while single neurons (features) encode images in a \u2018simple\u2019way, as scalars along a single axis. The scalar encoding of single features is often intuitively puzzling; suppose we find a feature highly selective for faces, is it then sufficient to say an individual image simply has \u20182\u2019faciness, or \u201830\u2019, or \u2018-10\u2019? This account obfuscates the multiplicity of reasons a given image might excite/inhibit the face feature. In the present work, we present a novel method for elucidating these reasons behind deep neural network \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:9Nmd_mFXekcC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792599",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Leveraging deep neural networks for learnability arguments",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4679-4679, 2023",
+            "author": "Talia Konkle and Colin Connell and Jacob Prince and George Alvarez",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4679-4679",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Deep neural network models are powerful visual representation learners\u2013transforming natural image input into usefully formatted latent spaces. As such, these models give us new inferential purchase on arguments about what is learnable from the experienced visual input, given the inductive biases of different architectural connections, and the pressures of different task objectives. I will present our current efforts to collect the models of the machine learning community for opportunistic controlled-rearing experiments, comparing hundreds of models to human brain responses to thousands of images using billions of regressions. Surprisingly, we find many models have a similar capacity for brain predictivity\u2013including fully self-supervised visual systems with no specialized architectures, that learn only from the structure in the visual input. As such, these results provide computational plausibility for an origin story in \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:XD-gHx7UXLsC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791815",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What does it mean to be a scene: evidence from full-field fMRI",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4968-4968, 2023",
+            "author": "Jeongho Park and Talia Konkle",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4968-4968",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "What is a \u201cscene\u201d? Content-based hypotheses emphasize in particular the importance of spatial layout features and other image statistics, dissociating scenes from objects. According to a more ego-centric hypothesis, however, any information in the far-periphery could reasonably be considered part of the current \u201cscene\u201d in view. Indeed, classic scene-selective regions are known to have response preferences for both scene content (relative to faces and objects), as well as for general peripheral stimulation (regardless of what kind of content is depicted). However, these findings have been limited to tests over central 10-20 visual field, given constraints of standard functional neuroimaging projection setups. Here, we leveraged our new method for ultra-wide angle projection (> 175) to investigate how far-peripheral stimulation drives scene-selective regions. We scanned participants (n= 12) viewing images of full-field \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:t7zJ5fGR-2UC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791543",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "General architectural and learning constraints produce visual features sensitive to facing dyads",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5463-5463, 2023",
+            "author": "Daniel Janini and Talia Konkle",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5463-5463",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "The visual system is sensitive to socially relevant spatial arrangements, for example two people face-to-face (a facing dyad). Leveraging behavioral and neuroimaging methods, Papeo and colleagues have argued that visual features represent facing dyads as a grouped unit. Here, we provide computational plausibility for these features by showing their existence in feedforward convolutional neural networks. Further, we ask what constraints are necessary to produce these features\u2013is training on social goals necessary, or can these features emerge from domain-general constraints? We explored the latter hypothesis by testing whether features sensitive to facing dyads are present in variations of AlexNet with generic architectural constraints (untrained AlexNet), or self-supervised learning rules operating over different image diets (ImageNet and VGGFace2). In each network, we found features with tuning useful for \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:z_wVstp3MssC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791941",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Language Models of Visual Cortex: Where do they work? And why do they work so well where they do?",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 5653-5653, 2023",
+            "author": "Colin Conwell and Jacob S Prince and George A Alvarez and Talia Konkle",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "5653-5653",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "It\u2019s often taken for granted that the best models of visual cortex are vision models. Recent research into models that learn from various combinations of vision and language, however, has reinvigorated longstanding debates over just how visual our models of visual cortex really need be. In this work, we characterize where and to what extent unimodal language models or multimodal vision-language models best predict evoked visual activity in the human ventral stream. We do this with a series of controlled modeling experiments on brain responses in 4 subjects responding to 1000 images from the Natural Scenes Dataset (NSD), with both classical and voxel-reweighted RSA (veRSA). Using a series of models which consist of pure SimCLR-style visual self-supervision, pure CLIP-style language-alignment, or a combination of the two, we first demonstrate that language-aligned models--when controlling for dataset \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:VLnqNzywnoUC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792615",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deep neural networks are not a single hypothesis but a language for expressing computational hypotheses",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Tal Golan and JohnMark Taylor and Heiko Sch\u00fctt and Benjamin Peters and Rowan Paolo Sommers and Katja Seeliger and Adrien Doerig and Paul Linton and Talia Konkle and Marcel van Gerven and Konrad Kording and Blake Richards and Tim Christian Kietzmann and Grace W Lindsay and Nikolaus Kriegeskorte",
+            "publisher": "PsyArXiv",
+            "abstract": "An ideal vision model accounts for behavior and neurophysiology in both naturalistic conditions and designed lab experiments. Unlike psychological theories, artificial neural networks (ANNs) actually perform visual tasks and generate testable predictions for arbitrary inputs. These advantages enable ANNs to engage the entire spectrum of the evidence. Failures of particular models drive progress in a vibrant ANN research program of human vision."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:evX43VCCuoAC",
+        "num_citations": 0,
+        "pub_url": "https://psyarxiv.com/tr7gx/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1VpvSvB-icIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A contrastive coding account of category selectivity in the ventral visual stream",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.08. 04.551888, 2023",
+            "author": "Jacob S Prince and George A Alvarez and Talia Konkle",
+            "journal": "bioRxiv",
+            "pages": "2023.08. 04.551888",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Modular and distributed theories of category selectivity along the ventral visual stream have long existed in tension. Here, we present a reconciling framework, based on a series of analyses relating category-selective tuning within biological and artificial neural networks. We discover that, in models trained with contrastive self-supervised objectives over a rich natural image diet, visual category-selective tuning naturally emerges for classic categories of faces, bodies, scenes, and words. Further, lesions of these model units lead to selective, dissociable recognition deficits. Finally, these pre-identified units from a single model can predict neural responses in all corresponding face-, scene-, body-, and word-selective regions of the human visual system, even under a constrained sparse-positive encoding procedure. The success of this model indicates that the nature of category-selective tuning in the human brain (e.g \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:j8SEvjWlNXcC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.04.551888.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Contributions of early and mid-level visual cortex to high-level object categorization",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.05. 31.541514, 2023",
+            "author": "Lily E Kramer and Talia Konkle and Yi-Chia Chen and Bria Long and Marlene R Cohen",
+            "journal": "bioRxiv",
+            "pages": "2023.05. 31.541514",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The complexity of visual features for which neurons are tuned increases from early to late stages of the ventral visual stream. Thus, the standard hypothesis is that high-level functions like object categorization are primarily mediated by higher visual areas because they require more complex image formats that are not evident in early visual processing stages. However, human observers can categorize images as objects or animals or as big or small even when the images preserve only some low and mid-level features but are rendered unidentifiable (\"texforms\", Long et al., 2018). This observation suggests that even the early visual cortex, in which neurons respond to simple stimulus features, may already encode signals about these more abstract high-level categorical distinctions. We tested this hypothesis by recording from populations of neurons in early and mid-level visual cortical areas while rhesus monkeys viewed texforms and their unaltered source stimuli (simultaneous recordings from areas V1 and V4 in one animal and separate recordings from V1 and V4 in two others). Using recordings from a few dozen neurons, we could decode the real-world size and animacy of both unaltered images and texforms. Furthermore, this neural decoding accuracy across stimuli was related to the ability of human observers to categorize texforms by real-world size and animacy. Our results demonstrate that neuronal populations early in the visual hierarchy contain signals useful for higher-level object perception and suggest that the responses of early visual areas to simple stimulus features display preliminary untangling of higher-level distinctions."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:-_dYPAW6P2MC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.05.31.541514.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YCYBg58lL94J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Ultra-wide angle neuroimaging: insights into immersive scene representation",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.05. 14.540275, 2023",
+            "author": "Jeongho Park and Edward Soucy and Jennifer Segawa and Ross Mair and Talia Konkle",
+            "journal": "bioRxiv",
+            "pages": "2023.05. 14.540275",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "While humans experience the visual environment in a panoramic 220-degree view, traditional functional MRI setups are limited to display images like postcards in the central 10-15 deg of the visual field. Thus, it remains unknown how a scene is represented in the brain when perceived across the full visual field. Here, we developed a novel method for ultra-wide angle visual presentation and probed for signatures of immersive scene representation. To accomplish this, we bounced the projected image off angled-mirrors directly onto a custom-built curved screen, creating an unobstructed view of 175 deg. Scene images were created from custom-built virtual environments with a compatible wide field-of-view to avoid perceptual distortion. We found that immersive scene representation drives medial cortex with far-peripheral preferences, but surprisingly had little effect on classic scene regions. That is, scene regions showed relatively minimal modulation over dramatic changes of visual size. Further, we found that scene and face-selective regions maintain their content preferences even under conditions of central scotoma, when only the extreme far-peripheral visual field is stimulated. These results highlight that not all far-peripheral information is automatically integrated into the computations of scene regions, and that there are routes to high-level visual areas that do not require direct stimulation of the central visual field. Broadly, this work provides new clarifying evidence on content vs. peripheral preferences in scene representation, and opens new neuroimaging research avenues to understand immersive visual representation."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:35r97b3x0nAC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.05.14.540275.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2xBW_0cqYf0J:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]
