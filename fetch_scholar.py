@@ -13,7 +13,7 @@ from scholarly import scholarly
 from concurrent.futures import ThreadPoolExecutor
 import logging
 import time
-from tqdm import tqdm 
+from tqdm import tqdm
 
 from helper_funcs import clean_pubs, get_authors_json, convert_json_to_tuple, ensure_output_folder
 from log_config import MIN, STANDARD
@@ -21,26 +21,27 @@ from log_config import MIN, STANDARD
 MAX_RETRIES = 3
 DELAYS = [20, 40, 60]
 
+
 def fetch_from_json(args, idx=None):
     """
     Fetch author and publication details based on a specified index.
-    
-    This function retrieves author details from a given JSON path, converts this 
-    data into a tuple representation, and fetches publication details for a subset 
-    of these authors from a scholarly database. The subset size is determined by the 
+
+    This function retrieves author details from a given JSON path, converts this
+    data into a tuple representation, and fetches publication details for a subset
+    of these authors from a scholarly database. The subset size is determined by the
     provided index (idx).
-    
+
     Parameters:
     - args: Arguments containing the path to the authors' JSON and other relevant data.
-    - idx (int, optional): The number of authors for which to fetch publications. 
+    - idx (int, optional): The number of authors for which to fetch publications.
       Defaults to None, which fetches for all authors.
-    
+
     Returns:
     - tuple: A tuple containing:
         1. A list of selected authors' details.
         2. A dictionary with publication details for each selected author.
     """
-    
+
     # Retrieve authors' details from the specified JSON path.
     authors_json = get_authors_json(args.authors_path)
     logging.log(STANDARD, f"Fetched authors' details from {args.authors_path}.")
@@ -48,25 +49,29 @@ def fetch_from_json(args, idx=None):
     # Convert the retrieved JSON data into a tuple representation for easier handling.
     authors = convert_json_to_tuple(authors_json)
     logging.log(STANDARD, "Converted authors' JSON data into tuple representation.")
-    
+
     # Determine the number of authors to process.
     if idx is not None:
         if idx > len(authors):
-            logging.log(STANDARD, f"Requested {idx} authors but only {len(authors)} available. Using all available authors.")
+            logging.log(
+                STANDARD,
+                f"Requested {idx} authors but only {len(authors)} available. Using all available authors.",
+            )
             idx = len(authors)
     else:
         idx = len(authors)
-        
+
     if idx == 0:
-        logging.error('No authors listed in the authors.json file.')
+        logging.error("No authors listed in the authors.json file.")
         return
 
     # Fetch publication details for the determined number of authors from the scholarly database.
     articles = fetch_pubs_dictionary(authors[:idx], args)
     logging.log(MIN, f"Fetched {len(articles)} articles for the provided authors.")
     logging.log(MIN, "Publications fetched correctly")
-    
+
     return authors[:idx], articles
+
 
 def fetch_publication_details(pub):
     """
@@ -89,6 +94,7 @@ def fetch_publication_details(pub):
         logging.error(f"Error fetching publication: {e}")
         return None
 
+
 def fetch_author_details(author_id):
     """
     Fetches author details using the scholarly library.
@@ -106,7 +112,8 @@ def fetch_author_details(author_id):
     except Exception as e:
         logging.error(f"Error fetching author details for ID: {author_id}. {e}")
         raise e
-        
+
+
 def load_cache(author_id, output_folder):
     """
     Loads cached publications details from the file system, if available.
@@ -131,37 +138,38 @@ def load_cache(author_id, output_folder):
         logging.log(STANDARD, f"No cache for author {author_id}. Fetching all.")
         return []
 
+
 def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
     """
     Determines the publications that need to be fetched based on cached data and the specified year.
 
     Returns:
     - list: List of publications to fetch.
-    """ 
+    """
     if args.test_fetching:
         logging.warning(f"--test_fetching flag True. Loading only cached papers < {str(from_year)}")
-        
+
     # Extract titles from cached publications, only titles before from_year if args.test_fetching == True
     cached_titles = (
-            [pub["bib"]["title"] for pub in cached_pubs]
-            if not args.test_fetching
-            else [
-                pub["bib"]["title"]
-                for pub in cached_pubs
-                if 'pub_year' in pub["bib"].keys()
-                and int(pub["bib"]["pub_year"]) < int(from_year)
-            ]
-        )       
-    
+        [pub["bib"]["title"] for pub in cached_pubs]
+        if not args.test_fetching
+        else [
+            pub["bib"]["title"]
+            for pub in cached_pubs
+            if "pub_year" in pub["bib"].keys() and int(pub["bib"]["pub_year"]) < int(from_year)
+        ]
+    )
+
     if args.update_cache == True:
         # Do not filter pubs. If this is True, it means we want to update the cache. So we fetch
         # all the author's pubs for the last year
-        logging.log(MIN, "--update_cache flag True. Re-fetching author's pubs and generating new cache.")
+        logging.log(
+            MIN, "--update_cache flag True. Re-fetching author's pubs and generating new cache."
+        )
         pubs_to_fetch = [
             item
             for item in author_pubs
-            if 'pub_year' in item["bib"].keys()
-            and int(item["bib"]["pub_year"]) >= int(from_year)
+            if "pub_year" in item["bib"].keys() and int(item["bib"]["pub_year"]) >= int(from_year)
         ]
     else:
         # Filter out publications to fetch based on title and year, only titles >= from_year if args.test_fetchin == True
@@ -169,11 +177,12 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
             item
             for item in author_pubs
             if item["bib"]["title"] not in cached_titles
-            and 'pub_year' in item["bib"].keys()
+            and "pub_year" in item["bib"].keys()
             and int(item["bib"]["pub_year"]) >= int(from_year)
         ]
-    
+
     return pubs_to_fetch
+
 
 def fetch_selected_pubs(pubs_to_fetch):
     """
@@ -194,7 +203,7 @@ def fetch_selected_pubs(pubs_to_fetch):
             # Use a ThreadPoolExecutor to parallelize the fetching of publications
             with ThreadPoolExecutor() as executor:
                 # Check if logging level is set to MIN. If so, display a progress bar
-                if logging.getLogger().getEffectiveLevel() == MIN and pubs_to_fetch !=[]:
+                if logging.getLogger().getEffectiveLevel() == MIN and pubs_to_fetch != []:
                     fetched_pubs = list(
                         tqdm(
                             # Execute fetch_publication_details for each item in pubs_to_fetch concurrently
@@ -203,7 +212,7 @@ def fetch_selected_pubs(pubs_to_fetch):
                             desc="Fetching publications",
                         )
                     )
-                elif logging.getLogger().getEffectiveLevel() != MIN and pubs_to_fetch !=[]:
+                elif logging.getLogger().getEffectiveLevel() != MIN and pubs_to_fetch != []:
                     # If not using a progress bar, simply map the function across the publications
                     fetched_pubs = list(executor.map(fetch_publication_details, pubs_to_fetch))
                 else:
@@ -221,7 +230,8 @@ def fetch_selected_pubs(pubs_to_fetch):
             else:
                 # If it's the last retry attempt, log an error and return an empty list
                 logging.error(f"Max retries reached. Exiting fetch process. Error: {e}")
-                return []                
+                return []
+
 
 def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args):
     """
@@ -237,8 +247,11 @@ def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args
     with open(cache_path, "w") as f:
         combined_pubs = fetched_pubs + cached_pubs if not args.update_cache else fetched_pubs
         json.dump(combined_pubs, f, indent=4)
-            
-def fetch_publications_by_id(author_id, output_folder, args, from_year=2023, exclude_not_cited_papers=False):
+
+
+def fetch_publications_by_id(
+    author_id, output_folder, args, from_year=2023, exclude_not_cited_papers=False
+):
     """
     Fetches and caches publications of a specific author using their Google Scholar ID.
 
@@ -269,7 +282,7 @@ def fetch_publications_by_id(author_id, output_folder, args, from_year=2023, exc
     - Fetching too many papers in a short time might lead to a temporary block by Google Scholar.
     """
     # Make temp dir path
-    temp_output_folder = os.path.join(output_folder, 'tmp')
+    temp_output_folder = os.path.join(output_folder, "tmp")
     # Check if the output folder exists or create it
     ensure_output_folder(temp_output_folder)
     # Fetch author details from Google Scholar
@@ -285,6 +298,7 @@ def fetch_publications_by_id(author_id, output_folder, args, from_year=2023, exc
         save_updated_cache(fetched_pubs, cached_pubs, author_id, temp_output_folder, args)
     # Return cleaned list of publications
     return clean_pubs(fetched_pubs, from_year, exclude_not_cited_papers)
+
 
 def fetch_pubs_dictionary(authors, args, output_dir="./src"):
     """
