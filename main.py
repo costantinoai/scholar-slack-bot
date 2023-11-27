@@ -87,11 +87,11 @@ def initialize_args():
         # Default configurations for execution in IDE
         class IDEArgs:
             def __init__(self):
-                self.slack_config_path = "./src/slack.config"
+                self.slack_config_path = "./src/slack-test.config"
                 self.authors_path = "./src/authors.json"
                 self.verbose = True
-                self.test_fetching = False
-                self.test_message = False
+                self.test_fetching = True
+                self.test_message = True
                 self.add_scholar_id = None
                 self.update_cache = False
 
