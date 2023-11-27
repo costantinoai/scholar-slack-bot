@@ -3,6 +3,23 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Cognitive Steering in Deep Neural Networks via Long-Range Modulatory Feedback Connections",
+            "pub_year": 2023,
+            "citation": "Thirty-seventh Conference on Neural Information Processing Systems, 2023",
+            "author": "Talia Konkle and George A Alvarez",
+            "conference": "Thirty-seventh Conference on Neural Information Processing Systems",
+            "abstract": "Given the rich visual information available in each glance, humans can internally direct their visual attention to enhance goal-relevant information---a capacity often absent in standard vision models.  Here we introduce cognitively and biologically-inspired long-range modulatory pathways to enable `cognitive steering\u2019 in vision models.  First, we show that models equipped with these feedback pathways naturally show improved image recognition, adversarial robustness, and increased brain alignment, relative to baseline models. Further,  these feedback projections from the final layer of the vision backbone provide a meaningful steering interface, where goals can be specified as vectors in the output space.  We show that there are effective ways to steer the model that dramatically improve recognition of categories in composite images of multiple categories, succeeding where baseline feed-forward models without flexible steering fail. And, our multiplicative modulatory motif prevents rampant hallucination of the top-down goal category, dissociating what the model is looking for, from what it is looking at. Thus, these long-range modulatory pathways enable new behavioral capacities for goal-directed visual encoding, offering a flexible communication interface between cognitive and visual systems."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:uc_IGeMz5qoC",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=FCIj5KMn2m",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The neuroconnectionist research programme",
             "pub_year": 2023,
             "citation": "Nature Reviews Neuroscience, 1-20, 2023",
@@ -13,7 +30,7 @@
         },
         "filled": true,
         "author_pub_id": "QxV9vroAAAAJ:JQOojiI6XY0C",
-        "num_citations": 18,
+        "num_citations": 27,
         "citedby_url": "/scholar?hl=en&cites=3334113232536501466",
         "cites_id": [
             "3334113232536501466"
@@ -21,8 +38,33 @@
         "pub_url": "https://www.nature.com/articles/s41583-023-00705-w",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2nxE8lEmRS4J:scholar.google.com/",
         "cites_per_year": {
-            "2022": 3,
-            "2023": 15
+            "2022": 5,
+            "2023": 22
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What can 1.8 billion regressions tell us about the pressures shaping high-level visual representation in brains and machines",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Colin Conwell and Jacob S Prince and Kendrick N Kay and George A Alvarez and Talia Konkle",
+            "journal": "bioRxiv"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:SdhP9T11ey4C",
+        "num_citations": 17,
+        "citedby_url": "/scholar?hl=en&cites=5144354779593428434,18396007521698555041",
+        "cites_id": [
+            "5144354779593428434",
+            "18396007521698555041"
+        ],
+        "pub_url": "https://scholar.google.com/scholar?cluster=5144354779593428434&hl=en&oi=scholarr",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oaRB8F-_S_8J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 4,
+            "2023": 13
         }
     },
     {
@@ -42,7 +84,7 @@
         },
         "filled": true,
         "author_pub_id": "QxV9vroAAAAJ:9vf0nzSNQJEC",
-        "num_citations": 7,
+        "num_citations": 9,
         "citedby_url": "/scholar?hl=en&cites=18445614144556874267",
         "cites_id": [
             "18445614144556874267"
@@ -51,34 +93,7 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:G7o73lX8-_8J:scholar.google.com/",
         "cites_per_year": {
             "2022": 2,
-            "2023": 5
-        }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Dimensions underlying human understanding of the reachable world",
-            "pub_year": 2023,
-            "citation": "Cognition 234, 105368, 2023",
-            "author": "Emilie L Josephs and Martin N Hebart and Talia Konkle",
-            "journal": "Cognition",
-            "volume": "234",
-            "pages": "105368",
-            "publisher": "Elsevier",
-            "abstract": "Near-scale environments, like work desks, restaurant place settings or lab benches, are the interface of our hand-based interactions with the world. How are our conceptual representations of these environments organized? What properties distinguish among reachspaces, and why? We obtained 1.25 million similarity judgments on 990 reachspace images, and generated a 30-dimensional embedding which accurately predicts these judgments. Examination of the embedding dimensions revealed key properties underlying these judgments, such as reachspace layout, affordance, and visual appearance. Clustering performed over the embedding revealed four distinct interpretable classes of reachspaces, distinguishing among spaces related to food, electronics, analog activities, and storage or display. Finally, we found that reachspace similarity ratings were better predicted by the function of the spaces than their \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "QxV9vroAAAAJ:tzM49s52ZIMC",
-        "num_citations": 5,
-        "citedby_url": "/scholar?hl=en&cites=16572595389553118791",
-        "cites_id": [
-            "16572595389553118791"
-        ],
-        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010027723000021",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Rw6XkLOv_eUJ:scholar.google.com/",
-        "cites_per_year": {
-            "2023": 5
+            "2023": 7
         }
     },
     {
@@ -98,7 +113,7 @@
         },
         "filled": true,
         "author_pub_id": "QxV9vroAAAAJ:fEOibwPWpKIC",
-        "num_citations": 4,
+        "num_citations": 5,
         "citedby_url": "/scholar?hl=en&cites=16053399732533703419",
         "cites_id": [
             "16053399732533703419"
@@ -107,7 +122,35 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-7IFjwAiyd4J:scholar.google.com/",
         "cites_per_year": {
             "2022": 1,
-            "2023": 3
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Dimensions underlying human understanding of the reachable world",
+            "pub_year": 2023,
+            "citation": "Cognition 234, 105368, 2023",
+            "author": "Emilie L Josephs and Martin N Hebart and Talia Konkle",
+            "journal": "Cognition",
+            "volume": "234",
+            "pages": "105368",
+            "publisher": "Elsevier",
+            "abstract": "Near-scale environments, like work desks, restaurant place settings or lab benches, are the interface of our hand-based interactions with the world. How are our conceptual representations of these environments organized? What properties distinguish among reachspaces, and why? We obtained 1.25 million similarity judgments on 990 reachspace images, and generated a 30-dimensional embedding which accurately predicts these judgments. Examination of the embedding dimensions revealed key properties underlying these judgments, such as reachspace layout, affordance, and visual appearance. Clustering performed over the embedding revealed four distinct interpretable classes of reachspaces, distinguishing among spaces related to food, electronics, analog activities, and storage or display. Finally, we found that reachspace similarity ratings were better predicted by the function of the spaces than their \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:tzM49s52ZIMC",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=16572595389553118791,9522837584176446662",
+        "cites_id": [
+            "16572595389553118791",
+            "9522837584176446662"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010027723000021",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Rw6XkLOv_eUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 5
         }
     },
     {
@@ -136,6 +179,23 @@
         "cites_per_year": {
             "2022": 1
         }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Getting aligned on representational alignment",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2310.13018, 2023",
+            "author": "Ilia Sucholutsky and Lukas Muttenthaler and Adrian Weller and Andi Peng and Andreea Bobu and Been Kim and Bradley C Love and Erin Grant and Jascha Achterberg and Joshua B Tenenbaum and Katherine M Collins and Katherine L Hermann and Kerem Oktar and Klaus Greff and Martin N Hebart and Nori Jacoby and Raja Marjieh and Robert Geirhos and Sherol Chen and Simon Kornblith and Sunayana Rane and Talia Konkle and Thomas P O'Connell and Thomas Unterthiner and Andrew K Lampinen and Klaus-Robert M\u00fcller and Mariya Toneva and Thomas L Griffiths",
+            "journal": "arXiv preprint arXiv:2310.13018",
+            "abstract": "Biological and artificial information processing systems form representations of the world that they can use to categorize, reason, plan, navigate, and make decisions. To what extent do the representations formed by these diverse systems agree? Can diverging representations still lead to the same behaviors? And how can systems modify their representations to better match those of another system? These questions pertaining to the study of \\textbf{\\emph{representational alignment}} are at the heart of some of the most active research areas in contemporary cognitive science, neuroscience, and machine learning. Unfortunately, there is limited knowledge-transfer between research communities interested in representational alignment, and much of the progress in one field ends up being rediscovered independently in another, when greater cross-field communication would be advantageous. To improve communication between fields, we propose a unifying framework that can serve as a common language between researchers studying representational alignment. We survey the literature from the fields of cognitive science, neuroscience, and machine learning, and demonstrate how prior work fits into this framework. Finally, we lay out open problems in representational alignment where progress can benefit all three fields. We hope that our work can catalyze cross-disciplinary collaboration and accelerate progress for all communities studying and developing information processing systems. We note that this is a working paper and encourage readers to reach out with their suggestions for future revisions."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:0KyAp5RtaNEC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2310.13018",
+        "cites_per_year": {}
     },
     {
         "container_type": "Publication",
@@ -288,6 +348,25 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Contributions of early and mid-level visual cortex to high-level object categorization",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Lily E Kramer and Yi-Chia Chen and Bria Long and Talia Konkle and Marlene R Cohen",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory Preprints",
+            "abstract": "The complexity of visual features for which neurons are tuned increases from early to late stages of the ventral visual stream. Thus, the standard hypothesis is that high-level functions like object categorization are primarily mediated by higher visual areas because they require more complex image formats that are not evident in early visual processing stages. However, human observers can categorize images as objects or animals or as big or small even when the images preserve only some low-and mid-level features but are rendered unidentifiable (\u2018texforms\u2019, Long et al., 2018). This observation suggests that even the early visual cortex, in which neurons respond to simple stimulus features, may already encode signals about these more abstract high-level categorical distinctions. We tested this hypothesis by recording from populations of neurons in early and mid-level visual cortical areas while rhesus monkeys \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:-_dYPAW6P2MC",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10312552/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YCYBg58lL94J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Deep neural networks are not a single hypothesis but a language for expressing computational hypotheses",
             "pub_year": 2023,
             "citation": "PsyArXiv, 2023",
@@ -319,26 +398,6 @@
         "author_pub_id": "QxV9vroAAAAJ:j8SEvjWlNXcC",
         "num_citations": 0,
         "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.04.551888.abstract",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Contributions of early and mid-level visual cortex to high-level object categorization",
-            "pub_year": 2023,
-            "citation": "bioRxiv, 2023.05. 31.541514, 2023",
-            "author": "Lily E Kramer and Talia Konkle and Yi-Chia Chen and Bria Long and Marlene R Cohen",
-            "journal": "bioRxiv",
-            "pages": "2023.05. 31.541514",
-            "publisher": "Cold Spring Harbor Laboratory",
-            "abstract": "The complexity of visual features for which neurons are tuned increases from early to late stages of the ventral visual stream. Thus, the standard hypothesis is that high-level functions like object categorization are primarily mediated by higher visual areas because they require more complex image formats that are not evident in early visual processing stages. However, human observers can categorize images as objects or animals or as big or small even when the images preserve only some low and mid-level features but are rendered unidentifiable (\"texforms\", Long et al., 2018). This observation suggests that even the early visual cortex, in which neurons respond to simple stimulus features, may already encode signals about these more abstract high-level categorical distinctions. We tested this hypothesis by recording from populations of neurons in early and mid-level visual cortical areas while rhesus monkeys viewed texforms and their unaltered source stimuli (simultaneous recordings from areas V1 and V4 in one animal and separate recordings from V1 and V4 in two others). Using recordings from a few dozen neurons, we could decode the real-world size and animacy of both unaltered images and texforms. Furthermore, this neural decoding accuracy across stimuli was related to the ability of human observers to categorize texforms by real-world size and animacy. Our results demonstrate that neuronal populations early in the visual hierarchy contain signals useful for higher-level object perception and suggest that the responses of early visual areas to simple stimulus features display preliminary untangling of higher-level distinctions."
-        },
-        "filled": true,
-        "author_pub_id": "QxV9vroAAAAJ:-_dYPAW6P2MC",
-        "num_citations": 0,
-        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.05.31.541514.abstract",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YCYBg58lL94J:scholar.google.com/",
         "cites_per_year": {}
     },
     {

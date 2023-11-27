@@ -15,7 +15,7 @@
         },
         "filled": true,
         "author_pub_id": "RTtshYYAAAAJ:7BrZ7Jt4UNcC",
-        "num_citations": 13,
+        "num_citations": 17,
         "citedby_url": "/scholar?hl=en&cites=11776019156333001843",
         "cites_id": [
             "11776019156333001843"
@@ -23,7 +23,60 @@
         "pub_url": "https://elifesciences.org/articles/82580",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:c3xs2QfTbKMJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 13
+            "2023": 17
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Should bionic limb control mimic the human body? Impact of control strategy on bionic hand skill learning",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.02. 07.525548, 2023",
+            "author": "Hunter R Schone and Malcolm Udeozor and Mae Moninghoff and Beth Rispoli and James Vandersea and Blair Lock and Levi Hargrove and Tamar R Makin and Chris I Baker",
+            "journal": "bioRxiv",
+            "pages": "2023.02. 07.525548",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "A longstanding engineering ambition has been to design anthropomorphic bionic limbs: devices that look like and are controlled in the same way as the biological body (biomimetic). The untested assumption is that biomimetic motor control enhances device embodiment, learning, generalization, and automaticity. To test this, we compared biomimetic and non-biomimetic control strategies for able-bodied participants when learning to operate a wearable myoelectric bionic hand. We compared motor learning across days and behavioural tasks for two training groups: Biomimetic (mimicking the desired bionic hand gesture with biological hand) and Arbitrary control (mapping an unrelated biological hand gesture with the desired bionic gesture). For both trained groups, training improved bionic limb control, reduced cognitive reliance, and increased embodiment over the bionic hand. Biomimetic users had more intuitive and faster control early in training. Arbitrary users matched biomimetic performance later in training. Further, arbitrary users showed increased generalization to a novel control strategy. Collectively, our findings suggest that biomimetic and arbitrary control strategies provide different benefits. The optimal strategy is likely not strictly biomimetic, but rather a flexible strategy within the biomimetic to arbitrary spectrum, depending on the user, available training opportunities and user requirements."
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:nRpfm8aw39MC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=8831858640212016999",
+        "cites_id": [
+            "8831858640212016999"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.02.07.525548.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Zz9N3KMQkXoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Children perceive illusory faces in objects as male more often than female",
+            "pub_year": 2023,
+            "citation": "Cognition 235, 105398, 2023",
+            "author": "Susan G Wardle and Louise Ewing and George L Malcolm and Sanika Paranjape and Chris I Baker",
+            "journal": "Cognition",
+            "volume": "235",
+            "pages": "105398",
+            "publisher": "Elsevier",
+            "abstract": "Face pareidolia is the experience of seeing illusory faces in inanimate objects. While children experience face pareidolia, it is unknown whether they perceive gender in illusory faces, as their face evaluation system is still developing in the first decade of life. In a sample of 412 children and adults from 4 to 80 years of age we found that like adults, children perceived many illusory faces in objects to have a gender and had a strong bias to see them as male rather than female, regardless of their own gender identification. These results provide evidence that the male bias for face pareidolia emerges early in life, even before the ability to discriminate gender from facial cues alone is fully developed. Further, the existence of a male bias in children suggests that any social context that elicits the cognitive bias to see faces as male has remained relatively consistent across generations."
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:gKiMpY-AVTkC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=9749717453247075814",
+        "cites_id": [
+            "9749717453247075814"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S001002772300032X",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:5tU3FV70TYcJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
         }
     },
     {
@@ -58,24 +111,25 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Should bionic limb control mimic the human body? Impact of control strategy on bionic hand skill learning",
+            "title": "Sustained neural representations of personally familiar people and places during cued recall",
             "pub_year": 2023,
-            "citation": "bioRxiv, 2023.02. 07.525548, 2023",
-            "author": "Hunter R Schone and Malcolm Udeozor and Mae Moninghoff and Beth Rispoli and James Vandersea and Blair Lock and Levi Hargrove and Tamar R Makin and Chris I Baker",
-            "journal": "bioRxiv",
-            "pages": "2023.02. 07.525548",
-            "publisher": "Cold Spring Harbor Laboratory",
-            "abstract": "A longstanding engineering ambition has been to design anthropomorphic bionic limbs: devices that look like and are controlled in the same way as the biological body (biomimetic). The untested assumption is that biomimetic motor control enhances device embodiment, learning, generalization, and automaticity. To test this, we compared biomimetic and non-biomimetic control strategies for able-bodied participants when learning to operate a wearable myoelectric bionic hand. We compared motor learning across days and behavioural tasks for two training groups: Biomimetic (mimicking the desired bionic hand gesture with biological hand) and Arbitrary control (mapping an unrelated biological hand gesture with the desired bionic gesture). For both trained groups, training improved bionic limb control, reduced cognitive reliance, and increased embodiment over the bionic hand. Biomimetic users had more intuitive and faster control early in training. Arbitrary users matched biomimetic performance later in training. Further, arbitrary users showed increased generalization to a novel control strategy. Collectively, our findings suggest that biomimetic and arbitrary control strategies provide different benefits. The optimal strategy is likely not strictly biomimetic, but rather a flexible strategy within the biomimetic to arbitrary spectrum, depending on the user, available training opportunities and user requirements."
+            "citation": "Cortex 158, 71-82, 2023",
+            "author": "Anna Corriveau and Alexis Kidder and Lina Teichmann and Susan G Wardle and Chris I Baker",
+            "journal": "Cortex",
+            "volume": "158",
+            "pages": "71-82",
+            "publisher": "Elsevier",
+            "abstract": "The recall and visualization of people and places from memory is an everyday occurrence, yet the neural mechanisms underpinning this phenomenon are not well understood. In particular, the temporal characteristics of the internal representations generated by active recall are unclear. Here, we used magnetoencephalography (MEG) and multivariate pattern analysis to measure the evolving neural representation of familiar places and people across the whole brain when human participants engage in active recall. To isolate self-generated imagined representations, we used a retro-cue paradigm in which participants were first presented with two possible labels before being cued to recall either the first or second item. We collected personalized labels for specific locations and people familiar to each participant. Importantly, no visual stimuli were presented during the recall period, and the retro-cue paradigm \u2026"
         },
         "filled": true,
-        "author_pub_id": "RTtshYYAAAAJ:nRpfm8aw39MC",
+        "author_pub_id": "RTtshYYAAAAJ:otzGkya1bYkC",
         "num_citations": 1,
-        "citedby_url": "/scholar?hl=en&cites=8831858640212016999",
+        "citedby_url": "/scholar?hl=en&cites=17811795898669319682",
         "cites_id": [
-            "8831858640212016999"
+            "17811795898669319682"
         ],
-        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.02.07.525548.abstract",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Zz9N3KMQkXoJ:scholar.google.com/",
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010945222002842",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Asbxt_81MPcJ:scholar.google.com/",
         "cites_per_year": {
             "2023": 1
         }
@@ -84,11 +138,13 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Inability to move one\u2019s face dampens facial expression perception",
+            "title": "Inability to move one's face dampens facial expression perception",
             "pub_year": 2023,
-            "citation": "Cortex, 2023",
-            "author": "Shruti Japee and Jessica Jordan and Judith Licht and Savannah Lokey and Gang Chen and Joseph Snow and Ethylin Wang Jabs and Bryn D Webb and Elizabeth C Engle and Irini Manoli and Chris Baker and Leslie G Ungerleider",
+            "citation": "Cortex 169, 35-49, 2023",
+            "author": "Shruti Japee and Jessica Jordan and Judith Licht and Savannah Lokey and Gang Chen and Joseph Snow and Ethylin Wang Jabs and Bryn D Webb and Elizabeth C Engle and Irini Manoli and Chris Baker and Leslie G Ungerleider and Moebius Syndrome Research Consortium",
             "journal": "Cortex",
+            "volume": "169",
+            "pages": "35-49",
             "publisher": "Elsevier",
             "abstract": "Humans rely heavily on facial expressions for social communication to convey their thoughts and emotions and to understand them in others. One prominent but controversial view is that humans learn to recognize the significance of facial expressions by mimicking the expressions of others. This view predicts that an inability to make facial expressions (e.g., facial paralysis) would result in reduced perceptual sensitivity to others\u2019 facial expressions. To test this hypothesis, we developed a diverse battery of sensitive emotion recognition tasks to characterize expression perception in individuals with Moebius Syndrome (MBS), a congenital neurological disorder that causes facial palsy. Using computer-based detection tasks we systematically assessed expression perception thresholds for static and dynamic face and body expressions. We found that while MBS individuals were able to perform challenging perceptual \u2026"
         },
@@ -286,27 +342,6 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Children perceive illusory faces in objects as male more often than female",
-            "pub_year": 2023,
-            "citation": "Cognition 235, 105398, 2023",
-            "author": "Susan G Wardle and Louise Ewing and George L Malcolm and Sanika Paranjape and Chris I Baker",
-            "journal": "Cognition",
-            "volume": "235",
-            "pages": "105398",
-            "publisher": "Elsevier",
-            "abstract": "Face pareidolia is the experience of seeing illusory faces in inanimate objects. While children experience face pareidolia, it is unknown whether they perceive gender in illusory faces, as their face evaluation system is still developing in the first decade of life. In a sample of 412 children and adults from 4 to 80 years of age we found that like adults, children perceived many illusory faces in objects to have a gender and had a strong bias to see them as male rather than female, regardless of their own gender identification. These results provide evidence that the male bias for face pareidolia emerges early in life, even before the ability to discriminate gender from facial cues alone is fully developed. Further, the existence of a male bias in children suggests that any social context that elicits the cognitive bias to see faces as male has remained relatively consistent across generations."
-        },
-        "filled": true,
-        "author_pub_id": "RTtshYYAAAAJ:gKiMpY-AVTkC",
-        "num_citations": 0,
-        "pub_url": "https://www.sciencedirect.com/science/article/pii/S001002772300032X",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:5tU3FV70TYcJ:scholar.google.com/",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
             "title": "Motion-selective areas V5/MT and MST appear resistant to deterioration in choroideremia",
             "pub_year": 2023,
             "citation": "NeuroImage: Clinical 38, 103384, 2023",
@@ -322,27 +357,6 @@
         "num_citations": 0,
         "pub_url": "https://www.sciencedirect.com/science/article/pii/S2213158223000736",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:8NJUqrhobNgJ:scholar.google.com/",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Sustained neural representations of personally familiar people and places during cued recall",
-            "pub_year": 2023,
-            "citation": "Cortex 158, 71-82, 2023",
-            "author": "Anna Corriveau and Alexis Kidder and Lina Teichmann and Susan G Wardle and Chris I Baker",
-            "journal": "Cortex",
-            "volume": "158",
-            "pages": "71-82",
-            "publisher": "Elsevier",
-            "abstract": "The recall and visualization of people and places from memory is an everyday occurrence, yet the neural mechanisms underpinning this phenomenon are not well understood. In particular, the temporal characteristics of the internal representations generated by active recall are unclear. Here, we used magnetoencephalography (MEG) and multivariate pattern analysis to measure the evolving neural representation of familiar places and people across the whole brain when human participants engage in active recall. To isolate self-generated imagined representations, we used a retro-cue paradigm in which participants were first presented with two possible labels before being cued to recall either the first or second item. We collected personalized labels for specific locations and people familiar to each participant. Importantly, no visual stimuli were presented during the recall period, and the retro-cue paradigm \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "RTtshYYAAAAJ:otzGkya1bYkC",
-        "num_citations": 0,
-        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010945222002842",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Asbxt_81MPcJ:scholar.google.com/",
         "cites_per_year": {}
     }
 ]

@@ -3,6 +3,41 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "A 128-channel real-time VPDNN stimulation system for a visual cortical neuroprosthesis",
+            "pub_year": 2023,
+            "citation": "Biomedical Circuits and Systems Conference (BioCAS), 2023",
+            "author": "Hasan Mohamed and Bogdan Raducanu and Ilya Kiselev and Zuowen Wang and Burcu Kucukoglu and Bodo Rueckauer and Marcel van Gerven and Mora Lopez Carolina and Shih-Chii Liu",
+            "journal": "Biomedical Circuits and Systems Conference (BioCAS)",
+            "publisher": "Institute of Electrical and Electronics Engineers",
+            "abstract": "With the recent progress in developing large-scale micro-electrodes, cortical neuroprotheses supporting hundreds of electrodes will be viable in the near future. We describe work in building a visual stimulation system that receives camera input images and produces stimulation patterns for driving a large set of electrodes. The system consists of a convolutional neural network FPGA accelerator and a recording and stimulation Application-Specific Integrated Circuit (ASIC) that produces the stimulation patterns. It is aimed at restoring visual perception in visually impaired subjects. The FPGA accelerator, VPDNN, runs a visual prosthesis network that generates an output used to create stimulation patterns, which are then converted by the ASIC into current pulses to drive a multi-electrode array. The accelerator exploits spatial sparsity and the use of reduced bit precision parameters for reduced computation, memory and power for portability. Experimental results from the VPDNN show that the 94.5K parameter 14-layer CNN receiving an input of 128 \u00d7 128 has an inference frame rate of 83 frames per sec (FPS) and uses only an incremental power of 0.1 W, which is at least 10\u00d7 lower than that measured from a Jetson Nano. The ASIC adds a maximum delay of 2ms, however it does not impact the FPS thanks to double-buffered memory.  Index Terms\u2014Visual prosthesis, convolutional neural network, FPGA Accelerator, stimulation and recording ASIC"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:ui-gComCE0IC",
+        "num_citations": 0,
+        "pub_url": "https://www.zora.uzh.ch/id/eprint/238168/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Feature-disentangled reconstruction of perception from multi-unit recording",
+            "pub_year": 2023,
+            "citation": "Sl: sn, 2023",
+            "author": "TM Dado and Paolo Papale and Antonio Lozano and Lynn Le and MAJ van Gerven and PR Roelfsema and Y G\u00fc\u00e7l\u00fct\u00fcrk and U G\u00fc\u00e7l\u00fc",
+            "publisher": "Sl: sn",
+            "abstract": "Here, we aimed to explain neural representations of perception, for which we analyzed the relationship between multi-unit activity (MUA) recorded from the primate brain and various feature representations of visual stimuli. Our encoding analysis revealed that the -latent representations of feature-disentangled generative adversarial networks (GANs) were the most effective candidate for predicting neural responses to images. Importantly, the usage of synthesized yet photorealistic images allowed for superior control over these data as their underlying latent representations were known a priori rather than approximated post-hoc. As such, we leveraged this property in neural reconstruction of the perceived images. Taken together with the fact that the (unsupervised) generative models themselves were never optimized on neural data, these results highlight the importance of feature disentanglement and unsupervised training as driving factors in shaping neural representations."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:vq7B84E5p90C",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/297727/297727.pdf?sequence=1",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The neuroconnectionist research programme",
             "pub_year": 2023,
             "citation": "Nature Reviews Neuroscience, 1-20, 2023",
@@ -13,7 +48,7 @@
         },
         "filled": true,
         "author_pub_id": "sX0ZypwAAAAJ:9Gmr9OE0IYAC",
-        "num_citations": 19,
+        "num_citations": 27,
         "citedby_url": "/scholar?hl=en&cites=3334113232536501466",
         "cites_id": [
             "3334113232536501466"
@@ -21,31 +56,34 @@
         "pub_url": "https://www.nature.com/articles/s41583-023-00705-w",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2nxE8lEmRS4J:scholar.google.com/",
         "cites_per_year": {
-            "2022": 3,
-            "2023": 16
+            "2022": 5,
+            "2023": 22
         }
     },
     {
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "PhenoScore quantifies phenotypic variation for rare genetic diseases by combining facial analysis with other clinical features using a machine-learning framework",
+            "title": "Direct speech reconstruction from sensorimotor brain activity with optimized deep learning models",
             "pub_year": 2023,
-            "citation": "Nature Genetics, 1-10, 2023",
-            "author": "Alexander JM Dingemans and Max Hinne and Kim MG Truijen and Lia Goltstein and Jeroen Van Reeuwijk and Nicole De Leeuw and Janneke Schuurs-Hoeijmakers and Rolph Pfundt and Illja J Diets and Joery Den Hoed and Elke De Boer and Jet Coenen-van Der Spek and Sandra Jansen and Bregje W Van Bon and Noraly Jonis and Charlotte W Ockeloen and Anneke T Vulto-van Silfhout and Tjitske Kleefstra and David A Koolen and Philippe M Campeau and Elizabeth E Palmer and Hilde Van Esch and Gholson J Lyon and Fowzan S Alkuraya and Anita Rauch and Ronit Marom and Diana Baralle and Pleuntje J Van Der Sluijs and Gijs WE Santen and R Frank Kooy and Marcel AJ Van Gerven and Lisenka ELM Vissers and Bert BA de Vries",
-            "journal": "Nature Genetics",
-            "pages": "1-10",
-            "publisher": "Nature Publishing Group US",
-            "abstract": "Several molecular and phenotypic algorithms exist that establish genotype\u2013phenotype correlations, including facial recognition tools. However, no unified framework that investigates both facial data and other phenotypic data directly from individuals exists. We developed PhenoScore: an open-source, artificial intelligence-based phenomics framework, combining facial recognition technology with Human Phenotype Ontology data analysis to quantify phenotypic similarity. Here we show PhenoScore\u2019s ability to recognize distinct phenotypic entities by establishing recognizable phenotypes for 37 of 40 investigated syndromes against clinical features observed in individuals with other neurodevelopmental disorders and show it is an improvement on existing approaches. PhenoScore provides predictions for individuals with variants of unknown significance and enables sophisticated genotype\u2013phenotype studies by \u2026"
+            "citation": "Journal of Neural Engineering 20 (5), 056010, 2023",
+            "author": "Julia Berezutskaya and Zachary V Freudenburg and Mariska J Vansteensel and Erik J Aarnoutse and Nick F Ramsey and Marcel AJ van Gerven",
+            "journal": "Journal of Neural Engineering",
+            "volume": "20",
+            "number": "5",
+            "pages": "056010",
+            "publisher": "IOP Publishing",
+            "abstract": "Objective Development of brain\u2013computer interface (BCI) technology is key for enabling communication in individuals who have lost the faculty of speech due to severe motor paralysis. A BCI control strategy that is gaining attention employs speech decoding from neural data. Recent studies have shown that a combination of direct neural recordings and advanced computational models can provide promising results. Understanding which decoding strategies deliver best and directly applicable results is crucial for advancing the field. Approach In this paper, we optimized and validated a decoding approach based on speech reconstruction directly from high-density electrocorticography recordings from sensorimotor cortex during a speech production task. Main results We show that (1) dedicated machine learning optimization of reconstruction models is key for achieving the best reconstruction performance;(2 \u2026"
         },
         "filled": true,
-        "author_pub_id": "sX0ZypwAAAAJ:yWe6nybXSkwC",
-        "num_citations": 2,
-        "citedby_url": "/scholar?hl=en&cites=2969395117191689818",
+        "author_pub_id": "sX0ZypwAAAAJ:YifW7xAlWS4C",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=6815437794385051817",
         "cites_id": [
-            "2969395117191689818"
+            "6815437794385051817"
         ],
-        "pub_url": "https://www.nature.com/articles/s41588-023-01469-w",
+        "pub_url": "https://iopscience.iop.org/article/10.1088/1741-2552/ace8be/meta",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:qcAXc5BMlV4J:scholar.google.com/",
         "cites_per_year": {
             "2023": 2
         }
@@ -64,13 +102,40 @@
         },
         "filled": true,
         "author_pub_id": "sX0ZypwAAAAJ:jM2XaDTMsSgC",
-        "num_citations": 2,
+        "num_citations": 3,
         "citedby_url": "/scholar?hl=en&cites=3953036552226278355",
         "cites_id": [
             "3953036552226278355"
         ],
         "pub_url": "https://link.springer.com/chapter/10.1007/978-3-031-20910-9_47",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:0wuV18wB3DYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "PhenoScore quantifies phenotypic variation for rare genetic diseases by combining facial analysis with other clinical features using a machine-learning framework",
+            "pub_year": 2023,
+            "citation": "Nature Genetics 55 (9), 1598-1607, 2023",
+            "author": "Alexander JM Dingemans and Max Hinne and Kim MG Truijen and Lia Goltstein and Jeroen Van Reeuwijk and Nicole De Leeuw and Janneke Schuurs-Hoeijmakers and Rolph Pfundt and Illja J Diets and Joery Den Hoed and Elke De Boer and Jet Coenen-van Der Spek and Sandra Jansen and Bregje W Van Bon and Noraly Jonis and Charlotte W Ockeloen and Anneke T Vulto-van Silfhout and Tjitske Kleefstra and David A Koolen and Philippe M Campeau and Elizabeth E Palmer and Hilde Van Esch and Gholson J Lyon and Fowzan S Alkuraya and Anita Rauch and Ronit Marom and Diana Baralle and Pleuntje J Van Der Sluijs and Gijs WE Santen and R Frank Kooy and Marcel AJ Van Gerven and Lisenka ELM Vissers and Bert BA de Vries",
+            "journal": "Nature Genetics",
+            "volume": "55",
+            "number": "9",
+            "pages": "1598-1607",
+            "publisher": "Nature Publishing Group US",
+            "abstract": "Several molecular and phenotypic algorithms exist that establish genotype\u2013phenotype correlations, including facial recognition tools. However, no unified framework that investigates both facial data and other phenotypic data directly from individuals exists. We developed PhenoScore: an open-source, artificial intelligence-based phenomics framework, combining facial recognition technology with Human Phenotype Ontology data analysis to quantify phenotypic similarity. Here we show PhenoScore\u2019s ability to recognize distinct phenotypic entities by establishing recognizable phenotypes for 37 of 40 investigated syndromes against clinical features observed in individuals with other neurodevelopmental disorders and show it is an improvement on existing approaches. PhenoScore provides predictions for individuals with variants of unknown significance and enables sophisticated genotype\u2013phenotype studies by \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:yWe6nybXSkwC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=2969395117191689818",
+        "cites_id": [
+            "2969395117191689818"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41588-023-01469-w",
         "cites_per_year": {
             "2023": 2
         }
@@ -104,6 +169,29 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Behavioral assessment of the quality of speech reconstructions from intracranial neural activity",
+            "pub_year": 2023,
+            "citation": "Radboud Data Repository, 2023",
+            "author": "Y Berezutskaya and MAJ van Gerven",
+            "publisher": "Radboud Data Repository",
+            "abstract": "The collection contains behavioral data for the manuscript \"Direct Speech Reconstruction from Sensorimotor Brain Activity with Optimized Deep Learning Models\". Behavioral data was collected from three experiments: a word recognition experiment (I), a speaker recognition experiment (II) and an audio quality assessment (III). The aim of the experiments was to collect human perceptual judgments of speech reconstructed from sensorimotor human brain activity."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:IyMil-iDmu0C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=3930837870646611512",
+        "cites_id": [
+            "3930837870646611512"
+        ],
+        "pub_url": "https://repository.ubn.ru.nl/handle/2066/289544",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Gradient-adjusted incremental target propagation provides effective credit assignment in deep neural networks",
             "pub_year": 2023,
             "citation": "",
@@ -129,9 +217,10 @@
         "bib": {
             "title": "Advancements in spiking neural network communication and synchronization techniques for event-driven neuromorphic systems",
             "pub_year": 2023,
-            "citation": "Array, 100323, 2023",
+            "citation": "Array 20, 100323, 2023",
             "author": "Mahyar Shahsavari and David Thomas and Marcel van Gerven and Andrew Brown and Wayne Luk",
             "journal": "Array",
+            "volume": "20",
             "pages": "100323",
             "publisher": "Elsevier",
             "abstract": "Neuromorphic event-driven systems emulate the computational mechanisms of the brain through the utilization of spiking neural networks (SNN). Neuromorphic systems serve two primary application domains: simulating neural information processing in neuroscience and acting as accelerators for cognitive computing in engineering applications. A distinguishing characteristic of neuromorphic systems is their asynchronous or event-driven nature, but even event-driven systems require some synchronous time management of the neuron populations to guarantee sufficient time for the proper delivery of spiking messages. In this study, we assess three distinct algorithms proposed for adding a synchronization capability to asynchronous event-driven compute systems. We run these algorithms on POETS (Partially Ordered Event-Triggered Systems), a custom-built FPGA-based hardware platform, as a neuromorphic \u2026"
@@ -175,6 +264,23 @@
         "num_citations": 0,
         "pub_url": "https://psyarxiv.com/tr7gx/download?format=pdf",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1VpvSvB-icIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "End-to-end reconstruction of natural images from multi-unit recordings with Brain2Pix",
+            "pub_year": 2023,
+            "citation": "Sl: sn, 2023",
+            "author": "L Le and P Papale and A Lozano and TM Dado and F Wang and MAJ van Gerven and PR Roelfsema and Y G\u00fc\u00e7l\u00fct\u00fcrk and U G\u00fc\u00e7l\u00fc",
+            "publisher": "Sl: sn",
+            "abstract": "Reconstructing naturalistic images from brain signals has been a challenging task for scientists, with successful results largely limited to large human fMRI datasets. In this study, we apply the brain2pix reconstruction model to multi-unit activity (MUA) data from the macaque brain, providing a novel extension of the model. This approach allows for investigation of information representation in different brain regions and time windows with greater spatial and temporal precision. Our results offer insights into the neural basis of visual perception, showing that V1 neurons represent texture and color, V4 neurons exhibit symmetric representations, and IT neurons reveal concept-like features. We also demonstrate that the model can be used to decode features at different layers of a neural network, with V1 more strongly correlated with initial layers and V4 and IT with deeper layers. Overall, our approach provides a valuable tool for studying brain representations in high temporal and spatial detail."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:h0mLeC6b6wcC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/handle/2066/297726",
         "cites_per_year": {}
     },
     {
@@ -233,23 +339,6 @@
         "num_citations": 0,
         "pub_url": "https://www.biorxiv.org/content/10.1101/2023.04.26.537962.abstract",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:u3DnD1Aw34wJ:scholar.google.com/",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Behavioral assessment of the quality of speech reconstructions from intracranial neural activity",
-            "pub_year": 2023,
-            "citation": "Radboud Data Repository, 2023",
-            "author": "Y Berezutskaya and MAJ van Gerven",
-            "publisher": "Radboud Data Repository",
-            "abstract": "The collection contains behavioral data for the manuscript \"Direct Speech Reconstruction from Sensorimotor Brain Activity with Optimized Deep Learning Models\". Behavioral data was collected from three experiments: a word recognition experiment (I), a speaker recognition experiment (II) and an audio quality assessment (III). The aim of the experiments was to collect human perceptual judgments of speech reconstructed from sensorimotor human brain activity."
-        },
-        "filled": true,
-        "author_pub_id": "sX0ZypwAAAAJ:IyMil-iDmu0C",
-        "num_citations": 0,
-        "pub_url": "https://repository.ubn.ru.nl/handle/2066/289544",
         "cites_per_year": {}
     }
 ]

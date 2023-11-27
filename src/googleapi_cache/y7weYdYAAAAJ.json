@@ -3,6 +3,23 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Feature-disentangled reconstruction of perception from multi-unit recording",
+            "pub_year": 2023,
+            "citation": "Sl: sn, 2023",
+            "author": "TM Dado and Paolo Papale and Antonio Lozano and Lynn Le and MAJ van Gerven and PR Roelfsema and Y G\u00fc\u00e7l\u00fct\u00fcrk and U G\u00fc\u00e7l\u00fc",
+            "publisher": "Sl: sn",
+            "abstract": "Here, we aimed to explain neural representations of perception, for which we analyzed the relationship between multi-unit activity (MUA) recorded from the primate brain and various feature representations of visual stimuli. Our encoding analysis revealed that the -latent representations of feature-disentangled generative adversarial networks (GANs) were the most effective candidate for predicting neural responses to images. Importantly, the usage of synthesized yet photorealistic images allowed for superior control over these data as their underlying latent representations were known a priori rather than approximated post-hoc. As such, we leveraged this property in neural reconstruction of the perceived images. Taken together with the fact that the (unsupervised) generative models themselves were never optimized on neural data, these results highlight the importance of feature disentanglement and unsupervised training as driving factors in shaping neural representations."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:Xz60mAmATU4C",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/297727/297727.pdf?sequence=1",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Solving the binding problem: Assemblies form when neurons enhance their firing rate\u2014they don\u2019t need to oscillate or synchronize",
             "pub_year": 2023,
             "citation": "Neuron 111 (7), 1003-1019, 2023",
@@ -15,7 +32,7 @@
         },
         "filled": true,
         "author_pub_id": "y7weYdYAAAAJ:QsaTk4IG4EwC",
-        "num_citations": 9,
+        "num_citations": 10,
         "citedby_url": "/scholar?hl=en&cites=2288615768140591546",
         "cites_id": [
             "2288615768140591546"
@@ -23,6 +40,7 @@
         "pub_url": "https://www.cell.com/neuron/pdf/S0896-6273(23)00212-X.pdf",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:urFgX-rLwh8J:scholar.google.com/",
         "cites_per_year": {
+            "2022": 1,
             "2023": 9
         }
     },
@@ -43,7 +61,7 @@
         },
         "filled": true,
         "author_pub_id": "y7weYdYAAAAJ:IsPWOBWtZBwC",
-        "num_citations": 5,
+        "num_citations": 6,
         "citedby_url": "/scholar?hl=en&cites=8778649558919739203",
         "cites_id": [
             "8778649558919739203"
@@ -51,7 +69,7 @@
         "pub_url": "https://www.science.org/doi/abs/10.1126/sciadv.add2498",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Q_cMN0MH1HkJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 5
+            "2023": 6
         }
     },
     {
@@ -112,6 +130,33 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Restoring vision via electrical stimulation through a 1024-channel microelectrode array implanted in visual cortex",
+            "pub_year": 2023,
+            "citation": "Brain Stimulation: Basic, Translational, and Clinical Research in \u2026, 2023",
+            "author": "Xing Chen and Feng Wang and Roxana Kooijmans and Chris Klink and Eduardo Fernandez and Pieter Roelfsema",
+            "journal": "Brain Stimulation: Basic, Translational, and Clinical Research in Neuromodulation",
+            "volume": "16",
+            "number": "1",
+            "pages": "181-182",
+            "publisher": "Elsevier",
+            "abstract": "Blindness affects 40 million people worldwide, and a neuroprosthesis may restore functional vision in the future. We developed a 1024-channel, chronically implantable prosthesis for the monkey visual cortex, using electrical stimulation to elicit percepts of dots of light (\u2018phosphenes\u2019) across hundreds of electrodes. Phosphene locations matched the receptive fields of stimulated neurons, and V4 activity predicted phosphene detection during stimulation in V1. Lastly, we stimulated multiple electrodes simultaneously to generate percepts composed of multiple phosphenes. The monkeys could immediately recognize simple phosphene shapes, directions of motion, and letters, demonstrating the potential of electrical stimulation to restore life-enhancing vision in the blind."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:jSAVyFp_754C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=11398783913047284430",
+        "cites_id": [
+            "11398783913047284430"
+        ],
+        "pub_url": "https://www.brainstimjrnl.com/article/S1935-861X(23)00202-4/abstract",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Modulatory feedback explain object segmentation by attention",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023.01. 19.524712, 2023",
@@ -140,9 +185,9 @@
         "bib": {
             "title": "The representation of occluded image regions in area V1 of monkeys and humans",
             "pub_year": 2023,
-            "citation": "Current Biology 33 (18), 3865-3871. e3, 2023",
+            "citation": "Current biology 33 (18), 3865-3871. e3, 2023",
             "author": "Paolo Papale and Feng Wang and A Tyler Morgan and Xing Chen and Amparo Gilhuis and Lucy S Petro and Lars Muckli and Pieter R Roelfsema and Matthew W Self",
-            "journal": "Current Biology",
+            "journal": "Current biology",
             "volume": "33",
             "number": "18",
             "pages": "3865-3871. e3",
@@ -199,6 +244,23 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "End-to-end reconstruction of natural images from multi-unit recordings with Brain2Pix",
+            "pub_year": 2023,
+            "citation": "Sl: sn, 2023",
+            "author": "L Le and P Papale and A Lozano and TM Dado and F Wang and MAJ van Gerven and PR Roelfsema and Y G\u00fc\u00e7l\u00fct\u00fcrk and U G\u00fc\u00e7l\u00fc",
+            "publisher": "Sl: sn",
+            "abstract": "Reconstructing naturalistic images from brain signals has been a challenging task for scientists, with successful results largely limited to large human fMRI datasets. In this study, we apply the brain2pix reconstruction model to multi-unit activity (MUA) data from the macaque brain, providing a novel extension of the model. This approach allows for investigation of information representation in different brain regions and time windows with greater spatial and temporal precision. Our results offer insights into the neural basis of visual perception, showing that V1 neurons represent texture and color, V4 neurons exhibit symmetric representations, and IT neurons reveal concept-like features. We also demonstrate that the model can be used to decode features at different layers of a neural network, with V1 more strongly correlated with initial layers and V4 and IT with deeper layers. Overall, our approach provides a valuable tool for studying brain representations in high temporal and spatial detail."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:qe6vwMD2xtsC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/handle/2066/297726",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Biologically plausible gated recurrent neural networks for working memory and learning-to-learn",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023.07. 06.547911, 2023",
@@ -232,27 +294,6 @@
         "num_citations": 0,
         "pub_url": "https://www.biorxiv.org/content/10.1101/2023.04.26.537962.abstract",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:u3DnD1Aw34wJ:scholar.google.com/",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Restoring vision via electrical stimulation through a 1024-channel microelectrode array implanted in visual cortex",
-            "pub_year": 2023,
-            "citation": "Brain Stimulation: Basic, Translational, and Clinical Research in \u2026, 2023",
-            "author": "Xing Chen and Feng Wang and Roxana Kooijmans and Chris Klink and Eduardo Fernandez and Pieter Roelfsema",
-            "journal": "Brain Stimulation: Basic, Translational, and Clinical Research in Neuromodulation",
-            "volume": "16",
-            "number": "1",
-            "pages": "181-182",
-            "publisher": "Elsevier",
-            "abstract": "Blindness affects 40 million people worldwide, and a neuroprosthesis may restore functional vision in the future. We developed a 1024-channel, chronically implantable prosthesis for the monkey visual cortex, using electrical stimulation to elicit percepts of dots of light (\u2018phosphenes\u2019) across hundreds of electrodes. Phosphene locations matched the receptive fields of stimulated neurons, and V4 activity predicted phosphene detection during stimulation in V1. Lastly, we stimulated multiple electrodes simultaneously to generate percepts composed of multiple phosphenes. The monkeys could immediately recognize simple phosphene shapes, directions of motion, and letters, demonstrating the potential of electrical stimulation to restore life-enhancing vision in the blind."
-        },
-        "filled": true,
-        "author_pub_id": "y7weYdYAAAAJ:jSAVyFp_754C",
-        "num_citations": 0,
-        "pub_url": "https://www.brainstimjrnl.com/article/S1935-861X(23)00202-4/abstract",
         "cites_per_year": {}
     }
 ]

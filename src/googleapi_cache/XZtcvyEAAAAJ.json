@@ -3,28 +3,22 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Empirically Identifying and Computationally Modeling the Brain\u2013Behavior Relationship for Human Scene Categorization",
+            "title": "Alpha-frequency feedback to early visual cortex orchestrates coherent naturalistic vision",
             "pub_year": 2023,
-            "citation": "Journal of Cognitive Neuroscience 35 (11), 1879-1897, 2023",
-            "author": "Agnessa Karapetian and Antoniya Boyanova and Muthukumar Pandaram and Klaus Obermayer and Tim C Kietzmann and Radoslaw M Cichy",
-            "journal": "Journal of Cognitive Neuroscience",
-            "volume": "35",
-            "number": "11",
-            "pages": "1879-1897",
-            "publisher": "MIT Press",
-            "abstract": "Humans effortlessly make quick and accurate perceptual decisions about the nature of their immediate visual environment, such as the category of the scene they face. Previous research has revealed a rich set of cortical representations potentially underlying this feat. However, it remains unknown which of these representations are suitably formatted for decision-making. Here, we approached this question empirically and computationally, using neuroimaging and computational modeling. For the empirical part, we collected EEG data and RTs from human participants during a scene categorization task (natural vs. man-made). We then related EEG data to behavior to behavior using a multivariate extension of signal detection theory. We observed a correlation between neural data and behavior specifically between \u223c100 msec and \u223c200 msec after stimulus onset, suggesting that the neural scene \u2026"
+            "citation": "Science Advances 9 (45), eadi2321, 2023",
+            "author": "Lixiang Chen and Radoslaw M Cichy and Daniel Kaiser",
+            "journal": "Science Advances",
+            "volume": "9",
+            "number": "45",
+            "pages": "eadi2321",
+            "publisher": "American Association for the Advancement of Science",
+            "abstract": "During naturalistic vision, the brain generates coherent percepts by integrating sensory inputs scattered across the visual field. Here, we asked whether this integration process is mediated by rhythmic cortical feedback. In electroencephalography (EEG) and functional magnetic resonance imaging (fMRI) experiments, we experimentally manipulated integrative processing by changing the spatiotemporal coherence of naturalistic videos presented across visual hemifields. Our EEG data revealed that information about incoherent videos is coded in feedforward-related gamma activity while information about coherent videos is coded in feedback-related alpha activity, indicating that integration is indeed mediated by rhythmic activity. Our fMRI data identified scene-selective cortex and human middle temporal complex (hMT) as likely sources of this feedback. Analytically combining our EEG and fMRI data further revealed \u2026"
         },
         "filled": true,
-        "author_pub_id": "XZtcvyEAAAAJ:t7zJ5fGR-2UC",
-        "num_citations": 1,
-        "citedby_url": "/scholar?hl=en&cites=6540615712862677034",
-        "cites_id": [
-            "6540615712862677034"
-        ],
-        "pub_url": "https://direct.mit.edu/jocn/article/doi/10.1162/jocn_a_02043/117201",
-        "cites_per_year": {
-            "2023": 1
-        }
+        "author_pub_id": "XZtcvyEAAAAJ:vDijr-p_gm4C",
+        "num_citations": 0,
+        "pub_url": "https://www.science.org/doi/abs/10.1126/sciadv.adi2321",
+        "cites_per_year": {}
     },
     {
         "container_type": "Publication",
@@ -39,7 +33,7 @@
         },
         "filled": true,
         "author_pub_id": "XZtcvyEAAAAJ:_Ybze24A_UAC",
-        "num_citations": 7,
+        "num_citations": 9,
         "citedby_url": "/scholar?hl=en&cites=1174422521076802658",
         "cites_id": [
             "1174422521076802658"
@@ -47,7 +41,33 @@
         "pub_url": "https://arxiv.org/abs/2301.03198",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YmQAgQ9jTBAJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 7
+            "2023": 9
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An adversarial collaboration to critically evaluate theories of consciousness",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.06. 23.546249, 2023",
+            "author": "Cogitate Consortium and Oscar Ferrante and Urszula Gorska-Klimowska and Simon Henin and Rony Hirschhorn and Aya Khalaf and Alex Lepauvre and Ling Liu and David Richter and Yamil Vidal and Niccolo Bonacchi and Tanya Brown and Praveen Sripad and Marcelo Armendariz and Katarina Bendtz and Tara Ghafari and Dorottya Hetenyi and Jay Jeschke and Csaba Kozma and David Rahul Mazumder and Stephanie Montenegro and Alia Seedat and Abdelrahman Sharafeldin and Shujun Yang and Sylvain Baillet and David J Chalmers and Radoslaw M Cichy and Francis Fallon and Theofanis I Panagiotaropoulos and Hal Blumenfeld and Sasha Devore and Ole Jensen and Gabriel Kreiman and Floris P de Lange and Huan Luo and Melanie Boly and Stanislas Dehaene and Christof Koch and Giulio Tononi and Michael Pitts and Liad Mudrik and Lucia Melloni",
+            "journal": "bioRxiv",
+            "pages": "2023.06. 23.546249",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Different theories explain how subjective experience arises from brain activity. These theories have independently accrued evidence, yet, confirmation bias and dependence on design choices hamper progress in the field. Here, we present an open science adversarial collaboration which directly juxtaposes Integrated Information Theory (IIT) and Global Neuronal Workspace Theory (GNWT), employing a theory-neutral consortium approach. We investigate neural correlates of the content and duration of visual experience. The theory proponents and the consortium developed and preregistered the experimental design, divergent predictions, expected outcomes, and their interpretation. 256 human subjects viewed suprathreshold stimuli for variable durations while neural activity was measured with functional magnetic resonance imaging, magnetoencephalography, and electrocorticography. We find information about conscious content in visual, ventro-temporal and inferior frontal cortex, with sustained responses in occipital and lateral temporal cortex reflecting stimulus duration, and content-specific synchronization between frontal and early visual areas. These results confirm some predictions of IIT and GNWT, while substantially challenging both theories: for IIT, a lack of sustained synchronization within posterior cortex contradicts the claim that network connectivity specifies consciousness. GNWT is challenged by the general lack of ignition at stimulus offset and limited representation of certain conscious dimensions in prefrontal cortex. Beyond challenging the theories themselves, we present an alternative approach to advance cognitive \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:fEOibwPWpKIC",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=1934370548687779377",
+        "cites_id": [
+            "1934370548687779377"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.23.546249.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:MTaD6sND2BoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 5
         }
     },
     {
@@ -83,26 +103,131 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "An adversarial collaboration to critically evaluate theories of consciousness",
+            "title": "The spatiotemporal neural dynamics of object recognition for natural images and line drawings",
             "pub_year": 2023,
-            "citation": "bioRxiv, 2023.06. 23.546249, 2023",
-            "author": "Cogitate Consortium and Oscar Ferrante and Urszula Gorska-Klimowska and Simon Henin and Rony Hirschhorn and Aya Khalaf and Alex Lepauvre and Ling Liu and David Richter and Yamil Vidal and Niccolo Bonacchi and Tanya Brown and Praveen Sripad and Marcelo Armendariz and Katarina Bendtz and Tara Ghafari and Dorottya Hetenyi and Jay Jeschke and Csaba Kozma and David Rahul Mazumder and Stephanie Montenegro and Alia Seedat and Abdelrahman Sharafeldin and Shujun Yang and Sylvain Baillet and David J Chalmers and Radoslaw M Cichy and Francis Fallon and Theofanis I Panagiotaropoulos and Hal Blumenfeld and Sasha Devore and Ole Jensen and Gabriel Kreiman and Floris P de Lange and Huan Luo and Melanie Boly and Stanislas Dehaene and Christof Koch and Giulio Tononi and Michael Pitts and Liad Mudrik and Lucia Melloni",
-            "journal": "bioRxiv",
-            "pages": "2023.06. 23.546249",
-            "publisher": "Cold Spring Harbor Laboratory",
-            "abstract": "Different theories explain how subjective experience arises from brain activity. These theories have independently accrued evidence, yet, confirmation bias and dependence on design choices hamper progress in the field. Here, we present an open science adversarial collaboration which directly juxtaposes Integrated Information Theory (IIT) and Global Neuronal Workspace Theory (GNWT), employing a theory-neutral consortium approach. We investigate neural correlates of the content and duration of visual experience. The theory proponents and the consortium developed and preregistered the experimental design, divergent predictions, expected outcomes, and their interpretation. 256 human subjects viewed suprathreshold stimuli for variable durations while neural activity was measured with functional magnetic resonance imaging, magnetoencephalography, and electrocorticography. We find information about conscious content in visual, ventro-temporal and inferior frontal cortex, with sustained responses in occipital and lateral temporal cortex reflecting stimulus duration, and content-specific synchronization between frontal and early visual areas. These results confirm some predictions of IIT and GNWT, while substantially challenging both theories: for IIT, a lack of sustained synchronization within posterior cortex contradicts the claim that network connectivity specifies consciousness. GNWT is challenged by the general lack of ignition at stimulus offset and limited representation of certain conscious dimensions in prefrontal cortex. Beyond challenging the theories themselves, we present an alternative approach to advance cognitive \u2026"
+            "citation": "Journal of Neuroscience 43 (3), 484-500, 2023",
+            "author": "Johannes JD Singer and Radoslaw M Cichy and Martin N Hebart",
+            "journal": "Journal of Neuroscience",
+            "volume": "43",
+            "number": "3",
+            "pages": "484-500",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Drawings offer a simple and efficient way to communicate meaning. While line drawings capture only coarsely how objects look in reality, we still perceive them as resembling real-world objects. Previous work has shown that this perceived similarity is mirrored by shared neural representations for drawings and natural images, which suggests that similar mechanisms underlie the recognition of both. However, other work has proposed that representations of drawings and natural images become similar only after substantial processing has taken place, suggesting distinct mechanisms. To arbitrate between those alternatives, we measured brain responses resolved in space and time using fMRI and MEG, respectively, while human participants (female and male) viewed images of objects depicted as photographs, line drawings, or sketch-like drawings. Using multivariate decoding, we demonstrate that object category \u2026"
         },
         "filled": true,
-        "author_pub_id": "XZtcvyEAAAAJ:fEOibwPWpKIC",
+        "author_pub_id": "XZtcvyEAAAAJ:LjlpjdlvIbIC",
         "num_citations": 2,
-        "citedby_url": "/scholar?hl=en&cites=1934370548687779377",
+        "citedby_url": "/scholar?hl=en&cites=14102090530843616330,16342086893956331921",
         "cites_id": [
-            "1934370548687779377"
+            "14102090530843616330",
+            "16342086893956331921"
         ],
-        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.23.546249.abstract",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:MTaD6sND2BoJ:scholar.google.com/",
+        "pub_url": "https://www.jneurosci.org/content/43/3/484.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:SmRVKZ-wtMMJ:scholar.google.com/",
         "cites_per_year": {
             "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Empirically Identifying and Computationally Modeling the Brain\u2013Behavior Relationship for Human Scene Categorization",
+            "pub_year": 2023,
+            "citation": "Journal of Cognitive Neuroscience 35 (11), 1879-1897, 2023",
+            "author": "Agnessa Karapetian and Antoniya Boyanova and Muthukumar Pandaram and Klaus Obermayer and Tim C Kietzmann and Radoslaw M Cichy",
+            "journal": "Journal of Cognitive Neuroscience",
+            "volume": "35",
+            "number": "11",
+            "pages": "1879-1897",
+            "publisher": "MIT Press",
+            "abstract": "Humans effortlessly make quick and accurate perceptual decisions about the nature of their immediate visual environment, such as the category of the scene they face. Previous research has revealed a rich set of cortical representations potentially underlying this feat. However, it remains unknown which of these representations are suitably formatted for decision-making. Here, we approached this question empirically and computationally, using neuroimaging and computational modeling. For the empirical part, we collected EEG data and RTs from human participants during a scene categorization task (natural vs. man-made). We then related EEG data to behavior to behavior using a multivariate extension of signal detection theory. We observed a correlation between neural data and behavior specifically between \u223c100 msec and \u223c200 msec after stimulus onset, suggesting that the neural scene \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:t7zJ5fGR-2UC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=6540615712862677034",
+        "cites_id": [
+            "6540615712862677034"
+        ],
+        "pub_url": "https://direct.mit.edu/jocn/article/doi/10.1162/jocn_a_02043/117201",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "End-to-end topographic networks as models of cortical map formation and human visual behaviour: moving beyond convolutions",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2308.09431, 2023",
+            "author": "Zejin Lu and Adrien Doerig and Victoria Bosch and Bas Krahmer and Daniel Kaiser and Radoslaw M Cichy and Tim C Kietzmann",
+            "journal": "arXiv preprint arXiv:2308.09431",
+            "abstract": "Computational models are an essential tool for understanding the origin and functions of the topographic organisation of the primate visual system. Yet, vision is most commonly modelled by convolutional neural networks that ignore topography by learning identical features across space. Here, we overcome this limitation by developing All-Topographic Neural Networks (All-TNNs). Trained on visual input, several features of primate topography emerge in All-TNNs: smooth orientation maps and cortical magnification in their first layer, and category-selective areas in their final layer. In addition, we introduce a novel dataset of human spatial biases in object recognition, which enables us to directly link models to behaviour. We demonstrate that All-TNNs significantly better align with human behaviour than previous state-of-the-art convolutional models due to their topographic nature. All-TNNs thereby mark an important step forward in understanding the spatial organisation of the visual brain and how it mediates visual behaviour."
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:XD-gHx7UXLsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=17139289309057150061",
+        "cites_id": [
+            "17139289309057150061"
+        ],
+        "pub_url": "https://arxiv.org/abs/2308.09431",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "To View More...",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23, 4574, 2023",
+            "author": "Kritika Lohia and Rijul Saurabh Soans and Dharam Raj and Rohit Saxena and Tapan Kumar Gandhi and Brady Roberts and Colin MacLeod and Myra Fernandes and Anne Yilmaz and John Wixted and Petra Borovska and Benjamin de Haas and Marlene Behrmann and Galia Avidan and Janita N Turchi and Fadila Hadj-Bouziane and Ning Liu and Alessandro T Gifford and Kshitij Dwivedi and Gemma Roig and Radoslaw M Cichy",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "pages": "4574",
+            "abstract": "Youth is not wasted on the young: Late-in-life sight restoration in congenitally blind children leads to the emergence of some visual constructional skills but not others Open Access"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:EkHepimYqZsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=5679806182898397333",
+        "cites_id": [
+            "5679806182898397333"
+        ],
+        "pub_url": "https://jov.arvojournals.org/issues.aspx?issueid=938645&journalid=178",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The spatiotemporal neural dynamics of Braille letter representations in individuals with congenital blindness",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4710-4710, 2023",
+            "author": "Marleen Haupt and Monika Graumann and Santani Teng and Radoslaw Cichy",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4710-4710",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Experience shapes the visual brain, but the degree to which its functional organization is plastic remains unknown. A unique opportunity to detect the boundaries of functional plasticity is by measuring brain plasticity in individuals born with congenital blindness. We used Braille letter reading to probe the brains of blind individuals. Driven by the analogy to visual processing that proceeds from viewing condition-dependent to viewing condition-independent representations in recognition, we investigated how the Braille letter processing proceeds from a hand-dependent to a hand-independent representation. For this we measured fMRI (N= 15) and EEG (N= 11) while congenitally blind participants read Braille letters with either their left or right index finger. For both imaging modalities, we applied equivalent multivariate classification schemes: a) to assess hand-dependent letter representations we classified between \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:nrtMV_XWKgEC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=36963703594478228",
+        "cites_id": [
+            "36963703594478228"
+        ],
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791787",
+        "cites_per_year": {
+            "2023": 1
         }
     },
     {
@@ -137,84 +262,28 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "The spatiotemporal neural dynamics of object recognition for natural images and line drawings",
+            "title": "Alpha-frequency feedback to early visual cortex orchestrates coherent natural vision",
             "pub_year": 2023,
-            "citation": "Journal of Neuroscience 43 (3), 484-500, 2023",
-            "author": "Johannes JD Singer and Radoslaw M Cichy and Martin N Hebart",
-            "journal": "Journal of Neuroscience",
-            "volume": "43",
-            "number": "3",
-            "pages": "484-500",
-            "publisher": "Society for Neuroscience",
-            "abstract": "Drawings offer a simple and efficient way to communicate meaning. While line drawings capture only coarsely how objects look in reality, we still perceive them as resembling real-world objects. Previous work has shown that this perceived similarity is mirrored by shared neural representations for drawings and natural images, which suggests that similar mechanisms underlie the recognition of both. However, other work has proposed that representations of drawings and natural images become similar only after substantial processing has taken place, suggesting distinct mechanisms. To arbitrate between those alternatives, we measured brain responses resolved in space and time using fMRI and MEG, respectively, while human participants (female and male) viewed images of objects depicted as photographs, line drawings, or sketch-like drawings. Using multivariate decoding, we demonstrate that object category \u2026"
+            "citation": "bioRxiv, 2023.02. 10.527986, 2023",
+            "author": "Lixiang Chen and Radoslaw Martin Cichy and Daniel Kaiser",
+            "journal": "bioRxiv",
+            "pages": "2023.02. 10.527986",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "For coherent visual experience to emerge, the brain needs to spatially integrate the complex and dynamic information it receives from the environment. To meet this challenge, the visual system uses contextual information from one part of the visual field to create feedback signals that guide analysis in other parts of the visual field. Here, we set out to characterize the nature of this feedback across brain rhythms and cortical regions. In EEG and fMRI experiments, we experimentally recreated the spatially distributed nature of visual inputs by presenting natural videos at different visual field locations. Critically, we manipulated the spatiotemporal congruency of the videos, so that they did or did not demand integration into a coherent percept. Decoding stimulus information from frequency-specific EEG patterns revealed a shift from representations in feedforward-related gamma activity for spatiotemporally inconsistent videos to representations in feedback-related alpha activity for spatiotemporally consistent videos. Our fMRI data suggest high-level scene-selective areas as the putative source of this feedback. Combining the EEG data with spatially resolved fMRI recordings, we demonstrate that alpha-frequency feedback is directly associated with representations in early visual cortex. Together this demonstrates how the human brain orchestrates coherent visual experience across space: it uses feedback to integrate information from high-level to early visual cortex through a dedicated rhythmic code in the alpha frequency range."
         },
         "filled": true,
-        "author_pub_id": "XZtcvyEAAAAJ:LjlpjdlvIbIC",
+        "author_pub_id": "XZtcvyEAAAAJ:kzcrU_BdoSEC",
         "num_citations": 1,
-        "citedby_url": "/scholar?hl=en&cites=14102090530843616330,16342086893956331921",
+        "citedby_url": "/scholar?hl=en&cites=14263805169901092477,8764360104247162680",
         "cites_id": [
-            "14102090530843616330",
-            "16342086893956331921"
+            "14263805169901092477",
+            "8764360104247162680"
         ],
-        "pub_url": "https://www.jneurosci.org/content/43/3/484.abstract",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:SmRVKZ-wtMMJ:scholar.google.com/",
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.02.10.527986.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:fb5VqTo388UJ:scholar.google.com/",
         "cites_per_year": {
             "2023": 1
         }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "End-to-end topographic networks as models of cortical map formation and human visual behaviour: moving beyond convolutions",
-            "pub_year": 2023,
-            "citation": "arXiv preprint arXiv:2308.09431, 2023",
-            "author": "Zejin Lu and Adrien Doerig and Victoria Bosch and Bas Krahmer and Daniel Kaiser and Radoslaw M Cichy and Tim C Kietzmann",
-            "journal": "arXiv preprint arXiv:2308.09431",
-            "abstract": "Computational models are an essential tool for understanding the origin and functions of the topographic organisation of the primate visual system. Yet, vision is most commonly modelled by convolutional neural networks that ignore topography by learning identical features across space. Here, we overcome this limitation by developing All-Topographic Neural Networks (All-TNNs). Trained on visual input, several features of primate topography emerge in All-TNNs: smooth orientation maps and cortical magnification in their first layer, and category-selective areas in their final layer. In addition, we introduce a novel dataset of human spatial biases in object recognition, which enables us to directly link models to behaviour. We demonstrate that All-TNNs significantly better align with human behaviour than previous state-of-the-art convolutional models due to their topographic nature. All-TNNs thereby mark an important step forward in understanding the spatial organisation of the visual brain and how it mediates visual behaviour."
-        },
-        "filled": true,
-        "author_pub_id": "XZtcvyEAAAAJ:XD-gHx7UXLsC",
-        "num_citations": 0,
-        "pub_url": "https://arxiv.org/abs/2308.09431",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Empirically Identifying and Computationally Modelling the Brain\u2013Behavior Relationship for Human Scene Categorization",
-            "pub_year": 2023,
-            "citation": "Journal of Cognitive Neuroscience, 1-19, 2023",
-            "author": "Agnessa Karapetian and Antoniya Boyanova and Muthukumar Pandaram and Klaus Obermayer and Tim C Kietzmann and Radoslaw M Cichy",
-            "journal": "Journal of Cognitive Neuroscience",
-            "pages": "1-19",
-            "abstract": "Humans effortlessly make quick and accurate perceptual decisions about the nature of their immediate visual environment, such as the category of the scene they face. Previous research has revealed a rich set of cortical representations potentially underlying this feat. However, it remains unknown which of these representations are suitably formatted for decision-making. Here, we approached this question empirically and computationally, using neuroimaging and computational modelling. For the empirical part, we collected EEG data and RTs from human participants during a scene categorization task (natural vs. man-made). We then related neural representations to behavior using a multivariate extension of signal detection theory. We observed a correlation specifically between\u223c 100 msec and\u223c 200 msec after stimulus onset, suggesting that the neural scene representations in this time period are suitably \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "XZtcvyEAAAAJ:t7zJ5fGR-2UC",
-        "num_citations": 0,
-        "pub_url": "https://direct.mit.edu/jocn/article/doi/10.1162/jocn_a_02043/117201",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "To View More...",
-            "pub_year": 2023,
-            "citation": "Journal of Vision 23, 4574, 2023",
-            "author": "Kritika Lohia and Rijul Saurabh Soans and Dharam Raj and Rohit Saxena and Tapan Kumar Gandhi and Brady Roberts and Colin MacLeod and Myra Fernandes and Anne Yilmaz and John Wixted and Petra Borovska and Benjamin de Haas and Marlene Behrmann and Galia Avidan and Janita N Turchi and Fadila Hadj-Bouziane and Ning Liu and Alessandro T Gifford and Kshitij Dwivedi and Gemma Roig and Radoslaw M Cichy",
-            "journal": "Journal of Vision",
-            "volume": "23",
-            "pages": "4574",
-            "abstract": "Youth is not wasted on the young: Late-in-life sight restoration in congenitally blind children leads to the emergence of some visual constructional skills but not others Open Access"
-        },
-        "filled": true,
-        "author_pub_id": "XZtcvyEAAAAJ:EkHepimYqZsC",
-        "num_citations": 0,
-        "pub_url": "https://jov.arvojournals.org/issues.aspx?issueid=938645&journalid=178",
-        "cites_per_year": {}
     },
     {
         "container_type": "Publication",
@@ -235,27 +304,6 @@
         "author_pub_id": "XZtcvyEAAAAJ:ipzZ9siozwsC",
         "num_citations": 0,
         "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791786",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "A large and rich EEG dataset for modeling human visual object recognition",
-            "pub_year": 2023,
-            "citation": "Journal of Vision 23 (9), 4579-4579, 2023",
-            "author": "Alessandro T Gifford and Kshitij Dwivedi and Gemma Roig and Radoslaw M Cichy",
-            "journal": "Journal of Vision",
-            "volume": "23",
-            "number": "9",
-            "pages": "4579-4579",
-            "publisher": "The Association for Research in Vision and Ophthalmology",
-            "abstract": "The human brain achieves visual object recognition through multiple stages of transformations operating at a millisecond scale. To predict and explain these rapid transformations, computational neuroscientists employ machine learning modeling techniques. However, state-of-the-art models require massive amounts of data to properly train, and to the present day there is a lack of vast brain datasets which extensively sample the temporal dynamics of visual object recognition. Here we collected a massive millisecond resolution electroencephalography (EEG) dataset of human brain responses to images of objects on a natural background from the THINGS database. We used a time-efficient rapid serial visual presentation paradigm to extensively sample 10 participants, each with 16,740 image conditions repeated over 82,160 trials. We then leveraged the unprecedented size and richness of our dataset to train and \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "XZtcvyEAAAAJ:uc_IGeMz5qoC",
-        "num_citations": 0,
-        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791858",
         "cites_per_year": {}
     },
     {
@@ -304,27 +352,6 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "The spatiotemporal neural dynamics of Braille letter representations in individuals with congenital blindness",
-            "pub_year": 2023,
-            "citation": "Journal of Vision 23 (9), 4710-4710, 2023",
-            "author": "Marleen Haupt and Monika Graumann and Santani Teng and Radoslaw Cichy",
-            "journal": "Journal of Vision",
-            "volume": "23",
-            "number": "9",
-            "pages": "4710-4710",
-            "publisher": "The Association for Research in Vision and Ophthalmology",
-            "abstract": "Experience shapes the visual brain, but the degree to which its functional organization is plastic remains unknown. A unique opportunity to detect the boundaries of functional plasticity is by measuring brain plasticity in individuals born with congenital blindness. We used Braille letter reading to probe the brains of blind individuals. Driven by the analogy to visual processing that proceeds from viewing condition-dependent to viewing condition-independent representations in recognition, we investigated how the Braille letter processing proceeds from a hand-dependent to a hand-independent representation. For this we measured fMRI (N= 15) and EEG (N= 11) while congenitally blind participants read Braille letters with either their left or right index finger. For both imaging modalities, we applied equivalent multivariate classification schemes: a) to assess hand-dependent letter representations we classified between \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "XZtcvyEAAAAJ:nrtMV_XWKgEC",
-        "num_citations": 0,
-        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791787",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
             "title": "Laminar dissociation of feedforward and feedback signals in high-level ventral visual cortex during imagery and perception",
             "pub_year": 2023,
             "citation": "PsyArXiv, 2023",
@@ -335,7 +362,7 @@
         "filled": true,
         "author_pub_id": "XZtcvyEAAAAJ:9Nmd_mFXekcC",
         "num_citations": 0,
-        "pub_url": "https://psyarxiv.com/7zcp8/",
+        "pub_url": "https://osf.io/preprints/psyarxiv/7zcp8/",
         "cites_per_year": {}
     },
     {
@@ -373,26 +400,6 @@
         "num_citations": 0,
         "pub_url": "https://psyarxiv.com/98wt7/download?format=pdf",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:jCng5_Qk1GYJ:scholar.google.com/",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Alpha-frequency feedback to early visual cortex orchestrates coherent natural vision",
-            "pub_year": 2023,
-            "citation": "bioRxiv, 2023.02. 10.527986, 2023",
-            "author": "Lixiang Chen and Radoslaw Martin Cichy and Daniel Kaiser",
-            "journal": "bioRxiv",
-            "pages": "2023.02. 10.527986",
-            "publisher": "Cold Spring Harbor Laboratory",
-            "abstract": "For coherent visual experience to emerge, the brain needs to spatially integrate the complex and dynamic information it receives from the environment. To meet this challenge, the visual system uses contextual information from one part of the visual field to create feedback signals that guide analysis in other parts of the visual field. Here, we set out to characterize the nature of this feedback across brain rhythms and cortical regions. In EEG and fMRI experiments, we experimentally recreated the spatially distributed nature of visual inputs by presenting natural videos at different visual field locations. Critically, we manipulated the spatiotemporal congruency of the videos, so that they did or did not demand integration into a coherent percept. Decoding stimulus information from frequency-specific EEG patterns revealed a shift from representations in feedforward-related gamma activity for spatiotemporally inconsistent videos to representations in feedback-related alpha activity for spatiotemporally consistent videos. Our fMRI data suggest high-level scene-selective areas as the putative source of this feedback. Combining the EEG data with spatially resolved fMRI recordings, we demonstrate that alpha-frequency feedback is directly associated with representations in early visual cortex. Together this demonstrates how the human brain orchestrates coherent visual experience across space: it uses feedback to integrate information from high-level to early visual cortex through a dedicated rhythmic code in the alpha frequency range."
-        },
-        "filled": true,
-        "author_pub_id": "XZtcvyEAAAAJ:kzcrU_BdoSEC",
-        "num_citations": 0,
-        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.02.10.527986.abstract",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:fb5VqTo388UJ:scholar.google.com/",
         "cites_per_year": {}
     },
     {

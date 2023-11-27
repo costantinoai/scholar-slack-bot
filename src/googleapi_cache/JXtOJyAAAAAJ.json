@@ -3,6 +3,24 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "The development of orthography and phonology coupling in the ventral occipito-temporal cortex and its relation to reading.",
+            "pub_year": 2023,
+            "citation": "Journal of Experimental Psychology: General, 2023",
+            "author": "Agnieszka M D\u0119bska and Jin Wang and Gabriela K Dzi\u0119giel-Fivet and Katarzyna M Chyl and Marta P W\u00f3jcik and Katarzyna M Jednor\u00f3g and James R Booth",
+            "journal": "Journal of Experimental Psychology: General",
+            "publisher": "American Psychological Association",
+            "abstract": "The left ventral occipito-temporal (lvOT) cortex is considered to house the brain\u2019s representation of orthography (ie, the spelling patterns of words). Because letter-sound coupling is crucial in reading, we investigated the engagement of the lvOT cortex in processing phonology (ie, the sound patterns of words) as a function of reading acquisition. We tested 47 Polish children both at the beginning of formal literacy instruction and 2 years later. During functional magnetic resonance imaging, children performed auditory phonological tasks from small to large grain size levels (ie, single phoneme, rhyme). We showed that orthographically relevant lvOT areas activated during small-grain size phonological tasks were skill-dependent, perhaps due to the relatively transparent mappings between orthography and phonology in Polish. We also studied activation pattern similarity between processing visual and auditory word \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:yqoGN6RLRZoC",
+        "num_citations": 0,
+        "pub_url": "https://psycnet.apa.org/record/2024-22294-001",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Early reading skills and the ventral occipito-temporal cortex organization",
             "pub_year": 2023,
             "citation": "Cortex 160, 134-151, 2023",

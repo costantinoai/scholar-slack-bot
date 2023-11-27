@@ -32,9 +32,9 @@
         "bib": {
             "title": "The representation of occluded image regions in area V1 of monkeys and humans",
             "pub_year": 2023,
-            "citation": "Current Biology 33 (18), 3865-3871. e3, 2023",
+            "citation": "Current biology 33 (18), 3865-3871. e3, 2023",
             "author": "Paolo Papale and Feng Wang and A Tyler Morgan and Xing Chen and Amparo Gilhuis and Lucy S Petro and Lars Muckli and Pieter R Roelfsema and Matthew W Self",
-            "journal": "Current Biology",
+            "journal": "Current biology",
             "volume": "33",
             "number": "18",
             "pages": "3865-3871. e3",
@@ -61,7 +61,7 @@
         "filled": true,
         "author_pub_id": "2VgRQOEAAAAJ:lmc2jWPfTJgC",
         "num_citations": 0,
-        "pub_url": "https://psyarxiv.com/sutrc/",
+        "pub_url": "https://osf.io/preprints/psyarxiv/sutrc/",
         "cites_per_year": {}
     },
     {

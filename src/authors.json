@@ -100,10 +100,6 @@
         "id": "-c9whrAAAAAJ"
     },
     {
-        "name": "Seyed-Mahdi Khaligh_razavi",
-        "id": "3HbeiywAAAAJ"
-    },
-    {
         "name": "Marcel van Gerven",
         "id": "sX0ZypwAAAAJ"
     },
@@ -176,10 +172,6 @@
         "id": "TJEUdh4AAAAJ"
     },
     {
-        "name": "Grace Lindsay",
-        "id": "4kETHY4AAAAJ"
-    },
-    {
         "name": "Marius Peelen",
         "id": "Cg9yFBQAAAAJ"
     },
@@ -228,10 +220,6 @@
 		"id": "bLz-hogAAAAJ"
 	},
 	{
-		"name": "Marcin Szwed",
-		"id": "Nds56VgAAAAJ"
-	},
-	{
 		"name": "Simon Fischer-Baum",
 		"id": "RzVG0dkAAAAJ"
 	},
@@ -244,15 +232,19 @@
 		"id": "07tNFdgAAAAJ"
 	},      
 	{
-		"name": "Haemy Lee Masson",
-		"id": "U4i0WGsAAAAJ"
-	}, 
-	{
 		"name": "Ronak Kosti",
 		"id": "FS0s6WYAAAAJ"
 	},
 	{
 		"name": "Rebecca Saxe",
 		"id": "Tv-zquoAAAAJ"
-	}      
+	},
+	{
+        "name": "Seyed-Mahdi Khaligh_razavi",
+        "id": "3HbeiywAAAAJ"
+    },
+    {
+		"name": "Marcin Szwed",
+		"id": "Nds56VgAAAAJ"
+	} 
 ]

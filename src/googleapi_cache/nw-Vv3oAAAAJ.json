@@ -3,6 +3,54 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Multidimensional neural representations of social features during movie viewing",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Haemy Lee Masson and Lucy Chang and Leyla Isik",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The social world is dynamic and contextually embedded. Yet, most studies utilize simple stimuli that do not capture the complexity of everyday social episodes. To address this, we implemented a movie viewing paradigm and investigated how the everyday social episodes are processed in the brain. Participants watched one of two movies during an MRI scan. Neural patterns from brain regions involved in social perception, mentalization, action observation, and sensory processing were extracted. Representational similarity analysis results revealed that several labeled social features (including social interaction, mentalization, the actions of others, characters talking about themselves, talking about others, and talking about objects) were represented in superior temporal gyrus (STG) and middle temporal gyrus (MTG). The mentalization feature was also represented throughout the theory of mind network, and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:M05iB0D1s5AC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.11.22.568258",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Relational visual representations underlie human social interaction recognition",
+            "pub_year": 2023,
+            "citation": "Nature Communications 14 (1), 7317, 2023",
+            "author": "Manasi Malik and Leyla Isik",
+            "journal": "Nature Communications",
+            "volume": "14",
+            "number": "1",
+            "pages": "7317",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Humans effortlessly recognize social interactions from visual input. Attempts to model this ability have typically relied on generative inverse planning models, which make predictions by inverting a generative model of agents\u2019 interactions based on their inferred goals, suggesting humans use a similar process of mental inference to recognize interactions. However, growing behavioral and neuroscience evidence suggests that recognizing social interactions is a visual process, separate from complex mental state inference. Yet despite their success in other domains, visual neural network models have been unable to reproduce human-like interaction recognition. We hypothesize that humans rely on relational visual information in particular, and develop a relational, graph neural network model, SocialGNN. Unlike prior models, SocialGNN accurately predicts human interaction judgments across both animated and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:ldfaerwXgEUC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=8229960487833301031,13231645132255288957,14061505396373524982",
+        "cites_id": [
+            "8229960487833301031",
+            "13231645132255288957",
+            "14061505396373524982"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41467-023-43156-8",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:fV4aviQ_oLcJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Disentangled deep generative models reveal coding principles of the human face processing network",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023.02. 15.528489, 2023",
@@ -50,6 +98,25 @@
         "cites_per_year": {
             "2023": 1
         }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Rapid processing of observed touch through social perceptual brain regions: an EEG-fMRI fusion study",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience, 2023",
+            "author": "Haemy Lee Masson and Leyla Isik",
+            "journal": "Journal of Neuroscience",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Seeing social touch triggers a strong social-affective response that involves multiple brain networks, including visual, social perceptual, and somatosensory systems. Previous studies have identified the specific functional role of each system, but little is known about the speed and directionality of the information flow. Is this information extracted via the social perceptual system or from simulation from somatosensory cortex? To address this, we examined the spatiotemporal neural processing of observed touch. Twenty-one human participants (7 males) watched 500 ms video clips showing social and non-social touch during EEG recording. Visual and social-affective features were rapidly extracted in the brain, beginning at 90 and 150 ms after video onset, respectively. Combining the EEG data with fMRI data from our prior study with the same stimuli reveals that neural information first arises in early visual cortex (EVC \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:GnPB-g6toBAC",
+        "num_citations": 0,
+        "pub_url": "https://www.jneurosci.org/content/early/2023/10/13/JNEUROSCI.0995-23.2023.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BEMs7WNFzAwJ:scholar.google.com/",
+        "cites_per_year": {}
     },
     {
         "container_type": "Publication",
@@ -172,26 +239,6 @@
         "num_citations": 0,
         "pub_url": "https://www.nature.com/articles/s41598-023-32192-5",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ZiMKje3GGn8J:scholar.google.com/",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Rapid processing of observed touch through social perceptual brain regions: an EEG-fMRI fusion study",
-            "pub_year": 2023,
-            "citation": "bioRxiv, 2023.05. 11.540376, 2023",
-            "author": "Haemy Lee Masson and Leyla Isik",
-            "journal": "bioRxiv",
-            "pages": "2023.05. 11.540376",
-            "publisher": "Cold Spring Harbor Laboratory",
-            "abstract": "Seeing social touch triggers a strong social-affective response that involves multiple brain networks, including visual, social perceptual, and somatosensory systems. Previous studies have identified the specific functional role of each system, but little is known about the speed and directionality of the information flow. Is this information extracted via the social perceptual system or from simulation from somatosensory cortex? To address this, we examined the spatiotemporal neural processing of observed touch. Twenty participants watched 500 ms video clips showing social and non-social touch during EEG recording. Visual and social-affective features were rapidly extracted in the brain, beginning at 90 and 150 ms after video onset, respectively. Combining the EEG data with fMRI data from our prior study with the same stimuli reveals that neural information first arises in early visual cortex (EVC), then in the temporoparietal junction and posterior superior temporal sulcus (TPJ/pSTS), and finally in the somatosensory cortex. EVC and TPJ/pSTS uniquely explain EEG neural patterns, while somatosensory cortex does not contribute to EEG patterns alone, suggesting that social-affective information may flow from TPJ/pSTS to somatosensory cortex. Together, these findings show that social touch is processed quickly, within the timeframe of feedforward visual processes, and that the social-affective meaning of touch is first extracted by a social perceptual pathway. Such rapid processing of social touch may be vital to its effective use during social interaction."
-        },
-        "filled": true,
-        "author_pub_id": "nw-Vv3oAAAAJ:GnPB-g6toBAC",
-        "num_citations": 0,
-        "pub_url": "https://europepmc.org/article/ppr/ppr659726",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BEMs7WNFzAwJ:scholar.google.com/",
         "cites_per_year": {}
     }
 ]

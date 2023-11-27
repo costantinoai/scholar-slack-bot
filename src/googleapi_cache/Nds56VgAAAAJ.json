@@ -31,28 +31,21 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "The perception of affective and discriminative touch in blind individuals",
+            "title": "Family functioning and executive functions among ADHD children",
             "pub_year": 2023,
-            "citation": "Behavioural Brain Research 444, 114361, 2023",
-            "author": "Dominika Radziun and Laura Crucianelli and Maksymilian Korczyk and Marcin Szwed and H Henrik Ehrsson",
-            "journal": "Behavioural Brain Research",
-            "volume": "444",
-            "pages": "114361",
-            "publisher": "Elsevier",
-            "abstract": "Enhanced tactile acuity in blindness is among the most widely reported results of neuroplasticity following prolonged visual deprivation. However, tactile submodalities other than discriminative touch are profoundly understudied in blind individuals. Here, we examined the influence of blindness on two tactile submodalities, affective and discriminative touch, the former being vital for social functioning and emotional processing. We tested 36 blind individuals and 36 age- and sex-matched sighted volunteers. In Experiment 1, we measured the perception of affective tactile signals by asking participants to rate the pleasantness of touch delivered on the palm (nonhairy skin, sparsely innervated with C tactile [CT] fibers) or the forearm (hairy skin, densely innervated with CT fibers) in a CT-optimal versus a CT-nonoptimal manner using a paradigm grounded in studies on tactile sensory neurophysiology. In Experiment 2 \u2026"
+            "citation": "European Psychiatry 66 (S1), S278-S278, 2023",
+            "author": "Wiktoria Walenista and Bernadetta Izydorczyk and Katarzyna Sitnik-Warchulska and Iana Markevych and Clemens Baumbach and Yarema Mysak and Marcin Szwed and Ma\u0142gorzata Lipowska",
+            "journal": "European Psychiatry",
+            "volume": "66",
+            "number": "S1",
+            "pages": "S278-S278",
+            "abstract": "IntroductionADHD is one of the most frequently diagnosed neurodevelopmental disorders and affects the daily functioning of families raising children with this condition. Among the symptoms typical for ADHD, low effectiveness of executive functions can determine the quality of family life.ObjectivesThis study aimed to specify whether family communication and satisfaction as reported by a parent are predictors of a child\u2019s executive functioning quality and whether ADHD severity lies on the pathway between the two. Moreover, the child\u2019s sex effect was checked.MethodsThe study included 200 Polish participants (nGirls = 56) from the NeuroSmog project aged 10-13 diagnosed with ADHD according to the ICD-11. Stanford-Binet 5 Intelligence Scale, PU1 Cognitive Diagnosis Battery, Conners 3 ADHD Diagnosis Questionnaire, and the FACES IV Questionnaire were used to derive needed information. Structural \u2026"
         },
         "filled": true,
-        "author_pub_id": "Nds56VgAAAAJ:JV2RwH3_ST0C",
-        "num_citations": 4,
-        "citedby_url": "/scholar?hl=en&cites=15262297592637258326",
-        "cites_id": [
-            "15262297592637258326"
-        ],
-        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0166432823000797",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VnpxIcySztMJ:scholar.google.com/",
-        "cites_per_year": {
-            "2023": 4
-        }
+        "author_pub_id": "Nds56VgAAAAJ:M05iB0D1s5AC",
+        "num_citations": 0,
+        "pub_url": "https://www.cambridge.org/core/journals/european-psychiatry/article/family-functioning-and-executive-functions-among-adhd-children/F725764D33A07A90016F02FD4C74360C",
+        "cites_per_year": {}
     },
     {
         "container_type": "Publication",
@@ -86,6 +79,52 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Domain-general and language-specific contributions to speech production in a second language: an fMRI study using functional localizers",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.07. 02.547419, 2023",
+            "author": "Agata Wolna and Jakub Szewczyk and Michele Diaz and Aleksandra Domagalik and Marcin Szwed and Zofia Wodniecka",
+            "journal": "bioRxiv",
+            "pages": "2023.07. 02.547419",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "For bilinguals, speaking in a second language (L2) compared to the native language (L1) is usually more difficult. In this study we asked whether the difficulty in L2 production reflects increased demands imposed on domain-general or core language mechanisms. We compared the brain response to speech production in L1 and L2 within two functionally-defined networks in the brain: the Multiple Demand (MD) network and the language network. We found that speech production in L2 was linked to a widespread increase of brain activity in the domain-general MD network. The language network did not show a similarly robust differences in processing speech in the two languages, however, we found increased response to L2 production in the language-specific portion of the left inferior frontal gyrus (IFG). To further explore our results, we have looked at domain-general and language-specific response within the brain structures postulated to form a Bilingual Language Control (BLC) network. Within this network, we found a robust increase in response to L2 in the domain-general, but also in some language-specific voxels including in the left IFG. Our findings show that L2 production strongly engages domain-general mechanisms, but only affects language sensitive portions of the left IFG. These results put constraints on the current model of bilingual language control by precisely disentangling the domain-general and language-specific contributions to the difficulty in speech production in L2."
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:HoB7MX3m0LUC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.07.02.547419.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The perception of affective and discriminative touch in blind individuals",
+            "pub_year": 2023,
+            "citation": "Behavioural Brain Research 444, 114361, 2023",
+            "author": "Dominika Radziun and Laura Crucianelli and Maksymilian Korczyk and Marcin Szwed and H Henrik Ehrsson",
+            "journal": "Behavioural Brain Research",
+            "volume": "444",
+            "pages": "114361",
+            "publisher": "Elsevier",
+            "abstract": "Enhanced tactile acuity in blindness is among the most widely reported results of neuroplasticity following prolonged visual deprivation. However, tactile submodalities other than discriminative touch are profoundly understudied in blind individuals. Here, we examined the influence of blindness on two tactile submodalities, affective and discriminative touch, the former being vital for social functioning and emotional processing. We tested 36 blind individuals and 36 age- and sex-matched sighted volunteers. In Experiment 1, we measured the perception of affective tactile signals by asking participants to rate the pleasantness of touch delivered on the palm (nonhairy skin, sparsely innervated with C tactile [CT] fibers) or the forearm (hairy skin, densely innervated with CT fibers) in a CT-optimal versus a CT-nonoptimal manner using a paradigm grounded in studies on tactile sensory neurophysiology. In Experiment 2 \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:JV2RwH3_ST0C",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=15262297592637258326",
+        "cites_id": [
+            "15262297592637258326"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0166432823000797",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VnpxIcySztMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Heartbeat counting accuracy is enhanced in blind individuals.",
             "pub_year": 2023,
             "citation": "Journal of Experimental Psychology: General, 2023",
@@ -96,7 +135,7 @@
         },
         "filled": true,
         "author_pub_id": "Nds56VgAAAAJ:vV6vV6tmYwMC",
-        "num_citations": 1,
+        "num_citations": 2,
         "citedby_url": "/scholar?hl=en&cites=11251220976886919698",
         "cites_id": [
             "11251220976886919698"
@@ -104,6 +143,34 @@
         "pub_url": "https://psycnet.apa.org/record/2023-53761-001",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ErLE8N1dJJwJ:scholar.google.com/",
         "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Association of residential and school green-and bluespace with academic performance in 10-13-year-old Polish schoolchildren with and without attention deficit hyperactivity disorder",
+            "pub_year": 2023,
+            "citation": "Science of The Total Environment 859, 160123, 2023",
+            "author": "Nitika Singh and Clemens Baumbach and Dorota Buczy\u0142owska and Jakub Bratkowski and Yarema Mysak and Maja Wierzba-\u0141ukaszyk and Katarzyna Sitnik-Warchulska and Krzysztof Skotak and Ma\u0142gorzata Lipowska and Bernadetta Izydorczyk and Marcin Szwed and Iana Markevych",
+            "journal": "Science of The Total Environment",
+            "volume": "859",
+            "pages": "160123",
+            "publisher": "Elsevier",
+            "abstract": "Several studies, mostly based on the USA data, have reported that school greenspace was associated with better academic performance. However, nearly all of them were conducted on aggregated data. We are among the first individual data-based studies worldwide to examine whether exposure to school and residential green- and bluespace can boost academic performance.NeuroSmog is an ongoing case-control study investigating the impact of air pollution on brain development in children with and without attention deficit hyperactivity disorder (ADHD). 658 children aged 10 to 13 years from 18 large and small towns in southern Poland constituted the analytical sample. Information about latest end-of-year school grades in Polish and maths was collected by the parent report while perceived academic performance in these subjects was collected by the Youth Self-Report. Tree, grass, and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:NMxIlDl6LWMC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=8797492699601888581",
+        "cites_id": [
+            "8797492699601888581"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0048969722072230",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ReXcyf_4FnoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
             "2023": 1
         }
     },
@@ -239,6 +306,23 @@
         "author_pub_id": "Nds56VgAAAAJ:M05iB0D1s5AC",
         "num_citations": 0,
         "pub_url": "https://www.cambridge.org/core/journals/european-psychiatry/article/family-functioning-and-executive-functions-among-adhd-children/F725764D33A07A90016F02FD4C74360C",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Broca is alive and well: An articulation-selective area in the left inferior frontal gyrus, distinct from nearby language and Multiple Demand areas",
+            "pub_year": 2023,
+            "citation": "the 15th Annual Meeting of the Society for the Neurobiology of Language (SNL \u2026, 2023",
+            "author": "Agata Wolna and Jakub Szewczyk and Michele Diaz and Aleksandra Domagalik and Marcin Szwed and Zofia Wodniecka and Evelina Fedorenko",
+            "conference": "the 15th Annual Meeting of the Society for the Neurobiology of Language (SNL 2023)",
+            "abstract": "Broca is alive and well: An articulation-selective area in the left inferior frontal gyrus, distinct \nfrom nearby language and Multiple Demand areas :: MPG.PuRe English Help Privacy \nPolicy Disclaimer Include files Advanced SearchBrowse START BASKET (0)Tools Item \nITEM ACTIONSEXPORT Add to Basket Local TagsRelease HistoryDetailsSummary \nReleased Poster Broca is alive and well: An articulation-selective area in the left inferior \nfrontal gyrus, distinct from nearby language and Multiple Demand areas MPS-Authors /persons/resource/persons272348 \nSzewczyk, Jakub Neurobiology of Language Department, MPI for Psycholinguistics, Max \nPlanck Society; External Resource No external resources are shared Fulltext (restricted \naccess) There are currently no full texts shared for your IP range. Fulltext (public) There are \nno public fulltexts stored in PuRe Supplementary Material (public) There is no public \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:pqnbT2bcN3wC",
+        "num_citations": 0,
+        "pub_url": "https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_3548236",
         "cites_per_year": {}
     },
     {

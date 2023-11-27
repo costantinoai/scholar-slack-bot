@@ -16,7 +16,7 @@
         },
         "filled": true,
         "author_pub_id": "W4JVsUoAAAAJ:mVmsd5A6BfQC",
-        "num_citations": 2,
+        "num_citations": 3,
         "citedby_url": "/scholar?hl=en&cites=9668699628680752466",
         "cites_id": [
             "9668699628680752466"
@@ -24,8 +24,52 @@
         "pub_url": "https://www.science.org/doi/abs/10.1126/sciadv.adf6140",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Uq131xUfLoYJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 2
+            "2023": 3
         }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Ultra-high field fMRI of visual mental imagery in typical imagers and aphantasic individuals",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.06. 14.544909, 2023",
+            "author": "Jianghao Liu and Minye Zhan and Dounia Hajhajate and Alfredo Spagna and Stanislas Dehaene and Laurent Cohen and Paolo Bartolomeo",
+            "journal": "bioRxiv",
+            "pages": "2023.06. 14.544909",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "We used ultra-high field 7T fMRI to establish the neural circuits involved in visual mental imagery and perception, and to elucidate the neural mechanisms associated with imagery absence in congenital aphantasia. Ten typical imagers and 10 aphantasic individuals performed imagery and perceptual tasks in five domains: object shape, object color, written words, faces, and spatial relationships. In typical imagers, imagery tasks activated left-hemisphere fronto-parietal areas, a domain-general area in the left fusiform gyrus (the Fusiform Imagery Node), together with the relevant domain-preferring areas in the ventral temporal cortex. In aphantasic individuals, imagery activated similar areas, but the Fusiform Imagery Node was functionally disconnected from fronto-parietal areas. Our results unveil the domain-general and domain-specific circuits of visual mental imagery, their functional disorganization in aphantasia, and support the general hypothesis that subjective visual experience - whether perceived or imagined - depends on the integrated activity of high-level visual cortex and fronto-parietal networks."
+        },
+        "filled": true,
+        "author_pub_id": "W4JVsUoAAAAJ:dhFuZR0502QC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=14634902991472349829",
+        "cites_id": [
+            "14634902991472349829"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.14.544909.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:hdICUbueGcsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Early visual experience refines the retinotopic organization within and across visual cortical regions",
+            "pub_year": 2023,
+            "citation": "Current Biology, 2023",
+            "author": "Carolin Heitmann and Minye Zhan and Madita Linke and Cordula H\u00f6lig and Ramesh Kekunnaya and Rick van Hoof and Rainer Goebel and Brigitte R\u00f6der",
+            "journal": "Current Biology",
+            "publisher": "Elsevier",
+            "abstract": "Early visual areas are retinotopically organized in human and non-human primates. Population receptive field (pRF) size increases with eccentricity and from lower- to higher-level visual areas. Furthermore, the cortical magnification factor (CMF), a measure of how much cortical space is devoted to each degree of visual angle, is typically larger for foveal as opposed to peripheral regions of the visual field. Whether this fine-scale organization within and across visual areas depends on early visual experience has yet been unknown. Here, we employed 7T functional magnetic resonance imaging pRF mapping to assess the retinotopic organization of early visual regions (i.e., V1, V2, and V3) in eight sight recovery individuals with a history of congenital blindness until a maximum of 4 years of age. Compared with sighted controls, foveal pRF sizes in these individuals were larger, and pRF sizes did not show the typical \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "W4JVsUoAAAAJ:IWHjjKOFINEC",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/current-biology/pdfExtended/S0960-9822(23)01366-0",
+        "cites_per_year": {}
     },
     {
         "container_type": "Publication",
@@ -46,26 +90,6 @@
         "author_pub_id": "W4JVsUoAAAAJ:L8Ckcad2t8MC",
         "num_citations": 0,
         "pub_url": "https://www.medecinesciences.org/en/articles/medsci/full_html/2023/07/msc230116/msc230116.html",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Ultra-high field fMRI of visual mental imagery in typical imagers and aphantasic individuals",
-            "pub_year": 2023,
-            "citation": "bioRxiv, 2023.06. 14.544909, 2023",
-            "author": "Jianghao Liu and Minye Zhan and Dounia Hajhajate and Alfredo Spagna and Stanislas Dehaene and Laurent Cohen and Paolo Bartolomeo",
-            "journal": "bioRxiv",
-            "pages": "2023.06. 14.544909",
-            "publisher": "Cold Spring Harbor Laboratory",
-            "abstract": "We used ultra-high field 7T fMRI to establish the neural circuits involved in visual mental imagery and perception, and to elucidate the neural mechanisms associated with imagery absence in congenital aphantasia. Ten typical imagers and 10 aphantasic individuals performed imagery and perceptual tasks in five domains: object shape, object color, written words, faces, and spatial relationships. In typical imagers, imagery tasks activated left-hemisphere fronto-parietal areas, a domain-general area in the left fusiform gyrus (the Fusiform Imagery Node), together with the relevant domain-preferring areas in the ventral temporal cortex. In aphantasic individuals, imagery activated similar areas, but the Fusiform Imagery Node was functionally disconnected from fronto-parietal areas. Our results unveil the domain-general and domain-specific circuits of visual mental imagery, their functional disorganization in aphantasia, and support the general hypothesis that subjective visual experience - whether perceived or imagined - depends on the integrated activity of high-level visual cortex and fronto-parietal networks."
-        },
-        "filled": true,
-        "author_pub_id": "W4JVsUoAAAAJ:dhFuZR0502QC",
-        "num_citations": 0,
-        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.14.544909.abstract",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:hdICUbueGcsJ:scholar.google.com/",
         "cites_per_year": {}
     },
     {

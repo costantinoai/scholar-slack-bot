@@ -3,6 +3,44 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Bodies in motion: Unraveling the distinct roles of motion and shape in dynamic body responses in the temporal cortex",
+            "pub_year": 2023,
+            "citation": "Cell Reports 42 (12), 2023",
+            "author": "Rajani Raman and Anna Bogn\u00e1r and Ghazaleh Ghamkhari Nejad and Nick Taubert and Martin Giese and Rufin Vogels",
+            "journal": "Cell Reports",
+            "volume": "42",
+            "number": "12",
+            "publisher": "Elsevier",
+            "abstract": "The temporal cortex represents social stimuli, including bodies. We examine and compare the contributions of dynamic and static features to the single-unit responses to moving monkey bodies in and between a patch in the anterior dorsal bank of the superior temporal sulcus (dorsal patch [DP]) and patches in the anterior inferotemporal cortex (ventral patch [VP]), using fMRI guidance in macaques. The response to dynamics varies within both regions, being higher in DP. The dynamic body selectivity of VP neurons correlates with static features derived from convolutional neural networks and motion. DP neurons' dynamic body selectivity is not predicted by static features but is dominated by motion. Whereas these data support the dominance of motion in the newly proposed \"dynamic social perception\" stream, they challenge the traditional view that distinguishes DP and VP processing in terms of motion versus \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:jgBuDB5drN8C",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/cell-reports/pdf/S2211-1247(23)01450-X.pdf",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Theta activity discriminates high-level, species-specific body processes",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Jane Chesley and Lars Riecke and Juanzhi Lu and Rufin Vogels and Beatrice de Gelder",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Among social stimuli that trigger rapid reactions, body images occupy a prominent place. Given that bodies carry information about other agents9 intentions, actions and emotional expressions, a foundational question concerns the neural basis of body processing. Previous fMRI studies have investigated this but were not yet able to clarify the time course and its functional significance. The present EEG study investigated the role of slow oscillatory cortical activity in body processing and species-specificity. Human participants viewed naturalistic images of human and monkey bodies, faces, and objects, along with mosaic-scrambled versions to control for low-level visual features. Analysis of event-related theta power (4 - 7 Hz) combined with data-driven methods revealed a strong, body-evoked neural response that is specific to human bodies and likely originates from a widespread cortical region during a time \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:ubry08Y2EpUC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.11.13.566536",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Stimulus expectations do not modulate visual event-related potentials in probabilistic cueing designs",
             "pub_year": 2023,
             "citation": "Neuroimage 280, 120347, 2023",
@@ -15,7 +53,7 @@
         },
         "filled": true,
         "author_pub_id": "fuQ8xgkAAAAJ:LgRImbQfgY4C",
-        "num_citations": 2,
+        "num_citations": 3,
         "citedby_url": "/scholar?hl=en&cites=5765047738741043066",
         "cites_id": [
             "5765047738741043066"
@@ -23,7 +61,7 @@
         "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053811923004986",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ei_UtF-QAVAJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 2
+            "2023": 3
         }
     },
     {
@@ -43,7 +81,7 @@
         },
         "filled": true,
         "author_pub_id": "fuQ8xgkAAAAJ:nZcligLrVowC",
-        "num_citations": 2,
+        "num_citations": 3,
         "citedby_url": "/scholar?hl=en&cites=14217881240871746126",
         "cites_id": [
             "14217881240871746126"
@@ -51,7 +89,7 @@
         "pub_url": "https://academic.oup.com/cercor/article-abstract/33/6/3124/6627271",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:TrrZtKgPUMUJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 2
+            "2023": 3
         }
     },
     {
@@ -134,6 +172,43 @@
         "cites_per_year": {
             "2023": 1
         }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Mesoscale columnar-like organization of face and body areas",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Wim Vanduffel and Xiaolian Li and Qi Zhu and Ivo Popivanov and Rufin Vogels",
+            "abstract": "Segregated networks of columnar-like functional units convey highly specific functional signals within and across early visual areas. It is unknown, however, whether higher-order category-selective areas exhibit a similar mesoscale functional organization, nor whether mesoscale functional units are aggregated in functional networks spanning large distances (eg across hemispheres). Using sub-millimeter fMRI and single-cell recordings, we found that neurons with functionally similar tuning properties within face-and body-selective areas are spatially grouped into columnar-like mesoscale functional units, which also show segregated interhemispheric connectivity patterns. Hence, mesoscale functional networks may constitute fundamental architectural features of primate cortex."
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:lgwcVrK6X84C",
+        "num_citations": 0,
+        "pub_url": "https://www.researchsquare.com/article/rs-3388353/latest",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Perceptual Learning: Policy Insights From Basic Research to Real-World Applications",
+            "pub_year": 2023,
+            "citation": "Policy Insights from the Behavioral and Brain Sciences 10 (2), 324-332, 2023",
+            "author": "Aaron R Seitz and Allison Sekuler and Barbara Dosher and Beverly A Wright and Chang-Bing Huang and C Shawn Green and Christopher C Pack and Dov Sagi and Dennis Levi and Duje Tadin and Elizabeth Quinlan and Fang Jiang and Gabriel J Diaz and Geoffrey Ghose and Jozsef Fiser and Karen Banai and Kristina Visscher and Krystel Huxlin and Ladan Shams and Lorella Battelli and Marisa Carrasco and Michael Herzog and Michael Webster and Miguel Eckstein and Nicholas B Turk-Browne and Nitzan Censor and Peter De Weerd and Rufin Vogels and Shaul Hochstein and Takeo Watanabe and Yuka Sasaki and Uri Polat and Zhong-Lin Lu and Zoe Kourtzi",
+            "journal": "Policy Insights from the Behavioral and Brain Sciences",
+            "volume": "10",
+            "number": "2",
+            "pages": "324-332",
+            "publisher": "SAGE Publications",
+            "abstract": "Perceptual learning is the process by which experience alters how incoming sensory information is processed by the brain to give rise to behavior\u2014it is critical for how humans educate children, train experts, treat diseases, and promote health and well-being throughout the lifespan. Knowledge of perceptual learning requires basic and applied research in humans and nonhuman animal models, which informs strategic targets for advancing applications. Commercial products to induce perceptual learning are proliferating rapidly with limited regulation (e.g., for rehabilitation), while at the same time basic science is increasingly restricted by changing regulations (such as new granting-agency definitions of clinical trials). Realizing the full potential of perceptual learning requires balancing basic and translational science to advance new knowledge, while serving and protecting consumers. Reforms can promote open \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:1lhNe0rCu4AC",
+        "num_citations": 0,
+        "pub_url": "https://journals.sagepub.com/doi/abs/10.1177/23727322231195268",
+        "cites_per_year": {}
     },
     {
         "container_type": "Publication",

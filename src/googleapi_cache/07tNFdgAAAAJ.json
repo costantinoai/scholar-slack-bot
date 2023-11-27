@@ -15,7 +15,7 @@
         },
         "filled": true,
         "author_pub_id": "07tNFdgAAAAJ:Tfl4UtY-dJUC",
-        "num_citations": 3,
+        "num_citations": 4,
         "citedby_url": "/scholar?hl=en&cites=7195350307727156914",
         "cites_id": [
             "7195350307727156914"
@@ -39,7 +39,7 @@
         },
         "filled": true,
         "author_pub_id": "07tNFdgAAAAJ:17ZO-CJnx_8C",
-        "num_citations": 2,
+        "num_citations": 3,
         "citedby_url": "/scholar?hl=en&cites=680015172987332971",
         "cites_id": [
             "680015172987332971"
@@ -47,7 +47,7 @@
         "pub_url": "https://www.cell.com/neuron/pdf/S0896-6273(23)00218-0.pdf",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:aynJazLmbwkJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 2
+            "2023": 3
         }
     },
     {

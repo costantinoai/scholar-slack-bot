@@ -3,6 +3,41 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Neuroplastic changes in functional wiring in sensory cortices of the congenitally deaf: A network analysis",
+            "pub_year": 2023,
+            "citation": "Human Brain Mapping, 2023",
+            "author": "Michaela Ruttorf and Zohar Tal and L\u00e9nia Amaral and Fang Fang and Yanchao Bi and Jorge Almeida",
+            "journal": "Human Brain Mapping",
+            "publisher": "John Wiley & Sons, Inc.",
+            "abstract": "Congenital sensory deprivation induces significant changes in the structural and functional organisation of the brain. These are well\u2010characterised by cross\u2010modal plasticity, in which deprived cortical areas are recruited to process information from non\u2010affected sensory modalities, as well as by other neuroplastic alterations within regions dedicated to the remaining senses. Here, we analysed visual and auditory networks of congenitally deaf and hearing individuals during different visual tasks to assess changes in network community structure and connectivity patterns due to congenital deafness. In the hearing group, the nodes are clearly divided into three communities (visual, auditory and subcortical), whereas in the deaf group a fourth community consisting mainly of bilateral superior temporal sulcus and temporo\u2010insular regions is present. Perhaps more importantly, the right lateral geniculate body, as well as \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:URolC5Kub84C",
+        "num_citations": 0,
+        "pub_url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/hbm.26530",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neuroplastic changes in functional wiring in sensory cortices of the congenitally deaf: A network analysis.",
+            "pub_year": 2023,
+            "citation": "Human Brain Mapping, 2023",
+            "author": "Michaela Ruttorf and Zohar Tal and L\u00e9nia Amaral and Fang Fang and Yanchao Bi and Jorge Almeida",
+            "journal": "Human Brain Mapping",
+            "abstract": "Congenital sensory deprivation induces significant changes in the structural and functional organisation of the brain. These are well-characterised by cross-modal plasticity, in which deprived cortical areas are recruited to process information from non-affected sensory modalities, as well as by other neuroplastic alterations within regions dedicated to the remaining senses. Here, we analysed visual and auditory networks of congenitally deaf and hearing individuals during different visual tasks to assess changes in network community structure and connectivity patterns due to congenital deafness. In the hearing group, the nodes are clearly divided into three communities (visual, auditory and subcortical), whereas in the deaf group a fourth community consisting mainly of bilateral superior temporal sulcus and temporo-insular regions is present. Perhaps more importantly, the right lateral geniculate body, as well as bilateral thalamus and pulvinar joined the auditory community of the deaf. Moreover, there is stronger connectivity between bilateral thalamic and pulvinar and auditory areas in the deaf group, when compared to the hearing group. No differences were found in the number of connections of these nodes to visual areas. Our findings reveal substantial neuroplastic changes occurring within the auditory and visual networks caused by deafness, emphasising the dynamic nature of the sensory systems in response to congenital deafness. Specifically, these results indicate that in the deaf but not the hearing group, subcortical thalamic nuclei are highly connected to auditory areas during processing of visual information, suggesting that these relay \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:URolC5Kub84C",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/med/37956260",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Different computational relations in language are captured by distinct brain systems",
             "pub_year": 2023,
             "citation": "Cerebral Cortex 33 (4), 997-1013, 2023",
@@ -16,7 +51,7 @@
         },
         "filled": true,
         "author_pub_id": "bLz-hogAAAAJ:Fu2w8maKXqMC",
-        "num_citations": 7,
+        "num_citations": 8,
         "citedby_url": "/scholar?hl=en&cites=17774770436935113454",
         "cites_id": [
             "17774770436935113454"
@@ -24,6 +59,7 @@
         "pub_url": "https://academic.oup.com/cercor/article-abstract/33/4/997/6553592",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:7tqhoYmrrPYJ:scholar.google.com/",
         "cites_per_year": {
+            "2022": 1,
             "2023": 7
         }
     },

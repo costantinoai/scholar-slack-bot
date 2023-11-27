@@ -3,6 +3,23 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Learning Human Action Recognition Representations Without Real Humans",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2311.06231, 2023",
+            "author": "Howard Zhong and Samarth Mishra and Donghyun Kim and SouYoung Jin and Rameswar Panda and Hilde Kuehne and Leonid Karlinsky and Venkatesh Saligrama and Aude Oliva and Rogerio Feris",
+            "journal": "arXiv preprint arXiv:2311.06231",
+            "abstract": "Pre-training on massive video datasets has become essential to achieve high action recognition performance on smaller downstream datasets. However, most large-scale video datasets contain images of people and hence are accompanied with issues related to privacy, ethics, and data protection, often preventing them from being publicly shared for reproducible research. Existing work has attempted to alleviate these problems by blurring faces, downsampling videos, or training on synthetic data. On the other hand, analysis on the transferability of privacy-preserving pre-trained models to downstream tasks has been limited. In this work, we study this problem by first asking the question: can we pre-train models for human action recognition with data that does not include real humans? To this end, we present, for the first time, a benchmark that leverages real-world videos with humans removed and synthetic data containing virtual humans to pre-train a model. We then evaluate the transferability of the representation learned on this data to a diverse set of downstream action recognition benchmarks. Furthermore, we propose a novel pre-training strategy, called Privacy-Preserving MAE-Align, to effectively combine synthetic data and human-removed real data. Our approach outperforms previous baselines by up to 5% and closes the performance gap between human and no-human action recognition representations on downstream tasks, for both linear probing and fine-tuning. Our benchmark, code, and models are available at https://github.com/howardzh01/PPMA ."
+        },
+        "filled": true,
+        "author_pub_id": "FNhl50sAAAAJ:Xz60mAmATU4C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2311.06231",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The algonauts project 2023 challenge: How the human brain makes sense of natural scenes",
             "pub_year": 2023,
             "citation": "arXiv preprint arXiv:2301.03198, 2023",
@@ -12,7 +29,7 @@
         },
         "filled": true,
         "author_pub_id": "FNhl50sAAAAJ:dBIO0h50nwkC",
-        "num_citations": 7,
+        "num_citations": 9,
         "citedby_url": "/scholar?hl=en&cites=1174422521076802658",
         "cites_id": [
             "1174422521076802658"
@@ -20,7 +37,7 @@
         "pub_url": "https://arxiv.org/abs/2301.03198",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YmQAgQ9jTBAJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 7
+            "2023": 9
         }
     },
     {
@@ -37,7 +54,7 @@
         },
         "filled": true,
         "author_pub_id": "FNhl50sAAAAJ:HIFyuExEbWQC",
-        "num_citations": 3,
+        "num_citations": 4,
         "citedby_url": "/scholar?hl=en&cites=3904652032954906011",
         "cites_id": [
             "3904652032954906011"
@@ -45,7 +62,7 @@
         "pub_url": "http://openaccess.thecvf.com/content/ICCV2023/html/Cascante-Bonilla_Going_Beyond_Nouns_With_Vision__Language_Models_Using_Synthetic_ICCV_2023_paper.html",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:m7XIE1YcMDYJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 3
+            "2023": 4
         }
     },
     {
@@ -62,7 +79,7 @@
         },
         "filled": true,
         "author_pub_id": "FNhl50sAAAAJ:4vMrXwiscB8C",
-        "num_citations": 1,
+        "num_citations": 2,
         "citedby_url": "/scholar?hl=en&cites=6865103784530314443",
         "cites_id": [
             "6865103784530314443"
@@ -70,8 +87,25 @@
         "pub_url": "http://openaccess.thecvf.com/content/CVPR2023/html/Fosco_Leveraging_Temporal_Context_in_Low_Representational_Power_Regimes_CVPR_2023_paper.html",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:y4Qe54S_RV8J:scholar.google.com/",
         "cites_per_year": {
-            "2023": 1
+            "2023": 2
         }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "LangNav: Language as a Perceptual Representation for Navigation",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2310.07889, 2023",
+            "author": "Bowen Pan and Rameswar Panda and SouYoung Jin and Rogerio Feris and Aude Oliva and Phillip Isola and Yoon Kim",
+            "journal": "arXiv preprint arXiv:2310.07889",
+            "abstract": "We explore the use of language as a perceptual representation for vision-and-language navigation. Our approach uses off-the-shelf vision systems (for image captioning and object detection) to convert an agent's egocentric panoramic view at each time step into natural language descriptions. We then finetune a pretrained language model to select an action, based on the current view and the trajectory history, that would best fulfill the navigation instructions. In contrast to the standard setup which adapts a pretrained language model to work directly with continuous visual features from pretrained vision models, our approach instead uses (discrete) language as the perceptual representation. We explore two use cases of our language-based navigation (LangNav) approach on the R2R vision-and-language navigation benchmark: generating synthetic trajectories from a prompted large language model (GPT-4) with which to finetune a smaller language model; and sim-to-real transfer where we transfer a policy learned on a simulated environment (ALFRED) to a real-world environment (R2R). Our approach is found to improve upon strong baselines that rely on visual features in settings where only a few gold trajectories (10-100) are available, demonstrating the potential of using language as a perceptual representation for navigation tasks."
+        },
+        "filled": true,
+        "author_pub_id": "FNhl50sAAAAJ:qe6vwMD2xtsC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2310.07889",
+        "cites_per_year": {}
     },
     {
         "container_type": "Publication",

@@ -3,21 +3,6 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Seeing and understanding epistemic actions",
-            "pub_year": 2023,
-            "citation": "Proceedings of the National Academy of Sciences, 2023",
-            "author": "Sholei Croom and Hanbei Zhou and Chaz Firestone",
-            "journal": "Proceedings of the National Academy of Sciences"
-        },
-        "filled": true,
-        "author_pub_id": "TJEUdh4AAAAJ:-FonjvnnhkoC",
-        "num_citations": 0,
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
             "title": "Empirical evidence for perspectival similarity",
             "pub_year": 2023,
             "citation": "Psychological Review, 2023",
@@ -27,7 +12,7 @@
         },
         "filled": true,
         "author_pub_id": "TJEUdh4AAAAJ:gsN89kCJA0AC",
-        "num_citations": 7,
+        "num_citations": 8,
         "citedby_url": "/scholar?hl=en&cites=844283432460210274",
         "cites_id": [
             "844283432460210274"
@@ -36,7 +21,7 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YtCJAU9_twsJ:scholar.google.com/",
         "cites_per_year": {
             "2022": 1,
-            "2023": 5
+            "2023": 6
         }
     },
     {
@@ -59,6 +44,30 @@
         ],
         "pub_url": "https://journals.sagepub.com/doi/abs/10.1177/09637214231158345",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:igtKy05ZanIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The perception of silence",
+            "pub_year": 2023,
+            "citation": "Proceedings of the National Academy of Sciences, 2023",
+            "author": "Rui Zhe Goh and Ian Phillips and Chaz Firestone",
+            "journal": "Proceedings of the National Academy of Sciences",
+            "abstract": "Auditory perception is traditionally conceived as the perception of sounds\u2014a friend\u2019s voice, a clap of thunder, a minor chord. However, daily life also seems to present us with experiences characterized by the absence of sound\u2014a moment of silence, a gap between thunderclaps, the hush after a musical performance. In these cases, do we positively hear silence? Or do we just fail to hear, and merely judge or infer that it is silent? This longstanding question remains controversial in both the philosophy and science of perception, with prominent theories holding that sounds are the only objects of auditory experience and thus that our encounter with silence is cognitive, not perceptual. However, this debate has largely remained theoretical, without a key empirical test. Here, we introduce an empirical approach to this theoretical dispute, presenting experimental evidence that silence can be genuinely perceived (not just \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:WZBGuue-350C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=6819661125384027707",
+        "cites_id": [
+            "6819661125384027707"
+        ],
+        "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2301463120",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Oz4OU6lNpF4J:scholar.google.com/",
         "cites_per_year": {
             "2023": 2
         }
@@ -121,30 +130,6 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "The perception of silence",
-            "pub_year": 2023,
-            "citation": "Proceedings of the National Academy of Sciences, 2023",
-            "author": "Rui Zhe Goh and Ian Phillips and Chaz Firestone",
-            "journal": "Proceedings of the National Academy of Sciences",
-            "abstract": "Auditory perception is traditionally conceived as the perception of sounds\u2014a friend\u2019s voice, a clap of thunder, a minor chord. However, daily life also seems to present us with experiences characterized by the absence of sound\u2014a moment of silence, a gap between thunderclaps, the hush after a musical performance. In these cases, do we positively hear silence? Or do we just fail to hear, and merely judge or infer that it is silent? This longstanding question remains controversial in both the philosophy and science of perception, with prominent theories holding that sounds are the only objects of auditory experience and thus that our encounter with silence is cognitive, not perceptual. However, this debate has largely remained theoretical, without a key empirical test. Here, we introduce an empirical approach to this theoretical dispute, presenting experimental evidence that silence can be genuinely perceived (not just \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "TJEUdh4AAAAJ:WZBGuue-350C",
-        "num_citations": 1,
-        "citedby_url": "/scholar?hl=en&cites=6819661125384027707",
-        "cites_id": [
-            "6819661125384027707"
-        ],
-        "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2301463120",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Oz4OU6lNpF4J:scholar.google.com/",
-        "cites_per_year": {
-            "2023": 1
-        }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
             "title": "Cortical response to expectation of tactile stimulation from external anthropomorphic and non-anthropomorphic systems",
             "pub_year": 2023,
             "citation": "2023 11th International IEEE/EMBS Conference on Neural Engineering (NER), 1-4, 2023",
@@ -180,6 +165,21 @@
         "num_citations": 0,
         "pub_url": "https://www.science.org/doi/full/10.1126/science.adg8153",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-MB_RLLypKgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Seeing and understanding epistemic actions",
+            "pub_year": 2023,
+            "citation": "Proceedings of the National Academy of Sciences, 2023",
+            "author": "Sholei Croom and Hanbei Zhou and Chaz Firestone",
+            "journal": "Proceedings of the National Academy of Sciences"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:-FonjvnnhkoC",
+        "num_citations": 0,
         "cites_per_year": {}
     }
 ]

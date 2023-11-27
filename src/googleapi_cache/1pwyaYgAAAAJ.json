@@ -3,6 +3,46 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Generative Multimodal Decoding: Reconstructing Images and Text from Human fMRI",
+            "pub_year": 2023,
+            "citation": "Deep Generative Models for Health Workshop NeurIPS 2023, 2023",
+            "author": "Matteo Ferrante and Tommaso Boccato and Furkan Ozcelik and Rufin VanRullen and Nicola Toschi",
+            "conference": "Deep Generative Models for Health Workshop NeurIPS 2023",
+            "abstract": "The human brain adeptly processes immense visual information using complex neural mechanisms. Recent advances in functional MRI (fMRI) enable decoding this visual information from recorded brain activity patterns. In this work, we present an innovative approach for reconstructing meaningful images and captions directly from fMRI data, with a focus on brain captioning due to its enhanced flexibility over image decoding. We utilize the Natural Scenes fMRI dataset containing brain recordings from subjects viewing images. Our method leverages state-of-the-art image captioning and diffusion models for multimodal decoding. We train regression models between fMRI data and textual/visual features and incorporate depth estimation to guide image reconstruction. Our key innovation is a multimodal framework aligning neural and deep learning representations to generate both semantic captions and photorealistic images from brain activity. We demonstrate quantitative improvements in captioning over prior art and in image spatial relationships through our reconstruction pipeline. In conclusion, this work significantly advances brain decoding capabilities through an integrated vision-language approach. Our flexible decoding platform combining high-level semantic text and low-level visual depth information provides new insights into human visual cognition. The proposed methods could enable future applications in brain-computer interfaces, neuroscience, and AI."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:sJsF-0ZLhtgC",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=XUgIZQvxg4",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Consciousness in artificial intelligence: Insights from the science of consciousness",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2308.08708, 2023",
+            "author": "Patrick Butlin and Robert Long and Eric Elmoznino and Yoshua Bengio and Jonathan Birch and Axel Constant and George Deane and Stephen M Fleming and Chris Frith and Xu Ji and Ryota Kanai and Colin Klein and Grace Lindsay and Matthias Michel and Liad Mudrik and Megan AK Peters and Eric Schwitzgebel and Jonathan Simon and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2308.08708",
+            "abstract": "Whether current or near-term AI systems could be conscious is a topic of scientific interest and increasing public concern. This report argues for, and exemplifies, a rigorous and empirically grounded approach to AI consciousness: assessing existing AI systems in detail, in light of our best-supported neuroscientific theories of consciousness. We survey several prominent scientific theories of consciousness, including recurrent processing theory, global workspace theory, higher-order theories, predictive processing, and attention schema theory. From these theories we derive \"indicator properties\" of consciousness, elucidated in computational terms that allow us to assess AI systems for these properties. We use these indicator properties to assess several recent AI systems, and we discuss how future systems might implement them. Our analysis suggests that no current AI systems are conscious, but also suggests that there are no obvious technical barriers to building AI systems which satisfy these indicators."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:F1b5ZUV5XREC",
+        "num_citations": 13,
+        "citedby_url": "/scholar?hl=en&cites=8239061011717183910",
+        "cites_id": [
+            "8239061011717183910"
+        ],
+        "pub_url": "https://arxiv.org/abs/2308.08708",
+        "cites_per_year": {
+            "2023": 12
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Brain-diffuser: Natural scene reconstruction from fmri signals using generative latent diffusion",
             "pub_year": 2023,
             "citation": "arXiv preprint arXiv:2303.05334, 2023",
@@ -12,7 +52,7 @@
         },
         "filled": true,
         "author_pub_id": "1pwyaYgAAAAJ:5icHVeHT4IsC",
-        "num_citations": 9,
+        "num_citations": 12,
         "citedby_url": "/scholar?hl=en&cites=5828055210287727240",
         "cites_id": [
             "5828055210287727240"
@@ -20,30 +60,7 @@
         "pub_url": "https://arxiv.org/abs/2303.05334",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:iIKQ3FVp4VAJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 9
-        }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Consciousness in artificial intelligence: Insights from the Science of consciousness",
-            "pub_year": 2023,
-            "citation": "arXiv preprint arXiv:2308.08708, 2023",
-            "author": "Patrick Butlin and Robert Long and Eric Elmoznino and Yoshua Bengio and Jonathan Birch and Axel Constant and George Deane and Stephen M Fleming and Chris Frith and Xu Ji and Ryota Kanai and Colin Klein and Grace Lindsay and Matthias Michel and Liad Mudrik and Megan AK Peters and Eric Schwitzgebel and Jonathan Simon and Rufin VanRullen",
-            "journal": "arXiv preprint arXiv:2308.08708",
-            "abstract": "Whether current or near-term AI systems could be conscious is a topic of scientific interest and increasing public concern. This report argues for, and exemplifies, a rigorous and empirically grounded approach to AI consciousness: assessing existing AI systems in detail, in light of our best-supported neuroscientific theories of consciousness. We survey several prominent scientific theories of consciousness, including recurrent processing theory, global workspace theory, higher-order theories, predictive processing, and attention schema theory. From these theories we derive \"indicator properties\" of consciousness, elucidated in computational terms that allow us to assess AI systems for these properties. We use these indicator properties to assess several recent AI systems, and we discuss how future systems might implement them. Our analysis suggests that no current AI systems are conscious, but also suggests that there are no obvious technical barriers to building AI systems which satisfy these indicators."
-        },
-        "filled": true,
-        "author_pub_id": "1pwyaYgAAAAJ:F1b5ZUV5XREC",
-        "num_citations": 7,
-        "citedby_url": "/scholar?hl=en&cites=8239061011717183910",
-        "cites_id": [
-            "8239061011717183910"
-        ],
-        "pub_url": "https://arxiv.org/abs/2308.08708",
-        "cites_per_year": {
-            "2023": 7
+            "2023": 12
         }
     },
     {
@@ -62,7 +79,7 @@
         },
         "filled": true,
         "author_pub_id": "1pwyaYgAAAAJ:ZzlSgRqYykMC",
-        "num_citations": 5,
+        "num_citations": 7,
         "citedby_url": "/scholar?hl=en&cites=5854450739036230356",
         "cites_id": [
             "5854450739036230356"
@@ -70,7 +87,7 @@
         "pub_url": "https://elifesciences.org/articles/85035",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1BJHz-0vP1EJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 5
+            "2023": 7
         }
     },
     {
@@ -101,6 +118,33 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Natural scene reconstruction from fMRI signals using generative latent diffusion",
+            "pub_year": 2023,
+            "citation": "Scientific Reports 13 (1), 15666, 2023",
+            "author": "Furkan Ozcelik and Rufin VanRullen",
+            "journal": "Scientific Reports",
+            "volume": "13",
+            "number": "1",
+            "pages": "15666",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "In neural decoding research, one of the most intriguing topics is the reconstruction of perceived natural images based on fMRI signals. Previous studies have succeeded in re-creating different aspects of the visuals, such as low-level properties (shape, texture, layout) or high-level features (category of objects, descriptive semantics of scenes) but have typically failed to reconstruct these properties together for complex scene images. Generative AI has recently made a leap forward with latent diffusion models capable of generating high-complexity images. Here, we investigate how to take advantage of this innovative technology for brain decoding. We present a two-stage scene reconstruction framework called \u201cBrain-Diffuser\u201d. In the first stage, starting from fMRI signals, we reconstruct images that capture low-level properties and overall layout using a VDVAE (Very Deep Variational Autoencoder) model. In the second \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:AHdEip9mkN0C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=10102413494633237114",
+        "cites_id": [
+            "10102413494633237114"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41598-023-42891-8",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "On the role of feedback in image recognition under noise and adversarial attacks: A predictive coding perspective",
             "pub_year": 2023,
             "citation": "Neural Networks 157, 280-287, 2023",
@@ -122,6 +166,31 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:lbwrZ7KO5mQJ:scholar.google.com/",
         "cites_per_year": {
             "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A Traveling Waves Perspective on Temporal Binding",
+            "pub_year": 2023,
+            "citation": "Journal of Cognitive Neuroscience, 1-9, 2023",
+            "author": "Andrea Alamia and Rufin VanRullen",
+            "journal": "Journal of Cognitive Neuroscience",
+            "pages": "1-9",
+            "abstract": "Brain oscillations are involved in many cognitive processes, and several studies have investigated their role in cognition. In particular, the phase of certain oscillations has been related to temporal binding and integration processes, with some authors arguing that perception could be an inherently rhythmic process. However, previous research on oscillations mostly overlooked their spatial component: how oscillations propagate through the brain as traveling waves, with systematic phase delays between brain regions. Here, we argue that interpreting oscillations as traveling waves is a useful paradigm shift to understand their role in temporal binding and address controversial results. After a brief definition of traveling waves, we propose an original view on temporal integration that considers this new perspective. We first focus on cortical dynamics, then speculate about the role of thalamic nuclei in modulating the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:tH6gc1N1XXoC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=8910395417058135892",
+        "cites_id": [
+            "8910395417058135892"
+        ],
+        "pub_url": "https://direct.mit.edu/jocn/article-abstract/doi/10.1162/jocn_a_02004/115974",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VM8EKmwVqHsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
         }
     },
     {
@@ -156,21 +225,17 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Natural scene reconstruction from fMRI signals using generative latent diffusion",
+            "title": "Learning Functional Transduction",
             "pub_year": 2023,
-            "citation": "Scientific Reports 13 (1), 15666, 2023",
-            "author": "Furkan Ozcelik and Rufin VanRullen",
-            "journal": "Scientific Reports",
-            "volume": "13",
-            "number": "1",
-            "pages": "15666",
-            "publisher": "Nature Publishing Group UK",
-            "abstract": "In neural decoding research, one of the most intriguing topics is the reconstruction of perceived natural images based on fMRI signals. Previous studies have succeeded in re-creating different aspects of the visuals, such as low-level properties (shape, texture, layout) or high-level features (category of objects, descriptive semantics of scenes) but have typically failed to reconstruct these properties together for complex scene images. Generative AI has recently made a leap forward with latent diffusion models capable of generating high-complexity images. Here, we investigate how to take advantage of this innovative technology for brain decoding. We present a two-stage scene reconstruction framework called \u201cBrain-Diffuser\u201d. In the first stage, starting from fMRI signals, we reconstruct images that capture low-level properties and overall layout using a VDVAE (Very Deep Variational Autoencoder) model. In the second \u2026"
+            "citation": "Thirty-seventh Conference on Neural Information Processing Systems, 2023",
+            "author": "Mathieu Chalvidal and Thomas Serre and Rufin VanRullen",
+            "conference": "Thirty-seventh Conference on Neural Information Processing Systems",
+            "abstract": "Research in statistical learning has polarized into two general approaches to perform regression analysis: Transductive methods construct estimates directly based on exemplar data using generic relational principles which might suffer from the curse of dimensionality. Conversely, inductive methods can potentially fit highly complex functions at the cost of compute-intensive solution searches. In this work, we leverage the theory of vector-valued Reproducing Kernel Banach Spaces (RKBS) to propose a hybrid approach: We show that transductive regression systems can be meta-learned with gradient descent to form efficient _in-context_ neural approximators of function defined over both finite and infinite-dimensional spaces (operator regression). Once trained, our _Transducer_ can almost instantaneously capture new functional relationships and produce original image estimates, given a few pairs of input and output examples. We demonstrate the benefit of our meta-learned transductive approach to model physical systems influenced by varying external factors with little data at a fraction of the usual deep learning training costs for partial differential equations and climate modeling applications."
         },
         "filled": true,
-        "author_pub_id": "1pwyaYgAAAAJ:AHdEip9mkN0C",
+        "author_pub_id": "1pwyaYgAAAAJ:gVv57TyPmFsC",
         "num_citations": 0,
-        "pub_url": "https://www.nature.com/articles/s41598-023-42891-8",
+        "pub_url": "https://openreview.net/forum?id=2BFZ8cPIf6",
         "cites_per_year": {}
     },
     {
@@ -229,25 +294,6 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "A Traveling Waves Perspective on Temporal Binding",
-            "pub_year": 2023,
-            "citation": "Journal of Cognitive Neuroscience, 1-9, 2023",
-            "author": "Andrea Alamia and Rufin VanRullen",
-            "journal": "Journal of Cognitive Neuroscience",
-            "pages": "1-9",
-            "abstract": "Brain oscillations are involved in many cognitive processes, and several studies have investigated their role in cognition. In particular, the phase of certain oscillations has been related to temporal binding and integration processes, with some authors arguing that perception could be an inherently rhythmic process. However, previous research on oscillations mostly overlooked their spatial component: how oscillations propagate through the brain as traveling waves, with systematic phase delays between brain regions. Here, we argue that interpreting oscillations as traveling waves is a useful paradigm shift to understand their role in temporal binding and address controversial results. After a brief definition of traveling waves, we propose an original view on temporal integration that considers this new perspective. We first focus on cortical dynamics, then speculate about the role of thalamic nuclei in modulating the \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "1pwyaYgAAAAJ:tH6gc1N1XXoC",
-        "num_citations": 0,
-        "pub_url": "https://direct.mit.edu/jocn/article-abstract/doi/10.1162/jocn_a_02004/115974",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VM8EKmwVqHsJ:scholar.google.com/",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
             "title": "Mathematical derivation of wave propagation properties in hierarchical neural networks with predictive coding feedback dynamics",
             "pub_year": 2023,
             "citation": "arXiv preprint arXiv:2304.05676, 2023",
@@ -260,23 +306,6 @@
         "num_citations": 0,
         "pub_url": "https://arxiv.org/abs/2304.05676",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:f8cmTB-ifQwJ:scholar.google.com/",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Learning Functional Transduction",
-            "pub_year": 2023,
-            "citation": "arXiv preprint arXiv:2302.00328, 2023",
-            "author": "Mathieu Chalvidal and Thomas Serre and Rufin VanRullen",
-            "journal": "arXiv preprint arXiv:2302.00328",
-            "abstract": "Research in Machine Learning has polarized into two general regression approaches: Transductive methods derive estimates directly from available data but are usually problem unspecific. Inductive methods can be much more particular, but generally require tuning and compute-intensive searches for solutions. In this work, we adopt a hybrid approach: We leverage the theory of Reproducing Kernel Banach Spaces (RKBS) and show that transductive principles can be induced through gradient descent to form efficient \\textit{in-context} neural approximators. We apply this approach to RKBS of function-valued operators and show that once trained, our \\textit{Transducer} model can capture on-the-fly relationships between infinite-dimensional input and output functions, given a few example pairs, and return new function estimates. We demonstrate the benefit of our transductive approach to model complex physical systems influenced by varying external factors with little data at a fraction of the usual deep learning training computation cost for partial differential equations and climate modeling applications."
-        },
-        "filled": true,
-        "author_pub_id": "1pwyaYgAAAAJ:gVv57TyPmFsC",
-        "num_citations": 0,
-        "pub_url": "https://arxiv.org/abs/2302.00328",
         "cites_per_year": {}
     }
 ]

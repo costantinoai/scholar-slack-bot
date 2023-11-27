@@ -3,36 +3,7 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Mouse visual cortex as a limited resource system that self-learns an ecologically-general representation",
-            "pub_year": 2023,
-            "citation": "PLOS Computational Biology 19 (10), e1011506, 2023",
-            "author": "Aran Nayebi and Nathan CL Kong and Chengxu Zhuang and Justin L Gardner and Anthony M Norcia and Daniel LK Yamins",
-            "journal": "PLOS Computational Biology",
-            "volume": "19",
-            "number": "10",
-            "pages": "e1011506",
-            "publisher": "Public Library of Science",
-            "abstract": "Studies of the mouse visual system have revealed a variety of visual brain areas that are thought to support a multitude of behavioral capacities, ranging from stimulus-reward associations, to goal-directed navigation, and object-centric discriminations. However, an overall understanding of the mouse\u2019s visual cortex, and how it supports a range of behaviors, remains unknown. Here, we take a computational approach to help address these questions, providing a high-fidelity quantitative model of mouse visual cortex and identifying key structural and functional principles underlying that model\u2019s success. Structurally, we find that a comparatively shallow network structure with a low-resolution input is optimal for modeling mouse visual cortex. Our main finding is functional\u2014that models trained with task-agnostic, self-supervised objective functions based on the concept of contrastive embeddings are much better matches to mouse cortex, than models trained on supervised objectives or alternative self-supervised methods. This result is very much unlike in primates where prior work showed that the two were roughly equivalent, naturally leading us to ask the question of why these self-supervised objectives are better matches than supervised ones in mouse. To this end, we show that the self-supervised, contrastive objective builds a general-purpose visual representation that enables the system to achieve better transfer on out-of-distribution visual scene understanding and reward-based navigation tasks. Our results suggest that mouse visual cortex is a low-resolution, shallow network that makes best use of the mouse\u2019s limited resources to create a light \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "qwC3vG8AAAAJ:t6usbXjVLHcC",
-        "num_citations": 7,
-        "citedby_url": "/scholar?hl=en&cites=2488019056342353188",
-        "cites_id": [
-            "2488019056342353188"
-        ],
-        "pub_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011506",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JEWwTyY4hyIJ:scholar.google.com/",
-        "cites_per_year": {
-            "2022": 2,
-            "2023": 5
-        }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "The BabyView camera: Designing a new head-mounted camera to capture children\u2019s early social and visual environments",
+            "title": "The BabyView camera: designing a new head-mounted camera to capture children\u2019s early social and visual environments",
             "pub_year": 2023,
             "citation": "Behavior Research Methods, 1-12, 2023",
             "author": "Bria Long and Sarah Goodin and George Kachergis and Virginia A Marchman and Samaher F Radwan and Robert Z Sparks and Violet Xiang and Chengxu Zhuang and Oliver Hsu and Brett Newman and Daniel LK Yamins and Michael C Frank",
@@ -43,7 +14,7 @@
         },
         "filled": true,
         "author_pub_id": "qwC3vG8AAAAJ:08ZZubdj9fEC",
-        "num_citations": 2,
+        "num_citations": 3,
         "citedby_url": "/scholar?hl=en&cites=5355374867511737620",
         "cites_id": [
             "5355374867511737620"
@@ -51,7 +22,7 @@
         "pub_url": "https://link.springer.com/article/10.3758/s13428-023-02206-1",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:FH0XaREdUkoJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 2
+            "2023": 3
         }
     },
     {
@@ -69,7 +40,7 @@
         },
         "filled": true,
         "author_pub_id": "qwC3vG8AAAAJ:q3oQSFYPqjQC",
-        "num_citations": 2,
+        "num_citations": 3,
         "citedby_url": "/scholar?hl=en&cites=615012094074270269",
         "cites_id": [
             "615012094074270269"
@@ -78,8 +49,25 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:PbLdtz32iAgJ:scholar.google.com/",
         "cites_per_year": {
             "2022": 1,
-            "2023": 1
+            "2023": 2
         }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Are These the Same Apple? Comparing Images Based on Object Intrinsics",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2311.00750, 2023",
+            "author": "Klemen Kotar and Stephen Tian and Hong-Xing Yu and Daniel LK Yamins and Jiajun Wu",
+            "journal": "arXiv preprint arXiv:2311.00750",
+            "abstract": "The human visual system can effortlessly recognize an object under different extrinsic factors such as lighting, object poses, and background, yet current computer vision systems often struggle with these variations. An important step to understanding and improving artificial vision systems is to measure image similarity purely based on intrinsic object properties that define object identity. This problem has been studied in the computer vision literature as re-identification, though mostly restricted to specific object categories such as people and cars. We propose to extend it to general object categories, exploring an image similarity metric based on object intrinsics. To benchmark such measurements, we collect the Common paired objects Under differenT Extrinsics (CUTE) dataset of  images of  objects under different extrinsic factors such as lighting, poses, and imaging conditions. While existing methods such as LPIPS and CLIP scores do not measure object intrinsics well, we find that combining deep features learned from contrastive self-supervised learning with foreground filtering is a simple yet effective approach to approximating the similarity. We conduct an extensive survey of pre-trained features and foreground extraction methods to arrive at a strong baseline that best measures intrinsic object-centric image similarity among current methods. Finally, we demonstrate that our approach can aid in downstream applications such as acting as an analog for human subjects and improving generalizable re-identification. Please see our project website at https://s-tian.github.io/projects/cute/ for visualizations of the data and demos of our metric."
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:HE397vMXCloC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2311.00750",
+        "cites_per_year": {}
     },
     {
         "container_type": "Publication",

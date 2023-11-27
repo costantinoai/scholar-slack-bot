@@ -40,5 +40,24 @@
         "num_citations": 0,
         "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791506",
         "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Partial information transfer from peripheral visual streams to foveal visual streams is mediated through local primary visual circuits",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.10. 12.561237, 2023",
+            "author": "Andrea Ivan Costantino and Mark A Williams and Benjamin O Turner and Matthew J Crossley",
+            "journal": "bioRxiv",
+            "pages": "2023.10. 12.561237",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "A classic view holds that visual object recognition is driven through the what pathway in which perceptual features of increasing abstractness are computed in a sequence of different visual cortical regions. The cortical origin of this pathway, the primary visual cortex (V1), has a retinotopic organization such that neurons have receptive fields tuned to specific regions of the visual field. That is, a neuron that responds to a stimulus in the center of the visual field will not respond to a stimulus in the periphery of the visual field, and vice versa. However, despite this fundamental design feature, the overall processing of stimuli in the periphery -- while clearly dependent on processing by neurons in the peripheral regions of V1 -- can be clearly altered by the processing of neurons in the fovea region of V1. For instance, it has been shown that task-relevant, non-retinotopic feedback information about peripherally presented stimuli can be decoded in the unstimulated foveal cortex, and that the disruption of this feedback -- through Transcranial Magnetic Stimulation or behavioral masking paradigms -- has detrimental effects on same/different discrimination behavior. Here, we used fMRI multivariate decoding techniques and functional connectivity analyses to assess the nature of the information that is encoded in the periphery-to-fovea feedback projection and to gain insight into how it may be anatomically implemented. Participants performed a same/different discrimination task on images of real-world stimuli (motorbikes, cars, female and male faces) displayed peripherally. We were able to decode only a subset of these categories from the activity measured in \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "MG9cVagAAAAJ:IjCSPb-OGe4C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.10.12.561237.abstract",
+        "cites_per_year": {}
     }
 ]

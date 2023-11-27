@@ -16,7 +16,7 @@
         },
         "filled": true,
         "author_pub_id": "Tv-zquoAAAAJ:kw52XkFRtyQC",
-        "num_citations": 5,
+        "num_citations": 7,
         "citedby_url": "/scholar?hl=en&cites=16940775940699691363",
         "cites_id": [
             "16940775940699691363"
@@ -24,7 +24,7 @@
         "pub_url": "https://royalsocietypublishing.org/doi/abs/10.1098/rsta.2022.0047",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Y5njRPa5GesJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 5
+            "2023": 7
         }
     },
     {
@@ -53,6 +53,31 @@
         "cites_per_year": {
             "2022": 1,
             "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Preliminary evidence for selective cortical responses to music in one\u2010month\u2010old infants",
+            "pub_year": 2023,
+            "citation": "Developmental Science, e13387, 2023",
+            "author": "Heather L Kosakowski and Samuel Norman\u2010Haignere and Anna Mynick and Atsushi Takahashi and Rebecca Saxe and Nancy Kanwisher",
+            "journal": "Developmental Science",
+            "pages": "e13387",
+            "abstract": "Prior studies have observed selective neural responses in the adult human auditory cortex to music and speech that cannot be explained by the differing lower\u2010level acoustic properties of these stimuli. Does infant cortex exhibit similarly selective responses to music and speech shortly after birth? To answer this question, we attempted to collect functional magnetic resonance imaging (fMRI) data from 45 sleeping infants (2.0\u2010 to 11.9\u2010weeks\u2010old) while they listened to monophonic instrumental lullabies and infant\u2010directed speech produced by a mother. To match acoustic variation between music and speech sounds we (1) recorded music from instruments that had a similar spectral range as female infant\u2010directed speech, (2) used a novel excitation\u2010matching algorithm to match the cochleagrams of music and speech stimuli, and (3) synthesized \u201cmodel\u2010matched\u201d stimuli that were matched in spectrotemporal \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:FiytvqdAVhgC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=18080781322115500175",
+        "cites_id": [
+            "18080781322115500175"
+        ],
+        "pub_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/desc.13387",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:j0g2_tDW6_oJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
         }
     },
     {
@@ -110,31 +135,6 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Preliminary evidence for selective cortical responses to music in one\u2010month\u2010old infants",
-            "pub_year": 2023,
-            "citation": "Developmental Science, e13387, 2023",
-            "author": "Heather L Kosakowski and Samuel Norman\u2010Haignere and Anna Mynick and Atsushi Takahashi and Rebecca Saxe and Nancy Kanwisher",
-            "journal": "Developmental Science",
-            "pages": "e13387",
-            "abstract": "Prior studies have observed selective neural responses in the adult human auditory cortex to music and speech that cannot be explained by the differing lower\u2010level acoustic properties of these stimuli. Does infant cortex exhibit similarly selective responses to music and speech shortly after birth? To answer this question, we attempted to collect functional magnetic resonance imaging (fMRI) data from 45 sleeping infants (2.0\u2010 to 11.9\u2010weeks\u2010old) while they listened to monophonic instrumental lullabies and infant\u2010directed speech produced by a mother. To match acoustic variation between music and speech sounds we (1) recorded music from instruments that had a similar spectral range as female infant\u2010directed speech, (2) used a novel excitation\u2010matching algorithm to match the cochleagrams of music and speech stimuli, and (3) synthesized \u201cmodel\u2010matched\u201d stimuli that were matched in spectrotemporal \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "Tv-zquoAAAAJ:FiytvqdAVhgC",
-        "num_citations": 2,
-        "citedby_url": "/scholar?hl=en&cites=18080781322115500175",
-        "cites_id": [
-            "18080781322115500175"
-        ],
-        "pub_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/desc.13387",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:j0g2_tDW6_oJ:scholar.google.com/",
-        "cites_per_year": {
-            "2023": 2
-        }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
             "title": "Challenging the classical view: recognition of identity and expression as integrated processes",
             "pub_year": 2023,
             "citation": "Brain Sciences 13 (2), 296, 2023",
@@ -163,24 +163,51 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Left-hemisphere cortical language regions respond equally to observed dialogue and monologue",
+            "title": "Left-hemisphere cortical language regions respond equally to dialogue and monologue",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023.01. 30.526344, 2023",
-            "author": "Halie Olson and Emily Chen and Kirsten Lydic and Rebecca Saxe",
+            "author": "Halie Ann Olson and Emily May-Ying Chen and Kirsten Lydic and Rebecca Saxe",
             "journal": "bioRxiv",
             "pages": "2023.01. 30.526344",
             "publisher": "Cold Spring Harbor Laboratory",
-            "abstract": "Much of the language we encounter in our everyday lives comes in the form of conversation, yet the majority of research on the neural basis of language comprehension has used input from only one speaker at a time. 20 adults were scanned while passively observing audiovisual conversations using functional magnetic resonance imaging. In a block-design task, participants watched 20-second videos of puppets speaking either to another puppet (the \u201cdialogue\u201d condition) or directly to the viewer (\u201cmonologue\u201d), while the audio was either comprehensible (played forward) or incomprehensible (played backward). Individually functionally-localized left-hemisphere language regions responded more to comprehensible than incomprehensible speech but did not respond differently to dialogue than monologue. In a second task, participants watched videos (1-3 minutes each) of two puppets conversing with each other, in which one puppet was comprehensible while the other\u2019s speech was reversed. All participants saw the same visual input but were randomly assigned which character\u2019s speech was comprehensible. In left-hemisphere cortical language regions, the timecourse of activity was correlated only among participants who heard the same character speaking comprehensibly, despite identical visual input across all participants. For comparison, some individually-localized theory of mind regions and right hemisphere homologues of language regions responded more to dialogue than monologue in the first task, and in the second task, activity in some regions was correlated across all participants regardless of which character was speaking \u2026"
+            "abstract": "Much of the language we encounter in our everyday lives comes in the form of conversation, yet the majority of research on the neural basis of language comprehension has used language input from a single source. To determine whether canonical left-hemisphere language regions are sensitive to features of dialogue beyond the comprehensibility of the speech stream, we scanned 20 adults on two novel tasks using functional magnetic resonance imaging. In the first, participants watched videos of puppets speaking either to the viewer (monologue) or to a partner (dialogue), while the audio was either comprehensible (forward) or reversed (backward). Canonical left-hemisphere language regions responded more to forward than backward speech, as expected, but did not respond more to dialogue than monologue. In a second task, two puppets conversed with each other, but only one was comprehensible while the other's speech stream was reversed. Left-hemisphere cortical language regions again responded more to forward than backwards speech, and activity in these regions was only correlated among participants who heard the same characters speaking forward and backward. In contrast, some theory of mind regions and right hemisphere homologues of language regions responded more to dialogue than monologue, and activity in some of these regions was correlated among participants even when opposite characters were speaking forward and backward (in both cases, the visual video clips were held constant). Together, these experiments suggest that canonical left-hemisphere cortical language regions are only sensitive to the \u2026"
         },
         "filled": true,
         "author_pub_id": "Tv-zquoAAAAJ:7BrZ7Jt4UNcC",
-        "num_citations": 1,
+        "num_citations": 2,
         "citedby_url": "/scholar?hl=en&cites=12778227426865949946",
         "cites_id": [
             "12778227426865949946"
         ],
         "pub_url": "https://www.biorxiv.org/content/10.1101/2023.01.30.526344.abstract",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-qx_jSRiVbEJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Using fMRI to study the neural basis of violation-of-expectation",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4925-4925, 2023",
+            "author": "Shari Liu and Kirsten Lydic and Rebecca Saxe",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4925-4925",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Why do babies look longer when objects float in midair, or people behave inefficiently (Carey; 2009; Spelke 2022) during violation-of-expectation (VOE) studies? Here we test two non-mutually exclusive hypotheses. One hypothesis is that VOE is supported (H1) by domain-general processes, like visual prediction error and endogenous attention. A second hypothesis is that VOE is supported (H2) by domain-specific prediction error over psychological and physical expectations. These hypotheses predict responses in distinct neural regions. Whereas the domain-general hypothesis predicts greater responses to unexpected than expected events in visual and multiple demand regions, that generalize across domains, the domain-specific hypothesis predicts greater responses to unexpected events in different regions depending on the domain (eg supramarginal gyrus for physics, superior temporal sulcus for \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:6yz0xqPARnAC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=9348763344785872511",
+        "cites_id": [
+            "9348763344785872511"
+        ],
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791584",
         "cites_per_year": {
             "2023": 1
         }
@@ -255,7 +282,7 @@
         "filled": true,
         "author_pub_id": "Tv-zquoAAAAJ:CdxZDUztZiMC",
         "num_citations": 0,
-        "pub_url": "https://psyarxiv.com/kx76y/",
+        "pub_url": "https://osf.io/preprints/psyarxiv/kx76y/",
         "cites_per_year": {}
     },
     {
@@ -294,27 +321,6 @@
         "author_pub_id": "Tv-zquoAAAAJ:3NQIlFlcGxIC",
         "num_citations": 0,
         "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2792558",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Using fMRI to study the neural basis of violation-of-expectation",
-            "pub_year": 2023,
-            "citation": "Journal of Vision 23 (9), 4925-4925, 2023",
-            "author": "Shari Liu and Kirsten Lydic and Rebecca Saxe",
-            "journal": "Journal of Vision",
-            "volume": "23",
-            "number": "9",
-            "pages": "4925-4925",
-            "publisher": "The Association for Research in Vision and Ophthalmology",
-            "abstract": "Why do babies look longer when objects float in midair, or people behave inefficiently (Carey; 2009; Spelke 2022) during violation-of-expectation (VOE) studies? Here we test two non-mutually exclusive hypotheses. One hypothesis is that VOE is supported (H1) by domain-general processes, like visual prediction error and endogenous attention. A second hypothesis is that VOE is supported (H2) by domain-specific prediction error over psychological and physical expectations. These hypotheses predict responses in distinct neural regions. Whereas the domain-general hypothesis predicts greater responses to unexpected than expected events in visual and multiple demand regions, that generalize across domains, the domain-specific hypothesis predicts greater responses to unexpected events in different regions depending on the domain (eg supramarginal gyrus for physics, superior temporal sulcus for \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "Tv-zquoAAAAJ:6yz0xqPARnAC",
-        "num_citations": 0,
-        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791584",
         "cites_per_year": {}
     },
     {
@@ -407,6 +413,22 @@
         "num_citations": 0,
         "pub_url": "https://psyarxiv.com/54x6b/download?format=pdf",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:S9CACGlxqycJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Study 1-Joint inference of wrongness and legitimacy by observing punishment decisions",
+            "pub_year": 2023,
+            "citation": "OSF, 2023",
+            "author": "Setayesh Radkani and Rebecca Saxe",
+            "publisher": "OSF"
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:AXkvAH5U_nMC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/nhmcy/resources",
         "cites_per_year": {}
     },
     {

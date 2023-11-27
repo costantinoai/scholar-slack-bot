@@ -16,7 +16,7 @@
         },
         "filled": true,
         "author_pub_id": "Oo4ElF4AAAAJ:0EnyYjriUFMC",
-        "num_citations": 4,
+        "num_citations": 7,
         "citedby_url": "/scholar?hl=en&cites=2620824616029104849",
         "cites_id": [
             "2620824616029104849"
@@ -24,7 +24,7 @@
         "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2300252120",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:0aoDQRoKXyQJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 4
+            "2023": 7
         }
     },
     {
@@ -43,14 +43,14 @@
         },
         "filled": true,
         "author_pub_id": "Oo4ElF4AAAAJ:5nxA0vEk-isC",
-        "num_citations": 2,
+        "num_citations": 4,
         "citedby_url": "/scholar?hl=en&cites=16528210771856083185",
         "cites_id": [
             "16528210771856083185"
         ],
         "pub_url": "https://www.cell.com/iscience/pdf/S2589-0042(23)01300-7.pdf",
         "cites_per_year": {
-            "2023": 2
+            "2023": 4
         }
     },
     {

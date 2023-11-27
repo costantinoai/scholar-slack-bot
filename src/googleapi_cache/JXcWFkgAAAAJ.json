@@ -3,6 +3,61 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "The neuroconnectionist research programme",
+            "pub_year": 2023,
+            "citation": "Nature Reviews Neuroscience, 1-20, 2023",
+            "author": "Adrien Doerig and Rowan P Sommers and Katja Seeliger and Blake Richards and Jenann Ismael and Grace W Lindsay and Konrad P Kording and Talia Konkle and Marcel AJ Van Gerven and Nikolaus Kriegeskorte and Tim C Kietzmann",
+            "pages": "1-20",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Artificial neural networks (ANNs) inspired by biology are beginning to be widely used to model behavioural and neural data, an approach we call \u2018neuroconnectionism\u2019. ANNs have been not only lauded as the current best models of information processing in the brain but also criticized for failing to account for basic cognitive functions. In this Perspective article, we propose that arguing about the successes and failures of a restricted set of current ANNs is the wrong approach to assess the promise of neuroconnectionism for brain science. Instead, we take inspiration from the philosophy of science, and in particular from Lakatos, who showed that the core of a scientific research programme is often not directly falsifiable but should be assessed by its capacity to generate novel insights. Following this view, we present neuroconnectionism as a general research programme centred around ANNs as a computational \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "JXcWFkgAAAAJ:sszUF3NjhM4C",
+        "num_citations": 27,
+        "citedby_url": "/scholar?hl=en&cites=3334113232536501466",
+        "cites_id": [
+            "3334113232536501466"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41583-023-00705-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2nxE8lEmRS4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 5,
+            "2023": 22
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Deep neural networks and visuo-semantic models explain complementary components of human ventral-stream representational dynamics",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience 43 (10), 1731-1741, 2023",
+            "author": "Kamila M Jozwik and Tim C Kietzmann and Radoslaw M Cichy and Nikolaus Kriegeskorte and Marieke Mur",
+            "journal": "Journal of Neuroscience",
+            "volume": "43",
+            "number": "10",
+            "pages": "1731-1741",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Deep neural networks (DNNs) are promising models of the cortical computations supporting human object recognition. However, despite their ability to explain a significant portion of variance in neural data, the agreement between models and brain representational dynamics is far from perfect. We address this issue by asking which representational features are currently unaccounted for in neural time series data, estimated for multiple areas of the ventral stream via source-reconstructed magnetoencephalography data acquired in human participants (nine females, six males) during object viewing. We focus on the ability of visuo-semantic models, consisting of human-generated labels of object features and categories, to explain variance beyond the explanatory power of DNNs alone. We report a gradual reversal in the relative importance of DNN versus visuo-semantic features as ventral-stream object \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "JXcWFkgAAAAJ:QyXJ3EUuO1IC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=16634044447513850",
+        "cites_id": [
+            "16634044447513850"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/43/10/1731.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-tx4RpMYOwAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Empirically Identifying and Computationally Modeling the Brain\u2013Behavior Relationship for Human Scene Categorization",
             "pub_year": 2023,
             "citation": "Journal of Cognitive Neuroscience 35 (11), 1879-1897, 2023",
@@ -53,6 +108,29 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "End-to-end topographic networks as models of cortical map formation and human visual behaviour: moving beyond convolutions",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2308.09431, 2023",
+            "author": "Zejin Lu and Adrien Doerig and Victoria Bosch and Bas Krahmer and Daniel Kaiser and Radoslaw M Cichy and Tim C Kietzmann",
+            "journal": "arXiv preprint arXiv:2308.09431",
+            "abstract": "Computational models are an essential tool for understanding the origin and functions of the topographic organisation of the primate visual system. Yet, vision is most commonly modelled by convolutional neural networks that ignore topography by learning identical features across space. Here, we overcome this limitation by developing All-Topographic Neural Networks (All-TNNs). Trained on visual input, several features of primate topography emerge in All-TNNs: smooth orientation maps and cortical magnification in their first layer, and category-selective areas in their final layer. In addition, we introduce a novel dataset of human spatial biases in object recognition, which enables us to directly link models to behaviour. We demonstrate that All-TNNs significantly better align with human behaviour than previous state-of-the-art convolutional models due to their topographic nature. All-TNNs thereby mark an important step forward in understanding the spatial organisation of the visual brain and how it mediates visual behaviour."
+        },
+        "filled": true,
+        "author_pub_id": "JXcWFkgAAAAJ:F2UWTTQJPOcC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=17139289309057150061",
+        "cites_id": [
+            "17139289309057150061"
+        ],
+        "pub_url": "https://arxiv.org/abs/2308.09431",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Balancing stability and plasticity in continual learning: the readout-decomposition of activation change (RDAC) framework",
             "pub_year": 2023,
             "citation": "arXiv preprint arXiv:2310.04741, 2023",
@@ -70,61 +148,6 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "The neuroconnectionist research programme",
-            "pub_year": 2023,
-            "citation": "Nature Reviews Neuroscience, 1-20, 2023",
-            "author": "Adrien Doerig and Rowan P Sommers and Katja Seeliger and Blake Richards and Jenann Ismael and Grace W Lindsay and Konrad P Kording and Talia Konkle and Marcel AJ Van Gerven and Nikolaus Kriegeskorte and Tim C Kietzmann",
-            "pages": "1-20",
-            "publisher": "Nature Publishing Group UK",
-            "abstract": "Artificial neural networks (ANNs) inspired by biology are beginning to be widely used to model behavioural and neural data, an approach we call \u2018neuroconnectionism\u2019. ANNs have been not only lauded as the current best models of information processing in the brain but also criticized for failing to account for basic cognitive functions. In this Perspective article, we propose that arguing about the successes and failures of a restricted set of current ANNs is the wrong approach to assess the promise of neuroconnectionism for brain science. Instead, we take inspiration from the philosophy of science, and in particular from Lakatos, who showed that the core of a scientific research programme is often not directly falsifiable but should be assessed by its capacity to generate novel insights. Following this view, we present neuroconnectionism as a general research programme centred around ANNs as a computational \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "JXcWFkgAAAAJ:sszUF3NjhM4C",
-        "num_citations": 18,
-        "citedby_url": "/scholar?hl=en&cites=3334113232536501466",
-        "cites_id": [
-            "3334113232536501466"
-        ],
-        "pub_url": "https://www.nature.com/articles/s41583-023-00705-w",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2nxE8lEmRS4J:scholar.google.com/",
-        "cites_per_year": {
-            "2022": 3,
-            "2023": 15
-        }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Deep neural networks and visuo-semantic models explain complementary components of human ventral-stream representational dynamics",
-            "pub_year": 2023,
-            "citation": "Journal of Neuroscience 43 (10), 1731-1741, 2023",
-            "author": "Kamila M Jozwik and Tim C Kietzmann and Radoslaw M Cichy and Nikolaus Kriegeskorte and Marieke Mur",
-            "journal": "Journal of Neuroscience",
-            "volume": "43",
-            "number": "10",
-            "pages": "1731-1741",
-            "publisher": "Society for Neuroscience",
-            "abstract": "Deep neural networks (DNNs) are promising models of the cortical computations supporting human object recognition. However, despite their ability to explain a significant portion of variance in neural data, the agreement between models and brain representational dynamics is far from perfect. We address this issue by asking which representational features are currently unaccounted for in neural time series data, estimated for multiple areas of the ventral stream via source-reconstructed magnetoencephalography data acquired in human participants (nine females, six males) during object viewing. We focus on the ability of visuo-semantic models, consisting of human-generated labels of object features and categories, to explain variance beyond the explanatory power of DNNs alone. We report a gradual reversal in the relative importance of DNN versus visuo-semantic features as ventral-stream object \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "JXcWFkgAAAAJ:QyXJ3EUuO1IC",
-        "num_citations": 3,
-        "citedby_url": "/scholar?hl=en&cites=16634044447513850",
-        "cites_id": [
-            "16634044447513850"
-        ],
-        "pub_url": "https://www.jneurosci.org/content/43/10/1731.abstract",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-tx4RpMYOwAJ:scholar.google.com/",
-        "cites_per_year": {
-            "2022": 1,
-            "2023": 2
-        }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
             "title": "Characterising representation dynamics in recurrent neural networks for object recognition",
             "pub_year": 2023,
             "citation": "arXiv preprint arXiv:2308.12435, 2023",
@@ -136,41 +159,6 @@
         "author_pub_id": "JXcWFkgAAAAJ:w1MjKQ0l0TYC",
         "num_citations": 0,
         "pub_url": "https://arxiv.org/abs/2308.12435",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "End-to-end topographic networks as models of cortical map formation and human visual behaviour: moving beyond convolutions",
-            "pub_year": 2023,
-            "citation": "arXiv preprint arXiv:2308.09431, 2023",
-            "author": "Zejin Lu and Adrien Doerig and Victoria Bosch and Bas Krahmer and Daniel Kaiser and Radoslaw M Cichy and Tim C Kietzmann",
-            "journal": "arXiv preprint arXiv:2308.09431",
-            "abstract": "Computational models are an essential tool for understanding the origin and functions of the topographic organisation of the primate visual system. Yet, vision is most commonly modelled by convolutional neural networks that ignore topography by learning identical features across space. Here, we overcome this limitation by developing All-Topographic Neural Networks (All-TNNs). Trained on visual input, several features of primate topography emerge in All-TNNs: smooth orientation maps and cortical magnification in their first layer, and category-selective areas in their final layer. In addition, we introduce a novel dataset of human spatial biases in object recognition, which enables us to directly link models to behaviour. We demonstrate that All-TNNs significantly better align with human behaviour than previous state-of-the-art convolutional models due to their topographic nature. All-TNNs thereby mark an important step forward in understanding the spatial organisation of the visual brain and how it mediates visual behaviour."
-        },
-        "filled": true,
-        "author_pub_id": "JXcWFkgAAAAJ:F2UWTTQJPOcC",
-        "num_citations": 0,
-        "pub_url": "https://arxiv.org/abs/2308.09431",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Empirically Identifying and Computationally Modelling the Brain\u2013Behavior Relationship for Human Scene Categorization",
-            "pub_year": 2023,
-            "citation": "Journal of Cognitive Neuroscience, 1-19, 2023",
-            "author": "Agnessa Karapetian and Antoniya Boyanova and Muthukumar Pandaram and Klaus Obermayer and Tim C Kietzmann and Radoslaw M Cichy",
-            "journal": "Journal of Cognitive Neuroscience",
-            "pages": "1-19",
-            "abstract": "Humans effortlessly make quick and accurate perceptual decisions about the nature of their immediate visual environment, such as the category of the scene they face. Previous research has revealed a rich set of cortical representations potentially underlying this feat. However, it remains unknown which of these representations are suitably formatted for decision-making. Here, we approached this question empirically and computationally, using neuroimaging and computational modelling. For the empirical part, we collected EEG data and RTs from human participants during a scene categorization task (natural vs. man-made). We then related neural representations to behavior using a multivariate extension of signal detection theory. We observed a correlation specifically between\u223c 100 msec and\u223c 200 msec after stimulus onset, suggesting that the neural scene representations in this time period are suitably \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "JXcWFkgAAAAJ:3bvyWxjaHKcC",
-        "num_citations": 0,
-        "pub_url": "https://direct.mit.edu/jocn/article/doi/10.1162/jocn_a_02043/117201",
         "cites_per_year": {}
     },
     {

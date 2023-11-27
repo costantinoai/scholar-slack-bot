@@ -3,6 +3,44 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "LLM Multimodal Traffic Accident Forecasting",
+            "pub_year": 2023,
+            "citation": "Sensors 23 (22), 9225, 2023",
+            "author": "I de Zarz\u00e0 and J de Curt\u00f2 and Gemma Roig and Carlos T Calafate",
+            "journal": "Sensors",
+            "volume": "23",
+            "number": "22",
+            "pages": "9225",
+            "publisher": "MDPI",
+            "abstract": "With the rise in traffic congestion in urban centers, predicting accidents has become paramount for city planning and public safety. This work comprehensively studied the efficacy of modern deep learning (DL) methods in forecasting traffic accidents and enhancing Level-4 and Level-5 (L-4 and L-5) driving assistants with actionable visual and language cues. Using a rich dataset detailing accident occurrences, we juxtaposed the Transformer model against traditional time series models like ARIMA and the more recent Prophet model. Additionally, through detailed analysis, we delved deep into feature importance using principal component analysis (PCA) loadings, uncovering key factors contributing to accidents. We introduce the idea of using real-time interventions with large language models (LLMs) in autonomous driving with the use of lightweight compact LLMs like LLaMA-2 and Zephyr-7b-\u03b1. Our exploration extends to the realm of multimodality, through the use of Large Language-and-Vision Assistant (LLaVA)\u2014a bridge between visual and linguistic cues by means of a Visual Language Model (VLM)\u2014in conjunction with deep probabilistic reasoning, enhancing the real-time responsiveness of autonomous driving systems. In this study, we elucidate the advantages of employing large multimodal models within DL and deep probabilistic programming for enhancing the performance and usability of time series forecasting and feature weight importance, particularly in a self-driving scenario. This work paves the way for safer, smarter cities, underpinned by data-driven decision making."
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:fQNAKQ3IYiAC",
+        "num_citations": 0,
+        "pub_url": "https://www.mdpi.com/1424-8220/23/22/9225",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Learning Class and Domain Augmentations for Single-Source Open-Domain Generalization",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2311.02599, 2023",
+            "author": "Prathmesh Bele and Valay Bundele and Avigyan Bhattacharya and Ankit Jha and Gemma Roig and Biplab Banerjee",
+            "journal": "arXiv preprint arXiv:2311.02599",
+            "abstract": "Single-source open-domain generalization (SS-ODG) addresses the challenge of labeled source domains with supervision during training and unlabeled novel target domains during testing. The target domain includes both known classes from the source domain and samples from previously unseen classes. Existing techniques for SS-ODG primarily focus on calibrating source-domain classifiers to identify open samples in the target domain. However, these methods struggle with visually fine-grained open-closed data, often misclassifying open samples as closed-set classes. Moreover, relying solely on a single source domain restricts the model's ability to generalize. To overcome these limitations, we propose a novel framework called SODG-Net that simultaneously synthesizes novel domains and generates pseudo-open samples using a learning-based objective, in contrast to the ad-hoc mixing strategies commonly found in the literature. Our approach enhances generalization by diversifying the styles of known class samples using a novel metric criterion and generates diverse pseudo-open samples to train a unified and confident multi-class classifier capable of handling both open and closed-set data. Extensive experimental evaluations conducted on multiple benchmarks consistently demonstrate the superior performance of SODG-Net compared to the literature."
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:LPZeul_q3PIC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2311.02599",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The algonauts project 2023 challenge: How the human brain makes sense of natural scenes",
             "pub_year": 2023,
             "citation": "arXiv preprint arXiv:2301.03198, 2023",
@@ -12,7 +50,7 @@
         },
         "filled": true,
         "author_pub_id": "6MjMhT4AAAAJ:KxtntwgDAa4C",
-        "num_citations": 7,
+        "num_citations": 9,
         "citedby_url": "/scholar?hl=en&cites=1174422521076802658",
         "cites_id": [
             "1174422521076802658"
@@ -20,7 +58,7 @@
         "pub_url": "https://arxiv.org/abs/2301.03198",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YmQAgQ9jTBAJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 7
+            "2023": 9
         }
     },
     {
@@ -39,7 +77,7 @@
         },
         "filled": true,
         "author_pub_id": "6MjMhT4AAAAJ:CHSYGLWDkRkC",
-        "num_citations": 5,
+        "num_citations": 8,
         "citedby_url": "/scholar?hl=en&cites=10100485155605414894",
         "cites_id": [
             "10100485155605414894"
@@ -48,7 +86,36 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:7oP3_rshLIwJ:scholar.google.com/",
         "cites_per_year": {
             "2022": 1,
-            "2023": 4
+            "2023": 7
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Signature and log-signature for the study of empirical distributions generated with GANs",
+            "pub_year": 2023,
+            "citation": "Electronics 12 (10), 2192, 2023",
+            "author": "Joaquim de Curt\u00f2 and Irene de Zarz\u00e0 and Gemma Roig and Carlos T Calafate",
+            "journal": "Electronics",
+            "volume": "12",
+            "number": "10",
+            "pages": "2192",
+            "publisher": "MDPI",
+            "abstract": "In this paper, we address the research gap in efficiently assessing Generative Adversarial Network (GAN) convergence and goodness of fit by introducing the application of the Signature Transform to measure similarity between image distributions. Specifically, we propose the novel use of Root Mean Square Error (RMSE) and Mean Absolute Error (MAE) Signature, along with Log-Signature, as alternatives to existing methods such as Fr\u00e9chet Inception Distance (FID) and Multi-Scale Structural Similarity Index Measure (MS-SSIM). Our approach offers advantages in terms of efficiency and effectiveness, providing a comprehensive understanding and extensive evaluations of GAN convergence and goodness of fit. Furthermore, we present innovative analytical measures based on statistics by means of Kruskal\u2013Wallis to evaluate the goodness of fit of GAN sample distributions. Unlike existing GAN measures, which are based on deep neural networks and require extensive GPU computations, our approach significantly reduces computation time and is performed on the CPU while maintaining the same level of accuracy. Our results demonstrate the effectiveness of the proposed method in capturing the intrinsic structure of the generated samples, providing meaningful insights into GAN performance. Lastly, we evaluate our approach qualitatively using Principal Component Analysis (PCA) and adaptive t-Distributed Stochastic Neighbor Embedding (t-SNE) for data visualization, illustrating the plausibility of our method."
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:WbkHhVStYXYC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=14142471096293437390",
+        "cites_id": [
+            "14142471096293437390"
+        ],
+        "pub_url": "https://www.mdpi.com/2079-9292/12/10/2192",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:zq_MNIgmRMQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 2,
+            "2023": 2
         }
     },
     {
@@ -83,29 +150,28 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Signature and log-signature for the study of empirical distributions generated with GANs",
+            "title": "Summarization of Videos with the Signature Transform",
             "pub_year": 2023,
-            "citation": "Electronics 12 (10), 2192, 2023",
+            "citation": "Electronics 12 (7), 1735, 2023",
             "author": "Joaquim de Curt\u00f2 and Irene de Zarz\u00e0 and Gemma Roig and Carlos T Calafate",
             "journal": "Electronics",
             "volume": "12",
-            "number": "10",
-            "pages": "2192",
+            "number": "7",
+            "pages": "1735",
             "publisher": "MDPI",
-            "abstract": "In this paper, we address the research gap in efficiently assessing Generative Adversarial Network (GAN) convergence and goodness of fit by introducing the application of the Signature Transform to measure similarity between image distributions. Specifically, we propose the novel use of Root Mean Square Error (RMSE) and Mean Absolute Error (MAE) Signature, along with Log-Signature, as alternatives to existing methods such as Fr\u00e9chet Inception Distance (FID) and Multi-Scale Structural Similarity Index Measure (MS-SSIM). Our approach offers advantages in terms of efficiency and effectiveness, providing a comprehensive understanding and extensive evaluations of GAN convergence and goodness of fit. Furthermore, we present innovative analytical measures based on statistics by means of Kruskal\u2013Wallis to evaluate the goodness of fit of GAN sample distributions. Unlike existing GAN measures, which are based on deep neural networks and require extensive GPU computations, our approach significantly reduces computation time and is performed on the CPU while maintaining the same level of accuracy. Our results demonstrate the effectiveness of the proposed method in capturing the intrinsic structure of the generated samples, providing meaningful insights into GAN performance. Lastly, we evaluate our approach qualitatively using Principal Component Analysis (PCA) and adaptive t-Distributed Stochastic Neighbor Embedding (t-SNE) for data visualization, illustrating the plausibility of our method."
+            "abstract": "This manuscript presents a new benchmark for assessing the quality of visual summaries without the need for human annotators. It is based on the Signature Transform, specifically focusing on the RMSE and the MAE Signature and Log-Signature metrics, and builds upon the assumption that uniform random sampling can offer accurate summarization capabilities. We provide a new dataset comprising videos from Youtube and their corresponding automatic audio transcriptions. Firstly, we introduce a preliminary baseline for automatic video summarization, which has at its core a Vision Transformer, an image\u2013text model pre-trained with Contrastive Language\u2013Image Pre-training (CLIP), as well as a module of object detection. Following that, we propose an accurate technique grounded in the harmonic components captured by the Signature Transform, which delivers compelling accuracy. The analytical measures are extensively evaluated, and we conclude that they strongly correlate with the notion of a good summary."
         },
         "filled": true,
-        "author_pub_id": "6MjMhT4AAAAJ:WbkHhVStYXYC",
+        "author_pub_id": "6MjMhT4AAAAJ:p2g8aNsByqUC",
         "num_citations": 3,
-        "citedby_url": "/scholar?hl=en&cites=14142471096293437390",
+        "citedby_url": "/scholar?hl=en&cites=11618654879579509463",
         "cites_id": [
-            "14142471096293437390"
+            "11618654879579509463"
         ],
-        "pub_url": "https://www.mdpi.com/2079-9292/12/10/2192",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:zq_MNIgmRMQJ:scholar.google.com/",
+        "pub_url": "https://www.mdpi.com/2079-9292/12/7/1735",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1xIyAQ7BPaEJ:scholar.google.com/",
         "cites_per_year": {
-            "2022": 2,
-            "2023": 1
+            "2023": 3
         }
     },
     {
@@ -152,12 +218,36 @@
         },
         "filled": true,
         "author_pub_id": "6MjMhT4AAAAJ:Tiz5es2fbqcC",
-        "num_citations": 1,
+        "num_citations": 2,
         "citedby_url": "/scholar?hl=en&cites=8511345799558055843",
         "cites_id": [
             "8511345799558055843"
         ],
         "pub_url": "https://www.mdpi.com/1424-8220/23/13/5899",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Peacs: Prefix encoding for auditory caption synthesis",
+            "pub_year": 2023,
+            "citation": "DCASE2023 Challenge, Tech. Rep, 2023",
+            "author": "Timothy Schauml\u00f6ffel and Martina G Vilas and Gemma Roig",
+            "publisher": "DCASE2023 Challenge, Tech. Rep",
+            "abstract": "This technical report describes an Automated Audio Captioning system for the Detection and Classification of Acoustic Scenes and Events (DCASE) 2023 Challenge, Task 6a (automated audio captioning). Our approach employs an encoder-decoder architecture, with the encoder utilizing a large contrastive pre-trained HTS-AT capable of handling variable-length audio segments. The decoder is based on the GPT2 model. To incorporate audio into the decoding process, we employ a light mapping network that translates audio representations into a prefix, effectively guiding the decoder\u2019s generation process. Given the limited data availability, we pre-train our model on various audio captioning datasets and fine-tune it on Clotho. We reach a SPIDERr-FL score of 29.3 on the evaluation split of the Clotho-v2 dataset."
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:XiSMed-E-HIC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=13148287201322677619",
+        "cites_id": [
+            "13148287201322677619"
+        ],
+        "pub_url": "https://dcase.community/documents/challenge2023/technical_reports/DCASE2023_Schaumloeffel_107_t6a.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:czWnB4wZeLYJ:scholar.google.com/",
         "cites_per_year": {
             "2023": 1
         }
@@ -166,29 +256,35 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Summarization of Videos with the Signature Transform",
+            "title": "Analyzing Vision Transformers for Image Classification in Class Embedding Space",
             "pub_year": 2023,
-            "citation": "Electronics 12 (7), 1735, 2023",
-            "author": "Joaquim de Curt\u00f2 and Irene de Zarz\u00e0 and Gemma Roig and Carlos T Calafate",
-            "journal": "Electronics",
-            "volume": "12",
-            "number": "7",
-            "pages": "1735",
-            "publisher": "MDPI",
-            "abstract": "This manuscript presents a new benchmark for assessing the quality of visual summaries without the need for human annotators. It is based on the Signature Transform, specifically focusing on the RMSE and the MAE Signature and Log-Signature metrics, and builds upon the assumption that uniform random sampling can offer accurate summarization capabilities. We provide a new dataset comprising videos from Youtube and their corresponding automatic audio transcriptions. Firstly, we introduce a preliminary baseline for automatic video summarization, which has at its core a Vision Transformer, an image\u2013text model pre-trained with Contrastive Language\u2013Image Pre-training (CLIP), as well as a module of object detection. Following that, we propose an accurate technique grounded in the harmonic components captured by the Signature Transform, which delivers compelling accuracy. The analytical measures are extensively evaluated, and we conclude that they strongly correlate with the notion of a good summary."
+            "citation": "arXiv preprint arXiv:2310.18969, 2023",
+            "author": "Martina G Vilas and Timothy Schauml\u00f6ffel and Gemma Roig",
+            "journal": "arXiv preprint arXiv:2310.18969",
+            "abstract": "Despite the growing use of transformer models in computer vision, a mechanistic understanding of these networks is still needed. This work introduces a method to reverse-engineer Vision Transformers trained to solve image classification tasks. Inspired by previous research in NLP, we demonstrate how the inner representations at any level of the hierarchy can be projected onto the learned class embedding space to uncover how these networks build categorical representations for their predictions. We use our framework to show how image tokens develop class-specific representations that depend on attention mechanisms and contextual information, and give insights on how self-attention and MLP layers differentially contribute to this categorical composition. We additionally demonstrate that this method (1) can be used to determine the parts of an image that would be important for detecting the class of interest, and (2) exhibits significant advantages over traditional linear probing approaches. Taken together, our results position our proposed framework as a powerful tool for mechanistic interpretability and explainability research."
         },
         "filled": true,
-        "author_pub_id": "6MjMhT4AAAAJ:p2g8aNsByqUC",
-        "num_citations": 1,
-        "citedby_url": "/scholar?hl=en&cites=11618654879579509463",
-        "cites_id": [
-            "11618654879579509463"
-        ],
-        "pub_url": "https://www.mdpi.com/2079-9292/12/7/1735",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1xIyAQ7BPaEJ:scholar.google.com/",
-        "cites_per_year": {
-            "2023": 1
-        }
+        "author_pub_id": "6MjMhT4AAAAJ:8AbLer7MMksC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2310.18969",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "DynamicsDiffusion: Generating and Rare Event Sampling of Molecular Dynamic Trajectories Using Diffusion Models",
+            "pub_year": 2023,
+            "citation": "NeurIPS 2023 AI for Science Workshop, 2023",
+            "author": "Magnus Petersen and Gemma Roig and Roberto Covino",
+            "conference": "NeurIPS 2023 AI for Science Workshop",
+            "abstract": "Molecular dynamics simulations are fundamental tools for quantitative molecular sciences. However, these simulations are computationally demanding and often struggle to sample rare events crucial for understanding spontaneous organization and reconfiguration in complex systems. To improve general speed and the ability to sample rare events in a directed fashion, we propose a method called  based on denoising diffusion probabilistic models (DDPM) to generate molecular dynamics trajectories from noise. The generative model can then serve as a surrogate to sample rare events. We leverage the properties of DDPMs, such as conditional generation, the ability to generate variations of trajectories, and those with certain conditions, such as crossing from one state to another, using the 'inpainting' property of DDPMs, which became only applicable when generating whole trajectories and not just individual conformations. To our knowledge, this is the first deep generative modeling for generating molecular dynamics trajectories. We hope this work will motivate a new generation of generative modeling for the study of molecular dynamics."
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:5Ul4iDaHHb8C",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=pwYCCq4xAf",
+        "cites_per_year": {}
     },
     {
         "container_type": "Publication",

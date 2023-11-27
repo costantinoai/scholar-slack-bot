@@ -3,6 +3,23 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Dimensions that matter: Interpretable object dimensions in humans and deep neural networks",
+            "pub_year": 2023,
+            "citation": "Sl: sn, 2023",
+            "author": "Florian P Mahner and Lukas Muttenthaler and U G\u00fc\u00e7l\u00fc and MN Hebart",
+            "publisher": "Sl: sn",
+            "abstract": "How do mind and machines represent objects? This question has sparked continued interest in the connected fields of cognitive neuroscience and artificial intelligence. Here we address this question by introducing a novel approach that allows us to compare human and deep neural network (DNN) representations through an interpretable embedding. We achieve this by treating the DNN as an in-silico human observer and asking it to rate the similarities between objects in a triplet task. We find that (i) DNN representations capture meaningful object properties, (ii) demonstrate with multiple in-silico tests that the DNN contains conceptual and perceptual representations including shape, and (iii) identify similarities and differences in their representational content."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:W2uZP3ddy8sC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/297725/297725.pdf?sequence=1",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The features underlying the memorability of objects",
             "pub_year": 2023,
             "citation": "Science Advances 9 (17), eadd2981, 2023",
@@ -15,7 +32,7 @@
         },
         "filled": true,
         "author_pub_id": "Q-n9_FgAAAAJ:oTdOBqtIf_kC",
-        "num_citations": 23,
+        "num_citations": 26,
         "citedby_url": "/scholar?hl=en&cites=5945500258311618340,10652378970080750051,12041836059132593332",
         "cites_id": [
             "5945500258311618340",
@@ -27,7 +44,7 @@
         "cites_per_year": {
             "2021": 1,
             "2022": 5,
-            "2023": 17
+            "2023": 20
         }
     },
     {
@@ -46,7 +63,7 @@
         },
         "filled": true,
         "author_pub_id": "Q-n9_FgAAAAJ:PQEM9vzQD9gC",
-        "num_citations": 22,
+        "num_citations": 26,
         "citedby_url": "/scholar?hl=en&cites=11776019156333001843,12813796853124410588,11855572849486790520",
         "cites_id": [
             "11776019156333001843",
@@ -58,7 +75,7 @@
         "cites_per_year": {
             "2021": 1,
             "2022": 4,
-            "2023": 17
+            "2023": 21
         }
     },
     {
@@ -106,7 +123,7 @@
         },
         "filled": true,
         "author_pub_id": "Q-n9_FgAAAAJ:Ic1VZgkJnDsC",
-        "num_citations": 1,
+        "num_citations": 2,
         "citedby_url": "/scholar?hl=en&cites=14102090530843616330",
         "cites_id": [
             "14102090530843616330"
@@ -114,8 +131,25 @@
         "pub_url": "https://www.jneurosci.org/content/43/3/484.abstract",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:SmRVKZ-wtMMJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 1
+            "2023": 2
         }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Getting aligned on representational alignment",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2310.13018, 2023",
+            "author": "Ilia Sucholutsky and Lukas Muttenthaler and Adrian Weller and Andi Peng and Andreea Bobu and Been Kim and Bradley C Love and Erin Grant and Jascha Achterberg and Joshua B Tenenbaum and Katherine M Collins and Katherine L Hermann and Kerem Oktar and Klaus Greff and Martin N Hebart and Nori Jacoby and Raja Marjieh and Robert Geirhos and Sherol Chen and Simon Kornblith and Sunayana Rane and Talia Konkle and Thomas P O'Connell and Thomas Unterthiner and Andrew K Lampinen and Klaus-Robert M\u00fcller and Mariya Toneva and Thomas L Griffiths",
+            "journal": "arXiv preprint arXiv:2310.13018",
+            "abstract": "Biological and artificial information processing systems form representations of the world that they can use to categorize, reason, plan, navigate, and make decisions. To what extent do the representations formed by these diverse systems agree? Can diverging representations still lead to the same behaviors? And how can systems modify their representations to better match those of another system? These questions pertaining to the study of \\textbf{\\emph{representational alignment}} are at the heart of some of the most active research areas in contemporary cognitive science, neuroscience, and machine learning. Unfortunately, there is limited knowledge-transfer between research communities interested in representational alignment, and much of the progress in one field ends up being rediscovered independently in another, when greater cross-field communication would be advantageous. To improve communication between fields, we propose a unifying framework that can serve as a common language between researchers studying representational alignment. We survey the literature from the fields of cognitive science, neuroscience, and machine learning, and demonstrate how prior work fits into this framework. Finally, we lay out open problems in representational alignment where progress can benefit all three fields. We hope that our work can catalyze cross-disciplinary collaboration and accelerate progress for all communities studying and developing information processing systems. We note that this is a working paper and encourage readers to reach out with their suggestions for future revisions."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:FsLZdJ3BAzkC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2310.13018",
+        "cites_per_year": {}
     },
     {
         "container_type": "Publication",

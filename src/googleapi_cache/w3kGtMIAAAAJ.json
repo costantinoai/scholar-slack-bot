@@ -3,6 +3,23 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Irren ist menschlich: Aber was, wenn Maschinen Fehler machen?",
+            "pub_year": 2023,
+            "citation": "Outstanding Dissertations @ Gesellschaft f\u00fcr Informatik eV, 2023",
+            "author": "Robert Geirhos",
+            "publisher": "Outstanding Dissertations @ Gesellschaft f\u00fcr Informatik eV",
+            "abstract": "Seit Jahrzehnten wird unsere Gesellschaft immer sta \u0308rker durch Informatik gepr\u00e4gt. Diese Entwicklung wird sich auch in Zukunft fortsetzen, nicht zuletzt durch den Einsatz von tiefen neuronalen Netzen, einem Teilgebiet der k\u00fcnstlichen Intelligenz. Wenn Maschinen mehr und mehr Entscheidungen treffen, hei\u00dft dies jedoch nicht, dass diese Entscheidungen auch f\u00fcr Menschen verst\u00e4ndlich sind-ganz im Gegenteil. Das birgt das Risiko, dass das Tempo von Anwendungen schneller steigt als unser Verst\u00e4ndnis anw\u00e4chst. Um dieser Entwicklung entgegenzutreten und maschinelle Entscheidungsprozesse besser zu verstehen, habe ich Methoden entwickelt, mit denen Menschen und Algorithmen des maschinellen Lernens verglichen werden k\u00f6nnen. Am Beispiel der Objekterkennung zeigen sich einerseits fundamentale Unterschiede zwischen den beiden, andererseits aber auch M\u00f6glichkeiten, Unterschiede zu verringern. Irren ist menschlich-doch auch Maschinen machen Fehler. Umso wichtiger ist es, zu verstehen, wann und warum. Nur so kann sichergestellt werden, dass k\u00fcnstliche Intelligenz eine Bereicherung f\u00fcr unsere Gesellschaft ist."
+        },
+        "filled": true,
+        "author_pub_id": "w3kGtMIAAAAJ:bFI3QPDXJZMC",
+        "num_citations": 0,
+        "pub_url": "https://dl.gi.de/items/c3544f3d-0308-4c0a-ab89-c8118e3b1133",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Scaling vision transformers to 22 billion parameters",
             "pub_year": 2023,
             "citation": "Oral @ International Conference on Machine Learning (ICML 2023), 2023",
@@ -12,7 +29,7 @@
         },
         "filled": true,
         "author_pub_id": "w3kGtMIAAAAJ:2P1L_qKh6hAC",
-        "num_citations": 97,
+        "num_citations": 114,
         "citedby_url": "/scholar?hl=en&cites=10337440426415537279",
         "cites_id": [
             "10337440426415537279"
@@ -21,7 +38,7 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:f7xCN0z3dY8J:scholar.google.com/",
         "cites_per_year": {
             "2022": 1,
-            "2023": 96
+            "2023": 113
         }
     },
     {
@@ -41,7 +58,7 @@
         },
         "filled": true,
         "author_pub_id": "w3kGtMIAAAAJ:zA6iFVUQeVQC",
-        "num_citations": 9,
+        "num_citations": 10,
         "citedby_url": "/scholar?hl=en&cites=10650409145062585026,1703505891390463570,1426305078765597264",
         "cites_id": [
             "10650409145062585026",
@@ -52,7 +69,7 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:wvIGbLDazZMJ:scholar.google.com/",
         "cites_per_year": {
             "2022": 3,
-            "2023": 6
+            "2023": 7
         }
     },
     {
@@ -69,7 +86,7 @@
         },
         "filled": true,
         "author_pub_id": "w3kGtMIAAAAJ:ldfaerwXgEUC",
-        "num_citations": 6,
+        "num_citations": 10,
         "citedby_url": "/scholar?hl=en&cites=8870502238731100164",
         "cites_id": [
             "8870502238731100164"
@@ -77,7 +94,7 @@
         "pub_url": "https://www.annualreviews.org/doi/abs/10.1146/annurev-vision-120522-031739",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BODfxslaGnsJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 6
+            "2023": 9
         }
     },
     {
@@ -107,23 +124,6 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Intriguing properties of generative classifiers",
-            "pub_year": 2023,
-            "citation": "Oral @ OOD-CV Workshop (ICCV 2023), 2023",
-            "author": "Priyank Jaini and Kevin Clark and Robert Geirhos",
-            "journal": "Oral @ OOD-CV Workshop (ICCV 2023)",
-            "abstract": "What is the best paradigm to recognize objects -- discriminative inference (fast but potentially prone to shortcut learning) or using a generative model (slow but potentially more robust)? We build on recent advances in generative modeling that turn text-to-image models into classifiers. This allows us to study their behavior and to compare them against discriminative models and human psychophysical data. We report four intriguing emergent properties of generative classifiers: they show a record-breaking human-like shape bias (99% for Imagen), near human-level out-of-distribution accuracy, state-of-the-art alignment with human classification errors, and they understand certain perceptual illusions. Our results indicate that while the current dominant paradigm for modeling human object recognition is discriminative inference, zero-shot generative models approximate human object recognition data surprisingly well."
-        },
-        "filled": true,
-        "author_pub_id": "w3kGtMIAAAAJ:u_35RYKgDlwC",
-        "num_citations": 0,
-        "pub_url": "https://arxiv.org/abs/2309.16779",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
             "title": "Don't trust your eyes: on the (un) reliability of feature visualizations",
             "pub_year": 2023,
             "citation": "New Frontiers in Adversarial Machine Learning Workshop (ICML 2023), 2023",
@@ -133,9 +133,55 @@
         },
         "filled": true,
         "author_pub_id": "w3kGtMIAAAAJ:g5m5HwL7SMYC",
-        "num_citations": 0,
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=13494620787600136581",
+        "cites_id": [
+            "13494620787600136581"
+        ],
         "pub_url": "https://arxiv.org/abs/2306.04719",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:hRmC1xuGRrsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Intriguing properties of generative classifiers",
+            "pub_year": 2023,
+            "citation": "Oral @ OOD-CV Workshop (ICCV 2023), 2023",
+            "author": "Priyank Jaini and Kevin Clark and Robert Geirhos",
+            "journal": "Oral @ OOD-CV Workshop (ICCV 2023)",
+            "abstract": "What is the best paradigm to recognize objects -- discriminative inference (fast but potentially prone to shortcut learning) or using a generative model (slow but potentially more robust)? We build on recent advances in generative modeling that turn text-to-image models into classifiers. This allows us to study their behavior and to compare them against discriminative models and human psychophysical data. We report four intriguing emergent properties of generative classifiers: they show a record-breaking human-like shape bias (99% for Imagen), near human-level out-of-distribution accuracy, state-of-the-art alignment with human classification errors, and they understand certain perceptual illusions. Our results indicate that while the current dominant paradigm for modeling human object recognition is discriminative inference, zero-shot generative models approximate human object recognition data surprisingly well."
+        },
+        "filled": true,
+        "author_pub_id": "w3kGtMIAAAAJ:u_35RYKgDlwC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=7271744308070275417",
+        "cites_id": [
+            "7271744308070275417"
+        ],
+        "pub_url": "https://arxiv.org/abs/2309.16779",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Getting aligned on representational alignment",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2310.13018, 2023",
+            "author": "Ilia Sucholutsky and Lukas Muttenthaler and Adrian Weller and Andi Peng and Andreea Bobu and Been Kim and Bradley C Love and Erin Grant and Jascha Achterberg and Joshua B Tenenbaum and Katherine M Collins and Katherine L Hermann and Kerem Oktar and Klaus Greff and Martin N Hebart and Nori Jacoby and Raja Marjieh and Robert Geirhos and Sherol Chen and Simon Kornblith and Sunayana Rane and Talia Konkle and Thomas P O'Connell and Thomas Unterthiner and Andrew K Lampinen and Klaus-Robert M\u00fcller and Mariya Toneva and Thomas L Griffiths",
+            "journal": "arXiv preprint arXiv:2310.13018",
+            "abstract": "Biological and artificial information processing systems form representations of the world that they can use to categorize, reason, plan, navigate, and make decisions. To what extent do the representations formed by these diverse systems agree? Can diverging representations still lead to the same behaviors? And how can systems modify their representations to better match those of another system? These questions pertaining to the study of \\textbf{\\emph{representational alignment}} are at the heart of some of the most active research areas in contemporary cognitive science, neuroscience, and machine learning. Unfortunately, there is limited knowledge-transfer between research communities interested in representational alignment, and much of the progress in one field ends up being rediscovered independently in another, when greater cross-field communication would be advantageous. To improve communication between fields, we propose a unifying framework that can serve as a common language between researchers studying representational alignment. We survey the literature from the fields of cognitive science, neuroscience, and machine learning, and demonstrate how prior work fits into this framework. Finally, we lay out open problems in representational alignment where progress can benefit all three fields. We hope that our work can catalyze cross-disciplinary collaboration and accelerate progress for all communities studying and developing information processing systems. We note that this is a working paper and encourage readers to reach out with their suggestions for future revisions."
+        },
+        "filled": true,
+        "author_pub_id": "w3kGtMIAAAAJ:4OULZ7Gr8RgC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2310.13018",
         "cites_per_year": {}
     }
 ]

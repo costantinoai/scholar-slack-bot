@@ -3,6 +3,58 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Category-selective representation of relationships in visual cortex",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Etienne Abassi and Liuba Papeo",
+            "publisher": "PsyArXiv",
+            "abstract": "Understanding social interaction requires processing social agents and their relationship. Latest results show that much of this process is visually solved: visual areas can represent multiple people encoding emergent information about their interaction that is not explained by the response to the individuals alone. A neural signature of this process is an increased response in visual areas, to face-to-face (seemingly interacting) people, relative to people presented as unrelated (back-to-back). This effect highlighted a network of visual areas for representing relational information. How is this network organized? Using functional MRI, we measured brain activity of healthy female and male humans (N= 42), in response to images of two faces or two (head-blurred) bodies, facing toward or away from each other. Taking the facing> non-facing effect as signature of relation perception, we found that relations between faces and between bodies were coded in distinct areas, mirroring the categorical representation of faces and bodies in visual cortex. Additional analyses suggest the existence of a third network encoding relations between (non-social) objects. Finally, a separate occipitotemporal network showed generalization of relational information across body, face and non-social object dyads (multivariate-pattern classification analysis), revealing shared properties of relations across categories. In sum, beyond single entities, visual cortex encodes the relations that bind multiple entities into relationships; it does so in a category-selective fashion, thus respecting a general organizing principle of representation in high-level vision. Visual areas encoding \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "isdiwE8AAAAJ:J_g5lzvAfSwC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/preprints/psyarxiv/w9c8x/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Evidence for a role of synchrony but not common fate in the perception of biological group movements",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Emiel Cracco and Liuba Papeo and Jan R Wiersema",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Extensive research has shown that observers are able to efficiently extract summary information from groups of people. However, little is known about the cues that determine whether multiple people are represented as a social group or as independent individuals. Initial research on this topic has primarily focused on the role of static cues. Here, we instead investigate the role of dynamic cues. In two experiments with male and female human participants, we use EEG frequency tagging to investigate the influence of two fundamental Gestalt principles - synchrony and common fate - on the grouping of biological movements. In Experiment 1, we find that brain responses coupled to four point-light figures walking together are enhanced when they move in sync vs. out of sync, but only when they are presented upright. In contrast, we found no effect of movement direction (i.e., common fate). In Experiment 2, we rule out \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "isdiwE8AAAAJ:RYcK_YlVTxYC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.10.21.563400",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A perceptual cue-based mechanism for automatic assignment of thematic agent and patient roles",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Sofie Vettori and Catherine Odin and Jean-R\u00e9my Hochmann and Liuba Papeo",
+            "publisher": "PsyArXiv",
+            "abstract": "Understanding a social event requires assigning the participating entities to roles such as agent and patient, a mental operation that is reportedly effortless. We investigated whether, in processing visual scenes, role assignment is accomplished automatically (ie, when the task does not require it), based on visuo-spatial information alone. Participants (male and female human adults) saw a series of images featuring the same male and female actors next to each other, one in an agent-like (more dynamic, leaning forward) and the other in a patient-like (static/less dynamic) posture. They had to indicate the side (left/right) of a target-actor (ie, the female). From trial to trial, body postures changed, but the roles, defined by the type of posture, sometimes changed, sometimes not. If participants spontaneously saw the actors as agent and patient, they should be slower to respond when roles switched from trial n-1 to trial n, than when they stayed the same (role-switch cost). Results confirmed this hypothesis (Experiments 1-3). A role-switch cost was also found when roles were defined by another visual relational cue, the relative positioning (where one actor stands relative to another), but not when actors were presented in isolation (Experiments 4-6). These findings reveal a mechanism for automatic role assignment based on encoding of visual relational information in social (multiple-person) scenes. Since we found that role assignment in one trial affected the same process in the subsequent trial, this mechanism must be one that assigns entities in a scene, to the abstract categories of agent and patient."
+        },
+        "filled": true,
+        "author_pub_id": "isdiwE8AAAAJ:NaGl4SEjCO4C",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/preprints/psyarxiv/ydgca/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Intermodulation responses show integration of interacting bodies in a new whole",
             "pub_year": 2023,
             "citation": "Cortex 165, 129-140, 2023",

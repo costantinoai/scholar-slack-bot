@@ -13,7 +13,7 @@
         },
         "filled": true,
         "author_pub_id": "w6M4YN4AAAAJ:HfY9tUF4VgMC",
-        "num_citations": 18,
+        "num_citations": 27,
         "citedby_url": "/scholar?hl=en&cites=3334113232536501466",
         "cites_id": [
             "3334113232536501466"
@@ -21,8 +21,8 @@
         "pub_url": "https://www.nature.com/articles/s41583-023-00705-w",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2nxE8lEmRS4J:scholar.google.com/",
         "cites_per_year": {
-            "2022": 3,
-            "2023": 15
+            "2022": 5,
+            "2023": 22
         }
     },
     {
@@ -138,6 +138,54 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "The Topology and Geometry of Neural Representations",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2309.11028, 2023",
+            "author": "Baihan Lin and Nikolaus Kriegeskorte",
+            "journal": "arXiv preprint arXiv:2309.11028",
+            "abstract": "A central question for neuroscience is how to characterize brain representations of perceptual and cognitive content. An ideal characterization should distinguish different functional regions with robustness to noise and idiosyncrasies of individual brains that do not correspond to computational differences. Previous studies have characterized brain representations by their representational geometry, which is defined by the representational dissimilarity matrix (RDM), a summary statistic that abstracts from the roles of individual neurons (or responses channels) and characterizes the discriminability of stimuli. Here we explore a further step of abstraction: from the geometry to the topology of brain representations. We propose topological representational similarity analysis (tRSA), an extension of representational similarity analysis (RSA) that uses a family of geo-topological summary statistics that generalizes the RDM to characterize the topology while de-emphasizing the geometry. We evaluate this new family of statistics in terms of the sensitivity and specificity for model selection using both simulations and functional MRI (fMRI) data. In the simulations, the ground truth is a data-generating layer representation in a neural network model and the models are the same and other layers in different model instances (trained from different random seeds). In fMRI, the ground truth is a visual area and the models are the same and other areas measured in different subjects. Results show that topology-sensitive characterizations of population codes are robust to noise and interindividual variability and maintain excellent sensitivity to the unique representational \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:UCVoGz2p8ukC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=12634262868688151801",
+        "cites_id": [
+            "12634262868688151801"
+        ],
+        "pub_url": "https://arxiv.org/abs/2309.11028",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Experientially-grounded and distributional semantic vectors uncover dissociable representations of conceptual categories",
+            "pub_year": 2023,
+            "citation": "Language, Cognition and Neuroscience, 1-25, 2023",
+            "author": "Francesca Carota and Hamed Nili and Nikolaus Kriegeskorte and Friedemann Pulverm\u00fcller",
+            "journal": "Language, Cognition and Neuroscience",
+            "pages": "1-25",
+            "publisher": "Routledge",
+            "abstract": "Neuronal populations code similar concepts by similar activity patterns across the human brain's semantic networks. However, it is unclear to what extent such meaning-to-symbol mapping reflects distributional statistics, or experiential information grounded in sensorimotor and emotional knowledge. We asked whether integrating distributional and experiential data better distinguished conceptual categories than each method taken separately. We examined the similarity structure of fMRI patterns elicited by visually presented action- and object-related words using representational similarity analysis (RSA). We found that the distributional and experiential/integrative models respectively mapped the high-dimensional semantic space in left inferior frontal, anterior temporal, and in left precentral, posterior inferior/middle temporal cortex. Furthermore, results from model comparisons uncovered category-specific similarity \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:LHWLPdAD5FMC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=3395810221058183308",
+        "cites_id": [
+            "3395810221058183308"
+        ],
+        "pub_url": "https://www.tandfonline.com/doi/abs/10.1080/23273798.2023.2232481",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Affinity-based Attention in Self-supervised Transformers Predicts Dynamics of Object Grouping in Humans",
             "pub_year": 2023,
             "citation": "arXiv preprint arXiv:2306.00294, 2023",
@@ -162,17 +210,42 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "The Topology and Geometry of Neural Representations",
+            "title": "Predicting brain activity using Transformers",
             "pub_year": 2023,
-            "citation": "arXiv preprint arXiv:2309.11028, 2023",
-            "author": "Baihan Lin and Nikolaus Kriegeskorte",
-            "journal": "arXiv preprint arXiv:2309.11028",
-            "abstract": "A central question for neuroscience is how to characterize brain representations of perceptual and cognitive content. An ideal characterization should distinguish different functional regions with robustness to noise and idiosyncrasies of individual brains that do not correspond to computational differences. Previous studies have characterized brain representations by their representational geometry, which is defined by the representational dissimilarity matrix (RDM), a summary statistic that abstracts from the roles of individual neurons (or responses channels) and characterizes the discriminability of stimuli. Here we explore a further step of abstraction: from the geometry to the topology of brain representations. We propose topological representational similarity analysis (tRSA), an extension of representational similarity analysis (RSA) that uses a family of geo-topological summary statistics that generalizes the RDM to characterize the topology while de-emphasizing the geometry. We evaluate this new family of statistics in terms of the sensitivity and specificity for model selection using both simulations and functional MRI (fMRI) data. In the simulations, the ground truth is a data-generating layer representation in a neural network model and the models are the same and other layers in different model instances (trained from different random seeds). In fMRI, the ground truth is a visual area and the models are the same and other areas measured in different subjects. Results show that topology-sensitive characterizations of population codes are robust to noise and interindividual variability and maintain excellent sensitivity to the unique representational \u2026"
+            "citation": "bioRxiv, 2023.08. 02.551743, 2023",
+            "author": "Hossein Adeli and Sun Minni and Nikolaus Kriegeskorte",
+            "journal": "bioRxiv",
+            "pages": "2023.08. 02.551743",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The Algonauts challenge (Gifford et al. [2023]) called on the community to provide novel solutions for predicting brain activity of humans viewing natural scenes. This report provides an overview and technical details of our submitted solution. We use a general transformer encoder-decoder model to map images to fMRI responses. The encoder model is a vision transformer trained using self-supervised methods (DINOv2). The decoder uses queries corresponding to different brain regions of interests (ROI) in different hemispheres to gather relevant information from the encoder output for predicting neural activity in each ROI. The output tokens from the decoder are then linearly mapped to the fMRI activity. The predictive success (challenge score: 63.5229, rank 2) suggests that features from self-supervised transformers may deserve consideration as models of human visual brain representations and shows the effectiveness of transformer mechanisms (self and cross-attention) to learn the mapping from features to brain responses."
         },
         "filled": true,
-        "author_pub_id": "w6M4YN4AAAAJ:UCVoGz2p8ukC",
+        "author_pub_id": "w6M4YN4AAAAJ:OWslULmvb_UC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=12489228320654659643",
+        "cites_id": [
+            "12489228320654659643"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.02.551743.abstract",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Human-like multiple object tracking through occlusion via gaze-following",
+            "pub_year": 2023,
+            "citation": "NeuRIPS 2023 Workshop on Gaze Meets ML, 2023",
+            "author": "Benjamin Peters and Eivinas Butkus and Nikolaus Kriegeskorte",
+            "conference": "NeuRIPS 2023 Workshop on Gaze Meets ML",
+            "abstract": "State-of-the art multiple object tracking (MOT) models have recently been shown to behave in qualitatively different ways from human observers. They exhibit superhuman performance for large numbers of targets and subhuman performance when targets disappear behind occluders. Here we investigate whether human gaze behavior can help explain differences in human and model behavior. Human subjects watched scenes with objects of various appearances. They tracked a designated subset of the objects, which moved continuously and frequently disappeared behind static black-bar occluders, reporting the designated objects at the end of each trial. We measured eye movements during tracking and tracking accuracy. We found that human gaze behavior is clearly guided by task-relevance: designated objects were preferentially fixated. We compared human performance to that of cognitive models inspired by state-of-the art MOT models with object slots, where each slot represents model's probabilistic belief about the location and appearance of one object. In our model, incoming observations are unambiguously assigned to slots using the Hungarian algorithm. Locations are tracked probabilistically (given the hard assignment) with one Kalman filter per slot. We equipped the computational models with a fovea, yielding high-precision observations at the center and low-precision observations in the periphery. We found that constraining models to follow the same gaze behavior as humans (imposing the human measured fixation sequences) yields best captures human behavioral phenomena. These results demonstrate the importance of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:zG6RlwjYRPQC",
         "num_citations": 0,
-        "pub_url": "https://arxiv.org/abs/2309.11028",
+        "pub_url": "https://openreview.net/forum?id=arfdjgKyhz",
         "cites_per_year": {}
     },
     {
@@ -263,25 +336,6 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Experientially-grounded and distributional semantic vectors uncover dissociable representations of conceptual categories",
-            "pub_year": 2023,
-            "citation": "Language, Cognition and Neuroscience, 1-25, 2023",
-            "author": "Francesca Carota and Hamed Nili and Nikolaus Kriegeskorte and Friedemann Pulverm\u00fcller",
-            "journal": "Language, Cognition and Neuroscience",
-            "pages": "1-25",
-            "publisher": "Routledge",
-            "abstract": "Neuronal populations code similar concepts by similar activity patterns across the human brain's semantic networks. However, it is unclear to what extent such meaning-to-symbol mapping reflects distributional statistics, or experiential information grounded in sensorimotor and emotional knowledge. We asked whether integrating distributional and experiential data better distinguished conceptual categories than each method taken separately. We examined the similarity structure of fMRI patterns elicited by visually presented action- and object-related words using representational similarity analysis (RSA). We found that the distributional and experiential/integrative models respectively mapped the high-dimensional semantic space in left inferior frontal, anterior temporal, and in left precentral, posterior inferior/middle temporal cortex. Furthermore, results from model comparisons uncovered category-specific similarity \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "w6M4YN4AAAAJ:LHWLPdAD5FMC",
-        "num_citations": 0,
-        "pub_url": "https://www.tandfonline.com/doi/abs/10.1080/23273798.2023.2232481",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
             "title": "Experientially-grounded and distributional semantic vectors uncover dissociable representations of semantic categories",
             "pub_year": 2023,
             "citation": "Language, Cognition and Neuroscience. Advance online publication, 2023",
@@ -294,6 +348,25 @@
         "author_pub_id": "w6M4YN4AAAAJ:USX2HHcnDqcC",
         "num_citations": 0,
         "pub_url": "https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_3517871",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "TorchLens: A Python package for extracting and visualizing hidden activations of PyTorch models",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "JohnMark Taylor and Nikolaus Kriegeskorte",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory Preprints",
+            "abstract": "Deep neural network models (DNNs) are essential to modern AI and provide powerful models of information processing in biological neural networks. Researchers in both neuroscience and engineering are pursuing a better understanding of the internal representations and operations that undergird the successes and failures of DNNs. Neuroscientists additionally evaluate DNNs as models of brain computation by comparing their internal representations to those found in brains. It is therefore essential to have a method to easily and exhaustively extract and characterize the results of the internal operations of any DNN. Many models are implemented in PyTorch, the leading framework for building DNN models. Here we introduce TorchLens, a new open-source Python package for extracting and characterizing hidden-layer activations in PyTorch models. Uniquely among existing approaches to this problem \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:ealulPZkXgsC",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10055035/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:kIx1MolL5-MJ:scholar.google.com/",
         "cites_per_year": {}
     },
     {
@@ -318,19 +391,19 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Predicting brain activity using Transformers",
+            "title": "Iterative convergent computation may not be a useful inductive bias for residual neural networks",
             "pub_year": 2023,
-            "citation": "bioRxiv, 2023.08. 02.551743, 2023",
-            "author": "Hossein Adeli and Sun Minni and Nikolaus Kriegeskorte",
+            "citation": "bioRxiv, 2023.10. 13.562196, 2023",
+            "author": "Samuel Lippl and Benjamin Peters and Nikolaus Kriegeskorte",
             "journal": "bioRxiv",
-            "pages": "2023.08. 02.551743",
+            "pages": "2023.10. 13.562196",
             "publisher": "Cold Spring Harbor Laboratory",
-            "abstract": "The Algonauts challenge (Gifford et al. [2023]) called on the community to provide novel solutions for predicting brain activity of humans viewing natural scenes. This report provides an overview and technical details of our submitted solution. We use a general transformer encoder-decoder model to map images to fMRI responses. The encoder model is a vision transformer trained using self-supervised methods (DINOv2). The decoder uses queries corresponding to different brain regions of interests (ROI) in different hemispheres to gather relevant information from the encoder output for predicting neural activity in each ROI. The output tokens from the decoder are then linearly mapped to the fMRI activity. The predictive success (challenge score: 63.5229, rank 2) suggests that features from self-supervised transformers may deserve consideration as models of human visual brain representations and shows the effectiveness of transformer mechanisms (self and cross-attention) to learn the mapping from features to brain responses."
+            "abstract": "Recent work has suggested that feedforward residual neural networks (ResNets) approximate iterative recurrent computations. Iterative computations are useful in many domains, so they might provide good solutions for neural networks to learn. Here we quantify the degree to which ResNets learn iterative solutions and introduce a regularization approach that encourages learning of iterative solutions. Iterative methods are characterized by two properties: iteration and convergence. To quantify these properties, we define three indices of iterative convergence. Consistent with previous work, we show that, even though ResNets can express iterative solutions, they do not learn them when trained conventionally on computer vision tasks. We then introduce regularizations to encourage iterative convergent computation and test whether this provides a useful inductive bias. To make the networks more iterative, we manipulate the degree of weight sharing across layers using soft gradient coupling. This new method provides a form of recurrence regularization and can interpolate smoothly between an ordinary ResNet and a \u201crecurrent\u201d ResNet (i.e., one that uses identical weights across layers and thus could be physically implemented with a recurrent network computing the successive stages iteratively across time). To make the networks more convergent we impose a Lipschitz constraint on the residual functions using spectral normalization. The three indices of iterative convergence reveal that the gradient coupling and the Lipschitz constraint succeed at making the networks iterative and convergent, respectively. However, neither recurrence \u2026"
         },
         "filled": true,
-        "author_pub_id": "w6M4YN4AAAAJ:OWslULmvb_UC",
+        "author_pub_id": "w6M4YN4AAAAJ:KtrhGiDecpEC",
         "num_citations": 0,
-        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.08.02.551743.abstract",
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.10.13.562196.abstract",
         "cites_per_year": {}
     },
     {
@@ -347,26 +420,6 @@
         "author_pub_id": "w6M4YN4AAAAJ:q2HS4OCVtYIC",
         "num_citations": 0,
         "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/295392/295392.pdf?sequence=1",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "TorchLens: A Python package for extracting and visualizing hidden activations of PyTorch models",
-            "pub_year": 2023,
-            "citation": "bioRxiv, 2023.03. 16.532916, 2023",
-            "author": "JohnMark E Taylor and Nikolaus Kriegeskorte",
-            "journal": "bioRxiv",
-            "pages": "2023.03. 16.532916",
-            "publisher": "Cold Spring Harbor Laboratory",
-            "abstract": "Deep neural network models (DNNs) are essential to modern AI and provide powerful models of information processing in biological neural networks. Researchers in both neuroscience and engineering are pursuing a better understanding of the internal representations and operations that undergird the successes and failures of DNNs. Neuroscientists additionally evaluate DNNs as models of brain computation by comparing their internal representations to those found in brains. It is therefore essential to have a method to easily and exhaustively extract and characterize the results of the internal operations of any DNN. Many models are implemented in PyTorch, the leading framework for building DNN models. Here we introduce TorchLens, a new open-source Python package for extracting and characterizing hidden-layer activations in PyTorch models. Uniquely among existing approaches to this problem, TorchLens has the following features: (1) it exhaustively extracts the results of all intermediate operations, not just those associated with PyTorch module objects, yielding a full record of every step in the model's computational graph, (2) it provides an intuitive visualization of the model's complete computational graph along with metadata about each computational step in a model's forward pass for further analysis, (3) it contains a built-in validation procedure to algorithmically verify the accuracy of all saved hidden-layer activations, and (4) the approach it uses can be automatically applied to any PyTorch model with no modifications, including models with conditional (if-then) logic in their forward pass, recurrent models, branching models where \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "w6M4YN4AAAAJ:ealulPZkXgsC",
-        "num_citations": 0,
-        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.03.16.532916.abstract",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:kIx1MolL5-MJ:scholar.google.com/",
         "cites_per_year": {}
     },
     {

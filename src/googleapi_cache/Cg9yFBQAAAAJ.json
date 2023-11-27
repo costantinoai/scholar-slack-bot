@@ -3,6 +3,47 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "I see! How narrative meaning influences gaze behaviour",
+            "pub_year": 2023,
+            "citation": "Sl: sn, 2023",
+            "author": "E Berlot and LM Schmitt and C Huber-Huber and MV Peelen and FP de Lange",
+            "publisher": "Sl: sn",
+            "abstract": "We use visual information to build up complex and meaningful mental models of ourselves and our environments. However, it is largely unknown how expectations derived from these complex mental models influence eye movements. To address this question we here recorded gaze behaviour of adult human volunteers as they were watching picture stories. These were presented either in a meaningful order, or a scrambled order. Each story was presented repeatedly, allowing to assess how narrative knowledge influences subsequent visual sampling. We tested how a state-of-the-art model of gaze behaviour based on visual saliency, DeepGaze II, accounts for the observed gaze behaviour. Our preliminary results indicate that the model captures gaze behaviour better when images are presented in a scrambled than intact order, and during first rather than subsequent viewing. This suggests that as one acquires expectations about the narrative, either from world knowledge or from previous experience, sampling behaviour starts to deviate from what can be predicted based on a visual saliency model. We speculate that this is caused by a shift towards information sampling based on meaning-based expectations. We are currently testing this hypothesis by quantifying meaning-based expectations in stories using language modelling (GPT-2)."
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:vbGhcppDl1QC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/297730/297730.pdf?sequence=1",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predictive processing of scenes and objects",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Marius Peelen and Eva Berlot and Floris de Lange",
+            "publisher": "PsyArXiv",
+            "abstract": "Real-world visual input consists of rich scenes that are meaningfully composed of multiple objects which interact in complex, but predictable, ways. Despite this complexity, we recognize scenes, and objects within these scenes, from a brief glance at an image. In this review, we synthesize recent behavioral and neural findings that elucidate the mechanisms underlying this impressive ability. First, we review evidence that visual object and scene processing is partly implemented in parallel, allowing for a rapid initial gist of both objects and scenes concurrently. Next, we discuss recent evidence for bidirectional interactions between object and scene processing, with scene information modulating the visual processing of objects, and object information modulating the visual processing of scenes. Finally, we review evidence that objects also combine with each other to form object constellations, modulating the processing of individual objects within the object pathway. Altogether, these findings can be understood by conceptualizing object and scene perception as the outcome of a joint probabilistic inference, in which \u201cbest guesses\u201d about objects act as priors for scene perception and vice versa, in order to concurrently optimize visual inference of objects and scenes."
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:uWiczbcajpAC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=10223297898015311038",
+        "cites_id": [
+            "10223297898015311038"
+        ],
+        "pub_url": "https://psyarxiv.com/nuf59/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vkQz3EVz4I0J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Predictive processing of scene layout depends on naturalistic depth of field",
             "pub_year": 2023,
             "citation": "Psychological Science 34 (3), 394-405, 2023",
@@ -43,37 +84,12 @@
         "filled": true,
         "author_pub_id": "Cg9yFBQAAAAJ:BwyfMAYsbu0C",
         "num_citations": 3,
-        "citedby_url": "/scholar?hl=en&cites=12029598008849054893,5506719857488973539",
+        "citedby_url": "/scholar?hl=en&cites=12029598008849054893",
         "cites_id": [
-            "12029598008849054893",
-            "5506719857488973539"
+            "12029598008849054893"
         ],
         "pub_url": "https://www.nature.com/articles/s41562-023-01680-z",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:rbwxTKe38aYJ:scholar.google.com/",
-        "cites_per_year": {
-            "2023": 3
-        }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Predictive processing of scenes and objects",
-            "pub_year": 2023,
-            "citation": "PsyArXiv, 2023",
-            "author": "Marius Peelen and Eva Berlot and Floris de Lange",
-            "publisher": "PsyArXiv",
-            "abstract": "Real-world visual input consists of rich scenes that are meaningfully composed of multiple objects which interact in complex, but predictable, ways. Despite this complexity, we recognize scenes, and objects within these scenes, from a brief glance at an image. In this review, we synthesize recent behavioral and neural findings that elucidate the mechanisms underlying this impressive ability. First, we review evidence that visual object and scene processing is partly implemented in parallel, allowing for a rapid initial gist of both objects and scenes concurrently. Next, we discuss recent evidence for bidirectional interactions between object and scene processing, with scene information modulating the visual processing of objects, and object information modulating the visual processing of scenes. Finally, we review evidence that objects also combine with each other to form object constellations, modulating the processing of individual objects within the object pathway. Altogether, these findings can be understood by conceptualizing object and scene perception as the outcome of a joint probabilistic inference, in which \u201cbest guesses\u201d about objects act as priors for scene perception and vice versa, in order to concurrently optimize visual inference of objects and scenes."
-        },
-        "filled": true,
-        "author_pub_id": "Cg9yFBQAAAAJ:uWiczbcajpAC",
-        "num_citations": 3,
-        "citedby_url": "/scholar?hl=en&cites=10223297898015311038",
-        "cites_id": [
-            "10223297898015311038"
-        ],
-        "pub_url": "https://psyarxiv.com/nuf59/download?format=pdf",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vkQz3EVz4I0J:scholar.google.com/",
         "cites_per_year": {
             "2023": 3
         }

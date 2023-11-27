@@ -3,6 +3,40 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "I see! How narrative meaning influences gaze behaviour",
+            "pub_year": 2023,
+            "citation": "Sl: sn, 2023",
+            "author": "E Berlot and LM Schmitt and C Huber-Huber and MV Peelen and FP de Lange",
+            "publisher": "Sl: sn",
+            "abstract": "We use visual information to build up complex and meaningful mental models of ourselves and our environments. However, it is largely unknown how expectations derived from these complex mental models influence eye movements. To address this question we here recorded gaze behaviour of adult human volunteers as they were watching picture stories. These were presented either in a meaningful order, or a scrambled order. Each story was presented repeatedly, allowing to assess how narrative knowledge influences subsequent visual sampling. We tested how a state-of-the-art model of gaze behaviour based on visual saliency, DeepGaze II, accounts for the observed gaze behaviour. Our preliminary results indicate that the model captures gaze behaviour better when images are presented in a scrambled than intact order, and during first rather than subsequent viewing. This suggests that as one acquires expectations about the narrative, either from world knowledge or from previous experience, sampling behaviour starts to deviate from what can be predicted based on a visual saliency model. We speculate that this is caused by a shift towards information sampling based on meaning-based expectations. We are currently testing this hypothesis by quantifying meaning-based expectations in stories using language modelling (GPT-2)."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:4X0JR2_MtJMC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/297730/297730.pdf?sequence=1",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Probing next-word and long-distance prediction using encoding modelling and MEG",
+            "pub_year": 2023,
+            "citation": "Sl: sn, 2023",
+            "author": "In\u00e9s Sch\u00f6nmann and Floris P de Lange and Micha Heilbron",
+            "publisher": "Sl: sn",
+            "abstract": "Encoding approaches relying on Large Language Models (LLMs) have found evidence for next-word prediction in ECoG and fMRI. Here, using non- invasive MEG, we show that contextualised as well as non-contextualised word embeddings can predict brain responses well before word onset. We find that encoding performance is sensitive to predictions, but - contrary to findings from fMRI - we do not observe signatures of predictions of multiple words ahead."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:sJsF-0ZLhtgC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/297729/297729.pdf?sequence=1",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "An adversarial collaboration protocol for testing contrasting predictions of global neuronal workspace and integrated information theory",
             "pub_year": 2023,
             "citation": "Plos one 18 (2), e0268577, 2023",
@@ -16,7 +50,7 @@
         },
         "filled": true,
         "author_pub_id": "5z1S51MAAAAJ:fbc8zXXH2BUC",
-        "num_citations": 13,
+        "num_citations": 16,
         "citedby_url": "/scholar?hl=en&cites=7914041899117919303",
         "cites_id": [
             "7914041899117919303"
@@ -25,7 +59,7 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Rzx7Ri1T1G0J:scholar.google.com/",
         "cites_per_year": {
             "2022": 1,
-            "2023": 12
+            "2023": 15
         }
     },
     {
@@ -44,7 +78,7 @@
         },
         "filled": true,
         "author_pub_id": "5z1S51MAAAAJ:DJbcl8HfkQkC",
-        "num_citations": 10,
+        "num_citations": 12,
         "citedby_url": "/scholar?hl=en&cites=3694631022955904409",
         "cites_id": [
             "3694631022955904409"
@@ -52,7 +86,7 @@
         "pub_url": "https://elifesciences.org/articles/78904",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:mb1sI1f3RTMJ:scholar.google.com/",
         "cites_per_year": {
-            "2023": 10
+            "2023": 12
         }
     },
     {
@@ -72,7 +106,7 @@
         },
         "filled": true,
         "author_pub_id": "5z1S51MAAAAJ:OcBU2YAGkTUC",
-        "num_citations": 4,
+        "num_citations": 8,
         "citedby_url": "/scholar?hl=en&cites=9295859663534185249",
         "cites_id": [
             "9295859663534185249"
@@ -81,6 +115,56 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:IVvWxhyHAYEJ:scholar.google.com/",
         "cites_per_year": {
             "2022": 1,
+            "2023": 7
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An adversarial collaboration to critically evaluate theories of consciousness",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.06. 23.546249, 2023",
+            "author": "Cogitate Consortium and Oscar Ferrante and Urszula Gorska-Klimowska and Simon Henin and Rony Hirschhorn and Aya Khalaf and Alex Lepauvre and Ling Liu and David Richter and Yamil Vidal and Niccolo Bonacchi and Tanya Brown and Praveen Sripad and Marcelo Armendariz and Katarina Bendtz and Tara Ghafari and Dorottya Hetenyi and Jay Jeschke and Csaba Kozma and David Rahul Mazumder and Stephanie Montenegro and Alia Seedat and Abdelrahman Sharafeldin and Shujun Yang and Sylvain Baillet and David J Chalmers and Radoslaw M Cichy and Francis Fallon and Theofanis I Panagiotaropoulos and Hal Blumenfeld and Sasha Devore and Ole Jensen and Gabriel Kreiman and Floris P de Lange and Huan Luo and Melanie Boly and Stanislas Dehaene and Christof Koch and Giulio Tononi and Michael Pitts and Liad Mudrik and Lucia Melloni",
+            "journal": "bioRxiv",
+            "pages": "2023.06. 23.546249",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Different theories explain how subjective experience arises from brain activity. These theories have independently accrued evidence, yet, confirmation bias and dependence on design choices hamper progress in the field. Here, we present an open science adversarial collaboration which directly juxtaposes Integrated Information Theory (IIT) and Global Neuronal Workspace Theory (GNWT), employing a theory-neutral consortium approach. We investigate neural correlates of the content and duration of visual experience. The theory proponents and the consortium developed and preregistered the experimental design, divergent predictions, expected outcomes, and their interpretation. 256 human subjects viewed suprathreshold stimuli for variable durations while neural activity was measured with functional magnetic resonance imaging, magnetoencephalography, and electrocorticography. We find information about conscious content in visual, ventro-temporal and inferior frontal cortex, with sustained responses in occipital and lateral temporal cortex reflecting stimulus duration, and content-specific synchronization between frontal and early visual areas. These results confirm some predictions of IIT and GNWT, while substantially challenging both theories: for IIT, a lack of sustained synchronization within posterior cortex contradicts the claim that network connectivity specifies consciousness. GNWT is challenged by the general lack of ignition at stimulus offset and limited representation of certain conscious dimensions in prefrontal cortex. Beyond challenging the theories themselves, we present an alternative approach to advance cognitive \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:artPoR2Yc-kC",
+        "num_citations": 5,
+        "citedby_url": "/scholar?hl=en&cites=1934370548687779377",
+        "cites_id": [
+            "1934370548687779377"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.23.546249.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:MTaD6sND2BoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predictive processing of scenes and objects",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Marius Peelen and Eva Berlot and Floris de Lange",
+            "publisher": "PsyArXiv",
+            "abstract": "Real-world visual input consists of rich scenes that are meaningfully composed of multiple objects which interact in complex, but predictable, ways. Despite this complexity, we recognize scenes, and objects within these scenes, from a brief glance at an image. In this review, we synthesize recent behavioral and neural findings that elucidate the mechanisms underlying this impressive ability. First, we review evidence that visual object and scene processing is partly implemented in parallel, allowing for a rapid initial gist of both objects and scenes concurrently. Next, we discuss recent evidence for bidirectional interactions between object and scene processing, with scene information modulating the visual processing of objects, and object information modulating the visual processing of scenes. Finally, we review evidence that objects also combine with each other to form object constellations, modulating the processing of individual objects within the object pathway. Altogether, these findings can be understood by conceptualizing object and scene perception as the outcome of a joint probabilistic inference, in which \u201cbest guesses\u201d about objects act as priors for scene perception and vice versa, in order to concurrently optimize visual inference of objects and scenes."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:5icHVeHT4IsC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=10223297898015311038",
+        "cites_id": [
+            "10223297898015311038"
+        ],
+        "pub_url": "https://psyarxiv.com/nuf59/download?format=pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vkQz3EVz4I0J:scholar.google.com/",
+        "cites_per_year": {
             "2023": 3
         }
     },
@@ -108,30 +192,6 @@
         ],
         "pub_url": "https://www.jneurosci.org/content/43/20/3733.abstract",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:yrl5CZ8vrwgJ:scholar.google.com/",
-        "cites_per_year": {
-            "2023": 3
-        }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Predictive processing of scenes and objects",
-            "pub_year": 2023,
-            "citation": "PsyArXiv, 2023",
-            "author": "Marius Peelen and Eva Berlot and Floris de Lange",
-            "publisher": "PsyArXiv",
-            "abstract": "Real-world visual input consists of rich scenes that are meaningfully composed of multiple objects which interact in complex, but predictable, ways. Despite this complexity, we recognize scenes, and objects within these scenes, from a brief glance at an image. In this review, we synthesize recent behavioral and neural findings that elucidate the mechanisms underlying this impressive ability. First, we review evidence that visual object and scene processing is partly implemented in parallel, allowing for a rapid initial gist of both objects and scenes concurrently. Next, we discuss recent evidence for bidirectional interactions between object and scene processing, with scene information modulating the visual processing of objects, and object information modulating the visual processing of scenes. Finally, we review evidence that objects also combine with each other to form object constellations, modulating the processing of individual objects within the object pathway. Altogether, these findings can be understood by conceptualizing object and scene perception as the outcome of a joint probabilistic inference, in which \u201cbest guesses\u201d about objects act as priors for scene perception and vice versa, in order to concurrently optimize visual inference of objects and scenes."
-        },
-        "filled": true,
-        "author_pub_id": "5z1S51MAAAAJ:5icHVeHT4IsC",
-        "num_citations": 3,
-        "citedby_url": "/scholar?hl=en&cites=10223297898015311038",
-        "cites_id": [
-            "10223297898015311038"
-        ],
-        "pub_url": "https://psyarxiv.com/nuf59/download?format=pdf",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vkQz3EVz4I0J:scholar.google.com/",
         "cites_per_year": {
             "2023": 3
         }
@@ -199,32 +259,6 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "An adversarial collaboration to critically evaluate theories of consciousness",
-            "pub_year": 2023,
-            "citation": "bioRxiv, 2023.06. 23.546249, 2023",
-            "author": "Cogitate Consortium and Oscar Ferrante and Urszula Gorska-Klimowska and Simon Henin and Rony Hirschhorn and Aya Khalaf and Alex Lepauvre and Ling Liu and David Richter and Yamil Vidal and Niccolo Bonacchi and Tanya Brown and Praveen Sripad and Marcelo Armendariz and Katarina Bendtz and Tara Ghafari and Dorottya Hetenyi and Jay Jeschke and Csaba Kozma and David Rahul Mazumder and Stephanie Montenegro and Alia Seedat and Abdelrahman Sharafeldin and Shujun Yang and Sylvain Baillet and David J Chalmers and Radoslaw M Cichy and Francis Fallon and Theofanis I Panagiotaropoulos and Hal Blumenfeld and Sasha Devore and Ole Jensen and Gabriel Kreiman and Floris P de Lange and Huan Luo and Melanie Boly and Stanislas Dehaene and Christof Koch and Giulio Tononi and Michael Pitts and Liad Mudrik and Lucia Melloni",
-            "journal": "bioRxiv",
-            "pages": "2023.06. 23.546249",
-            "publisher": "Cold Spring Harbor Laboratory",
-            "abstract": "Different theories explain how subjective experience arises from brain activity. These theories have independently accrued evidence, yet, confirmation bias and dependence on design choices hamper progress in the field. Here, we present an open science adversarial collaboration which directly juxtaposes Integrated Information Theory (IIT) and Global Neuronal Workspace Theory (GNWT), employing a theory-neutral consortium approach. We investigate neural correlates of the content and duration of visual experience. The theory proponents and the consortium developed and preregistered the experimental design, divergent predictions, expected outcomes, and their interpretation. 256 human subjects viewed suprathreshold stimuli for variable durations while neural activity was measured with functional magnetic resonance imaging, magnetoencephalography, and electrocorticography. We find information about conscious content in visual, ventro-temporal and inferior frontal cortex, with sustained responses in occipital and lateral temporal cortex reflecting stimulus duration, and content-specific synchronization between frontal and early visual areas. These results confirm some predictions of IIT and GNWT, while substantially challenging both theories: for IIT, a lack of sustained synchronization within posterior cortex contradicts the claim that network connectivity specifies consciousness. GNWT is challenged by the general lack of ignition at stimulus offset and limited representation of certain conscious dimensions in prefrontal cortex. Beyond challenging the theories themselves, we present an alternative approach to advance cognitive \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "5z1S51MAAAAJ:artPoR2Yc-kC",
-        "num_citations": 2,
-        "citedby_url": "/scholar?hl=en&cites=1934370548687779377",
-        "cites_id": [
-            "1934370548687779377"
-        ],
-        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.06.23.546249.abstract",
-        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:MTaD6sND2BoJ:scholar.google.com/",
-        "cites_per_year": {
-            "2023": 2
-        }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
             "title": "Perceptual confirmation bias and decision bias underlie adaptation to sequential regularities",
             "pub_year": 2023,
             "citation": "PsyArXiv, 2023",
@@ -274,7 +308,7 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
-            "title": "Lexical Processing Strongly Affects Reading Times But Not Skipping During Natural Reading",
+            "title": "Lexical processing strongly affects reading times but not skipping during natural reading",
             "pub_year": 2023,
             "citation": "Open Mind 7, 757-783, 2023",
             "author": "Micha Heilbron and Jorie van Haren and Peter Hagoort and Floris P de Lange",
@@ -343,6 +377,23 @@
         "num_citations": 0,
         "pub_url": "https://www.nature.com/articles/s42003-022-04335-3",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:P-hLz8dP3P8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Higher-level spatial prediction during natural scene perception in mouse primary visual cortex",
+            "pub_year": 2023,
+            "citation": "Sl: sn, 2023",
+            "author": "M Heilbron and FP de Lange",
+            "publisher": "Sl: sn",
+            "abstract": "Predictive processing models postulate that perception involves the comparison of bottom-up signals with top- down (reconstructive) predictions. Building on recent work, we test this idea in natural scene perception. We use a reconstructing auto-encoder (UNet) to quantify the spatial predictability of natural image patches, and com- pare those predictability estimates to brain responses in the mouse visual system, using a large scale survey of high-density extra-cellular recordings provided by the Allen Institute Brain Observatory. Initial results in V1 re- veal a clear modulation of spiking activity by high (but not low) level visual predictability, suggesting V1 is sensitive to low-level visual features, but high-level predictability. This sensitivity bears striking similarities to recent, self-supervised predictive objectives from machine learning."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:2tRrZ1ZAMYUC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/handle/2066/297731",
         "cites_per_year": {}
     },
     {

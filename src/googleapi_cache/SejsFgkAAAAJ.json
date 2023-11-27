@@ -3,6 +3,25 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Microscale visualization of cellular features in adult macaque visual cortex",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.11. 02.565381, 2023",
+            "author": "Pooja Balaram and Kevin T Takasaki and Ayana Hellevik and Jamuna Tandukar and Emily Turschak and Bryan MacLennan and Naveen Ouellette and Russel Torres and Connor Laughland and Olga Gliko and Sharmistaa Seshamani and Eric Perlman and Mike Taormina and Erica Peterson and Zoe Juneau and Lydia Potekhina and Adam Glaser and Jayaram Chandrashekar and Molly Logsdon and Kevin Cao and Celeste Dylla and Gaku Hatanaka and Soumya Chatterjee and Jonathan T Ting and David Vumbaco and Jack T Waters and Wyeth Bair and Doris Tsao and Ruixuan Gao and Robert Clay Reid",
+            "journal": "bioRxiv",
+            "pages": "2023.11. 02.565381",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Expansion microscopy and light sheet imaging enable fine-scale resolution of intracellular features that comprise neural circuits. Most current techniques visualize sparsely distributed features across whole brains or densely distributed features within individual brain regions. Here, we visualize dense distributions of immunolabeled proteins across early visual cortical areas in adult macaque monkeys. This process may be combined with multiphoton or magnetic resonance imaging to produce multimodal atlases in large, gyrencephalic brains."
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:uWQEDVKXjbEC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.11.02.565381.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Catalyzing next-generation artificial intelligence through neuroai",
             "pub_year": 2023,
             "citation": "Nature communications 14 (1), 1597, 2023",
@@ -15,7 +34,7 @@
         },
         "filled": true,
         "author_pub_id": "SejsFgkAAAAJ:P5F9QuxV20EC",
-        "num_citations": 37,
+        "num_citations": 45,
         "citedby_url": "/scholar?hl=en&cites=7012396176970419900",
         "cites_id": [
             "7012396176970419900"
@@ -24,7 +43,7 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vA6hcCsJUWEJ:scholar.google.com/",
         "cites_per_year": {
             "2022": 1,
-            "2023": 35
+            "2023": 42
         }
     },
     {
@@ -42,7 +61,7 @@
         },
         "filled": true,
         "author_pub_id": "SejsFgkAAAAJ:CHSYGLWDkRkC",
-        "num_citations": 9,
+        "num_citations": 10,
         "citedby_url": "/scholar?hl=en&cites=14695758275896022210",
         "cites_id": [
             "14695758275896022210"
@@ -51,7 +70,7 @@
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:whTKW0rS8csJ:scholar.google.com/",
         "cites_per_year": {
             "2022": 1,
-            "2023": 8
+            "2023": 9
         }
     },
     {
@@ -70,7 +89,7 @@
         },
         "filled": true,
         "author_pub_id": "SejsFgkAAAAJ:4OULZ7Gr8RgC",
-        "num_citations": 7,
+        "num_citations": 8,
         "citedby_url": "/scholar?hl=en&cites=6538156090045081983",
         "cites_id": [
             "6538156090045081983"
@@ -78,8 +97,35 @@
         "pub_url": "https://elifesciences.org/articles/74394",
         "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:f6kxwVIyvFoJ:scholar.google.com/",
         "cites_per_year": {
-            "2022": 2,
+            "2022": 3,
             "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Functional modules for visual scene segmentation in macaque visual cortex",
+            "pub_year": 2023,
+            "citation": "Proceedings of the National Academy of Sciences 120 (32), e2221122120, 2023",
+            "author": "Janis K Hesse and Doris Y Tsao",
+            "journal": "Proceedings of the National Academy of Sciences",
+            "volume": "120",
+            "number": "32",
+            "pages": "e2221122120",
+            "publisher": "National Academy of Sciences",
+            "abstract": "Segmentation, the computation of object boundaries, is one of the most important steps in intermediate visual processing. Previous studies have reported cells across visual cortex that are modulated by segmentation features, but the functional role of these cells remains unclear. First, it is unclear whether these cells encode segmentation consistently since most studies used only a limited variety of stimulus types. Second, it is unclear whether these cells are organized into specialized modules or instead randomly scattered across the visual cortex: the former would lend credence to a functional role for putative segmentation cells. Here, we used fMRI-guided electrophysiology to systematically characterize the consistency and spatial organization of segmentation-encoding cells across the visual cortex. Using fMRI, we identified a set of patches in V2, V3, V3A, V4, and V4A that were more active for stimuli containing \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:UxriW0iASnsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=5052896771658773836",
+        "cites_id": [
+            "5052896771658773836"
+        ],
+        "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2221122120",
+        "cites_per_year": {
+            "2023": 1
         }
     },
     {
@@ -107,27 +153,6 @@
         "cites_per_year": {
             "2023": 1
         }
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Functional modules for visual scene segmentation in macaque visual cortex",
-            "pub_year": 2023,
-            "citation": "Proceedings of the National Academy of Sciences 120 (32), e2221122120, 2023",
-            "author": "Janis K Hesse and Doris Y Tsao",
-            "journal": "Proceedings of the National Academy of Sciences",
-            "volume": "120",
-            "number": "32",
-            "pages": "e2221122120",
-            "publisher": "National Academy of Sciences",
-            "abstract": "Segmentation, the computation of object boundaries, is one of the most important steps in intermediate visual processing. Previous studies have reported cells across visual cortex that are modulated by segmentation features, but the functional role of these cells remains unclear. First, it is unclear whether these cells encode segmentation consistently since most studies used only a limited variety of stimulus types. Second, it is unclear whether these cells are organized into specialized modules or instead randomly scattered across the visual cortex: the former would lend credence to a functional role for putative segmentation cells. Here, we used fMRI-guided electrophysiology to systematically characterize the consistency and spatial organization of segmentation-encoding cells across the visual cortex. Using fMRI, we identified a set of patches in V2, V3, V3A, V4, and V4A that were more active for stimuli containing \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "SejsFgkAAAAJ:UxriW0iASnsC",
-        "num_citations": 0,
-        "pub_url": "https://www.pnas.org/doi/abs/10.1073/pnas.2221122120",
-        "cites_per_year": {}
     },
     {
         "container_type": "Publication",

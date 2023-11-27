@@ -3,6 +3,33 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Single neuron responses underlying face recognition in the human midfusiform face-selective cortex",
+            "pub_year": 2023,
+            "citation": "Nature Communications 14 (1), 5661, 2023",
+            "author": "Rodrigo Quian Quiroga and Marta Boscaglia and Jacques Jonas and Hernan G Rey and Xiaoqian Yan and Louis Maillard and Sophie Colnat-Coulbois and Laurent Koessler and Bruno Rossion",
+            "journal": "Nature Communications",
+            "volume": "14",
+            "number": "1",
+            "pages": "5661",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Faces are critical for social interactions and their recognition constitutes one of the most important and challenging functions of the human brain. While neurons responding selectively to faces have been recorded for decades in the monkey brain, face-selective neural activations have been reported with neuroimaging primarily in the human midfusiform gyrus. Yet, the cellular mechanisms producing selective responses to faces in this hominoid neuroanatomical structure remain unknown. Here we report single neuron recordings performed in 5 human subjects (1 male, 4 females) implanted with intracerebral microelectrodes in the face-selective midfusiform gyrus, while they viewed pictures of familiar and unknown faces and places. We observed similar responses to faces and places at the single cell level, but a significantly higher number of neurons responding to faces, thus offering a mechanistic account for the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:tVzLobxzA7YC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=14991438585564950879",
+        "cites_id": [
+            "14991438585564950879"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41467-023-41323-5",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Intracerebral Electrophysiological Recordings to Understand the Neural Basis of Human Face Recognition",
             "pub_year": 2023,
             "citation": "Brain Sciences 13, 10.3390/brainsci13020354, 2023",
@@ -55,6 +82,42 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Recognition of Facial Cues",
+            "pub_year": 2023,
+            "citation": "The Sage Handbook of Cognitive and Systems Neuroscience, 289, 2023",
+            "author": "Milena Dzhelyova and Bruno Rossion",
+            "journal": "The Sage Handbook of Cognitive and Systems Neuroscience",
+            "pages": "289",
+            "publisher": "Sage"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:gyFZhc6YOh8C",
+        "num_citations": 0,
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Intracerebral electrical stimulation of the face-selective right lateral fusiform gyrus transiently impairs face identity recognition",
+            "pub_year": 2023,
+            "citation": "Neuropsychologia, 108705, 2023",
+            "author": "Ang\u00e9lique Volfart and Bruno Rossion and Xiaoqian Yan and Luna Angelini and Louis Maillard and Sophie Colnat-Coulbois and Jacques Jonas",
+            "journal": "Neuropsychologia",
+            "pages": "108705",
+            "publisher": "Pergamon",
+            "abstract": "Neuroimaging and intracranial electrophysiological studies have consistently shown the largest and most consistent face-selective neural activity in the middle portion of the human right lateral fusiform gyrus (\u2018fusiform face area(s), FFA). Yet, direct evidence for the critical role of this region in face identity recognition (FIR) is still lacking. Here we report the first evidence of transient behavioral impairment of FIR during focal electrical stimulation of the right FFA. Upon stimulation of an electrode contact within this region, subject CJ, who shows typical FIR ability outside of stimulation, was transiently unable to point to pictures of famous faces among strangers and to match pictures of famous or unfamiliar faces presented simultaneously for their identity. Her performance at comparable tasks with other visual materials (written names, pictures of buildings) remained unaffected by stimulation at the same location. During \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:8U9l5EwV_MEC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0028393223002397",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "A neural marker of the human face identity familiarity effect",
             "pub_year": 2023,
             "citation": "Scientific Reports 13 (1), 16294, 2023",
@@ -70,27 +133,6 @@
         "author_pub_id": "sOq9t-AAAAAJ:LyOydA3uxaIC",
         "num_citations": 0,
         "pub_url": "https://www.nature.com/articles/s41598-023-40852-9",
-        "cites_per_year": {}
-    },
-    {
-        "container_type": "Publication",
-        "source": "AUTHOR_PUBLICATION_ENTRY",
-        "bib": {
-            "title": "Single neuron responses underlying face recognition in the human midfusiform face-selective cortex",
-            "pub_year": 2023,
-            "citation": "Nature Communications 14 (1), 5661, 2023",
-            "author": "Rodrigo Quian Quiroga and Marta Boscaglia and Jacques Jonas and Hernan G Rey and Xiaoqian Yan and Louis Maillard and Sophie Colnat-Coulbois and Laurent Koessler and Bruno Rossion",
-            "journal": "Nature Communications",
-            "volume": "14",
-            "number": "1",
-            "pages": "5661",
-            "publisher": "Nature Publishing Group UK",
-            "abstract": "Faces are critical for social interactions and their recognition constitutes one of the most important and challenging functions of the human brain. While neurons responding selectively to faces have been recorded for decades in the monkey brain, face-selective neural activations have been reported with neuroimaging primarily in the human midfusiform gyrus. Yet, the cellular mechanisms producing selective responses to faces in this hominoid neuroanatomical structure remain unknown. Here we report single neuron recordings performed in 5 human subjects (1 male, 4 females) implanted with intracerebral microelectrodes in the face-selective midfusiform gyrus, while they viewed pictures of familiar and unknown faces and places. We observed similar responses to faces and places at the single cell level, but a significantly higher number of neurons responding to faces, thus offering a mechanistic account for the \u2026"
-        },
-        "filled": true,
-        "author_pub_id": "sOq9t-AAAAAJ:tVzLobxzA7YC",
-        "num_citations": 0,
-        "pub_url": "https://www.nature.com/articles/s41467-023-41323-5",
         "cites_per_year": {}
     },
     {

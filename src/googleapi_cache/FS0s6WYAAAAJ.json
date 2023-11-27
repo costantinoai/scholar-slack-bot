@@ -3,6 +3,57 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "SUMAC'23: 5th Workshop on the analySis, Understanding and proMotion of heritAge Contents: Advances in Machine Learning, Signal Processing, Multimodal Techniques and Human-machine Interaction",
+            "pub_year": 2023,
+            "citation": "Proceedings of the 31st ACM International Conference on Multimedia, 9718-9720, 2023",
+            "author": "Val\u00e9rie Gouet-Brunet and Ronak Kosti and Li Weng",
+            "pages": "9718-9720",
+            "abstract": "SUMAC 2023 is the fifth edition of the workshop on analySis, Understanding and proMotion of heritAge Contents. It is held in Ottawa, Canada on November 2, 2023 and is co-located with the 31st ACM International Conference on Multimedia. The workshop's objective is to present and discuss the latest and most significant trends, challenges and advances in the fields of machine learning, signal processing, multimodal techniques and human-machine interaction. The workshop is dedicated to the valorization of cultural heritage, with the emphasis on the unlocking of and access to the big data of the past. A representative scope of Computer Science methodologies dedicated to the processing of multimedia heritage contents and their exploitation is covered by the works presented, with the ambition of advancing and raising awareness about this fully developing research field. The complete SUMAC'23 workshop \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "FS0s6WYAAAAJ:_kc_bZDykSQC",
+        "num_citations": 0,
+        "pub_url": "https://dl.acm.org/doi/abs/10.1145/3581783.3610941",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "SUMAC'23: 5th Workshop on the analySis, Understanding and proMotion of heritAge Contents: Advances in Machine Learning, Signal Processing, Multimodal Techniques and Human-machine Interaction",
+            "pub_year": 2023,
+            "citation": "Proceedings of the 31st ACM International Conference on Multimedia, 9718-9720, 2023",
+            "author": "Val\u00e9rie Gouet-Brunet and Ronak Kosti and Li Weng",
+            "pages": "9718-9720",
+            "abstract": "SUMAC 2023 is the fifth edition of the workshop on analySis, Understanding and proMotion of heritAge Contents. It is held in Ottawa, Canada on November 2, 2023 and is co-located with the 31st ACM International Conference on Multimedia. The workshop's objective is to present and discuss the latest and most significant trends, challenges and advances in the fields of machine learning, signal processing, multimodal techniques and human-machine interaction. The workshop is dedicated to the valorization of cultural heritage, with the emphasis on the unlocking of and access to the big data of the past. A representative scope of Computer Science methodologies dedicated to the processing of multimedia heritage contents and their exploitation is covered by the works presented, with the ambition of advancing and raising awareness about this fully developing research field. The complete SUMAC'23 workshop \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "FS0s6WYAAAAJ:_kc_bZDykSQC",
+        "num_citations": 0,
+        "pub_url": "https://dl.acm.org/doi/abs/10.1145/3581783.3610941",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "SUMAC'23: 5th Workshop on the analySis, Understanding and proMotion of heritAge Contents: Advances in Machine Learning, Signal Processing, Multimodal Techniques and Human-machine Interaction",
+            "pub_year": 2023,
+            "citation": "Proceedings of the 31st ACM International Conference on Multimedia, 9718-9720, 2023",
+            "author": "Val\u00e9rie Gouet-Brunet and Ronak Kosti and Li Weng",
+            "pages": "9718-9720",
+            "abstract": "SUMAC 2023 is the fifth edition of the workshop on analySis, Understanding and proMotion of heritAge Contents. It is held in Ottawa, Canada on November 2, 2023 and is co-located with the 31st ACM International Conference on Multimedia. The workshop's objective is to present and discuss the latest and most significant trends, challenges and advances in the fields of machine learning, signal processing, multimodal techniques and human-machine interaction. The workshop is dedicated to the valorization of cultural heritage, with the emphasis on the unlocking of and access to the big data of the past. A representative scope of Computer Science methodologies dedicated to the processing of multimedia heritage contents and their exploitation is covered by the works presented, with the ambition of advancing and raising awareness about this fully developing research field. The complete SUMAC'23 workshop \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "FS0s6WYAAAAJ:_kc_bZDykSQC",
+        "num_citations": 0,
+        "pub_url": "https://dl.acm.org/doi/abs/10.1145/3581783.3610941",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "ICC++: Explainable feature learning for art history using image compositions",
             "pub_year": 2023,
             "citation": "Pattern Recognition 136, 109153, 2023",
@@ -25,5 +76,22 @@
         "cites_per_year": {
             "2023": 2
         }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "SUMAC'23: 5th Workshop on the analySis, Understanding and proMotion of heritAge Contents: Advances in Machine Learning, Signal Processing, Multimodal Techniques and Human-machine Interaction",
+            "pub_year": 2023,
+            "citation": "Proceedings of the 31st ACM International Conference on Multimedia, 9718-9720, 2023",
+            "author": "Val\u00e9rie Gouet-Brunet and Ronak Kosti and Li Weng",
+            "pages": "9718-9720",
+            "abstract": "SUMAC 2023 is the fifth edition of the workshop on analySis, Understanding and proMotion of heritAge Contents. It is held in Ottawa, Canada on November 2, 2023 and is co-located with the 31st ACM International Conference on Multimedia. The workshop's objective is to present and discuss the latest and most significant trends, challenges and advances in the fields of machine learning, signal processing, multimodal techniques and human-machine interaction. The workshop is dedicated to the valorization of cultural heritage, with the emphasis on the unlocking of and access to the big data of the past. A representative scope of Computer Science methodologies dedicated to the processing of multimedia heritage contents and their exploitation is covered by the works presented, with the ambition of advancing and raising awareness about this fully developing research field. The complete SUMAC'23 workshop \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "FS0s6WYAAAAJ:_kc_bZDykSQC",
+        "num_citations": 0,
+        "pub_url": "https://dl.acm.org/doi/abs/10.1145/3581783.3610941",
+        "cites_per_year": {}
     }
 ]
