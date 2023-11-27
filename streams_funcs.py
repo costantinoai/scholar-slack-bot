@@ -6,6 +6,7 @@ Created on Fri Oct 20 17:02:03 2023
 @author: costantino_ai
 """
 import os
+import shutil
 import logging
 from log_config import MIN, STANDARD
 from helper_funcs import confirm_temp_cache, add_new_author_to_json, convert_json_to_tuple
@@ -142,11 +143,12 @@ def refetch_and_update(args):
     """
 
     # Attempt to delete the old cache.
-    try:
-        os.rmdir(args.cache_path)
-        logging.log(STANDARD, f"Deleted old cache at {args.cache_path}")
-    except Exception as e:  # Handle specific exception to avoid broad except.
-        logging.error(f"Failed to delete cache at {args.cache_path}. Reason: {str(e)}")
+    if os.path.isdir(args.temp_cache_path):
+        try:
+            shutil.rmtree(args.cache_path)
+            logging.log(STANDARD, f"Deleted old cache at {args.cache_path}")
+        except Exception as e:  # Handle specific exception to avoid broad except.
+            logging.error(f"Failed to delete old cache at {args.cache_path}. Reason: {str(e)}")
 
     # Refetch all the author and publication details.
     _ = fetch_from_json(args)

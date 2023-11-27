@@ -176,7 +176,8 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
         pubs_to_fetch = [
             item
             for item in author_pubs
-            if item["bib"]["title"] not in cached_titles
+            if not any(item["bib"]["title"].split(' …')[0] in title for title in cached_titles) # this handles the titles that are cut with ' …'
+            # if item["bib"]["title"] not in cached_titles # this was wrong.. longer titles get cut with ' …' so they get loaded again every time if we use this
             and "pub_year" in item["bib"].keys()
             and int(item["bib"]["pub_year"]) >= int(from_year)
         ]
