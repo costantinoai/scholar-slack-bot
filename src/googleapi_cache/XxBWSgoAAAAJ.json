@@ -3,6 +3,23 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Future prediction of object contact in the human brain",
+            "pub_year": 2023,
+            "citation": "OSF, 2023",
+            "author": "RT Pramod and Nancy Kanwisher and Cyn X Fang",
+            "publisher": "OSF",
+            "abstract": "In everyday life, we not only see singular objects but the relationships between them. Physical relations are also critical for predicting what will happen next\u2013when a container moves, so does its containee, but the same is not true of an object that merely occludes another object without contacting it. Thus, understanding and predicting contact and non-contact relationships is crucial for engaging successfully with the world. In our previous study (Experiment 1 pre-registration: https://osf. io/ezq3s), we have shown that the putative Physics Network in the fronto-parietal cortices of the human brain\u2013but not the ventral temporal cortex\u2013carry scenario-invariant representation of contact relationships. In the current study, we further explore the nature of object contact relationships in the human brain by probing whether the same regions (ie, the Physics Network) that carry scenario-invariant representation of contact relationships are also involved in the prediction of future contact between objects based on the events unfolding in the present. If true, this study will provide strong evidence for the Physics Engine hypothesis\u2013that the Physics network is not only involved in the representation of physical properties of the current visual scene but also the prediction of future events, perhaps through forward simulation."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:lg2tdxc6qMwC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/v2a3b/resources",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Dissociating language and thought in large language models: a cognitive perspective",
             "pub_year": 2023,
             "citation": "arXiv preprint arXiv:2301.06627, 2023",

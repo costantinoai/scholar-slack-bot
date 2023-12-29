@@ -3,6 +3,58 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Shape-Biased CNNs Are Not Always Superior in Out-of-Distribution Robustness",
+            "pub_year": 2024,
+            "citation": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer \u2026, 2024",
+            "author": "Xinkuan Qiu and Meina Kan and Yongbin Zhou and Yanchao Bi and Shiguang Shan",
+            "conference": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision",
+            "pages": "2326-2335",
+            "abstract": "In recent years, Out-of-Distribution (ood) Robustness has garnered increasing attention in Deep Learning, and shape-biased Convolutional Neural Networks (CNNs) are believed to exhibit higher robustness, attributed to the inherent shape-based decision rule of human cognition. In this work, we delve deeper into the intricate relationship between shape/texture information and ood robustness by leveraging a carefully curated\" Category-Balanced ImageNet\" dataset. We find that shape information is not always superior in distinguishing distinct categories and shape-biased model is not always superior across various ood scenarios. Motivated by these insightful findings, we design a novel method named Shape-Texture Adaptive Recombination (STAR) to achieve higher ood robustness. A category-balanced dataset is firstly used to pretrain a debiased backbone and three specialized heads, each adept at robustly extracting shape, texture, and debiased features. Subsequently, an instance-adaptive recombination head is trained to adaptively adjust the contributions of these distinctive features for each given instance. Through comprehensive experiments, our proposed method achieves state-of-the-art ood robustness across various scenarios such as image corruptions, adversarial attacks, style shifts, and dataset shifts, demonstrating its effectiveness."
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:Z5m8FVwuT1cC",
+        "num_citations": 0,
+        "pub_url": "https://openaccess.thecvf.com/content/WACV2024/html/Qiu_Shape-Biased_CNNs_Are_Not_Always_Superior_in_Out-of-Distribution_Robustness_WACV_2024_paper.html",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What we mean when we say semantic: A Consensus statement on the nomenclature of semantic memory",
+            "pub_year": 2023,
+            "citation": "OSF, 2023",
+            "author": "Jamie Reilly and Cory Shain and Valentina Borghesani and Philipp Kuhnke and Gabriella Vigliocco and Jonathan E Peelle and Bradford Mahon and Laurel Buxbaum and Asifa Majid and Marc Brysbaert and Anna M Borghi and Simon De Deyne and Guy Dove and Liuba Papeo and Penny M Pexman and David Poeppel and Gary Lupyan and Paulo Boggio and Gregory Hickock and Laura Gwilliams and Leonardo Fernandino and Daniel Mirman and Evangelia G Chrysikou and Chaleece Sandberg and Sebastian J Crutch and Liina Pylkkanen and Eiling Yee and Rebecca L Jackson and Jennifer M Rodd and Marina Bedny and Louise Connell and Markus Kiefer and David Kemmerer and Greig de Zubicaray and Beth Jefferies and Dermot Lynott and Cynthia SQ Siew and Rutvik H Desai and Ken McRae and Michele Diaz and Marianna Bolognesi and Karalyn Patterson and Evelina Fedorenko and Swathi Kiran and Maria Montefinese and Jeffrey R Binder and Melvin Yap and Gesa Hartwigsen and Jessica Cantlon and Yanchao Bi and Paul Hoffman and Frank E Garcea and David Vinson",
+            "publisher": "OSF",
+            "abstract": "Tulving (1972) characterized semantic memory as a vast repository of meaning that provides a substrate for language and many other cognitive processes. Tulving\u2019s perspective resulted in a paradigm shift in the study of human conceptual knowledge. Semantic research has since evolved as a multidisciplinary endeavor advanced by fields with their own entrenched theoretical perspectives and idiosyncratic lexicons (eg, concept has different meanings in philosophy vs. cognitive psychology). Yet, no uniform nomenclature exists for translating results and aligning theories across disparate fields. Core semantic constructs remain underspecified to an extent that falsifiability and incremental theory-building remain elusive. One consequence of these limitations is that similar arguments about semantic phenomena are continually recycled without resolution. The aim of this multidisciplinary workgroup (N= 53) was to establish consensus definitions for some of the major recurring constructs in semantic research (eg, concept, amodal, abstract). These efforts yielded a glossary consisting of succinct definitions, agreement, subjective confidence ratings, relevant theoretical background, and principled dissenting views. These core definitions will potentially yield benchmarks for aligning perspectives and improving cross-disciplinary communication in semantic research."
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:BUYA1_V_uYcC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/xrnb2/download",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Conceptual Structure of Human Relationships Across Modern and Historical Cultures",
+            "pub_year": 2023,
+            "citation": "OSF, 2023",
+            "author": "Xi Cheng and Haroon Popal and Huanqing Wang and Renfen Hu and Yinyin Zang and Mingzhe Zhang and Mark Allen Thornton and Huajian Cai and Yanchao Bi and Jamie Reilly and Ingrid R Olson and Yin Wang",
+            "publisher": "OSF",
+            "abstract": "A defining characteristic of social complexity in Homo sapiens is the diversity of our relationships. We build various types of connections with people in families, schools, 25 workplaces, neighborhoods, and online communities. How do we make sense of such complex systems of human relationships? By using natural language processing, online surveys, laboratory cognitive tasks, and computational modelling on diverse modern cultures across the world (n= 20,425) and ancient cultures across 3,000 years of history, we discovered a universal representational space of relationship concepts, comprised of five principal dimensions 30 (formality, activeness, valence, exchange, equality) and three core categories (hostile, public and private relationships). Our work reveals the fundamental cognitive constructs and cultural principles of relationship knowledge and advances our understanding of human sociality."
+        },
+        "filled": true,
+        "author_pub_id": "bLz-hogAAAAJ:AvfA0Oy_GE0C",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/ut6qp/download",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Neuroplastic changes in functional wiring in sensory cortices of the congenitally deaf: A network analysis",
             "pub_year": 2023,
             "citation": "Human Brain Mapping, 2023",

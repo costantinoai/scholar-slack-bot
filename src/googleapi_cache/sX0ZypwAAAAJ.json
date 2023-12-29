@@ -3,6 +3,25 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Oscillations in an Artificial Neural Network Convert Competing Inputs into a Temporal Code",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.11. 27.568876, 2023",
+            "author": "Katharina Duecker and Marco Idiart and Marcel AJ van Gerven and Ole Jensen",
+            "journal": "bioRxiv",
+            "pages": "2023.11. 27.568876",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Deep convolutional neural networks (CNNs) resemble the hierarchically organised neural representations in the primate visual ventral stream. However, these models typically disregard the temporal dynamics experimentally observed in these areas. For instance, alpha oscillations dominate the dynamics of the human visual cortex, yet the computational relevance of oscillations is rarely considered in artificial neural networks (ANNs). We propose an ANN that embraces oscillatory dynamics with the computational purpose of converting simultaneous inputs, presented at two different locations, into a temporal code. The network was trained to classify three individually presented letters. Post-training, we added semi-realistic temporal dynamics to the hidden layer, introducing relaxation dynamics in the hidden units as well as pulsed inhibition mimicking neuronal alpha oscillations. Without these dynamics, the trained network correctly classified individual letters but produced a mixed output when presented with two letters simultaneously, elucidating a bottleneck problem. When introducing refraction and oscillatory inhibition, the output nodes corresponding to the two stimuli activated sequentially, ordered along the phase of the inhibitory oscillations. Our model provides a novel approach for implementing multiplexing in ANNs. It further produces experimentally testable predictions of how the primate visual system handles competing stimuli."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:bPZF39XCNPMC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.11.27.568876.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "A 128-channel real-time VPDNN stimulation system for a visual cortical neuroprosthesis",
             "pub_year": 2023,
             "citation": "Biomedical Circuits and Systems Conference (BioCAS), 2023",

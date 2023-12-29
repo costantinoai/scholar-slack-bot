@@ -3,6 +3,26 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Why psychologists should embrace rather than abandon DNNs",
+            "pub_year": 2023,
+            "citation": "Behavioral and Brain Sciences 46, e414, 2023",
+            "author": "Galit Yovel and Naphtali Abudarham",
+            "journal": "Behavioral and Brain Sciences",
+            "volume": "46",
+            "pages": "e414",
+            "publisher": "Cambridge University Press",
+            "abstract": "Deep neural networks (DNNs) are powerful computational models, which generate complex, high-level representations that were missing in previous models of human cognition. By studying these high-level representations, psychologists can now gain new insights into the nature and origin of human high-level vision, which was not possible with traditional handcrafted models. Abandoning DNNs would be a huge oversight for psychological sciences."
+        },
+        "filled": true,
+        "author_pub_id": "-SBe4c0AAAAJ:tzM49s52ZIMC",
+        "num_citations": 0,
+        "pub_url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/why-psychologists-should-embrace-rather-than-abandon-dnns/63B1D30F8E8A0A73791C684F0D64667C",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Deep learning models challenge the prevailing assumption that face-like effects for objects of expertise support domain-general mechanisms",
             "pub_year": 2023,
             "citation": "Proceedings of the Royal Society B 290 (1998), 20230093, 2023",

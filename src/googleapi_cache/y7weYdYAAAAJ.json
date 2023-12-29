@@ -3,6 +3,25 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Experience Shapes Chandelier Cell Function and Structure in the Visual Cortex",
+            "pub_year": 2023,
+            "citation": "eLife 12, 2023",
+            "author": "Koen Seignette and Nora Jamann and Paolo Papale and Huub Terra and Ralph PO Porneso and Leander de Kraker and Chris van der Togt and Maaike van der Aa and Paul Neering and Emma Ruimschotel and Pieter R Roelfsema and Jorrit S Montijn and Matthew W Self and Maarten HP Kole and Christiaan N Levelt",
+            "journal": "eLife",
+            "volume": "12",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Detailed characterization of interneuron types in primary visual cortex (V1) has greatly contributed to understanding visual perception, yet the role of chandelier cells (ChCs) in visual processing remains poorly characterized. Using viral tracing we found that V1 ChCs predominantly receive monosynaptic input from local layer 5 pyramidal cells and higher-order cortical regions. Two-photon calcium imaging and convolutional neural network modelling revealed that ChCs are visually responsive but weakly selective for stimulus content. In mice running in a virtual tunnel, ChCs respond strongly to events known to elicit arousal, including locomotion and visuomotor mismatch. Repeated exposure of the mice to the virtual tunnel was accompanied by reduced visual responses of ChCs and structural plasticity of ChC boutons and axon initial segment length. Finally, ChCs only weakly inhibited pyramidal cells. These findings suggest that ChCs provide an arousal-related signal to layer 2/3 pyramidal cells that may modulate their activity and/or gate plasticity of their axon initial segments during behaviorally relevant events."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:8Xgff_V0N9gC",
+        "num_citations": 0,
+        "pub_url": "https://elifesciences.org/reviewed-preprints/91153v2",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Feature-disentangled reconstruction of perception from multi-unit recording",
             "pub_year": 2023,
             "citation": "Sl: sn, 2023",

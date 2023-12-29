@@ -3,6 +3,22 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Comment faciliter l\u2019acquisition du vocabulaire \u00e0 l\u2019\u00e9cole maternelle?",
+            "pub_year": 2023,
+            "citation": "",
+            "author": "Ghislaine Dehaene-Lambertz and Liliane Sprenger-Charolles and Pascale Col\u00e9 and S\u00e9verine Casalis and Stanislas Dehaene and Ranka Bijeljac-Babic",
+            "abstract": "Les trois ann\u00e9es de maternelle sont une p\u00e9riode cruciale pour l\u2019apprentissage du langage. Lorsqu\u2019ils re\u00e7oivent une stimulation appropri\u00e9e, les enfants de 3 \u00e0 6 ans apprennent entre 10 et 20 mots par jour. Le niveau de vocabulaire joue un r\u00f4le cl\u00e9 dans la compr\u00e9hension orale et dans l\u2019apprentissage de la lecture en CP. C\u2019est la comp\u00e9tence qui diff\u00e9rencie le plus fortement les enfants selon leur milieu socio-\u00e9conomique d\u2019origine \u00e0 l\u2019entr\u00e9e \u00e0 l\u2019\u00e9cole, et le retard des enfants les moins stimul\u00e9s persiste souvent tout au long de la scolarit\u00e9."
+        },
+        "filled": true,
+        "author_pub_id": "2Dd5uoIAAAAJ:Dp6ZCYcE31YC",
+        "num_citations": 0,
+        "pub_url": "https://lilloa.univ-lille.fr/bitstream/handle/20.500.12210/92203/CSEN_Synthese_acquisition_vocabulaire_maternelle_WEB.pdf?sequence=1",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Dissecting the neuronal mechanisms of invariant word recognition",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023.11. 06.565812, 2023",

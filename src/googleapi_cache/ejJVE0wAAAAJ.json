@@ -3,6 +3,43 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Contentopic mapping in ventral and dorsal association cortex: the topographical organization of manipulable object information",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.11. 29.568856, 2023",
+            "author": "Jorge Almeida and Stephanie Kristensen and Zohar Tal and Alessio Fracasso",
+            "journal": "bioRxiv",
+            "pages": "2023.11. 29.568856",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Understanding how object information is neurally organized is fundamental to unravel object recognition. The best-known neural organizational principle of information is topographical mapping of specific dimensions. Such maps have been shown mainly for sensorimotor information within sensorimotor cortices (e.g., retinotopy). Thus, here we ask whether there are topographic maps - by analogy, contentopic maps - for mid-level object-related dimensions. We used functional magnetic resonance imaging and population receptive field analysis to measure tuning of neural populations to selected manipulable object-related dimensions. Here we show maps in dorsal and ventral occipital cortex that code for the score of each object on each target dimension in a linear progression following a particular direction along the cortical surface. Maps for each dimension are distinct, and consistent across individuals. Thus, object information is coded in multiple topographical maps - i.e., contentopic maps. These contentopic maps refer to intermediate level visual and visuomotor representations, and are potentially computed from the grouping of lower-level information through non-linear transformation following gestalt principles. This shows that topography is a widespread and non-incidental strategy for the organization of information in the brain that leads to greatly reduced connectivity-related metabolic costs and fast and efficient readouts of information for stimuli discrimination."
+        },
+        "filled": true,
+        "author_pub_id": "ejJVE0wAAAAJ:nroGzMJTTpEC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.11.29.568856.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neuroplastic changes in functional wiring in sensory cortices of the congenitally deaf: A network analysis",
+            "pub_year": 2023,
+            "citation": "Human Brain Mapping, 2023",
+            "author": "Michaela Ruttorf and Zohar Tal and L\u00e9nia Amaral and Fang Fang and Yanchao Bi and Jorge Almeida",
+            "journal": "Human Brain Mapping",
+            "publisher": "John Wiley & Sons, Inc.",
+            "abstract": "Congenital sensory deprivation induces significant changes in the structural and functional organisation of the brain. These are well\u2010characterised by cross\u2010modal plasticity, in which deprived cortical areas are recruited to process information from non\u2010affected sensory modalities, as well as by other neuroplastic alterations within regions dedicated to the remaining senses. Here, we analysed visual and auditory networks of congenitally deaf and hearing individuals during different visual tasks to assess changes in network community structure and connectivity patterns due to congenital deafness. In the hearing group, the nodes are clearly divided into three communities (visual, auditory and subcortical), whereas in the deaf group a fourth community consisting mainly of bilateral superior temporal sulcus and temporo\u2010insular regions is present. Perhaps more importantly, the right lateral geniculate body, as well as \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "ejJVE0wAAAAJ:I2jIoRS3jIgC",
+        "num_citations": 0,
+        "pub_url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/hbm.26530",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Effects of transcranial direct current stimulation on neural activity and functional connectivity during fear extinction",
             "pub_year": 2023,
             "citation": "International Journal of Clinical and Health Psychology 23 (1), 100342, 2023",

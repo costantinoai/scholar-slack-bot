@@ -3,6 +3,51 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Category-based attention facilitates memory search",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.12. 08.570779, 2023",
+            "author": "Linlin Shang and Lu-Chun Yeh and Yuanfang Zhao and Iris Wiegand and Marius V Peelen",
+            "journal": "bioRxiv",
+            "pages": "2023.12. 08.570779",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "We often need to decide whether the object we look at is also the object we look for. When we look for one specific object, this process can be facilitated by preparatory feature-based attention. However, when we look for multiple objects at the same time (e.g., the products on our shopping list) such a strategy may no longer be possible, as research has shown that we can actively prepare to detect only one object at a time. Therefore, looking for multiple objects may additionally involve search in long-term memory, slowing down decision making. Interestingly, however, previous research has shown that memory search can be very efficient when distractor objects are from a different category than the items in the memory set. Here, using EEG, we show that this efficiency is supported by top-down attention at the category level. In Experiment 1, human participants (both sexes) performed a memory search task on individually presented objects of the same or different category as the objects in the memory set. We observed category-level attentional modulation of distractor processing from ~150 ms after stimulus onset, expressed both as an evoked response modulation and as an increase in decoding accuracy of same-category distractors. In Experiment 2, memory search was performed on two concurrently presented objects. When both objects were distractors, spatial attention (indexed by the N2pc component) was directed to the object that was of the same category as the objects in the memory set. Together, these results demonstrate how attention can facilitate memory search."
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:EYYDruWGBe4C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.08.570779.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Better together: Objects in familiar constellations evoke high-level representations of real-world size",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.05. 30.542965, 2023",
+            "author": "Genevieve L Quek and Alexandra Theodorou and Marius V Peelen",
+            "journal": "bioRxiv",
+            "pages": "2023.05. 30.542965",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "High-level vision is frequently studied at the level of either individual objects or full scenes. An intermediate level of visual organisation that has received less attention is the \u2033object constellation\u2033, defined here as a familiar configuration of contextually-associated objects (e.g., plate + spoon). Recent work has shown that information from multiple objects can be integrated to support observers\u2032 high-level understanding of a \u2033scene\u2033. Here we used EEG to test when the visual system integrates information across objects to support representations of real-world size. To this end, we briefly presented masked object constellations consisting of either large (e.g., chair + table) or small (e.g., plate + spoon) object silhouettes, while independently varying retinal size. As a control, observers also saw each object silhouette presented in isolation. Behavioural results showed that observers recognized the objects\u2032 real-world size more easily when the silhouettes appeared in pairs than when they appeared in isolation. Representational similarity analysis of EEG data revealed that neural activity patterns captured information about the real-world size of object constellations from ~200 ms after stimulus onset. This representation was stronger for, and specific to, object pairs as compared to single objects, and remained significant after regressing out visual similarity models derived from computational models. These results reveal the neural time course of real-world size extracted from familiar constellations of objects. More generally, they provide evidence for inter-object facilitation of visual processing, leading to a qualitatively different high-level \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:BUYA1_V_uYcC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=5730406085388674804",
+        "cites_id": [
+            "5730406085388674804"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.05.30.542965.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:9CZUQvl9hk8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "I see! How narrative meaning influences gaze behaviour",
             "pub_year": 2023,
             "citation": "Sl: sn, 2023",

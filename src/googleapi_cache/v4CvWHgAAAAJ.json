@@ -3,6 +3,46 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "The effects of visual backward masking on visual spatiotemporal dynamics",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4711-4711, 2023",
+            "author": "Siying Xie and Daniel Kaiser and Johannes Singer and Radoslaw Cichy",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4711-4711",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "Disentangling the neural computations performed through feedforward and feedback information flow in visual processing is challenging. Backward masking is an efficient experimental approach for this purpose, as it effectively interferes with reentrant feedback processing but leaves feedforward processing relatively intact. We used backward masking to dissect the spatiotemporal flow of visual information in the human brain. We briefly presented natural objects which were followed by a dynamic visual mask to participants. The mask could appear shortly after the object (16.7 ms), resulting in low visibility, or with a substantial delay (600ms), resulting in high visibility of the object. We performed multivariate analysis on EEG (n= 32) and fMRI (n= 27) data to characterize temporal and spatial object representations in these two visibility conditions. While visual representations changed rapidly in time for both conditions \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "v4CvWHgAAAAJ:uWiczbcajpAC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791786",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Coherent categorical information triggers integration-related alpha dynamics",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.12. 04.569908, 2023",
+            "author": "Lixiang Chen and Radoslaw Martin Cichy and Daniel Kaiser",
+            "journal": "bioRxiv",
+            "pages": "2023.12. 04.569908",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "To create coherent visual experiences, the brain spatially integrates the complex and dynamic information it receives from the environment. We previously demonstrated that feedback-related alpha activity carries stimulus-specific information when two spatially and temporally coherent naturalistic inputs can be integrated into a unified percept. In this study, we sought to determine whether such integration-related alpha dynamics are triggered by categorical coherence in visual inputs. In an EEG experiment, we manipulated the degree of coherence by presenting pairs of videos from the same or different categories through two apertures in the left and right visual hemifields. Critically, video pairs could be video-level coherent (i.e., stem from the same video), coherent in their basic-level category, coherent in their superordinate category, or incoherent (i.e., stem from videos from two entirely different categories). We conducted multivariate classification analyses on rhythmic EEG responses to decode between the video stimuli in each condition. As the key result, we significantly decoded the video-level coherent and basic-level coherent stimuli, but not the superordinate coherent and incoherent stimuli, from cortical alpha rhythms. This suggests that alpha dynamics play a critical role in integrating information across space, and that cortical integration processes are flexible enough to accommodate information from different exemplars of the same basic-level category."
+        },
+        "filled": true,
+        "author_pub_id": "v4CvWHgAAAAJ:vDijr-p_gm4C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.04.569908.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Alpha-frequency feedback to early visual cortex orchestrates coherent naturalistic vision",
             "pub_year": 2023,
             "citation": "Science Advances 9 (45), eadi2321, 2023",

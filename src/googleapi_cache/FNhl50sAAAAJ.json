@@ -3,6 +3,25 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Improved Techniques for Quantizing Deep Networks with Adaptive Bit-Widths",
+            "pub_year": 2024,
+            "citation": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer \u2026, 2024",
+            "author": "Ximeng Sun and Rameswar Panda and Chun-Fu Richard Chen and Naigang Wang and Bowen Pan and Aude Oliva and Rogerio Feris and Kate Saenko",
+            "conference": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision",
+            "pages": "957-967",
+            "abstract": "Quantizing deep networks with adaptive bit-widths is a promising technique for efficient inference across many devices and resource constraints. In contrast to static methods that repeat the quantization process and train different models for different constraints, adaptive quantization enables us to flexibly adjust the bit-widths of a single deep network during inference for instant adaptation in different scenarios. While existing research shows encouraging results on common image classification benchmarks, this paper investigates how to train such adaptive networks more effectively. Specifically, we present two novel techniques for quantizing deep neural networks with adaptive bit-widths of weights and activations. First, we propose a collaborative strategy to choose a high-precision\" teacher\" for transferring knowledge to the low-precision\" student\" while jointly optimizing the model with all bit-widths. Second, to effectively transfer knowledge, we develop a dynamic block swapping method by randomly replacing the blocks in the lower-precision student network with the corresponding blocks in the higher-precision teacher network. Extensive experiments on multiple image classification datasets and novel video classification experiments, well demonstrate the efficacy of our approach over state-of-the-art methods."
+        },
+        "filled": true,
+        "author_pub_id": "FNhl50sAAAAJ:F2UWTTQJPOcC",
+        "num_citations": 0,
+        "pub_url": "https://openaccess.thecvf.com/content/WACV2024/html/Sun_Improved_Techniques_for_Quantizing_Deep_Networks_With_Adaptive_Bit-Widths_WACV_2024_paper.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ZZut4HTtZaUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Learning Human Action Recognition Representations Without Real Humans",
             "pub_year": 2023,
             "citation": "arXiv preprint arXiv:2311.06231, 2023",

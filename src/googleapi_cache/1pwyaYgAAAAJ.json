@@ -3,6 +3,46 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Multimodal decoding of human brain activity into images and text",
+            "pub_year": 2023,
+            "citation": "UniReps: the First Workshop on Unifying Representations in Neural Models, 2023",
+            "author": "Matteo Ferrante and Tommaso Boccato and Furkan Ozcelik and Rufin VanRullen and Nicola Toschi",
+            "conference": "UniReps: the First Workshop on Unifying Representations in Neural Models",
+            "abstract": "Every day, the human brain processes an immense volume of visual information, relying on intricate neural mechanisms to perceive and interpret these stimuli. Recent breakthroughs in functional magnetic resonance imaging (fMRI) have enabled scientists to extract visual information from human brain activity patterns. In this study, we present an innovative method for decoding brain activity into meaningful images and captions, with a specific focus on brain captioning due to its enhanced flexibility as compared to brain decoding into images. Our approach takes advantage of cutting-edge image captioning models and incorporates a unique image reconstruction pipeline that utilizes latent diffusion models and depth estimation.  We utilized the Natural Scenes Dataset, a comprehensive fMRI dataset from eight subjects who viewed images from the COCO dataset. We employed the Generative Image-to-text Transformer (GIT) as our backbone for captioning and propose a new image reconstruction pipeline based on latent diffusion models. The method involves training regularized linear regression models between brain activity and extracted features. Additionally, we incorporated depth maps from the ControlNet model to further guide the reconstruction process. We propose a multimodal based approach that leverage similarities between neural and deep learning presentation and by learning alignment between these spaces, we produce textual description and image reconstruction from brain activity. We evaluate our methods using quantitative metrics for both generated captions and images. Our brain captioning approach outperforms existing \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:6yz0xqPARnAC",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=rGCabZfV3d",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Consciousness in artificial intelligence: insights from the science of consciousness",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2308.08708, 2023",
+            "author": "Patrick Butlin and Robert Long and Eric Elmoznino and Yoshua Bengio and Jonathan Birch and Axel Constant and George Deane and Stephen M Fleming and Chris Frith and Xu Ji and Ryota Kanai and Colin Klein and Grace Lindsay and Matthias Michel and Liad Mudrik and Megan AK Peters and Eric Schwitzgebel and Jonathan Simon and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2308.08708",
+            "abstract": "Whether current or near-term AI systems could be conscious is a topic of scientific interest and increasing public concern. This report argues for, and exemplifies, a rigorous and empirically grounded approach to AI consciousness: assessing existing AI systems in detail, in light of our best-supported neuroscientific theories of consciousness. We survey several prominent scientific theories of consciousness, including recurrent processing theory, global workspace theory, higher-order theories, predictive processing, and attention schema theory. From these theories we derive \"indicator properties\" of consciousness, elucidated in computational terms that allow us to assess AI systems for these properties. We use these indicator properties to assess several recent AI systems, and we discuss how future systems might implement them. Our analysis suggests that no current AI systems are conscious, but also suggests that there are no obvious technical barriers to building AI systems which satisfy these indicators."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:F1b5ZUV5XREC",
+        "num_citations": 24,
+        "citedby_url": "/scholar?hl=en&cites=8239061011717183910",
+        "cites_id": [
+            "8239061011717183910"
+        ],
+        "pub_url": "https://arxiv.org/abs/2308.08708",
+        "cites_per_year": {
+            "2023": 23
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Generative Multimodal Decoding: Reconstructing Images and Text from Human fMRI",
             "pub_year": 2023,
             "citation": "Deep Generative Models for Health Workshop NeurIPS 2023, 2023",

@@ -3,6 +3,26 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Neither hype nor gloom do DNNs justice",
+            "pub_year": 2023,
+            "citation": "Behavioral and Brain Sciences 46, e412, 2023",
+            "author": "Felix A Wichmann and Simon Kornblith and Robert Geirhos",
+            "journal": "Behavioral and Brain Sciences",
+            "volume": "46",
+            "pages": "e412",
+            "publisher": "Cambridge University Press",
+            "abstract": "Neither the hype exemplified in some exaggerated claims about deep neural networks (DNNs), nor the gloom expressed by Bowers et al. do DNNs as models in vision science justice: DNNs rapidly evolve, and today's limitations are often tomorrow's successes. In addition, providing explanations as well as prediction and image-computability are model desiderata; one should not be favoured at the expense of the other."
+        },
+        "filled": true,
+        "author_pub_id": "w3kGtMIAAAAJ:_xSYboBqXhAC",
+        "num_citations": 0,
+        "pub_url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/neither-hype-nor-gloom-do-dnns-justice/639AA5BC7F6E3B91E9B9EC8463D39F77",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Irren ist menschlich: Aber was, wenn Maschinen Fehler machen?",
             "pub_year": 2023,
             "citation": "Outstanding Dissertations @ Gesellschaft f\u00fcr Informatik eV, 2023",

@@ -3,6 +3,44 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Open dataset of theory of mind reasoning in early to middle childhood",
+            "pub_year": 2023,
+            "citation": "Data in Brief, 109905, 2023",
+            "author": "Koraima Sotomayor Enriquez and Hyowon Gweon and Rebecca Saxe and Hilary Richardson",
+            "journal": "Data in Brief",
+            "pages": "109905",
+            "publisher": "Elsevier",
+            "abstract": "Theory of mind (ToM) reasoning refers to the process by which we reason about the mental states (beliefs, desires, emotions) of others. Here, we describe an open dataset of responses from children who completed a story booklet task for assessing ToM reasoning (n=321 3\u201312-year-old children, including 64 (neurotypical) children assessed longitudinally and 68 autistic children). Children completed one of two versions of the story booklet task (Booklet 1 or 2). Both versions include two-alternative forced choice and free response questions that tap ToM concepts ranging in difficulty from reasoning about desires and beliefs to reasoning about moral blameworthiness and mistaken referents. Booklet 2 additionally includes items that assess understanding of sarcasm, lies, and second-order belief-desire reasoning. Compared to other ToM tasks, the booklet task provides relatively dense sampling of ToM reasoning \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:jFemdcug13IC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S2352340923009484",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Left-Hemisphere Cortical Language Regions Respond Equally to Observed Dialogue and Monologue",
+            "pub_year": 2023,
+            "citation": "Neurobiology of Language, 1-36, 2023",
+            "author": "Halie A Olson and Emily M Chen and Kirsten O Lydic and Rebecca R Saxe",
+            "journal": "Neurobiology of Language",
+            "pages": "1-36",
+            "publisher": "MIT Press",
+            "abstract": "Much of the language we encounter in our everyday lives comes in the form of conversation, yet the majority of research on the neural basis of language comprehension has used input from only one speaker at a time. Twenty adults were scanned while passively observing audiovisual conversations using functional magnetic resonance imaging. In a block-design task, participants watched 20 s videos of puppets speaking either to another puppet (the dialogue condition) or directly to the viewer (the monologue condition), while the audio was either comprehensible (played forward) or incomprehensible (played backward). Individually functionally localized left-hemisphere language regions responded more to comprehensible than incomprehensible speech but did not respond differently to dialogue than monologue. In a second task, participants watched videos (1\u20133 min each) of two puppets conversing with \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:rHJHxKgnXwkC",
+        "num_citations": 0,
+        "pub_url": "https://direct.mit.edu/nol/article/doi/10.1162/nol_a_00123/117766",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Emotion prediction as computation over a generative theory of mind",
             "pub_year": 2023,
             "citation": "Philosophical Transactions of the Royal Society A 381 (2251), 20220047, 2023",

@@ -3,6 +3,42 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "The neural development of social scene perception in young children",
+            "pub_year": 2023,
+            "citation": "PsyArXiv, 2023",
+            "author": "Elizabeth Jiwon Im and Angira Shirahatti and Leyla Isik",
+            "publisher": "PsyArXiv",
+            "abstract": "From a young age, children have advanced social perceptual and reasoning abilities. However, the neural development of these abilities is still poorly understood due to the challenges of acquiring brain imaging data from young children with traditional neuroimaging methods. To address this gap, we used fMRI data collected while children and adults watched an engaging and socially rich movie to investigate how the cortical basis of social processing changes throughout development. We labeled the movie with visual and social features, including motion energy, presence of a face, presence of a social interaction, theory of mind (ToM) events, valence and arousal. Using a voxel-wise encoding model trained on these features, we find that models based on visual (motion energy) and social (faces, social interaction, ToM, valence, and arousal) features can both predict brain activity in children as young as three years old across the cortex, with particularly high predictivity in motion selective MT and the superior temporal sulcus (STS). Furthermore, models trained on individual social features showed that while representations for some social features, like ToM, develop throughout childhood, social interaction representations in the STS appear adult-like in even the youngest children. The current study, for the first time, links neural activity in children to specific social features in a natural movie and suggests social interaction perception is supported by early developing neural responses in the STS."
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:pqnbT2bcN3wC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/preprints/psyarxiv/aqryd/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Prospective Learning: Principled Extrapolation to the Future",
+            "pub_year": 2023,
+            "citation": "Conference on Lifelong Learning Agents, 347-357, 2023",
+            "author": "Ashwin De Silva and Rahul Ramesh and Lyle Ungar and Marshall Hussain Shuler and Noah J Cowan and Michael Platt and Chen Li and Leyla Isik and Seung-Eon Roh and Adam Charles and Archana Venkataraman and Brian Caffo and Javier J How and Justus M Kebschull and John W Krakauer and Maxim Bichuch and Kaleab Alemayehu Kinfu and Eva Yezerets and Dinesh Jayaraman and Jong M Shin and Soledad Villar and Ian Phillips and Carey E Priebe and Thomas Hartung and Michael I Miller and Jayanta Dey and Ningyuan Huang and Eric Eaton and Ralph Etienne-Cummings and Elizabeth L Ogburn and Randal Burns and Onyema Osuagwu and Brett Mensh and Alysson R Muotri and Julia Brown and Chris White and Weiwei Yang and Andrei A Rusu Timothy Verstynen and Konrad P Kording and Pratik Chaudhari and Joshua T Vogelstein",
+            "conference": "Conference on Lifelong Learning Agents",
+            "pages": "347-357",
+            "publisher": "PMLR",
+            "abstract": "Learning is a process which can update decision rules, based on past experience, such that future performance improves. Traditionally, machine learning is often evaluated under the assumption that the future will be identical to the past in distribution or change adversarially. But these assumptions can be either too optimistic or pessimistic for many problems in the real world. Real world scenarios evolve over multiple spatiotemporal scales with partially predictable dynamics. Here we reformulate the learning problem to one that centers around this idea of dynamic futures that are partially learnable. We conjecture that certain sequences of tasks are not retrospectively learnable (in which the data distribution is fixed), but are prospectively learnable (in which distributions may be dynamic), suggesting that prospective learning is more difficult in kind than retrospective learning. We argue that prospective learning more accurately characterizes many real world problems that (1) currently stymie existing artificial intelligence solutions and/or (2) lack adequate explanations for how natural intelligences solve them. Thus, studying prospective learning will lead to deeper insights and solutions to currently vexing challenges in both natural and artificial intelligences."
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:NaGl4SEjCO4C",
+        "num_citations": 0,
+        "pub_url": "https://proceedings.mlr.press/v232/de-silva23a.html",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Multidimensional neural representations of social features during movie viewing",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023",

@@ -3,6 +3,132 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "A single computational objective drives specialization of streams in visual cortex",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.12. 19.572460, 2023",
+            "author": "Dawn Finzi and Eshed Margalit and Kendrick Kay and Daniel LK Yamins and Kalanit Grill-Spector",
+            "journal": "bioRxiv",
+            "pages": "2023.12. 19.572460",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Human visual cortex is organized into dorsal, lateral, and ventral streams. A long-standing hypothesis is that the functional organization into streams emerged to support distinct visual behaviors. Here, we use a neural network-based computational model and a massive fMRI dataset to test how visual streams emerge. We find that models trained for stream-specific visual behaviors poorly capture neural responses and organization. Instead, a self-supervised Topographic Deep Artificial Neural Network, which encourages nearby units to respond similarly, successfully predicts neural responses, spatial segregation, and functional differentiation across streams. These findings challenge the prevailing view that streams evolved to separately support different behaviors, and suggest instead that functional organization arises from a single principle: balancing general representation learning with local spatial constraints."
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:Y5dfb0dijaUC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.19.572460.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Physion++: Evaluating Physical Scene Understanding with Objects Consisting of Different Physical Attributes in Humans and Machines",
+            "pub_year": 2023,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society, 2023",
+            "author": "Hsiao-Yu Tung and Mingyu Ding and Zhenfang Chen and Sirui Tao and Vedang Lad and Daniel Bear and Chuang Gan and Josh Tenenbaum and Daniel Yamins and Judith Fan and Kevin Smith",
+            "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+            "abstract": "Human physical scene understanding requires more than simply localizing and recognizing objects \u00d1 we can quickly adapt our predictions about how a scene will unfold by incorporating objects' latent physics properties, such as the masses of the objects in the scene. What are the underlying computational mechanisms that allow humans to infer these physical properties and adapt their physical predictions so efficiently from visual inputs? One hypothesis is that general intuitive physics knowledge can be learned from enough raw data, instantiated as computational models that predict future video frames in large datasets of complex scenes. To test this hypothesis, we evaluate existing state-of-the-art video models. We measured both model and human performance on Physion++, a novel dataset and benchmark that rigorously evaluates visual physical prediction in humans and machines, under circumstances where accurate physical prediction relies on accurate estimates of the latent physical properties of objects in the scene. Specifically, we tested scenarios where accurate prediction relied on accurate estimates of objects' mechanical properties, including masses, friction, elasticity and deformability, and the values of these mechanical properties could only be inferred by observing how these objects moved and interacted with other objects and/or fluids. We found that models that encode objectness and physical states tend to perform better, yet there is still a huge gap compared to human performance. We also found most models' predictions correlate poorly with that made by humans. These results show that current deep learning models that \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:eMMeJKvmdy0C",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/3x9960zn",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Limiting Dynamics of SGD: Modified Loss, Phase-Space Oscillations, and Anomalous Diffusion",
+            "pub_year": 2023,
+            "citation": "Neural Computation, 1-25, 2023",
+            "author": "Daniel Kunin and Javier Sagastuy-Brena and Lauren Gillespie and Eshed Margalit and Hidenori Tanaka and Surya Ganguli and Daniel LK Yamins",
+            "journal": "Neural Computation",
+            "pages": "1-25",
+            "publisher": "MIT Press",
+            "abstract": "In this work, we explore the limiting dynamics of deep neural networks trained with stochastic gradient descent (SGD). As observed previously, long after performance has converged, networks continue to move through parameter space by a process of anomalous diffusion in which distance traveled grows as a power law in the number of gradient updates with a nontrivial exponent. We reveal an intricate interaction among the hyperparameters of optimization, the structure in the gradient noise, and the Hessian matrix at the end of training that explains this anomalous diffusion. To build this understanding, we first derive a continuous-time model for SGD with finite learning rates and batch sizes as an underdamped Langevin equation. We study this equation in the setting of linear regression, where we can derive exact, analytic expressions for the phase-space dynamics of the parameters and their instantaneous \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:P5F9QuxV20EC",
+        "num_citations": 8,
+        "citedby_url": "/scholar?hl=en&cites=13126960835023986037",
+        "cites_id": [
+            "13126960835023986037"
+        ],
+        "pub_url": "https://direct.mit.edu/neco/article/doi/10.1162/neco_a_01626/118266",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:dd0RcFRVLLYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 4,
+            "2023": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Counterfactual World Modeling for Physical Dynamics Understanding",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2312.06721, 2023",
+            "author": "Rahul Venkatesh and Honglin Chen and Kevin Feigelis and Khaled Jedoui and Klemen Kotar and Felix Binder and Wanhee Lee and Sherry Liu and Kevin A Smith and Judith E Fan and Daniel LK Yamins",
+            "journal": "arXiv preprint arXiv:2312.06721",
+            "abstract": "The ability to understand physical dynamics is essential to learning agents acting in the world. This paper presents Counterfactual World Modeling (CWM), a candidate pure vision foundational model for physical dynamics understanding. CWM consists of three basic concepts. First, we propose a simple and powerful temporally-factored masking policy for masked prediction of video data, which encourages the model to learn disentangled representations of scene appearance and dynamics. Second, as a result of the factoring, CWM is capable of generating counterfactual next-frame predictions by manipulating a few patch embeddings to exert meaningful control over scene dynamics. Third, the counterfactual modeling capability enables the design of counterfactual queries to extract vision structures similar to keypoints, optical flows, and segmentations, which are useful for dynamics understanding. We show that zero-shot readouts of these structures extracted by the counterfactual queries attain competitive performance to prior methods on real-world datasets. Finally, we demonstrate that CWM achieves state-of-the-art performance on the challenging Physion benchmark for evaluating physical dynamics understanding."
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:AXPGKjj_ei8C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2312.06721",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Let's move forward: Image-computable models and a common model evaluation scheme are prerequisites for a scientific understanding of human vision",
+            "pub_year": 2023,
+            "citation": "Behavioral and Brain Sciences 46, e390, 2023",
+            "author": "James J DiCarlo and Daniel LK Yamins and Michael E Ferguson and Evelina Fedorenko and Matthias Bethge and Tyler Bonnen and Martin Schrimpf",
+            "journal": "Behavioral and Brain Sciences",
+            "volume": "46",
+            "pages": "e390",
+            "publisher": "Cambridge University Press",
+            "abstract": "In the target article, Bowers et al. dispute deep artificial neural network (ANN) models as the currently leading models of human vision without producing alternatives. They eschew the use of public benchmarking platforms to compare vision models with the brain and behavior, and they advocate for a fragmented, phenomenon-specific modeling approach. These are unconstructive to scientific progress. We outline how the Brain-Score community is moving forward to add new model-to-human comparisons to its community-transparent suite of benchmarks."
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:Mojj43d5GZwC",
+        "num_citations": 0,
+        "pub_url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/lets-move-forward-imagecomputable-models-and-a-common-model-evaluation-scheme-are-prerequisites-for-a-scientific-understanding-of-human-vision/F2302912C8652DC2582F0E159C1BB6AB",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The BabyView camera: Designing a new head-mounted camera to capture children\u2019s early social and visual environments",
+            "pub_year": 2023,
+            "citation": "Behavior Research Methods, 1-12, 2023",
+            "author": "Bria Long and Sarah Goodin and George Kachergis and Virginia A Marchman and Samaher F Radwan and Robert Z Sparks and Violet Xiang and Chengxu Zhuang and Oliver Hsu and Brett Newman and Daniel LK Yamins and Michael C Frank",
+            "journal": "Behavior Research Methods",
+            "pages": "1-12",
+            "publisher": "Springer US",
+            "abstract": "Head-mounted cameras have been used in developmental psychology research for more than a decade to provide a rich and comprehensive view of what infants see during their everyday experiences. However, variation between these devices has limited the field\u2019s ability to compare results across studies and across labs. Further, the video data captured by these cameras to date has been relatively low-resolution, limiting how well machine learning algorithms can operate over these rich video data. Here, we provide a well-tested and easily constructed design for a head-mounted camera assembly\u2014the BabyView\u2014developed in collaboration with Daylight Design, LLC., a professional product design firm. The BabyView collects high-resolution video, accelerometer, and gyroscope data from children approximately 6\u201330 months of age via a GoPro camera custom mounted on a soft child-safety helmet. The \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:08ZZubdj9fEC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=5355374867511737620",
+        "cites_id": [
+            "5355374867511737620"
+        ],
+        "pub_url": "https://link.springer.com/article/10.3758/s13428-023-02206-1",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:FH0XaREdUkoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The BabyView camera: designing a new head-mounted camera to capture children\u2019s early social and visual environments",
             "pub_year": 2023,
             "citation": "Behavior Research Methods, 1-12, 2023",

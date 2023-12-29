@@ -3,6 +3,48 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Consciousness in artificial intelligence: insights from the science of consciousness",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2308.08708, 2023",
+            "author": "Patrick Butlin and Robert Long and Eric Elmoznino and Yoshua Bengio and Jonathan Birch and Axel Constant and George Deane and Stephen M Fleming and Chris Frith and Xu Ji and Ryota Kanai and Colin Klein and Grace Lindsay and Matthias Michel and Liad Mudrik and Megan AK Peters and Eric Schwitzgebel and Jonathan Simon and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2308.08708",
+            "abstract": "Whether current or near-term AI systems could be conscious is a topic of scientific interest and increasing public concern. This report argues for, and exemplifies, a rigorous and empirically grounded approach to AI consciousness: assessing existing AI systems in detail, in light of our best-supported neuroscientific theories of consciousness. We survey several prominent scientific theories of consciousness, including recurrent processing theory, global workspace theory, higher-order theories, predictive processing, and attention schema theory. From these theories we derive \"indicator properties\" of consciousness, elucidated in computational terms that allow us to assess AI systems for these properties. We use these indicator properties to assess several recent AI systems, and we discuss how future systems might implement them. Our analysis suggests that no current AI systems are conscious, but also suggests that there are no obvious technical barriers to building AI systems which satisfy these indicators."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:mVmsd5A6BfQC",
+        "num_citations": 24,
+        "citedby_url": "/scholar?hl=en&cites=8239061011717183910",
+        "cites_id": [
+            "8239061011717183910"
+        ],
+        "pub_url": "https://arxiv.org/abs/2308.08708",
+        "cites_per_year": {
+            "2023": 23
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Grounding neuroscience in behavioral changes using artificial neural networks",
+            "pub_year": 2024,
+            "citation": "Current Opinion in Neurobiology 84, 102816, 2024",
+            "author": "Grace W Lindsay",
+            "volume": "84",
+            "pages": "102816",
+            "publisher": "Elsevier Current Trends",
+            "abstract": "Connecting neural activity to function is a common aim in neuroscience. How to define and conceptualize function, however, can vary. Here I focus on grounding this goal in the specific question of how a given change in behavior is produced by a change in neural circuits or activity. Artificial neural network models offer a particularly fruitful format for tackling such questions because they use neural mechanisms to perform complex transformations and produce appropriate behavior. Therefore, they can be a means of causally testing the extent to which a neural change can be responsible for an experimentally observed behavioral change. Furthermore, because the field of interpretability in artificial intelligence has similar aims, neuroscientists can look to interpretability methods for new ways of identifying neural features that drive performance and behaviors."
+        },
+        "filled": true,
+        "author_pub_id": "4kETHY4AAAAJ:QIV2ME_5wuYC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0959438823001411",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "LLMs are not ready for editorial work",
             "pub_year": 2023,
             "citation": "Nature Human Behaviour, 1-2, 2023",

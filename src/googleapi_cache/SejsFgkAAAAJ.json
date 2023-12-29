@@ -3,6 +3,24 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Rapid, concerted switching of the neural code in inferotemporal cortex",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Yuelin Shi and Dasheng Bi and Janis Karan Hesse and Frank F Lanfranchi and Shi Chen and Doris Y Tsao",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "A fundamental paradigm in neuroscience is the concept of neural coding through tuning functions. According to this idea, neurons encode stimuli through fixed mappings of stimulus features to firing rates. Here, we report that the tuning of visual neurons can rapidly and coherently change across a population to attend to a whole and its parts. We set out to investigate a longstanding debate concerning whether inferotemporal (IT) cortex uses a specialized code for representing specific types of objects or whether it uses a general code that applies to any object. We found that face cells in macaque IT cortex initially adopted a general code optimized for face detection. But following a rapid, concerted population event lasting < 20 ms, the neural code transformed into a face-specific one with two striking properties: (i) response gradients to principal detection-related dimensions reversed direction, and (ii) new tuning \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:p2g8aNsByqUC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.06.570341",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Microscale visualization of cellular features in adult macaque visual cortex",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023.11. 02.565381, 2023",

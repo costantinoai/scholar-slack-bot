@@ -3,6 +3,62 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Perceptual Foundation and Extension to Phase Tagging for Rapid Invisible Frequency Tagging (RIFT)",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Eelke Spaak and Floortje G Bouwkamp and Floris P de Lange",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Recent years have seen the emergence of a visual stimulation protocol called Rapid Invisible Frequency Tagging (RIFT) in cognitive neuroscience. In RIFT experiments, visual stimuli are presented at a rapidly and sinusoidally oscillating luminance, using high refresh rate projection equipment. Such stimuli result in strong steady-state responses in visual cortex, measurable extracranially using EEG or MEG. The high signal-to-noise ratio of these neural signals, combined with the alleged invisibility of the manipulation, make RIFT a potentially promising technique to study the neural basis of visual processing. In this study, we set out to resolve two fundamental, yet still outstanding, issues regarding RIFT; as well as to open up a new avenue for taking RIFT beyond frequency tagging per se. First, we provide robust evidence that RIFT is indeed subjectively undetectable, going beyond previous anecdotal reports \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:NyGDZy8z5eUC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.22.572966",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Modulation of motion signals across the visual cortical hierarchy during bistable perception",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.12. 16.571695, 2023",
+            "author": "Kim Beneyton and Micha Heilbron and Henry Kennedy and Kenneth Knoblauch and Floris de Lange",
+            "journal": "bioRxiv",
+            "pages": "2023.12. 16.571695",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Top-down influences play a critical role in perception. In vision, an ideal paradigm for studying these influences exploits ambiguous sensory experience where perceptual interpretation fluctuates spontaneously over time. This allows addressing how the neural mechanisms of bottom-up and top-down signals interact during the construction of an internal representation of the outside world. An ambiguous visual experience reflects internally-driven representations varying over time and their resolution engages perceptual decision-making. With functional imaging, we investigated in human subjects how ambiguous perceptual states are represented within early visual areas using a bistable moving plaid that is alternatively perceived as two superimposed grating components sliding over each other obliquely or as a single rightward moving pattern. We show that direction-specific voxels encoding the current perceptual state are found across the entire cortical visual hierarchy, but unexpectedly that pattern selectivity is particularly strong in area V1. While oblique-tuned V1 voxels preferentially respond during the component percept, rightward-tuned voxels were selectively activated during the pattern perceptual state. Consideration of the intrinsic connectivity of area V1 suggests that complex pattern-selective activity at the lowest hierarchical level of visual cortex reflects feedback signals from higher-level areas. These findings address functional cortical hierarchy and the role of feedback signals on cortical processing underlying perception."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:0CzhzZyukY4C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.16.571695.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The energy metabolic footprint of predictive processing in the human brain",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.12. 08.570804, 2023",
+            "author": "Andre Hechler and Floris de Lange and Valentin Riedl",
+            "journal": "bioRxiv",
+            "pages": "2023.12. 08.570804",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Neural activity is a highly energy-intensive process. In the human brain, signaling consumes up to 75% of the available energy resources with postsynaptic potentials as the largest factor. Visual processing is especially costly, with increases in energy consumption of up to 20% in the visual cortex. In recent years, vision has been cast as a constructive process, harnessing prior knowledge in a constant feedback loop of top-down prediction and bottom-up sensory input. Interestingly, sensory input that is in line with our predictions might be processed at lower energy metabolic cost. However, there is no evidence for this claim yet, possibly due to the scarcity of measures that quantify energy consumption in the human brain. Here, we used a novel MR method measuring the cerebral metabolic rate of oxygen during sensory stimulation of visual sequences that varied in their predictability. Since predictive processing is driven by estimates of uncertainty, we assessed how confident subjects were in their knowledge of the underlying patterns. We found that processing predictable sequences steeply decreased in energetic cost with increasing confidence. Strikingly, these energetic effects were not limited to visual areas, summing up to a cortical difference of 13% between high and low levels of confidence. Furthermore, sequences deviating from expectations were energetically cheaper than predictable ones for low confidence levels, but costlier for high levels. These results speak for a major role of predictive processing in balancing the brain's energy budget and emphasize the impact of interindividual differences when learning predictive patterns."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:6yz0xqPARnAC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.08.570804.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "I see! How narrative meaning influences gaze behaviour",
             "pub_year": 2023,
             "citation": "Sl: sn, 2023",

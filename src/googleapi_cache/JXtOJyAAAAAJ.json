@@ -3,6 +3,43 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "The role of the left ventral occipitotemporal cortex in speech processing\u2014The influence of visual deprivation",
+            "pub_year": 2023,
+            "citation": "Frontiers in Human Neuroscience 17, 2023",
+            "author": "Gabriela Dzi\u0229giel-Fivet and Joanna Beck and Katarzyna Jednor\u00f3g",
+            "journal": "Frontiers in Human Neuroscience",
+            "volume": "17",
+            "publisher": "Frontiers Media SA",
+            "abstract": "The role of the left ventral occipitotemporal cortex (vOT) in reading is well-established in both sighted and blind readers. Its role in speech processing remains only partially understood. Here, we test the involvement of the left vOT in phonological processing of spoken language in the blind (N= 50, age: 6.76\u201360.32) and in the sighted (N= 54, age: 6.79\u201359.83) by means of whole-brain and region-of-interest (including individually identified) fMRI analyses. We confirm that the left vOT is sensitive to phonological processing (shows greater involvement in rhyming compared to control spoken language task) in both blind and sighted participants. However, in the sighted, the activation was observed only during the rhyming task and in the speech-specific region of the left vOT, pointing to task and modality specificity. In contrast, in the blind group, the left vOT was active during speech processing irrespective of task and in \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:a3BOlSfXSfwC",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10730934/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Sex differences in low-level multisensory integration in developmental dyslexia.",
+            "pub_year": 2023,
+            "citation": "The Journal of Neuroscience: the Official Journal of the Society for \u2026, 2023",
+            "author": "Agnieszka Glica and Katarzyna Wasilewska and Bartosz Kossowski and Jaros\u0142aw \u017bygierewicz and Katarzyna Jednor\u00f3g",
+            "journal": "The Journal of Neuroscience: the Official Journal of the Society for Neuroscience",
+            "pages": "JN-RM",
+            "abstract": "Reading acquisition involves the integration of auditory and visual stimuli. Thus, low-level audiovisual multisensory integration might contribute to disrupted reading in developmental dyslexia. Although dyslexia is more frequently diagnosed in males and emerging evidence indicates that the neural basis of dyslexia might differ between sexes, previous studies examining multisensory integration did not evaluate potential sex differences nor tested its neural correlates. In the current study on 88 adolescents and young adults, we found that only males with dyslexia showed a deficit in multisensory integration of simple non-linguistic stimuli. At the neural level, both females and males with dyslexia presented smaller differences in response to multisensory compared to unisensory conditions in the N1 and N2 components (early components of event-related potentials associated with sensory processing) than the control group. Additionally, in a subsample of 80 participants matched for non-verbal IQ, only males with dyslexia exhibited smaller differences in the left hemisphere in response to multisensory compared to unisensory conditions in the N1 component. Our study indicates that deficits of multisensory integration seem to be more severe in males than females with dyslexia. This provides important insights into sex-modulated cognitive processes that might confer vulnerability to reading difficulties. Significance Statement Although dyslexia is more frequent in males and the neural basis of dyslexia might differ to some extent between sexes, previous studies examining multisensory integration impairment did not evaluate potential sex differences \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:nZcligLrVowC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/med/38050156",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "The development of orthography and phonology coupling in the ventral occipito-temporal cortex and its relation to reading.",
             "pub_year": 2023,
             "citation": "Journal of Experimental Psychology: General, 2023",

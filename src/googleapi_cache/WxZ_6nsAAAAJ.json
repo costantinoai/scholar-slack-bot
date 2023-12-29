@@ -3,6 +3,25 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Artificial Intelligence in Neuroscience",
+            "pub_year": 2023,
+            "citation": "Neuroscience for Neurosurgeons, 158, 2023",
+            "author": "Will Xiao and Mengmi Zhang and Gabriel Kreiman",
+            "journal": "Neuroscience for Neurosurgeons",
+            "pages": "158",
+            "publisher": "Cambridge University Press",
+            "abstract": "Neurosurgeons have the privilege of peeking inside the most precious and the most mysterious device on earth: the human brain (Crick et al., 2004). The human brain is also the most expensive device on earth given that mental health problems constitute the largest health care cost. By deciphering the inner secrets of brain computations, scientists and engineers have taken inspiration to develop smart artificial intelligence (AI) algorithms. These AI algorithms in turn provide much help to understanding brain function and to multiple applications in brain disorders, including neurosurgery."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:Ehil0879vHcC",
+        "num_citations": 0,
+        "pub_url": "https://books.google.com/books?hl=en&lr=&id=vN7oEAAAQBAJ&oi=fnd&pg=PA158&dq=info:f6UfdIDsvOEJ:scholar.google.com&ots=tW8hg6nm0X&sig=ztdqmE2MQQZ7FX_IauAcZT5XUrU",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Neurophysiological and computational mechanisms of non-associative and associative memories during complex human behavior",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023.03. 27.534384, 2023",

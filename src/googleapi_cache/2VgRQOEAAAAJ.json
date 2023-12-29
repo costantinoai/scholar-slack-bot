@@ -3,6 +3,24 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Mnemonic but not contextual feedback signals defy dedifferentiation in the aging early visual cortex",
+            "pub_year": 2023,
+            "citation": "Journal of Neuroscience, 2023",
+            "author": "Lars Muckli and Isabelle Ehrlich and Javier Ortiz-Tudela and Yi You Tan and Yee Lee Shing",
+            "journal": "Journal of Neuroscience",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Mnemonic but not contextual feedback signals defy dedifferentiation in the aging early visual \ncortex - Enlighten Publications Skip to main content Accessibility information Site navigation \nStudy Research About us Student life Alumni Support us Contact Site tools AZ Lists Subjects AZ \nStaff AZ Academic units AZ University of Glasgow logo Home Enlighten Publications Enlighten \nPublications About Latest Additions Search Browse Browse by Author Browse by Year Browse by \nJournal Browse by Research Funder Name Browse by Colleges/Schools Open Access ORCID \nMy Publications Login Mnemonic but not contextual feedback signals defy dedifferentiation \nin the aging early visual cortex Muckli, L. , Ehrlich, I., Ortiz-Tudela, J., Tan, YY, Muckli, L. \nand Shing, YL (2023) Mnemonic but not contextual feedback signals defy dedifferentiation \nin the aging early visual cortex. Journal of Neuroscience, (Accepted for Publication) [\u2026"
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:k8Z6L05lTy4C",
+        "num_citations": 0,
+        "pub_url": "https://eprints.gla.ac.uk/315289/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Concurrent contextual and time-distant mnemonic information co-exist as feedback in the human visual cortex",
             "pub_year": 2023,
             "citation": "Neuroimage 265, 119778, 2023",

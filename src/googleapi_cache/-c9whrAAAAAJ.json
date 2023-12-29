@@ -3,6 +3,33 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Using XR (extended reality) for behavioral, clinical, and learning sciences requires updates in infrastructure and funding",
+            "pub_year": 2023,
+            "citation": "Policy Insights from the Behavioral and Brain Sciences 10 (2), 317-323, 2023",
+            "author": "Dejan Draschkow and Nicola C Anderson and Erwan David and Nathan Gauge and Alan Kingstone and Levi Kumle and Xavier Laurent and Anna C Nobre and Sally Shiels and Melissa L-H V\u00f5",
+            "journal": "Policy Insights from the Behavioral and Brain Sciences",
+            "volume": "10",
+            "number": "2",
+            "pages": "317-323",
+            "publisher": "SAGE Publications",
+            "abstract": "Extended reality (XR, including augmented and virtual reality) creates a powerful intersection between information technology and cognitive, clinical, and education sciences. XR technology has long captured the public imagination, and its development is the focus of major technology companies. This article demonstrates the potential of XR to (1) deliver behavioral insights, (2) transform clinical treatments, and (3) improve learning and education. However, without appropriate policy, funding, and infrastructural investment, many research institutions will struggle to keep pace with the advances and opportunities of XR. To realize the full potential of XR for basic and translational research, funding should incentivize (1) appropriate training, (2) open software solutions, and (3) collaborations between complementary academic and industry partners. Bolstering the XR research infrastructure with the right investments and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "-c9whrAAAAAJ:uJ-U7cs_P_0C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=9364903938429561602",
+        "cites_id": [
+            "9364903938429561602"
+        ],
+        "pub_url": "https://journals.sagepub.com/doi/abs/10.1177/23727322231196305",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Semantic object processing is modulated by prior scene context",
             "pub_year": 2023,
             "citation": "Language, Cognition and Neuroscience, 1-10, 2023",

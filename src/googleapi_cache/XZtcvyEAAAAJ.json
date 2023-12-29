@@ -3,6 +3,70 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Task-Switch Related Reductions in Neural Distinctiveness in Children and Adults: Commonalities and Differences",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.12. 22.572358, 2023",
+            "author": "Sina A Schwarze and Sara Bonati and Radoslaw M Cichy and Ulman Lindenberger and Silvia Bunge and Yana Fandakova",
+            "journal": "bioRxiv",
+            "pages": "2023.12. 22.572358",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Goal-directed behavior requires the ability to flexibly switch between task sets with changing environmental demands. Switching between tasks generally comes at the cost of slower and less accurate responses. Compared to adults, children show greater switch costs, presumably reflecting the protracted development of the ability to flexibly update task-set representations. To examine whether the distinctiveness of neural task-set representations is more strongly affected by a task switch in children compared to adults, we examined multi-voxel patterns of fMRI activation in 88 children (8-11 years, 49 girls) and 53 adults (20-30 years, 28 women) during a task-switching paradigm. Using multivariate pattern analysis (MVPA), we investigated whether task-set representations were less distinct on switch than on repeat trials across frontoparietal, cingulo-opercular, and temporo-occipital regions. Children and adults showed lower accuracy and longer response times on switch than on repeat trials, with higher accuracy costs in children. Decoding accuracy across regions was lower on switch than repeat trials, consistent with the notion that switching reduces the distinctiveness of task-set representations. Reliable age differences in switch-related representational distinctiveness reductions were absent, pointing to a remarkable degree of maturity of neural representations of task-relevant information in late childhood. However, we also observed that switch-related reductions in distinctiveness were more highly correlated across frontoparietal and  cingulo-opercular regions in children than in adults, potentially reflecting the ongoing specialization of different \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:Z5m8FVwuT1cC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.22.572358.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Communicative signals during joint attention promote neural processes of infants and caregivers",
+            "pub_year": 2024,
+            "citation": "Developmental Cognitive Neuroscience 65, 101321, 2024",
+            "author": "Anna B\u00e1nki and Moritz K\u00f6ster and Radoslaw Martin Cichy and Stefanie Hoehl",
+            "journal": "Developmental Cognitive Neuroscience",
+            "volume": "65",
+            "pages": "101321",
+            "publisher": "Elsevier",
+            "abstract": "Communicative signals such as eye contact increase infants\u2019 brain activation to visual stimuli and promote joint attention. Our study assessed whether communicative signals during joint attention enhance infant-caregiver dyads\u2019 neural responses to objects, and their neural synchrony. To track mutual attention processes, we applied rhythmic visual stimulation (RVS), presenting images of objects to 12-month-old infants and their mothers (n = 37 dyads), while we recorded dyads\u2019 brain activity (i.e., steady-state visual evoked potentials, SSVEPs) with electroencephalography (EEG) hyperscanning. Within dyads, mothers either communicatively showed the images to their infant or watched the images without communicative engagement. Communicative cues increased infants\u2019 and mothers\u2019 SSVEPs at central-occipital-parietal, and central electrode sites, respectively. Infants showed significantly more gaze behaviour \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:URolC5Kub84C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=4273569936577217827",
+        "cites_id": [
+            "4273569936577217827"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1878929323001263",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Coherent categorical information triggers integration-related alpha dynamics",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.12. 04.569908, 2023",
+            "author": "Lixiang Chen and Radoslaw Martin Cichy and Daniel Kaiser",
+            "journal": "bioRxiv",
+            "pages": "2023.12. 04.569908",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "To create coherent visual experiences, the brain spatially integrates the complex and dynamic information it receives from the environment. We previously demonstrated that feedback-related alpha activity carries stimulus-specific information when two spatially and temporally coherent naturalistic inputs can be integrated into a unified percept. In this study, we sought to determine whether such integration-related alpha dynamics are triggered by categorical coherence in visual inputs. In an EEG experiment, we manipulated the degree of coherence by presenting pairs of videos from the same or different categories through two apertures in the left and right visual hemifields. Critically, video pairs could be video-level coherent (i.e., stem from the same video), coherent in their basic-level category, coherent in their superordinate category, or incoherent (i.e., stem from videos from two entirely different categories). We conducted multivariate classification analyses on rhythmic EEG responses to decode between the video stimuli in each condition. As the key result, we significantly decoded the video-level coherent and basic-level coherent stimuli, but not the superordinate coherent and incoherent stimuli, from cortical alpha rhythms. This suggests that alpha dynamics play a critical role in integrating information across space, and that cortical integration processes are flexible enough to accommodate information from different exemplars of the same basic-level category."
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:AvfA0Oy_GE0C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.04.569908.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Alpha-frequency feedback to early visual cortex orchestrates coherent naturalistic vision",
             "pub_year": 2023,
             "citation": "Science Advances 9 (45), eadi2321, 2023",

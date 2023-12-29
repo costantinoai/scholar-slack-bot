@@ -3,6 +3,26 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Going after the bigger picture: Using high-capacity models to understand mind and brain",
+            "pub_year": 2023,
+            "citation": "Behavioral and Brain Sciences 46, e404, 2023",
+            "author": "Hans Op de Beeck and Stefania Bracci",
+            "journal": "Behavioral and Brain Sciences",
+            "volume": "46",
+            "pages": "e404",
+            "publisher": "Cambridge University Press",
+            "abstract": "Deep neural networks (DNNs) provide a unique opportunity to move towards a generic modelling framework in psychology. The high representational capacity of these models combined with the possibility for further extensions has already allowed us to investigate the forest, namely the complex landscape of representations and processes that underlie human cognition, without forgetting about the trees, which include individual psychological phenomena."
+        },
+        "filled": true,
+        "author_pub_id": "ECBBsv8AAAAJ:hFOr9nPyWt4C",
+        "num_citations": 0,
+        "pub_url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/going-after-the-bigger-picture-using-highcapacity-models-to-understand-mind-and-brain/0473758C07D930A1A1662CD02566EDB4",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Understanding human object vision: a picture is worth a thousand representations",
             "pub_year": 2023,
             "citation": "Annual review of psychology 74, 113-135, 2023",

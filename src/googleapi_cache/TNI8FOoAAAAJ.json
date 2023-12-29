@@ -3,6 +3,25 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Memory benefits when actively, rather than passively, viewing images",
+            "pub_year": 2023,
+            "citation": "Attention, Perception, & Psychophysics, 1-8, 2023",
+            "author": "Briana L Kennedy and Steven B Most and Tijl Grootswagers and Vanessa K Bowden",
+            "journal": "Attention, Perception, & Psychophysics",
+            "pages": "1-8",
+            "publisher": "Springer US",
+            "abstract": "Serial visual presentations of images exist both in the laboratory and increasingly on virtual platforms such as social media feeds. However, the way we interact with information differs between these. In many laboratory experiments participants view stimuli passively, whereas on social media people tend to interact with information actively. This difference could influence the way information is remembered, which carries practical and theoretical implications. In the current study, 821 participants viewed streams containing seven landscape images that were presented at either a self-paced (active) or an automatic (passive) rate. Critically, the presentation speed in each automatic trial was matched to the speed of a self-paced trial for each participant. Both memory accuracy and memory confidence were greater on self-paced compared to automatic trials. These results indicate that active, self-paced progression \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:fPk4N6BV_jEC",
+        "num_citations": 0,
+        "pub_url": "https://link.springer.com/article/10.3758/s13414-023-02814-1",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Human Perception of Art in the Age of Artificial Intelligence",
             "pub_year": 2023,
             "citation": "PsyArXiv, 2023",

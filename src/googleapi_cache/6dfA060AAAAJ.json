@@ -3,6 +3,26 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Properties of imagined experience across visual, auditory, and other sensory modalities",
+            "pub_year": 2024,
+            "citation": "Consciousness and Cognition 117, 103598, 2024",
+            "author": "Alexander A Sulfaro and Amanda K Robinson and Thomas A Carlson",
+            "journal": "Consciousness and Cognition",
+            "volume": "117",
+            "pages": "103598",
+            "publisher": "Academic Press",
+            "abstract": "Little is known about the perceptual characteristics of mental images nor how they vary across sensory modalities. We conducted an exhaustive survey into how mental images are experienced across modalities, mainly targeting visual and auditory imagery of a single stimulus, the letter \u201cO\u201d, to facilitate direct comparisons. We investigated temporal properties of mental images (e.g. onset latency, duration), spatial properties (e.g. apparent location), effort (e.g. ease, spontaneity, control), movement requirements (e.g. eye movements), real-imagined interactions (e.g. inner speech while reading), beliefs about imagery norms and terminologies, as well as respondent confidence. Participants also reported on the five traditional senses and their prominence during thinking, imagining, and dreaming. Overall, visual and auditory experiences dominated mental events, although auditory mental images were superior to visual \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "6dfA060AAAAJ:ZVmBtQ9RJaQC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1053810023001356",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Visual Representations: Insights from Neural Decoding",
             "pub_year": 2023,
             "citation": "Annual Review of Vision Science 9, 2023",

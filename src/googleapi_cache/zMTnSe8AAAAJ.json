@@ -3,6 +3,44 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "A sparse null code emerges in deep neural networks",
+            "pub_year": 2023,
+            "citation": "UniReps: the First Workshop on Unifying Representations in Neural Models, 2023",
+            "author": "Brian S Robinson and Nathan Drenkow and Colin Conwell and Michael Bonner",
+            "conference": "UniReps: the First Workshop on Unifying Representations in Neural Models",
+            "abstract": "The internal representations of deep vision models are often assumed to encode specific image features, such as contours, textures, and object parts. However, it is possible for deep networks to learn highly abstract representations that may not be linked to any specific image feature. Here we present evidence for one such abstract representation in transformers and modern convolutional architectures that appears to serve as a null code, indicating image regions that are non-diagnostic for the object class. These null codes are both statistically and qualitatively distinct from the more commonly reported feature-related codes of vision models. Specifically, these null codes have several distinct characteristics: they are highly sparse, they have a single unique activation pattern for each network, they emerge abruptly at intermediate network depths, and they are activated in a feature-independent manner by weakly informative image regions, such as backgrounds. Together, these findings reveal a new class of highly abstract representations in deep vision models: sparse null codes that seem to indicate the absence of features rather than serving as feature detectors."
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:6ZzL7HXColQC",
+        "num_citations": 0,
+        "pub_url": "https://bonnerlab.org/s/74_a_sparse_null_code_emerges_in_.pdf",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Canonical Dimensions of Neural Visual Representation",
+            "pub_year": 2023,
+            "citation": "Journal of Vision 23 (9), 4937-4937, 2023",
+            "author": "Zirui Chen and Michael Bonner",
+            "journal": "Journal of Vision",
+            "volume": "23",
+            "number": "9",
+            "pages": "4937-4937",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "What key factors of deep neural networks (DNNs) account for their representational similarity to visual cortex? Many properties that neuroscientists proposed to be critical, such as architecture or training task, have turned out to have surprisingly little explanatory power. Instead, there appears to be a high degree of \u201cdegeneracy,\u201d as many DNNs with distinct designs yield equally good models of visual cortex. Here, we suggest that a more global perspective is needed to understand the relationship between DNNs and the brain. We reasoned that the most essential visual representations are general-purpose and thus naturally emerge from systems with diverse architectures or neuroanatomies. This leads to a specific hypothesis: it should be possible to identify a set of canonical dimensions, extensively learned by many DNNs, that best explain cortical visual representations. To test this hypothesis, we developed a \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:g8uWPOAv7ggC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2791573",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Hierarchical organization of social action features along the lateral visual pathway",
             "pub_year": 2023,
             "citation": "PsyArXiv, 2023",

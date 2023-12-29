@@ -3,6 +3,67 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Caregiver Talk Shapes Toddler Vision: A Computational Study of Dyadic Play",
+            "pub_year": 2023,
+            "citation": "Proceedings of the 2023 IEEE International Conference on Development and \u2026, 2023",
+            "author": "Jochen Triesch Timothy Schauml\u00f6ffel and Arthur Aubret and Gemma Roig",
+            "journal": "Proceedings of the 2023 IEEE International Conference on Development and Learning (ICDL)"
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:VOx2b1Wkg3QC",
+        "num_citations": 0,
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "PEACS: Prefix encoding for auditory caption synthesis",
+            "pub_year": 2023,
+            "citation": "Proc. Conf. Detection Classification Acoust. Scenes Events Challenge, 1-3, 2023",
+            "author": "Timothy Schauml\u00f6ffel and Martina G Vilas and Gemma Roig",
+            "journal": "Proc. Conf. Detection Classification Acoust. Scenes Events Challenge",
+            "pages": "1-3",
+            "abstract": "This technical report describes an Automated Audio Captioning system for the Detection and Classification of Acoustic Scenes and Events (DCASE) 2023 Challenge, Task 6a (automated audio captioning). Our approach employs an encoder-decoder architecture, with the encoder utilizing a large contrastive pre-trained HTS-AT capable of handling variable-length audio segments. The decoder is based on the GPT2 model. To incorporate audio into the decoding process, we employ a light mapping network that translates audio representations into a prefix, effectively guiding the decoder\u2019s generation process. Given the limited data availability, we pre-train our model on various audio captioning datasets and fine-tune it on Clotho. We reach a SPIDERr-FL score of 29.3 on the evaluation split of the Clotho-v2 dataset."
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:XiSMed-E-HIC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=13148287201322677619",
+        "cites_id": [
+            "13148287201322677619"
+        ],
+        "pub_url": "https://dcase.community/documents/challenge2023/technical_reports/DCASE2023_Schaumloeffel_107_t6a.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:czWnB4wZeLYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "LLM multimodal traffic accident forecasting",
+            "pub_year": 2023,
+            "citation": "Sensors 23 (22), 9225, 2023",
+            "author": "I de Zarz\u00e0 and J de Curt\u00f2 and Gemma Roig and Carlos T Calafate",
+            "journal": "Sensors",
+            "volume": "23",
+            "number": "22",
+            "pages": "9225",
+            "publisher": "MDPI",
+            "abstract": "With the rise in traffic congestion in urban centers, predicting accidents has become paramount for city planning and public safety. This work comprehensively studied the efficacy of modern deep learning (DL) methods in forecasting traffic accidents and enhancing Level-4 and Level-5 (L-4 and L-5) driving assistants with actionable visual and language cues. Using a rich dataset detailing accident occurrences, we juxtaposed the Transformer model against traditional time series models like ARIMA and the more recent Prophet model. Additionally, through detailed analysis, we delved deep into feature importance using principal component analysis (PCA) loadings, uncovering key factors contributing to accidents. We introduce the idea of using real-time interventions with large language models (LLMs) in autonomous driving with the use of lightweight compact LLMs like LLaMA-2 and Zephyr-7b-\u03b1. Our exploration extends to the realm of multimodality, through the use of Large Language-and-Vision Assistant (LLaVA)\u2014a bridge between visual and linguistic cues by means of a Visual Language Model (VLM)\u2014in conjunction with deep probabilistic reasoning, enhancing the real-time responsiveness of autonomous driving systems. In this study, we elucidate the advantages of employing large multimodal models within DL and deep probabilistic programming for enhancing the performance and usability of time series forecasting and feature weight importance, particularly in a self-driving scenario. This work paves the way for safer, smarter cities, underpinned by data-driven decision making."
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:fQNAKQ3IYiAC",
+        "num_citations": 0,
+        "pub_url": "https://www.mdpi.com/1424-8220/23/22/9225",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "LLM Multimodal Traffic Accident Forecasting",
             "pub_year": 2023,
             "citation": "Sensors 23 (22), 9225, 2023",

@@ -3,6 +3,43 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Stable Cortical Body Maps Before and After Arm Amputation",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.12. 13.571314, 2023",
+            "author": "Hunter Robert Schone and Roni O Maimon-Mor and Mathew Thomas Kollamkulam and Craig Gerrand and Alexander Woollard and Norbert V Kang and Chris I Baker and Tamar R Makin",
+            "journal": "bioRxiv",
+            "pages": "2023.12. 13.571314",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Neuroscientists have long debated the adult brain's capacity to reorganize itself in response to injury. A driving model for studying plasticity has been limb amputation. For decades, it was believed that amputation triggers large-scale reorganization of cortical body resources. However, these studies have relied on cross-sectional observations post-amputation, without directly tracking neural changes. Here, we longitudinally followed adult patients with planned arm amputations and measured hand and face representations, before and after amputation. By interrogating the representational structure elicited from movements of the hand (pre-amputation) and phantom hand (post-amputation), we demonstrate that hand representation is unaltered. Further, we observed no evidence for lower face (lip) reorganization into the deprived hand region. Collectively, our findings provide direct and decisive evidence that amputation does not trigger large-scale cortical reorganization."
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:-mN3Mh-tlDkC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.13.571314.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Distributed representations of behaviorally-relevant object dimensions in the human visual system",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023",
+            "author": "Oliver Contier and Chris I Baker and Martin N Hebart",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory Preprints",
+            "abstract": "Object vision is commonly thought to involve a hierarchy of brain regions processing increasingly complex image features, with high-level visual cortex supporting object recognition and categorization. However, object vision supports diverse behavioral goals, suggesting basic limitations of this category-centric framework. To address these limitations, here we map a series of behaviorally-relevant dimensions derived from a large-scale analysis of human similarity judgments directly onto the brain. Our results reveal broadly distributed representations of behaviorally-relevant information, demonstrating selectivity to a wide variety of novel dimensions while capturing known selectivities for visual features and categories. Behaviorally-relevant dimensions were superior to categories at predicting brain responses, yielding mixed selectivity in much of visual cortex and sparse selectivity in category-selective clusters. This \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:WC23djZS0W4C",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10473665/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "THINGS-data, a multimodal collection of large-scale datasets for investigating object representations in human brain and behavior",
             "pub_year": 2023,
             "citation": "Elife 12, e82580, 2023",

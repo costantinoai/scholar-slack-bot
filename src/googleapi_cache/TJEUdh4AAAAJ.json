@@ -3,6 +3,54 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Chasing an equation for awareness",
+            "pub_year": 2023,
+            "citation": "Science 382 (6676), 1251-1251, 2023",
+            "author": "Chaz Firestone and Ian Phillips",
+            "journal": "Science",
+            "volume": "382",
+            "number": "6676",
+            "pages": "1251-1251",
+            "publisher": "American Association for the Advancement of Science",
+            "abstract": "A writer seeks connections between consciousness and fundamental physics"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:e_rmSamDkqQC",
+        "num_citations": 0,
+        "pub_url": "https://www.science.org/doi/abs/10.1126/science.adl3136",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Visual adaptation and the purpose of perception",
+            "pub_year": 2023,
+            "citation": "Analysis 83, 555\u2013575, 2023",
+            "author": "Ian Phillips and Chaz Firestone",
+            "journal": "Analysis",
+            "volume": "83",
+            "pages": "555\u2013575",
+            "abstract": "What is the purpose of perception? And how might the answer to this question help distinguish perception from other mental processes? Block\u2019s landmark book, The Border Between Seeing and Thinking, investigates the nature of perception, how perception differs from cognition and why the distinction matters. It is, as one would expect, wide ranging, deeply informed by relevant science and hugely stimulating. Here, we explore a central project of the book\u2013Block\u2019s attempts to identify the features of perception that distinguish it from higher level cognition\u2013by focusing on his suggestion that such features closely relate to perception\u2019s purpose. As well as offering a detailed critical discussion of these proposals, our more general aim is to advertise both the promise and pitfalls of asking: what is perception for?"
+        },
+        "filled": true,
+        "author_pub_id": "TJEUdh4AAAAJ:hMsQuOkrut0C",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=6419221360514809760",
+        "cites_id": [
+            "6419221360514809760"
+        ],
+        "pub_url": "https://academic.oup.com/analysis/article-abstract/83/3/555/7441538",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oL8VINGnFVkJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Empirical evidence for perspectival similarity",
             "pub_year": 2023,
             "citation": "Psychological Review, 2023",

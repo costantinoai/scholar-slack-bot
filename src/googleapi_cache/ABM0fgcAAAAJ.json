@@ -3,6 +3,70 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "High-resolution myelin-water fraction and quantitative relaxation mapping using 3D ViSTa-MR fingerprinting",
+            "pub_year": 2023,
+            "citation": "arXiv preprint arXiv:2312.13523, 2023",
+            "author": "Congyu Liao and Xiaozhi Cao and Siddharth Srinivasan Iyer and Sophie Schauman and Zihan Zhou and Xiaoqian Yan and Quan Chen and Zhitao Li and Nan Wang and Ting Gong and Zhe Wu and Hongjian He and Jianhui Zhong and Yang Yang and Adam Kerr and Kalanit Grill-Spector and Kawin Setsompop",
+            "journal": "arXiv preprint arXiv:2312.13523",
+            "abstract": ""
+        },
+        "filled": true,
+        "author_pub_id": "ABM0fgcAAAAJ:r_AWSJRzSzQC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2312.13523",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A single computational objective drives specialization of streams in visual cortex",
+            "pub_year": 2023,
+            "citation": "bioRxiv, 2023.12. 19.572460, 2023",
+            "author": "Dawn Finzi and Eshed Margalit and Kendrick Kay and Daniel LK Yamins and Kalanit Grill-Spector",
+            "journal": "bioRxiv",
+            "pages": "2023.12. 19.572460",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Human visual cortex is organized into dorsal, lateral, and ventral streams. A long-standing hypothesis is that the functional organization into streams emerged to support distinct visual behaviors. Here, we use a neural network-based computational model and a massive fMRI dataset to test how visual streams emerge. We find that models trained for stream-specific visual behaviors poorly capture neural responses and organization. Instead, a self-supervised Topographic Deep Artificial Neural Network, which encourages nearby units to respond similarly, successfully predicts neural responses, spatial segregation, and functional differentiation across streams. These findings challenge the prevailing view that streams evolved to separately support different behaviors, and suggest instead that functional organization arises from a single principle: balancing general representation learning with local spatial constraints."
+        },
+        "filled": true,
+        "author_pub_id": "ABM0fgcAAAAJ:HeT0ZceujKMC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2023.12.19.572460.abstract",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Longitudinal development of category representations in ventral temporal cortex predicts word and face recognition",
+            "pub_year": 2023,
+            "citation": "Nature Communications 14 (1), 8010, 2023",
+            "author": "Marisa Nordt and Jesse Gomez and Vaidehi S Natu and Alex A Rezai and Dawn Finzi and Holly Kular and Kalanit Grill-Spector",
+            "journal": "Nature Communications",
+            "volume": "14",
+            "number": "1",
+            "pages": "8010",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Regions in ventral temporal cortex that are involved in visual recognition of categories like words and faces undergo differential development during childhood. However, categories are also represented in distributed responses across high-level visual cortex. How distributed category representations develop and if this development relates to behavioral changes in recognition remains largely unknown. Here, we used functional magnetic resonance imaging to longitudinally measure the development of distributed responses across ventral temporal cortex to 10 categories in school-age children over several years. Our results reveal both strengthening and weakening of category representations with age, which was mainly driven by changes across category-selective voxels. Representations became particularly more distinct for words in the left hemisphere and for faces bilaterally. Critically, distinctiveness for words \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "ABM0fgcAAAAJ:dBIO0h50nwkC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=13779229159537092229",
+        "cites_id": [
+            "13779229159537092229"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41467-023-43146-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:habpROqnOb8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Comparing retinotopic maps of children and adults reveals a late-stage change in how V1 samples the visual field",
             "pub_year": 2023,
             "citation": "Nature communications 14 (1), 1561, 2023",

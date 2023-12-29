@@ -3,6 +3,52 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Perceptual learning: Policy insights from basic research to real-world applications",
+            "pub_year": 2023,
+            "citation": "Policy Insights from the Behavioral and Brain Sciences 10 (2), 324-332, 2023",
+            "author": "Aaron R Seitz and Allison Sekuler and Barbara Dosher and Beverly A Wright and Chang-Bing Huang and C Shawn Green and Christopher C Pack and Dov Sagi and Dennis Levi and Duje Tadin and Elizabeth Quinlan and Fang Jiang and Gabriel J Diaz and Geoffrey Ghose and Jozsef Fiser and Karen Banai and Kristina Visscher and Krystel Huxlin and Ladan Shams and Lorella Battelli and Marisa Carrasco and Michael Herzog and Michael Webster and Miguel Eckstein and Nicholas B Turk-Browne and Nitzan Censor and Peter De Weerd and Rufin Vogels and Shaul Hochstein and Takeo Watanabe and Yuka Sasaki and Uri Polat and Zhong-Lin Lu and Zoe Kourtzi",
+            "journal": "Policy Insights from the Behavioral and Brain Sciences",
+            "volume": "10",
+            "number": "2",
+            "pages": "324-332",
+            "publisher": "SAGE Publications",
+            "abstract": "Perceptual learning is the process by which experience alters how incoming sensory information is processed by the brain to give rise to behavior\u2014it is critical for how humans educate children, train experts, treat diseases, and promote health and well-being throughout the lifespan. Knowledge of perceptual learning requires basic and applied research in humans and nonhuman animal models, which informs strategic targets for advancing applications. Commercial products to induce perceptual learning are proliferating rapidly with limited regulation (e.g., for rehabilitation), while at the same time basic science is increasingly restricted by changing regulations (such as new granting-agency definitions of clinical trials). Realizing the full potential of perceptual learning requires balancing basic and translational science to advance new knowledge, while serving and protecting consumers. Reforms can promote open \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:1lhNe0rCu4AC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=9898691074701292327",
+        "cites_id": [
+            "9898691074701292327"
+        ],
+        "pub_url": "https://journals.sagepub.com/doi/abs/10.1177/23727322231195268",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Configuration-sensitive face-body interactions in primate visual cortex",
+            "pub_year": 2023,
+            "citation": "Progress in Neurobiology, 102545, 2023",
+            "author": "Yordanka Zafirova and Anna Bogn\u00e1r and Rufin Vogels",
+            "journal": "Progress in Neurobiology",
+            "pages": "102545",
+            "publisher": "Pergamon",
+            "abstract": "Traditionally, the neural processing of faces and bodies is studied separately, although they are encountered together, as parts of an agent. Despite its social importance, it is poorly understood how faces and bodies interact, particularly at the single-neuron level. Here, we examined the interaction between faces and bodies in the macaque inferior temporal (IT) cortex, targeting an fMRI-defined patch. We recorded responses of neurons to monkey images in which the face was in its natural location (natural face-body configuration), or in which the face was mislocated with respect to the upper body (unnatural face-body configuration). On average, the neurons did not respond stronger to the natural face-body configurations compared to the summed responses to their faces and bodies, presented in isolation. However, the neurons responded stronger to the natural compared to the unnatural face-body configurations \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:zCSUwVk65WsC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0301008223001466",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Bodies in motion: Unraveling the distinct roles of motion and shape in dynamic body responses in the temporal cortex",
             "pub_year": 2023,
             "citation": "Cell Reports 42 (12), 2023",
