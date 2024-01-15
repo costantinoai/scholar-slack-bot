@@ -69,7 +69,7 @@ Ensure you have all required dependencies installed:
    pip install -r requirements.txt
    ```
 
-Now, the file `slack.config` file with your bot's API token, channel name, and channel ID. The structure should look like:
+Now, populate `slack.config` file with your bot's API token, channel name, and channel ID. The structure should look like:
 
 ```ini
 [slack]
