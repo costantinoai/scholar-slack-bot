@@ -1,1 +1,4 @@
 *.config
+.spyproject
+__pycache__
+test/
