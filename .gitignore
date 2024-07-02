@@ -2,4 +2,4 @@
 .spyproject
 __pycache__
 test/
-fetch_and_send.sh
+*/fetch_and_send.sh
