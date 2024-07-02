@@ -3,6 +3,157 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Modeling dynamic social vision highlights gaps between deep learning and humans",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Kathy Garcia and Emalie McMahon and Colin Conwell and Michael F Bonner and Leyla Isik",
+            "publisher": "OSF",
+            "abstract": "Deep learning models trained on computer vision tasks are widely considered the most successful models of human vision to date. The majority of work that supports this idea evaluates how accurately these models predict brain and behavioral responses to static images of objects and natural scenes. Real-world vision, however, is highly dynamic, and far less work has focused on evaluating the accuracy of deep learning models in predicting responses to stimuli that move, and that involve more complicated, higher-order phenomena like social interactions. Here, we present a dataset of natural videos and captions involving complex multi-agent interactions, and we benchmark 350+ image, video, and language models on behavioral and neural responses to the videos. As with prior work, we find that many vision models reach the noise ceiling in predicting visual scene features and responses along the ventral visual stream (often considered the primary neural substrate of object and scene recognition). In contrast, image models poorly predict human action and social interaction ratings and neural responses in the lateral stream (a neural pathway increasingly theorized as specializing in dynamic, social vision). Language models (given human sentence captions of the videos) predict action and social ratings better than either image or video models, but they still perform poorly at predicting neural responses in the lateral stream. Together these results identify a major gap in AI\u2019s ability to match human social vision and highlight the importance of studying vision in dynamic, natural contexts."
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:D03iK_w7-QYC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/4mpd9/download",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uZSPgUvyUNYJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Multidimensional neural representations of social features during movie viewing.",
+            "pub_year": 2024,
+            "citation": "Social Cognitive and Affective Neuroscience 19 (1), nsae030-nsae030, 2024",
+            "author": "L Chang and L Isik",
+            "journal": "Social Cognitive and Affective Neuroscience",
+            "volume": "19",
+            "number": "1",
+            "pages": "nsae030-nsae030",
+            "abstract": "The social world is dynamic and contextually embedded. Yet, most studies utilize simple stimuli that do not capture the complexity of everyday social episodes. To address this, we implemented a movie viewing paradigm and investigated how everyday social episodes are processed in the brain. Participants watched one of two movies during an MRI scan. Neural patterns from brain regions involved in social perception, mentalization, action observation and sensory processing were extracted. Representational similarity analysis results revealed that several labeled social features (including social interaction, mentalization, the actions of others, characters talking about themselves, talking about others and talking about objects) were represented in the superior temporal gyrus (STG) and middle temporal gyrus (MTG). The mentalization feature was also represented throughout the theory of mind network, and characters talking about others engaged the temporoparietal junction (TPJ), suggesting that listeners may spontaneously infer the mental state of those being talked about. In contrast, we did not observe the action representations in the frontoparietal regions of the action observation network. The current findings indicate that STG and MTG serve as key regions for social processing, and that listening to characters talk about others elicits spontaneous mental state inference in TPJ during natural movie viewing."
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:g5m5HwL7SMYC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/pmc/pmc11130526",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VzamigWfdVgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Social interaction processing in infants",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Jamie Soeun Park and Lindsey Powell and Brandon M Woo and Leyla Isik and Lauren Marie Smith",
+            "publisher": "OSF",
+            "abstract": "Recognizing and attending to social interactions is important for social development. Infants show increased attention to social interactions toward the end of the first year (Thiele et al., 2021), but there is little neural evidence regarding the development of social interaction processing in the brain. In adults, a region of the posterior superior temporal sulcus (STS) is functionally specialized for processing social interactions relative to independent actions (Isik et al., 2017). This region responds both to naturalistic video of human interaction and simplified, abstract representations of interactions that retain relational features. We will be investigating if there is a functionally specialized region for processing social interactions in infant STS. Additionally, if such a region exists, is it initially responsive to 1) concrete, naturalistic features of interacting people, 2) abstract, relational features, or 3) both? This study investigates 7.0-to 9.0-month-old-infants\u2019 brain activity while observing social interactions and independent actions. Infants will be fitted with a fNIRS cap to measure activation in several brain regions, including the left and right superior temporal sulcus, medial prefrontal cortex, and right MT and anterior temporal lobe. To examine what drives activation in any regions selectively responsive to social interactions, we will also manipulate the features in the videos, to test if concrete or abstract features drive early specialized responses to social interactions."
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:a0OBvERweLwC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/zsxe8/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ut8nbOxrQTkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Abstract social interaction representations along the lateral pathway",
+            "pub_year": 2024,
+            "citation": "Trends in Cognitive Sciences, 2024",
+            "author": "Emalie McMahon and Leyla Isik",
+            "publisher": "Elsevier",
+            "abstract": "TICS 2552 No. of Pages 2'hindering'scenarios. Representations in motion-selective middle temporal area (MT)[6], on the other hand, do not generalize to novel scenarios, suggesting that goal compatibility is not confounded with motion congruency in these stimuli. Recent computational work has also provided a mechanism by which these abstract visual representations could be constructed to generalize across motion patterns [10].Finally, Papeo points out that the STS primarily responds to dynamic social content and asks how its representations can be considered abstract if they do not generalize across static and dynamic scenes [2]. Although this highlights the importance of motion in STS processing, we do not believe that it poses a major challenge to abstract representations in the STS because the overwhelming majority of real-world social interactions are dynamic and recognized based on motion cues."
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:yD5IFk8b50cC",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/trends/cognitive-sciences/abstract/S1364-6613(24)00073-1",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:WDP0qThlUB4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Generative Adversarial Collaborations: A practical guide for conference organizers and participating scientists",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2402.12604, 2024",
+            "author": "Gunnar Blohm and Benjamin Peters and Ralf Haefner and Leyla Isik and Nikolaus Kriegeskorte and Jennifer S Lieberman and Carlos R Ponce and Gemma Roig and Megan AK Peters",
+            "journal": "arXiv preprint arXiv:2402.12604",
+            "abstract": "Generative adversarial collaborations (GACs) are a form of formal teamwork between groups of scientists with diverging views. The goal of GACs is to identify and ultimately resolve the most important challenges, controversies, and exciting theoretical and empirical debates in a given research field. A GAC team would develop specific, agreed-upon avenues to resolve debates in order to move a field of research forward in a collaborative way. Such adversarial collaborations have many benefits and opportunities but also come with challenges. Here, we use our experience from (1) creating and running the GAC program for the Cognitive Computational Neuroscience (CCN) conference and (2) implementing and leading GACs on particular scientific problems to provide a practical guide for future GAC program organizers and leaders of individual GACs."
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:rO6llkc54NcC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2402.12604",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uxFImCCXViEJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A shared neural code for perceiving and remembering social interactions in the human superior temporal sulcus",
+            "pub_year": 2024,
+            "citation": "Neuropsychologia, 108823, 2024",
+            "author": "Haemy Lee Masson and Janice Chen and Leyla Isik",
+            "journal": "Neuropsychologia",
+            "pages": "108823",
+            "publisher": "Pergamon",
+            "abstract": "Recognizing and remembering social information is a crucial cognitive skill. Neural patterns in the superior temporal sulcus (STS) support our ability to perceive others' social interactions. However, despite the prominence of social interactions in memory, the neural basis of remembering social interactions is still unknown. To fill this gap, we investigated the brain mechanisms underlying memory of others' social interactions during free spoken recall of a naturalistic movie. By applying machine learning-based fMRI encoding analyses to densely labeled movie and recall data we found that a subset of the STS activity evoked by viewing social interactions predicted neural responses in not only held-out movie data, but also during memory recall. These results provide the first evidence that activity in the STS is reinstated in response to specific social content and that its reactivation underlies our ability to remember \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:3s1wT3WcHBgC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0028393224000381",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:491E_l-th3oJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The neurodevelopmental origins of seeing social interactions",
+            "pub_year": 2024,
+            "citation": "Trends in Cognitive Sciences, 2024",
+            "author": "Emalie McMahon and Leyla Isik",
+            "publisher": "Elsevier",
+            "abstract": "], Grossmann argues that, in young children and non-human primates, third-party social interaction recognition is supported by top-down processing in the medial prefrontal cortex (mPFC). He suggests that top-down signals in the developing brain may be used to train neural systems in the superior temporal sulcus (STS), which, in adults, appears to process social interactions in a visual manner ["
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:ZHo1McVdvXMC",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(23)00307-8",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:l6oT4jk-amkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How does the primate brain combine generative and discriminative computations in vision?",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2401.06005, 2024",
+            "author": "Benjamin Peters and James J DiCarlo and Todd Gureckis and Ralf Haefner and Leyla Isik and Joshua Tenenbaum and Talia Konkle and Thomas Naselaris and Kimberly Stachenfeld and Zenna Tavares and Doris Tsao and Ilker Yildirim and Nikolaus Kriegeskorte",
+            "journal": "arXiv preprint arXiv:2401.06005",
+            "abstract": "Vision is widely understood as an inference problem. However, two contrasting conceptions of the inference process have each been influential in research on biological vision as well as the engineering of machine vision. The first emphasizes bottom-up signal flow, describing vision as a largely feedforward, discriminative inference process that filters and transforms the visual information to remove irrelevant variation and represent behaviorally relevant information in a format suitable for downstream functions of cognition and behavioral control. In this conception, vision is driven by the sensory data, and perception is direct because the processing proceeds from the data to the latent variables of interest. The notion of \"inference\" in this conception is that of the engineering literature on neural networks, where feedforward convolutional neural networks processing images are said to perform inference. The alternative conception is that of vision as an inference process in Helmholtz's sense, where the sensory evidence is evaluated in the context of a generative model of the causal processes giving rise to it. In this conception, vision inverts a generative model through an interrogation of the evidence in a process often thought to involve top-down predictions of sensory data to evaluate the likelihood of alternative hypotheses. The authors include scientists rooted in roughly equal numbers in each of the conceptions and motivated to overcome what might be a false dichotomy between them and engage the other perspective in the realm of theory and experiment. The primate brain employs an unknown algorithm that may combine the advantages of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "nw-Vv3oAAAAJ:HoB7MX3m0LUC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2401.06005",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "The neural development of social scene perception in young children",
             "pub_year": 2023,
             "citation": "PsyArXiv, 2023",

@@ -3,6 +3,96 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "A phone in a basket looks like a knife in a cup: Role-filler independence in visual processing",
+            "pub_year": 2024,
+            "citation": "Open Mind 8, 766-794, 2024",
+            "author": "Alon Hafri and Michael F Bonner and Barbara Landau and Chaz Firestone",
+            "journal": "Open Mind",
+            "volume": "8",
+            "pages": "766-794",
+            "publisher": "MIT Press",
+            "abstract": "When a piece of fruit is in a bowl, and the bowl is on a table, we appreciate not only the individual objects and their features, but also the relations containment and support, which abstract away from the particular objects involved. Independent representation of roles (e.g., containers vs. supporters) and \u201cfillers\u201d of those roles (e.g., bowls vs. cups, tables vs. chairs) is a core principle of language and higher-level reasoning. But does such role-filler independence also arise in automatic visual processing? Here, we show that it does, by exploring a surprising error that such independence can produce. In four experiments, participants saw a stream of images containing different objects arranged in force-dynamic relations\u2014e.g., a phone contained in a basket, a marker resting on a garbage can, or a knife sitting in a cup. Participants had to respond to a single target image (e.g., a phone in a basket) within a stream of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:FsLZdJ3BAzkC",
+        "num_citations": 0,
+        "pub_url": "https://direct.mit.edu/opmi/article/doi/10.1162/opmi_a_00146/123216",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oJvv9WV-sFsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Modeling dynamic social vision highlights gaps between deep learning and humans",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Kathy Garcia and Emalie McMahon and Colin Conwell and Michael F Bonner and Leyla Isik",
+            "publisher": "OSF",
+            "abstract": "Deep learning models trained on computer vision tasks are widely considered the most successful models of human vision to date. The majority of work that supports this idea evaluates how accurately these models predict brain and behavioral responses to static images of objects and natural scenes. Real-world vision, however, is highly dynamic, and far less work has focused on evaluating the accuracy of deep learning models in predicting responses to stimuli that move, and that involve more complicated, higher-order phenomena like social interactions. Here, we present a dataset of natural videos and captions involving complex multi-agent interactions, and we benchmark 350+ image, video, and language models on behavioral and neural responses to the videos. As with prior work, we find that many vision models reach the noise ceiling in predicting visual scene features and responses along the ventral visual stream (often considered the primary neural substrate of object and scene recognition). In contrast, image models poorly predict human action and social interaction ratings and neural responses in the lateral stream (a neural pathway increasingly theorized as specializing in dynamic, social vision). Language models (given human sentence captions of the videos) predict action and social ratings better than either image or video models, but they still perform poorly at predicting neural responses in the lateral stream. Together these results identify a major gap in AI\u2019s ability to match human social vision and highlight the importance of studying vision in dynamic, natural contexts."
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:PuOEWVtPfzwC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/4mpd9/download",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uZSPgUvyUNYJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Convolutional architectures are cortex-aligned de novo",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.05. 10.593623, 2024",
+            "author": "Atlas Kazemian and Eric Elmoznino and Michael F Bonner",
+            "journal": "bioRxiv",
+            "pages": "2024.05. 10.593623",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "What underlies the emergence of cortex-aligned representations in deep neural network models of vision? We examined networks with varied architectures but no pre-training and quantified their ability to predict image representations in the visual cortices of both monkeys and humans. We found that cortex-aligned representations emerge in convolutional architectures that combine two key manipulations of dimensionality: compression in the spatial domain and expansion in the feature domain. These dimensionality manipulations yielded encoding models of the monkey ventral stream that rivaled a classic goal-driven network. Interestingly, in the human ventral stream, there remained a substantial performance advantage for the goal-driven network, suggesting a stronger contribution from high-level semantic processing in humans. We further show that the inductive biases of convolutional architectures are critical for obtaining performance gains from feature expansion-dimensionality manipulations were relatively ineffective in other architectures and in convolutional models with targeted lesions. Our findings suggest that the architectural constraints of convolutional networks are sufficiently close to the constraints of biological vision to yield cortex-aligned representations without the need for goal-driven optimization."
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:BAanoTsO0WEC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.05.10.593623.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1GXNMauDbxsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "High-performing neural network models of visual cortex benefit from high latent dimensionality",
+            "pub_year": 2024,
+            "citation": "PLOS Computational Biology 20 (1), e1011792, 2024",
+            "author": "Eric Elmoznino and Michael F Bonner",
+            "journal": "PLOS Computational Biology",
+            "volume": "20",
+            "number": "1",
+            "pages": "e1011792",
+            "publisher": "Public Library of Science",
+            "abstract": "Geometric descriptions of deep neural networks (DNNs) have the potential to uncover core representational principles of computational models in neuroscience. Here we examined the geometry of DNN models of visual cortex by quantifying the latent dimensionality of their natural image representations. A popular view holds that optimal DNNs compress their representations onto low-dimensional subspaces to achieve invariance and robustness, which suggests that better models of visual cortex should have lower dimensional geometries. Surprisingly, we found a strong trend in the opposite direction\u2014neural networks with high-dimensional image subspaces tended to have better generalization performance when predicting cortical responses to held-out stimuli in both monkey electrophysiology and human fMRI data. Moreover, we found that high dimensionality was associated with better performance when learning new categories of stimuli, suggesting that higher dimensional representations are better suited to generalize beyond their training domains. These findings suggest a general principle whereby high-dimensional geometry confers computational benefits to DNN models of visual cortex."
+        },
+        "filled": true,
+        "author_pub_id": "zMTnSe8AAAAJ:wyM6WWKXmoIC",
+        "num_citations": 14,
+        "citedby_url": "/scholar?hl=en&cites=13589683078237540538",
+        "cites_id": [
+            "13589683078237540538"
+        ],
+        "pub_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011792",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ulB8KMJAmLwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 10
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "A sparse null code emerges in deep neural networks",
             "pub_year": 2023,
             "citation": "UniReps: the First Workshop on Unifying Representations in Neural Models, 2023",

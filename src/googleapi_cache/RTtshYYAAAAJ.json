@@ -3,6 +3,127 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Beyond faces: the contribution of the amygdala to visual processing in the macaque brain",
+            "pub_year": 2024,
+            "citation": "Cerebral Cortex 34 (6), 2024",
+            "author": "Jessica Taubert and Susan G Wardle and Amanda Patterson and Chris I Baker",
+            "journal": "Cerebral Cortex",
+            "volume": "34",
+            "number": "6",
+            "publisher": "Oxford Academic",
+            "abstract": "The amygdala is present in a diverse range of vertebrate species, such as lizards, rodents, and primates; however, its structure and connectivity differs across species. The increased connections to visual sensory areas in primate species suggests that understanding the visual selectivity of the amygdala in detail is critical to revealing the principles underlying its function in primate cognition. Therefore, we designed a high-resolution, contrast-agent enhanced, event-related fMRI experiment, and scanned 3 adult rhesus macaques, while they viewed 96 naturalistic stimuli. Half of these stimuli were social (defined by the presence of a conspecific), the other half were nonsocial. We also nested manipulations of emotional valence (positive, neutral, and negative) and visual category (faces, nonfaces, animate, and inanimate) within the stimulus set. The results reveal widespread effects of emotional valence, with the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:Ade32sEp0pkC",
+        "num_citations": 0,
+        "pub_url": "https://academic.oup.com/cercor/article-abstract/34/6/bhae245/7691503",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:IPMQ-4VkzXUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Insights from the Evolving Model of Two Cortical Visual Pathways",
+            "pub_year": 2024,
+            "citation": "Journal of Cognitive Neuroscience, 1-12, 2024",
+            "author": "Chris Baker and Dwight Kravitz",
+            "journal": "Journal of Cognitive Neuroscience",
+            "pages": "1-12",
+            "publisher": "MIT Press",
+            "abstract": "The two cortical visual pathways framework has had a profound influence on theories and empirical studies of the visual system for over 40 years. By grounding physiological responses and behavior in neuroanatomy, the framework provided a critical guide for understanding vision. Although the framework has evolved over time, as our understanding of the physiology and neuroanatomy expanded, cortical visual processing is still often conceptualized as two separate pathways emerging from the primary visual cortex that support distinct behaviors (\u201cwhat\u201d vs. \u201cwhere/how\u201d). Here, we take a historical perspective and review the continuing evolution of the framework, discussing key and often overlooked insights. Rather than a functional and neuroanatomical bifurcation into two independent serial, hierarchical pathways, the current evidence points to two highly recurrent heterarchies with heterogeneous \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:WC9gN4BGCRcC",
+        "num_citations": 0,
+        "pub_url": "https://direct.mit.edu/jocn/article/doi/10.1162/jocn_a_02192/121297",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VeMDEy1wEH0J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "From tasks to models of visual mental imagery: Comment on\" Visual mental imagery: Evidence for a heterarchical neural architecture\" by Spagna et al.",
+            "pub_year": 2024,
+            "citation": "Physics of Life Reviews 49, 121-122, 2024",
+            "author": "S Montesinos and CI Baker",
+            "volume": "49",
+            "pages": "121-122",
+            "abstract": "From tasks to models of visual mental imagery: Comment on \"Visual mental imagery: Evidence \nfor a heterarchical neural architecture\" by Spagna et al. - Abstract - Europe PMC Sign in | \nCreate an account https://orcid.org Europe PMC Menu About Tools Developers Help Contact \nus Helpdesk Feedback Twitter Blog Tech blog Developer Forum Europe PMC plus Search \nlife-sciences literature (43,961,101 articles, preprints and more) Search Advanced search \nFeedback This website requires cookies, and the limited processing of your personal data in \norder to function. By using the site you are agreeing to this as outlined in our privacy notice and \ncookie policy. Abstract Full text From tasks to models of visual mental imagery: Comment on \n\"Visual mental imagery: Evidence for a heterarchical neural architecture\" by Spagna et al. \nMontesinos S 1 , Baker CI 1 Author information Affiliations 1. Laboratory of Brain and Cognition, \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:6bLC7aUMtPcC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/med/38642439",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:FLmEEuPrUYUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "From Tasks to Models of Visual Mental Imagery Comment on \u201cVisual mental imagery: Evidence for a heterarchical neural architecture\u201d by Spagna et al.",
+            "pub_year": 2024,
+            "citation": "Physics of Life Reviews, 2024",
+            "author": "S Montesinos and CI Baker",
+            "publisher": "Elsevier",
+            "abstract": "In their comprehensive review, Spagna and colleagues synthesize work on mental imagery across many domains and propose a novel, heterarchical model of imagery (HeXaGeN)[1]. In this model, frontoparietal networks initiate and maintain mental imagery while domain-preferring regions in ventral temporal cortex (VTC) are activated during imagery only in response to their preferred stimuli. Key to their model is the posit of a fusiform imagery node (FIN) in left fusiform gyrus that acts as a domain-general hub between frontal areas and domain-preferring regions in VTC.A virtue of Spagna and colleagues\u2019 review is their highlighting of the diverse paradigms that have been used to study mental imagery across domains. This survey of paradigms makes plain that the tasks used to study imagery are highly heterogeneous and overlap with tasks associated with other processes such as working memory. For instance \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:6bLC7aUMtPcC",
+        "num_citations": 0,
+        "pub_url": "https://scholar.google.com/scholar?cluster=9606718840658770196&hl=en&oi=scholarr",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:FLmEEuPrUYUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Biomimetic versus arbitrary motor control strategies for bionic hand skill learning",
+            "pub_year": 2024,
+            "citation": "Nature Human Behaviour, 1-16, 2024",
+            "author": "Hunter R Schone and Malcolm Udeozor and Mae Moninghoff and Beth Rispoli and James Vandersea and Blair Lock and Levi Hargrove and Tamar R Makin and Chris I Baker",
+            "journal": "Nature Human Behaviour",
+            "pages": "1-16",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "A long-standing engineering ambition has been to design anthropomorphic bionic limbs: devices that look like and are controlled in the same way as the biological body (biomimetic). The untested assumption is that biomimetic motor control enhances device embodiment, learning, generalization and automaticity. To test this, we compared biomimetic and non-biomimetic control strategies for non-disabled participants when learning to control a wearable myoelectric bionic hand operated by an eight-channel electromyography pattern-recognition system. We compared motor learning across days and behavioural tasks for two training groups: biomimetic (mimicking the desired bionic hand gesture with biological hand) and arbitrary control (mapping an unrelated biological hand gesture with the desired bionic gesture). For both trained groups, training improved bionic limb control, reduced cognitive reliance and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:CdxZDUztZiMC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41562-023-01811-6",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-TIbj2ttbj0J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Graspable foods and tools elicit similar responses in visual cortex",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.02. 20.581258, 2024",
+            "author": "J Brendan Ritchie and Spencer B Andrews and Maryam Vaziri-Pashkam and Chris I Baker",
+            "journal": "bioRxiv",
+            "pages": "2024.02. 20.581258",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Extrastriatal visual cortex is known to exhibit distinct response profiles to complex stimuli of varying ecological importance (e.g., faces, scenes, and tools). The dominant interpretation of these effects is that they reflect activation of distinct `category-selective' brain regions specialized to represent these and other stimulus categories. We sought to explore an alternative perspective: that the response to these stimuli is determined less by whether they form distinct categories, and more by their relevance to different forms of natural behavior. In this regard, food is an interesting test case, since it is primarily distinguished from other objects by its edibility, not its appearance, and there is evidence of food-selectivity in human visual cortex. Food is also associated with a common behavior, eating, and food consumption typically also involves the manipulation of food, often with the hands. In this context, food items share many properties in common with tools: they are graspable objects that we manipulate in self-directed and stereotyped forms of action. Thus, food items may be preferentially represented in extrastriatal visual cortex in part because of these shared affordance properties, rather than because they reflect a wholly distinct kind of category. We conducted fMRI and behavioral experiments to test this hypothesis. We found that behaviorally graspable food items and tools were judged to be similar in their action-related properties, and that the location, magnitude, and patterns of neural responses for images of graspable food items were similar in profile to the responses for tool stimuli. Our findings suggest that food-selectivity may reflect the behavioral \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RTtshYYAAAAJ:hsZV8lGYWTMC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.02.20.581258.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Mk3KJbjZKwYJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Stable Cortical Body Maps Before and After Arm Amputation",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023.12. 13.571314, 2023",

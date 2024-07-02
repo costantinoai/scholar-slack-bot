@@ -3,6 +3,49 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Recurrent issues with deep neural network models of visual recognition",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.04. 02.587669, 2024",
+            "author": "Tim Maniquet and Hans Op de Beeck and Andrea Ivan Costantino",
+            "journal": "bioRxiv",
+            "pages": "2024.04. 02.587669",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Object recognition requires flexible and robust information processing, especially in view of the challenges posed by naturalistic visual settings. The ventral stream in visual cortex is provided with this robustness by its recurrent connectivity. Recurrent deep neural networks (DNNs) have recently emerged as promising models of the ventral stream. In this study, we asked whether DNNs could be used to explore the role of different recurrent computations during challenging visual recognition. We assembled a stimulus set that included manipulations that are often associated with recurrent processing in the literature, like occlusion, partial viewing, clutter, and spatial phase scrambling. We obtained a benchmark dataset from human participants performing a categorisation task on this stimulus set. By applying a wide range of model architectures to the same task, we uncovered a nuanced relationship between recurrence, model size, and performance. While recurrent models reach higher performance than their feedforward counterpart, we could not dissociate this improvement from that obtained by increasing model size. We found consistency between humans and models patterns of difficulty across the visual manipulations, but this was not modulated in an obvious way by the specific type of recurrence or size added to the model. Finally, depth/size rather than recurrence makes model confusion patterns more human-like. Contrary to previous assumptions, our findings challenge the notion that recurrent models are better models of human recognition behaviour than feedforward models, and emphasise the complexity of incorporating \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "MG9cVagAAAAJ:Y0pCki6q_DkC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.04.02.587669.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:XI5zzzqWR0IJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Recurrent issues with deep neural networks of visual recognition",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.04. 02.587669, 2024",
+            "author": "Timoth\u00e9e Maniquet and Hans Op de Beeck and Andrea Ivan Costantino",
+            "journal": "bioRxiv",
+            "pages": "2024.04. 02.587669",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Object recognition requires flexible and robust information processing, especially in view of the challenges posed by naturalistic visual settings. The ventral stream in visual cortex is provided with this robustness by its recurrent connectivity. Recurrent deep neural networks (DNNs) have recently emerged as promising models of the ventral stream. In this study, we asked whether DNNs could be used to explore the role of different recurrent computations during challenging visual recognition. We assembled a stimulus set that included manipulations that are often associated with recurrent processing in the literature, like occlusion, partial viewing, clutter, and spatial phase scrambling. We obtained a benchmark dataset from human participants performing a categorisation task on this stimulus set. By applying a wide range of model architectures to the same task, we uncovered a nuanced relationship between recurrence, model size, and performance. While recurrent models reach higher performance than their feedforward counterpart, we could not dissociate this improvement from that obtained by increasing model size. We found consistency between humans and models patterns of difficulty across the visual manipulations, but this was not modulated in an obvious way by the specific type of recurrence or size added to the model. Finally, depth/size rather than recurrence makes model confusion patterns more human-like. Contrary to previous assumptions, our findings challenge the notion that recurrent models are better models of human recognition behaviour than feedforward models, and emphasise the complexity of incorporating recurrence into \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "MG9cVagAAAAJ:Tyk-4Ss8FVUC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.04.02.587669.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:IjLcIn6zf-QJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Recurrent processing in the visual cortex during object recognition",
             "pub_year": 2023,
             "citation": "Journal of Vision 23 (9), 4876-4876, 2023",

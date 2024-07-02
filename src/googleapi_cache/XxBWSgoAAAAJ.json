@@ -3,6 +3,182 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Privileged representational axes in biological and artificial neural networks",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.06. 20.599957, 2024",
+            "author": "Meenakshi Khosla and Alex H Williams and Josh McDermott and Nancy Kanwisher",
+            "journal": "bioRxiv",
+            "pages": "2024.06. 20.599957",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "How do neurons code information? Recent work emphasizes properties of population codes, such as their geometry and decodable information, using measures that are blind to the native tunings (or \u2018axes\u2019) of neural responses. But might these representational axes matter, with some privileged systematically over others? To find out, we developed methods to test for alignment of neural tuning across brains and deep convolutional neural networks (DCNNs). Across both vision and audition, both brains and DCNNs consistently favored certain axes for representing the natural world. Moreover, the representational axes of DCNNs trained on natural inputs were aligned to those in perceptual cortices, such that axis-sensitive model-brain similarity metrics better differentiated competing models of biological sensory systems. We further show that coding schemes that privilege certain axes can reduce downstream wiring costs and improve generalization. These results motivate a new framework for understanding neural tuning in biological and artificial networks and its computational benefits."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:cBPnxVikjH8C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.06.20.599957.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:4B-IvYSgMhkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Utility navigation",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Mary Ann Rankin",
+            "abstract": "While dean of Natural Sciences at the University of Texas, her biggest achievement was her personal drive to redesign the education of science and math teachers for secondary schools. She investigated inadequacies and barriers, led an exhaustive redesign, and oversaw implementation and further development. This system of teacher education, known widely as UTeach, was brilliantly successful. Very shortly, it was producing science and math teacher-education majors in the UT College of Natural Sciences, with better GPAs and better diversity than in the College overall, and in numbers exceeding those preceding redesign by several fold. UTeach is the most widely emulated basis for secondary teacher education reform--and not just in STEM fields."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:Og1tA8FjbJAC",
+        "num_citations": 0,
+        "pub_url": "https://www.amacad.org/person/mary-ann-rankin",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:8qCFG9kAbvMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Reassessing the Selectivity of the Visual Food Component",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Cyn X Fang and Nancy Kanwisher and Meenakshi Khosla",
+            "publisher": "OSF",
+            "abstract": "This study seeks to further examine the claimed food selectivity in the visual stream (Khosla et al, 2022; Jain et al, 2022; Pennock et al, 2023). Experiment 1 (https://doi. org/10.17605/OSF. IO/XRG8T) showed that food selectivity was not found for cutout images, in which food and nonfood objects were isolated and pasted on a white background. In this experiment, we aim to test the effects of (a) Distance,(b) Real World Size, and (c) Material Properties on the activation of the food component."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:x21FZCSn4ZoC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/769ys/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:DnGvpcbi9lAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Representation of navigational affordances and ego-motion in the occipital place area",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.04. 30.591964, 2024",
+            "author": "Frederik S Kamps and Emily M Chen and Nancy Kanwisher and Rebecca Saxe",
+            "journal": "bioRxiv",
+            "pages": "2024.04. 30.591964",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Humans effortlessly use vision to plan and guide navigation through the local environment, or \"scene\". A network of three cortical regions responds selectively to visual scene information, including the occipital (OPA), parahippocampal (PPA), and medial place areas (MPA) - but how this network supports visually-guided navigation is unclear. Recent evidence suggests that one region in particular, the OPA, supports visual representations for navigation, while PPA and MPA support other aspects of scene processing. However, most previous studies tested only static scene images, which lack the dynamic experience of navigating through scenes. We used dynamic movie stimuli to test whether OPA, PPA, and MPA represent two critical kinds of navigationally-relevant information: navigational affordances (e.g., can I walk to the left, right, or both?) and ego-motion (e.g., am I walking forward or backward? turning left or right?). We found that OPA is sensitive to both affordances and ego-motion, as well as the conflict between these cues - e.g., turning toward versus away from an open doorway. These effects were significantly weaker or absent in PPA and MPA. Responses in OPA were also dissociable from those in early visual cortex, consistent with the idea that OPA responses are not merely explained by lower-level visual features. OPA responses to affordances and ego-motion were stronger in the contralateral than ipsilateral visual field, suggesting that OPA encodes navigationally relevant information within an egocentric reference frame. Taken together, these results support the hypothesis that OPA contains visual representations that are useful \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:6VlyvFCUEfcC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.04.30.591964.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:b46bhzZsEFwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Language in brains, minds, and machines",
+            "pub_year": 2024,
+            "citation": "Annual Review of Neuroscience 47, 2024",
+            "author": "Greta Tuckute and Nancy Kanwisher and Evelina Fedorenko",
+            "volume": "47",
+            "publisher": "Annual Reviews",
+            "abstract": "It has long been argued that only humans could produce and understand language. But now, for the first time, artificial language models (LMs) achieve this feat. Here we survey the new purchase LMs are providing on the question of how language is implemented in the brain. We discuss why, a priori, LMs might be expected to share similarities with the human language system. We then summarize evidence that LMs represent linguistic information similarly enough to humans to enable relatively accurate brain encoding and decoding during language processing. Finally, we examine which LM properties\u2014their architecture, task performance, or training\u2014are critical for capturing human neural responses to language and review studies using LMs as in silico model organisms for testing hypotheses about language. These ongoing investigations bring us closer to understanding the representations and processes that \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:7Frjd3zlGBUC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=17553192150834493324",
+        "cites_id": [
+            "17553192150834493324"
+        ],
+        "pub_url": "https://www.annualreviews.org/content/journals/10.1146/annurev-neuro-120623-101142",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:jDeqqEJ3mfMJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An Efficient Multimodal fMRI Localizer for High-Level Visual, Auditory, and Cognitive Regions in Humans",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Samuel Hutchinson and Ammar Marvi and Frederik Kamps and Evelina Fedorenko and Rebecca Saxe and Nancy Kanwisher",
+            "publisher": "OSF",
+            "abstract": "Research using functional MRI (fMRI) and other neuroimaging methods has provided extensive evidence that some regions of the cortex in humans serve highly specific functions (Kanwisher 2010). In order to study these regions and characterize their representations, we need to first find them. While these functionally-specific cortical regions generally co-localize across people, their precise location varies from one individual to the next. It is therefore necessary to functionally identify each region in each participant individually with a functional localizer scan. However there are many such regions, and running a large number of localizer scans to identify each of them is expensive and time consuming. Here we test the effectiveness of a new experimental design to functionally localize multiple regions of interest robustly, efficiently, and accurately in each participant individually in just 23 minutes of fMRI scan time per person. This new localizer\u2013which presents simultaneous auditory and visual stimuli\u2013is designed to identify, within individual participants, cortical regions selectively engaged in visually processing faces, scenes, bodies, words, and objects, as well as speech sounds, language, and theory of mind. Here we test the success of this new localizer against the current gold standard of established standard localizers for these functions."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:xm0LlTxljI0C",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/gjsdb/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:3YtiBYeYujYJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Using fMRI to explore causal reasoning and abstract relational reasoning in the left lateral prefrontal cortex in the human brain",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Jessica Chomik-Morales and Nancy Kanwisher and Laura Schulz and RT Pramod",
+            "publisher": "OSF",
+            "abstract": "This study builds upon our earlier experiment (\u201cExperiment 1\u201d; https://osf. io/s54tb), which found a region in the left lateral prefrontal cortex that responded more strongly in causal reasoning about both physical and social causes compared to descriptive reasoning about physical and social situations. In Experiment 2 we test whether we can replicate the key finding from Experiment 1, namely that Physical Causal (PC) and Social Causal (SC) conditions will produce higher responses in a left frontal region than Physical Description (PD) and Social Description (SD) conditions. We further test the specificity of this region for causal reasoning per se, versus whether this region is also engaged in processing other abstract relationships like temporal order (TO) and part/whole relationships (PW), versus whether it is simply engaged during any demands on executive function broadly (EF). We also test whether the same region responds during a different causal task, when participants reason counterfactually about how an event could be prevented, for both physical (PCP) and social (SCP) conditions. In Experiment 3, we test whether the same region is more strongly engaged when participants read verbal vignettes of causal events of social or physical nature (SCn & PCn), and non-causal descriptions of either social or physical nature (SDn and PDn)."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:orDZ08hpP44C",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/83x74/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:OIwB85sKmI8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Fine-grained neural coding of bodies and body parts in human visual cortex",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "M Vanhoyland and Apurva Murty and T Decramer and W Van Paesschen and S Bracci and H Op de Beeck and N Kanwisher and P Janssen and T Theys",
+            "abstract": "The visual image of a human body provides a valuable source of socially relevant information. However, our understanding of the neuronal mechanisms underlying body perception in humans remains limited given the spatiotemporal constraints of functional imaging. Here we recorded multi-unit spiking activity in two neurosurgical patients in or near the extrastriate body area (EBA), a critical region for body perception. Our recordings revealed a strong preference for human bodies over a large range of control stimuli. Notably, this preference was driven by a distinct selectivity for body parts. Moreover, the observed body selectivity generalized to non-photographic depictions of bodies such as silhouettes and stick figures. Overall, our study provides an unprecedented access into the representation of bodies in the human visual cortex to bridge the gap between human neuroimaging and macaque electrophysiology studies, and form a solid basis for computational models of human body processing."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:QsKbpXNoaWkC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/ppr/ppr805379",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:3rmQ0lkGkSgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Fine-grained neural coding of bodies and body parts in human visual cortex",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.02. 09.579107, 2024",
+            "author": "Jesus Garcia Ramirez and Michael Vanhoyland and Ratan N Apurva Murty and Thomas Decramer and Wim Van Paesschen and Stefania Bracci and Hans Op de Beeck and Nancy G Kanwisher and Peter Janssen and Tom Theys",
+            "journal": "bioRxiv",
+            "pages": "2024.02. 09.579107",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The visual image of a human body provides a valuable source of socially relevant information. However, our understanding of the neuronal mechanisms underlying body perception in humans remains limited given the spatiotemporal constraints of functional imaging. Here we recorded multi-unit spiking activity in two neurosurgical patients in or near the extrastriate body area (EBA), a critical region for body perception. Our recordings revealed a strong preference for human bodies over a large range of control stimuli. Notably, this preference was driven by a  distinct selectivity for body parts. Moreover, the observed body selectivity generalized to non-photographic depictions of bodies such as silhouettes and stick figures. Overall, our study provides an unprecedented access into the representation of bodies in the human visual cortex to bridge the gap between human neuroimaging and macaque electrophysiology studies, and form a solid basis for computational models of human body processing."
+        },
+        "filled": true,
+        "author_pub_id": "XxBWSgoAAAAJ:DXE8ND7PrJAC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.02.09.579107.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:unOfPyzsksUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Future prediction of object contact in the human brain",
             "pub_year": 2023,
             "citation": "OSF, 2023",

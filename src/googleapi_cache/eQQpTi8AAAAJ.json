@@ -3,6 +3,26 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+            "title": "Neural representation of nouns and verbs in congenitally blind and sighted individuals",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.04. 14.589082, 2024",
+            "author": "Marta Urbaniak and Ma\u0142gorzata Paczy\u0144ska and Alfonso Caramazza and \u0141ukasz Bola",
+            "journal": "bioRxiv",
+            "pages": "2024.04. 14.589082",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Language processing involves similar brain regions across languages and cultures. Intriguingly, one population escapes this universal pattern: in blind individuals, linguistic stimuli activate not only canonical language networks, but also the \"visual\" cortex. Theoretical implications of this finding are debated, particularly because it is unclear what properties of linguistic stimuli are represented in the blind visual cortex. To address this issue, we enrolled congenitally blind and sighted participants in an fMRI experiment, in which they listened to concrete, abstract, and pseudo nouns and verbs. We used multi-voxel pattern classification to investigate whether differences between nouns and verbs are represented in the blind visual cortex, and whether this effect is modulated by the word's semantic category. The classification of activation patterns for nouns and verbs was above chance level in the motion-sensitive area V5/MT in the blind participants, but not in other visual areas in this group. The effect in area V5/MT was driven by successful classification of activations for concrete nouns and verbs, in the absence of significant results for abstract and pseudo nouns and verbs. These findings suggest that the blind visual cortex represents the physical properties of noun and verb referents, more salient in the concrete word category, rather than more abstract linguistic distinctions, present in all word categories. Thus, responses to language in the blind visual cortex may be explained by preserved ability of this region to compute physical and spatial representations of the world."
+        },
+        "filled": true,
+        "author_pub_id": "eQQpTi8AAAAJ:qxL8FJ1GzNcC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.04.14.589082.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:UfuZDTuuS2gJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
             "title": "Decoding reach direction in early \u201cvisual\u201d cortex of congenitally blind individuals",
             "pub_year": 2023,
             "citation": "Journal of Neuroscience, 2023",

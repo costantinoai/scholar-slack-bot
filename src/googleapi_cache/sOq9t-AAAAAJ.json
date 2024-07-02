@@ -3,6 +3,151 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "The anterior fusiform gyrus: The ghost in the cortical face machine",
+            "pub_year": 2024,
+            "citation": "Neuroscience & Biobehavioral Reviews, 105535, 2024",
+            "author": "Bruno Rossion and Corentin Jacques and Jacques Jonas",
+            "pages": "105535",
+            "publisher": "Pergamon",
+            "abstract": "Face-selective regions in the human ventral occipito-temporal cortex (VOTC) have been defined for decades mainly with functional magnetic resonance imaging. This face-selective VOTC network is traditionally divided in a posterior \u2018core\u2019 system thought to subtend face perception, and regions of the anterior temporal lobe as a semantic memory component of an extended general system. In between these two putative systems lies the anterior fusiform gyrus and surrounding sulci, affected by magnetic susceptibility artifacts. Here we suggest that this methodological gap overlaps with and contributes to a conceptual gap between (visual) perception and semantic memory for faces. Filling this gap with intracerebral recordings and direct electrical stimulation reveals robust face-selectivity in the anterior fusiform gyrus and a crucial role of this region, especially in the right hemisphere, in identity recognition for both \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:PV2Y7XyTJDgC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=759185150551315092",
+        "cites_id": [
+            "759185150551315092"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0149763424000034",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:lNJcQd8qiQoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Effective connectivity of functional brain regions through concurrent intracerebral electrical stimulation and frequency-tagged visual presentation",
+            "pub_year": 2024,
+            "citation": "Brain Stimulation: Basic, Translational, and Clinical Research in \u2026, 2024",
+            "author": "Luna Angelini and Ang\u00e9lique Volfart and Corentin Jacques and Sophie Colnat-Coulbois and Louis Maillard and Bruno Rossion and Jacques Jonas",
+            "journal": "Brain Stimulation: Basic, Translational, and Clinical Research in Neuromodulation",
+            "publisher": "Elsevier",
+            "abstract": "Direct Electrical Stimulation (DES) is a powerful method for establishing the critical function (s) of brain regions. Yet, behavioral effects elicited by DES, especially in the human association cortex, can be caused by disturbance of connected brain regions beyond the stimulation site ["
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:xEh6bupSuykC",
+        "num_citations": 0,
+        "pub_url": "https://www.brainstimjrnl.com/article/S1935-861X(24)00098-6/fulltext",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:RjvOTxtaXTAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The neuropsychological evaluation of face identity recognition",
+            "pub_year": 2024,
+            "citation": "Neuropsychologia, 108865, 2024",
+            "author": "Ang\u00e9lique Volfart and Bruno Rossion",
+            "pages": "108865",
+            "publisher": "Pergamon",
+            "abstract": "Face identity recognition (FIR) is arguably the ultimate form of recognition for the adult human brain. Even if the term prosopagnosia is reserved for exceptionally rare brain-damaged cases with a category-specific abrupt loss of FIR at adulthood, subjective and objective impairments or difficulties of FIR are common in the neuropsychological population. Here we provide a critical overview of the evaluation of FIR both for clinicians and researchers in neuropsychology. FIR impairments occur following many causes that should be identified objectively by both general and specific, behavioral and neural examinations. We refute the commonly used dissociation between perceptual and memory deficits/tests for FIR, since even a task involving the discrimination of unfamiliar face images presented side-by-side relies on cortical memories of faces in the right-lateralized ventral occipito-temporal cortex. Another frequently \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:WhXzBXCJJjMC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0028393224000800",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vDlJkMBie9YJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A robust neural index of automatic generalization across variable natural views of familiar face identities",
+            "pub_year": 2024,
+            "citation": "Visual Cognition, 1-13, 2024",
+            "author": "Justine David and Laurent Koessler and Bruno Rossion",
+            "journal": "Visual Cognition",
+            "pages": "1-13",
+            "publisher": "Routledge",
+            "abstract": "The ability to automatically and rapidly recognize a familiar face identity across different views is well documented but generally measured with explicit behavioural tasks involving many other processes. Here we provide a sensitive implicit neural measure of this ability using electroencephalographic (EEG) recordings coupled with fast periodic visual stimulation (FPVS). Images of two famous face identities alternated for 15 seconds at a frequency rate of 6 Hz, preceded by a 15 seconds adaptation period to images of one of the face identities. Beyond previous studies, numerous (N\u2009=\u200960) non-edited variable natural face images of each identity were presented, with different images appearing at adaptation (N\u2009=\u200930) and test. At the group-level (N\u2009=\u200916), 3 stimulation sequences only were sufficient to elicit highly significant EEG peaks at odd harmonics (3 and 9 Hz), reflecting face identity discrimination across \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:MagRZZew-58C",
+        "num_citations": 0,
+        "pub_url": "https://www.tandfonline.com/doi/abs/10.1080/13506285.2024.2315796",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JB0d-girEZAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Linguistic and attentional factors\u2013not statistical regularities\u2013contribute to word-selective neural responses with FPVS-oddball paradigms",
+            "pub_year": 2024,
+            "citation": "Cortex, 2024",
+            "author": "Aliette Lochy and Bruno Rossion and Matthew Lambon Ralph and Ang\u00e9lique Volfart and Olaf Hauk and Christine Schiltz",
+            "journal": "Cortex",
+            "publisher": "Elsevier",
+            "abstract": "Studies using frequency-tagging in electroencephalography (EEG) have dramatically increased in the past 10 years, in a variety of domains and populations. Here we used Fast Periodic Visual Stimulation (FPVS) combined with an oddball design to explore visual word recognition. Given the paradigm\u2019s high sensitivity, it is crucial for future basic research and clinical application to prove its robustness across variations of designs, stimulus types and tasks. This paradigm uses periodicity of brain responses to measure discrimination between two experimentally defined categories of stimuli presented periodically. EEG was recorded in 22 adults who viewed words inserted every 5 stimuli (at 2 Hz) within base stimuli presented at 10 Hz. Using two discrimination levels (deviant words among nonwords or pseudowords), we assessed the impact of relative frequency of item repetition (set size or item repetition controlled for \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:cKQgJgBA5EIC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0010945224000327",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oOI2IeCbMAsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Extensive Visual Training in Adulthood Reduces an Implicit Neural Marker of the Face Inversion Effect",
+            "pub_year": 2024,
+            "citation": "Brain Sciences 14 (2), 146, 2024",
+            "author": "Simen Hagen and Renaud Laguesse and Bruno Rossion",
+            "journal": "Brain Sciences",
+            "volume": "14",
+            "number": "2",
+            "pages": "146",
+            "publisher": "MDPI",
+            "abstract": "Face identity recognition (FIR) in humans is supported by specialized neural processes whose function is spectacularly impaired when simply turning a face upside-down: the face inversion effect (FIE). While the FIE appears to have a slow developmental course, little is known about the plasticity of the neural processes involved in this effect\u2014and in FIR in general\u2014at adulthood. Here, we investigate whether extensive training (2 weeks, ~16 h) in young human adults discriminating a large set of unfamiliar inverted faces can reduce an implicit neural marker of the FIE for a set of entirely novel faces. In all, 28 adult observers were trained to individuate 30 inverted face identities presented under different depth-rotated views. Following training, we replicate previous behavioral reports of a significant reduction (56% relative accuracy rate) in the behavioral FIE as measured with a challenging four-alternative delayed-match-to-sample task for individual faces across depth-rotated views. Most importantly, using EEG together with a validated frequency tagging approach to isolate a neural index of FIR, we observe the same substantial (56%) reduction in the neural FIE at the expected occipito-temporal channels. The reduction in the neural FIE correlates with the reduction in the behavioral FIE at the individual participant level. Overall, we provide novel evidence suggesting a substantial degree of plasticity in processes that are key for face identity recognition in the adult human brain."
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:7AXAwFc_feUC",
+        "num_citations": 0,
+        "pub_url": "https://www.mdpi.com/2076-3425/14/2/146",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:NTcSZZtyTqYJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The anterior fusiform gyrus: the ghost in the cortical face machine",
+            "pub_year": 2024,
+            "citation": "Neuroscience & Biobehavioral Reviews, 105535, 2024",
+            "author": "Bruno Rossion and Corentin Jacques and Jacques Jonas",
+            "pages": "105535",
+            "publisher": "Pergamon",
+            "abstract": "Face-selective regions in the human ventral occipito-temporal cortex (VOTC) have been defined for decades mainly with functional magnetic resonance imaging. This face-selective VOTC network is traditionally divided in a posterior \u2018core\u2019 system thought to subtend face perception, and regions of the anterior temporal lobe as a semantic memory component of an extended general system. In between these two putative systems lies the anterior fusiform gyrus and surrounding sulci, affected by magnetic susceptibility artifacts. Here we suggest that this methodological gap overlaps with and contributes to a conceptual gap between (visual) perception and semantic memory for faces. Filling this gap with intracerebral recordings and direct electrical stimulation reveals robust face-selectivity in the anterior fusiform gyrus and a crucial role of this region, especially in the right hemisphere, in identity recognition for both \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sOq9t-AAAAAJ:PV2Y7XyTJDgC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0149763424000034",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Single neuron responses underlying face recognition in the human midfusiform face-selective cortex",
             "pub_year": 2023,
             "citation": "Nature Communications 14 (1), 5661, 2023",

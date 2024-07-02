@@ -3,6 +3,63 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Dimensions underlying the representational alignment of deep neural networks with humans",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.19087, 2024",
+            "author": "Florian P Mahner and Lukas Muttenthaler and Umut G\u00fc\u00e7l\u00fc and Martin N Hebart",
+            "journal": "arXiv preprint arXiv:2406.19087",
+            "abstract": "Determining the similarities and differences between humans and artificial intelligence is an important goal both in machine learning and cognitive neuroscience. However, similarities in representations only inform us about the degree of alignment, not the factors that determine it. Drawing upon recent developments in cognitive science, we propose a generic framework for yielding comparable representations in humans and deep neural networks (DNN). Applying this framework to humans and a DNN model of natural images revealed a low-dimensional DNN embedding of both visual and semantic dimensions. In contrast to humans, DNNs exhibited a clear dominance of visual over semantic features, indicating divergent strategies for representing images. While in-silico experiments showed seemingly-consistent interpretability of DNN dimensions, a direct comparison between human and DNN representations revealed substantial differences in how they process images. By making representations directly comparable, our results reveal important challenges for representational alignment, offering a means for improving their comparability."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:bVQMTfhMCi4C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.19087",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:mt3HgYqvmwAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Unrealized promise of joint modeling of choice and reaction time in improving representation learning",
+            "pub_year": 2024,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society 46, 2024",
+            "author": "Russell Richie and Nehal Ajmal and Martin N Hebart",
+            "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+            "volume": "46",
+            "abstract": "As mental representations are standardly thought to underlie all cognitive processes, a major goal of cognitive science has been to uncover representations. Methods for representation learning from behavioral data often model choice or reaction time data alone, but not jointly, leaving out potentially useful information. Here we develop two models of choice and RT in the odd-one-out task, including one based on the Linear Ballistic Accumulator. Parameter recovery simulations show joint modeling of choice and RT with LBA recovers representations more accurately than modeling choice alone with softmax. However, on two empirical datasets of images and words, joint models performed no better than choice-only models, despite a significant correlation of reaction time with two measures of similarity and choice difficulty in both datasets. We speculate on reasons for the unrealized promise of joint modeling of RT and choice in representation learning."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:RMgMIBzvq-4C",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/87n5h98z",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:HoDwNcl2g1MJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What comparing deep neural networks can teach us about human vision",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Katja Seeliger and Martin N Hebart",
+            "publisher": "OSF",
+            "abstract": "Recent work has demonstrated impressive parallels between human visual representations and those found in deep neural networks. A new study by Wang et al.(2023) highlights what factors may determine this similarity."
+        },
+        "filled": true,
+        "author_pub_id": "Q-n9_FgAAAAJ:L24QuVWYgZ0C",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/e8vha/download",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Distributed representations of behaviorally-relevant object dimensions in the human visual system",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023",

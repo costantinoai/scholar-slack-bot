@@ -3,6 +3,141 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Tracking components of bilingual language control in speech production: An fMRI study using functional localizers",
+            "pub_year": 2024,
+            "citation": "Neurobiology of Language 5 (2), 315-340, 2024",
+            "author": "Agata Wolna and Jakub Szewczyk and Michele Diaz and Aleksandra Domagalik and Marcin Szwed and Zofia Wodniecka",
+            "journal": "Neurobiology of Language",
+            "volume": "5",
+            "number": "2",
+            "pages": "315-340",
+            "publisher": "MIT Press",
+            "abstract": "When bilingual speakers switch back to speaking in their native language (L1) after having used their second language (L2), they often experience difficulty in retrieving words in their L1. This phenomenon is referred to as the L2 after-effect. We used the L2 after-effect as a lens to explore the neural bases of bilingual language control mechanisms. Our goal was twofold: first, to explore whether bilingual language control draws on domain-general or language-specific mechanisms; second, to investigate the precise mechanism(s) that drive the L2 after-effect. We used a precision fMRI approach based on functional localizers to measure the extent to which the brain activity that reflects the L2 after-effect overlaps with the language network  and the domain-general multiple demand network , as well as three task-specific networks that tap into interference resolution, lexical retrieval, and articulation. Forty-two Polish \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:abG-DnoFyZgC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=17859310217496757112",
+        "cites_id": [
+            "17859310217496757112"
+        ],
+        "pub_url": "https://direct.mit.edu/nol/article/doi/10.1162/nol_a_00128/118227",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:eANmJwUE2fcJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Pathways linking greenspace to behavioural problems in Polish children",
+            "pub_year": 2024,
+            "citation": "Heliyon 10 (10), 2024",
+            "author": "Nitika Singh and Dorota Buczy\u0142owska and Clemens Baumbach and Jakub Bratkowski and Yarema Mysak and Maja Wierzba-\u0141ukaszyk and Katarzyna Sitnik-Warchulska and Krzysztof Skotak and Ma\u0142gorzata Lipowska and Bernadetta Izydorczyk and Marcin Szwed and Angel M Dzhambov and Iana Markevych",
+            "journal": "Heliyon",
+            "volume": "10",
+            "number": "10",
+            "publisher": "Elsevier",
+            "abstract": "Previous cross-sectional studies have found a beneficial relationship between greenspace and children's behaviour. Nevertheless, evidence on the mechanisms underlying this association remains scant. We examined whether the availability of greenspace was related to fewer behavioural problems in Polish children and investigated potential mechanisms.Data were obtained from the case-control NeuroSmog study, in which children with and without attention deficit hyperactivity disorder (ADHD) were tested from October 2020 to September 2022. The analytic sample comprised 679 children aged 10\u201313 years. Parents reported internalizing, externalizing, and total behavioural problems using the Child Behaviour Check List (CBCL), as well as information about the presence of a domestic garden and potential mediators: greenspace perception, neighbourhood social cohesion, and physical \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:2P1L_qKh6hAC",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/heliyon/fulltext/S2405-8440(24)07466-8",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:hMPHHMkNo7QJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Lifelong greenspace exposure and ADHD in Polish children: Role of physical activity and perceived neighbourhood characteristics",
+            "pub_year": 2024,
+            "citation": "Journal of Environmental Psychology, 102313, 2024",
+            "author": "Dorota Buczy\u0142owska and Nitika Singh and Clemens Baumbach and Jakub Bratkowski and Yarema Mysak and Maja Wierzba-\u0141ukaszyk and Katarzyna Sitnik-Warchulska and Krzysztof Skotak and Ma\u0142gorzata Lipowska and Bernadetta Izydorczyk and Marcin Szwed and Iana Markevych and Angel M Dzhambov",
+            "journal": "Journal of Environmental Psychology",
+            "pages": "102313",
+            "publisher": "Academic Press",
+            "abstract": "Previous research found a protective association between greenspace exposure and attention deficit hyperactivity disorder (ADHD) diagnosis, but previous studies did not investigate mediatory pathways involving child physical activity (PA) and environmental perceptions. Here, we examined the association between lifelong exposure to greenspace and ADHD diagnosis and potential underlying mechanisms (i.e., perceived greenspace, PA, neighbourhood social cohesion, and neighbourhood safety) in children aged 10-13 with and without ADHD. The sample (N = 689) was collected within the NeuroSmog case-control study, where children with (N = 203) and without ADHD (N = 486) were recruited from 18 towns in Southern Poland. ADHD diagnosis was ascertained according to the International Classification of Diseases 11th Revision criteria. Greenspace exposure was defined as the percentage of grass and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:CHSYGLWDkRkC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0272494424000860",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BC7nWoAx1P4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Tracking components of bilingual language control in speech production: an fMRI study using functional localizers",
+            "pub_year": 2024,
+            "citation": "Neurobiology of Language, 1-26, 2024",
+            "author": "Agata Wolna and Jakub Szewczyk and Michele Diaz and Aleksandra Domagalik and Marcin Szwed and Zofia Wodniecka",
+            "journal": "Neurobiology of Language",
+            "pages": "1-26",
+            "publisher": "MIT Press",
+            "abstract": "When bilingual speakers switch back to speaking in their native language (L1) after having used their second language (L2), they often experience difficulty in retrieving words in their L1. This phenomenon is referred to as the L2 after-effect. We used the L2 after-effect as a lens to explore the neural bases of bilingual language control mechanisms. Our goal was twofold: first, to explore whether bilingual language control draws on domain-general or language-specific mechanisms; second, to investigate the precise mechanism(s) that drive the L2 after-effect. We used a precision fMRI approach based on functional localizers to measure the extent to which the brain activity that reflects the L2 after-effect overlaps with the language network (Fedorenko et al., 2010) and the domain-general multiple demand network (Duncan, 2010), as well as three task-specific networks that tap into interference resolution, lexical \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:abG-DnoFyZgC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=17859310217496757112",
+        "cites_id": [
+            "17859310217496757112"
+        ],
+        "pub_url": "https://direct.mit.edu/nol/article/doi/10.1162/nol_a_00128/118227",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:eANmJwUE2fcJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Blind individuals' enhanced ability to sense their own heartbeat is related to the thickness of their occipital cortex",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.02. 26.581908, 2024",
+            "author": "Anna Lena Stroh and Dominika Radziun and Maksymilian Korczyk and Laura Crucianelli and H Henrik Ehrsson and Marcin Szwed",
+            "journal": "bioRxiv",
+            "pages": "2024.02. 26.581908",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Blindness is associated with heightened sensory abilities, such as improved hearing and tactile acuity. Moreover, recent evidence suggests that blind individuals are better than sighted individuals at perceiving their own heartbeat, suggesting enhanced interoceptive accuracy. Structural changes in the occipital cortex have been hypothesized as the basis of these behavioral enhancements. Indeed, several studies have shown that congenitally blind individuals have increased cortical thickness within occipital areas compared to sighted individuals, but how these structural differences relate to behavioral enhancements is unclear. This study investigated the relationship between cardiac interoceptive accuracy and cortical thickness in 23 congenitally blind individuals and 23 matched sighted controls. Our results show a significant positive correlation between performance in a heartbeat counting task and cortical thickness only in the blind group, indicating a connection between structural changes in occipital areas and blind individuals' better ability to perceive heartbeats."
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:EUQCXRtRnyEC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.02.26.581908.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:LczaBxrpyhsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Behavioral Problems Among Young Adolescents in the Family and Neighborhood Context: a Case Control Study",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Katarzyna Sitnik-Warchulska and Bernadetta Izydorczyk and Iana Markevych and Clemens Baumbach and Yarema Mysak and Dorota Buczy\u0142owska and Marcin Szwed and Ma\u0142gorzata Lipowska",
+            "abstract": "Background: This study aimed to determine whether family and neighborhood social cohesion directly or indirectly impact the reduction of behavioral problems, including internalizing and externalizing behaviors in young adolescents. From a systemic approach, adolescent behavioral problems are influenced by family cohesion and mediated by neighborhood social cohesion.Methods: Data from 700 parents of adolescents aged 10\u201313 years from southern Poland were analyzed. Within the total, 207 adolescents had diagnoses of Attention Deficit Hyperactivity Disorder (ADHD). The structural equation modeling (SEM) approach, adjusting for financial situation and ADHD was used. Gender, ADHD, single-parent household, presence of siblings, and social media use were explored as moderators via stratified SEM models. The data come from the Child Behavior Checklist (CBCL), the Family Adaptation and Cohesion Evaluation Scales (FACES-IV), and the Brief Form of the Perceived Neighborhood Social Cohesion Questionnaire (PNSC-BF).Results: Family and neighborhood social cohesion were both related to behavioral problems. Neighborhood social cohesion was a significant mediator of the relationship between family cohesion and internalizing and externalizing behaviors. Presence of siblings was a significant moderator for the indirect effect on externalizing behaviors.Conclusion: The findings of the study support the thesis, that family and neighborhood social cohesion serve as protective factors for adolescent behavioral problems.Clinical Trial: The clinical trial identifier is NCT04574414.internalizing behaviorsexternalizing behaviors \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Nds56VgAAAAJ:bFI3QPDXJZMC",
+        "num_citations": 0,
+        "pub_url": "https://www.researchsquare.com/article/rs-3927506/latest",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YItaBldJE5oJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Association of residential and school green-and bluespace with academic performance in 10-13-year-old Polish schoolchildren with and without attention deficit hyperactivity disorder",
             "pub_year": 2023,
             "citation": "Science of The Total Environment 859, 160123, 2023",

@@ -3,6 +3,117 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Experience-dependent predictions of feedforward and contextual information in mouse visual cortex",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.06. 10.598181, 2024",
+            "author": "Koen Seignette and Leander de Kraker and Paolo Papale and Lucy S Petro and Barbara Hobo and Jorrit S Montijn and Matthew W Self and Matthew E Larkum and Pieter R Roelfsema and Lars Muckli and Christiaan N Levelt",
+            "journal": "bioRxiv",
+            "pages": "2024.06. 10.598181",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Neurons in primary visual cortex are driven by feedforward visual inputs and top-down contextual inputs. The nature of this contextual information is difficult to study, as responses to feedforward and top-down inputs overlap in time and are difficult to disentangle experimentally. To address this issue, we measured responses to natural images and partially occluded versions of these images in the visual cortex of mice. Assessing neuronal responses before and after familiarizing mice with the non-occluded images allowed us to study experience-dependent and stimulus-specific contextual responses in pyramidal cells (PyCs) in cortical layers 2/3 and 5 in the absence of feedforward input. Surprisingly, in the same retinotopic region of cortex, we found that separate populations of PyCs in layer 2/3 responded to occluded and non-occluded images. Responses of PyCs selective for occluded images were strengthened upon familiarization and decoding analysis revealed they contained image-specific information, suggesting that they signaled the absence of predicted visual stimuli. Responses of PyCs selective for non-occluded scenes were weaker for familiarized images but stronger for unfamiliar images, suggesting that these neurons signaled the presence of unpredicted visual stimuli. Layer 5 also contained PyCs preferring either feedforward or contextual inputs, but their responses were more complex and strengthening of responses to occluded images required task engagement. The results show that visual experience decreases the activity of neurons responding to known feedforward inputs but increases the activity of neurons responding to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:xtoqd-5pKcoC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.06.10.598181.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:by2G_xJ5KiwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The coming decade of digital brain research: A vision for neuroscience at the intersection of technology and computing",
+            "pub_year": 2024,
+            "citation": "Imaging Neuroscience, 2024",
+            "author": "Katrin Amunts and Markus Axer and Swati Banerjee and Lise Bitsch and Jan G Bjaalie and Philipp Brauner and Andrea Brovelli and Navona Calarco and Marcel Carrere and Svenja Caspers and Christine J Charvet and Sven Cichon and Roshan Cools and Irene Costantini and Egidio Ugo D'Angelo and Giulia De Bonis and Gustavo Deco and Javier DeFelipe and Alain Destexhe and Timo Dickscheid and Markus Diesmann and Emrah D\u00fczel and Simon B Eickhoff and Gaute Einevoll and Damian Eke and Andreas K Engel and Alan C Evans and Kathinka Evers and Nataliia Fedorchenko and Stephanie J Forkel and Jan Fousek and Angela D Friederici and Karl Friston and Stephen Furber and Liesbet Geris and Rainer Goebel and Onur G\u00fcnt\u00fcrk\u00fcn and Aini Ismafairus Abd Hamid and Christina Herold and Claus C Hilgetag and Sabine M H\u00f6lter and Yannis Ioannidis and Viktor Jirsa and Sriranga Kashyap and Burkhard S Kasper and Alban de Kerchove d\u2019Exaerde and Roxana Kooijmans and Istv\u00e1n Koren and Jeanette Hellgren Kotaleski and Gregory Kiar and Wouter Klijn and Lars Kl\u00fcver and Alois C Knoll and Zeljka Krsnik and Julia K\u00e4mpfer and Matthew E Larkum and Marja-Leena Linne and Thomas Lippert and Jafri Malin Abdullah and Paola Di Maio and Neville Magielse and Pierre Maquet and Anna Letizia Allegra Mascaro and Daniele Marinazzo and Jorge Mejias and Andreas Meyer-Lindenberg and Michele Migliore and Judith Michael and Yannick Morel and Fabrice O Morin and Lars Muckli and Guy Nagels and Lena Oden and Nicola Palomero-Gallagher and Fanis Panagiotaropoulos and Pier Stanislao Paolucci and Cyriel Pennartz and Liesbet M Peeters and Spase Petkoski and Nicolai Petkov and Lucy S Petro and Mihai A Petrovici and Giovanni Pezzulo and Pieter Roelfsema and Laurence Ris and Petra Ritter and Kathleen Rockland and Stefan Rotter and Andreas Rowald and Sabine Ruland and Philippe Ryvlin and Arleen Salles and Maria V Sanchez-Vives and Johannes Schemmel and Walter Senn and Alexandra A de Sousa and Felix Str\u00f6ckens and Bertrand Thirion and K\u00e2mil Uluda\u011f and Simo Vanni and Sacha Jennifer van Albada and Wim Vanduffel and Julien Vezoli and Lisa Vincenz-Donnelly and Florian Walter and Laszlo Zaborszky",
+            "journal": "Imaging Neuroscience",
+            "publisher": "MIT Press",
+            "abstract": "In recent years, brain research has indisputably entered a new epoch, driven by substantial methodological advances and digitally enabled data integration and modelling at multiple scales\u2014 from molecules to the whole brain. Major advances are emerging at the intersection of neuroscience with technology and computing. This new science of the brain combines high-quality research, data integration across multiple scales, a new culture of multidisciplinary large-scale collaboration and translation into applications. As pioneered in Europe\u2019s Human Brain Project (HBP), a systematic approach will be essential for meeting the coming decade\u2019s pressing medical and technological challenges. The aims of this paper are to: develop a concept for the coming decade of digital brain research, discuss this new concept with the research community at large, to identify points of convergence, and derive therefrom \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:SpbeaW3--B0C",
+        "num_citations": 14,
+        "citedby_url": "/scholar?hl=en&cites=5621886938966994834",
+        "cites_id": [
+            "5621886938966994834"
+        ],
+        "pub_url": "https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00137/120391",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ki-JjGL0BE4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 6,
+            "2023": 5,
+            "2024": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Retinotopic biases in contextual feedback signals to V1 for object and scene processing",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024",
+            "author": "Matthew A Bennett and Lucy S Petro and Clement Abbatecola and Lars Muckli",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Identifying the objects embedded in natural scenes relies on recurrent processing between lower and higher visual areas. How is cortical feedback information related to objects and scenes organised in lower visual areas? The spatial organisation of cortical feedback converging in early visual cortex during object and scene processing could be retinotopically specific as it is coded in V1, or object centred as coded in higher areas, or both. Here, we characterise object and scene-related feedback information to V1. Participants identified foreground objects or background scenes in images with occluded central and peripheral subsections, allowing us to isolate feedback activity to foveal and peripheral regions of V1. Using fMRI and multivoxel pattern classification, we found that feedback of object information is projected to foveal V1 cortex with increased detail during an object identification task. Background scene \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:i2xiXl-TujoC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.03.26.586553",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:olpetfs9w1EJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Cortical depth profiles in primary visual cortex for illusory and imaginary experiences",
+            "pub_year": 2024,
+            "citation": "Nature Communications 15 (1), 1002, 2024",
+            "author": "Johanna Bergmann and Lucy S Petro and Clement Abbatecola and Min S Li and A Tyler Morgan and Lars Muckli",
+            "journal": "Nature Communications",
+            "volume": "15",
+            "number": "1",
+            "pages": "1002",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Visual illusions and mental imagery are non-physical sensory experiences that involve cortical feedback processing in the primary visual cortex. Using laminar functional magnetic resonance imaging (fMRI) in two studies, we investigate if information about these internal experiences is visible in the activation patterns of different layers of primary visual cortex (V1). We find that imagery content is decodable mainly from deep layers of V1, whereas seemingly \u2018real\u2019 illusory content is decodable mainly from superficial layers. Furthermore, illusory content shares information with perceptual content, whilst imagery content does not generalise to illusory or perceptual information. Together, our results suggest that illusions and imagery, which differ immensely in their subjective experiences, also involve partially distinct early visual microcircuits. However, overlapping microcircuit recruitment might emerge based on the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:oNZyr7d5Mn4C",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41467-024-45065-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:9Mr-_ScN60gJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Fighting the scanner effect in brain MRI segmentation with a progressive level-of-detail network trained on multi-site data",
+            "pub_year": 2024,
+            "citation": "Medical Image Analysis, 103090, 2024",
+            "author": "Michele Svanera and Mattia Savardi and Alberto Signoroni and Sergio Benini and Lars Muckli",
+            "journal": "Medical Image Analysis",
+            "pages": "103090",
+            "publisher": "Elsevier",
+            "abstract": "Many clinical and research studies of the human brain require accurate structural MRI segmentation. While traditional atlas-based methods can be applied to volumes from any acquisition site, recent deep learning algorithms ensure high accuracy only when tested on data from the same sites exploited in training (i.e., internal data). Performance degradation experienced on external data (i.e., unseen volumes from unseen sites) is due to the inter-site variability in intensity distributions, and to unique artifacts caused by different MR scanner models and acquisition parameters. To mitigate this site-dependency, often referred to as the scanner effect, we propose LOD-Brain, a 3D convolutional neural network with progressive levels-of-detail (LOD), able to segment brain data from any site. Coarser network levels are responsible for learning a robust anatomical prior helpful in identifying brain structures and their \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "2VgRQOEAAAAJ:KUbvn5osdkgC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S136184152400015X",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:5zXipd7FTD8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Mnemonic but not contextual feedback signals defy dedifferentiation in the aging early visual cortex",
             "pub_year": 2023,
             "citation": "Journal of Neuroscience, 2023",

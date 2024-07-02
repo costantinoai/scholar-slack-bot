@@ -3,6 +3,86 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Laminar dissociation of feedforward and feedback in high-level ventral visual cortex during imagery and perception",
+            "pub_year": 2024,
+            "citation": "iScience, 2024",
+            "author": "Tony Carricarte and Polina Iamshchinina and Robert Trampel and Denis Chaimow and Nikolaus Weiskopf and Radoslaw M Cichy",
+            "journal": "iScience",
+            "publisher": "Elsevier",
+            "abstract": "Visual imagery and perception share neural machinery, but rely on different information flow. While perception is driven by the integration of sensory feedforward and internally-generated feedback information, imagery relies on feedback only. This suggests that although imagery and perception may activate overlapping brain regions, they do so in informationally distinctive ways. Using lamina-resolved MRI at 7T, we measured the neural activity during imagery and perception of faces and scenes in high-level ventral visual cortex at the mesoscale of laminar organization that distinguish feedforward from feedback signals. We found distinctive laminar profiles for imagery and perception of scenes and faces in the parahippocampal place area and the fusiform face area, respectively. Our findings provide insight into the neural basis of the phenomenology of visual imagery versus perception, and shed new light into the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:kuK5TVdYjLIC",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/iscience/fulltext/S2589-0042(24)01454-8",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:GJQ55vSX6K4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Absence of systematic effects of trait anxiety on learning under uncertainty",
+            "pub_year": 2024,
+            "citation": "7th Annual Conference on Cognitive Computational Neuroscience (CCN 2024), 2024",
+            "author": "Muhammad Hashim Satti and Katharina Wille and Matthew R Nassar and Radoslaw M Cichy and Nicolas W Schuck and Peter Dayan and Rasmus Bruckner",
+            "conference": "7th Annual Conference on Cognitive Computational Neuroscience (CCN 2024)",
+            "abstract": "Ignorance can be deadly, making learning essential to survival. However, learning also needs to be adjusted according to the prevailing uncertainty\u2013with faster change or, in typical cases, a higher learning rate (LR), in environments that change quickly and a lower learning rate when the environment\u2019s latent state does not change. Failing to adjust the LR flexibly can lead to learning impairments\u2013an affliction somewhat inconsistently found to affect behavior, particularly in individuals with high trait anxiety. We conducted five experiments (N= 550 participants) using an online game-based variant of a predictive inference task to investigate whether high trait anxiety is associated with impaired LR adjustment. While finding model-based and model-agnostic evidence of uncertainty-related LR modulation across individuals, we did not find any relations to trait anxiety. We obtained consistent results in a control experiment with a binary reversal learning task. Using Bayes factors to test the null hypothesis, our results suggest that trait anxiety is not systematically associated with inflexible learning in uncertain and changing environments."
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:gsN89kCJA0AC",
+        "num_citations": 0,
+        "pub_url": "https://www.ewi-psy.fu-berlin.de/en/psychologie/arbeitsbereiche/neural_dyn_of_vis_cog/learning-lab/downloads/Satti2024_CCN.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:zGyeWAkwv6AJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Adaptive Integration of Perceptual and Reward Information in an Uncertain World",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.04. 24.590947, 2024",
+            "author": "Prashanti Ganesh and Radoslaw M Cichy and Nicolas W Schuck and Carsten Finke and Rasmus Bruckner",
+            "journal": "bioRxiv",
+            "pages": "2024.04. 24.590947",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Perceptual uncertainty and salience both impact decision-making, but how these factors precisely impact trial-and-error reinforcement learning is not well understood. Here, we test the hypotheses that (H1) perceptual uncertainty modulates reward-based learning and that (H2) economic decision-making is driven by the value and the salience of sensory information. For this, we combined computational modeling with a perceptual uncertainty-augmented reward-learning task in a human behavioral experiment (N = 98). In line with our hypotheses, we found that subjects regulated learning behavior in response to the uncertainty with which they could distinguish choice options based on sensory information (belief state), in addition to the errors they made in predicting outcomes. Moreover, subjects considered a combination of expected values and sensory salience for economic decision-making. Taken together, this shows that perceptual and economic decision-making are closely intertwined and share a common basis for behavior in the real world."
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:TIZ-Mc8IlK0C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.04.24.590947.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:kmVImZuk0icJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The transformation of sensory to perceptual braille letter representations in the visually deprived brain",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.02. 12.579923, 2024",
+            "author": "Marleen Haupt and Monika Graumann and Santani Teng and Carina Kaltenbach and Radoslaw Martin Cichy",
+            "journal": "bioRxiv",
+            "pages": "2024.02. 12.579923",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Experience-based plasticity of the human cortex mediates the influence of individual experience on cognition and behavior.  The complete loss of a sensory modality is among the most extreme such experiences. Investigating such a selective, yet extreme change in experience allows for the characterization of experience-based plasticity at its boundaries.  Here, we investigated information processing in individuals who lost vision at birth or early in life by probing the processing of braille letter information. We characterized the transformation of braille letter information from sensory representations depending on the reading hand to perceptual representations that are independent of the reading hand. Using a multivariate analysis framework in combination with fMRI, EEG and behavioral assessment, we tracked cortical braille representations in space and time, and probed their behavioral relevance. We located sensory representations in tactile processing areas and perceptual representations in sighted reading areas, with the lateral occipital complex as a connecting hinge region. This elucidates the plasticity of the visually deprived brain in terms of information processing. Regarding information processing in time, we found that sensory representations emerge before perceptual representations. This indicates that even extreme cases of brain plasticity adhere to a common temporal scheme in the progression from sensory to perceptual transformations. Ascertaining behavioral relevance through perceived similarity ratings, we found that perceptual representations in sighted reading areas, but not sensory representations in tactile processing \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:vbGhcppDl1QC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.02.12.579923.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:G-NE7bZFxKQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Task-Switch Related Reductions in Neural Distinctiveness in Children and Adults: Commonalities and Differences",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023.12. 22.572358, 2023",

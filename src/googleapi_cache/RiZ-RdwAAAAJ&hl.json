@@ -1,0 +1,100 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Artificial neural network language models predict human brain responses to language even after a developmentally realistic amount of training",
+            "pub_year": 2024,
+            "citation": "Neurobiology of Language 5 (1), 43-63, 2024",
+            "author": "Eghbal A Hosseini and Martin Schrimpf and Yian Zhang and Samuel Bowman and Noga Zaslavsky and Evelina Fedorenko",
+            "journal": "Neurobiology of Language",
+            "volume": "5",
+            "number": "1",
+            "pages": "43-63",
+            "publisher": "MIT Press",
+            "abstract": "Artificial neural networks have emerged as computationally plausible models of human language processing. A major criticism of these models is that the amount of training data they receive far exceeds that of humans during language learning. Here, we use two complementary approaches to ask how the models\u2019 ability to capture human fMRI responses to sentences is affected by the amount of training data. First, we evaluate GPT-2 models trained on 1 million, 10 million, 100 million, or 1 billion words against an fMRI benchmark. We consider the 100-million-word model to be developmentally plausible in terms of the amount of training data given that this amount is similar to what children are estimated to be exposed to during the first 10 years of life. Second, we test the performance of a GPT-2 model trained on a 9-billion-token dataset to reach state-of-the-art next-word prediction performance on the human \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RiZ-RdwAAAAJ:2P1L_qKh6hAC",
+        "num_citations": 40,
+        "citedby_url": "/scholar?hl=en&cites=16883751968001908985,5795075706581403076",
+        "cites_id": [
+            "16883751968001908985",
+            "5795075706581403076"
+        ],
+        "pub_url": "https://direct.mit.edu/nol/article/doi/10.1162/nol_a_00137/119156",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-WCOAPYiT-oJ:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 1,
+            "2023": 19,
+            "2024": 20
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Driving and suppressing the human language network using large language models",
+            "pub_year": 2024,
+            "citation": "Nature Human Behaviour 8 (3), 544-561, 2024",
+            "author": "Greta Tuckute and Aalok Sathe and Shashank Srikant and Maya Taliaferro and Mingye Wang and Martin Schrimpf and Kendrick Kay and Evelina Fedorenko",
+            "journal": "Nature Human Behaviour",
+            "volume": "8",
+            "number": "3",
+            "pages": "544-561",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Transformer models such as GPT generate human-like language and are predictive of human brain responses to language. Here, using functional-MRI-measured brain responses to 1,000 diverse sentences, we first show that a GPT-based encoding model can predict the magnitude of the brain response associated with each sentence. We then use the model to identify new sentences that are predicted to drive or suppress responses in the human language network. We show that these model-selected novel sentences indeed strongly drive and suppress the activity of human language areas in new individuals. A systematic analysis of the model-selected sentences reveals that surprisal and well-formedness of linguistic input are key determinants of response strength in the language network. These results establish the ability of neural network models to not only mimic human language but also non-invasively \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RiZ-RdwAAAAJ:YFjsv_pBGBYC",
+        "num_citations": 36,
+        "citedby_url": "/scholar?hl=en&cites=14586857791930189537",
+        "cites_id": [
+            "14586857791930189537"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41562-023-01783-7",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:4UYjleDtbsoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 17,
+            "2024": 16
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Brain-Like Language Processing via a Shallow Untrained Multihead Attention Network",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.15109, 2024",
+            "author": "Badr AlKhamissi and Greta Tuckute and Antoine Bosselut and Martin Schrimpf",
+            "journal": "arXiv preprint arXiv:2406.15109",
+            "abstract": "Large Language Models (LLMs) have been shown to be effective models of the human language system, with some models predicting most explainable variance of brain activity in current datasets. Even in untrained models, the representations induced by architectural priors can exhibit reasonable alignment to brain data. In this work, we investigate the key architectural components driving the surprising alignment of untrained models. To estimate LLM-to-brain similarity, we first select language-selective units within an LLM, similar to how neuroscientists identify the language network in the human brain. We then benchmark the brain alignment of these LLM units across five different brain recording datasets. By isolating critical components of the Transformer architecture, we identify tokenization strategy and multihead attention as the two major components driving brain alignment. A simple form of recurrence further improves alignment. We further demonstrate this quantitative brain alignment of our model by reproducing landmark studies in the language neuroscience field, showing that localized model units -- just like language voxels measured empirically in the human brain -- discriminate more reliably between lexical than syntactic differences, and exhibit similar response profiles under the same experimental conditions. Finally, we demonstrate the utility of our model's representations for language modeling, achieving improved sample and parameter efficiency over comparable architectures. Our model's estimates of surprisal sets a new state-of-the-art in the behavioral alignment to human reading times. Taken together, we propose a highly \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RiZ-RdwAAAAJ:HoB7MX3m0LUC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.15109",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:cJZOoLeoGwQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Do Topographic Deep ANN Models of the Primate Ventral Stream Predict the Perceptual Effects of Direct IT Cortical Interventions?",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.01. 09.572970, 2024",
+            "author": "Martin Schrimpf and Paul McGrath and Eshed Margalit and James J DiCarlo",
+            "journal": "bioRxiv",
+            "pages": "2024.01. 09.572970",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Ever-advancing artificial neural network (ANN) models of the ventral visual stream capture core object recognition behavior and the neural mechanisms underlying it with increasing precision. These models take images as input, propagate through simulated neural representations that resemble biological neural representations at all stages of the primate ventral stream, and produce simulated behavioral choices that resemble primate behavioral choices. We here extend this modeling approach to make and test predictions of neural intervention experiments. Specifically, we enable a new prediction regime for topographic deep ANN (TDANN) models of primate visual processing through the development of perturbation modules that translate micro-stimulation, optogenetic suppression, and muscimol suppression into changes in model neural activity. This unlocks the ability to predict the behavioral effects from particular neural perturbations. We compare these predictions with the key results from the primate IT perturbation experimental literature via a suite of nine corresponding benchmarks. Without any fitting to the benchmarks, we find that TDANN models generated via co-training with both a spatial correlation loss and a standard categorization task qualitatively predict all nine behavioral results. In contrast, TDANN models generated via random topography or via topographic unit arrangement after classification training predict less than half of those results. However, the models' quantitative predictions are consistently misaligned with experimental data, over-predicting the magnitude of some behavioral effects and under-predicting others. None \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "RiZ-RdwAAAAJ:70eg2SAEIzsC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.01.09.572970.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-uZ5zoeQq9MJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

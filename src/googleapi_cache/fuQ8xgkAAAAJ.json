@@ -3,6 +3,69 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Parallel Backpropagation for Shared-Feature Visualization",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2405.09827, 2024",
+            "author": "Alexander Lappe and Anna Bogn\u00e1r and Ghazaleh Ghamkhari Nejad and Albert Mukovskiy and Lucas Martini and Martin A Giese and Rufin Vogels",
+            "journal": "arXiv preprint arXiv:2405.09827",
+            "abstract": "High-level visual brain regions contain subareas in which neurons appear to respond more strongly to examples of a particular semantic category, like faces or bodies, rather than objects. However, recent work has shown that while this finding holds on average, some out-of-category stimuli also activate neurons in these regions. This may be due to visual features common among the preferred class also being present in other images. Here, we propose a deep-learning-based approach for visualizing these features. For each neuron, we identify relevant visual features driving its selectivity by modelling responses to images based on latent activations of a deep neural network. Given an out-of-category image which strongly activates the neuron, our method first identifies a reference image from the preferred category yielding a similar feature activation pattern. We then backpropagate latent activations of both images to the pixel level, while enhancing the identified shared dimensions and attenuating non-shared features. The procedure highlights image regions containing shared features driving responses of the model neuron. We apply the algorithm to novel recordings from body-selective regions in macaque IT cortex in order to understand why some images of objects excite these neurons. Visualizations reveal object parts which resemble parts of a macaque body, shedding light on neural preference of these objects."
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:U4n9YNQMCAIC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2405.09827",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Kp0IoeXY4SQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Location-specific deviant responses to object sequences in macaque inferior temporal cortex",
+            "pub_year": 2024,
+            "citation": "Scientific Reports 14 (1), 3757, 2024",
+            "author": "Hamideh Esmailpour and Rufin Vogels",
+            "journal": "Scientific Reports",
+            "volume": "14",
+            "number": "1",
+            "pages": "3757",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Many species learn temporal regularities in their visual environment, demonstrating visual statistical learning. In this study, we explored the sensitivity of macaque inferior temporal (IT) cortical neurons to transition probabilities of sequentially presented visual images, presented at different locations in the visual field. We exposed monkeys to sequences of two images, where the first image was presented either foveally or peripherally, and the second image was consistently presented foveally. Following several weeks of exposure, we recorded IT responses to assess differences between the exposed (Fixed) and new, Deviant sequences, where the identity of the first image in a sequence differed from the exposure phase. While enhanced responses to Deviant sequences were observed when both images of a pair were foveally presented during exposure, no such deviant responses were present when the first image \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:BzfGm06jWhQC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-024-54298-0",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:co211gh-oQ4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "MacAction: Realistic 3D macaque body animation based on multi-camera markerless motion capture",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.01. 29.577734, 2024",
+            "author": "Lucas M Martini and Anna Bogn\u00e1r and Rufin Vogels and Martin A Giese",
+            "journal": "bioRxiv",
+            "pages": "2024.01. 29.577734",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Social interaction is crucial for survival in primates. For the study of social vision in monkeys, highly controllable macaque face avatars have recently been developed, while body avatars with realistic motion do not yet exist. Addressing this gap, we developed a pipeline for three-dimensional motion tracking based on synchronized multi-view video recordings, achieving sufficient accuracy for life-like full-body animation. By exploiting data-driven pose estimation models, we track the complete time course of individual actions using a minimal set of hand-labeled keyframes. Our approach tracks single actions more accurately than existing pose estimation pipelines for behavioral tracking of non-human primates, requiring less data and fewer cameras. This efficiency is also confirmed for a state-of-the-art human benchmark dataset. An uncanny valley experiment with macaque monkeys demonstrates that animals perceive the generated animations as similar to genuine videos, and establishes an uncanny valley effect for bodies in monkeys."
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:43bX7VzcjpAC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.01.29.577734.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:LxQIP7Di1OIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Perceptual learning: Policy insights from basic research to real-world applications",
             "pub_year": 2023,
             "citation": "Policy Insights from the Behavioral and Brain Sciences 10 (2), 324-332, 2023",

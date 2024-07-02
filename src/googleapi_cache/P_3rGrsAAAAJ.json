@@ -3,6 +3,103 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Benchmarking Out-of-Distribution Generalization Capabilities of DNN-based Encoding Models for the Ventral Visual Cortex",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.16935, 2024",
+            "author": "Spandan Madan and Will Xiao and Mingran Cao and Hanspeter Pfister and Margaret Livingstone and Gabriel Kreiman",
+            "journal": "arXiv preprint arXiv:2406.16935",
+            "abstract": "We characterized the generalization capabilities of DNN-based encoding models when predicting neuronal responses from the visual cortex. We collected \\textit{MacaqueITBench}, a large-scale dataset of neural population responses from the macaque inferior temporal (IT) cortex to over  images, comprising  unique natural images presented to seven monkeys over  sessions. Using \\textit{MacaqueITBench}, we investigated the impact of distribution shifts on models predicting neural activity by dividing the images into Out-Of-Distribution (OOD) train and test splits. The OOD splits included several different image-computable types including image contrast, hue, intensity, temperature, and saturation. Compared to the performance on in-distribution test images -- the conventional way these models have been evaluated -- models performed worse at predicting neuronal responses to out-of-distribution images, retaining as little as  of the performance on in-distribution test images. The generalization performance under OOD shifts can be well accounted by a simple image similarity metric -- the cosine distance between image representations extracted from a pre-trained object recognition model is a strong predictor of neural predictivity under different distribution shifts. The dataset of images, neuronal firing rate recordings, and computational benchmarks are hosted publicly at: https://bit.ly/3zeutVd."
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:ZzlSgRqYykMC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.16935",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:hHT-WzOrkcwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Non-invasive Blood-Brain Barrier Disruption using Acoustic Holography with a Clinical Focused Ultrasound System",
+            "pub_year": 2024,
+            "citation": "IEEE Transactions on Biomedical Engineering, 2024",
+            "author": "Nathan McDannold and Yongzhi Zhang and Stecia-Marie Fletcher and Patrick Y Wen and David A Reardon and Alexandra J Golby and Margaret Livingstone",
+            "journal": "IEEE Transactions on Biomedical Engineering",
+            "publisher": "IEEE",
+            "abstract": ""
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:P7Ujq4OLJYoC",
+        "num_citations": 0,
+        "pub_url": "https://ieeexplore.ieee.org/abstract/document/10542367/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:e75lqayrPC8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Feature-selective responses in macaque visual cortex follow eye movements during natural vision",
+            "pub_year": 2024,
+            "citation": "Nature Neuroscience, 1-10, 2024",
+            "author": "Will Xiao and Saloni Sharma and Gabriel Kreiman and Margaret S Livingstone",
+            "journal": "Nature Neuroscience",
+            "pages": "1-10",
+            "publisher": "Nature Publishing Group US",
+            "abstract": "In natural vision, primates actively move their eyes several times per second via saccades. It remains unclear whether, during this active looking, visual neurons exhibit classical retinotopic properties, anticipate gaze shifts or mirror the stable quality of perception, especially in complex natural scenes. Here, we let 13 monkeys freely view thousands of natural images across 4.6\u2009million fixations, recorded 883\u2009h of neuronal responses in six areas spanning primary visual to anterior inferior temporal cortex and analyzed spatial, temporal and featural selectivity in these responses. Face neurons tracked their receptive field contents, indicated by category-selective responses. Self-consistency analysis showed that general feature-selective responses also followed eye movements and remained gaze-dependent over seconds of viewing the same image. Computational models of feature-selective responses located \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:F9fV5C73w3QC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41593-024-01631-5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:AWMwpevXG9kJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Texture bias in primate ventral visual cortex",
+            "pub_year": 2024,
+            "citation": "ICLR 2024 Workshop on Representational Alignment, 2024",
+            "author": "Akshay Vivek Jagadeesh and Margaret Livingstone",
+            "conference": "ICLR 2024 Workshop on Representational Alignment",
+            "abstract": "To accurately recognize objects despite variation in their appearance, humans rely on shape more than other low-level features. This is in contrast to leading deep neural network (DNN) models of visual recognition, which are texture biased, meaning they rely more on local texture information than global shape for categorization. Does the finding of texture bias in DNN models suggest that object representations in biological and artificial neural networks encode different types of information? Here, we addressed this question by recording neural responses from inferior temporal (IT) cortex of rhesus macaque monkeys in response to a novel object stimulus set, where we independently vary shape, texture, and pose. We observed reliable tuning for both object shape and texture in IT cortex, but texture information was more accurately decodable. We tested IT neural responses and DNN models in a two-alternative match-to-sample behavioral task. We found, to our surprise that IT neural responses consistently grouped images with matching texture over images with matching shape, demonstrating a bias towards texture information, on par with DNN models. Thus, our results suggest that the ventral visual cortex, like DNN models, provides a texture-like basis set of features, and that further neural computations, perhaps downstream of IT, are necessary to account for the shape selectivity of visual perception."
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:a3BOlSfXSfwC",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=D6YvyvZ7P7",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:_5SUGGpF5fIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A Whole-Brain Topographic Ontology",
+            "pub_year": 2024,
+            "citation": "Annual Review of Neuroscience 47, 2024",
+            "author": "Michael Arcaro and Margaret Livingstone",
+            "volume": "47",
+            "publisher": "Annual Reviews",
+            "abstract": "It is a common view that the intricate array of specialized domains in the ventral visual pathway is innately prespecified. What this review postulates is that they are not. We explore the origins of domain specificity, hypothesizing that the adult brain emerges from an interplay between a domain-general map-based architecture, shaped by intrinsic mechanisms, and experience. We argue that the most fundamental innate organization of cortex in general, and not just the visual pathway, is a map-based topography that governs how the environment maps onto the brain, how brain areas interconnect, and ultimately, how the brain processes information.Expected final online publication date for the Annual Review of Neuroscience, Volume 47 is July 2024. Please see http://www.annualreviews.org/page/journal/pubdates for revised estimates."
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:yqoGN6RLRZoC",
+        "num_citations": 0,
+        "pub_url": "https://www.annualreviews.org/doi/abs/10.1146/annurev-neuro-082823-073701",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vbtm4QpESigJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "The neural code for \u201cface cells\u201d is not face-specific",
             "pub_year": 2023,
             "citation": "Science Advances 9 (35), eadg1736, 2023",

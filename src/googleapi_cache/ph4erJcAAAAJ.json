@@ -3,6 +3,83 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Shape-Biased Learning by Thinking Inside the Box",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.05. 30.595526, 2024",
+            "author": "Niklas Mueller and Cees GM Snoek and Iris Isabelle Anna Groen and H Steven Scholte",
+            "journal": "bioRxiv",
+            "pages": "2024.05. 30.595526",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Deep Neural Networks (DNNs) may surpass human-level performance on vision tasks such as object recognition and detection, but their model behavior still differs from human behavior in important ways. One prominent example of this difference, and the main focus of our paper, is that DNNs trained on ImageNet exhibit an object texture bias, while humans are consistently biased towards shape. DNN shape-bias can be increased by data augmentation, but next to being computationally more expensive, data augmentation is a biologically implausible method of creating texture-invariance. We present an empirical study on texture-shape-bias in DNNs showcasing that high texture-bias correlates with high background-object ratio. In addition, DNNs trained on tight object bounding boxes of ImageNet images are substantially more biased towards shape than models trained on the full images. Using a custom dataset of high-resolution, object annotated scene images, we show that (I) shape-bias systematically varies with training on bounding boxes, (II) removal of global object shape as a result of commonly applied cropping during training increases texture bias, (III) shape-bias is negatively correlated with test accuracy on ImageNet while being positively correlated on cue-conflict images created using bounding boxes, following the trend of humans. Overall, we show that an improved supervision signal that better reflects the visual features that truly belong to the to-be-classified object increases the shape-bias of deep neural networks. Our results also imply that simultaneous human alignment on both classification accuracy and strategy can not be \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "ph4erJcAAAAJ:3utUx_xxzcoC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.05.30.595526.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:GOeuyUoRvawJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Saliency Suppressed, Semantics Surfaced: Visual Transformations in Neural Networks and the Brain",
+            "pub_year": 2024,
+            "citation": "ICLR 2024 Workshop on Representational Alignment, 2024",
+            "author": "Gustaw Opielka and Jessica Loke and H Steven Scholte",
+            "conference": "ICLR 2024 Workshop on Representational Alignment",
+            "abstract": "Deep learning algorithms lack human-interpretable accounts of how they transform raw visual input into a robust semantic understanding, which impedes comparisons between different architectures, training objectives, and the human brain. In this work, we take inspiration from neuroscience and employ representational approaches to shed light on how neural networks encode information at low (visual saliency) and high (semantic similarity) levels of abstraction. Moreover, we introduce a custom image dataset where we systematically manipulate salient and semantic information. We find that ResNets are more sensitive to saliency information than ViTs, when trained with object classification objectives. We uncover that networks suppress saliency in early layers, a process enhanced by natural language supervision (CLIP) in ResNets. CLIP also enhances semantic encoding in both architectures. Finally, we show that semantic encoding is a key factor in aligning AI with human visual perception, while saliency suppression is a non-brain-like strategy."
+        },
+        "filled": true,
+        "author_pub_id": "ph4erJcAAAAJ:Lyl8M50Wyb0C",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=q7lidZsDKu",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:77UcHlbdMKMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Enriching ConvNets with pre-cortical processing enhances alignment with human brain responses",
+            "pub_year": 2024,
+            "citation": "ICLR 2024 Workshop on Representational Alignment, 2024",
+            "author": "Niklas M\u00fcller and H Steven Scholte and Iris Groen",
+            "conference": "ICLR 2024 Workshop on Representational Alignment",
+            "abstract": "Convolutional Neural Networks (ConvNets) are the current state-of-the-art for modelling human visual processing whilst also performing tasks on a human per- formance level. Convolutional features can be seen as analogous to visual recep- tive fields and thus render them biologically plausible. However, spatially-uniform sampling and reuse of features across the entire visual field do not accurately rep- resent structural properties of the human visual system. Here, we present empir- ical findings of incorporating functional and structural properties of the human retina into ConvNets on their alignment with human brain activity. We show that predictions of human EEG data using ConvNets features improve by using foveated stimuli and that differential spatial sampling in ConvNets explains sev- eral qualities of EEG recordings. We also find that color and contrast filtering of inputs in turn do not yield improved predictions. Overall, our results suggest that incorporating biologically plausible spatial sampling is important for increasing representational alignment between ConvNets and humans."
+        },
+        "filled": true,
+        "author_pub_id": "ph4erJcAAAAJ:VaBbNeojGYwC",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=qX4rUVZPsl",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:_IE5sL4h-pAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Feature binding is slow: temporal integration explains apparent ultrafast binding",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Lucija Bla\u017eevski and Timo Stein and H Steven Scholte",
+            "publisher": "OSF",
+            "abstract": "Visual perception involves binding of distinct features into a unified percept. While traditional theories link feature binding to time-consuming recurrent processes, Holcombe and Cavanagh (2001) demonstrated ultrafast, early binding of features that belong to the same object. The task required binding of orientation and luminance within an exceptionally short presentation time. However, because visual stimuli were presented over multiple presentation cycles, their findings can alternatively be explained by temporal integration over the extended stimulus sequence. Here, we conducted three experiments manipulating the number of presentation cycles. If early binding occurs, one extremely short cycle should be sufficient for feature integration. Conversely, late binding theories predict that successful binding requires substantial time and improves with additional presentation cycles. Our findings indicate that task-relevant binding of features from the same object occurs slowly, supporting late binding theories."
+        },
+        "filled": true,
+        "author_pub_id": "ph4erJcAAAAJ:zGnLiCkldm4C",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/gw9p3/download",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:CcTZxPESksgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Mechanisms of human dynamic object recognition revealed by sequential deep neural networks",
             "pub_year": 2023,
             "citation": "PLOS Computational Biology 19 (6), e1011169, 2023",

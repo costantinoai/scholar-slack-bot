@@ -3,6 +3,118 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Perceived Stereo Depth reflects Retinal Disparities, not 3D Geometry",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Paul Linton and Nikolaus Kriegeskorte",
+            "abstract": "We present a new illusion that challenges our traditional understanding of stereo vision. Traditional \u2018Triangulation\u2019accounts of stereo vision back-project from points on the retina to points in the world. This requires that stereo vision incorporates how binocular disparities fall off with the viewing distance squared. By contrast, Linton 2023 Phil Trans R Soc B 378: 20210455 proposes a \u2018Minimal Model\u2019of stereo vision where perceived stereo depth is simply a function (most likely a linear function) of the amount of disparity on the retina. We present a new illusion (the \u2018Linton Stereo Illusion\u2019) to adjudicate between these two approaches. The illusion consists of a smaller circle (at 40cm) in front of a larger circle (at 50cm), with constant angular sizes throughout. We move the larger circle forward by 10cm (to 40cm) and then back again (to 50cm). The question is, what distance should we move the smaller circle forward and back to maintain a constant perceived separation between the circles? Constant physical distance (10cm)(\u2018Triangulation\u2019) or constant disparity (6.7 cm)(\u2018Minimal Model\u2019)? Observers choose constant disparity. This leads us to four conclusions: First, perceived stereo depth appears to be best captured by the \u2018Minimal Model\u2019. Second, doubling disparity appears to double perceived depth, suggesting that perceived stereo depth is proportional to disparity. Third, changes in vergence appear to have no effect on perceived depth. Fourth, stereo \u2018depth constancy\u2019appears to be a cognitive (not perceptual) phenomenon, reflecting our experience of a world distorted in perceived stereo depth."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:c6chOJGeGucC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/ppr/ppr813527",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JEmRuESlaaEJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Source Invariance and Probabilistic Transfer: A Testable Theory of Probabilistic Neural Representations",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2404.08101, 2024",
+            "author": "Samuel Lippl and Raphael Gerraty and John Morrison and Nikolaus Kriegeskorte",
+            "journal": "arXiv preprint arXiv:2404.08101",
+            "abstract": "As animals interact with their environments, they must infer properties of their surroundings. Some animals, including humans, can represent uncertainty about those properties. But when, if ever, do they use probability distributions to represent their uncertainty? It depends on which definition we choose. In this paper, we argue that existing definitions are inadequate because they are untestable. We then propose our own definition. There are two reasons why existing definitions are untestable. First, they do not distinguish between representations of uncertainty and representations of variables merely related to uncertainty ('representational indeterminacy'). Second, they do not distinguish between probabilistic representations of uncertainty and merely \"heuristic\" representations of uncertainty. We call this 'model indeterminacy' because the underlying problem is that we do not have access to the animal's generative model. We define probabilistic representations by two properties: 1) they encode uncertainty regardless of the source of the uncertainty ('source invariance'), 2) they support the efficient learning of new tasks that would be more difficult to learn given non-probabilistic representations ('probabilistic task transfer'). Source invariance indicates that they are representations of uncertainty rather than variables merely related to uncertainty, thereby solving representational indeterminacy. Probabilistic task transfer indicates that they are probabilistic representations of uncertainty rather than merely heuristic representations, thereby solving model indeterminacy."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:DxlTmyU89zoC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2404.08101",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:KAC-r4zp43EJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Can neural networks benefit from objectives that encourage iterative convergent computations? A case study of ResNets and object classification",
+            "pub_year": 2024,
+            "citation": "Plos one 19 (3), e0293440, 2024",
+            "author": "Samuel Lippl and Benjamin Peters and Nikolaus Kriegeskorte",
+            "journal": "Plos one",
+            "volume": "19",
+            "number": "3",
+            "pages": "e0293440",
+            "publisher": "Public Library of Science",
+            "abstract": "Recent work has suggested that feedforward residual neural networks (ResNets) approximate iterative recurrent computations. Iterative computations are useful in many domains, so they might provide good solutions for neural networks to learn. However, principled methods for measuring and manipulating iterative convergence in neural networks remain lacking. Here we address this gap by 1) quantifying the degree to which ResNets learn iterative solutions and 2) introducing a regularization approach that encourages the learning of iterative solutions. Iterative methods are characterized by two properties: iteration and convergence. To quantify these properties, we define three indices of iterative convergence. Consistent with previous work, we show that, even though ResNets can express iterative solutions, they do not learn them when trained conventionally on computer-vision tasks. We then introduce regularizations to encourage iterative convergent computation and test whether this provides a useful inductive bias. To make the networks more iterative, we manipulate the degree of weight sharing across layers using soft gradient coupling. This new method provides a form of recurrence regularization and can interpolate smoothly between an ordinary ResNet and a \u201crecurrent\u201d ResNet (i.e., one that uses identical weights across layers and thus could be physically implemented with a recurrent network computing the successive stages iteratively across time). To make the networks more convergent we impose a Lipschitz constraint on the residual functions using spectral normalization. The three indices of iterative convergence reveal that the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:Z610oKUqOA4C",
+        "num_citations": 0,
+        "pub_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0293440",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:0VW4k9qEm10J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Generative Adversarial Collaborations: A practical guide for conference organizers and participating scientists",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2402.12604, 2024",
+            "author": "Gunnar Blohm and Benjamin Peters and Ralf Haefner and Leyla Isik and Nikolaus Kriegeskorte and Jennifer S Lieberman and Carlos R Ponce and Gemma Roig and Megan AK Peters",
+            "journal": "arXiv preprint arXiv:2402.12604",
+            "abstract": "Generative adversarial collaborations (GACs) are a form of formal teamwork between groups of scientists with diverging views. The goal of GACs is to identify and ultimately resolve the most important challenges, controversies, and exciting theoretical and empirical debates in a given research field. A GAC team would develop specific, agreed-upon avenues to resolve debates in order to move a field of research forward in a collaborative way. Such adversarial collaborations have many benefits and opportunities but also come with challenges. Here, we use our experience from (1) creating and running the GAC program for the Cognitive Computational Neuroscience (CCN) conference and (2) implementing and leading GACs on particular scientific problems to provide a practical guide for future GAC program organizers and leaders of individual GACs."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:1n-LKbgTOzoC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2402.12604",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uxFImCCXViEJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How does the primate brain combine generative and discriminative computations in vision?",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2401.06005, 2024",
+            "author": "Benjamin Peters and James J DiCarlo and Todd Gureckis and Ralf Haefner and Leyla Isik and Joshua Tenenbaum and Talia Konkle and Thomas Naselaris and Kimberly Stachenfeld and Zenna Tavares and Doris Tsao and Ilker Yildirim and Nikolaus Kriegeskorte",
+            "journal": "arXiv preprint arXiv:2401.06005",
+            "abstract": "Vision is widely understood as an inference problem. However, two contrasting conceptions of the inference process have each been influential in research on biological vision as well as the engineering of machine vision. The first emphasizes bottom-up signal flow, describing vision as a largely feedforward, discriminative inference process that filters and transforms the visual information to remove irrelevant variation and represent behaviorally relevant information in a format suitable for downstream functions of cognition and behavioral control. In this conception, vision is driven by the sensory data, and perception is direct because the processing proceeds from the data to the latent variables of interest. The notion of \"inference\" in this conception is that of the engineering literature on neural networks, where feedforward convolutional neural networks processing images are said to perform inference. The alternative conception is that of vision as an inference process in Helmholtz's sense, where the sensory evidence is evaluated in the context of a generative model of the causal processes giving rise to it. In this conception, vision inverts a generative model through an interrogation of the evidence in a process often thought to involve top-down predictions of sensory data to evaluate the likelihood of alternative hypotheses. The authors include scientists rooted in roughly equal numbers in each of the conceptions and motivated to overcome what might be a false dichotomy between them and engage the other perspective in the realm of theory and experiment. The primate brain employs an unknown algorithm that may combine the advantages of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:N8RR74vhTp4C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2401.06005",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How to optimize neuroscience data utilization and experiment design for advancing primate visual and linguistic brain models?",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2401.03376, 2024",
+            "author": "Greta Tuckute and Dawn Finzi and Eshed Margalit and Joel Zylberberg and SueYeon Chung and Alona Fyshe and Evelina Fedorenko and Nikolaus Kriegeskorte and Jacob Yates and Kalanit Grill Spector and Kohitij Kar",
+            "journal": "arXiv preprint arXiv:2401.03376",
+            "abstract": "In recent years, neuroscience has made significant progress in building large-scale artificial neural network (ANN) models of brain activity and behavior. However, there is no consensus on the most efficient ways to collect data and design experiments to develop the next generation of models. This article explores the controversial opinions that have emerged on this topic in the domain of vision and language. Specifically, we address two critical points. First, we weigh the pros and cons of using qualitative insights from empirical results versus raw experimental data to train models. Second, we consider model-free (intuition-based) versus model-based approaches for data collection, specifically experimental design and stimulus selection, for optimal model development. Finally, we consider the challenges of developing a synergistic approach to experimental design and model building, including encouraging data and model sharing and the implications of iterative additions to existing models. The goal of the paper is to discuss decision points and propose directions for both experimenters and model developers in the quest to understand the brain."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:N0GlzNNR4l8C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2401.03376",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "The neuroconnectionist research programme",
             "pub_year": 2023,
             "citation": "Nature Reviews Neuroscience, 1-20, 2023",

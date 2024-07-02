@@ -3,6 +3,201 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Learning functional transduction",
+            "pub_year": 2024,
+            "citation": "Advances in Neural Information Processing Systems 36, 2024",
+            "author": "Mathieu Chalvidal and Thomas Serre and Rufin VanRullen",
+            "journal": "Advances in Neural Information Processing Systems",
+            "volume": "36",
+            "abstract": "Research in statistical learning has polarized into two general approaches to perform regression analysis: Transductive methods construct estimates directly based on exemplar data using generic relational principles which might suffer from the curse of dimensionality. Conversely, inductive methods can potentially fit highly complex functions at the cost of compute-intensive solution searches. In this work, we leverage the theory of vector-valued Reproducing Kernel Banach Spaces (RKBS) to propose a hybrid approach: We show that transductive regression systems can be meta-learned with gradient descent to form efficient in-context neural approximators of function defined over both finite and infinite-dimensional spaces (operator regression). Once trained, our Transducer can almost instantaneously capture new functional relationships and produce original image estimates, given a few pairs of input and output examples. We demonstrate the benefit of our meta-learned transductive approach to model physical systems influenced by varying external factors with little data at a fraction of the usual deep learning training costs for partial differential equations and climate modeling applications."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:gVv57TyPmFsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=12991008176689008541",
+        "cites_id": [
+            "12991008176689008541"
+        ],
+        "pub_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/e9b8a3362a6d9a7f9f842bd2d919e1a0-Abstract-Conference.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:nU--fRtVSbQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Latent Representation Matters: Human-like Sketches in One-shot Drawing Tasks",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.06079, 2024",
+            "author": "Victor Boutin and Rishav Mukherji and Aditya Agrawal and Sabine Muzellec and Thomas Fel and Thomas Serre and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2406.06079",
+            "abstract": "Humans can effortlessly draw new categories from a single exemplar, a feat that has long posed a challenge for generative models. However, this gap has started to close with recent advances in diffusion models. This one-shot drawing task requires powerful inductive biases that have not been systematically investigated. Here, we study how different inductive biases shape the latent space of Latent Diffusion Models (LDMs). Along with standard LDM regularizers (KL and vector quantization), we explore supervised regularizations (including classification and prototype-based representation) and contrastive inductive biases (using SimCLR and redundancy reduction objectives). We demonstrate that LDMs with redundancy reduction and prototype-based regularizations produce near-human-like drawings (regarding both samples' recognizability and originality) -- better mimicking human perception (as evaluated psychophysically). Overall, our results suggest that the gap between humans and machines in one-shot drawings is almost closed."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:CaZNVDsoPx4C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.06079",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:QuPKEkbUXmMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A recurrent CNN for online object detection on raw radar frames",
+            "pub_year": 2024,
+            "citation": "IEEE Transactions on Intelligent Transportation Systems, 2024",
+            "author": "Colin Decourt and Rufin VanRullen and Didier Salle and Thomas Oberlin",
+            "journal": "IEEE Transactions on Intelligent Transportation Systems",
+            "publisher": "IEEE",
+            "abstract": "Automotive radar sensors provide valuable information for advanced driving assistance systems (ADAS). Radars can reliably estimate the distance to an object and the relative velocity, regardless of weather and light conditions. However, radar sensors suffer from low resolution and huge intra-class variations in the shape of objects. Exploiting the time information (e.g, multiple frames) has been shown to help to capture better the dynamics of objects and, therefore, the variation in the shape of objects. Most temporal radar object detectors use 3D convolutions to learn spatial and temporal information. However, these methods are often non-causal and unsuitable for real-time applications. This work presents RECORD, a new recurrent CNN architecture for online radar object detection. We propose an end-to-end trainable architecture mixing convolutions and ConvLSTMs to learn spatio-temporal dependencies \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:nVrZBo8bIpAC",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=13715660132531667729",
+        "cites_id": [
+            "13715660132531667729"
+        ],
+        "pub_url": "https://ieeexplore.ieee.org/abstract/document/10547638/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:EYOJyzjQV74J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4,
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Through their eyes: multi-subject Brain Decoding with simple alignment techniques",
+            "pub_year": 2024,
+            "citation": "Imaging Neuroscience, 2024",
+            "author": "Matteo Ferrante and Tommaso Boccato and Furkan Ozcelik and Rufin VanRullen and Nicola Toschi",
+            "journal": "Imaging Neuroscience",
+            "publisher": "MIT Press",
+            "abstract": "To-date, brain decoding literature has focused on single-subject studies, i.e. reconstructing stimuli presented to a subject under fMRI acquisition from the fMRI activity of the same subject. The objective of this study is to introduce a generalization technique that enables the decoding of a subject\u2019s brain based on fMRI activity of another subject, i.e. cross-subject brain decoding. To this end, we also explore cross-subject data alignment techniques. Data alignment is the attempt to register different subjects in a common anatomical or functional space for further and more general analysis.We utilized the Natural Scenes Dataset, a comprehensive 7T fMRI experiment focused on vision of natural images. The dataset contains fMRI data from multiple subjects exposed to 9841 images, where 982 images have been viewed by all subjects. Our method involved training a decoding model on one subject\u2019s data \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:otzGkya1bYkC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=5811987928613068171",
+        "cites_id": [
+            "5811987928613068171"
+        ],
+        "pub_url": "https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00170/120739",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ix3XUzpUqFAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Towards Generalized Brain Decoding of visual stimuli: Cross-Subject and Dataset Perspectives with a simple alignment technique",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Matteo Ferrante and Tommaso Boccato and Furkan Ozcelik and Rufin VanRullen and Nicola Toschi",
+            "abstract": "To-date, brain decoding literature has focused on singlesubject studies, ie reconstructing stimuli presented to a subject under fMRI acquisition from the fMRI activity of the same subject. The objective of this study is to introduce a generalization technique that enables the decoding of a subject\u2019s brain based on fMRI activity of another subject, ie crosssubject brain decoding. To this end, we also explore crosssubject data alignment techniques. Data alignment is the attempt to register different subjects in a common anatomical or functional space for further and more general analysis. We worked with the Natural Scenes Dataset, a comprehensive 7T fMRI experiment focused on vision of natural images. The dataset contains fMRI data from multiple subjects exposed to 9841 images, where 982 images have been viewed by all subjects. Our method involved training a decoding model on one subject\u2019s data, aligning new data from other subjects to this space, and testing the decoding on the second subject based on information aligned to first subject. We found that crosssubject brain decoding is possible, even with a small subset of the dataset, specifically, using the common data, which are around 10% of the total data, namely 982 images, with performances in decoding compararble to the ones achieved by single subject decoding. Ridge regression emerged as the best method for functional alignment in fine-grained information decoding, outperforming all other techniques. By aligning multiple subjects, we achieved high-quality brain decoding and a potential reduction in scan time by 90%. This substantial decrease in scan time could open up \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:wMgC3FpKEyYC",
+        "num_citations": 0,
+        "pub_url": "https://hcrl-workshop.github.io/2024/assets/papers/Towards%20Generalized%20Brain%20Decoding%20of%20visual%20stimuli-%20Cross-Subject%20and%20Dataset%20Perspectives%20with%20a%20simple%20alignment%20technique.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JBsU74iGNxQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Zero-shot cross-modal transfer of Reinforcement Learning policies through a Global Workspace",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2403.04588, 2024",
+            "author": "L\u00e9opold Mayti\u00e9 and Benjamin Devillers and Alexandre Arnold and Rufin VanRullen",
+            "journal": "arXiv preprint arXiv:2403.04588",
+            "abstract": "Humans perceive the world through multiple senses, enabling them to create a comprehensive representation of their surroundings and to generalize information across domains. For instance, when a textual description of a scene is given, humans can mentally visualize it. In fields like robotics and Reinforcement Learning (RL), agents can also access information about the environment through multiple sensors; yet redundancy and complementarity between sensors is difficult to exploit as a source of robustness (e.g. against sensor failure) or generalization (e.g. transfer across domains). Prior research demonstrated that a robust and flexible multimodal representation can be efficiently constructed based on the cognitive science notion of a 'Global Workspace': a unique representation trained to combine information across modalities, and to broadcast its signal back to each modality. Here, we explore whether such a brain-inspired multimodal representation could be advantageous for RL agents. First, we train a 'Global Workspace' to exploit information collected about the environment via two input modalities (a visual input, or an attribute vector representing the state of the agent and/or its environment). Then, we train a RL agent policy using this frozen Global Workspace. In two distinct environments and tasks, our results reveal the model's ability to perform zero-shot cross-modal transfer between input modalities, i.e. to apply to image inputs a policy previously trained on attribute vectors (and vice-versa), without additional training or fine-tuning. Variants and ablations of the full Global Workspace (including a CLIP-like multimodal representation \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:jL-93Qbq4QoC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2403.04588",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:iVbXxp7Tb_UJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Modality-Agnostic fMRI Decoding of Vision and Language",
+            "pub_year": 2024,
+            "citation": "ICLR 2024 Workshop on Representational Alignment, 2024",
+            "author": "Mitja Nikolaus and Milad Mozafari and Nicholas Asher and Leila Reddy and Rufin VanRullen",
+            "conference": "ICLR 2024 Workshop on Representational Alignment",
+            "abstract": "Previous studies have shown that it is possible to map brain activation data of subjects viewing images onto the feature representation space of not only vision models (modality-specific decoding) but also language models (cross-modal decoding). In this work, we introduce and use a new large-scale fMRI dataset ( trials per subject) of people watching both images and text descriptions of such images. This novel dataset enables the development of modality-agnostic decoders: a single decoder that can predict which stimulus a subject is seeing, irrespective of the modality (image or text) in which the stimulus is presented.  We train and evaluate such decoders to map brain signals onto stimulus representations from a large range of publicly available vision, language and multimodal (vision+language) models. Our findings reveal that (1) modality-agnostic decoders perform as well as (and sometimes even better than) modality-specific decoders (2) modality-agnostic decoders mapping brain data onto representations from unimodal models perform as well as decoders relying on multimodal representations (3) while language and low-level visual (occipital) brain regions are best at decoding text and image stimuli, respectively, high-level visual (temporal) regions perform well on both stimulus types."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:4xDN1ZYqzskC",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=7gWQL0hTrX",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:tMNycASFBawJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A traveling waves perspective on temporal binding",
+            "pub_year": 2024,
+            "citation": "Journal of Cognitive Neuroscience, 1-9, 2024",
+            "author": "Andrea Alamia and Rufin VanRullen",
+            "journal": "Journal of Cognitive Neuroscience",
+            "pages": "1-9",
+            "publisher": "MIT Press",
+            "abstract": "Brain oscillations are involved in many cognitive processes, and several studies have investigated their role in cognition. In particular, the phase of certain oscillations has been related to temporal binding and integration processes, with some authors arguing that perception could be an inherently rhythmic process. However, previous research on oscillations mostly overlooked their spatial component: how oscillations propagate through the brain as traveling waves, with systematic phase delays between brain regions. Here, we argue that interpreting oscillations as traveling waves is a useful paradigm shift to understand their role in temporal binding and address controversial results. After a brief definition of traveling waves, we propose an original view on temporal integration that considers this new perspective. We first focus on cortical dynamics, then speculate about the role of thalamic nuclei in modulating \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:tH6gc1N1XXoC",
+        "num_citations": 9,
+        "citedby_url": "/scholar?hl=en&cites=8910395417058135892",
+        "cites_id": [
+            "8910395417058135892"
+        ],
+        "pub_url": "https://direct.mit.edu/jocn/article-abstract/doi/10.1162/jocn_a_02004/115974",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VM8EKmwVqHsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4,
+            "2024": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Leveraging Self-Supervised Instance Contrastive Learning for Radar Object Detection",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2402.08427, 2024",
+            "author": "Colin Decourt and Rufin VanRullen and Didier Salle and Thomas Oberlin",
+            "journal": "arXiv preprint arXiv:2402.08427",
+            "abstract": "In recent years, driven by the need for safer and more autonomous transport systems, the automotive industry has shifted toward integrating a growing number of Advanced Driver Assistance Systems (ADAS). Among the array of sensors employed for object recognition tasks, radar sensors have emerged as a formidable contender due to their abilities in adverse weather conditions or low-light scenarios and their robustness in maintaining consistent performance across diverse environments. However, the small size of radar datasets and the complexity of the labelling of those data limit the performance of radar object detectors. Driven by the promising results of self-supervised learning in computer vision, this paper presents RiCL, an instance contrastive learning framework to pre-train radar object detectors. We propose to exploit the detection from the radar and the temporal information to pre-train the radar object detection model in a self-supervised way using contrastive learning. We aim to pre-train an object detector's backbone, head and neck to learn with fewer data. Experiments on the CARRADA and the RADDet datasets show the effectiveness of our approach in learning generic representations of objects in range-Doppler maps. Notably, our pre-training strategy allows us to use only 20% of the labelled data to reach a similar mAP@0.5 than a supervised approach using the whole training set."
+        },
+        "filled": true,
+        "author_pub_id": "1pwyaYgAAAAJ:PVgj2kMGcgYC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2402.08427",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:6LPXbzzChDUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Multimodal decoding of human brain activity into images and text",
             "pub_year": 2023,
             "citation": "UniReps: the First Workshop on Unifying Representations in Neural Models, 2023",

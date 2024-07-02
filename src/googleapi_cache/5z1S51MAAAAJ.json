@@ -3,6 +3,71 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Amodal completion across the brain: The impact of structure and knowledge",
+            "pub_year": 2024,
+            "citation": "Journal of Vision 24 (6), 10-10, 2024",
+            "author": "Jordy Thielen and Tessa M van Leeuwen and Simon J Hazenberg and Anna ZL Wester and Floris P de Lange and Rob van Lier",
+            "journal": "Journal of Vision",
+            "volume": "24",
+            "number": "6",
+            "pages": "10-10",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "This study investigates the phenomenon of amodal completion within the context of naturalistic objects, employing a repetition suppression paradigm to disentangle the influence of structure and knowledge cues on how objects are completed. The research focuses on early visual cortex (EVC) and lateral occipital complex (LOC), shedding light on how these brain regions respond to different completion scenarios. In LOC, we observed suppressed responses to structure and knowledge-compatible stimuli, providing evidence that both cues influence neural processing in higher-level visual areas. However, in EVC, we did not find evidence for differential responses to completions compatible or incompatible with either structural or knowledge-based expectations. Together, our findings suggest that the interplay between structure and knowledge cues in amodal completion predominantly impacts higher-level visual processing, with less pronounced effects on the early visual cortex. This study contributes to our understanding of the complex mechanisms underlying visual perception and highlights the distinct roles played by different brain regions in amodal completion."
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:48xauSegjOkC",
+        "num_citations": 0,
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2793751",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:LKFL88pW7GUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Subjective confidence modulates individual BOLD patterns of predictive processing",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.02. 23.581697, 2024",
+            "author": "Andre Hechler and Floris de Lange and Valentin Riedl",
+            "journal": "bioRxiv",
+            "pages": "2024.02. 23.581697",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Humans are adept at extracting and learning sequential patterns from sensory input. This ability enables predictions about future states, resulting in anticipation both on a behavioral and neural level. Stimuli deviating from predictions usually evoke higher neural and hemodynamic activity than predicted stimuli. This difference indicates increased surprise, or prediction error signaling in the context of predictive coding. However, interindividual differences in learning performance and uncertainty have rarely been taken into account. Under Bayesian formulations of cortical function, surprise should be strongest if a subject makes incorrect predictions with high confidence. In the present study, we studied the impact of subjective confidence on imaging markers of predictive processing. Participants viewed visual object sequences of varying predictability over multiple days. After each day, we instructed them to complete partially presented sequences and to rate their confidence in the decision. During fMRI scanning, participants saw sequences that either confirmed predictions, deviated from them, or were random. We replicated findings of increased BOLD responses to surprising input in the ventral visual stream. In line with our hypothesis, response magnitude increased with the level of confidence after the training phase. Interestingly, the activity difference between predictable and random input also scaled with confidence: In the anterior cingulate, predictable sequences elicited higher activity for low levels of confidence, but lower activity for high levels of confidence. In summary, we showed that confidence is a crucial moderator of the link between \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:jL-93Qbq4QoC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.02.23.581697.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:W8WEiZBGbPcJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Preparatory activity during visual search reflects attention-guiding objects rather than search targets",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.02. 02.578555, 2024",
+            "author": "Maelle Lerebourg and Floris P de Lange and Marius V Peelen",
+            "journal": "bioRxiv",
+            "pages": "2024.02. 02.578555",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Efficient behavior requires the rapid attentional selection of task-relevant objects. Previous research has shown that target-selective neurons in visual cortex increase their baseline firing rate when participants are cued to search for a target object. Such preparatory activity represents a key finding for theories of visual search, as it may reflect a top-down bias that guides spatial attention, favoring processing of target-matching input for subsequent report. However, in daily life, visual search is often guided by non-target objects that are neither externally cued nor reported. For instance, when looking for a pen, we may direct our attention to the office desk where we expect the pen to be. These 'anchor objects' (e.g., the desk) thereby guide search for associated objects (e.g., the pen) in scenes. Here, we used fMRI and eye tracking to test whether preparatory activity during visual search represents the target (the pen), the guiding anchor object (the desk) or both. In an anchor-guided search task, participants (N=34) learned associations between targets and anchors and searched for these targets in scenes. To fully dissociate target from anchor processing, target-anchor associations were reversed across different scene contexts. Participants' first fixations were reliably guided towards the target-associated anchor. Importantly, preparatory fMRI activity patterns in lateral occipital cortex (LOC) represented the target-associated anchor rather than the target. Whole-brain analyses additionally identified a region in the right intraparietal sulcus that represented the anchor. Our results show that preparatory activity in visual cortex represents a self-generated \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "5z1S51MAAAAJ:4xDN1ZYqzskC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.02.02.578555.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:TKU7csX-lB8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Perceptual Foundation and Extension to Phase Tagging for Rapid Invisible Frequency Tagging (RIFT)",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023",

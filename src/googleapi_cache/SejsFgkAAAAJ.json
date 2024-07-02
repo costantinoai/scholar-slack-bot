@@ -3,6 +3,46 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Temporal multiplexing of perception and memory codes in IT cortex",
+            "pub_year": 2024,
+            "citation": "Nature, 1-8, 2024",
+            "author": "Liang She and Marcus K Benna and Yuelin Shi and Stefano Fusi and Doris Y Tsao",
+            "journal": "Nature",
+            "pages": "1-8",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "A central assumption of neuroscience is that long-term memories are represented by the same brain areas that encode sensory stimuli. Neurons in inferotemporal (IT) cortex represent the sensory percept of visual objects using a distributed axis code, \u2013. Whether and how the same IT neural population represents the long-term memory of visual objects remains unclear. Here we examined how familiar faces are encoded in the IT anterior medial face patch (AM), perirhinal face patch (PR) and temporal pole face patch (TP). In AM and PR we observed that the encoding axis for familiar faces is rotated relative to that for unfamiliar faces at long latency; in TP this memory-related rotation was much weaker. Contrary to previous claims, the relative response magnitude to familiar versus unfamiliar faces was not a stable indicator of familiarity in any patch, , , , , \u2013. The mechanism underlying the memory-related axis change is \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:08ZZubdj9fEC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41586-024-07349-5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ZNI0sU9PYAcJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How does the primate brain combine generative and discriminative computations in vision?",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2401.06005, 2024",
+            "author": "Benjamin Peters and James J DiCarlo and Todd Gureckis and Ralf Haefner and Leyla Isik and Joshua Tenenbaum and Talia Konkle and Thomas Naselaris and Kimberly Stachenfeld and Zenna Tavares and Doris Tsao and Ilker Yildirim and Nikolaus Kriegeskorte",
+            "journal": "arXiv preprint arXiv:2401.06005",
+            "abstract": "Vision is widely understood as an inference problem. However, two contrasting conceptions of the inference process have each been influential in research on biological vision as well as the engineering of machine vision. The first emphasizes bottom-up signal flow, describing vision as a largely feedforward, discriminative inference process that filters and transforms the visual information to remove irrelevant variation and represent behaviorally relevant information in a format suitable for downstream functions of cognition and behavioral control. In this conception, vision is driven by the sensory data, and perception is direct because the processing proceeds from the data to the latent variables of interest. The notion of \"inference\" in this conception is that of the engineering literature on neural networks, where feedforward convolutional neural networks processing images are said to perform inference. The alternative conception is that of vision as an inference process in Helmholtz's sense, where the sensory evidence is evaluated in the context of a generative model of the causal processes giving rise to it. In this conception, vision inverts a generative model through an interrogation of the evidence in a process often thought to involve top-down predictions of sensory data to evaluate the likelihood of alternative hypotheses. The authors include scientists rooted in roughly equal numbers in each of the conceptions and motivated to overcome what might be a false dichotomy between them and engage the other perspective in the realm of theory and experiment. The primate brain employs an unknown algorithm that may combine the advantages of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "SejsFgkAAAAJ:u9iWguZQMMsC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2401.06005",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Rapid, concerted switching of the neural code in inferotemporal cortex",
             "pub_year": 2023,
             "citation": "bioRxiv, 2023",

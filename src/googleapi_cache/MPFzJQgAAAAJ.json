@@ -3,6 +3,83 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Keep Moving: identifying task-relevant subspaces to maximise plasticity for newly learned tasks",
+            "pub_year": 2024,
+            "citation": "3rd Conference on Lifelong Learning Agents (CoLLAs), 2024",
+            "author": "Daniel Anthes* and Sushrut Thorat* and Peter K\u00f6nig and Tim C Kietzmann",
+            "conference": "3rd Conference on Lifelong Learning Agents (CoLLAs)"
+        },
+        "filled": true,
+        "author_pub_id": "MPFzJQgAAAAJ:maZDTaKrznsC",
+        "num_citations": 0,
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:db2DrzxzUXAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Searching near and far: The attentional template incorporates viewing distance.",
+            "pub_year": 2024,
+            "citation": "Journal of Experimental psychology. Human Perception and Performance 50 (2 \u2026, 2024",
+            "author": "Surya Gayet and Elisa Battistoni and Sushrut Thorat and Marius V Peelen",
+            "journal": "Journal of Experimental psychology. Human Perception and Performance",
+            "volume": "50",
+            "number": "2",
+            "pages": "216-231",
+            "abstract": "According to theories of visual search, observers generate a visual representation of the search target (the\" attentional template\") that guides spatial attention toward target-like visual input. In real-world vision, however, objects produce vastly different visual input depending on their location: your car produces a retinal image that is 10 times smaller when it is parked 50 compared to 5 m away. Across four experiments, we investigated whether the attentional template incorporates viewing distance when observers search for familiar object categories. On each trial, participants were precued to search for a car or person in the near or far plane of an outdoor scene. In\" search trials,\" the scene reappeared and participants had to indicate whether the search target was present or absent. In intermixed\" catch-trials,\" two silhouettes were briefly presented on either side of fixation (matching the shape and/or predicted size of the search target), one of which was followed by a probe-stimulus. We found that participants were more accurate at reporting the location (Experiments 1 and 2) and orientation (Experiment 3) of probe stimuli when they were presented at the location of size-matching silhouettes. Thus, attentional templates incorporate the predicted size of an object based on the current viewing distance. This was only the case, however, when silhouettes also matched the shape of the search target (Experiment 2). We conclude that attentional templates for finding objects in scenes are shaped by a combination of category-specific attributes (shape) and context-dependent expectations about the likely appearance (size) of these objects at the current \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "MPFzJQgAAAAJ:TFP_iSt0sucC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/med/38376937",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oErnnDXWVSIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predicting cued and oddball visual search performance from fMRI, MEG, and DNN neural representational similarity",
+            "pub_year": 2024,
+            "citation": "Journal of Neuroscience, 2024",
+            "author": "Lu-Chun Yeh and Sushrut Thorat and Marius V Peelen",
+            "journal": "Journal of Neuroscience",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Capacity limitations in visual tasks can be observed when the number of task-related objects increases. An influential idea is that such capacity limitations are determined by competition at the neural level: two objects that are encoded by shared neural populations interfere more in behavior (e.g., visual search) than two objects encoded by separate neural populations. However, the neural representational similarity of objects varies across brain regions and across time, raising the question of where and when competition determines task performance. Furthermore, it is unclear whether the association between neural representational similarity and task performance is common or unique across tasks. Here, we used neural representational similarity derived from fMRI, MEG, and deep neural networks (DNN) to predict performance on two visual search tasks involving the same objects and requiring the same \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "MPFzJQgAAAAJ:bEWYMUwI8FkC",
+        "num_citations": 0,
+        "pub_url": "https://www.jneurosci.org/content/early/2024/02/07/JNEUROSCI.1107-23.2024.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:4-r2Hmb5rTkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Computational characterization of the role of an attention schema in controlling visuospatial attention",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2402.01056, 2024",
+            "author": "Lotta Piefke and Adrien Doerig and Tim Kietzmann and Sushrut Thorat",
+            "journal": "arXiv preprint arXiv:2402.01056",
+            "abstract": "How does the brain control attention? The Attention Schema Theory suggests that the brain constructs an internal model of attention for its control. However, it remains unclear under which circumstances an attention schema is computationally useful, and whether it can emerge in a learning system without hard-wiring it. To address these questions, we trained a reinforcement learning agent with attention to track and catch a ball in a noisy environment. Crucially, the agent had additional neural resources that it could freely use. We asked under which conditions these additional resources develop an attention schema to track attention. We found that the more uncertain the agent was about the location of its attentional state, the more it benefited from these additional resources, which developed an attention schema. Together, these results indicate that an attention schema emerges in simple learning systems where attention is both important and difficult to track."
+        },
+        "filled": true,
+        "author_pub_id": "MPFzJQgAAAAJ:iH-uZ7U-co4C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2402.01056",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:L584DE-GSLkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Diagnosing Catastrophe: Large parts of accuracy loss in continual learning can be accounted for by readout misalignment",
             "pub_year": 2023,
             "citation": "Conference on Cognitive Computational Neuroscience (CCN), 748-751, 2023",

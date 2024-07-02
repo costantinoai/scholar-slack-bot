@@ -3,6 +3,249 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "An asynchronous, hands-off workflow for looking time experiments with infants.",
+            "pub_year": 2024,
+            "citation": "Developmental Psychology, 2024",
+            "author": "Gal Raz and Sabrina Piccolo and Janine Medrano and Shari Liu and Kirsten Lydic and Catherine Mei and Victoria Nguyen and Tianmin Shu and Rebecca Saxe",
+            "journal": "Developmental Psychology",
+            "publisher": "American Psychological Association",
+            "abstract": "The study of infant gaze has long been a key tool for understanding the developing mind. However, labor-intensive data collection and processing limit the speed at which this understanding can be advanced. Here, we demonstrate an asynchronous workflow for conducting violation-of-expectation (VoE) experiments, which is fully \u201chands-off\u201d for the experimenter. We first replicate four classic VoE experiments in a synchronous online setting, and show that VoE can generate highly replicable effects through remote testing. We then confirm the accuracy of a state-of-the-art gaze annotation software, iCatcher+ in a new setting. Third, we train parents to control the experiment flow based on the infant\u2019s gaze. Combining all three innovations, we then conduct an asynchronous automated infant-contingent VoE experiment. The hands-off workflow successfully replicates a classic VoE effect: infants look longer at inefficient \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:EPG8bYD4jVwC",
+        "num_citations": 0,
+        "pub_url": "https://psycnet.apa.org/record/2024-97072-001",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:UdFgdQ5C1BkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Generous acts have contrasting meanings in equal versus hierarchical social relationships",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Alicia M Chen and Rebecca Saxe",
+            "abstract": "What expectations do acts of generosity create for future social interactions? In online behavioral experiments presenting human observers (N= 1159 English-speaking adults in the United States) with naturalistic vignettes, we find that knowing about the structure (equal or hierarchical) of an existing social relationship markedly reshapes people's expectations for sequences of generous acts. Notably, people do not always expect reciprocal generosity. In hierarchical relationships, people expect the opposite\u2014that the same person will repeat the generous act, following a precedent. These expectations are governed by abstract rules, tailored to specific cultural scripts, affect how people feel about generous acts, and can be used to communicate the desired structure of relationships."
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:kF1pexMAQbMC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/ppr/ppr866079",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:j2YIUCHtTO0J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Intervening on Emotions by Planning Over a Theory of Mind",
+            "pub_year": 2024,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society 46, 2024",
+            "author": "Tony Chen and Sean Dae Houlihan and Kartik Chandra and Josh Tenenbaum and Rebecca Saxe",
+            "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+            "volume": "46",
+            "abstract": "Much of social cognition involves reasoning about others\u2019 minds: predicting their reactions, inferring their feelings, and explaining their behavior. By representing mental contents like beliefs, desires, and emotions, Bayesian theory of mind mod- els have made progress in capturing how humans manage these cognitive feats. But social life is not merely observation: hu- mans must also plan to intervene on these same mental con- tents. The present work models how people choose interven- tions to influence others\u2019 emotions. Building on a prior model of people\u2019s intuitive theory of emotions, we model how people use their intuitive theory to evaluate and simulate the effects of different interventions. We apply our model to data from behavioral experiments requiring counterfactual and joint in- terventions, and show a close alignment with human choices. Our results provide a step towards a potentially unifying expla- nation for emotion prediction and intervention, suggesting that they could arise from the same underlying generative model."
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:kzcSZmkxUKAC",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/4gz7c85c",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-FkiZe94kcUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How to Change a Mind: Adults and Children Use the Causal Structure of Theory of Mind to Intervene on Others\u2019 Behaviors",
+            "pub_year": 2024,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society 46, 2024",
+            "author": "Shengyi Wu and Laura Schulz and Rebecca Saxe",
+            "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+            "volume": "46",
+            "abstract": "Prior studies of Theory of Mind have primarily asked observers to predict others\u2019 actions given their beliefs and desires, or to infer agents\u2019 beliefs and desires given observed actions. However, if Theory of Mind is genuinely a causal theory, people should also be able to plan interventions on others\u2019 mental states to change their behavior. The intuitive causal model of Theory of Mind predicts an asymmetry: one has to instill both the relevant belief and desire to cause an agent to act; however, to prevent a likely action, it suffices to remove either the relevant belief or desire. Here, we use these asymmetric causal interventions to probe the structure of Theory of Mind. In Experiments 1 and 2, both adults (N=80) and older children (N=42, 8-10 years) distinguished generative and preventative cases: selecting interventions on both mental states (both belief and desire) to induce an agent to act and just one of the mental states (either belief or desire) to prevent an action. However, younger children (N =42, 5-7 years) did not. To probe this age difference, in Experiment 3, we asked younger children(N=42, 5-7 years) just to predict the outcome of others\u2019 mental state interventions. Children predicted that interventions were more likely to prevent actions than to cause them, but failed to predict that intervening on both the relevant beliefs and desires is more likely to generate a novel action than intervening on either alone. These findings suggest that by eight to ten years old, people represent the causal structure of Theory of Mind and can selectively intervene on beliefs and desires to induce and prevent others\u2019 actions."
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:WAzi4Gm8nLoC",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/5n09t35c",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Eq2IhxgEavQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predicting graded dishabituation in a rational learning model using perceptual stimulus embeddings",
+            "pub_year": 2024,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society 46, 2024",
+            "author": "Anjie Cao and Gal Raz and Rebecca Saxe and Michael C Frank",
+            "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+            "volume": "46",
+            "abstract": "How do humans decide what to look at and when to stop looking? The Rational Action, Noisy Choice for Habituation (RANCH) model formulates looking behaviors as a rational information acquisition process. RANCH instantiates a hypothesis about the perceptual encoding process using a neural network-derived embedding space, which allows it to operate on raw images. In this paper, we show that the model not only captures key looking time patterns such as habituation and dishabituation, but also makes fine-grained, out-of-sample predictions about magnitudes of dishabituation to previously unseen stimuli. We validated those predictions experimentally with a self-paced looking time task in adults (N = 468). We also show that model fits are robust across parameters, but that assumptions about the perceptual encoding process, the learning process and the decision process are all critical for predicting human performance."
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:raTqNPD5sRQC",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/96b1m7gh",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:cFgzdXRq46AJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Computational Social Cognition: Approaches and challenges",
+            "pub_year": 2024,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society 46, 2024",
+            "author": "Ismail Guennouni and Joseph M Barnby and Julian Jara-Ettinger and Rebecca Saxe and Maarten Speekenbrink",
+            "volume": "46",
+            "abstract": "Predicting the actions and reactions of others is crucial to suc- cessful social interaction. When deciding whether to bluff in a game of poker, we consider the chances that the other players will fold or continue to play and unmask our bluff. When deciding whether to tell our boss that their plans are likely to have adverse effects, we consider a range of reac- tions, from being grateful for our honesty to being dismissed out of spite. Such predictions are highly uncertain and com- plex, not least because the other\u2019s (re)actions usually result from them making equally complex and uncertain inferences about us. Nevertheless, we are often remarkably successful \u2013 although sometimes utterly wrong \u2013 in our social inferences. How do we explain these successes and failures?"
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:YsrPvlHIBpEC",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/7930b0r3",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Qn1tReefKGQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How taking turns communicates desired equality in social relationships",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Alicia M Chen and Rebecca Saxe",
+            "publisher": "OSF",
+            "abstract": "When people perform generous acts for each other, they can balance out relative benefits by alternating who is generous. When and why do they do this? Here we test the explanation that sequences of generosity regulate social relationships. We find that people selectively expect reciprocal generosity in equal (vs. hierarchical) relationships, use reciprocal generosity to infer the presence of an equal relationship, and critically expect that people reciprocate generosity in order to communicate a desire for a (more) equal relationship. In a formal planning model, reciprocal generosity can emerge from the value of communicating desired equality."
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:-nhnvRiOwuoC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/zmfe7/download",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:V176wQuDaykJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predicting graded dishabituation using perceptual stimulus embeddings in a rational learning model",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Anjie Cao and Gal Raz and Rebecca Saxe and Michael C Frank",
+            "publisher": "OSF",
+            "abstract": "How do humans decide what to look at and when to stop looking? The Rational Action, Noisy Choice for Habituation (RANCH) model formulates looking behaviors as a rational information acquisition process. RANCH instantiates a hypothesis about the perceptual encoding process using a neural network-derived embedding space, which allows it to operate on raw images. In this paper, we show that the model not only captures key looking time patterns such as habituation and dishabituation, but also makes fine-grained, out-of-sample predictions about magnitudes of dishabituation to previously unseen stimuli. We validated those predictions experimentally with a self-paced looking time task in adults (N= 468). We also show that model fits are robust across parameters, but that assumptions about the perceptual encoding process, the learning process and the decision process are all critical for predicting human performance."
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:3bvyWxjaHKcC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/jeqdm/download",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:kYL_zUyDKncJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Precision fMRI reveals that the language network exhibits adult-like left-hemispheric lateralization by 4 years of age",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.05. 15.594172, 2024",
+            "author": "Ola Ozernov-Palchik and Amanda M O'Brien and Elizabeth Jiachen Lee and Hilary Richardson and Rachel Romeo and Benjamin Lipkin and Hannah Small and James Capella and Alfonso Nieto-Castanon and Rebecca Saxe and John DE Gabrieli and Evelina Fedorenko",
+            "journal": "bioRxiv",
+            "pages": "2024.05. 15.594172",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Left hemisphere damage in adulthood often leads to linguistic deficits, but many cases of early damage leave linguistic processing preserved, and a functional language system can develop in the right hemisphere. To explain this early apparent equipotentiality of the two hemispheres for language, some have proposed that the language system is bilateral during early development and only becomes left-lateralized with age. We examined language lateralization using functional magnetic resonance imaging with two large pediatric cohorts (total n=273 children ages 4-16; n=107 adults). Strong, adult-level left-hemispheric lateralization (in activation volume and response magnitude) was evident by age 4. Thus, although the right hemisphere can take over language function in some cases of early brain damage, and although some features of the language system do show protracted development (magnitude of language response and strength of inter-regional correlations in the language network), the left-hemisphere bias for language is robustly present by 4 years of age."
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:w1MjKQ0l0TYC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.05.15.594172.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Z-0vQHakPcYJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Representation of navigational affordances and ego-motion in the occipital place area",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.04. 30.591964, 2024",
+            "author": "Frederik S Kamps and Emily M Chen and Nancy Kanwisher and Rebecca Saxe",
+            "journal": "bioRxiv",
+            "pages": "2024.04. 30.591964",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Humans effortlessly use vision to plan and guide navigation through the local environment, or \"scene\". A network of three cortical regions responds selectively to visual scene information, including the occipital (OPA), parahippocampal (PPA), and medial place areas (MPA) - but how this network supports visually-guided navigation is unclear. Recent evidence suggests that one region in particular, the OPA, supports visual representations for navigation, while PPA and MPA support other aspects of scene processing. However, most previous studies tested only static scene images, which lack the dynamic experience of navigating through scenes. We used dynamic movie stimuli to test whether OPA, PPA, and MPA represent two critical kinds of navigationally-relevant information: navigational affordances (e.g., can I walk to the left, right, or both?) and ego-motion (e.g., am I walking forward or backward? turning left or right?). We found that OPA is sensitive to both affordances and ego-motion, as well as the conflict between these cues - e.g., turning toward versus away from an open doorway. These effects were significantly weaker or absent in PPA and MPA. Responses in OPA were also dissociable from those in early visual cortex, consistent with the idea that OPA responses are not merely explained by lower-level visual features. OPA responses to affordances and ego-motion were stronger in the contralateral than ipsilateral visual field, suggesting that OPA encodes navigationally relevant information within an egocentric reference frame. Taken together, these results support the hypothesis that OPA contains visual representations that are useful \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:FiDNX6EVdGUC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.04.30.591964.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:b46bhzZsEFwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An Efficient Multimodal fMRI Localizer for High-Level Visual, Auditory, and Cognitive Regions in Humans",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Samuel Hutchinson and Ammar Marvi and Frederik Kamps and Evelina Fedorenko and Rebecca Saxe and Nancy Kanwisher",
+            "publisher": "OSF",
+            "abstract": "Research using functional MRI (fMRI) and other neuroimaging methods has provided extensive evidence that some regions of the cortex in humans serve highly specific functions (Kanwisher 2010). In order to study these regions and characterize their representations, we need to first find them. While these functionally-specific cortical regions generally co-localize across people, their precise location varies from one individual to the next. It is therefore necessary to functionally identify each region in each participant individually with a functional localizer scan. However there are many such regions, and running a large number of localizer scans to identify each of them is expensive and time consuming. Here we test the effectiveness of a new experimental design to functionally localize multiple regions of interest robustly, efficiently, and accurately in each participant individually in just 23 minutes of fMRI scan time per person. This new localizer\u2013which presents simultaneous auditory and visual stimuli\u2013is designed to identify, within individual participants, cortical regions selectively engaged in visually processing faces, scenes, bodies, words, and objects, as well as speech sounds, language, and theory of mind. Here we test the success of this new localizer against the current gold standard of established standard localizers for these functions."
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:pAkWuXOU-OoC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/gjsdb/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:3YtiBYeYujYJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An asynchronous, automated workflow for looking time experiments with infants",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Gal Raz and SH Piccolo and Janine A Medrano and Shari Liu and Kirsten Lydic and Catherine Mei and Victoria Nguyen and Tianmin Shu and Rebecca Saxe",
+            "abstract": "The study of infant gaze has long been a key tool for understanding the developing mind. However, labor-intensive data collection and processing limit the speed at which this understanding can be advanced. Here, we demonstrate a fully asynchronous, automated workflow for conducting Violation-of-Expectation (VoE) experiments. We first replicate four classic VoE experiments in a synchronous online setting, and show that VoE can generate highly replicable effects through remote testing. We then confirm the accuracy of a state-of-the-art gaze annotation software, iCatcher+ in a new setting. Third, we train parents to control the experiment flow based on the infant's gaze. Combining all three innovations, we then conduct an asynchronous automated infant-contingent VoE experiment. The automatic workflow successfully replicates a classic VoE effect: infants look longer at inefficient actions than efficient ones. We compare the resulting effect size and statistical power to the same study run in-lab and synchronously via Zoom. The automated workflow significantly reduces the marginal cost and time per participant, enabling larger sample sizes. By enhancing the reproducibility and robustness of findings relying on infant looking, this workflow could help support a cumulative science of infant cognition. Tools to implement the workflow are openly available."
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:mKu_rENv82IC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/ppr/ppr807558",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:G-LpJgHbHYgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Study 5: Zoo Prediction (Child Age 5-7)",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Shengyi Wu and Laura Schulz and Rebecca Saxe",
+            "publisher": "OSF",
+            "abstract": "Many studies have shown that preschoolers can use others' beliefs and desires to predict or explain their behaviors. However, previous work has not looked at whether children can use their understanding of others' mental states to try to change their behaviors. There is an asymmetry between the interventions needed to induce someone to take a new action and the interventions to stop someone from taking a planned action. To induce someone to act, you must ensure that they have both the relevant beliefs and desires; to prevent someone from acting, it is sufficient to remove either the relevant beliefs or desires. In previous work, we saw that adult participants tended to intervene on both beliefs and desires to cause an agent to take an action but only intervened on either the agent's belief or desire to prevent the agent from taking a planned action. We used the same experimental stimuli used in the adult study to see if there is an asymmetry between generative and preventative interventions when young children at the ages of 5-7 design interventions to change others' actions. We didn't see the expected asymmetry of interventions in 5-7-year-old children. Then, we used the same experimental stimuli to test if there is an asymmetry between generative and preventative interventions when older children at the ages of 8-10 design interventions to change others' actions. The results show that older children are able to distinguish generative and preventative outcomes and selectively intervene on both beliefs and desires to cause agents to act but intervene either on beliefs or desires to prevent an action. Why did younger children at the ages of 5 to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Tv-zquoAAAAJ:-jrNzM816MMC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/fvwjt/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Fgt7nCN_CiMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Open dataset of theory of mind reasoning in early to middle childhood",
             "pub_year": 2023,
             "citation": "Data in Brief, 109905, 2023",

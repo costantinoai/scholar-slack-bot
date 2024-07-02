@@ -3,6 +3,370 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Pronouns reactivate conceptual representations in human hippocampal neurons",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.06. 23.600044, 2024",
+            "author": "Doris E Dijksterhuis and Matthew W Self and Jessy K Possel and Judith C Peters and ECW van Straaten and Sander Idema and Johannes C Baaijen and Sandra MA van der Salm and Erik J Aarnoutse and Nicole CE van Klink and Pieter van Eijsden and Simon E Hanslmayr and Ramesh Chelvarajah and Frederic Roux and Luca D Kolibius and Vijay Sawlani and David T Rollings and Stanislas Dehaene and Pieter R Roelfsema",
+            "journal": "bioRxiv",
+            "pages": "2024.06. 23.600044",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "During discourse comprehension, every new word adds to an evolving representation of meaning that accumulates over consecutive sentences and constrains the next words. To minimize repetition and utterance length, languages use pronouns, like the word 'she', to refer to nouns and phrases that were previously introduced. It has been suggested that language comprehension requires that pronouns activate the same neuronal representations as the nouns themselves. Here, we test this hypothesis by recording from individual neurons in the human hippocampus during a reading task. We found that cells that are selective to a particular noun are later reactivated by pronouns that refer to the cells' preferred noun. These results imply that concept cells contribute to a rapid and dynamic semantic memory network which is recruited during language comprehension. This study uniquely demonstrates, at the single-cell level, how memory and language are linked."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:unp9ATQDT5gC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.06.23.600044.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:dkRsvwD4U78J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How the brain learns to parse images using an attentional, incremental grouping process",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.06. 17.599272, 2024",
+            "author": "Sami Mollard and Sander Bohte and Pieter Roelfsema",
+            "journal": "bioRxiv",
+            "pages": "2024.06. 17.599272",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Natural scenes usually contain a vast number of objects that need to be segmented and segregated from each other and from the background to guide behaviour. In the visual brain, object-based attention is the process by which image fragments belonging to the same objects are grouped together. The curve-tracing task is a special case of a perceptual grouping task that tests our ability to group image elements of an elongated curve. The task consists in determining which image elements belong to the same curve, and in the brain, neurons spread an enhanced activity level over the representation of the relevant curve. A previous \"growth-cone model of attention\" accounted for the scale invariance of tracing by proposing that the enhanced activity propagates at multiple levels of the visual cortical hierarchy. However, the precise neuronal circuitry for learning and implementing scale-invariant tracing remains unknown. We propose a new recurrent architecture for the scale-invariant labelling of curves and objects. The architecture is composed of a feedforward pathway that dynamically selects the right scale and prevents the spilling over of the enhanced activity to other curves, and a recurrent pathway for tag spreading that involves horizontal and feedback interactions, mediated by a disinhibitory loop involving VIP and SOM interneurons. We trained the network with curves up to seven pixels long using reinforcement learning and a learning rule local in time and space and we found that it generalized to curves of any length and to spatially extended objects. The network chose the appropriate scale and switched to higher or lower scales as \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:qE4H1tSSYIIC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.06.17.599272.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BaMm_GiBPUMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Comparative study of abstract representations in humans and non-human primates",
+            "pub_year": 2024,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society 46, 2024",
+            "author": "Th\u00e9o Morfoisse and Maxence Pajot and Paolo Papale and Pieter Roelfsema and Minye Zhan and Stanislas Dehaene",
+            "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+            "volume": "46",
+            "abstract": "The ability to manipulate and recognize abstract representations seems to be a fundamental aspect of human nature, existing since the dawn of our species and transcending cultural barriers. In contrast, non-human primates exhibit very limited proficiency in recognizing abstract representations. This research delves into this human singularity for visual abstraction, through neuroimaging experiments conducted in both humans and non-human primates. Stimuli presenting the same concept (e.g. a house or a face) but varying in abstraction levels (photos, drawings, symbols, and words) were initially presented to a monkey, while intracranial recording of his brain were obtained (16 Utah arrays distributed in V1, V4 and IT). Preliminary results indicate that monkey display early signs of abstraction, particularly for evolutionarily ancient categories such as faces. MEG and fMRI recordings of human subjects are also currently underway, striving to unveil the neuronal mechanisms that set our species apart in the domain of visual abstraction."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:C33y2ycGS3YC",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/7d31c08h",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oyk5B_P5jbMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Experience-dependent predictions of feedforward and contextual information in mouse visual cortex",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.06. 10.598181, 2024",
+            "author": "Koen Seignette and Leander de Kraker and Paolo Papale and Lucy S Petro and Barbara Hobo and Jorrit S Montijn and Matthew W Self and Matthew E Larkum and Pieter R Roelfsema and Lars Muckli and Christiaan N Levelt",
+            "journal": "bioRxiv",
+            "pages": "2024.06. 10.598181",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Neurons in primary visual cortex are driven by feedforward visual inputs and top-down contextual inputs. The nature of this contextual information is difficult to study, as responses to feedforward and top-down inputs overlap in time and are difficult to disentangle experimentally. To address this issue, we measured responses to natural images and partially occluded versions of these images in the visual cortex of mice. Assessing neuronal responses before and after familiarizing mice with the non-occluded images allowed us to study experience-dependent and stimulus-specific contextual responses in pyramidal cells (PyCs) in cortical layers 2/3 and 5 in the absence of feedforward input. Surprisingly, in the same retinotopic region of cortex, we found that separate populations of PyCs in layer 2/3 responded to occluded and non-occluded images. Responses of PyCs selective for occluded images were strengthened upon familiarization and decoding analysis revealed they contained image-specific information, suggesting that they signaled the absence of predicted visual stimuli. Responses of PyCs selective for non-occluded scenes were weaker for familiarized images but stronger for unfamiliar images, suggesting that these neurons signaled the presence of unpredicted visual stimuli. Layer 5 also contained PyCs preferring either feedforward or contextual inputs, but their responses were more complex and strengthening of responses to occluded images required task engagement. The results show that visual experience decreases the activity of neurons responding to known feedforward inputs but increases the activity of neurons responding to \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:AYInfyleIOsC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.06.10.598181.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:by2G_xJ5KiwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Royal Netherlands Academy of Arts and Sciences (KNAW)",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Sami Mollard and Catherine Wacongne and Sander M Bohte and Pieter R Roelfsema",
+            "abstract": "Many cognitive problems can be decomposed into series of subproblems that are solved sequentially by the brain. When subproblems are solved, relevant intermediate results need to be stored by neurons and propagated to the next subproblem, until the overarching goal has been completed. We will here consider visual tasks, which can be decomposed into sequences of elemental visual operations. Experimental evidence suggests that intermediate results of the elemental operations are stored in working memory as an enhancement of neural activity in the visual cortex. The focus of enhanced activity is then available for subsequent operations to act upon. The main question at stake is how the elemental operations and their sequencing can emerge in neural networks that are trained with only rewards, in a reinforcement learning setting. We here propose a new recurrent neural network architecture that can learn composite visual tasks that require the application of successive elemental operations. Specifically, we selected three tasks for which electrophysiological recordings of monkeys\u2019 visual cortex are available. To train the networks, we used RELEARNN, a biologically plausible four-factor Hebbian learning rule, which is local both in time and space. We report that networks learn elemental operations, such as contour grouping and visual search, and execute sequences of operations, solely based on the characteristics of the visual stimuli and the reward structure of a task. After training was completed, the activity of the units of the neural network elicited by behaviorally relevant image items was stronger than that elicited by irrelevant ones \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:isU91gLudPYC",
+        "num_citations": 0,
+        "pub_url": "https://pure.knaw.nl/ws/files/1403392641/Mollard2024.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:5g4yWucmGhMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Comparison of electrical microstimulation artifact removal methods for high-channel-count prostheses",
+            "pub_year": 2024,
+            "citation": "Journal of Neuroscience Methods, 110169, 2024",
+            "author": "Feng Wang and Xing Chen and Pieter R Roelfsema",
+            "journal": "Journal of Neuroscience Methods",
+            "pages": "110169",
+            "publisher": "Elsevier",
+            "abstract": "Neuroprostheses are used to electrically stimulate the brain, modulate neural activity and restore sensory and motor function following injury or disease, such as blindness, paralysis, and other movement and psychiatric disorders. Recordings are often made simultaneously with stimulation, allowing the monitoring of neural signals and closed-loop control of devices. However, stimulation-evoked artifacts may obscure neural activity, particularly when stimulation and recording sites are nearby. Several methods have been developed to remove stimulation artifacts, but it remains challenging to validate and compare these methods because the \u2018ground-truth\u2019 of the neuronal signals may be contaminated by artifacts.Here, we delivered stimulation to the visual cortex via a high-channel-count prosthesis while recording neuronal activity and stimulation artifacts. We quantified the waveforms and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:RJOyoaXV5v8C",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0165027024001146",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vto3uYGMmt0J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Brain2GAN: Feature-disentangled neural encoding and decoding of visual perception in the primate brain",
+            "pub_year": 2024,
+            "citation": "PLOS Computational Biology 20 (5), e1012058, 2024",
+            "author": "Thirza Dado and Paolo Papale and Antonio Lozano and Lynn Le and Feng Wang and Marcel van Gerven and Pieter Roelfsema and Ya\u011fmur G\u00fc\u00e7l\u00fct\u00fcrk and Umut G\u00fc\u00e7l\u00fc",
+            "journal": "PLOS Computational Biology",
+            "volume": "20",
+            "number": "5",
+            "pages": "e1012058",
+            "publisher": "Public Library of Science",
+            "abstract": "A challenging goal of neural coding is to characterize the neural representations underlying visual perception. To this end, multi-unit activity (MUA) of macaque visual cortex was recorded in a passive fixation task upon presentation of faces and natural images. We analyzed the relationship between MUA and latent representations of state-of-the-art deep generative models, including the conventional and feature-disentangled representations of generative adversarial networks (GANs) (i.e., z- and w-latents of StyleGAN, respectively) and language-contrastive representations of latent diffusion networks (i.e., CLIP-latents of Stable Diffusion). A mass univariate neural encoding analysis of the latent representations showed that feature-disentangled w representations outperform both z and CLIP representations in explaining neural responses. Further, w-latent features were found to be positioned at the higher end of the complexity gradient which indicates that they capture visual information relevant to high-level neural activity. Subsequently, a multivariate neural decoding analysis of the feature-disentangled representations resulted in state-of-the-art spatiotemporal reconstructions of visual perception. Taken together, our results not only highlight the important role of feature-disentanglement in shaping high-level neural representations underlying visual perception but also serve as an important benchmark for the future of neural coding."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:zdjWy_NXXwUC",
+        "num_citations": 0,
+        "pub_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012058",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:tWabsc54HB8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An integrative, multiscale view on neural theories of consciousness",
+            "pub_year": 2024,
+            "citation": "Neuron, 2024",
+            "author": "Johan F Storm and P Christiaan Klink and Jaan Aru and Walter Senn and Rainer Goebel and Andrea Pigorini and Pietro Avanzini and Wim Vanduffel and Pieter R Roelfsema and Marcello Massimini and Matthew E Larkum and Cyriel MA Pennartz",
+            "publisher": "Elsevier",
+            "abstract": "How is conscious experience related to material brain processes? A variety of theories aiming to answer this age-old question have emerged from the recent surge in consciousness research, and some are now hotly debated. Although most researchers have so far focused on the development and validation of their preferred theory in relative isolation, this article, written by a group of scientists representing different theories, takes an alternative approach. Noting that various theories often try to explain different aspects or mechanistic levels of consciousness, we argue that the theories do not necessarily contradict each other. Instead, several of them may converge on fundamental neuronal mechanisms and be partly compatible and complementary, so that multiple theories can simultaneously contribute to our understanding. Here, we consider unifying, integration-oriented approaches that have so far been largely \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:-DxkuPiZhfEC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=12526684209255421624",
+        "cites_id": [
+            "12526684209255421624"
+        ],
+        "pub_url": "https://www.cell.com/neuron/fulltext/S0896-6273(24)00088-6",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uBYqSuu4160J:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The coming decade of digital brain research: A vision for neuroscience at the intersection of technology and computing",
+            "pub_year": 2024,
+            "citation": "Imaging Neuroscience, 2024",
+            "author": "Katrin Amunts and Markus Axer and Swati Banerjee and Lise Bitsch and Jan G Bjaalie and Philipp Brauner and Andrea Brovelli and Navona Calarco and Marcel Carrere and Svenja Caspers and Christine J Charvet and Sven Cichon and Roshan Cools and Irene Costantini and Egidio Ugo D'Angelo and Giulia De Bonis and Gustavo Deco and Javier DeFelipe and Alain Destexhe and Timo Dickscheid and Markus Diesmann and Emrah D\u00fczel and Simon B Eickhoff and Gaute Einevoll and Damian Eke and Andreas K Engel and Alan C Evans and Kathinka Evers and Nataliia Fedorchenko and Stephanie J Forkel and Jan Fousek and Angela D Friederici and Karl Friston and Stephen Furber and Liesbet Geris and Rainer Goebel and Onur G\u00fcnt\u00fcrk\u00fcn and Aini Ismafairus Abd Hamid and Christina Herold and Claus C Hilgetag and Sabine M H\u00f6lter and Yannis Ioannidis and Viktor Jirsa and Sriranga Kashyap and Burkhard S Kasper and Alban de Kerchove d\u2019Exaerde and Roxana Kooijmans and Istv\u00e1n Koren and Jeanette Hellgren Kotaleski and Gregory Kiar and Wouter Klijn and Lars Kl\u00fcver and Alois C Knoll and Zeljka Krsnik and Julia K\u00e4mpfer and Matthew E Larkum and Marja-Leena Linne and Thomas Lippert and Jafri Malin Abdullah and Paola Di Maio and Neville Magielse and Pierre Maquet and Anna Letizia Allegra Mascaro and Daniele Marinazzo and Jorge Mejias and Andreas Meyer-Lindenberg and Michele Migliore and Judith Michael and Yannick Morel and Fabrice O Morin and Lars Muckli and Guy Nagels and Lena Oden and Nicola Palomero-Gallagher and Fanis Panagiotaropoulos and Pier Stanislao Paolucci and Cyriel Pennartz and Liesbet M Peeters and Spase Petkoski and Nicolai Petkov and Lucy S Petro and Mihai A Petrovici and Giovanni Pezzulo and Pieter Roelfsema and Laurence Ris and Petra Ritter and Kathleen Rockland and Stefan Rotter and Andreas Rowald and Sabine Ruland and Philippe Ryvlin and Arleen Salles and Maria V Sanchez-Vives and Johannes Schemmel and Walter Senn and Alexandra A de Sousa and Felix Str\u00f6ckens and Bertrand Thirion and K\u00e2mil Uluda\u011f and Simo Vanni and Sacha Jennifer van Albada and Wim Vanduffel and Julien Vezoli and Lisa Vincenz-Donnelly and Florian Walter and Laszlo Zaborszky",
+            "journal": "Imaging Neuroscience",
+            "publisher": "MIT Press",
+            "abstract": "In recent years, brain research has indisputably entered a new epoch, driven by substantial methodological advances and digitally enabled data integration and modelling at multiple scales\u2014 from molecules to the whole brain. Major advances are emerging at the intersection of neuroscience with technology and computing. This new science of the brain combines high-quality research, data integration across multiple scales, a new culture of multidisciplinary large-scale collaboration and translation into applications. As pioneered in Europe\u2019s Human Brain Project (HBP), a systematic approach will be essential for meeting the coming decade\u2019s pressing medical and technological challenges. The aims of this paper are to: develop a concept for the coming decade of digital brain research, discuss this new concept with the research community at large, to identify points of convergence, and derive therefrom \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:0aBXIfxlw9sC",
+        "num_citations": 14,
+        "citedby_url": "/scholar?hl=en&cites=5621886938966994834",
+        "cites_id": [
+            "5621886938966994834"
+        ],
+        "pub_url": "https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00137/120391",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ki-JjGL0BE4J:scholar.google.com/",
+        "cites_per_year": {
+            "2022": 6,
+            "2023": 5,
+            "2024": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Experience shapes chandelier cell function and structure in the visual cortex",
+            "pub_year": 2024,
+            "citation": "Elife 12, 2024",
+            "author": "Koen Seignette and Nora Jamann and Paolo Papale and Huub Terra and Ralph O Porneso and Leander de Kraker and Chris van der Togt and Maaike van der Aa and Paul Neering and Emma Ruimschotel and Pieter R Roelfsema and Jorrit S Montijn and Matthew W Self and Maarten HP Kole and Christiaan N Levelt",
+            "journal": "Elife",
+            "volume": "12",
+            "publisher": "eLife Sciences Publications, Ltd",
+            "abstract": "Detailed characterization of interneuron types in primary visual cortex (V1) has greatly contributed to understanding visual perception, yet the role of chandelier cells (ChCs) in visual processing remains poorly characterized. Using viral tracing we found that V1 ChCs predominantly receive monosynaptic input from local layer 5 pyramidal cells and higher-order cortical regions. Two-photon calcium imaging and convolutional neural network modeling revealed that ChCs are visually responsive but weakly selective for stimulus content. In mice running in a virtual tunnel, ChCs respond strongly to events known to elicit arousal, including locomotion and visuomotor mismatch. Repeated exposure of the mice to the virtual tunnel was accompanied by reduced visual responses of ChCs and structural plasticity of ChC boutons and axon initial segment length. Finally, ChCs only weakly inhibited pyramidal cells. These findings \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:8Xgff_V0N9gC",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10963032/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:EOnUc3iHxrUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Optimal placement of high-channel visual prostheses in human retinotopic visual cortex",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.03. 05.583489, 2024",
+            "author": "Rick van Hoof and Antonio Lozano and Feng Wang and P Christiaan Klink and Pieter R Roelfsema and Rainer Goebel",
+            "journal": "bioRxiv",
+            "pages": "2024.03. 05.583489",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Recent strides in neurotechnology offer hope for restoring vision in individuals afflicted with blindness due to early visual pathway damage. We present a comprehensive method to optimize electrode placement for visual prostheses, with the objective of aligning with predetermined phosphene distributions. Our approach relies on individual anatomy data to minimize discrepancies between simulated and target phosphene patterns. While tailored for a 1000-channel 3D electrode array in V1, our algorithm is versatile, potentially accommodating any electrode design. Notably, our results show individually optimized placements outperform average brain solutions, underscoring the significance of anatomical specificity. Nevertheless, challenges persist in achieving comprehensive visual field coverage owing to current electrode constraints. We propose potential solutions involving multiple arrays to address this \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:ghEM2AJqZyQC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.03.05.583489.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:rG8DIzaRNX4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Towards biologically plausible phosphene simulation for the differentiable optimization of visual cortical prostheses",
+            "pub_year": 2024,
+            "citation": "Elife 13, e85812, 2024",
+            "author": "Maureen van der Grinten and Jaap de Ruyter van Steveninck and Antonio Lozano and Laura Pijnacker and Bodo Rueckauer and Pieter Roelfsema and Marcel van Gerven and Richard van Wezel and Umut G\u00fc\u00e7l\u00fc and Ya\u011fmur G\u00fc\u00e7l\u00fct\u00fcrk",
+            "journal": "Elife",
+            "volume": "13",
+            "pages": "e85812",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Blindness affects millions of people around the world. A promising solution to restoring a form of vision for some individuals are cortical visual prostheses, which bypass part of the impaired visual pathway by converting camera input to electrical stimulation of the visual system. The artificially induced visual percept (a pattern of localized light flashes, or \u2018phosphenes\u2019) has limited resolution, and a great portion of the field\u2019s research is devoted to optimizing the efficacy, efficiency, and practical usefulness of the encoding of visual information. A commonly exploited method is noninvasive functional evaluation in sighted subjects or with computational models by using simulated prosthetic vision (SPV) pipelines. An important challenge in this approach is to balance enhanced perceptual realism, biologically plausibility, and real-time performance in the simulation of cortical prosthetic vision. We present a biologically plausible, PyTorch-based phosphene simulator that can run in real-time and uses differentiable operations to allow for gradient-based computational optimization of phosphene encoding models. The simulator integrates a wide range of clinical results with neurophysiological evidence in humans and non-human primates. The pipeline includes a model of the retinotopic organization and cortical magnification of the visual cortex. Moreover, the quantitative effects of stimulation parameters and temporal dynamics on phosphene characteristics are incorporated. Our results demonstrate the simulator\u2019s suitability for both computational applications such as end-to-end deep learning-based prosthetic vision optimization as well as behavioral \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:X9ykpCP0fEIC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=17341316344401265165",
+        "cites_id": [
+            "17341316344401265165"
+        ],
+        "pub_url": "https://elifesciences.org/articles/85812",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:DYK2RVa7qPAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Towards biologically plausible phosphene simulation for the differentiable optimization of visual cortical prostheses",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "M Grinten and J de Ruyter van Steveninck and A Lozano and L Pijnacker and BJ R\u00fcckauer and PR Roelfsema and MAJ van Gerven and RJA van Wezel and U G\u00fc\u00e7l\u00fc and Y G\u00fc\u00e7l\u00fct\u00fcrk",
+            "abstract": "Blindness affects millions of people around the world. A promising solution to restoring a form of vision for some individuals are cortical visual prostheses, which bypass part of the impaired visual pathway by converting camera input to electrical stimulation of the visual system. The artificially induced visual percept (a pattern of localized light flashes, or 'phosphenes') has limited resolution, and a great portion of the field's research is devoted to optimizing the efficacy, efficiency, and practical usefulness of the encoding of visual information. A commonly exploited method is non-invasive functional evaluation in sighted subjects or with computational models by using simulated prosthetic vision (SPV) pipelines. An important challenge in this approach is to balance enhanced perceptual realism, biologically plausibility, and real-time performance in the simulation of cortical prosthetic vision. We present a biologically plausible, PyTorch-based phosphene simulator that can run in real-time and uses differentiable operations to allow for gradient-based computational optimization of phosphene encoding models. The simulator integrates a wide range of clinical results with neurophysiological evidence in humans and non-human primates. The pipeline includes a model of the retinotopic organization and cortical magnification of the visual cortex. Moreover, the quantitative effects of stimulation parameters and temporal dynamics on phosphene characteristics are incorporated. Our results demonstrate the simulator's suitability for both computational applications such as end-to-end deep learning-based prosthetic vision optimization as well as behavioral \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:YlPif8NxrbYC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/handle/2066/303598",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Bg4h8N5hmrkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Flexible polymer electrodes for stable prosthetic visual perception in mice",
+            "pub_year": 2024,
+            "citation": "Advanced healthcare materials, 2304169, 2024",
+            "author": "Corinne Orlemann and Christian Boehler and Roxana N Kooijmans and Bingshuo Li and Maria Asplund and Pieter R Roelfsema",
+            "journal": "Advanced healthcare materials",
+            "pages": "2304169",
+            "abstract": "Brain interfaces that can stimulate neurons, cause minimal damage and work for a long time will be central for future neuroprosthetics. Here we report on the long\u2010term performance of highly flexible, thin polyimide shanks with several small (< 15 \u03bcm) electrodes during electrical microstimulation of the visual cortex. The electrodes exhibited a remarkable stability when we applied several billions of electrical pulses in vitro. When we implanted the devices in the primary visual cortex of mice and trained the animals to detect electrical microstimulation, we found that the perceptual thresholds were 2\u201320 microamperes which was far below the maximal currents that the electrodes could withstand. The long\u2010term functionality of the devices in vivo was excellent, with stable performance for up to more than a year and little damage to the brain tissue. These results demonstrate the potential of thin floating electrodes for the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:hSRAE-fF4OAC",
+        "num_citations": 0,
+        "pub_url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/adhm.202304169",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uEVql8YiuK0J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "An integrative, multiscale view on consciousness theories_Eary version of paper in press in NEURON",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Johan F Storm and PC Klink and Jaan Aru and Walter Senn and Rainer Goebel and Andrea Pigorini and Pietro Avanzini and Wim Vanduffel and Pieter Roelfsema and Marcello Massimini and Matthew E Larkum and Cyriel Pennartz",
+            "abstract": "How is conscious experience related to material brain processes? A variety of theories aiming to answer this age-old question have emerged from the recent surge in consciousness research, and some are now hotly debated. While most researchers have so far focused on the development and validation of their preferred theory in relative isolation, this article, written by a group of scientists representing different theories, takes an alternative approach. Noting that various theories often try to explain different aspects or mechanistic levels of consciousness, we argue that theories do not necessarily contradict each other. Instead, several of them may converge on fundamental neuronal mechanisms and be partly compatible and complementary, so that multiple theories can simultaneously contribute to our understanding. Here we consider unifying, integration-oriented approaches that have so far been largely neglected, seeking to combine valuable elements from various theories."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:v6i8RKmR8ToC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=16610717543656263820",
+        "cites_id": [
+            "16610717543656263820"
+        ],
+        "pub_url": "https://europepmc.org/article/ppr/ppr805101",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:jBD7PZkfheYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Flexible Polymer Electrodes for Stable Prosthetic Visual Perception in Mice",
+            "pub_year": 2024,
+            "citation": "Advanced Healthcare Materials, 2304169, 2024",
+            "author": "Corinne Orlemann and Christian Boehler and Roxana N Kooijmans and Bingshuo Li and Maria Asplund and Pieter R Roelfsema",
+            "journal": "Advanced Healthcare Materials",
+            "pages": "2304169",
+            "abstract": "Brain interfaces that can stimulate neurons, cause minimal damage and work for a long time will be central for future neuroprosthetics. Here we report on the long\u2010term performance of highly flexible, thin polyimide shanks with several small (< 15 \u03bcm) electrodes during electrical microstimulation of the visual cortex. The electrodes exhibited a remarkable stability when we applied several billions of electrical pulses in vitro. When we implanted the devices in the primary visual cortex of mice and trained the animals to detect electrical microstimulation, we found that the perceptual thresholds were 2\u201320 microamperes which was far below the maximal currents that the electrodes could withstand. The long\u2010term functionality of the devices in vivo was excellent, with stable performance for up to more than a year and little damage to the brain tissue. These results demonstrate the potential of thin floating electrodes for the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:hSRAE-fF4OAC",
+        "num_citations": 0,
+        "pub_url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/adhm.202304169",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uEVql8YiuK0J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Involvement of superior colliculus in complex figure detection of mice",
+            "pub_year": 2024,
+            "citation": "Elife 13, e83708, 2024",
+            "author": "J Leonie Cazemier and Robin Haak and TK Loan Tran and Ann TY Hsu and Medina Husic and Brandon D Peri and Lisa Kirchberger and Matthew W Self and Pieter Roelfsema and J Alexander Heimel",
+            "journal": "Elife",
+            "volume": "13",
+            "pages": "e83708",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Object detection is an essential function of the visual system. Although the visual cortex plays an important role in object detection, the superior colliculus can support detection when the visual cortex is ablated or silenced. Moreover, it has been shown that superficial layers of mouse SC (sSC) encode visual features of complex objects, and that this code is not inherited from the primary visual cortex. This suggests that mouse sSC may provide a significant contribution to complex object vision. Here, we use optogenetics to show that mouse sSC is involved in figure detection based on differences in figure contrast, orientation, and phase. Additionally, our neural recordings show that in mouse sSC, image elements that belong to a figure elicit stronger activity than those same elements when they are part of the background. The discriminability of this neural code is higher for correct trials than for incorrect trials. Our results provide new insight into the behavioral relevance of the visual processing that takes place in sSC."
+        },
+        "filled": true,
+        "author_pub_id": "y7weYdYAAAAJ:TlpoogIpr_IC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=9934641216676404503",
+        "cites_id": [
+            "9934641216676404503"
+        ],
+        "pub_url": "https://elifesciences.org/articles/83708",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:F53z8ozv3okJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Experience Shapes Chandelier Cell Function and Structure in the Visual Cortex",
             "pub_year": 2023,
             "citation": "eLife 12, 2023",

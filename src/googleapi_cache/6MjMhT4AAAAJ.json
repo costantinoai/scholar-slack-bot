@@ -3,6 +3,120 @@
         "container_type": "Publication",
         "source": "AUTHOR_PUBLICATION_ENTRY",
         "bib": {
+<<<<<<< Updated upstream
+=======
+            "title": "Position: An Inner Interpretability Framework for AI Inspired by Lessons from Cognitive Neuroscience",
+            "pub_year": 2024,
+            "citation": "Forty-first International Conference on Machine Learning, 2024",
+            "author": "Martina G Vilas and Federico Adolfi and David Poeppel and Gemma Roig",
+            "conference": "Forty-first International Conference on Machine Learning",
+            "abstract": "Inner Interpretability is a promising emerging field tasked with uncovering the inner mechanisms of AI systems, though how to develop these mechanistic theories is still much debated. Moreover, recent critiques raise issues that question its usefulness to advance the broader goals of AI. However, it has been overlooked that these issues resemble those that have been grappled with in another field: Cognitive Neuroscience. Here we draw the relevant connections and highlight lessons that can be transferred productively between fields. Based on these, we propose a general conceptual framework and give concrete methodological strategies for building mechanistic explanations in AI inner interpretability research. With this conceptual framework, Inner Interpretability can fend off critiques and position itself on a productive path to explain AI systems."
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:AXPGKjj_ei8C",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=66KmnMhGU5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:pKAMPZ0qGV0J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Position Paper: An Inner Interpretability Framework for AI Inspired by Lessons from Cognitive Neuroscience",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.01352, 2024",
+            "author": "Martina G Vilas and Federico Adolfi and David Poeppel and Gemma Roig",
+            "journal": "arXiv preprint arXiv:2406.01352",
+            "abstract": "Inner Interpretability is a promising emerging field tasked with uncovering the inner mechanisms of AI systems, though how to develop these mechanistic theories is still much debated. Moreover, recent critiques raise issues that question its usefulness to advance the broader goals of AI. However, it has been overlooked that these issues resemble those that have been grappled with in another field: Cognitive Neuroscience. Here we draw the relevant connections and highlight lessons that can be transferred productively between fields. Based on these, we propose a general conceptual framework and give concrete methodological strategies for building mechanistic explanations in AI inner interpretability research. With this conceptual framework, Inner Interpretability can fend off critiques and position itself on a productive path to explain AI systems."
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:XiVPGOgt02cC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.01352",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:pKAMPZ0qGV0J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Learning Object Semantic Similarity with Self-Supervision",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2405.05143, 2024",
+            "author": "Arthur Aubret and Timothy Schauml\u00f6ffel and Gemma Roig and Jochen Triesch",
+            "journal": "arXiv preprint arXiv:2405.05143",
+            "abstract": "Humans judge the similarity of two objects not just based on their visual appearance but also based on their semantic relatedness. However, it remains unclear how humans learn about semantic relationships between objects and categories. One important source of semantic knowledge is that semantically related objects frequently co-occur in the same context. For instance, forks and plates are perceived as similar, at least in part, because they are often experienced together in a ``kitchen\" or ``eating'' context. Here, we investigate whether a bio-inspired learning principle exploiting such co-occurrence statistics suffices to learn a semantically structured object representation {\\em de novo} from raw visual or combined visual and linguistic input. To this end, we simulate temporal sequences of visual experience by binding together short video clips of real-world scenes showing objects in different contexts. A bio-inspired neural network model aligns close-in-time visual representations while also aligning visual and category label representations to simulate visuo-language alignment. Our results show that our model clusters object representations based on their context, e.g. kitchen or bedroom, in particular in high-level layers of the network, akin to humans. In contrast, lower-level layers tend to better reflect object identity or category. To achieve this, the model exploits two distinct strategies: the visuo-language alignment ensures that different objects of the same category are represented similarly, whereas the temporal alignment leverages that objects from the same context are frequently seen in succession to make their representations more similar \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:bnK-pcrLprsC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2405.05143",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Rrh2pJS9U5gJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Optimized Financial Planning: Integrating Individual and Cooperative Budgeting Models with LLM Recommendations",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Irene de Zarz\u00e0 i Cubero and Joaquim de Curt\u00f2 i D\u00edaz and Gemma Roig and Carlos T Calafate",
+            "abstract": "In today\u2019s complex economic environment, individuals and households alike grapple with the challenge of financial planning. This paper introduces novel methodologies for both individual and cooperative (household) financial budgeting. We firstly propose an optimization framework for individual budget allocation, aiming to maximize savings by efficiently distributing monthly income among various expense categories. We then extend this model to households, wherein the complexity of handling multiple incomes and shared expenses is addressed. The cooperative model prioritizes not only maximized savings but also the preferences and needs of each member, fostering a harmonious financial environment, whether they are short-term needs or long-term aspirations. A notable innovation in our approach is the integration of recommendations from a large language model (LLM). Given its vast training data and potent inferential capabilities, the LLM provides initial feasible solutions to our optimization problems, acting as a guiding beacon for individuals and households unfamiliar with the nuances of financial planning. Our preliminary results indicate that the LLM-recommended solutions result in budget plans that are both economically sound, meaning that they are consistent with established financial management principles and promote fiscal resilience and stability, and aligned with the financial goals and preferences of the concerned parties. This integration of AI-driven recommendations with econometric models, as an instantiation of an extended coevolutionary (EC) theory, paves the way for a new era in financial planning, making it more \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:V3AGJWp-ZtQC",
+        "num_citations": 0,
+        "pub_url": "https://repositorio.comillas.edu/xmlui/handle/11531/88114",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:4M1W_D36BLEJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Large Language Model-Informed X-ray Photoelectron Spectroscopy Data Analysis",
+            "pub_year": 2024,
+            "citation": "Signals 5 (2), 181-201, 2024",
+            "author": "J de Curt\u00f2 and I de Zarz\u00e0 and Gemma Roig and Carlos T Calafate",
+            "journal": "Signals",
+            "volume": "5",
+            "number": "2",
+            "pages": "181-201",
+            "publisher": "MDPI",
+            "abstract": "X-ray photoelectron spectroscopy (XPS) remains a fundamental technique in materials science, offering invaluable insights into the chemical states and electronic structure of a material. However, the interpretation of XPS spectra can be complex, requiring deep expertise and often sophisticated curve-fitting methods. In this study, we present a novel approach to the analysis of XPS data, integrating the utilization of large language models (LLMs), specifically OpenAI\u2019s GPT-3.5/4 Turbo to provide insightful guidance during the data analysis process. Working in the framework of the CIRCE-NAPP beamline at the CELLS ALBA Synchrotron facility where data are obtained using ambient pressure X-ray photoelectron spectroscopy (APXPS), we implement robust curve-fitting techniques on APXPS spectra, highlighting complex cases including overlapping peaks, diverse chemical states, and noise presence. Post curve fitting, we engage the LLM to facilitate the interpretation of the fitted parameters, leaning on its extensive training data to simulate an interaction corresponding to expert consultation. The manuscript presents also a real use case utilizing GPT-4 and Meta\u2019s LLaMA-2 and describes the integration of the functionality into the TANGO control system. Our methodology not only offers a fresh perspective on XPS data analysis, but also introduces a new dimension of artificial intelligence (AI) integration into scientific research. It showcases the power of LLMs in enhancing the interpretative process, particularly in scenarios wherein expert knowledge may not be immediately available. Despite the inherent limitations of LLMs, their potential in the realm \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:q3oQSFYPqjQC",
+        "num_citations": 0,
+        "pub_url": "https://www.mdpi.com/2624-6120/5/2/10",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vXCqmAezQ0gJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Generative Adversarial Collaborations: A practical guide for conference organizers and participating scientists",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2402.12604, 2024",
+            "author": "Gunnar Blohm and Benjamin Peters and Ralf Haefner and Leyla Isik and Nikolaus Kriegeskorte and Jennifer S Lieberman and Carlos R Ponce and Gemma Roig and Megan AK Peters",
+            "journal": "arXiv preprint arXiv:2402.12604",
+            "abstract": "Generative adversarial collaborations (GACs) are a form of formal teamwork between groups of scientists with diverging views. The goal of GACs is to identify and ultimately resolve the most important challenges, controversies, and exciting theoretical and empirical debates in a given research field. A GAC team would develop specific, agreed-upon avenues to resolve debates in order to move a field of research forward in a collaborative way. Such adversarial collaborations have many benefits and opportunities but also come with challenges. Here, we use our experience from (1) creating and running the GAC program for the Cognitive Computational Neuroscience (CCN) conference and (2) implementing and leading GACs on particular scientific problems to provide a practical guide for future GAC program organizers and leaders of individual GACs."
+        },
+        "filled": true,
+        "author_pub_id": "6MjMhT4AAAAJ:BrmTIyaxlBUC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2402.12604",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uxFImCCXViEJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+>>>>>>> Stashed changes
             "title": "Caregiver Talk Shapes Toddler Vision: A Computational Study of Dyadic Play",
             "pub_year": 2023,
             "citation": "Proceedings of the 2023 IEEE International Conference on Development and \u2026, 2023",
