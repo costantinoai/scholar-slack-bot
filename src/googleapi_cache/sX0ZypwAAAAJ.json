@@ -1,0 +1,321 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Towards biologically plausible phosphene simulation for the differentiable optimization of visual cortical prostheses",
+            "pub_year": 2024,
+            "citation": "Elife 13, e85812, 2024",
+            "author": "Maureen van der Grinten and Jaap de Ruyter van Steveninck and Antonio Lozano and Laura Pijnacker and Bodo Rueckauer and Pieter Roelfsema and Marcel van Gerven and Richard van Wezel and Umut G\u00fc\u00e7l\u00fc and Ya\u011fmur G\u00fc\u00e7l\u00fct\u00fcrk",
+            "journal": "Elife",
+            "volume": "13",
+            "pages": "e85812",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Blindness affects millions of people around the world. A promising solution to restoring a form of vision for some individuals are cortical visual prostheses, which bypass part of the impaired visual pathway by converting camera input to electrical stimulation of the visual system. The artificially induced visual percept (a pattern of localized light flashes, or \u2018phosphenes\u2019) has limited resolution, and a great portion of the field\u2019s research is devoted to optimizing the efficacy, efficiency, and practical usefulness of the encoding of visual information. A commonly exploited method is non-invasive functional evaluation in sighted subjects or with computational models by using simulated prosthetic vision (SPV) pipelines. An important challenge in this approach is to balance enhanced perceptual realism, biologically plausibility, and real-time performance in the simulation of cortical prosthetic vision. We present a biologically plausible, PyTorch-based phosphene simulator that can run in real-time and uses differentiable operations to allow for gradient-based computational optimization of phosphene encoding models. The simulator integrates a wide range of clinical results with neurophysiological evidence in humans and non-human primates. The pipeline includes a model of the retinotopic organization and cortical magnification of the visual cortex. Moreover, the quantitative effects of stimulation parameters and temporal dynamics on phosphene characteristics are incorporated. Our results demonstrate the simulator\u2019s suitability for both computational applications such as end-to-end deep learning-based prosthetic vision optimization as well as behavioral \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:HWVPSj4JXeEC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=17341316344401265165",
+        "cites_id": [
+            "17341316344401265165"
+        ],
+        "pub_url": "https://elifesciences.org/articles/85812",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:DYK2RVa7qPAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Brain2GAN: Feature-disentangled neural encoding and decoding of visual perception in the primate brain",
+            "pub_year": 2024,
+            "citation": "PLoS computational biology 20 (5), e1012058, 2024",
+            "author": "Thirza Dado and Paolo Papale and Antonio Lozano and Lynn Le and Feng Wang and Marcel van Gerven and Pieter Roelfsema and Ya\u011fmur G\u00fc\u00e7l\u00fct\u00fcrk and Umut G\u00fc\u00e7l\u00fc",
+            "journal": "PLoS computational biology",
+            "volume": "20",
+            "number": "5",
+            "pages": "e1012058",
+            "publisher": "Public Library of Science",
+            "abstract": "A challenging goal of neural coding is to characterize the neural representations underlying visual perception. To this end, multi-unit activity (MUA) of macaque visual cortex was recorded in a passive fixation task upon presentation of faces and natural images. We analyzed the relationship between MUA and latent representations of state-of-the-art deep generative models, including the conventional and feature-disentangled representations of generative adversarial networks (GANs) (i.e., z- and w-latents of StyleGAN, respectively) and language-contrastive representations of latent diffusion networks (i.e., CLIP-latents of Stable Diffusion). A mass univariate neural encoding analysis of the latent representations showed that feature-disentangled w representations outperform both z and CLIP representations in explaining neural responses. Further, w-latent features were found to be positioned at the higher end of the complexity gradient which indicates that they capture visual information relevant to high-level neural activity. Subsequently, a multivariate neural decoding analysis of the feature-disentangled representations resulted in state-of-the-art spatiotemporal reconstructions of visual perception. Taken together, our results not only highlight the important role of feature-disentanglement in shaping high-level neural representations underlying visual perception but also serve as an important benchmark for the future of neural coding."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:lrH_6YXCPtsC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=17140940477062967620",
+        "cites_id": [
+            "17140940477062967620"
+        ],
+        "pub_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012058",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:RPFzG4za4O0J:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Efficient deep learning with decorrelated backpropagation",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2405.02385, 2024",
+            "author": "Sander Dalm and Joshua Offergeld and Nasir Ahmad and Marcel van Gerven",
+            "journal": "arXiv preprint arXiv:2405.02385",
+            "abstract": "The backpropagation algorithm remains the dominant and most successful method for training deep neural networks (DNNs). At the same time, training DNNs at scale comes at a significant computational cost and therefore a high carbon footprint. Converging evidence suggests that input decorrelation may speed up deep learning. However, to date, this has not yet translated into substantial improvements in training efficiency in large-scale DNNs. This is mainly caused by the challenge of enforcing fast and stable network-wide decorrelation. Here, we show for the first time that much more efficient training of very deep neural networks using decorrelated backpropagation is feasible. To achieve this goal we made use of a novel algorithm which induces network-wide input decorrelation using minimal computational overhead. By combining this algorithm with careful optimizations, we obtain a more than two-fold speed-up and higher test accuracy compared to backpropagation when training a 18-layer deep residual network. This demonstrates that decorrelation provides exciting prospects for efficient deep learning at scale."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:_9EdYq_GCQ0C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=4649347409528212880",
+        "cites_id": [
+            "4649347409528212880"
+        ],
+        "pub_url": "https://arxiv.org/abs/2405.02385",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:kM1P7tXMhUAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Discovering Dynamic Symbolic Policies with Genetic Programming",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.02765, 2024",
+            "author": "Sigur de Vries and Sander Keemink and Marcel van Gerven",
+            "journal": "arXiv preprint arXiv:2406.02765",
+            "abstract": "Artificial intelligence (AI) techniques are increasingly being applied to solve control problems. However, control systems developed in AI are often black-box methods, in that it is not clear how and why they generate their outputs. A lack of transparency can be problematic for control tasks in particular, because it complicates the identification of biases or errors, which in turn negatively influences the user's confidence in the system. To improve the interpretability and transparency in control systems, the black-box structure can be replaced with white-box symbolic policies described by mathematical expressions. Genetic programming offers a gradient-free method to optimise the structure of non-differentiable mathematical expressions. In this paper, we show that genetic programming can be used to discover symbolic control systems. This is achieved by learning a symbolic representation of a function that transforms observations into control signals. We consider both systems that implement static control policies without memory and systems that implement dynamic memory-based control policies. In case of the latter, the discovered function becomes the state equation of a differential equation, which allows for evidence integration. Our results show that symbolic policies are discovered that perform comparably with black-box policies on a variety of control tasks. Furthermore, the additional value of the memory capacity in the dynamic policies is demonstrated on experiments where static policies fall short. Overall, we demonstrate that white-box symbolic policies can be optimised with genetic programming, while offering interpretability and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:KmkpU35IWjAC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.02765",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:IIy9wwSSX5MJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Subspace Node Pruning",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2405.17506, 2024",
+            "author": "Joshua Offergeld and Marcel van Gerven and Nasir Ahmad",
+            "journal": "arXiv preprint arXiv:2405.17506",
+            "abstract": "A significant increase in the commercial use of deep neural network models increases the need for efficient AI. Node pruning is the art of removing computational units such as neurons, filters, attention heads, or even entire layers while keeping network performance at a maximum. This can significantly reduce the inference time of a deep network and thus enhance its efficiency. Few of the previous works have exploited the ability to recover performance by reorganizing network parameters while pruning. In this work, we propose to create a subspace from unit activations which enables node pruning while recovering maximum accuracy. We identify that for effective node pruning, a subspace can be created using a triangular transformation matrix, which we show to be equivalent to Gram-Schmidt orthogonalization, which automates this procedure. We further improve this method by reorganizing the network prior to subspace formation. Finally, we leverage the orthogonal subspaces to identify layer-wise pruning ratios appropriate to retain a significant amount of the layer-wise information. We show that this measure outperforms existing pruning methods on VGG networks. We further show that our method can be extended to other network architectures such as residual networks."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:_Xy5tTOxz_oC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2405.17506",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:S1M0EkwfH-MJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Perturbation-based Learning for Recurrent Neural Networks",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2405.08967, 2024",
+            "author": "Jesus Garcia Fernandez and Sander Keemink and Marcel van Gerven",
+            "journal": "arXiv preprint arXiv:2405.08967",
+            "abstract": "Recurrent neural networks (RNNs) hold immense potential for computations due to their Turing completeness and sequential processing capabilities, yet existing methods for their training encounter efficiency challenges. Backpropagation through time (BPTT), the prevailing method, extends the backpropagation (BP) algorithm by unrolling the RNN over time. However, this approach suffers from significant drawbacks, including the need to interleave forward and backward phases and store exact gradient information. Furthermore, BPTT has been shown to struggle with propagating gradient information for long sequences, leading to vanishing gradients. An alternative strategy to using gradient-based methods like BPTT involves stochastically approximating gradients through perturbation-based methods. This learning approach is exceptionally simple, necessitating only forward passes in the network and a global reinforcement signal as feedback. Despite its simplicity, the random nature of its updates typically leads to inefficient optimization, limiting its effectiveness in training neural networks. In this study, we present a new approach to perturbation-based learning in RNNs whose performance is competitive with BPTT, while maintaining the inherent advantages over gradient-based learning. To this end, we extend the recently introduced activity-based node perturbation (ANP) method to operate in the time domain, leading to more efficient learning and generalization. Subsequently, we conduct a range of experiments to validate our approach. Our results show similar performance, convergence time and scalability when compared to BPTT, strongly \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:viYOxJONeN0C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2405.08967",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:pBfzve6EaMsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Gradient-Free Training of Recurrent Neural Networks using Random Perturbations",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2405.08967, 2024",
+            "author": "Jes\u00fas Garc\u0131a Fern\u00e1ndez and Sander Keemink and Marcel van Gerven",
+            "journal": "arXiv preprint arXiv:2405.08967",
+            "abstract": "Recurrent neural networks (RNNs) hold immense potential for computations due to their Turing completeness and sequential processing capabilities, yet existing methods for their training encounter efficiency challenges. Backpropagation through time (BPTT), the prevailing method, extends the backpropagation (BP) algorithm by unrolling the RNN over time. However, this approach suffers from significant drawbacks, including the need to interleave forward and backward phases and store exact gradient information. Furthermore, BPTT has been shown to struggle with propagating gradient information for long sequences, leading to vanishing gradients. An alternative strategy to using gradient-based methods like BPTT involves stochastically approximating gradients through perturbation-based methods. This learning approach is exceptionally simple, necessitating only forward passes in the network and a global reinforcement signal as feedback. Despite its simplicity, the random nature of its updates typically leads to inefficient optimization, limiting its effectiveness in training neural networks. In this study, we present a new approach to perturbation-based learning in RNNs whose performance is competitive with BPTT, while maintaining the inherent advantages over gradient-based learning. To this end, we extend the recently introduced activity-based node perturbation (ANP) method to operate in the time domain, leading to more efficient learning and generalization. Subsequently, we conduct a range of experiments to validate our approach. Our results show similar performance, convergence time and scalability when compared to BPTT, strongly \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:4LC-jEhLaRQC",
+        "num_citations": 0,
+        "pub_url": "https://www.researchgate.net/profile/Jesus-Garcia-Fernandez/publication/380898088_Gradient-Free_Training_of_Recurrent_Neural_Networks_using_Random_Perturbations/links/66546f07479366623a166b65/Gradient-Free-Training-of-Recurrent-Neural-Networks-using-Random-Perturbations.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:wRXtqCfJ-EMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Perturbation-based Learning for Recurrent Neural Networks",
+            "pub_year": 2024,
+            "citation": "arXiv e-prints, arXiv: 2405.08967, 2024",
+            "author": "Jesus Garcia Fernandez and Sander Keemink and Marcel van Gerven",
+            "journal": "arXiv e-prints",
+            "pages": "arXiv: 2405.08967",
+            "abstract": "Recurrent neural networks (RNNs) hold immense potential for computations due to their Turing completeness and sequential processing capabilities, yet existing methods for their training encounter efficiency challenges. Backpropagation through time (BPTT), the prevailing method, extends the backpropagation (BP) algorithm by unrolling the RNN over time. However, this approach suffers from significant drawbacks, including the need to interleave forward and backward phases and store exact gradient information. Furthermore, BPTT has been shown to struggle with propagating gradient information for long sequences, leading to vanishing gradients. An alternative strategy to using gradient-based methods like BPTT involves stochastically approximating gradients through perturbation-based methods. This learning approach is exceptionally simple, necessitating only forward passes in the network and a global \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:4_XrlajHzhgC",
+        "num_citations": 0,
+        "pub_url": "https://ui.adsabs.harvard.edu/abs/2024arXiv240508967G/abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:MGMlfcfE2KUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Gaze-contingent processing improves mobility, scene recognition and visual search in simulated head-steered prosthetic vision",
+            "pub_year": 2024,
+            "citation": "Journal of neural engineering 21 (2), 026037, 2024",
+            "author": "Jaap de Ruyter van Steveninck and Mo Nipshagen and Marcel van Gerven and Umut G\u00fc\u00e7l\u00fc and Ya\u011fmur G\u00fc\u00e7l\u00fcturk and Richard van Wezel",
+            "journal": "Journal of neural engineering",
+            "volume": "21",
+            "number": "2",
+            "pages": "026037",
+            "publisher": "IOP Publishing",
+            "abstract": "Objective The enabling technology of visual prosthetics for the blind is making rapid progress. However, there are still uncertainties regarding the functional outcomes, which can depend on many design choices in the development. In visual prostheses with a head-mounted camera, a particularly challenging question is how to deal with the gaze-locked visual percept associated with spatial updating conflicts in the brain. The current study investigates a recently proposed compensation strategy based on gaze-contingent image processing with eye-tracking. Gaze-contingent processing is expected to reinforce natural-like visual scanning and reestablished spatial updating based on eye movements. The beneficial effects remain to be investigated for daily life activities in complex visual environments. Approach The current study evaluates the benefits of gaze-contingent processing versus gaze-locked and gaze \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:6fs0NoO7GbkC",
+        "num_citations": 0,
+        "pub_url": "https://iopscience.iop.org/article/10.1088/1741-2552/ad357d/meta",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:KUy5FaT6nNcJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Universal Differential Equations as a Common Modeling Language for Neuroscience",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2403.14510, 2024",
+            "author": "Ahmed ElGazzar and Marcel van Gerven",
+            "journal": "arXiv preprint arXiv:2403.14510",
+            "abstract": "The unprecedented availability of large-scale datasets in neuroscience has spurred the exploration of artificial deep neural networks (DNNs) both as empirical tools and as models of natural neural systems. Their appeal lies in their ability to approximate arbitrary functions directly from observations, circumventing the need for cumbersome mechanistic modeling. However, without appropriate constraints, DNNs risk producing implausible models, diminishing their scientific value. Moreover, the interpretability of DNNs poses a significant challenge, particularly with the adoption of more complex expressive architectures. In this perspective, we argue for universal differential equations (UDEs) as a unifying approach for model development and validation in neuroscience. UDEs view differential equations as parameterizable, differentiable mathematical objects that can be augmented and trained with scalable deep learning techniques. This synergy facilitates the integration of decades of extensive literature in calculus, numerical analysis, and neural modeling with emerging advancements in AI into a potent framework. We provide a primer on this burgeoning topic in scientific machine learning and demonstrate how UDEs fill in a critical gap between mechanistic, phenomenological, and data-driven models in neuroscience. We outline a flexible recipe for modeling neural systems with UDEs and discuss how they can offer principled solutions to inherent challenges across diverse neuroscience applications such as understanding neural computation, controlling neural systems, neural decoding, and normative modeling."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:Ncwx4PHgTB8C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2403.14510",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:85jO-7kGqxsJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "PAM: Predictive attention mechanism for neural decoding of visual perception",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.06. 04.596589, 2024",
+            "author": "Thirza Dado and Lynn Le and Marcel van Gerven and Yagmur Gucluturk and Umut Guclu",
+            "journal": "bioRxiv",
+            "pages": "2024.06. 04.596589",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Attention mechanisms enhance deep learning models by focusing on the most relevant parts of the input data. We introduce predictive attention mechanisms (PAMs) -- a novel approach that dynamically derives queries during training which is beneficial when predefined queries are unavailable. We applied PAMs to neural decoding, a field challenged by the inherent complexity of neural data that prevents access to queries. Concretely, we designed a PAM to reconstruct perceived images from brain activity via the latent space of a generative adversarial network (GAN). We processed stimulus-evoked brain activity from various visual areas with separate attention heads, transforming it into a latent vector which was then fed to the GAN's generator to reconstruct the visual stimulus. Driven by prediction-target discrepancies during training, PAMs optimized their queries to identify and prioritize the most relevant neural patterns that required focused attention. We validated our PAM with two datasets: the first dataset (B2G) with GAN-synthesized images, their original latents and multi-unit activity data; the second dataset (GOD) with real photographs, their inverted latents and functional magnetic resonance imaging data. Our findings demonstrate state-of-the-art reconstructions of perception and show that attention weights increasingly favor downstream visual areas. Moreover, visualizing the values from different brain areas enhanced interpretability in terms of their contribution to the final image reconstruction. Interestingly, the values from downstream areas (IT for B2G; LOC for GOD) appeared visually distinct from the stimuli despite receiving the most \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:UamA9ItEL6YC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.06.04.596589.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uV-A73fvEicJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Gaze-contingent processing improves mobility, scene recognition and visual search in simulated head-steered prosthetic vision",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "J de Ruyter van Steveninck and MH Nipshagen and MAJ van Gerven and U G\u00fc\u00e7l\u00fc and Y G\u00fc\u00e7l\u00fct\u00fcrk and RJA van Wezel",
+            "abstract": "OBJECTIVE: The enabling technology of visual prosthetics for the blind is making rapid progress. However, there are still uncertainties regarding the functional outcomes, which can depend on many design choices in the development. In visual prostheses with a head-mounted camera, a particularly challenging question is how to deal with the gaze-locked visual percept associated with spatial updating conflicts in the brain. The current study investigates a recently proposed compensation strategy based on gaze-contingent image processing with eye-tracking. Gaze-contingent processing is expected to reinforce natural-like visual scanning and reestablished spatial updating based on eye movements. The beneficial effects remain to be investigated for daily life activities in complex visual environments APPROACH: The current study evaluates the benefits of gaze-contingent processing versus gaze-locked and gaze-ignored simulations in the context of mobility, scene recognition and visual search, using a virtual reality simulated prosthetic vision paradigm with sighted subjects. MAIN RESULTS: Compared to gaze-locked vision, gaze-contingent processing was consistently found to improve the speed in all experimental tasks, as well as the subjective quality of vision. Similar or further improvements were found in a control condition that ignores gaze-depended effects, a simulation that is unattainable in the clinical reality. SIGNIFICANCE: Our results suggest that gaze-locked vision and spatial updating conflicts can be debilitating for complex visually-guided activities of daily living such as mobility and orientation. Therefore, for prospective users of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:RtDPZMhf-s8C",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/304293/304293.pdf?sequence=1",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:zm7pmKI5tTwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Gaze-contingent XR phosphene simulation for mobility, scene recognition and visual search",
+            "pub_year": 2024,
+            "citation": "Radboud Data Repository, 2024",
+            "author": "J de Ruyter van Steveninck and MH Nipshagen and MAJ van Gerven and U G\u00fc\u00e7l\u00fc and Y G\u00fc\u00e7l\u00fct\u00fcrk and RJA van Wezel",
+            "publisher": "Radboud Data Repository",
+            "abstract": "Experimental data of the paper \"Gaze-contingent processing improves mobility,scene recognition and visual search insimulated head-steered prosthetic vision\"."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:lM7bPffmjyEC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/handle/2066/304562",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:R44axErNi0wJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "DeNovoCNN: A deep learning approach to de novo variant calling in next generation sequencing data",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Gelana Khazeeva and Karolis Sablauskas and PGH van der Sanden and WAR Steyaert and MP Kwint and Dmitrijs Rots and Max Hinne and MAJ van Gerven and HG Yntema and LELM Vissers and CFHA Gilissen",
+            "abstract": "DeNovoCNN: A deep learning approach to de novo variant calling in next generation sequencing \ndata Toggle navigation Radboud Repository Toggle navigation View Item Radboud Repository \nCollections Radboud University Academic publications View Item Radboud Repository \nCollections Radboud University Academic publications View Item Search Repository This \nCollection BrowseAll of RepositoryCollectionsDepartmentsDate IssuedAuthorsTitlesDocument \ntypeThis CollectionDepartmentsDate IssuedAuthorsTitlesDocument type StatisticsView Item \nStatistics DeNovoCNN: A deep learning approach to de novo variant calling in next generation \nsequencing data Find Full text Publication year 2024 Author(s) Khazeeva, G. Sablauskas, \nK. Sanden, PGH van der Steyaert, WAR Kwint, MP Rots, D. Hinne, M. Gerven, MAJ van \nYntema, HG Vissers, LELM Gilissen, CFHA Number of pages 1 p. Source European Journal \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:1tvASLRm6poC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/handle/2066/304295",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:D8jxfDMmSTcJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Towards biologically plausible phosphene simulation for the differentiable optimization of visual cortical prostheses",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "M Grinten and J de Ruyter van Steveninck and Antonio Lozano and Laura Pijnacker and BJ R\u00fcckauer and PR Roelfsema and MAJ van Gerven and RJA van Wezel and Umut G\u00fc\u00e7l\u00fc and Ya\u011fmur G\u00fc\u00e7l\u00fct\u00fcrk",
+            "abstract": "Blindness affects millions of people around the world. A promising solution to restoring a form of vision for some individuals are cortical visual prostheses, which bypass part of the impaired visual pathway by converting camera input to electrical stimulation of the visual system. The artificially induced visual percept (a pattern of localized light flashes, or 'phosphenes') has limited resolution, and a great portion of the field's research is devoted to optimizing the efficacy, efficiency, and practical usefulness of the encoding of visual information. A commonly exploited method is non-invasive functional evaluation in sighted subjects or with computational models by using simulated prosthetic vision (SPV) pipelines. An important challenge in this approach is to balance enhanced perceptual realism, biologically plausibility, and real-time performance in the simulation of cortical prosthetic vision. We present a biologically plausible, PyTorch-based phosphene simulator that can run in real-time and uses differentiable operations to allow for gradient-based computational optimization of phosphene encoding models. The simulator integrates a wide range of clinical results with neurophysiological evidence in humans and non-human primates. The pipeline includes a model of the retinotopic organization and cortical magnification of the visual cortex. Moreover, the quantitative effects of stimulation parameters and temporal dynamics on phosphene characteristics are incorporated. Our results demonstrate the simulator's suitability for both computational applications such as end-to-end deep learning-based prosthetic vision optimization as well as behavioral \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:AOeXN74AWYwC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/bitstream/handle/2066/303598/303598.pdf?sequence=1",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Bg4h8N5hmrkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A Dynamical Systems Approach to Optimal Foraging",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.01. 20.576399, 2024",
+            "author": "Siddharth Chaturvedi and Ahmed ElGazzar and Marcel van Gerven",
+            "journal": "bioRxiv",
+            "pages": "2024.01. 20.576399",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Foraging for resources in an environment is a fundamental activity that must be addressed by any biological agent. Thus, modelling this phenomenon in simulations can enhance our understanding of the characteristics of natural intelligence. In this work, we present a novel approach to modelling this phenomenon in silico. We achieve this by using a continuous coupled dynamical system for modelling the system. The dynamical system is composed of three differential equations, representing the position of the agent, the agent's control policy, and the environmental resource dynamics. Crucially, the control policy is implemented as a neural differential equation which allows the control policy to adapt in order to solve the foraging task. Using this setup, we show that when these dynamics are coupled and the controller parameters are optimized to maximize the rate of reward collected, adaptive foraging emerges in the agent. We further show that the internal dynamics of the controller, as a surrogate brain model, closely resemble the dynamics of the evidence accumulation mechanism, which may be used by certain neurons of the dorsal anterior cingulate cortex region in non-human primates, for deciding when to migrate from one patch to another. Finally, we show that by modulating the resource growth rates of the environment, the emergent behaviour of the artificial agent agrees with the predictions of the optimal foraging theory."
+        },
+        "filled": true,
+        "author_pub_id": "sX0ZypwAAAAJ:GYFkgKAhzLcC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.01.20.576399.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:geUvMPKWHfgJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

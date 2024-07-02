@@ -1,0 +1,200 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Feature-selective responses in macaque visual cortex follow eye movements during natural vision",
+            "pub_year": 2024,
+            "citation": "Nature neuroscience, 1-10, 2024",
+            "author": "Will Xiao and Saloni Sharma and Gabriel Kreiman and Margaret S Livingstone",
+            "journal": "Nature neuroscience",
+            "pages": "1-10",
+            "publisher": "Nature Publishing Group US",
+            "abstract": "In natural vision, primates actively move their eyes several times per second via saccades. It remains unclear whether, during this active looking, visual neurons exhibit classical retinotopic properties, anticipate gaze shifts or mirror the stable quality of perception, especially in complex natural scenes. Here, we let 13 monkeys freely view thousands of natural images across 4.6\u2009million fixations, recorded 883\u2009h of neuronal responses in six areas spanning primary visual to anterior inferior temporal cortex and analyzed spatial, temporal and featural selectivity in these responses. Face neurons tracked their receptive field contents, indicated by category-selective responses. Self-consistency analysis showed that general feature-selective responses also followed eye movements and remained gaze-dependent over seconds of viewing the same image. Computational models of feature-selective responses located \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:vDZJ-YLwNdEC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=15644335137690247937",
+        "cites_id": [
+            "15644335137690247937"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41593-024-01631-5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:AWMwpevXG9kJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Revealing Vision-Language Integration in the Brain with Multimodal Networks",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.14481, 2024",
+            "author": "Vighnesh Subramaniam and Colin Conwell and Christopher Wang and Gabriel Kreiman and Boris Katz and Ignacio Cases and Andrei Barbu",
+            "journal": "arXiv preprint arXiv:2406.14481",
+            "abstract": "We use (multi)modal deep neural networks (DNNs) to probe for sites of multimodal integration in the human brain by predicting stereoencephalography (SEEG) recordings taken while human subjects watched movies. We operationalize sites of multimodal integration as regions where a multimodal vision-language model predicts recordings better than unimodal language, unimodal vision, or linearly-integrated language-vision models. Our target DNN models span different architectures (e.g., convolutional networks and transformers) and multimodal training techniques (e.g., cross-attention and contrastive learning). As a key enabling step, we first demonstrate that trained vision and language models systematically outperform their randomly initialized counterparts in their ability to predict SEEG signals. We then compare unimodal and multimodal models against one another. Because our target DNN models often have different architectures, number of parameters, and training sets (possibly obscuring those differences attributable to integration), we carry out a controlled comparison of two models (SLIP and SimCLR), which keep all of these attributes the same aside from input modality. Using this approach, we identify a sizable number of neural sites (on average 141 out of 1090 total sites or 12.94%) and brain regions where multimodal integration seems to occur. Additionally, we find that among the variants of multimodal training techniques we assess, CLIP-style training is the best suited for downstream prediction of the neural activity in these sites."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:gKiMpY-AVTkC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.14481",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:EsF3o4oCh6cJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Is AI fun? HumorDB: a curated dataset and benchmark to investigate graphical humor",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.13564, 2024",
+            "author": "Veedant Jain and Felipe dos Santos Alves Feitosa and Gabriel Kreiman",
+            "journal": "arXiv preprint arXiv:2406.13564",
+            "abstract": "Despite significant advancements in computer vision, understanding complex scenes, particularly those involving humor, remains a substantial challenge. This paper introduces HumorDB, a novel image-only dataset specifically designed to advance visual humor understanding. HumorDB consists of meticulously curated image pairs with contrasting humor ratings, emphasizing subtle visual cues that trigger humor and mitigating potential biases. The dataset enables evaluation through binary classification(Funny or Not Funny), range regression(funniness on a scale from 1 to 10), and pairwise comparison tasks(Which Image is Funnier?), effectively capturing the subjective nature of humor perception. Initial experiments reveal that while vision-only models struggle, vision-language models, particularly those leveraging large language models, show promising results. HumorDB also shows potential as a valuable zero-shot benchmark for powerful large multimodal models. We open-source both the dataset and code under the CC BY 4.0 license."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:Ak0FvsSvgGUC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.13564",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vWB5LQPAtwwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Benchmarking Out-of-Distribution Generalization Capabilities of DNN-based Encoding Models for the Ventral Visual Cortex",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.16935, 2024",
+            "author": "Spandan Madan and Will Xiao and Mingran Cao and Hanspeter Pfister and Margaret Livingstone and Gabriel Kreiman",
+            "journal": "arXiv preprint arXiv:2406.16935",
+            "abstract": "We characterized the generalization capabilities of DNN-based encoding models when predicting neuronal responses from the visual cortex. We collected \\textit{MacaqueITBench}, a large-scale dataset of neural population responses from the macaque inferior temporal (IT) cortex to over  images, comprising  unique natural images presented to seven monkeys over  sessions. Using \\textit{MacaqueITBench}, we investigated the impact of distribution shifts on models predicting neural activity by dividing the images into Out-Of-Distribution (OOD) train and test splits. The OOD splits included several different image-computable types including image contrast, hue, intensity, temperature, and saturation. Compared to the performance on in-distribution test images -- the conventional way these models have been evaluated -- models performed worse at predicting neuronal responses to out-of-distribution images, retaining as little as  of the performance on in-distribution test images. The generalization performance under OOD shifts can be well accounted by a simple image similarity metric -- the cosine distance between image representations extracted from a pre-trained object recognition model is a strong predictor of neural predictivity under different distribution shifts. The dataset of images, neuronal firing rate recordings, and computational benchmarks are hosted publicly at: https://bit.ly/3zeutVd."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:F1b5ZUV5XREC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.16935",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:hHT-WzOrkcwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Discovering neural policies to drive behaviour by integrating deep reinforcement learning agents with biological neural networks",
+            "pub_year": 2024,
+            "citation": "Nature Machine Intelligence, 1-13, 2024",
+            "author": "Chenguang Li and Gabriel Kreiman and Sharad Ramanathan",
+            "journal": "Nature Machine Intelligence",
+            "pages": "1-13",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Deep reinforcement learning (RL) has been successful in a variety of domains but has not yet been directly used to learn biological tasks by interacting with a living nervous system. As proof of principle, we show how to create such a hybrid system trained on a target-finding task. Using optogenetics, we interfaced the nervous system of the nematode Caenorhabditis elegans with a deep RL agent. Agents adapted to strikingly different sites of neural integration and learned site-specific activations to guide animals towards a target, including in cases where agents interfaced with sets of neurons with previously uncharacterized responses to optogenetic modulation. Agents were analysed by plotting their learned policies to understand how different sets of neurons were used to guide movement. Further, the animal and agent generalized to new environments using the same learned policies in food-search tasks \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:Bg7qf7VwUHIC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s42256-024-00854-2",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:o7HPSkkY6jQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Look Around! Unexpected gains from training on environments in the vicinity of the target",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2401.15856, 2024",
+            "author": "Serena Bono and Spandan Madan and Ishaan Grover and Mao Yasueda and Cynthia Breazeal and Hanspeter Pfister and Gabriel Kreiman",
+            "journal": "arXiv preprint arXiv:2401.15856",
+            "abstract": "Solutions to Markov Decision Processes (MDP) are often very sensitive to state transition probabilities. As the estimation of these probabilities is often inaccurate in practice, it is important to understand when and how Reinforcement Learning (RL) agents generalize when transition probabilities change. Here we present a new methodology to evaluate such generalization of RL agents under small shifts in the transition probabilities. Specifically, we evaluate agents in new environments (MDPs) in the vicinity of the training MDP created by adding quantifiable, parametric noise into the transition function of the training MDP. We refer to this process as Noise Injection, and the resulting environments as -environments. This process allows us to create controlled variations of the same environment with the level of the noise serving as a metric of distance between environments. Conventional wisdom suggests that training and testing on the same MDP should yield the best results. However, we report several cases of the opposite -- when targeting a specific environment, training the agent in an alternative noise setting can yield superior outcomes. We showcase this phenomenon across  different variations of ATARI games, including PacMan, Pong, and Breakout."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:gVv57TyPmFsC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2401.15856",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:M04Lak6OFtIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Artificial Intelligence in Neuroscience",
+            "pub_year": 2024,
+            "citation": "Neuroscience for Neurosurgeons, 158, 2024",
+            "author": "Will Xiao and Mengmi Zhang and Gabriel Kreiman",
+            "journal": "Neuroscience for Neurosurgeons",
+            "pages": "158",
+            "publisher": "Cambridge University Press",
+            "abstract": "Neurosurgeons have the privilege of peeking inside the most precious and the most mysterious device on earth: the human brain (Crick et al., 2004). The human brain is also the most expensive device on earth given that mental health problems constitute the largest health care cost. By deciphering the inner secrets of brain computations, scientists and engineers have taken inspiration to develop smart artificial intelligence (AI) algorithms. These AI algorithms in turn provide much help to understanding brain function and to multiple applications in brain disorders, including neurosurgery."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:Ehil0879vHcC",
+        "num_citations": 0,
+        "pub_url": "https://books.google.com/books?hl=en&lr=&id=vN7oEAAAQBAJ&oi=fnd&pg=PA158&dq=info:u4p-GmkIqw0J:scholar.google.com&ots=tWaf7-qh6_&sig=r7wUO4ZSFCjVXVILGbizo5ucQLo",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:u4p-GmkIqw0J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neuron-level prediction and noise can implement flexible reward-seeking behavior",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.05. 22.595306, 2024",
+            "author": "Chenguang Li and Jonah W Brenner and Adam Boesky and Sharad Ramanathan and Gabriel Kreiman",
+            "journal": "bioRxiv",
+            "pages": "2024.05. 22.595306",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "We show that neural networks can implement reward-seeking behavior using only local predictive updates and internal noise. These networks are capable of autonomous interaction with an environment and can switch between explore and exploit behavior, which we show is governed by attractor dynamics. Networks can adapt to changes in their architectures, environments, or motor interfaces without any external control signals. When networks have a choice between different tasks, they can form preferences that depend on patterns of noise and initialization, and we show that these preferences can be biased by network architectures or by changing learning rates. Our algorithm presents a flexible, biologically plausible way of interacting with environments without requiring an explicit environmental reward function, allowing for behavior that is both highly adaptable and autonomous. Code is available at https://github.com/ccli3896/PaN."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:BJbdYPG6LGMC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.05.22.595306.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:nBrBlRZIJUYJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Impact of Scene Context on Visual Object Recognition: Comparing Humans, Monkeys, and Computational Models",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.05. 27.596127, 2024",
+            "author": "Sara Djambazovska and Anaa Salim Zafer and Hamidreza Ramezanpour and Gabriel Kreiman and Kohitij Kar",
+            "journal": "bioRxiv",
+            "pages": "2024.05. 27.596127",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "During natural vision, we rarely see objects in isolation but rather embedded in rich and complex contexts. Understanding how the brain recognizes objects in natural scenes by integrating contextual information remains a key challenge. To elucidate neural mechanisms compatible with human visual processing, we need an animal model that behaves similarly to humans, so that inferred neural mechanisms can provide hypotheses relevant to the human brain. Here we assessed whether rhesus macaques could model human context-driven object recognition by quantifying visual object identification abilities across variations in the amount, quality, and congruency of contextual cues. Behavioral metrics revealed strikingly similar context-dependent patterns between humans and monkeys. However, neural responses in the inferior temporal (IT) cortex of monkeys that were never explicitly trained to discriminate objects in context, as well as current artificial neural network models, could only partially explain this cross-species correspondence. The shared behavioral variance unexplained by context-naive neural data or computational models highlights fundamental knowledge gaps. Our findings demonstrate an intriguing alignment of human and monkey visual object processing that defies full explanation by either brain activity in a key visual region or state-of-the-art models."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:tH6gc1N1XXoC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.05.27.596127.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:4Fku-soqnGUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Invariant Neural Representation of Parts of Speech in the Human Brain",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.01. 15.575788, 2024",
+            "author": "Pranav Misra and Yen-Cheng Shih and Hsiang-Yu Yu and Daniel Weisholtz and Joseph R Madsen and Stone Sceillig and Gabriel Kreiman",
+            "journal": "bioRxiv",
+            "pages": "2024.01. 15.575788",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Elucidating the internal representation of language in the brain has major implications for cognitive science, brain disorders, and artificial intelligence. A pillar of linguistic studies is the notion that words have defined functions, often referred to as parts of speech. Here we recorded invasive neurophysiological responses from 1,801 electrodes in 20 patients with epilepsy while they were presented with two-word phrases consisting of an adjective and a noun. We observed neural signals that distinguished between these two parts of speech. The selective signals were circumscribed within a small region in the left lateral orbitofrontal cortex. The representation of parts of speech showed invariance across visual and auditory presentation modalities, robustness to word properties like length, order, frequency, and semantics, and even generalized across different languages. This selective, invariant, and localized representation of parts of speech for nouns versus adjectives provides key elements for the compositional processing of language."
+        },
+        "filled": true,
+        "author_pub_id": "WxZ_6nsAAAAJ:nVrZBo8bIpAC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.01.15.575788.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:OecDCkfUbwcJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

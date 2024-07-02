@@ -1,0 +1,90 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Moving and Static Faces, Bodies, Objects, and Scenes Are Differentially Represented across the Three Visual Pathways",
+            "pub_year": 2024,
+            "citation": "Journal of Cognitive Neuroscience, 1-13, 2024",
+            "author": "Emel K\u00fc\u00e7\u00fck and Matthew Foxwell and Daniel Kaiser and David Pitcher",
+            "journal": "Journal of Cognitive Neuroscience",
+            "pages": "1-13",
+            "publisher": "MIT Press",
+            "abstract": "Models of human cortex propose the existence of neuroanatomical pathways specialized for different behavioral functions. These pathways include a ventral pathway for object recognition, a dorsal pathway for performing visually guided physical actions, and a recently proposed third pathway for social perception. In the current study, we tested the hypothesis that different categories of moving stimuli are differentially processed across the dorsal and third pathways according to their behavioral implications. Human participants (n = 30) were scanned with fMRI while viewing moving and static stimuli from four categories (faces, bodies, scenes, and objects). A whole-brain group analysis showed that moving bodies and moving objects increased neural responses in the bilateral posterior parietal cortex, parts of the dorsal pathway. By contrast, moving faces and moving bodies increased neural responses, the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "v4CvWHgAAAAJ:VLnqNzywnoUC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=14224964496938677079",
+        "cites_id": [
+            "14224964496938677079"
+        ],
+        "pub_url": "https://direct.mit.edu/jocn/article/doi/10.1162/jocn_a_02139/120300",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:V7OSxtc5acUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Coherent categorical information triggers integration-related alpha dynamics",
+            "pub_year": 2024,
+            "citation": "Journal of Neurophysiology 131 (4), 619-625, 2024",
+            "author": "Lixiang Chen and Radoslaw Martin Cichy and Daniel Kaiser",
+            "journal": "Journal of Neurophysiology",
+            "volume": "131",
+            "number": "4",
+            "pages": "619-625",
+            "publisher": "American Physiological Society",
+            "abstract": "To create coherent visual experiences, the brain spatially integrates the complex and dynamic information it receives from the environment. We previously demonstrated that feedback-related alpha activity carries stimulus-specific information when two spatially and temporally coherent naturalistic inputs can be integrated into a unified percept. In this study, we sought to determine whether such integration-related alpha dynamics are triggered by categorical coherence in visual inputs. In an EEG experiment, we manipulated the degree of coherence by presenting pairs of videos from the same or different categories through two apertures in the left and right visual hemifields. Critically, video pairs could be video-level coherent (i.e., stem from the same video), coherent in their basic-level category, coherent in their superordinate category, or incoherent (i.e., stem from videos from two entirely different categories). We \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "v4CvWHgAAAAJ:vDijr-p_gm4C",
+        "num_citations": 0,
+        "pub_url": "https://journals.physiology.org/doi/abs/10.1152/jn.00450.2023",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1s9Czh_yf10J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Integrative processing in artificial and biological vision predicts the perceived beauty of natural images",
+            "pub_year": 2024,
+            "citation": "Science Advances 10 (9), eadi9294, 2024",
+            "author": "Sanjeev Nara and Daniel Kaiser",
+            "journal": "Science Advances",
+            "volume": "10",
+            "number": "9",
+            "pages": "eadi9294",
+            "publisher": "American Association for the Advancement of Science",
+            "abstract": "Previous research shows that the beauty of natural images is already determined during perceptual analysis. However, it is unclear which perceptual computations give rise to the perception of beauty. Here, we tested whether perceived beauty is predicted by spatial integration across an image, a perceptual computation that reduces processing demands by aggregating image parts into more efficient representations of the whole. We quantified integrative processing in an artificial deep neural network model, where the degree of integration was determined by the amount of deviation between activations for the whole image and its constituent parts. This quantification of integration predicted beauty ratings for natural images across four studies with different stimuli and designs. In a complementary functional magnetic resonance imaging study, we show that integrative processing in human visual cortex similarly \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "v4CvWHgAAAAJ:yB1At4FlUx8C",
+        "num_citations": 0,
+        "pub_url": "https://www.science.org/doi/abs/10.1126/sciadv.adi9294",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:8RMvqusi3FAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Individual differences in internal models explain idiosyncrasies in scene perception",
+            "pub_year": 2024,
+            "citation": "Cognition, 2024",
+            "author": "Gongting Wang* and Matthew J Foxwell* and Radoslaw M Cichy and David Pitcher and Daniel Kaiser",
+            "journal": "Cognition",
+            "abstract": "According to predictive processing theories, vision is facilitated by predictions derived from our internal models of what the world should look like. However, the contents of these models and how they vary across people remains unclear. Here, we use drawing as a behavioral readout of the contents of the internal models in individual participants. Participants were first asked to draw typical versions of scene categories, as descriptors of their internal models. These drawings were converted into standardized 3d renders, which we used as stimuli in subsequent scene categorization experiments. Across two experiments, participants' scene categorization was more accurate for renders tailored to their own drawings compared to renders based on others' drawings or copies of scene photographs, suggesting that scene perception is determined by a match with idiosyncratic internal models. Using a deep neural network \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "v4CvWHgAAAAJ:nrtMV_XWKgEC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S001002772400009X",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:HsF8HlfG7UcJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

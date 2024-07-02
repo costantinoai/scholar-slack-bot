@@ -1,0 +1,155 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Emergence of brain-like mirror-symmetric viewpoint tuning in convolutional neural networks",
+            "pub_year": 2024,
+            "citation": "Elife 13, e90256, 2024",
+            "author": "Amirhossein Farzmahdi and Wilbert Zarco and Winrich A Freiwald and Nikolaus Kriegeskorte and Tal Golan",
+            "journal": "Elife",
+            "volume": "13",
+            "pages": "e90256",
+            "publisher": "eLife Sciences Publications Limited",
+            "abstract": "Primates can recognize objects despite 3D geometric variations such as in-depth rotations. The computational mechanisms that give rise to such invariances are yet to be fully understood. A curious case of partial invariance occurs in the macaque face-patch AL and in fully connected layers of deep convolutional networks in which neurons respond similarly to mirror-symmetric views (eg left and right profiles). Why does this tuning develop? Here, we propose a simple learning-driven explanation for mirror-symmetric viewpoint tuning. We show that mirror-symmetric viewpoint tuning for faces emerges in the fully connected layers of convolutional deep neural networks trained on object recognition tasks, even when the training dataset does not include faces. First, using 3D objects rendered from multiple views as test stimuli, we demonstrate that mirror-symmetric viewpoint tuning in convolutional neural network models is not unique to faces: it emerges for multiple object categories with bilateral symmetry. Second, we show why this invariance emerges in the models. Learning to discriminate among bilaterally symmetric object categories induces reflection-equivariant intermediate representations. AL-like mirror-symmetric tuning is achieved when such equivariant responses are spatially pooled by downstream units with sufficiently large receptive fields. These results explain how mirror-symmetric viewpoint tuning can emerge in neural networks, providing a theory of how they might emerge in the primate brain. Our theory predicts that mirror-symmetric viewpoint tuning can emerge as a consequence of exposure to bilaterally symmetric objects beyond \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:JjBZBFkNMTQC",
+        "num_citations": 0,
+        "pub_url": "https://elifesciences.org/articles/90256",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:RVfwR4iwNqUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Human-like multiple object tracking through occlusion via gaze-following",
+            "pub_year": 2024,
+            "citation": "Gaze Meets Machine Learning Workshop, 181-196, 2024",
+            "author": "Benjamin Peters and Eivinas Butkus and Nikolaus Kriegeskorte",
+            "conference": "Gaze Meets Machine Learning Workshop",
+            "pages": "181-196",
+            "publisher": "PMLR",
+            "abstract": "State-of-the art multiple object tracking (MOT) models have recently been shown to behave in qualitatively different ways from human observers. They exhibit superhuman performance for large numbers of targets and subhuman performance when targets disappear behind occluders. Here we investigate whether human gaze behavior can help explain differences in human and model behavior. Human subjects watched scenes with objects of various appearances. They tracked a designated subset of the objects, which moved continuously and frequently disappeared behind static black-bar occluders, reporting the designated objects at the end of each trial. We measured eye movements during tracking and tracking accuracy. We found that human gaze behavior is clearly guided by task-relevance: designated objects were preferentially fixated. We compared human performance to that of cognitive models inspired by state-of-the art MOT models with object slots, where each slot represents model\u2019s probabilistic belief about the location and appearance of one object. In our model, incoming observations are unambiguously assigned to slots using the Hungarian algorithm. Locations are tracked probabilistically (given the hard assignment) with one Kalman filter per slot. We equipped the computational models with a fovea, yielding high-precision observations at the center and low-precision observations in the periphery. We found that constraining models to follow the same gaze behavior as humans (imposing the human measured fixation sequences) yields best captures human behavioral phenomena. These results demonstrate the importance of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:zG6RlwjYRPQC",
+        "num_citations": 0,
+        "pub_url": "https://proceedings.mlr.press/v226/peters24a.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:E2RaAHU317UJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Source Invariance and Probabilistic Transfer: A Testable Theory of Probabilistic Neural Representations",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2404.08101, 2024",
+            "author": "Samuel Lippl and Raphael Gerraty and John Morrison and Nikolaus Kriegeskorte",
+            "journal": "arXiv preprint arXiv:2404.08101",
+            "abstract": "As animals interact with their environments, they must infer properties of their surroundings. Some animals, including humans, can represent uncertainty about those properties. But when, if ever, do they use probability distributions to represent their uncertainty? It depends on which definition we choose. In this paper, we argue that existing definitions are inadequate because they are untestable. We then propose our own definition. There are two reasons why existing definitions are untestable. First, they do not distinguish between representations of uncertainty and representations of variables merely related to uncertainty ('representational indeterminacy'). Second, they do not distinguish between probabilistic representations of uncertainty and merely \"heuristic\" representations of uncertainty. We call this 'model indeterminacy' because the underlying problem is that we do not have access to the animal's generative model. We define probabilistic representations by two properties: 1) they encode uncertainty regardless of the source of the uncertainty ('source invariance'), 2) they support the efficient learning of new tasks that would be more difficult to learn given non-probabilistic representations ('probabilistic task transfer'). Source invariance indicates that they are representations of uncertainty rather than variables merely related to uncertainty, thereby solving representational indeterminacy. Probabilistic task transfer indicates that they are probabilistic representations of uncertainty rather than merely heuristic representations, thereby solving model indeterminacy."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:DxlTmyU89zoC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2404.08101",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:KAC-r4zp43EJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Can neural networks benefit from objectives that encourage iterative convergent computations? A case study of ResNets and object classification",
+            "pub_year": 2024,
+            "citation": "Plos one 19 (3), e0293440, 2024",
+            "author": "Samuel Lippl and Benjamin Peters and Nikolaus Kriegeskorte",
+            "journal": "Plos one",
+            "volume": "19",
+            "number": "3",
+            "pages": "e0293440",
+            "publisher": "Public Library of Science",
+            "abstract": "Recent work has suggested that feedforward residual neural networks (ResNets) approximate iterative recurrent computations. Iterative computations are useful in many domains, so they might provide good solutions for neural networks to learn. However, principled methods for measuring and manipulating iterative convergence in neural networks remain lacking. Here we address this gap by 1) quantifying the degree to which ResNets learn iterative solutions and 2) introducing a regularization approach that encourages the learning of iterative solutions. Iterative methods are characterized by two properties: iteration and convergence. To quantify these properties, we define three indices of iterative convergence. Consistent with previous work, we show that, even though ResNets can express iterative solutions, they do not learn them when trained conventionally on computer-vision tasks. We then introduce regularizations to encourage iterative convergent computation and test whether this provides a useful inductive bias. To make the networks more iterative, we manipulate the degree of weight sharing across layers using soft gradient coupling. This new method provides a form of recurrence regularization and can interpolate smoothly between an ordinary ResNet and a \u201crecurrent\u201d ResNet (i.e., one that uses identical weights across layers and thus could be physically implemented with a recurrent network computing the successive stages iteratively across time). To make the networks more convergent we impose a Lipschitz constraint on the residual functions using spectral normalization. The three indices of iterative convergence reveal that the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:Z610oKUqOA4C",
+        "num_citations": 0,
+        "pub_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0293440",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:0VW4k9qEm10J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Perceived Stereo Depth reflects Retinal Disparities, not 3D Geometry",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Paul Linton and Nikolaus Kriegeskorte",
+            "abstract": "We present a new illusion that challenges our traditional understanding of stereo vision. Traditional \u2018Triangulation\u2019accounts of stereo vision back-project from points on the retina to points in the world. This requires that stereo vision incorporates how binocular disparities fall off with the viewing distance squared. By contrast, Linton 2023 Phil Trans R Soc B 378: 20210455 proposes a \u2018Minimal Model\u2019of stereo vision where perceived stereo depth is simply a function (most likely a linear function) of the amount of disparity on the retina. We present a new illusion (the \u2018Linton Stereo Illusion\u2019) to adjudicate between these two approaches. The illusion consists of a smaller circle (at 40cm) in front of a larger circle (at 50cm), with constant angular sizes throughout. We move the larger circle forward by 10cm (to 40cm) and then back again (to 50cm). The question is, what distance should we move the smaller circle forward and back to maintain a constant perceived separation between the circles? Constant physical distance (10cm)(\u2018Triangulation\u2019) or constant disparity (6.7 cm)(\u2018Minimal Model\u2019)? Observers choose constant disparity. This leads us to four conclusions: First, perceived stereo depth appears to be best captured by the \u2018Minimal Model\u2019. Second, doubling disparity appears to double perceived depth, suggesting that perceived stereo depth is proportional to disparity. Third, changes in vergence appear to have no effect on perceived depth. Fourth, stereo \u2018depth constancy\u2019appears to be a cognitive (not perceptual) phenomenon, reflecting our experience of a world distorted in perceived stereo depth."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:c6chOJGeGucC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/ppr/ppr813527",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JEmRuESlaaEJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Generative Adversarial Collaborations: A practical guide for conference organizers and participating scientists",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2402.12604, 2024",
+            "author": "Gunnar Blohm and Benjamin Peters and Ralf Haefner and Leyla Isik and Nikolaus Kriegeskorte and Jennifer S Lieberman and Carlos R Ponce and Gemma Roig and Megan AK Peters",
+            "journal": "arXiv preprint arXiv:2402.12604",
+            "abstract": "Generative adversarial collaborations (GACs) are a form of formal teamwork between groups of scientists with diverging views. The goal of GACs is to identify and ultimately resolve the most important challenges, controversies, and exciting theoretical and empirical debates in a given research field. A GAC team would develop specific, agreed-upon avenues to resolve debates in order to move a field of research forward in a collaborative way. Such adversarial collaborations have many benefits and opportunities but also come with challenges. Here, we use our experience from (1) creating and running the GAC program for the Cognitive Computational Neuroscience (CCN) conference and (2) implementing and leading GACs on particular scientific problems to provide a practical guide for future GAC program organizers and leaders of individual GACs."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:1n-LKbgTOzoC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2402.12604",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uxFImCCXViEJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How does the primate brain combine generative and discriminative computations in vision?",
+            "pub_year": 2024,
+            "citation": "ArXiv, 2024",
+            "author": "Benjamin Peters and James J DiCarlo and Todd Gureckis and Ralf Haefner and Leyla Isik and Joshua Tenenbaum and Talia Konkle and Thomas Naselaris and Kimberly Stachenfeld and Zenna Tavares and Doris Tsao and Ilker Yildirim and Nikolaus Kriegeskorte",
+            "journal": "ArXiv",
+            "publisher": "arXiv",
+            "abstract": "Vision is widely understood as an inference problem. However, two contrasting conceptions of the inference process have each been influential in research on biological vision as well as the engineering of machine vision. The first emphasizes bottom-up signal flow, describing vision as a largely feedforward, discriminative inference process that filters and transforms the visual information to remove irrelevant variation and represent behaviorally relevant information in a format suitable for downstream functions of cognition and behavioral control. In this conception, vision is driven by the sensory data, and perception is direct because the processing proceeds from the data to the latent variables of interest. The notion of \u201cinference\u201d in this conception is that of the engineering literature on neural networks, where feedforward convolutional neural networks processing images are said to perform inference. The alternative \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:N8RR74vhTp4C",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10802669/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:w8Hc7q55jCIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How to optimize neuroscience data utilization and experiment design for advancing primate visual and linguistic brain models?",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2401.03376, 2024",
+            "author": "Greta Tuckute and Dawn Finzi and Eshed Margalit and Joel Zylberberg and SueYeon Chung and Alona Fyshe and Evelina Fedorenko and Nikolaus Kriegeskorte and Jacob Yates and Kalanit Grill Spector and Kohitij Kar",
+            "journal": "arXiv preprint arXiv:2401.03376",
+            "abstract": "In recent years, neuroscience has made significant progress in building large-scale artificial neural network (ANN) models of brain activity and behavior. However, there is no consensus on the most efficient ways to collect data and design experiments to develop the next generation of models. This article explores the controversial opinions that have emerged on this topic in the domain of vision and language. Specifically, we address two critical points. First, we weigh the pros and cons of using qualitative insights from empirical results versus raw experimental data to train models. Second, we consider model-free (intuition-based) versus model-based approaches for data collection, specifically experimental design and stimulus selection, for optimal model development. Finally, we consider the challenges of developing a synergistic approach to experimental design and model building, including encouraging data and model sharing and the implications of iterative additions to existing models. The goal of the paper is to discuss decision points and propose directions for both experimenters and model developers in the quest to understand the brain."
+        },
+        "filled": true,
+        "author_pub_id": "w6M4YN4AAAAJ:N0GlzNNR4l8C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2401.03376",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:iruAB344IisJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

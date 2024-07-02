@@ -1,0 +1,179 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Communicative signals during joint attention promote neural processes of infants and caregivers",
+            "pub_year": 2024,
+            "citation": "Developmental Cognitive Neuroscience 65, 101321, 2024",
+            "author": "Anna B\u00e1nki and Moritz K\u00f6ster and Radoslaw Martin Cichy and Stefanie Hoehl",
+            "journal": "Developmental Cognitive Neuroscience",
+            "volume": "65",
+            "pages": "101321",
+            "publisher": "Elsevier",
+            "abstract": "Communicative signals such as eye contact increase infants\u2019 brain activation to visual stimuli and promote joint attention. Our study assessed whether communicative signals during joint attention enhance infant-caregiver dyads\u2019 neural responses to objects, and their neural synchrony. To track mutual attention processes, we applied rhythmic visual stimulation (RVS), presenting images of objects to 12-month-old infants and their mothers (n = 37 dyads), while we recorded dyads\u2019 brain activity (i.e., steady-state visual evoked potentials, SSVEPs) with electroencephalography (EEG) hyperscanning. Within dyads, mothers either communicatively showed the images to their infant or watched the images without communicative engagement. Communicative cues increased infants\u2019 and mothers\u2019 SSVEPs at central-occipital-parietal, and central electrode sites, respectively. Infants showed significantly more gaze behaviour \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:URolC5Kub84C",
+        "num_citations": 6,
+        "citedby_url": "/scholar?hl=en&cites=4273569936577217827",
+        "cites_id": [
+            "4273569936577217827"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1878929323001263",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:I0V5CDfFTjsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2,
+            "2024": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The transformation of sensory to perceptual braille letter representations in the visually deprived brain",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.02. 12.579923, 2024",
+            "author": "Marleen Haupt and Monika Graumann and Santani Teng and Carina Kaltenbach and Radoslaw M Cichy",
+            "journal": "bioRxiv",
+            "pages": "2024.02. 12.579923",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Experience-based plasticity of the human cortex mediates the influence of individual experience on cognition and behavior. The complete loss of a sensory modality is among the most extreme such experiences. Investigating such a selective, yet extreme change in experience allows for the characterization of experience-based plasticity at its boundaries.Here, we investigated information processing in individuals who lost vision at birth or early in life by probing the processing of braille letter information. We characterized the transformation of braille letter information from sensory representations depending on the reading hand to perceptual representations that are independent of the reading hand.Using a multivariate analysis framework in combination with fMRI, EEG and behavioral assessment, we tracked cortical braille representations in space and time, and probed their behavioral relevance.We located sensory representations in tactile processing areas and perceptual representations in sighted reading areas, with the lateral occipital complex as a connecting \u201chinge\u201d region. This elucidates the plasticity of the visually deprived brain in terms of information processing.Regarding information processing in time, we found that sensory representations emerge before perceptual representations. This indicates that even extreme cases of brain plasticity adhere to a common temporal scheme in the progression from sensory to perceptual transformations.Ascertaining behavioral relevance through perceived similarity ratings, we found that perceptual representations in sighted reading areas, but not sensory representations in tactile \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:vbGhcppDl1QC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=36963703594478228,11872691169622549275",
+        "cites_id": [
+            "36963703594478228",
+            "11872691169622549275"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.02.12.579923.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:lOpU5kpSgwAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Absence of systematic effects of trait anxiety on learning under uncertainty",
+            "pub_year": 2024,
+            "citation": "7th Annual Conference on Cognitive Computational Neuroscience (CCN 2024), 2024",
+            "author": "Muhammad Hashim Satti and Katharina Wille and Matthew R Nassar and Radoslaw M Cichy and Nicolas W Schuck and Peter Dayan and Rasmus Bruckner",
+            "conference": "7th Annual Conference on Cognitive Computational Neuroscience (CCN 2024)",
+            "abstract": "Ignorance can be deadly, making learning essential to survival. However, learning also needs to be adjusted according to the prevailing uncertainty\u2013with faster change or, in typical cases, a higher learning rate (LR), in environments that change quickly and a lower learning rate when the environment\u2019s latent state does not change. Failing to adjust the LR flexibly can lead to learning impairments\u2013an affliction somewhat inconsistently found to affect behavior, particularly in individuals with high trait anxiety. We conducted five experiments (N= 550 participants) using an online game-based variant of a predictive inference task to investigate whether high trait anxiety is associated with impaired LR adjustment. While finding model-based and model-agnostic evidence of uncertainty-related LR modulation across individuals, we did not find any relations to trait anxiety. We obtained consistent results in a control experiment with a binary reversal learning task. Using Bayes factors to test the null hypothesis, our results suggest that trait anxiety is not systematically associated with inflexible learning in uncertain and changing environments."
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:gsN89kCJA0AC",
+        "num_citations": 0,
+        "pub_url": "https://www.ewi-psy.fu-berlin.de/en/psychologie/arbeitsbereiche/neural_dyn_of_vis_cog/learning-lab/downloads/Satti2024_CCN.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:zGyeWAkwv6AJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Laminar dissociation of feedforward and feedback in high-level ventral visual cortex during imagery and perception",
+            "pub_year": 2024,
+            "citation": "iScience, 2024",
+            "author": "Tony Carricarte and Polina Iamshchinina and Robert Trampel and Denis Chaimow and Nikolaus Weiskopf and Radoslaw M Cichy",
+            "journal": "iScience",
+            "publisher": "Elsevier",
+            "abstract": "Visual imagery and perception share neural machinery, but rely on different information flow. While perception is driven by the integration of sensory feedforward and internally-generated feedback information, imagery relies on feedback only. This suggests that although imagery and perception may activate overlapping brain regions, they do so in informationally distinctive ways. Using lamina-resolved MRI at 7T, we measured the neural activity during imagery and perception of faces and scenes in high-level ventral visual cortex at the mesoscale of laminar organization that distinguish feedforward from feedback signals. We found distinctive laminar profiles for imagery and perception of scenes and faces in the parahippocampal place area and the fusiform face area, respectively. Our findings provide insight into the neural basis of the phenomenology of visual imagery versus perception, and shed new light into the \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:kuK5TVdYjLIC",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/iscience/fulltext/S2589-0042(24)01454-8",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:GJQ55vSX6K4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Individual differences in internal models explain idiosyncrasies in scene perception",
+            "pub_year": 2024,
+            "citation": "Cognition 245, 105723, 2024",
+            "author": "Gongting Wang and Matthew J Foxwell and Radoslaw M Cichy and David Pitcher and Daniel Kaiser",
+            "journal": "Cognition",
+            "volume": "245",
+            "pages": "105723",
+            "publisher": "Elsevier",
+            "abstract": "According to predictive processing theories, vision is facilitated by predictions derived from our internal models of what the world should look like. However, the contents of these models and how they vary across people remains unclear. Here, we use drawing as a behavioral readout of the contents of the internal models in individual participants. Participants were first asked to draw typical versions of scene categories, as descriptors of their internal models. These drawings were converted into standardized 3d renders, which we used as stimuli in subsequent scene categorization experiments. Across two experiments, participants' scene categorization was more accurate for renders tailored to their own drawings compared to renders based on others' drawings or copies of scene photographs, suggesting that scene perception is determined by a match with idiosyncratic internal models. Using a deep neural network \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:4MWp96NkSFoC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S001002772400009X",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:HsF8HlfG7UcJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Coherent categorical information triggers integration-related alpha dynamics",
+            "pub_year": 2024,
+            "citation": "Journal of Neurophysiology 131 (4), 619-625, 2024",
+            "author": "Lixiang Chen and Radoslaw Martin Cichy and Daniel Kaiser",
+            "journal": "Journal of Neurophysiology",
+            "volume": "131",
+            "number": "4",
+            "pages": "619-625",
+            "publisher": "American Physiological Society",
+            "abstract": "To create coherent visual experiences, the brain spatially integrates the complex and dynamic information it receives from the environment. We previously demonstrated that feedback-related alpha activity carries stimulus-specific information when two spatially and temporally coherent naturalistic inputs can be integrated into a unified percept. In this study, we sought to determine whether such integration-related alpha dynamics are triggered by categorical coherence in visual inputs. In an EEG experiment, we manipulated the degree of coherence by presenting pairs of videos from the same or different categories through two apertures in the left and right visual hemifields. Critically, video pairs could be video-level coherent (i.e., stem from the same video), coherent in their basic-level category, coherent in their superordinate category, or incoherent (i.e., stem from videos from two entirely different categories). We \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:AvfA0Oy_GE0C",
+        "num_citations": 0,
+        "pub_url": "https://journals.physiology.org/doi/abs/10.1152/jn.00450.2023",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:1s9Czh_yf10J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Visual features are processed before navigational affordances in the human brain",
+            "pub_year": 2024,
+            "citation": "Scientific Reports 14 (1), 5573, 2024",
+            "author": "Kshitij Dwivedi and Sari Sadiya and Marta P Balode and Gemma Roig and Radoslaw M Cichy",
+            "journal": "Scientific Reports",
+            "volume": "14",
+            "number": "1",
+            "pages": "5573",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "To navigate through their immediate environment humans process scene information rapidly. How does the cascade of neural processing elicited by scene viewing to facilitate navigational planning unfold over time? To investigate, we recorded human brain responses to visual scenes with electroencephalography and related those to computational models that operationalize three aspects of scene processing (2D, 3D, and semantic information), as well as to a behavioral model capturing navigational affordances. We found a temporal processing hierarchy: navigational affordance is processed later than the other scene features (2D, 3D, and semantic) investigated. This reveals the temporal order with which the human brain computes complex scene information and suggests that the brain leverages these pieces of information to plan navigation."
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:j8SEvjWlNXcC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-024-55652-y",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:n4m83mKPkEkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Adaptive Integration of Perceptual and Reward Information in an Uncertain World",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.04. 24.590947, 2024",
+            "author": "Prashanti Ganesh and Radoslaw M Cichy and Nicolas W Schuck and Carsten Finke and Rasmus Bruckner",
+            "journal": "bioRxiv",
+            "pages": "2024.04. 24.590947",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Perceptual uncertainty and salience both impact decision-making, but how these factors precisely impact trial-and-error reinforcement learning is not well understood. Here, we test the hypotheses that (H1) perceptual uncertainty modulates reward-based learning and that (H2) economic decision-making is driven by the value and the salience of sensory information. For this, we combined computational modeling with a perceptual uncertainty-augmented reward-learning task in a human behavioral experiment (N = 98). In line with our hypotheses, we found that subjects regulated learning behavior in response to the uncertainty with which they could distinguish choice options based on sensory information (belief state), in addition to the errors they made in predicting outcomes. Moreover, subjects considered a combination of expected values and sensory salience for economic decision-making. Taken together, this shows that perceptual and economic decision-making are closely intertwined and share a common basis for behavior in the real world."
+        },
+        "filled": true,
+        "author_pub_id": "XZtcvyEAAAAJ:TIZ-Mc8IlK0C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.04.24.590947.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:kmVImZuk0icJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

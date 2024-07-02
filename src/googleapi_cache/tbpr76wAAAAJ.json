@@ -1,0 +1,172 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The position of visual word forms in the anatomical and representational space of visual categories in occipitotemporal cortex",
+            "pub_year": 2024,
+            "citation": "Imaging Neuroscience, 2024",
+            "author": "Ineke Pillet and Beg\u00fcm Cerraho\u011flu and Roxane Victoria Philips and Serge Dumoulin and Hans Op de Beeck",
+            "journal": "Imaging Neuroscience",
+            "publisher": "MIT Press",
+            "abstract": "Recent reviews emphasized the need for investigating the complexity of multiple subareas of word selectivity and how this relates to selectivity for other visual categories, at the individual level at a high spatial resolution (without normalization or smoothing). To investigate this, both on the brain surface and in the representational space of the occipitotemporal cortex, we presented 19 participants with images of 20 different categories during 7T fMRI. These categories included several word-like conditions, and in addition cover many of the dimensions that have been suggested to define object space, such as animacy and real-world size. In the left hemisphere, we found three subareas of the visual word form area (VWFA) and one extra subarea around the pFus face-selective area. We also observed several areas of selectivity to hands that could consistently guide the localization of word and face areas. No clear \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:WAzi4Gm8nLoC",
+        "num_citations": 0,
+        "pub_url": "https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00196/121385",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:eJVG5CUNUKAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neuronal tuning and population representations of shape and category in human visual cortex",
+            "pub_year": 2024,
+            "citation": "Nature Communications 15 (1), 4608, 2024",
+            "author": "Vasiliki Bougou and Micha\u00ebl Vanhoyland and Alexander Bertrand and Wim Van Paesschen and Hans Op De Beeck and Peter Janssen and Tom Theys",
+            "journal": "Nature Communications",
+            "volume": "15",
+            "number": "1",
+            "pages": "4608",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Object recognition and categorization are essential cognitive processes which engage considerable neural resources in the human ventral visual stream. However, the tuning properties of human ventral stream neurons for object shape and category are virtually unknown. We performed large-scale recordings of spiking activity in human Lateral Occipital Complex in response to stimuli in which the shape dimension was dissociated from the category dimension. Consistent with studies in nonhuman primates, the neuronal representations were primarily shape-based, although we also observed category-like encoding for images of animals. Surprisingly, linear decoders could reliably classify stimulus category even in data sets that were entirely shape-based. In addition, many recording sites showed an interaction between shape and category tuning. These results represent a detailed study on shape and category \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:QyXJ3EUuO1IC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41467-024-49078-3",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:4KKYqVxgL0QJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Recurrent issues with deep neural network models of visual recognition",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.04. 02.587669, 2024",
+            "author": "Tim Maniquet and Hans Op de Beeck and Andrea Ivan Costantino",
+            "journal": "bioRxiv",
+            "pages": "2024.04. 02.587669",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Object recognition requires flexible and robust information processing, especially in view of the challenges posed by naturalistic visual settings. The ventral stream in visual cortex is provided with this robustness by its recurrent connectivity. Recurrent deep neural networks (DNNs) have recently emerged as promising models of the ventral stream. In this study, we asked whether DNNs could be used to explore the role of different recurrent computations during challenging visual recognition. We assembled a stimulus set that included manipulations that are often associated with recurrent processing in the literature, like occlusion, partial viewing, clutter, and spatial phase scrambling. We obtained a benchmark dataset from human participants performing a categorisation task on this stimulus set. By applying a wide range of model architectures to the same task, we uncovered a nuanced relationship between recurrence, model size, and performance. While recurrent models reach higher performance than their feedforward counterpart, we could not dissociate this improvement from that obtained by increasing model size. We found consistency between humans and models patterns of difficulty across the visual manipulations, but this was not modulated in an obvious way by the specific type of recurrence or size added to the model. Finally, depth/size rather than recurrence makes model confusion patterns more human-like. Contrary to previous assumptions, our findings challenge the notion that recurrent models are better models of human recognition behaviour than feedforward models, and emphasise the complexity of incorporating \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:YsrPvlHIBpEC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.04.02.587669.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:XI5zzzqWR0IJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Recurrent issues with deep neural networks of visual recognition",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "T Maniquet and H Op de Beeck and AI Costantino",
+            "abstract": "Object recognition requires flexible and robust information processing, especially in view of the challenges posed by naturalistic visual settings. The ventral stream in visual cortex is provided with this robustness by its recurrent connectivity. Recurrent deep neural networks (DNNs) have recently emerged as promising models of the ventral stream. In this study, we asked whether DNNs could be used to explore the role of different recurrent computations during challenging visual recognition. We assembled a stimulus set that included manipulations that are often associated with recurrent processing in the literature, like occlusion, partial viewing, clutter, and spatial phase scrambling. We obtained a benchmark dataset from human participants performing a categorisation task on this stimulus set. By applying a wide range of model architectures to the same task, we uncovered a nuanced relationship between recurrence, model size, and performance. While recurrent models reach higher performance than their feedforward counterpart, we could not dissociate this improvement from that obtained by increasing model size. We found consistency between humans and models patterns of difficulty across the visual manipulations, but this was not modulated in an obvious way by the specific type of recurrence or size added to the model. Finally, depth/size rather than recurrence makes model confusion patterns more human-like. Contrary to previous assumptions, our findings challenge the notion that recurrent models are better models of human recognition behaviour than feedforward models, and emphasise the complexity of incorporating recurrence into \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:ziOE8S1-AIUC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/ppr/ppr831392",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:IjLcIn6zf-QJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Social Scene Sensitivity in Autism and bvFTD",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Laura Van Hove and Jan Van den Stock and Hans Op de Beeck and Joost Vennekens and Laurent Mertens",
+            "publisher": "OSF"
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:mUJArPsKIAAC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/9czyp/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:VtEKlyrvkSoJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Fine-grained neural coding of bodies and body parts in human visual cortex",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "M Vanhoyland and Apurva Murty and T Decramer and W Van Paesschen and S Bracci and H Op de Beeck and N Kanwisher and P Janssen and T Theys",
+            "abstract": "The visual image of a human body provides a valuable source of socially relevant information. However, our understanding of the neuronal mechanisms underlying body perception in humans remains limited given the spatiotemporal constraints of functional imaging. Here we recorded multi-unit spiking activity in two neurosurgical patients in or near the extrastriate body area (EBA), a critical region for body perception. Our recordings revealed a strong preference for human bodies over a large range of control stimuli. Notably, this preference was driven by a distinct selectivity for body parts. Moreover, the observed body selectivity generalized to non-photographic depictions of bodies such as silhouettes and stick figures. Overall, our study provides an unprecedented access into the representation of bodies in the human visual cortex to bridge the gap between human neuroimaging and macaque electrophysiology studies, and form a solid basis for computational models of human body processing."
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:3bvyWxjaHKcC",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/ppr/ppr805379",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:3rmQ0lkGkSgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "FindingEmo: An Image Dataset for Emotion Recognition in the Wild",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2402.01355, 2024",
+            "author": "Laurent Mertens and Elahe' Yargholi and Hans Op de Beeck and Jan Van den Stock and Joost Vennekens",
+            "journal": "arXiv preprint arXiv:2402.01355",
+            "abstract": "We introduce FindingEmo, a new image dataset containing annotations for 25k images, specifically tailored to Emotion Recognition. Contrary to existing datasets, it focuses on complex scenes depicting multiple people in various naturalistic, social settings, with images being annotated as a whole, thereby going beyond the traditional focus on faces or single individuals. Annotated dimensions include Valence, Arousal and Emotion label, with annotations gathered using Prolific. Together with the annotations, we release the list of URLs pointing to the original images, as well as all associated source code."
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:FiDNX6EVdGUC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2402.01355",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:HQufsatNQh8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Widespread neural reorganization related to expertise in reading visual Braille",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.05. 08.593104, 2024",
+            "author": "Filippo Cerpelloni and Alice Van Audenhaege and Jacek Matuszewski and Remi Gau and Ceren Battal and Federica Falagiarda and Hans Op de Beeck and Olivier Collignon",
+            "journal": "bioRxiv",
+            "pages": "2024.05. 08.593104",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Shape features are crucial for reading. Here we investigate the effect of expertise in reading visual Braille, a script developed for touch that does not share the typical explicit shape information of other alphabets. We compared visual Braille readers and a naive control group and found that individually localized visual word form area  VWFA) was selectively activated for visual Braille when compared to scrambled Braille, but only in expert Braille readers. Multivariate analyses showed that linguistic properties can be decoded from Latin in both groups and from Braille in expert readers. Yet, cross-script generalization failed to reveal common representations across Latin and Braille scripts in experts, suggesting script-specific orthographic representations. Primary visual cortex, shape-selective areas (LO), and linguistic areas (l-PosTemp) showed similar multivariate profiles to VWFA, but with cross-script generalization in left Posterior Temporal area only. We conclude that the linguistic properties of a visual script, rather than low-level line-junctions properties, play a major role in how the visual system, and VWFA in particular, processes scripts."
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:raTqNPD5sRQC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.05.08.593104.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:eyrLpJyui4QJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Fine-grained neural coding of bodies and body parts in human visual cortex",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.02. 09.579107, 2024",
+            "author": "Jesus Garcia Ramirez and Michael Vanhoyland and Ratan N Apurva Murty and Thomas Decramer and Wim Van Paesschen and Stefania Bracci and Hans Op de Beeck and Nancy G Kanwisher and Peter Janssen and Tom Theys",
+            "journal": "bioRxiv",
+            "pages": "2024.02. 09.579107",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The visual image of a human body provides a valuable source of socially relevant information. However, our understanding of the neuronal mechanisms underlying body perception in humans remains limited given the spatiotemporal constraints of functional imaging. Here we recorded multi-unit spiking activity in two neurosurgical patients in or near the extrastriate body area (EBA), a critical region for body perception. Our recordings revealed a strong preference for human bodies over a large range of control stimuli. Notably, this preference was driven by a  distinct selectivity for body parts. Moreover, the observed body selectivity generalized to non-photographic depictions of bodies such as silhouettes and stick figures. Overall, our study provides an unprecedented access into the representation of bodies in the human visual cortex to bridge the gap between human neuroimaging and macaque electrophysiology studies, and form a solid basis for computational models of human body processing."
+        },
+        "filled": true,
+        "author_pub_id": "tbpr76wAAAAJ:w0F2JDEymm0C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.02.09.579107.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:unOfPyzsksUJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

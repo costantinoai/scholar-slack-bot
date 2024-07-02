@@ -1,0 +1,133 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Movement trajectories as a window into the dynamics of emerging neural representations",
+            "pub_year": 2024,
+            "citation": "Scientific Reports 14 (1), 11499, 2024",
+            "author": "Roger Koenig-Robert and Genevieve L Quek and Tijl Grootswagers and Manuel Varlet",
+            "journal": "Scientific Reports",
+            "volume": "14",
+            "number": "1",
+            "pages": "11499",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "The rapid transformation of sensory inputs into meaningful neural representations is critical to adaptive human behaviour. While non-invasive neuroimaging methods are the de-facto method for investigating neural representations, they remain expensive, not widely available, time-consuming, and restrictive. Here we show that movement trajectories can be used to measure emerging neural representations with fine temporal resolution. By combining online computer mouse-tracking and publicly available neuroimaging data via representational similarity analysis (RSA), we show that movement trajectories track the unfolding of stimulus- and category-wise neural representations along key dimensions of the human visual system. We demonstrate that time-resolved representational structures derived from movement trajectories overlap with those derived from M/EEG (albeit delayed) and those derived from fMRI in \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:M05iB0D1s5AC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=6584832008650132641",
+        "cites_id": [
+            "6584832008650132641"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41598-024-62135-7",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oYw27dIFYlsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Mapping the dynamics of visual feature coding: Insights into perception and integration",
+            "pub_year": 2024,
+            "citation": "PLOS Computational Biology 20 (1), e1011760, 2024",
+            "author": "Tijl Grootswagers and Amanda K Robinson and Sophia M Shatek and Thomas A Carlson",
+            "journal": "PLOS Computational Biology",
+            "volume": "20",
+            "number": "1",
+            "pages": "e1011760",
+            "publisher": "Public Library of Science",
+            "abstract": "The basic computations performed in the human early visual cortex are the foundation for visual perception. While we know a lot about these computations, a key missing piece is how the coding of visual features relates to our perception of the environment. To investigate visual feature coding, interactions, and their relationship to human perception, we investigated neural responses and perceptual similarity judgements to a large set of visual stimuli that varied parametrically along four feature dimensions. We measured neural responses using electroencephalography (N = 16) to 256 grating stimuli that varied in orientation, spatial frequency, contrast, and colour. We then mapped the response profiles of the neural coding of each visual feature and their interactions, and related these to independently obtained behavioural judgements of stimulus similarity. The results confirmed fundamental principles of feature coding in the visual system, such that all four features were processed simultaneously but differed in their dynamics, and there was distinctive conjunction coding for different combinations of features in the neural responses. Importantly, modelling of the behaviour revealed that every stimulus feature contributed to perceptual judgements, despite the untargeted nature of the behavioural task. Further, the relationship between neural coding and behaviour was evident from initial processing stages, signifying that the fundamental features, not just their interactions, contribute to perception. This study highlights the importance of understanding how feature coding progresses through the visual hierarchy and the relationship between different \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:pqnbT2bcN3wC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=4304508808153229102",
+        "cites_id": [
+            "4304508808153229102"
+        ],
+        "pub_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011760",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:LmeDavSvvDsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Goal-free sensory encoding and learning",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Sophie Smit and Genevieve L Quek and Manuel Varlet and Tijl Grootswagers",
+            "publisher": "OSF",
+            "abstract": "Investigating how goals impact the way we explore, represent, and interact with the world is vital for understanding human cognition. In their insightful review, Molinaro & Collins (2023) redefine the conventional role of goals in computational theories of learning and decision-making, arguing that in reinforcement learning frameworks, traditionally \u2018fixed\u2019elements (eg, states, actions, and rewards) are in fact intricately linked to and influenced by an agent\u2019s current goals. In support of their claim that goals are dynamic elements that actively shape information processing altering an agent\u2019s state, they draw on fMRI work showing that neural representations in prefrontal cortex vary systematically when participants imagine using the same object to achieve different goals (Castegnetti et al., 2021). These and other findings suggest that goals do not only influence high-level cognitive processes, but can also modulate the encoding of sensory information, including representations in early sensory areas (Schaffner et al., 2023). Here we provide nuance to this perspective by"
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:cFHS6HbyZ2cC",
+        "num_citations": 0,
+        "pub_url": "https://www.researchgate.net/profile/Tijl-Grootswagers/publication/381181892_Goal-free_sensory_encoding_and_learning/links/6664ead4de777205a31c1521/Goal-free-sensory-encoding-and-learning.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:dyBA-ppQY_QJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Human infant EEG recordings for 200 object images presented in rapid visual streams.",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Genevieve Quek and Zhen Zeng and Manuel Varlet and Tijl Grootswagers",
+            "abstract": "Understanding the neural basis of human object recognition and semantic knowledge has been a significant area of exploration, with recent focus aiming to reveal the developmental trajectory of this core brain function. At present, however, there is limited access to high-quality neuroimaging data obtained from human infants. Addressing this gap, we present a dataset comprising electroencephalography responses from 42 human infants obtained in response to visual presentations of various objects. Leveraging a rapid serial visual presentation paradigm, 42 infants between 2 and 12 months of age viewed 200 images spanning 50 distinct objects, with as many repetitions as possible tailored to individual infants comfort. Our technical validation demonstrates discernible neural responses to both individual objects and categorical distinctions, affirming the dataset's robustness and utility for exploring the neural underpinnings of visual object recognition in infancy. Building upon insights gained from adult studies, our findings suggest that fast presentation paradigms hold promise for efficiently capturing electrophysiological responses to a large array of visual stimuli in human infants. This dataset represents a valuable resource for advancing our understanding of the developmental trajectory of object recognition and semantic knowledge in the early stages of human life."
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:dfsIfKJdRG4C",
+        "num_citations": 0,
+        "pub_url": "https://europepmc.org/article/ppr/ppr844171",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:PrFA6tZ68nwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Dynamics of visual object coding within and across the hemispheres: Objects in the periphery",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Amanda K Robinson and Tijl Grootswagers and Sophia M Shatek and Marlene Behrmann and Thomas A Carlson",
+            "publisher": "OSF",
+            "abstract": "The human brain continuously integrates information across its two hemispheres to construct a coherent representation of the perceptual world. Characterising how visual information is represented in each hemisphere over time is crucial for understanding how hemispheric transfer contributes to perception. Here, we investigated information processing within each hemisphere over time and the degree to which it is distinct or duplicated across hemispheres. We presented participants with object images lateralised to the left or right visual fields while measuring their brain activity with electroencephalography (EEG). Stimulus coding was more robust and emerged earlier in the contralateral than the ipsilateral hemisphere. Presentation of two stimuli, one to each hemifield, reduced the fidelity of representations in both hemispheres relative to one stimulus alone, signifying hemispheric interference. Finally, we found that processing within the contralateral, but not ipsilateral, hemisphere was biased to image-related over concept-related information. Together, these results suggest that hemispheric transfer operates to filter irrelevant information and efficiently prioritise processing of meaning."
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:4OULZ7Gr8RgC",
+        "num_citations": 0,
+        "pub_url": "https://tijl.github.io/tijl-grootswagers-pdf/Robinson_et_al_-_2024_-_Dynamics_of_visual_object_coding_within_and_across.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:APO2rPCkc9MJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Memory benefits when actively, rather than passively, viewing images",
+            "pub_year": 2024,
+            "citation": "Attention, Perception, & Psychophysics 86 (1), 1-8, 2024",
+            "author": "Briana L Kennedy and Steven B Most and Tijl Grootswagers and Vanessa K Bowden",
+            "journal": "Attention, Perception, & Psychophysics",
+            "volume": "86",
+            "number": "1",
+            "pages": "1-8",
+            "publisher": "Springer US",
+            "abstract": "Serial visual presentations of images exist both in the laboratory and increasingly on virtual platforms such as social media feeds. However, the way we interact with information differs between these. In many laboratory experiments participants view stimuli passively, whereas on social media people tend to interact with information actively. This difference could influence the way information is remembered, which carries practical and theoretical implications. In the current study, 821 participants viewed streams containing seven landscape images that were presented at either a self-paced (active) or an automatic (passive) rate. Critically, the presentation speed in each automatic trial was matched to the speed of a self-paced trial for each participant. Both memory accuracy and memory confidence were greater on self-paced compared to automatic trials. These results indicate that active, self-paced progression \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "TNI8FOoAAAAJ:fPk4N6BV_jEC",
+        "num_citations": 0,
+        "pub_url": "https://link.springer.com/article/10.3758/s13414-023-02814-1",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:StP5-oaWdlgJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

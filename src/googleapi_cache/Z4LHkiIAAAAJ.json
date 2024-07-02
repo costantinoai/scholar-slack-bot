@@ -1,0 +1,247 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Time-varying functional connectivity as Wishart processes",
+            "pub_year": 2024,
+            "citation": "Imaging Neuroscience 2, 1-28, 2024",
+            "author": "Onno P Kampman and Joe Ziminski and Soroosh Afyouni and Mark van der Wilk and Zoe Kourtzi",
+            "journal": "Imaging Neuroscience",
+            "volume": "2",
+            "pages": "1-28",
+            "publisher": "MIT Press",
+            "abstract": "We investigate the utility of Wishart processes (WPs) for estimating time-varying functional connectivity (TVFC), which is a measure of changes in functional coupling as the correlation between brain region activity in functional magnetic resonance imaging (fMRI). The WP is a stochastic process on covariance matrices that can model dynamic covariances between time series, which makes it a natural fit to this task. Recent advances in scalable approximate inference techniques and the availability of robust open-source libraries have rendered the WP practically viable for fMRI applications. We introduce a comprehensive benchmarking framework to assess WP performance compared with a selection of established TVFC estimation methods. The framework comprises simulations with specified ground-truth covariance structures, a subject phenotype prediction task, a test-retest study, a brain state analysis, an \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:jL-93Qbq4QoC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=2808388589934076290",
+        "cites_id": [
+            "2808388589934076290"
+        ],
+        "pub_url": "https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00184/121101",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:guFHBotm-SYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Cognitive flexibility training for impact in real-world settings",
+            "pub_year": 2024,
+            "citation": "Current Opinion in Behavioral Sciences 59, 101413, 2024",
+            "author": "Liz Y Lee and M\u00e1ir\u00e9ad P Healy and Nastassja L Fischer and Ke Tong and Annabel SH Chen and Barbara J Sahakian and Zoe Kourtzi",
+            "volume": "59",
+            "pages": "101413",
+            "publisher": "Elsevier",
+            "abstract": "Interacting with complex and dynamic environments challenges the brain\u2019s ability to adapt to change. This key ability known as cognitive flexibility involves learning the structure of the environment, switching attention between features, dimensions and tasks, and adopting new rules in the face of uncertainty. Training cognitive flexibility has strong potential to improve adaptive behavior across the lifespan with impact in real-world settings (eg educational, clinical). Here, we review evidence on the role of cognitive training in improving executive functions and the factors that may enhance the effectiveness of training \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:otzGkya1bYkC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S2352154624000640",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-bq5nWOW_Y4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Robust and interpretable AI-guided marker for early dementia prediction in real-world clinical settings",
+            "pub_year": 2024,
+            "citation": "Elsevier, 2024",
+            "author": "Zoe Kourtzi",
+            "publisher": "Elsevier",
+            "abstract": "Background Predicting dementia early has major implications for clinical management and patient outcomes. Yet, we still lack sensitive tools for stratifying patients early, resulting in patients being undiagnosed or wrongly diagnosed. Despite rapid expansion in machine learning models for dementia prediction, limited model interpretability and generalizability impede translation to the clinic. Methods We build a robust and interpretable predictive prognostic model (PPM) and validate its clinical utility using real-world, routinely-collected, non-invasive, and low-cost (cognitive tests, structural MRI) patient data. To enhance scalability and generalizability to the clinic, we: 1) train the PPM with clinically-relevant predictors (cognitive tests, grey matter atrophy) that are common across research and clinical cohorts, 2) test PPM predictions with independent multicenter real-world data from memory clinics across countries (UK, Singapore). Findings PPM robustly predicts (accuracy: 81.7%, AUC: 0.84, sensitivity: 82.4. 9%, specificity: 80.94%) whether patients at early disease stages (MCI) will remain stable or progress to Alzheimer\u2019s Disease (AD). PPM generalizes from research to real-world patient data across memory clinics and its predictions are validated against longitudinal clinical outcomes. PPM allows us to derive an individualized AI-guided multimodal marker (ie predictive prognostic index) that predicts progression to AD more precisely than standard clinical markers (grey matter atrophy, cognitive scores; PPM-derived marker: hazard ratio= 3.42, p= 0.01) or clinical diagnosis (PPM-derived marker: hazard ratio= 2.84, p< 0.005), reducing misdiagnosis \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:48xauSegjOkC",
+        "num_citations": 0,
+        "pub_url": "https://www.repository.cam.ac.uk/items/aba0f307-43e0-4239-ab89-cd00d15106e5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:x-z84R_HXzgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Recurrent inhibition refines mental templates to optimize perceptual decisions",
+            "pub_year": 2024,
+            "citation": "American Association for the Advancement of Science, 2024",
+            "author": "Zoe Kourtzi",
+            "publisher": "American Association for the Advancement of Science",
+            "abstract": "Translating sensory inputs to perceptual decisions relies on building internal representations of features critical for solving complex tasks. Yet, we still lack a mechanistic account of how the brain forms these mental templates of task-relevant features to optimize decision making. Here, we provide evidence for recurrent inhibition: an experience-dependent plasticity mechanism that refines mental templates by enhancing GABAergic inhibition and recurrent processing in superficial visual cortex layers. We combine ultra-high-field (7T) fMRI at submillimetre resolution with magnetic resonance spectroscopy to investigate the fine-scale functional and neurochemical plasticity mechanisms for optimized perceptual decisions. We demonstrate that GABAergic inhibition increases following training on a visual (ie, fine orientation) discrimination task, enhancing the discriminability of orientation representations in superficial visual cortex layers that are known to support recurrent processing. Modelling functional and neurochemical plasticity interactions reveals that recurrent inhibitory processing optimizes brain computations for perpetual decisions and adaptive behavior"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:CaZNVDsoPx4C",
+        "num_citations": 0,
+        "pub_url": "https://www.repository.cam.ac.uk/items/a1f4f8a1-d65b-4342-a93b-2cbd80360df8",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Fh6PSRCZOCMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Robust and interpretable AI-guided marker for early dementia prediction in real-world clinical settings",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Delshad Vaghari and Zoe Kourtzi and Guy Williams and Yuanxi Lee",
+            "abstract": "Data used in preparation of this dataset were obtained from the Alzheimer\u2019s Disease Neuroimaging Initiative (ADNI) database (adni. loni. usc. edu). As such, the investigators within the ADNI contributed to the design and implementation of ADNI and/or provided data but did not participate in analysis or writing of this report."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:buQ7SEKw-1sC",
+        "num_citations": 0,
+        "pub_url": "https://www.repository.cam.ac.uk/items/9c4e8db2-9621-41d8-8ce6-da7f98f13c6a",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:wlto0MOJM9cJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Cognitive flexibility training for impact in real-world settings",
+            "pub_year": 2024,
+            "citation": "Elsevier, 2024",
+            "author": "Zoe Kourtzi",
+            "publisher": "Elsevier",
+            "abstract": "Interacting with complex and dynamic environments challenges the brain\u2019s ability to adapt to change. This key ability known as cognitive flexibility involves learning the structure of the environment, switching attention between features, dimensions and tasks, and adopting new rules in the face of uncertainty. Training cognitive flexibility has strong potential to improve adaptive behavior across the lifespan with impact in real-world settings (eg educational, clinical). Here, we review evidence on the role of cognitive training in improving executive functions and the factors that may enhance the effectiveness of training programs. We propose that personalized and adaptive training programs that focus on the multifaceted abilities comprising cognitive flexibility are key for promoting adaptive behavior and lifelong learning in real-world settings."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:wMgC3FpKEyYC",
+        "num_citations": 0,
+        "pub_url": "https://www.repository.cam.ac.uk/items/2422ee5c-6b8d-4e2b-80b5-79dd7ac82ee2",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:IIPEy7meD6wJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Dataset for: Recurrent inhibition refines mental templates to optimize perceptual decisions",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Zoe Kourtzi"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:QD3KBmkZPeQC",
+        "num_citations": 0,
+        "pub_url": "https://www.repository.cam.ac.uk/items/47e7a58f-dbd0-4df3-add0-a903bb7615aa",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Al93sFpinhgJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Time-varying functional connectivity as Wishart processes",
+            "pub_year": 2024,
+            "citation": "MIT Press, 2024",
+            "author": "Zoe Kourtzi",
+            "publisher": "MIT Press",
+            "abstract": "We investigated the utility of Wishart processes (WP) for estimating time-varying functional connectivity (TVFC), which captures changes in functional coupling as the correlation between brain region activity in functional magnetic resonance imaging (fMRI). The WP is a stochastic process on covariance matrices that can be used to model dynamic covariances between time series, which makes it a natural fit to this task. Recent advances in scalable approximate inference techniques and the availability of robust open-source libraries have rendered the WP practically viable for fMRI applications. We introduce a comprehensive benchmarking framework to assess WP performance compared to a selection of established TVFC estimation methods. The framework contains simulations with specified ground-truth covariance structures, a subject phenotype prediction task, a test-retest study, a brain state analysis, an external stimulus prediction task, and a novel data-driven imputation benchmark. The WP performed competitively across all the benchmarks. It outperformed a sliding window (SW) approach with adaptive cross-validated window lengths and a DCC-MGARCH baseline on the external stimulus prediction task, while being less prone to false positives in the TVFC null models."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:4xDN1ZYqzskC",
+        "num_citations": 0,
+        "pub_url": "https://www.repository.cam.ac.uk/items/9c183610-cc51-4a15-adf9-b54d3ab9cce6",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:s3orB6PAnbAJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Unsupervised multimodal modeling of cognitive and brain health trajectories for early dementia prediction",
+            "pub_year": 2024,
+            "citation": "Scientific Reports 14 (1), 10755, 2024",
+            "author": "Michael C Burkhart and Liz Y Lee and Delshad Vaghari and An Qi Toh and Eddie Chong and Christopher Chen and Peter Ti\u0148o and Zoe Kourtzi",
+            "journal": "Scientific Reports",
+            "volume": "14",
+            "number": "1",
+            "pages": "10755",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Predicting the course of neurodegenerative disorders early has potential to greatly improve clinical management and patient outcomes. A key challenge for early prediction in real-world clinical settings is the lack of labeled data (i.e., clinical diagnosis). In contrast to supervised classification approaches that require labeled data, we propose an unsupervised multimodal trajectory modeling (MTM) approach based on a mixture of state space models that captures changes in longitudinal data (i.e., trajectories) and stratifies individuals without using clinical diagnosis for model training. MTM learns the relationship between states comprising expensive, invasive biomarkers (\u03b2-amyloid, grey matter density) and readily obtainable cognitive observations. MTM training on trajectories stratifies individuals into clinically meaningful clusters more reliably than MTM training on baseline data alone and is robust to missing data (i.e \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:uDGL6kOW6j0C",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-024-60914-w",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:t6AmqHF80PEJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "UNSUPERVISED MULTIMODAL MODELING OF COGNITIVE HEALTH TRAJECTORIES FOR EARLY DEMENTIA PREDICTION",
+            "pub_year": 2024,
+            "citation": "Nature Portfolio, 2024",
+            "author": "Zoe Kourtzi",
+            "publisher": "Nature Portfolio",
+            "abstract": "Predicting the course of neurodegenerative disorders early has potential to greatly improve clinical management and patient outcomes. A key challenge for early prediction in real-world clinical settings is the lack of labeled data (ie, clinical diagnosis). In contrast to supervised classification approaches that require labeled data, we propose an unsupervised multimodal trajectory modeling (MTM) approach based on a mixture of state space models that captures changes in longitudinal data (ie, trajectories) and stratifies individuals without using clinical diagnosis for model training. MTM learns the relationship between states comprising expensive, invasive biomarkers (b-amyloid, grey matter density) and readily obtainable cognitive observations. MTM training on trajectories stratifies individuals into clinically meaningful clusters more reliably than model training on baseline data alone and is robust to missing data (ie, cognitive data alone or single assessments). Extracting an individualized cognitive health index (ie, MTM-derived cluster membership index) allows us to predict progression to AD more precisely than standard clinical assessments (ie, cognitive tests or MRI scans alone). Importantly, MTM generalizes successfully from research cohort to real-world clinical data from memory clinic patients with missing data, enhancing the clinical utility of our approach. Thus, our multimodal trajectory modeling approach provides a cost-effective and non-invasive tool for early dementia prediction without labeled data (ie clinical diagnosis) with strong potential for translation to clinical practice."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:PVgj2kMGcgYC",
+        "num_citations": 0,
+        "pub_url": "https://www.repository.cam.ac.uk/items/645fe7fd-c0cd-403b-a1d6-bd4d04f54460",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:6GeaYmTIaTYJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Unsupervised Multimodal Trajectory Modeling (code supplement)",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Michael C Burkhart and Liz Lee and Delshad Vaghari and Toh An Qi and Eddie Chong and Christopher Chen and Peter Tino and Zoe Kourtzi",
+            "abstract": "The code uses mixtures of state space models to perform unsupervised clustering of short trajectories. Within the state space framework, we let expensive-to-gather biomarkers correspond to hidden states and readily obtainable cognitive metrics correspond to measurements. Upon training with expectation maximization, we often find that our clusters stratify persons according to clinical outcome. This code reproduces the figures in the accompanying manuscript."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:NyGDZy8z5eUC",
+        "num_citations": 0,
+        "pub_url": "https://www.repository.cam.ac.uk/items/e613463f-686f-424b-99ca-f249e2086f62",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:tOKxPXkPfKQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Bilevel Hypergraph Networks for Multi-Modal Alzheimer's Diagnosis",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2403.12719, 2024",
+            "author": "Angelica I Aviles-Rivero and Chun-Wun Cheng and Zhongying Deng and Zoe Kourtzi and Carola-Bibiane Sch\u00f6nlieb",
+            "journal": "arXiv preprint arXiv:2403.12719",
+            "abstract": "Early detection of Alzheimer's disease's precursor stages is imperative for significantly enhancing patient outcomes and quality of life. This challenge is tackled through a semi-supervised multi-modal diagnosis framework. In particular, we introduce a new hypergraph framework that enables higher-order relations between multi-modal data, while utilising minimal labels. We first introduce a bilevel hypergraph optimisation framework that jointly learns a graph augmentation policy and a semi-supervised classifier. This dual learning strategy is hypothesised to enhance the robustness and generalisation capabilities of the model by fostering new pathways for information propagation. Secondly, we introduce a novel strategy for generating pseudo-labels more effectively via a gradient-driven flow. Our experimental results demonstrate the superior performance of our framework over current techniques in diagnosing Alzheimer's disease."
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:6yz0xqPARnAC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2403.12719",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:25TqmBhXtg8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "\u201cReady for a Career Change?\u201c: The role of cognitive flexibility in career transition and adaptation",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Yoke Loo Sam and George I Christopoulos and SH Annabel Chen and Yap Hui Shan and Shengchuang Feng and Nadhilla Melia and Ke Tong and Victoria Leong and Zoe Kourtzi and Barbara Sahakian and Trevor William Robbins",
+            "publisher": "OSF",
+            "abstract": "The present project is part of a larger project aimed at examining cognitive flexibility, other executive functions, and learning in healthy adults (Melani et al., 2022; Sam et al., 2022; Tong et al., 2021) in Singapore. The current pre-registration form primarily aims to examining specific hypotheses related to the association between socio-cognitive variables and career development/transitional behaviours and outcomes, which might not be described in the main studies (https://osf. io/ay9gr; https://osf. io/n352u; https://osf. io/6rc9h) in detail. Changes in the workplace over the past decades have spawned an increase in research investigating contemporary career types, which are characterized by increased self-directedness, flexibility, and the aim of subjective career success. Living in a dynamic and complex environment necessitates that all living organisms be flexible and adaptive to survive (Powell & Ragozzino, 2017). Humans are required to proactively equip themselves with the ability to shift their strategies and update their beliefs and actions in response to changing environmental demands (Diamond, 2006; Garcia-Garcia et al., 2010; Geurts et al., 2009; Herrmann et al., 2015). For instance, the increasing volatility in the 21st-century workforce, particularly during the unprecedented COVID-19 pandemic, has served as a timely reminder of the urgency of cultivating the flexibility to respond to unforeseen changes and uncertainties more adaptively in order to stay competitive in turbulent job markets. The view of a linear career path (whereby workers are only trained to perform and master one job) that dominated the mainstream workplace system \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Z4LHkiIAAAAJ:4X0JR2_MtJMC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/cxajv/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BktwQ1U7FzoJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

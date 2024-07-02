@@ -1,0 +1,73 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Performance-optimized deep neural networks are evolving into worse models of inferotemporal visual cortex",
+            "pub_year": 2024,
+            "citation": "Advances in Neural Information Processing Systems 36, 2024",
+            "author": "Drew Linsley and Ivan F Rodriguez Rodriguez and Thomas Fel and Michael Arcaro and Saloni Sharma and Margaret Livingstone and Thomas Serre",
+            "journal": "Advances in Neural Information Processing Systems",
+            "volume": "36",
+            "abstract": "One of the most impactful findings in computational neuroscience over the past decade is that the object recognition accuracy of deep neural networks (DNNs) correlates with their ability to predict neural responses to natural images in the inferotemporal (IT) cortex. This discovery supported the long-held theory that object recognition is a core objective of the visual cortex, and suggested that more accurate DNNs would serve as better models of IT neuron responses to images. Since then, deep learning has undergone a revolution of scale: billion parameter-scale DNNs trained on billions of images are rivaling or outperforming humans at visual tasks including object recognition. Have today's DNNs become more accurate at predicting IT neuron responses to images as they have grown more accurate at object recognition? Surprisingly, across three independent experiments, we find that this is not the case. DNNs have become progressively worse models of IT as their accuracy has increased on ImageNet. To understand why DNNs experience this trade-off and evaluate if they are still an appropriate paradigm for modeling the visual system, we turn to recordings of IT that capture spatially resolved maps of neuronal activity elicited by natural images. These neuronal activity maps reveal that DNNs trained on ImageNet learn to rely on different visual features than those encoded by IT and that this problem worsens as their accuracy increases. We successfully resolved this issue with the neural harmonizer, a plug-and-play training routine for DNNs that aligns their learned representations with humans. Our results suggest that harmonized DNNs break \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "07tNFdgAAAAJ:wuD5JclIwkYC",
+        "num_citations": 8,
+        "citedby_url": "/scholar?hl=en&cites=13788141257620883122",
+        "cites_id": [
+            "13788141257620883122"
+        ],
+        "pub_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/5bf234ecf83cd77bc5b77a24ba9338b0-Abstract-Conference.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:soZmzWtRWb8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2,
+            "2024": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A Whole-Brain Topographic Ontology",
+            "pub_year": 2024,
+            "citation": "Annual Review of Neuroscience 47, 2024",
+            "author": "Michael Arcaro and Margaret Livingstone",
+            "volume": "47",
+            "publisher": "Annual Reviews",
+            "abstract": "It is a common view that the intricate array of specialized domains in the ventral visual pathway is innately prespecified. What this review postulates is that they are not. We explore the origins of domain specificity, hypothesizing that the adult brain emerges from an interplay between a domain-general map-based architecture, shaped by intrinsic mechanisms, and experience. We argue that the most fundamental innate organization of cortex in general, and not just the visual pathway, is a map-based topography that governs how the environment maps onto the brain, how brain areas interconnect, and ultimately, how the brain processes information.Expected final online publication date for the Annual Review of Neuroscience, Volume 47 is July 2024. Please see http://www.annualreviews.org/page/journal/pubdates for revised estimates."
+        },
+        "filled": true,
+        "author_pub_id": "07tNFdgAAAAJ:3MwzVuqRcA0C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=2903207723315674045",
+        "cites_id": [
+            "2903207723315674045"
+        ],
+        "pub_url": "https://www.annualreviews.org/content/journals/10.1146/annurev-neuro-082823-073701",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vbtm4QpESigJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A sensorimotor-association axis of thalamocortical connection development",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.06. 13.598749, 2024",
+            "author": "Valerie J Sydnor and Joelle Bagautdinova and Bart Larsen and Michael J Arcaro and Deanna M Barch and Dani S Bassett and Aaron F Alexander-Bloch and Philip A Cook and Sydney Covitz and Alexandre R Franco and Raquel E Gur and Ruben C Gur and Allyson P Mackey and Kahini Mehta and Steven L Meisler and Michael P Milham and Tyler M Moore and Eli J Muller and David R Roalf and Taylor Salo and Gabriel Schubiner and Jakob Seidlitz and Russell T Shinohara and James M Shine and Fang-Cheng Yeh and Matthew Cieslak and Theodore D Satterthwaite",
+            "journal": "bioRxiv",
+            "pages": "2024.06. 13.598749",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Human cortical development follows a sensorimotor-to-association sequence during childhood and adolescence. The brain's capacity to enact this sequence over decades indicates that it relies on intrinsic mechanisms to regulate inter-regional differences in the timing of cortical maturation, yet regulators of human developmental chronology are not well understood. Given evidence from animal models that thalamic axons modulate windows of cortical plasticity, here we evaluate the overarching hypothesis that structural connections between the thalamus and cortex help to coordinate cortical maturational heterochronicity during youth. We first introduce, cortically annotate, and anatomically validate a new atlas of human thalamocortical connections using diffusion tractography. By applying this atlas to three independent youth datasets (ages 8-23 years; total N = 2,676), we reproducibly demonstrate that thalamocortical connections develop along a maturational gradient that aligns with the cortex's sensorimotor-association axis. Associative cortical regions with thalamic connections that take longest to mature exhibit protracted expression of neurochemical, structural, and functional markers indicative of higher circuit plasticity as well as heightened environmental sensitivity. This work highlights a central role for the thalamus in the orchestration of hierarchically organized and environmentally sensitive windows of cortical developmental malleability."
+        },
+        "filled": true,
+        "author_pub_id": "07tNFdgAAAAJ:rFyVMFCKTwsC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.06.13.598749.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Oygu6Cl4IvgJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

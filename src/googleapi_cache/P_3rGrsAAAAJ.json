@@ -1,0 +1,116 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Performance-optimized deep neural networks are evolving into worse models of inferotemporal visual cortex",
+            "pub_year": 2024,
+            "citation": "Advances in Neural Information Processing Systems 36, 2024",
+            "author": "Drew Linsley and Ivan F Rodriguez Rodriguez and Thomas Fel and Michael Arcaro and Saloni Sharma and Margaret Livingstone and Thomas Serre",
+            "journal": "Advances in Neural Information Processing Systems",
+            "volume": "36",
+            "abstract": "One of the most impactful findings in computational neuroscience over the past decade is that the object recognition accuracy of deep neural networks (DNNs) correlates with their ability to predict neural responses to natural images in the inferotemporal (IT) cortex. This discovery supported the long-held theory that object recognition is a core objective of the visual cortex, and suggested that more accurate DNNs would serve as better models of IT neuron responses to images. Since then, deep learning has undergone a revolution of scale: billion parameter-scale DNNs trained on billions of images are rivaling or outperforming humans at visual tasks including object recognition. Have today's DNNs become more accurate at predicting IT neuron responses to images as they have grown more accurate at object recognition? Surprisingly, across three independent experiments, we find that this is not the case. DNNs have become progressively worse models of IT as their accuracy has increased on ImageNet. To understand why DNNs experience this trade-off and evaluate if they are still an appropriate paradigm for modeling the visual system, we turn to recordings of IT that capture spatially resolved maps of neuronal activity elicited by natural images. These neuronal activity maps reveal that DNNs trained on ImageNet learn to rely on different visual features than those encoded by IT and that this problem worsens as their accuracy increases. We successfully resolved this issue with the neural harmonizer, a plug-and-play training routine for DNNs that aligns their learned representations with humans. Our results suggest that harmonized DNNs break \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:mNrWkgRL2YcC",
+        "num_citations": 8,
+        "citedby_url": "/scholar?hl=en&cites=13788141257620883122",
+        "cites_id": [
+            "13788141257620883122"
+        ],
+        "pub_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/5bf234ecf83cd77bc5b77a24ba9338b0-Abstract-Conference.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:soZmzWtRWb8J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2,
+            "2024": 5
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Feature-selective responses in macaque visual cortex follow eye movements during natural vision",
+            "pub_year": 2024,
+            "citation": "Nature neuroscience, 1-10, 2024",
+            "author": "Will Xiao and Saloni Sharma and Gabriel Kreiman and Margaret S Livingstone",
+            "journal": "Nature neuroscience",
+            "pages": "1-10",
+            "publisher": "Nature Publishing Group US",
+            "abstract": "In natural vision, primates actively move their eyes several times per second via saccades. It remains unclear whether, during this active looking, visual neurons exhibit classical retinotopic properties, anticipate gaze shifts or mirror the stable quality of perception, especially in complex natural scenes. Here, we let 13 monkeys freely view thousands of natural images across 4.6\u2009million fixations, recorded 883\u2009h of neuronal responses in six areas spanning primary visual to anterior inferior temporal cortex and analyzed spatial, temporal and featural selectivity in these responses. Face neurons tracked their receptive field contents, indicated by category-selective responses. Self-consistency analysis showed that general feature-selective responses also followed eye movements and remained gaze-dependent over seconds of viewing the same image. Computational models of feature-selective responses located \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:F9fV5C73w3QC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=15644335137690247937",
+        "cites_id": [
+            "15644335137690247937"
+        ],
+        "pub_url": "https://www.nature.com/articles/s41593-024-01631-5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:AWMwpevXG9kJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A Whole-Brain Topographic Ontology",
+            "pub_year": 2024,
+            "citation": "Annual Review of Neuroscience 47, 2024",
+            "author": "Michael Arcaro and Margaret Livingstone",
+            "volume": "47",
+            "publisher": "Annual Reviews",
+            "abstract": "It is a common view that the intricate array of specialized domains in the ventral visual pathway is innately prespecified. What this review postulates is that they are not. We explore the origins of domain specificity, hypothesizing that the adult brain emerges from an interplay between a domain-general map-based architecture, shaped by intrinsic mechanisms, and experience. We argue that the most fundamental innate organization of cortex in general, and not just the visual pathway, is a map-based topography that governs how the environment maps onto the brain, how brain areas interconnect, and ultimately, how the brain processes information.Expected final online publication date for the Annual Review of Neuroscience, Volume 47 is July 2024. Please see http://www.annualreviews.org/page/journal/pubdates for revised estimates."
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:yqoGN6RLRZoC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=2903207723315674045",
+        "cites_id": [
+            "2903207723315674045"
+        ],
+        "pub_url": "https://www.annualreviews.org/content/journals/10.1146/annurev-neuro-082823-073701",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:vbtm4QpESigJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Benchmarking Out-of-Distribution Generalization Capabilities of DNN-based Encoding Models for the Ventral Visual Cortex",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.16935, 2024",
+            "author": "Spandan Madan and Will Xiao and Mingran Cao and Hanspeter Pfister and Margaret Livingstone and Gabriel Kreiman",
+            "journal": "arXiv preprint arXiv:2406.16935",
+            "abstract": "We characterized the generalization capabilities of DNN-based encoding models when predicting neuronal responses from the visual cortex. We collected \\textit{MacaqueITBench}, a large-scale dataset of neural population responses from the macaque inferior temporal (IT) cortex to over  images, comprising  unique natural images presented to seven monkeys over  sessions. Using \\textit{MacaqueITBench}, we investigated the impact of distribution shifts on models predicting neural activity by dividing the images into Out-Of-Distribution (OOD) train and test splits. The OOD splits included several different image-computable types including image contrast, hue, intensity, temperature, and saturation. Compared to the performance on in-distribution test images -- the conventional way these models have been evaluated -- models performed worse at predicting neuronal responses to out-of-distribution images, retaining as little as  of the performance on in-distribution test images. The generalization performance under OOD shifts can be well accounted by a simple image similarity metric -- the cosine distance between image representations extracted from a pre-trained object recognition model is a strong predictor of neural predictivity under different distribution shifts. The dataset of images, neuronal firing rate recordings, and computational benchmarks are hosted publicly at: https://bit.ly/3zeutVd."
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:ZzlSgRqYykMC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.16935",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:hHT-WzOrkcwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Non-invasive Blood-Brain Barrier Disruption using Acoustic Holography with a Clinical Focused Ultrasound System",
+            "pub_year": 2024,
+            "citation": "IEEE Transactions on Biomedical Engineering, 2024",
+            "author": "Nathan McDannold and Yongzhi Zhang and Stecia-Marie Fletcher and Patrick Y Wen and David A Reardon and Alexandra J Golby and Margaret Livingstone",
+            "journal": "IEEE Transactions on Biomedical Engineering",
+            "publisher": "IEEE",
+            "abstract": ""
+        },
+        "filled": true,
+        "author_pub_id": "P_3rGrsAAAAJ:P7Ujq4OLJYoC",
+        "num_citations": 0,
+        "pub_url": "https://ieeexplore.ieee.org/abstract/document/10542367/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:e75lqayrPC8J:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

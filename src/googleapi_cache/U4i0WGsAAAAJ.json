@@ -1,0 +1,51 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A shared neural code for perceiving and remembering social interactions in the human superior temporal sulcus",
+            "pub_year": 2024,
+            "citation": "Neuropsychologia 196, 108823, 2024",
+            "author": "Haemy Lee Masson and Janice Chen and Leyla Isik",
+            "journal": "Neuropsychologia",
+            "volume": "196",
+            "pages": "108823",
+            "publisher": "Pergamon",
+            "abstract": "Recognizing and remembering social information is a crucial cognitive skill. Neural patterns in the superior temporal sulcus (STS) support our ability to perceive others' social interactions. However, despite the prominence of social interactions in memory, the neural basis of remembering social interactions is still unknown. To fill this gap, we investigated the brain mechanisms underlying memory of others' social interactions during free spoken recall of a naturalistic movie. By applying machine learning-based fMRI encoding analyses to densely labeled movie and recall data we found that a subset of the STS activity evoked by viewing social interactions predicted neural responses in not only held-out movie data, but also during memory recall. These results provide the first evidence that activity in the STS is reinstated in response to specific social content and that its reactivation underlies our ability to remember \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "U4i0WGsAAAAJ:isC4tDSrTZIC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=8829216222282571235",
+        "cites_id": [
+            "8829216222282571235"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0028393224000381",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:491E_l-th3oJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Multidimensional neural representations of social features during movie viewing",
+            "pub_year": 2024,
+            "citation": "Social Cognitive and Affective Neuroscience 19 (1), nsae030, 2024",
+            "author": "Haemy Lee Masson and Lucy Chang and Leyla Isik",
+            "journal": "Social Cognitive and Affective Neuroscience",
+            "volume": "19",
+            "number": "1",
+            "pages": "nsae030",
+            "publisher": "Oxford University Press",
+            "abstract": "The social world is dynamic and contextually embedded. Yet, most studies utilize simple stimuli that do not capture the complexity of everyday social episodes. To address this, we implemented a movie viewing paradigm and investigated how everyday social episodes are processed in the brain. Participants watched one of two movies during an MRI scan. Neural patterns from brain regions involved in social perception, mentalization, action observation and sensory processing were extracted. Representational similarity analysis results revealed that several labeled social features (including social interaction, mentalization, the actions of others, characters talking about themselves, talking about others and talking about objects) were represented in the superior temporal gyrus (STG) and middle temporal gyrus (MTG). The mentalization feature was also represented throughout the theory of mind network, and \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "U4i0WGsAAAAJ:TFP_iSt0sucC",
+        "num_citations": 0,
+        "pub_url": "https://academic.oup.com/scan/advance-article/doi/10.1093/scan/nsae030/7667785",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:TFNkimMwFcAJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

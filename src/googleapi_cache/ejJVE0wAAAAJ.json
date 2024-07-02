@@ -1,0 +1,113 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Reciprocal interactions between parietal and occipito-temporal representations support everyday object-directed actions",
+            "pub_year": 2024,
+            "citation": "Neuropsychologia, 108841, 2024",
+            "author": "Bradford Z Mahon and Jorge Almeida",
+            "journal": "Neuropsychologia",
+            "pages": "108841",
+            "publisher": "Pergamon",
+            "abstract": "Everyday interactions with common manipulable objects require the integration of conceptual knowledge about objects and actions with real-time sensory information about the position, orientation and volumetric structure of the grasp target. The ability to successfully interact with everyday objects involves analysis of visual form and shape, surface texture, material properties, conceptual attributes such as identity, function and typical context, and visuomotor processing supporting hand transport, grasp form, and object manipulation. Functionally separable brain regions across the dorsal and ventral visual pathways support the processing of these different object properties and, in cohort, are necessary for functional object use. Object-directed grasps display end-state-comfort: they anticipate in form and force the shape and material properties of the grasp target, and how the object will be manipulated after it is \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "ejJVE0wAAAAJ:koF6b02d8EEC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=1950312503518998436",
+        "cites_id": [
+            "1950312503518998436"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0028393224000563",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:pK9AhePmEBsJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Characterizing the discriminability of visual categorical information in strongly connected voxels",
+            "pub_year": 2024,
+            "citation": "Neuropsychologia, 108815, 2024",
+            "author": "Jon Walbrin and Paul E Downing and Filipa Dourado Sotero and Jorge Almeida",
+            "journal": "Neuropsychologia",
+            "pages": "108815",
+            "publisher": "Pergamon",
+            "abstract": "Functional brain responses are strongly influenced by connectivity. Recently, we demonstrated a major example of this: category discriminability within occipitotemporal cortex (OTC) is enhanced for voxel sets that share strong functional connectivity to distal brain areas, relative to those that share lesser connectivity. That is, within OTC regions, sets of \u2018most-connected\u2019 voxels show improved multivoxel pattern discriminability for tool-, face-, and place stimuli relative to voxels with weaker connectivity to the wider brain. However, understanding whether these effects generalize to other domains (e.g. body perception network), and across different levels of the visual processing streams (e.g. dorsal as well as ventral stream areas) is an important extension of this work. Here, we show that this so-called connectivity-guided decoding (CGD) effect broadly generalizes across a wide range of categories (tools, faces, bodies \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "ejJVE0wAAAAJ:onKP9CxGSkIC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=10881542403148434948",
+        "cites_id": [
+            "10881542403148434948"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0028393224000307",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:BE4DrCkBA5cJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Fine-grained knowledge about manipulable objects is well-predicted by CLIP",
+            "pub_year": 2024,
+            "citation": "iScience, 2024",
+            "author": "Jon Walbrin and Nikita Sossounov and Morteza Mahdiani and Igor Vaz and Jorge Almeida",
+            "journal": "iScience",
+            "publisher": "Elsevier",
+            "abstract": "Object recognition is an important ability that relies on distinguishing between similar objects (e.g. deciding which utensil(s) to use at different stages of meal preparation). Recent work describes the fine-grained organization of knowledge about manipulable objects via the study of the constituent dimensions that are most relevant to human behavior, for example, vision, manipulation, and function-based properties. A logical extension of this work concerns whether or not these dimensions are uniquely human, or can be approximated by deep learning. Here, we show that behavioral dimensions are generally well-predicted by CLIP-ViT - a multimodal network trained on a large and diverse set of image-text pairs. Moreover, this model outperforms comparison networks pre-trained on smaller, image-only datasets. These results demonstrate the impressive capacity of CLIP-ViT to approximate fine-grained object \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "ejJVE0wAAAAJ:5bfplxN71z4C",
+        "num_citations": 0,
+        "pub_url": "https://www.cell.com/iscience/fulltext/S2589-0042(24)01522-0",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Nr-8ad1GMHMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Neural and behavioral similarity-driven tuning curves for manipulable objects",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.04. 09.588661, 2024",
+            "author": "Daniela Valerio and Andre Salles Cunha Peres and Fredrik Bergstrom and Philipp Seidel and Jorge Almeida",
+            "journal": "bioRxiv",
+            "pages": "2024.04. 09.588661",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "In our daily activities, we encounter numerous objects that we successfully distinguish and recognize within a fraction of a second. This holds for coarse distinctions (e.g., cat vs. hammer) but also for more challenging within-category distinctions that require fine-grain analysis (e.g., cat vs. dog). The efficiency of this recognition depends on how the brain organizes object-related information. While several attempts have focused on unravelling large-scale organization principles, research on within-category organization of knowledge is rather limited. Here, we explored the fine-grain organization of object knowledge and investigated whether manipulable objects are organized and represented in terms of their similarity. To accomplish this, different groups of individuals participated in a behavioral and fMRI release from adaptation experiment. Adaptation was induced by presenting different exemplars of a particular object, and release from adaptation was elicited by the presentation of a deviant object. The relationship between adaptation and deviant objects was manipulated into four levels of similarity, measured by feature overlap between these objects. Our findings revealed that increasing object similarity provoked progressively slower reaction times and progressively weaker fMRI release from adaptation. Specifically, we identified similarity-driven tuning curves for the release from adaptation in the medial fusiform, collateral sulcus, parahippocampal gyri, lingual gyri, lateral occipital complex, and occipito-parietal cortex. These results suggest that the processing and representation of objects in the brain and our ability to perform fine \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "ejJVE0wAAAAJ:qCaWouos7ogC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.04.09.588661.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:i8LAGD08p7sJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "fMROI: a simple and adaptable toolbox for easy region-of-interest creation",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.03. 29.587330, 2024",
+            "author": "Andre Salles Cunha Peres and Daniela Valerio and Igor Souza Vaz and Morteza Mahdiani and Jon Walbrin and Jorge Almeida",
+            "journal": "bioRxiv",
+            "pages": "2024.03. 29.587330",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "This study introduces fMROI, an open-source software designed for creating regions-of-interest (ROIs) and visualizing magnetic resonance imaging data. fMROI offers a user-friendly graphical interface that simplifies the creation of complex ROIs. It is compatible with various operating systems and enables the integration of user-specified algorithms. Comparative analysis against popular neuroimaging software demonstrates the feasibility, applicability, and ease of use of fMROI. Notably, fMROI's interactive graphical interface with a real-time viewer allows users to identify inconsistencies and design more accurate ROIs, saving significant time by avoiding errors before storing ROIs as NIfTI files. Additionally, fMROI supports automation through command-line accessibility, making it ideal for large-scale analyses. As an open-source platform, fMROI provides a valuable resource for researchers in the neuroimaging community, facilitating efficient ROI creation and streamlining neuroimage analysis."
+        },
+        "filled": true,
+        "author_pub_id": "ejJVE0wAAAAJ:QeguYG95ZbAC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.03.29.587330.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:v6xng52r24kJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

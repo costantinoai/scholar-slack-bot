@@ -1,0 +1,22 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Task-specific topographical maps of neural activity in the primate lateral prefrontal cortex",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.05. 10.591729, 2024",
+            "author": "Jinkang Derrick Xiang and Megan Roussy and Benjamin Corrigan and Roberto A Gulli and Rogelio Luna and Maryam Hasanzadeh Mofrad and Lyle Muller and Joern Diedrichsen and Taylor W Schmitz and Julio Martinez-Trujillo and Marieke Mur",
+            "journal": "bioRxiv",
+            "pages": "2024.05. 10.591729",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Neurons in the primate lateral prefrontal cortex (LPFC) flexibly adapt their activity to support a wide range of cognitive tasks. Whether and how the topography of LPFC neural activity changes as a function of task is unclear. In the present study, we address this issue by characterizing the functional topography of LPFC neural activity in awake behaving macaques performing three distinct cognitive tasks. We recorded from chronically implanted multi-electrode arrays and show that the topography of LPFC activity is stable within a task, but adaptive across tasks. The topography of neural activity exhibits a spatial scale compatible with that of cortical columns and prior anatomical tracing work on afferent LPFC inputs. Our findings show that LPFC maps of neural population activity are stable for a specific task, providing robust neural codes that support task specialization. Moreover, the variability in functional topographies across tasks indicates activity landscapes can adapt, providing flexibility to LPFC neural codes."
+        },
+        "filled": true,
+        "author_pub_id": "Eo6JfS8AAAAJ:GnPB-g6toBAC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.05.10.591729.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:2Td8JP3AMu0J:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

@@ -1,0 +1,146 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Multimodal investigations of emotional face processing and social trait judgment of faces",
+            "pub_year": 2024,
+            "citation": "Annals of the New York Academy of Sciences 1531 (1), 29-48, 2024",
+            "author": "Hongbo Yu and Chujun Lin and Sai Sun and Runnan Cao and Kohitij Kar and Shuo Wang",
+            "volume": "1531",
+            "number": "1",
+            "pages": "29-48",
+            "abstract": "Faces are among the most important visual stimuli that humans perceive in everyday life. While extensive literature has examined emotional processing and social evaluations of faces, most studies have examined either topic using unimodal approaches. In this review, we promote the use of multimodal cognitive neuroscience approaches to study these processes, using two lines of research as examples: ambiguity in facial expressions of emotion and social trait judgment of faces. In the first set of studies, we identified an event\u2010related potential that signals emotion ambiguity using electroencephalography and we found convergent neural responses to emotion ambiguity using functional neuroimaging and single\u2010neuron recordings. In the second set of studies, we discuss how different neuroimaging and personality\u2010dimensional approaches together provide new insights into social trait judgments of faces. In both \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "T7ZMcGkAAAAJ:1sJd4Hv_s6UC",
+        "num_citations": 4,
+        "citedby_url": "/scholar?hl=en&cites=6395978606240402763",
+        "cites_id": [
+            "6395978606240402763"
+        ],
+        "pub_url": "https://nyaspubs.onlinelibrary.wiley.com/doi/abs/10.1111/nyas.15084",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Sw31r6cUw1gJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 2,
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Low-cost, portable, easy-to-use kiosks to facilitate home-cage testing of non-human primates during vision-based behavioral tasks",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2401.03727, 2024",
+            "author": "Hamidreza Ramezanpour and Christopher Giverin and Kohitij Kar",
+            "journal": "arXiv preprint arXiv:2401.03727",
+            "abstract": "Non-human primates (NHPs), especially rhesus macaques, have played a significant role in our current understanding of the neural computations underlying human vision. Apart from the established homologies in the visual brain areas between these two species, and our extended abilities to probe detailed neural mechanisms in monkeys at multiple scales, one major factor that makes NHPs an extremely appealing animal model of human-vision is their ability to perform human-like visual behavior. Traditionally, such behavioral studies have been conducted in controlled laboratory settings. Such in-lab studies offer the experimenter a tight control over many experimental variables like overall luminance, eye movements (via eye tracking), auditory interference etc. However, there are several constraints related to such experiments. These include, 1) limited total experimental time, 2) requirement of dedicated human experimenters for the NHPs, 3) requirement of additional lab-space for the experiments, 4) NHPs often need to undergo invasive surgeries for a head-post implant, 5) additional time and training required for chairing and head restraints of monkeys. To overcome these limitations, many laboratories are now adapting home-cage behavioral training and testing of NHPs. Home-cage behavioral testing enables the administering of many vision-based behavioral tasks simultaneously across multiple monkeys with much reduced human personnel requirements, no NHP head restraint, and provide NHPs access to the experiments without specific time constraints. To enable more open-source development of this technology, here we provide \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "T7ZMcGkAAAAJ:f2IySw72cVMC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=10041652146174737287,15359890387271699207",
+        "cites_id": [
+            "10041652146174737287",
+            "15359890387271699207"
+        ],
+        "pub_url": "https://arxiv.org/abs/2401.03727",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:h7vIimwdW4sJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 3
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Software and Methods for Controlling Neural Responses in Deep Brain Regions",
+            "pub_year": 2024,
+            "citation": "US Patent App. 18/482,806, 2024",
+            "author": "James Dicarlo and Pouya Bashivan and Kohitij Kar",
+            "abstract": "Techniques for non-invasively controlling targeted neural activity of a subject are provided herein. The techniques include applying a stimulus input to the subject, the stimulus input being formed by a deep artificial neural network (ANN) model and being configured to elicit targeted neural activity within a brain of the subject. The stimulus input may be a pattern of luminous power generated by the deep ANN model and applied to retinae of the subject. The stimulus input may be generated by the deep ANN model based on a mapping of the subject's neural responses to neurons of the deep ANN model."
+        },
+        "filled": true,
+        "author_pub_id": "T7ZMcGkAAAAJ:u9iWguZQMMsC",
+        "num_citations": 0,
+        "pub_url": "https://patents.google.com/patent/US20240082534A1/en",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:GiNnVVNRPToJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How to optimize neuroscience data utilization and experiment design for advancing primate visual and linguistic brain models?",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2401.03376, 2024",
+            "author": "Greta Tuckute and Dawn Finzi and Eshed Margalit and Joel Zylberberg and SueYeon Chung and Alona Fyshe and Evelina Fedorenko and Nikolaus Kriegeskorte and Jacob Yates and Kalanit Grill Spector and Kohitij Kar",
+            "journal": "arXiv preprint arXiv:2401.03376",
+            "abstract": "In recent years, neuroscience has made significant progress in building large-scale artificial neural network (ANN) models of brain activity and behavior. However, there is no consensus on the most efficient ways to collect data and design experiments to develop the next generation of models. This article explores the controversial opinions that have emerged on this topic in the domain of vision and language. Specifically, we address two critical points. First, we weigh the pros and cons of using qualitative insights from empirical results versus raw experimental data to train models. Second, we consider model-free (intuition-based) versus model-based approaches for data collection, specifically experimental design and stimulus selection, for optimal model development. Finally, we consider the challenges of developing a synergistic approach to experimental design and model building, including encouraging data and model sharing and the implications of iterative additions to existing models. The goal of the paper is to discuss decision points and propose directions for both experimenters and model developers in the quest to understand the brain."
+        },
+        "filled": true,
+        "author_pub_id": "T7ZMcGkAAAAJ:pyW8ca7W8N0C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2401.03376",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:iruAB344IisJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Constraining vision models to predict image memorability yields significant gains in producing more brain-aligned models of the primate ventral stream",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Ram Ahuja and Soroush Ziaee and Ezgi Fide and Shayna Rosenbaum and Kohitij Kar",
+            "abstract": "The primate ventral visual stream that culminates in the inferior temporal (IT) cortex supports critical functions, including object recognition and visual memory. Previous work has demonstrated that artificial neural networks (ANNs) optimized for object categorization exhibit unprecedented but partial alignment with ventral stream representations. However, it remains unknown whether ANNs constrained to predict human image memorability could explain a unique part of the neural variance\u2013potentially bridging the remaining explanatory gap. We observed that models trained to predict image memorability predict unique variances of the IT neural responses. Interestingly, joint categorization and memorability training yielded networks that captured significantly more variance in neural responses than models trained on either objective alone. Our results suggest that incorporating diverse, functionally relevant objectives leads to ANNs more closely aligned with the primate ventral visual stream\u2019s representational geometry and functional properties."
+        },
+        "filled": true,
+        "author_pub_id": "T7ZMcGkAAAAJ:tOudhMTPpwUC",
+        "num_citations": 0,
+        "pub_url": "https://2024.ccneuro.org/pdf/498_Paper_authored_2024.CCN_Memorability_author.pdf",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oEPXfehChkQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Impact of Scene Context on Visual Object Recognition: Comparing Humans, Monkeys, and Computational Models",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.05. 27.596127, 2024",
+            "author": "Sara Djambazovska and Anaa Salim Zafer and Hamidreza Ramezanpour and Gabriel Kreiman and Kohitij Kar",
+            "journal": "bioRxiv",
+            "pages": "2024.05. 27.596127",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "During natural vision, we rarely see objects in isolation but rather embedded in rich and complex contexts. Understanding how the brain recognizes objects in natural scenes by integrating contextual information remains a key challenge. To elucidate neural mechanisms compatible with human visual processing, we need an animal model that behaves similarly to humans, so that inferred neural mechanisms can provide hypotheses relevant to the human brain. Here we assessed whether rhesus macaques could model human context-driven object recognition by quantifying visual object identification abilities across variations in the amount, quality, and congruency of contextual cues. Behavioral metrics revealed strikingly similar context-dependent patterns between humans and monkeys. However, neural responses in the inferior temporal (IT) cortex of monkeys that were never explicitly trained to discriminate objects in context, as well as current artificial neural network models, could only partially explain this cross-species correspondence. The shared behavioral variance unexplained by context-naive neural data or computational models highlights fundamental knowledge gaps. Our findings demonstrate an intriguing alignment of human and monkey visual object processing that defies full explanation by either brain activity in a key visual region or state-of-the-art models."
+        },
+        "filled": true,
+        "author_pub_id": "T7ZMcGkAAAAJ:WbkHhVStYXYC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.05.27.596127.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:4Fku-soqnGUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Object motion representation in the macaque ventral stream--a gateway to understanding the brain's intuitive physics engine",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.02. 23.581841, 2024",
+            "author": "Hamidreza Ramezanpour and Filip Ilic and Richard Wildes and Kohitij Kar",
+            "journal": "bioRxiv",
+            "pages": "2024.02. 23.581841",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Effective interaction with moving objects and the ability to infer and predict their motion (a core component of \"intuitive physics\") is essential for survival in the dynamic world. How does the primate visual system process such stimuli, enabling predictive capabilities for dynamic stimuli statistics like motion velocity and expected trajectories?  In this study, we probed brain areas in the ventral visual pathway of rhesus macaques implicated in object recognition (areas V4 and inferior temporal, IT, cortex) to evaluate how they represent object motion speed and direction. We assessed the relationship between the distributed population activity in the ventral stream and two distinct object motion-based behaviors -- one reliant on information directly available in videos (speed discrimination) and the other predicated on predictive motion estimates from videos (future event predictions). Further, employing microstimulation strategies, we confirm the causal, functional role of the IT cortex in these behaviors. Our results underscore the need to re-examine the traditional functional segregation of the primate visual cortices into \"what\" and \"where\" pathways and provide empirical constraints to model their interaction for a better circuit-level understanding of visual motion and intuitive physics."
+        },
+        "filled": true,
+        "author_pub_id": "T7ZMcGkAAAAJ:NhqRSupF_l8C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.02.23.581841.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:gpr5rrbY-1MJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

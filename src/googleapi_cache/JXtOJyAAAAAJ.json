@@ -1,0 +1,67 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Sex differences in low-level multisensory integration in developmental dyslexia",
+            "pub_year": 2024,
+            "citation": "Journal of Neuroscience 44 (3), 2024",
+            "author": "Agnieszka Glica and Katarzyna Wasilewska and Bartosz Kossowski and Jaros\u0142aw \u017bygierewicz and Katarzyna Jednor\u00f3g",
+            "journal": "Journal of Neuroscience",
+            "volume": "44",
+            "number": "3",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Reading acquisition involves the integration of auditory and visual stimuli. Thus, low-level audiovisual multisensory integration might contribute to disrupted reading in developmental dyslexia. Although dyslexia is more frequently diagnosed in males and emerging evidence indicates that the neural basis of dyslexia might differ between sexes, previous studies examining multisensory integration did not evaluate potential sex differences nor tested its neural correlates. In the current study on 88 adolescents and young adults, we found that only males with dyslexia showed a deficit in multisensory integration of simple nonlinguistic stimuli. At the neural level, both females and males with dyslexia presented smaller differences in response to multisensory compared to those in response to unisensory conditions in the N1 and N2 components (early components of event-related potentials associated with sensory \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:nZcligLrVowC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=14246415585502455724",
+        "cites_id": [
+            "14246415585502455724"
+        ],
+        "pub_url": "https://www.jneurosci.org/content/44/3/e0944232023.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:rGd2iH5vtcUJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Letter\u2013speech sound integration in typical reading development during the first years of formal education",
+            "pub_year": 2024,
+            "citation": "Child Development, 2024",
+            "author": "Joanna Beck and Katarzyna Chyl and Agnieszka D\u0119bska and Magdalena \u0141uniewska and Nienke van Atteveldt and Katarzyna Jednor\u00f3g",
+            "journal": "Child Development",
+            "abstract": "This study investigated the neural basis of letter and speech sound (LS) integration in 53 typical readers (35 girls, all White) during the first 2\u2009years of reading education (ages 7\u20139). Changes in both sensory (multisensory vs unisensory) and linguistic (congruent vs incongruent) aspects of LS integration were examined. The left superior temporal cortex and bilateral inferior frontal cortex showed increasing activation for multisensory over unisensory LS over time, driven by reduced activation to speech sounds. No changes were noted in the congruency effect. However, at age nine, heightened activation to incongruent over congruent LS pairs were observed, correlating with individual differences in reading development. This suggests that the incongruency effect evolves at varying rates depending on reading skills."
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:Aul-kAQHnToC",
+        "num_citations": 0,
+        "pub_url": "https://srcd.onlinelibrary.wiley.com/doi/abs/10.1111/cdev.14080",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:UN8O_3rWIyIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Reevaluating the Neural Noise Hypothesis in Dyslexia: Insights from EEG and 7T MRS Biomarkers",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.06. 11.598476, 2024",
+            "author": "Agnieszka Glica and Katarzyna Wasilewska and Julia Jurkowska and Jaros\u0142aw \u017bygierewicz and Bartosz Kossowski and Katarzyna Jednor\u00f3g",
+            "journal": "bioRxiv",
+            "pages": "2024.06. 11.598476",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "The neural noise hypothesis of dyslexia posits an imbalance between excitatory and inhibitory (E/I) brain activity as an underlying mechanism of reading difficulties. This study provides the first direct test of this hypothesis using both indirect EEG power spectrum measures in 120 Polish adolescents and young adults (60 with dyslexia, 60 controls) and direct glutamate (Glu) and gamma-aminobutyric acid (GABA) concentrations from magnetic resonance spectroscopy (MRS) at 7T MRI scanner in half of the sample. Our results, supported by Bayesian statistics, show no evidence of E/I balance differences between groups, challenging the hypothesis that cortical hyperexcitability underlies dyslexia. These findings suggest alternative mechanisms must be explored and highlight the need for further research into the E/I balance and its role in neurodevelopmental disorders."
+        },
+        "filled": true,
+        "author_pub_id": "JXtOJyAAAAAJ:6yz0xqPARnAC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.06.11.598476.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ZrmiADA9omAJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

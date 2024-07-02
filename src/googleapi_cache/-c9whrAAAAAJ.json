@@ -1,0 +1,155 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Recollection and familiarity in the search superiority effect: Event-related potentials, receiver operating characteristics, and remember\u2013know judgments of incidental and intentional memory of objects in scenes",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Jason Helbing and Dejan Draschkow and Melissa L-H Vo",
+            "publisher": "OSF"
+        },
+        "filled": true,
+        "author_pub_id": "-c9whrAAAAAJ:epqYDVWIO7EC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/yd729/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:eSNYeH8ReqMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Multifaceted consequences of visual distraction during natural behaviour",
+            "pub_year": 2024,
+            "citation": "Communications Psychology 2 (1), 49, 2024",
+            "author": "Levi Kumle and Melissa L-H V\u00f5 and Anna C Nobre and Dejan Draschkow",
+            "journal": "Communications Psychology",
+            "volume": "2",
+            "number": "1",
+            "pages": "49",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Visual distraction is a ubiquitous aspect of everyday life. Studying the consequences of distraction during temporally extended tasks, however, is not tractable with traditional methods. Here we developed a virtual reality approach that segments complex behaviour into cognitive subcomponents, including encoding, visual search, working memory usage, and decision-making. Participants copied a model display by selecting objects from a resource pool and placing them into a workspace. By manipulating the distractibility of objects in the resource pool, we discovered interfering effects of distraction across the different cognitive subcomponents. We successfully traced the consequences of distraction all the way from overall task performance to the decision-making processes that gate memory usage. Distraction slowed down behaviour and increased costly body movements. Critically, distraction increased encoding \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "-c9whrAAAAAJ:0KyAp5RtaNEC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s44271-024-00099-0",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JM29R96_FycJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "More than meets the eye: Neural evidence for scene grammar representations during individual object processing.",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Aylin Kallmayer and Leila Zacharias and Luisa Jetter and Melissa L-H Vo",
+            "publisher": "OSF",
+            "abstract": "Objects in real-world scenes adhere to regular arrangements. The resulting compositions can be described by a scene grammar\u2013a framework that captures hierarchically structured relationships between objects in real-world scenes wherein phrases refer to clusters of frequently co-occurring objects. Within such phrases, anchor objects (eg, sink) are predictive of surrounding local objects (eg, toothbrush). Do neural representations of objects follow the structure suggested by scene grammar? In this EEG study we characterize the temporal dynamics of phrase specific shared representations quantified via crossclassification analysis. That is, training classifiers on an object categorization task based on neural data from one type of object (anchor or local) and testing generalizations to the held out set of objects. We find an early cluster of timepoints between 130 and 160 ms which carry phrase specific shared representations. Next, we predict the format of shared representations from a range of encoded features in a generalized linear model using representational similarity analysis (RSA). We find that, in general, classifiers use similarity in high-level visual and semantic features when generalizing between anchor and local objects and not just similarity in low-level visual features between stimuli. Crucially,\u201cupward\u201d generalization from local to anchor objects was driven by co-occurrence statistics and high-level visual features.\u201cDownward\u201d generalization was driven by high-level semantic features, action similarity and co-occurrence statistics. We offer novel insights into the dynamics and format of neural representations underlying the intricate \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "-c9whrAAAAAJ:ipzZ9siozwsC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/hs835/download",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:zWh-TvNI0VQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Using a flashlight-contingent window paradigm to investigate visual search and object memory in virtual reality and on computer screens",
+            "pub_year": 2024,
+            "citation": "Scientific Reports 14 (1), 8596, 2024",
+            "author": "Julia Beitner and Jason Helbing and Erwan Jo\u00ebl David and Melissa L\u00ea-Hoa V\u00f5",
+            "journal": "Scientific Reports",
+            "volume": "14",
+            "number": "1",
+            "pages": "8596",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "A popular technique to modulate visual input during search is to use gaze-contingent windows. However, these are often rather discomforting, providing the impression of visual impairment. To counteract this, we asked participants in this study to search through illuminated as well as dark three-dimensional scenes using a more naturalistic flashlight with which they could illuminate the rooms. In a surprise incidental memory task, we tested the identities and locations of objects encountered during search. Importantly, we tested this study design in both immersive virtual reality (VR; Experiment 1) and on a desktop-computer screen (Experiment 2). As hypothesized, searching with a flashlight increased search difficulty and memory usage during search. We found a memory benefit for identities of distractors in the flashlight condition in VR but not in the computer screen experiment. Surprisingly, location memory was \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "-c9whrAAAAAJ:uc_IGeMz5qoC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-024-58941-8",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:3g4tj8yg3zUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The Salient360! toolbox: Handling gaze data in 3D made easy",
+            "pub_year": 2024,
+            "citation": "Computers & Graphics 119, 103890, 2024",
+            "author": "Erwan David and Jes\u00fas Guti\u00e9rrez and Melissa L\u00e8-Hoa V\u00f5 and Antoine Coutrot and Matthieu Perreira Da Silva and Patrick Le Callet",
+            "journal": "Computers & Graphics",
+            "volume": "119",
+            "pages": "103890",
+            "publisher": "Pergamon",
+            "abstract": "Eye tracking has historically been a very popular tool. The data it records allow us to understand how people behave and what they attend to within our visual world; under this perspective the experiments, applications and use-cases are endless. Therefore, it is not surprising to witness a strong rise in the use of eXtended Reality (XR) devices with embedded eye trackers in research. These devices allow for less obtrusive experimenting conditions, and a significantly higher experimental control compared to traditional desktop testing. The use of eye tracking in XR is increasing and so is the need for a toolbox enabling consensus about eye tracking methods in 3D. We present the Salient360! toolbox: it implements functions to identify saccades and fixations and output gaze features (e.g., saccade directions) to generate saliency maps, fixation maps, and scanpath data. It implements comparisons of gaze data with \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "-c9whrAAAAAJ:9Nmd_mFXekcC",
+        "num_citations": 0,
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0097849324000177",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:PzT6cEfNYrcJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "More is not always better: Temporal neural signatures of object-driven versus scene-driven human scene categorization",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Elia Samuel Rothenberg and Aylin Kallmayer and Sandro Wiesmann and Melissa L-H Vo",
+            "publisher": "OSF",
+            "abstract": "Scene categorization is an impressively rapid process (Potter et al., 2014). Examining the question which type of visual information is crucial for scene categorization to operate efficiently in the early stages of perception has sparked an ongoing debate among cognitive psychologists. Explanatory propositions have emphasized the importance of either object-centered (eg, De Graef et al. 1990) or scene-centered (eg, Greene & Oliva, 2009) processing routes with many also acknowledging integrative dual pathways to scene recognition (eg, MacEvoy & Epstein, 2011). While there is ample evidence for the importance of both local and global scene information, recent work by our research group (Wiesmann & V\u00f5, 2022; Wiesmann & V\u00f5, 2023a; Wiesmann & V\u00f5, 2023b) has suggested that object information is generally more useful to observers for rapid scene categorization, especially if these objects exhibit high specificity to a given scene category and demonstrate frequent occurrence within scenes belonging to that particular category. With increasing stimulus onset asynchrony and decreasing object diagnosticity, utility of global scene information is thought to increase. In this experiment, we now intend to use electroencephalography (EEG) to investigate the temporal dynamics and neural signatures of local and global scene information in the scene categorization process."
+        },
+        "filled": true,
+        "author_pub_id": "-c9whrAAAAAJ:yB1At4FlUx8C",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/zm97y/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:QuLjFr4u5zcJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Development of Scene Hierarchy",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Dilara Deniz T\u00fcrk and Melissa L-H Vo",
+            "publisher": "OSF",
+            "abstract": "The arrangement of visual scenes enables us to anticipate the typical spatial placement of objects within them (Biederman, Mezzanotte & Rabinowitz, 1982). Just as the distinction between semantics and syntax exists in language, we possess knowledge of object locations within a scene. We designate this configuration as scene grammar (for a review, see V\u00f5, 2021), which adheres to physical principles and customary usage. Studies have demonstrated that scene grammar can be hierarchically structured (V\u00f5, Boettcher & Draschkow, 2019). Building upon these findings, objects linked by spatial proximity create clusters termed\" phrases.\" Each phrase is centered around an anchor object (eg, toilet), indicating the identity and location of other objects (local objects, eg, toilet paper) within that cluster. In a prior study within our research group (Turini & V\u00f5, 2022), this hierarchy was examined across two modalities (verbal and non-verbal) using the odd-one-out task which was previously employed to investigate the perceptual and conceptual dimensions that underlie the cognitive representation of objects (Hebart et al., 2019). Participants were instructed to choose the \u201codd\u201d object from triplets without receiving additional clarification regarding the criteria for the oddness of the objects. Stronger similarity judgements were observed for object pairs belonging to the same scene and pairs belonging to the same phrase of a scene compared to those in different phrases of the same scene, indicating the influence of spatial context on perceptual judgements. The influence of the scene hierarchy on similarity ratings manifested itself similarly across both \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "-c9whrAAAAAJ:nrtMV_XWKgEC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/tzxcu/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YFIYYH98d7kJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Making a scene\u2013using GAN generated scenes to test the role of real-world co-occurence statistics and hierarchical feature spaces in scene understanding.",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Aylin Kallmayer and Melissa V\u00f5",
+            "abstract": "Our visual surroundings are highly complex. Despite this, we understand and navigate them effortlessly. This requires a complex series of transformations resulting in representations that not only span low-to high-level visual features (eg, contours, textures, object parts and objects), but likely also reflect co-occurrence statistics of objects in real-world scenes. Here, so-called anchor objects reflect clustering statistics in real-world scenes, anchoring predictions towards frequently co-occuring smaller objects, while so-called diagnostic objects predict the larger semantic context. We investigate which of these properties underly scene understanding across two dimensions\u2013realism and categorisation\u2013using scenes generated from Generative Adversarial Networks (GANs) which naturally vary along these dimensions. We show that anchor objects and mainly high-level features extracted from a range of pre-trained deep neural networks (DNNs) drove realism both at first glance and after initial processing. Categorisation performance was mainly determined by diagnostic objects, regardless of realism and DNN features, also at first glance and after initial processing. Our results are testament to the visual system\u2019s ability to pick up on reliable, category specific sources of information that are flexible towards disturbances across the visual feature hierarchy."
+        },
+        "filled": true,
+        "author_pub_id": "-c9whrAAAAAJ:t7zJ5fGR-2UC",
+        "num_citations": 0,
+        "pub_url": "https://www.researchsquare.com/article/rs-3786230/latest",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:bTAHAaINPrYJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

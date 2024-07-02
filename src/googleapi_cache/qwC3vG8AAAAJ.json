@@ -1,0 +1,236 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Explanatory models in neuroscience, Part 1: Taking mechanistic abstraction seriously",
+            "pub_year": 2024,
+            "citation": "Cognitive Systems Research, 101244, 2024",
+            "author": "Rosa Cao and Daniel Yamins",
+            "journal": "Cognitive Systems Research",
+            "pages": "101244",
+            "publisher": "Elsevier",
+            "abstract": "Despite the recent success of neural network models in mimicking animal performance on various tasks, critics worry that these models fail to illuminate brain function. We take it that a central approach to explanation in systems neuroscience is that of mechanistic modeling, where understanding the system requires us to characterize its parts, organization, and activities, and how those give rise to behaviors of interest. However, it remains controversial what it takes for a model to be mechanistic, and whether computational models such as neural networks qualify as explanatory on this approach.We argue that certain kinds of neural network models are actually good examples of mechanistic models, when an appropriate notion of mechanistic mapping is deployed. Building on existing work on model-to-mechanism mapping (3M), we describe criteria delineating such a notion, which we call 3M++. These criteria \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:a0OBvERweLwC",
+        "num_citations": 34,
+        "citedby_url": "/scholar?hl=en&cites=1001412319893604489",
+        "cites_id": [
+            "1001412319893604489"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S138904172400038X",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:iUj1ADO75Q0J:scholar.google.com/",
+        "cites_per_year": {
+            "2021": 2,
+            "2022": 6,
+            "2023": 14,
+            "2024": 12
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "3D-IntPhys: towards more generalized 3D-grounded visual intuitive physics under challenging scenes",
+            "pub_year": 2024,
+            "citation": "Advances in Neural Information Processing Systems 36, 2024",
+            "author": "Haotian Xue and Antonio Torralba and Josh Tenenbaum and Dan Yamins and Yunzhu Li and Hsiao-Yu Tung",
+            "journal": "Advances in Neural Information Processing Systems",
+            "volume": "36",
+            "abstract": "Given a visual scene, humans have strong intuitions about how a scene can evolve over time under given actions. The intuition, often termed visual intuitive physics, is a critical ability that allows us to make effective plans to manipulate the scene to achieve desired outcomes without relying on extensive trial and error. In this paper, we present a framework capable of learning 3D-grounded visual intuitive physics models from videos of complex scenes with fluids. Our method is composed of a conditional Neural Radiance Field (NeRF)-style visual frontend and a 3D point-based dynamics prediction backend, using which we can impose strong relational and structural inductive bias to capture the structure of the underlying environment. Unlike existing intuitive point-based dynamics works that rely on the supervision of dense point trajectory from simulators, we relax the requirements and only assume access to multi-view RGB images and (imperfect) instance masks acquired using color prior. This enables the proposed model to handle scenarios where accurate point estimation and tracking are hard or impossible. We generate datasets including three challenging scenarios involving fluid, granular materials, and rigid objects in the simulation. The datasets do not include any dense particle information so most previous 3D-based intuitive physics pipelines can barely deal with that. We show our model can make long-horizon future predictions by learning from raw images and significantly outperforms models that do not employ an explicit 3D representation space. We also show that once trained, our model can achieve strong generalization in complex \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:BrmTIyaxlBUC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=10708783696087646423",
+        "cites_id": [
+            "10708783696087646423"
+        ],
+        "pub_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/164687cb815daae754d33364716e65e6-Abstract-Conference.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:14DMtQg-nZQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1,
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Explanatory models in neuroscience, Part 2: Functional intelligibility and the contravariance principle",
+            "pub_year": 2024,
+            "citation": "Cognitive Systems Research 85, 101200, 2024",
+            "author": "Rosa Cao and Daniel Yamins",
+            "journal": "Cognitive Systems Research",
+            "volume": "85",
+            "pages": "101200",
+            "publisher": "Elsevier",
+            "abstract": "Computational modeling plays an increasingly important role in neuroscience, highlighting the philosophical question of how computational models explain. In the particular case of neural network models, concerns have been raised about their intelligibility, and how these models relate (if at all) to what is found in the brain. We claim that what makes a system intelligible is an understanding of the dependencies between its behavior and the factors that are responsible for that behavior. In biology, many of these dependencies are naturally \u201ctop-down\u201d, as ethological imperatives interact with evolutionary and developmental constraints under natural selection to produce systems with capabilities and behaviors appropriate to their evolutionary needs. We describe how the optimization techniques used to construct neural network models capture some key aspects of these dependencies, and thus help explain why brain \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:_B80troHkn4C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=16119848710825441438",
+        "cites_id": [
+            "16119848710825441438"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S1389041723001341",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:nvjJ8f40td8J:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Physion++: Evaluating physical scene understanding that requires online inference of different physical properties",
+            "pub_year": 2024,
+            "citation": "Advances in Neural Information Processing Systems 36, 2024",
+            "author": "Hsiao-Yu Tung and Mingyu Ding and Zhenfang Chen and Daniel Bear and Chuang Gan and Josh Tenenbaum and Dan Yamins and Judith Fan and Kevin Smith",
+            "journal": "Advances in Neural Information Processing Systems",
+            "volume": "36",
+            "abstract": "General physical scene understanding requires more than simply localizing and recognizing objects--it requires knowledge that objects can have different latent properties (eg, mass or elasticity), and that those properties affect the outcome of physical events. While there has been great progress in physical and video prediction models in recent years, benchmarks to test their performance typically do not require an understanding that objects have individual physical properties, or at best test only those properties that are directly observable (eg, size or color). This work proposes a novel dataset and benchmark, termed Physion++, that rigorously evaluates visual physical prediction in artificial systems under circumstances where those predictions rely on accurate estimates of the latent physical properties of objects in the scene. Specifically, we test scenarios where accurate prediction relies on estimates of properties such as mass, friction, elasticity, and deformability, and where the values of those properties can only be inferred by observing how objects move and interact with other objects or fluids. We evaluate the performance of a number of state-of-the-art prediction models that span a variety of levels of learning vs. built-in knowledge, and compare that performance to a set of human predictions. We find that models that have been trained using standard regimes and datasets do not spontaneously learn to make inferences about latent properties, but also that models that encode objectness and physical states tend to make better predictions. However, there is still a huge gap between all models and human performance, and all models' \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:5ugPr518TE4C",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=2183333906365352376",
+        "cites_id": [
+            "2183333906365352376"
+        ],
+        "pub_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d3e8011c912e651ab2a76e7935a1e464-Abstract-Datasets_and_Benchmarks.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:uAn5up7CTB4J:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A unifying framework for functional organization in early and higher ventral visual cortex",
+            "pub_year": 2024,
+            "citation": "Neuron, 2024",
+            "author": "Eshed Margalit and Hyodong Lee and Dawn Finzi and James J DiCarlo and Kalanit Grill-Spector and Daniel LK Yamins",
+            "journal": "Neuron",
+            "publisher": "Elsevier",
+            "abstract": "A key feature of cortical systems is functional organization: the arrangement of functionally distinct neurons in characteristic spatial patterns. However, the principles underlying the emergence of functional organization in the cortex are poorly understood. Here, we develop the topographic deep artificial neural network (TDANN), the first model to predict several aspects of the functional organization of multiple cortical areas in the primate visual system. We analyze the factors driving the TDANN's success and find that it balances two objectives: learning a task-general sensory representation and maximizing the spatial smoothness of responses according to a metric that scales with cortical surface area. In turn, the representations learned by the TDANN are more brain-like than in spatially unconstrained models. Finally, we provide evidence that the TDANN's functional organization balances performance with between \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:WqliGbK-hY8C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=202253939293707215",
+        "cites_id": [
+            "202253939293707215"
+        ],
+        "pub_url": "https://www.cell.com/neuron/abstract/S0896-6273(24)00279-4",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:z1sG3uKMzgIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Are these the same apple? comparing images based on object intrinsics",
+            "pub_year": 2024,
+            "citation": "Advances in Neural Information Processing Systems 36, 2024",
+            "author": "Klemen Kotar and Stephen Tian and Hong-Xing Yu and Dan Yamins and Jiajun Wu",
+            "journal": "Advances in Neural Information Processing Systems",
+            "volume": "36",
+            "abstract": "The human visual system can effortlessly recognize an object under different extrinsic factors such as lighting, object poses, and background, yet current computer vision systems often struggle with these variations. An important step to understanding and improving artificial vision systems is to measure image similarity purely based on intrinsic object properties that define object identity. This problem has been studied in the computer vision literature as re-identification, though mostly restricted to specific object categories such as people and cars. We propose to extend it to general object categories, exploring an image similarity metric based on object intrinsics. To benchmark such measurements, we collect the Common paired objects Under differenT Extrinsics (CUTE) dataset of 18, 000 images of 180 objects under different extrinsic factors such as lighting, poses, and imaging conditions. While existing methods such as LPIPS and CLIP scores do not measure object intrinsics well, we find that combining deep features learned from contrastive self-supervised learning with foreground filtering is a simple yet effective approach to approximating the similarity. We conduct an extensive survey of pre-trained features and foreground extraction methods to arrive at a strong baseline that best measures intrinsic object-centric image similarity among current methods. Finally, we demonstrate that our approach can aid in downstream applications such as acting as an analog for human subjects and improving generalizable re-identification. Please see our project website at https://s-tian. github. io/projects/cute/for visualizations of the data and demos of our \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:HE397vMXCloC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=13467557835464201948",
+        "cites_id": [
+            "13467557835464201948"
+        ],
+        "pub_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/803c6ab3d62346e004ef70211d2d15b8-Abstract-Datasets_and_Benchmarks.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:3FbfRn9g5roJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "The BabyView dataset: High-resolution egocentric videos of infants' and young children's everyday experiences",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.10447, 2024",
+            "author": "Bria Long and Violet Xiang and Stefan Stojanov and Robert Z Sparks and Zi Yin and Grace E Keene and Alvin WM Tan and Steven Y Feng and Chengxu Zhuang and Virginia A Marchman and Daniel LK Yamins and Michael C Frank",
+            "journal": "arXiv preprint arXiv:2406.10447",
+            "abstract": "Human children far exceed modern machine learning algorithms in their sample efficiency, achieving high performance in key domains with much less data than current models. This ''data gap'' is a key challenge both for building intelligent artificial systems and for understanding human development. Egocentric video capturing children's experience -- their ''training data'' -- is a key ingredient for comparison of humans and models and for the development of algorithmic innovations to bridge this gap. Yet there are few such datasets available, and extant data are low-resolution, have limited metadata, and importantly, represent only a small set of children's experiences. Here, we provide the first release of the largest developmental egocentric video dataset to date -- the BabyView dataset -- recorded using a high-resolution camera with a large vertical field-of-view and gyroscope/accelerometer data. This 493 hour dataset includes egocentric videos from children spanning 6 months - 5 years of age in both longitudinal, at-home contexts and in a preschool environment. We provide gold-standard annotations for the evaluation of speech transcription, speaker diarization, and human pose estimation, and evaluate models in each of these domains. We train self-supervised language and vision models and evaluate their transfer to out-of-distribution tasks including syntactic structure learning, object recognition, depth estimation, and image segmentation. Although performance in each scales with dataset size, overall performance is relatively lower than when models are trained on curated datasets, especially in the visual domain. Our dataset stands as an \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:N5tVd3kTz84C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.10447",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:_F0haxmkfEMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Animate Agent World Modeling Benchmark",
+            "pub_year": 2024,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society 46, 2024",
+            "author": "Logan Matthew Cross and Violet Xiang and Nick Haber and Daniel Yamins",
+            "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+            "volume": "46",
+            "abstract": "To advance the capacity of intuitive psychology in machines, we introduce the Animate Agent World Modeling Benchmark. This benchmark features agents engaged in a diverse repertoire of behaviors, such as goal-directed interactions with objects and multi-agent interactions, all governed by realistic physics. Humans tend to predict the future based on expected events rather than simulating step-by-step. Thus, our benchmark includes a cognitively-inspired evaluation pipeline designed to assess whether the simulated trajectories of world models capture the correct sequences of events. To perform well, models need to leverage predictive cues from the observations to accurately simulate the goals of animate agents over long horizons. We demonstrate that current state-of-the-art models perform poorly in our evaluations. A hierarchical oracle model sets an upper bound for performance, suggesting that to excel, a model should scaffold their predictions with abstractions like goals that guide the simulation process towards relevant future events"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:PR6Y55bgFSsC",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/7r41x81m",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:AF0m716RccwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Probabilistic simulation supports generalizable intuitive physics",
+            "pub_year": 2024,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society 46, 2024",
+            "author": "Haoliang Wang and Khaled Jedoui and Rahul Venkatesh and Felix Jedidja Binder and Josh Tenenbaum and Judith E Fan and Daniel Yamins and Kevin A Smith",
+            "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+            "volume": "46",
+            "abstract": "How do people perform general-purpose physical reasoning across a variety of scenarios in everyday life? Across two studies with seven different physical scenarios, we asked participants to predict whether or where two objects will make contact. People achieved high accuracy and were highly consistent with each other in their predictions. We hypothesize that this robust generalization is a consequence of mental simulations of noisy physics. We designed an \"intuitive physics engine'' model to capture this generalizable simulation. We find that this model generalized in human-like ways to unseen stimuli and to a different query of predictions. We evaluated several state-of-the-art deep learning and scene feature models on the same task and found that they could not explain human predictions as well. This study provides evidence that human's robust generalization in physics predictions are supported by a probabilistic simulation model, and suggests the need for structure in learned dynamics models."
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:LjlpjdlvIbIC",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/93j3f86q",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:7n1HVHWGPbMJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Let's move forward: Image-computable models and a common model evaluation scheme are prerequisites for a scientific understanding of human vision\u2013CORRIGENDUM",
+            "pub_year": 2024,
+            "citation": "Behavioral and Brain Sciences 47, e66, 2024",
+            "author": "James J DiCarlo and Daniel LK Yamins and Michael E Ferguson and Evelina Fedorenko and Matthias Bethge and Tyler Bonnen and Martin Schrimpf",
+            "journal": "Behavioral and Brain Sciences",
+            "volume": "47",
+            "pages": "e66",
+            "publisher": "Cambridge University Press",
+            "abstract": "DiCarlo, JJ, Yamins, DLK, Ferguson, ME, Fedorenko, E., Bethge, M., Bonnen, T., & Schrimpf, M.(2023). Let's move forward: Image-computable models and a common model evaluation scheme are prerequisites for a scientific understanding of human vision. Behavioral and Brain Sciences, 46, e390. Google Scholar"
+        },
+        "filled": true,
+        "author_pub_id": "qwC3vG8AAAAJ:PELIpwtuRlgC",
+        "num_citations": 0,
+        "pub_url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/lets-move-forward-imagecomputable-models-and-a-common-model-evaluation-scheme-are-prerequisites-for-a-scientific-understanding-of-human-vision-corrigendum/4CC1766D3C5337FD5F46B825AF74D597",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:R_Qj6o1IBjoJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

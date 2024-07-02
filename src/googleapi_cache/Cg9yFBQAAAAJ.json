@@ -1,0 +1,230 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predictive processing of scenes and objects",
+            "pub_year": 2024,
+            "citation": "Nature Reviews Psychology 3 (1), 13-26, 2024",
+            "author": "Marius V Peelen and Eva Berlot and Floris P de Lange",
+            "volume": "3",
+            "number": "1",
+            "pages": "13-26",
+            "publisher": "Nature Publishing Group US",
+            "abstract": "Real-world visual input consists of rich scenes that are meaningfully composed of multiple objects that interact in complex but predictable ways. Despite this complexity, humans can recognize scenes and objects within scenes from a brief glance at an image. In this Review, we synthesize behavioural and neural findings that elucidate the mechanisms underlying this impressive ability. First, we review evidence that visual object and scene processing is partly implemented in parallel, enabling rapid computation of an initial gist of objects and scenes concurrently. Next, we discuss bidirectional interactions between object and scene processing, with scene information modulating the visual processing of objects and object information modulating the visual processing of scenes. Finally, we review evidence that objects also combine with each other to form object constellations, modulating the processing of individual \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:uWiczbcajpAC",
+        "num_citations": 8,
+        "citedby_url": "/scholar?hl=en&cites=17614843574537764731",
+        "cites_id": [
+            "17614843574537764731"
+        ],
+        "pub_url": "https://www.nature.com/articles/s44159-023-00254-0",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ez9lUud-dPQJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 4,
+            "2024": 4
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Prior knowledge biases the visual memory of body postures",
+            "pub_year": 2024,
+            "citation": "Iscience 27 (4), 2024",
+            "author": "Qiu Han and Marco Gandolfo and Marius V Peelen",
+            "journal": "Iscience",
+            "volume": "27",
+            "number": "4",
+            "publisher": "Elsevier",
+            "abstract": "Body postures provide information about others' actions, intentions, and emotions. Little is known about how postures are represented in the visual system. Considering our extensive visual and motor experience with body postures, we hypothesized that priors derived from this experience may systematically bias visual body posture representations. We examined two priors: gravity and biomechanical constraints. Gravity pushes body parts downward, while biomechanical constraints limit the range of possible postures (e.g., an arm raised far behind the head cannot go down further). Across three experiments (N = 246), we probed participants' visual memory of briefly presented postures using change discrimination and adjustment tasks. Results showed that lifted arms were misremembered as lower and as more similar to the nearest biomechanically plausible postures. Inverting the body stimuli eliminated both \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:b1wdh0AR-JQC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=16151267758365747052,12563895523926540323",
+        "cites_id": [
+            "16151267758365747052",
+            "12563895523926540323"
+        ],
+        "pub_url": "https://www.cell.com/iscience/fulltext/S2589-0042(24)00696-5",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:bCecAXTUJOAJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Searching near and far: The attentional template incorporates viewing distance.",
+            "pub_year": 2024,
+            "citation": "Journal of Experimental Psychology: Human Perception and Performance 50 (2), 216, 2024",
+            "author": "Surya Gayet and Elisa Battistoni and Sushrut Thorat and Marius V Peelen",
+            "journal": "Journal of Experimental Psychology: Human Perception and Performance",
+            "volume": "50",
+            "number": "2",
+            "pages": "216",
+            "publisher": "American Psychological Association",
+            "abstract": "According to theories of visual search, observers generate a visual representation of the search target (the \u201cattentional template\u201d) that guides spatial attention toward target-like visual input. In real-world vision, however, objects produce vastly different visual input depending on their location: your car produces a retinal image that is 10 times smaller when it is parked 50 compared to 5 m away. Across four experiments, we investigated whether the attentional template incorporates viewing distance when observers search for familiar object categories. On each trial, participants were precued to search for a car or person in the near or far plane of an outdoor scene. In \u201csearch trials,\u201d the scene reappeared and participants had to indicate whether the search target was present or absent. In intermixed \u201ccatch-trials,\u201d two silhouettes were briefly presented on either side of fixation (matching the shape and/or predicted size of \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:hMsQuOkrut0C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=2474119096063969952,4863782645371369315",
+        "cites_id": [
+            "2474119096063969952",
+            "4863782645371369315"
+        ],
+        "pub_url": "https://psycnet.apa.org/record/2024-55719-006",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oErnnDXWVSIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "What drives the automatic retrieval of real-world object size knowledge?",
+            "pub_year": 2024,
+            "citation": "Journal of Experimental Psychology: Human Perception and Performance, 2024",
+            "author": "Simen Hagen and Yuanfang Zhao and Lydia Moonen and Neele Ulken and Marius V Peelen",
+            "journal": "Journal of Experimental Psychology: Human Perception and Performance",
+            "publisher": "American Psychological Association",
+            "abstract": "Real-world object size is a behaviorally relevant object property that is automatically retrieved when viewing object images: participants are faster to indicate the bigger of two object images when this object is also bigger in the real world. What drives this size Stroop effect? One possibility is that it reflects the automatic retrieval of real-world size after objects are recognized at the basic level (eg, recognizing an object as a plane activates large real-world size). An alternative possibility is that the size Stroop effect is driven by automatic associations between low-/mid-level visual features (eg, rectilinearity) and real-world size, bypassing object recognition. Here, we tested both accounts. In Experiment 1, objects were displayed upright and inverted, slowing down recognition while equating visual features. Inversion strongly reduced the Stroop effect, indicating that object recognition contributed to the Stroop effect \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:vDijr-p_gm4C",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=13730877495173756318",
+        "cites_id": [
+            "13730877495173756318"
+        ],
+        "pub_url": "https://psycnet.apa.org/record/2024-48813-001",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:nrU8IlXgjb4J:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Young among old: Target-distractor categories differentially affect older and younger adults in an online hybrid search task",
+            "pub_year": 2024,
+            "citation": "OSF, 2024",
+            "author": "Gaspar Perez Ayora and Iris Wiegand and Joukje Oosterman and Marius Peelen",
+            "publisher": "OSF",
+            "abstract": "Visual and Memory search task with manipulations on memory set size and the categories of targets and distractors. We aim to reveal differences in reaction times and accuracy between younger and older adults, as well as to explore the relationship of older adults' scores and cognitive reserve."
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:MLfJN-KU85MC",
+        "num_citations": 0,
+        "pub_url": "https://osf.io/zds73/resources",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:7UJ6MK5X29cJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Predicting cued and oddball visual search performance from fMRI, MEG, and DNN neural representational similarity",
+            "pub_year": 2024,
+            "citation": "Journal of Neuroscience 44 (12), 2024",
+            "author": "Lu-Chun Yeh and Sushrut Thorat and Marius V Peelen",
+            "journal": "Journal of Neuroscience",
+            "volume": "44",
+            "number": "12",
+            "publisher": "Society for Neuroscience",
+            "abstract": "Capacity limitations in visual tasks can be observed when the number of task-related objects increases. An influential idea is that such capacity limitations are determined by competition at the neural level: two objects that are encoded by shared neural populations interfere more in behavior (e.g., visual search) than two objects encoded by separate neural populations. However, the neural representational similarity of objects varies across brain regions and across time, raising the questions of where and when competition determines task performance. Furthermore, it is unclear whether the association between neural representational similarity and task performance is common or unique across tasks. Here, we used neural representational similarity derived from fMRI, MEG, and a deep neural network (DNN) to predict performance on two visual search tasks involving the same objects and requiring the same \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:ILKRHgRFtOwC",
+        "num_citations": 0,
+        "pub_url": "https://www.jneurosci.org/content/44/12/e1107232024.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:4-r2Hmb5rTkJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Category-based attention facilitates memory search",
+            "pub_year": 2024,
+            "citation": "Eneuro 11 (2), 2024",
+            "author": "Linlin Shang and Lu-Chun Yeh and Yuanfang Zhao and Iris Wiegand and Marius V Peelen",
+            "journal": "Eneuro",
+            "volume": "11",
+            "number": "2",
+            "publisher": "Society for Neuroscience",
+            "abstract": "We often need to decide whether the object we look at is also the object we look for. When we look for one specific object, this process can be facilitated by feature-based attention. However, when we look for many objects at the same time (e.g., the products on our shopping list), such a strategy may no longer be possible, as research has shown that we can actively prepare to detect only one or two objects at a time. Therefore, looking for multiple objects additionally requires long-term memory search, slowing down decision-making. Interestingly, however, previous research has shown that distractor objects can be efficiently rejected during memory search when they are from a different category than the items in the memory set. Here, using EEG, we show that this efficiency is supported by top-down attention at the category level. In Experiment 1, human participants (both sexes) performed a memory search task on \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:EYYDruWGBe4C",
+        "num_citations": 0,
+        "pub_url": "https://www.eneuro.org/content/11/2/ENEURO.0012-24.2024.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:_67r00ISW38J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Electrophysiological correlates of visual memory search",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.05. 17.594466, 2024",
+            "author": "Lauren H Williams and Iris Wiegand and Mark Lavelle and Jeremy M Wolfe and Marius V Peelen and Keisuke Fukuda and Trafton Drew",
+            "journal": "bioRxiv",
+            "pages": "2024.05. 17.594466",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "In everyday life, we frequently engage in hybrid search, where we look for multiple items stored in memory (e.g., a mental shopping list) in our visual environment. Across three experiments, we used event-related potentials to better understand the contributions of visual working memory (VWM) and long-term memory (LTM) during the memory search component of hybrid search. Experiments 1 and 2 demonstrated that the FN400, an index of LTM recognition, and the CDA, an index of VWM, increased with memory set size (target load), suggesting that both VWM and LTM are involved in memory search, even when memory load exceeds capacity limitations of VWM. In Experiment 3, we used these electrophysiological indices to test how categorical similarity of targets and distractors affects memory search. The CDA and FN400 were modulated by memory set size only if items resembled targets. This suggests that dissimilar distractor items can be rejected before eliciting a memory search. Together, our findings demonstrate the interplay of VWM and LTM processes during memory search for multiple targets."
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:lmc2jWPfTJgC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.05.17.594466.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:COREuf9ZVq4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Body Posture Adjustment",
+            "pub_year": 2024,
+            "citation": "Radboud Data Repository, 2024",
+            "author": "MV Peelen and Q Han and M Gandolfo",
+            "publisher": "Radboud Data Repository",
+            "abstract": "Body Posture Adjustment Toggle navigation Radboud Repository Toggle navigation View \nItem Radboud Repository Collections Radboud University Datasets View Item Radboud \nRepository Collections Radboud University Datasets View Item Search Repository This \nCollection BrowseAll of RepositoryCollectionsDepartmentsDate IssuedAuthorsTitlesDocument \ntypeThis CollectionDepartmentsDate IssuedAuthorsTitlesDocument type StatisticsView Item \nStatistics Body Posture Adjustment Find Full text Creators Peelen, MV Han, Q. Gandolfo, M. \nDate of Archiving 2024 Archive Radboud Data Repository DOI https://doi.org/10.34973/zrd7-jf72 \nPublication type Dataset Access level Closed access Please use this identifier to cite or link to \nthis item: https://hdl.handle.net/2066/304074 https://hdl.handle.net/2066/304074 Display more \ndetails Upload Full Text Terms of Use Notice and Takedown Bookmark and Share Admin \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:tuHXwOkdijsC",
+        "num_citations": 0,
+        "pub_url": "https://repository.ubn.ru.nl/handle/2066/304074",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:lzi5LWVs7s4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Preparatory activity during visual search reflects attention-guiding objects rather than search targets",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.02. 02.578555, 2024",
+            "author": "Maelle Lerebourg and Floris P de Lange and Marius V Peelen",
+            "journal": "bioRxiv",
+            "pages": "2024.02. 02.578555",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Efficient behavior requires the rapid attentional selection of task-relevant objects. Previous research has shown that target-selective neurons in visual cortex increase their baseline firing rate when participants are cued to search for a target object. Such preparatory activity represents a key finding for theories of visual search, as it may reflect a top-down bias that guides spatial attention, favoring processing of target-matching input for subsequent report. However, in daily life, visual search is often guided by non-target objects that are neither externally cued nor reported. For instance, when looking for a pen, we may direct our attention to the office desk where we expect the pen to be. These 'anchor objects' (e.g., the desk) thereby guide search for associated objects (e.g., the pen) in scenes. Here, we used fMRI and eye tracking to test whether preparatory activity during visual search represents the target (the pen), the guiding anchor object (the desk) or both. In an anchor-guided search task, participants (N=34) learned associations between targets and anchors and searched for these targets in scenes. To fully dissociate target from anchor processing, target-anchor associations were reversed across different scene contexts. Participants' first fixations were reliably guided towards the target-associated anchor. Importantly, preparatory fMRI activity patterns in lateral occipital cortex (LOC) represented the target-associated anchor rather than the target. Whole-brain analyses additionally identified a region in the right intraparietal sulcus that represented the anchor. Our results show that preparatory activity in visual cortex represents a self-generated \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "Cg9yFBQAAAAJ:L7CI7m0gUJcC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.02.02.578555.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:TKU7csX-lB8J:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

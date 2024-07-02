@@ -1,0 +1,116 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Configuration-sensitive face-body interactions in primate visual cortex",
+            "pub_year": 2024,
+            "citation": "Progress in Neurobiology 232, 102545, 2024",
+            "author": "Yordanka Zafirova and Anna Bogn\u00e1r and Rufin Vogels",
+            "journal": "Progress in Neurobiology",
+            "volume": "232",
+            "pages": "102545",
+            "publisher": "Pergamon",
+            "abstract": "Traditionally, the neural processing of faces and bodies is studied separately, although they are encountered together, as parts of an agent. Despite its social importance, it is poorly understood how faces and bodies interact, particularly at the single-neuron level. Here, we examined the interaction between faces and bodies in the macaque inferior temporal (IT) cortex, targeting an fMRI-defined patch. We recorded responses of neurons to monkey images in which the face was in its natural location (natural face-body configuration), or in which the face was mislocated with respect to the upper body (unnatural face-body configuration). On average, the neurons did not respond stronger to the natural face-body configurations compared to the summed responses to their faces and bodies, presented in isolation. However, the neurons responded stronger to the natural compared to the unnatural face-body configurations \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:zCSUwVk65WsC",
+        "num_citations": 2,
+        "citedby_url": "/scholar?hl=en&cites=12029465494096697954",
+        "cites_id": [
+            "12029465494096697954"
+        ],
+        "pub_url": "https://www.sciencedirect.com/science/article/pii/S0301008223001466",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:YtpzzSE_8aYJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Theta activity discriminates high-level, species-specific body processes",
+            "pub_year": 2024,
+            "citation": "Imaging Neuroscience 2, 1-12, 2024",
+            "author": "Jane Chesley and Lars Riecke and Juanzhi Lu and Rufin Vogels and Beatrice de Gelder",
+            "journal": "Imaging Neuroscience",
+            "volume": "2",
+            "pages": "1-12",
+            "publisher": "MIT Press",
+            "abstract": "Among social stimuli that trigger rapid reactions, body images occupy a prominent place. Given that bodies carry information about other agents\u2019 intentions, actions and emotional expressions, a foundational question concerns the neural basis of body processing. Previous functional magnetic resonance imaging (fMRI) studies have investigated this but were not yet able to clarify the time course and its functional significance. The present EEG study investigated the role of slow oscillatory cortical activity in body processing and species-specificity. Human participants viewed naturalistic images of human and monkey bodies, faces, and objects, along with mosaic-scrambled versions to control for low-level visual features. Analysis of event-related theta power (4\u20137 Hz) combined with data-driven methods revealed a strong, body-evoked neural response that is specific to human bodies and spans a widespread \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:ubry08Y2EpUC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=8063937153096137698",
+        "cites_id": [
+            "8063937153096137698"
+        ],
+        "pub_url": "https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00150/120579",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:4rtevR3c6G8J:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Parallel Backpropagation for Shared-Feature Visualization",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2405.09827, 2024",
+            "author": "Alexander Lappe and Anna Bogn\u00e1r and Ghazaleh Ghamkhari Nejad and Albert Mukovskiy and Lucas Martini and Martin A Giese and Rufin Vogels",
+            "journal": "arXiv preprint arXiv:2405.09827",
+            "abstract": "High-level visual brain regions contain subareas in which neurons appear to respond more strongly to examples of a particular semantic category, like faces or bodies, rather than objects. However, recent work has shown that while this finding holds on average, some out-of-category stimuli also activate neurons in these regions. This may be due to visual features common among the preferred class also being present in other images. Here, we propose a deep-learning-based approach for visualizing these features. For each neuron, we identify relevant visual features driving its selectivity by modelling responses to images based on latent activations of a deep neural network. Given an out-of-category image which strongly activates the neuron, our method first identifies a reference image from the preferred category yielding a similar feature activation pattern. We then backpropagate latent activations of both images to the pixel level, while enhancing the identified shared dimensions and attenuating non-shared features. The procedure highlights image regions containing shared features driving responses of the model neuron. We apply the algorithm to novel recordings from body-selective regions in macaque IT cortex in order to understand why some images of objects excite these neurons. Visualizations reveal object parts which resemble parts of a macaque body, shedding light on neural preference of these objects."
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:U4n9YNQMCAIC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2405.09827",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:Kp0IoeXY4SQJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Location-specific deviant responses to object sequences in macaque inferior temporal cortex",
+            "pub_year": 2024,
+            "citation": "Scientific Reports 14 (1), 3757, 2024",
+            "author": "Hamideh Esmailpour and Rufin Vogels",
+            "journal": "Scientific Reports",
+            "volume": "14",
+            "number": "1",
+            "pages": "3757",
+            "publisher": "Nature Publishing Group UK",
+            "abstract": "Many species learn temporal regularities in their visual environment, demonstrating visual statistical learning. In this study, we explored the sensitivity of macaque inferior temporal (IT) cortical neurons to transition probabilities of sequentially presented visual images, presented at different locations in the visual field. We exposed monkeys to sequences of two images, where the first image was presented either foveally or peripherally, and the second image was consistently presented foveally. Following several weeks of exposure, we recorded IT responses to assess differences between the exposed (Fixed) and new, Deviant sequences, where the identity of the first image in a sequence differed from the exposure phase. While enhanced responses to Deviant sequences were observed when both images of a pair were foveally presented during exposure, no such deviant responses were present when the first image \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:BzfGm06jWhQC",
+        "num_citations": 0,
+        "pub_url": "https://www.nature.com/articles/s41598-024-54298-0",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:co211gh-oQ4J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "MacAction: Realistic 3D macaque body animation based on multi-camera markerless motion capture",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.01. 29.577734, 2024",
+            "author": "Lucas M Martini and Anna Bogn\u00e1r and Rufin Vogels and Martin A Giese",
+            "journal": "bioRxiv",
+            "pages": "2024.01. 29.577734",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Social interaction is crucial for survival in primates. For the study of social vision in monkeys, highly controllable macaque face avatars have recently been developed, while body avatars with realistic motion do not yet exist. Addressing this gap, we developed a pipeline for three-dimensional motion tracking based on synchronized multi-view video recordings, achieving sufficient accuracy for life-like full-body animation. By exploiting data-driven pose estimation models, we track the complete time course of individual actions using a minimal set of hand-labeled keyframes. Our approach tracks single actions more accurately than existing pose estimation pipelines for behavioral tracking of non-human primates, requiring less data and fewer cameras. This efficiency is also confirmed for a state-of-the-art human benchmark dataset. A behavioral experiment with real macaque monkeys demonstrates that animals perceive the generated animations as similar to genuine videos, and establishes an uncanny valley effect for bodies in monkeys."
+        },
+        "filled": true,
+        "author_pub_id": "fuQ8xgkAAAAJ:43bX7VzcjpAC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.01.29.577734.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:LxQIP7Di1OIJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

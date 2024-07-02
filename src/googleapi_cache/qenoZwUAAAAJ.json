@@ -1,0 +1,166 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A unifying framework for functional organization in early and higher ventral visual cortex",
+            "pub_year": 2024,
+            "citation": "Neuron, 2024",
+            "author": "Eshed Margalit and Hyodong Lee and Dawn Finzi and James J DiCarlo and Kalanit Grill-Spector and Daniel LK Yamins",
+            "journal": "Neuron",
+            "publisher": "Elsevier",
+            "abstract": "A key feature of cortical systems is functional organization: the arrangement of functionally distinct neurons in characteristic spatial patterns. However, the principles underlying the emergence of functional organization in the cortex are poorly understood. Here, we develop the topographic deep artificial neural network (TDANN), the first model to predict several aspects of the functional organization of multiple cortical areas in the primate visual system. We analyze the factors driving the TDANN's success and find that it balances two objectives: learning a task-general sensory representation and maximizing the spatial smoothness of responses according to a metric that scales with cortical surface area. In turn, the representations learned by the TDANN are more brain-like than in spatially unconstrained models. Finally, we provide evidence that the TDANN's functional organization balances performance with between \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:p__nRnzSRKYC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=202253939293707215",
+        "cites_id": [
+            "202253939293707215"
+        ],
+        "pub_url": "https://www.cell.com/neuron/abstract/S0896-6273(24)00279-4",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:z1sG3uKMzgIJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Probing Biological and Artificial Neural Networks with Task-dependent Neural Manifolds",
+            "pub_year": 2024,
+            "citation": "Conference on Parsimony and Learning, 395-418, 2024",
+            "author": "Michael Kuoch and Chi-Ning Chou and Nikhil Parthasarathy and Joel Dapello and James J DiCarlo and Haim Sompolinsky and SueYeon Chung",
+            "conference": "Conference on Parsimony and Learning",
+            "pages": "395-418",
+            "publisher": "PMLR",
+            "abstract": "In recent years, growth in our understanding of the computations performed in both biological and artificial neural networks has largely been driven by either low-level mechanistic studies or global normative approaches. However, concrete methodologies for bridging the gap between these levels of abstraction remain elusive. In this work, we investigate the internal mechanisms of neural networks through the lens of neural population geometry, aiming to provide understanding at an intermediate level of abstraction, as a way to bridge that gap. Utilizing manifold capacity theory (MCT) from statistical physics and manifold alignment analysis (MAA) from high-dimensional statistics, we probe the underlying organization of task-dependent manifolds in deep neural networks and neural recordings from the macaque visual cortex. Specifically, we quantitatively characterize how different learning objectives lead to differences in the organizational strategies of these models and demonstrate how these geometric analyses are connected to the decodability of task-relevant information. Furthermore, these metrics show that macaque visual cortex data are more similar to unsupervised DNNs in terms of geometrical properties such as manifold position and manifold alignment. These analyses present a strong direction for bridging mechanistic and normative theories in neural networks through neural population geometry, potentially opening up many future research avenues in both machine learning and neuroscience."
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:epqYDVWIO7EC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=3228716179122930873",
+        "cites_id": [
+            "3228716179122930873"
+        ],
+        "pub_url": "https://proceedings.mlr.press/v234/kuoch24a.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ucQtKUK0ziwJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Software and Methods for Controlling Neural Responses in Deep Brain Regions",
+            "pub_year": 2024,
+            "citation": "US Patent App. 18/482,806, 2024",
+            "author": "James Dicarlo and Pouya Bashivan and Kohitij Kar",
+            "abstract": "Techniques for non-invasively controlling targeted neural activity of a subject are provided herein. The techniques include applying a stimulus input to the subject, the stimulus input being formed by a deep artificial neural network (ANN) model and being configured to elicit targeted neural activity within a brain of the subject. The stimulus input may be a pattern of luminous power generated by the deep ANN model and applied to retinae of the subject. The stimulus input may be generated by the deep ANN model based on a mapping of the subject's neural responses to neurons of the deep ANN model."
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:4MWp96NkSFoC",
+        "num_citations": 0,
+        "pub_url": "https://patents.google.com/patent/US20240082534A1/en",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:GiNnVVNRPToJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Learning only a handful of latent variables produces neural-aligned CNN models of the ventral stream",
+            "pub_year": 2024,
+            "citation": "",
+            "author": "Yudi Xie and Esther Alter and Jeremy Schwartz and James J DiCarlo",
+            "abstract": "Image-computable modeling of primate ventral stream visual processing has made great strides via brainmapped versions of convolutional neural networks (CNNs) that are optimized on thousands of object categories (ImageNet), the performance of which strongly predicts CNNs\u2019 neural alignment. However, human and primate visual intelligence extends far beyond object categorization, encompassing a diverse range of tasks, such as estimating the latent variables of object position or pose in the image. The influence of task choice on neural alignment in CNNs, compared to CNN architecture, remains underexplored, partly due to the scarcity of largescale datasets with rich known labels beyond categories. 3D graphic engines, capable of creating training images with detailed information on various latent variables, offer a solution. Here, we asked how the choice of visual tasks that are used to train CNNs (ie, the set of latent variables to be estimated) affects their ventral stream neural alignment. We focused on the estimation of variables such as object position and pose, and we tested CNNs\u2019 neural alignment via the Brain-Score open science platform. We found some of these CNNs had neural alignment scores that were very close to those trained on ImageNet, even though their entire training experience has been on synthetic images. Additionally, we found training models on just a handful of latent variables achieved the same level of neural alignment as models trained on a much larger number of categories, suggesting that latent variable training is more efficient than category training in driving model-neural alignment. Moreover, we found \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:ML0RJ9NH7IQC",
+        "num_citations": 0,
+        "pub_url": "https://dspace.mit.edu/bitstream/handle/1721.1/153744/COSYNE2024_multitask_vision_dspace.pdf?sequence=1&isAllowed=y",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:bnIyS89ZQzcJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Strong and precise modulation of human percepts via robustified ANNs",
+            "pub_year": 2024,
+            "citation": "Advances in Neural Information Processing Systems 36, 2024",
+            "author": "Guy Gaziv and Michael Lee and James J DiCarlo",
+            "journal": "Advances in Neural Information Processing Systems",
+            "volume": "36",
+            "abstract": "The visual object category reports of artificial neural networks (ANNs) are notoriously sensitive to tiny, adversarial image perturbations. Because human category reports (aka human percepts) are thought to be insensitive to those same small-norm perturbations--and locally stable in general--this argues that ANNs are incomplete scientific models of human visual perception. Consistent with this, we show that when small-norm image perturbations are generated by standard ANN models, human object category percepts are indeed highly stable. However, in this very same\" human-presumed-stable\" regime, we find that robustified ANNs reliably discover low-norm image perturbations that strongly disrupt human percepts. These previously undetectable human perceptual disruptions are massive in amplitude, approaching the same level of sensitivity seen in robustified ANNs. Further, we show that robustified ANNs support precise perceptual state interventions: they guide the construction of low-norm image perturbations that strongly alter human category percepts toward specific prescribed percepts. In sum, these contemporary models of biological visual processing are now accurate enough to guide strong and precise interventions on human perception."
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:EkHepimYqZsC",
+        "num_citations": 0,
+        "pub_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d00904cebc0d5b69fada8ad33d0f1422-Abstract-Conference.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:APXw6_mt-vIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How does the primate brain combine generative and discriminative computations in vision?",
+            "pub_year": 2024,
+            "citation": "ArXiv, 2024",
+            "author": "Benjamin Peters and James J DiCarlo and Todd Gureckis and Ralf Haefner and Leyla Isik and Joshua Tenenbaum and Talia Konkle and Thomas Naselaris and Kimberly Stachenfeld and Zenna Tavares and Doris Tsao and Ilker Yildirim and Nikolaus Kriegeskorte",
+            "journal": "ArXiv",
+            "publisher": "arXiv",
+            "abstract": "Vision is widely understood as an inference problem. However, two contrasting conceptions of the inference process have each been influential in research on biological vision as well as the engineering of machine vision. The first emphasizes bottom-up signal flow, describing vision as a largely feedforward, discriminative inference process that filters and transforms the visual information to remove irrelevant variation and represent behaviorally relevant information in a format suitable for downstream functions of cognition and behavioral control. In this conception, vision is driven by the sensory data, and perception is direct because the processing proceeds from the data to the latent variables of interest. The notion of \u201cinference\u201d in this conception is that of the engineering literature on neural networks, where feedforward convolutional neural networks processing images are said to perform inference. The alternative \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:AvfA0Oy_GE0C",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10802669/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:w8Hc7q55jCIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Let's move forward: Image-computable models and a common model evaluation scheme are prerequisites for a scientific understanding of human vision\u2013CORRIGENDUM",
+            "pub_year": 2024,
+            "citation": "Behavioral and Brain Sciences 47, e66, 2024",
+            "author": "James J DiCarlo and Daniel LK Yamins and Michael E Ferguson and Evelina Fedorenko and Matthias Bethge and Tyler Bonnen and Martin Schrimpf",
+            "journal": "Behavioral and Brain Sciences",
+            "volume": "47",
+            "pages": "e66",
+            "publisher": "Cambridge University Press",
+            "abstract": "DiCarlo, JJ, Yamins, DLK, Ferguson, ME, Fedorenko, E., Bethge, M., Bonnen, T., & Schrimpf, M.(2023). Let's move forward: Image-computable models and a common model evaluation scheme are prerequisites for a scientific understanding of human vision. Behavioral and Brain Sciences, 46, e390. Google Scholar"
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:BUYA1_V_uYcC",
+        "num_citations": 0,
+        "pub_url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/lets-move-forward-imagecomputable-models-and-a-common-model-evaluation-scheme-are-prerequisites-for-a-scientific-understanding-of-human-vision-corrigendum/4CC1766D3C5337FD5F46B825AF74D597",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:R_Qj6o1IBjoJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Do Topographic Deep ANN Models of the Primate Ventral Stream Predict the Perceptual Effects of Direct IT Cortical Interventions?",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.01. 09.572970, 2024",
+            "author": "Martin Schrimpf and Paul McGrath and Eshed Margalit and James J DiCarlo",
+            "journal": "bioRxiv",
+            "pages": "2024.01. 09.572970",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Ever-advancing artificial neural network (ANN) models of the ventral visual stream capture core object recognition behavior and the neural mechanisms underlying it with increasing precision. These models take images as input, propagate through simulated neural representations that resemble biological neural representations at all stages of the primate ventral stream, and produce simulated behavioral choices that resemble primate behavioral choices. We here extend this modeling approach to make and test predictions of neural intervention experiments. Specifically, we enable a new prediction regime for topographic deep ANN (TDANN) models of primate visual processing through the development of perturbation modules that translate micro-stimulation, optogenetic suppression, and muscimol suppression into changes in model neural activity. This unlocks the ability to predict the behavioral effects from particular neural perturbations. We compare these predictions with the key results from the primate IT perturbation experimental literature via a suite of nine corresponding benchmarks. Without any fitting to the benchmarks, we find that TDANN models generated via co-training with both a spatial correlation loss and a standard categorization task qualitatively predict all nine behavioral results. In contrast, TDANN models generated via random topography or via topographic unit arrangement after classification training predict less than half of those results. However, the models' quantitative predictions are consistently misaligned with experimental data, over-predicting the magnitude of some behavioral effects and under-predicting others. None \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "qenoZwUAAAAJ:URolC5Kub84C",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.01.09.572970.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:-uZ5zoeQq9MJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

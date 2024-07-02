@@ -1,0 +1,212 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Systematic transition from boundary extension to contraction along an object-to-scene continuum",
+            "pub_year": 2024,
+            "citation": "Journal of Vision 24 (1), 9-9, 2024",
+            "author": "Jeongho Park and Emilie Josephs and Talia Konkle",
+            "journal": "Journal of Vision",
+            "volume": "24",
+            "number": "1",
+            "pages": "9-9",
+            "publisher": "The Association for Research in Vision and Ophthalmology",
+            "abstract": "After viewing a picture of an environment, our memory of it typically extends beyond what was presented, a phenomenon referred to as boundary extension. But, sometimes memory errors show the opposite pattern\u2014boundary contraction\u2014and the relationship between these phenomena is controversial. We constructed virtual three-dimensional environments and created a series of views at different distances, from object close-ups to wide-angle indoor views, and tested for memory errors along this object-to-scene continuum. Boundary extension was evident for close-scale views and transitioned parametrically to boundary contraction for far-scale views. However, this transition point was not tied to a specific position in the environment (eg, the point of reachability). Instead, it tracked with judgments of the best-looking view of the environment, in both rich-object and low-object environments. We offer a dynamic-tension account, where competition between object-based and scene-based affordances determines whether a view will extend or contract in memory. This study demonstrates that boundary extension and boundary contraction are not two separate phenomena but rather two parts of a continuum, suggesting a common underlying mechanism. The transition point between the two is not fixed but depends on the observer's judgment of the best-looking view of the environment. These findings provide new insights into how we perceive and remember a view of environment."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:zLWjf1WUPmwC",
+        "num_citations": 3,
+        "citedby_url": "/scholar?hl=en&cites=6495488704128148103",
+        "cites_id": [
+            "6495488704128148103"
+        ],
+        "pub_url": "https://jov.arvojournals.org/article.aspx?articleid=2793304",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:h-Ie1I-cJFoJ:scholar.google.com/",
+        "cites_per_year": {
+            "2023": 1,
+            "2024": 2
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Cognitive steering in deep neural networks via long-range modulatory feedback connections",
+            "pub_year": 2024,
+            "citation": "Advances in Neural Information Processing Systems 36, 2024",
+            "author": "Talia Konkle and George Alvarez",
+            "journal": "Advances in Neural Information Processing Systems",
+            "volume": "36",
+            "abstract": "Given the rich visual information available in each glance, humans can internally direct their visual attention to enhance goal-relevant information---a capacity often absent in standard vision models. Here we introduce cognitively and biologically-inspired long-range modulatory pathways to enablecognitive steering\u2019in vision models. First, we show that models equipped with these feedback pathways naturally show improved image recognition, adversarial robustness, and increased brain alignment, relative to baseline models. Further, these feedback projections from the final layer of the vision backbone provide a meaningful steering interface, where goals can be specified as vectors in the output space. We show that there are effective ways to steer the model that dramatically improve recognition of categories in composite images of multiple categories, succeeding where baseline feed-forward models without flexible steering fail. And, our multiplicative modulatory motif prevents rampant hallucination of the top-down goal category, dissociating what the model is looking for, from what it is looking at. Thus, these long-range modulatory pathways enable new behavioral capacities for goal-directed visual encoding, offering a flexible communication interface between cognitive and visual systems."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:uc_IGeMz5qoC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=8668336568928055553",
+        "cites_id": [
+            "8668336568928055553"
+        ],
+        "pub_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/444b09beab8438d4a58e9bc694dca32a-Abstract-Conference.html",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:ATF8wC4eTHgJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Self-organized emergence of modularity, hierarchy, and mirror reversals from competitive synaptic growth in a developmental model of the visual pathway",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.01. 07.574543, 2024",
+            "author": "Sarthak Chandra and Mikail Khona and Talia Konkle and Ila Fiete",
+            "journal": "bioRxiv",
+            "pages": "2024.01. 07.574543",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "A hallmark of the primate visual system is its architectural organization consisting of multiple distinct (modular) areas that connect hierarchically. These areas exhibit specific spatial organization on the cortical sheet, with primary visual cortex at the center and subsequent regions in the hierarchy encircling the earlier one, and detailed topological organization, with retinotopy in each area but striking mirror reversals across area boundaries. The developmental rules that drive the simultaneous formation of these architectural, spatial, and topographic aspects of organization are unknown. Here we demonstrate that a simple synaptic growth rule driven by spontaneous activity and heterosynaptic competition generates a detailed connectome of the visual pathway, with emergence of all three types of organization. We identify a theoretical principle --- local greedy wiring minimization via spontaneous drive (GWM-S \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:ipzZ9siozwsC",
+        "num_citations": 1,
+        "citedby_url": "/scholar?hl=en&cites=13599732520313585586",
+        "cites_id": [
+            "13599732520313585586"
+        ],
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.01.07.574543.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:sn-eOaz0u7wJ:scholar.google.com/",
+        "cites_per_year": {
+            "2024": 1
+        }
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Understanding Inhibition Through Maximally Tense Images",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2406.05598, 2024",
+            "author": "Chris Hamblin and Srijani Saha and Talia Konkle and George Alvarez",
+            "journal": "arXiv preprint arXiv:2406.05598",
+            "abstract": "We address the functional role of 'feature inhibition' in vision models; that is, what are the mechanisms by which a neural network ensures images do not express a given feature? We observe that standard interpretability tools in the literature are not immediately suited to the inhibitory case, given the asymmetry introduced by the ReLU activation function. Given this, we propose inhibition be understood through a study of 'maximally tense images' (MTIs), i.e. those images that excite and inhibit a given feature simultaneously. We show how MTIs can be studied with two novel visualization techniques; +/- attribution inversions, which split single images into excitatory and inhibitory components, and the attribution atlas, which provides a global visualization of the various ways images can excite/inhibit a feature. Finally, we explore the difficulties introduced by superposition, as such interfering features induce the same attribution motif as MTIs."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:Z5m8FVwuT1cC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2406.05598",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:JtbTK9uXmQ8J:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A case for sparse positive alignment of neural systems",
+            "pub_year": 2024,
+            "citation": "ICLR 2024 Workshop on Representational Alignment, 2024",
+            "author": "Jacob S Prince and Colin Conwell and George A Alvarez and Talia Konkle",
+            "conference": "ICLR 2024 Workshop on Representational Alignment",
+            "abstract": "Brain responses in visual cortex are typically modeled as a positively and negatively weighted sum of all features within a deep neural network (DNN) layer. However, this linear fit can dramatically alter a given feature space, making it unclear whether brain prediction levels stem more from the DNN itself, or from the flexibility of the encoding model. As such, studies of alignment may benefit from a paradigm shift toward more constrained and theoretically driven mapping methods. As a proof of concept, here we present a case study of face and scene selectivity, showing that typical encoding analyses do not differentiate between aligned and misaligned tuning bases in model-to-brain predictivity. We introduce a new alignment complexity measure -- tuning reorientation -- which favors DNNs that achieve high brain alignment via minimal distortion of the original feature space. We show that this measure helps arbitrate between models that are superficially equal in their predictivity, but which differ in alignment complexity. Our experiments broadly signal the benefit of sparse, positive-weighted encoding procedures, which directly enforce an analogy between the tuning directions of model and brain feature spaces."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:URolC5Kub84C",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?noteId=zAt8LMT9kz",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:AwbtHd6TmVUJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Immersive scene representation in human visual cortex with ultra-wide angle neuroimaging",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024",
+            "author": "Jeongho Park and Edward Soucy and Jennifer Segawa and Ross Mair and Talia Konkle",
+            "journal": "bioRxiv",
+            "publisher": "Cold Spring Harbor Laboratory Preprints",
+            "abstract": "While humans experience the visual environment in a panoramic 220 view, traditional functional MRI setups are limited to display images like postcards in the central 10\u201315 of the visual field. Thus, it remains unknown how a scene is represented in the brain when perceived across the full visual field. Here, we developed a novel method for ultra-wide angle visual presentation and probed for signatures of immersive scene representation. To accomplish this, we bounced the projected image off angled-mirrors directly onto a custom-built curved screen, creating an unobstructed view of 175. Scene images were created from custom-built virtual environments with a compatible wide field-of-view to avoid perceptual distortion. We found that immersive scene representation drives medial cortex with far-peripheral preferences, but surprisingly had little effect on classic scene regions. That is, scene regions showed relatively \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:4MWp96NkSFoC",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10245572/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:4bDxhunylVcJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Feature Accentuation: Revealing'What'Features Respond to in Natural Images",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2402.10039, 2024",
+            "author": "Chris Hamblin and Thomas Fel and Srijani Saha and Talia Konkle and George Alvarez",
+            "journal": "arXiv preprint arXiv:2402.10039",
+            "abstract": "Efforts to decode neural network vision models necessitate a comprehensive grasp of both the spatial and semantic facets governing feature responses within images. Most research has primarily centered around attribution methods, which provide explanations in the form of heatmaps, showing where the model directs its attention for a given feature. However, grasping 'where' alone falls short, as numerous studies have highlighted the limitations of those methods and the necessity to understand 'what' the model has recognized at the focal point of its attention. In parallel, 'Feature visualization' offers another avenue for interpreting neural network features. This approach synthesizes an optimal image through gradient ascent, providing clearer insights into 'what' features respond to. However, feature visualizations only provide one global explanation per feature; they do not explain why features activate for particular images. In this work, we introduce a new method to the interpretability tool-kit, 'feature accentuation', which is capable of conveying both where and what in arbitrary input images induces a feature's response. At its core, feature accentuation is image-seeded (rather than noise-seeded) feature visualization. We find a particular combination of parameterization, augmentation, and regularization yields naturalistic visualizations that resemble the seed image and target feature simultaneously. Furthermore, we validate these accentuations are processed along a natural circuit by the model. We make our precise implementation of feature accentuation available to the community as the Faccent library, an extension of Lucent."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:epqYDVWIO7EC",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2402.10039",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:3FNu9S7zOjoJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "How does the primate brain combine generative and discriminative computations in vision?",
+            "pub_year": 2024,
+            "citation": "ArXiv, 2024",
+            "author": "Benjamin Peters and James J DiCarlo and Todd Gureckis and Ralf Haefner and Leyla Isik and Joshua Tenenbaum and Talia Konkle and Thomas Naselaris and Kimberly Stachenfeld and Zenna Tavares and Doris Tsao and Ilker Yildirim and Nikolaus Kriegeskorte",
+            "journal": "ArXiv",
+            "publisher": "arXiv",
+            "abstract": "Vision is widely understood as an inference problem. However, two contrasting conceptions of the inference process have each been influential in research on biological vision as well as the engineering of machine vision. The first emphasizes bottom-up signal flow, describing vision as a largely feedforward, discriminative inference process that filters and transforms the visual information to remove irrelevant variation and represent behaviorally relevant information in a format suitable for downstream functions of cognition and behavioral control. In this conception, vision is driven by the sensory data, and perception is direct because the processing proceeds from the data to the latent variables of interest. The notion of \u201cinference\u201d in this conception is that of the engineering literature on neural networks, where feedforward convolutional neural networks processing images are said to perform inference. The alternative \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:EkHepimYqZsC",
+        "num_citations": 0,
+        "pub_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10802669/",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:w8Hc7q55jCIJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "A feedforward mechanism for human-like contour integration",
+            "pub_year": 2024,
+            "citation": "bioRxiv, 2024.06. 11.598524, 2024",
+            "author": "Fenil R Doshi and Talia Konkle and George A Alvarez",
+            "journal": "bioRxiv",
+            "pages": "2024.06. 11.598524",
+            "publisher": "Cold Spring Harbor Laboratory",
+            "abstract": "Deep neural network models provide a powerful experimental platform for exploring core mechanisms underlying human visual perception, such as perceptual grouping and contour integration - the process of linking local edge elements to arrive at a unified perceptual representation of a complete contour. Here, we demonstrate that feedforward, nonlinear convolutional neural networks (CNNs), such as Alexnet, can emulate this aspect of human vision without relying on mechanisms proposed in prior work, such as lateral connections, recurrence, or top-down feedback. We identify two key inductive biases that give rise to human-like contour integration in purely feedforward CNNs: a gradual progression of receptive field sizes with increasing layer depth, and a bias towards relatively straight (gradually curved) contours. While lateral connections, recurrence, and feedback are ubiquitous and important visual processing mechanisms, these results provide a computational existence proof that a feedforward hierarchy is sufficient to implement gestalt \"good continuation\" mechanisms that detect extended contours in a manner that is consistent with human perception."
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:ML0RJ9NH7IQC",
+        "num_citations": 0,
+        "pub_url": "https://www.biorxiv.org/content/10.1101/2024.06.11.598524.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:heN983vKWagJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Manipulating dropout reveals an optimal balance of efficiency and robustness in biological and machine visual systems",
+            "pub_year": 2024,
+            "citation": "The Twelfth International Conference on Learning Representations, 2024",
+            "author": "Jacob S Prince and Gabriel Fajardo and George A Alvarez and Talia Konkle",
+            "conference": "The Twelfth International Conference on Learning Representations",
+            "abstract": "According to the efficient coding hypothesis, neural populations encode information optimally when representations are high-dimensional and uncorrelated. However, such codes may carry a cost in terms of generalization and robustness. Past empirical studies of early visual cortex (V1) in rodents have suggested that this tradeoff indeed constrains sensory representations. However, it remains unclear whether these insights generalize across the hierarchy of the human visual system, and particularly to object representations in high-level occipitotemporal cortex (OTC). To gain new empirical clarity, here we develop a family of object recognition models with parametrically varying dropout proportion , which induces systematically varying dimensionality of internal responses (while controlling all other inductive biases). We find that increasing dropout produces an increasingly smooth, low-dimensional representational space. Optimal robustness to lesioning is observed at around 70% dropout, after which both accuracy and robustness decline. Representational comparison to large-scale 7T fMRI data from occipitotemporal cortex in the Natural Scenes Dataset reveals that this optimal degree of dropout is also associated with maximal emergent neural predictivity. Finally, using new techniques for achieving denoised estimates of the eigenspectrum of human fMRI responses, we compare the rate of eigenspectrum decay between model and brain feature spaces. We observe that the match between model and brain representations is associated with a common balance between efficiency and robustness in the representational space. These results \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "QxV9vroAAAAJ:vDijr-p_gm4C",
+        "num_citations": 0,
+        "pub_url": "https://openreview.net/forum?id=ADDCErFzev",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:zj8aSk82cHwJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

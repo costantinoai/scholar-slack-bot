@@ -1,0 +1,20 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Computational characterization of the role of an attention schema in controlling visuospatial attention",
+            "pub_year": 2024,
+            "citation": "arXiv preprint arXiv:2402.01056, 2024",
+            "author": "Lotta Piefke and Adrien Doerig and Tim Kietzmann and Sushrut Thorat",
+            "journal": "arXiv preprint arXiv:2402.01056",
+            "abstract": "How does the brain control attention? The Attention Schema Theory suggests that the brain constructs an internal model of attention for its control. However, it remains unclear under which circumstances an attention schema is computationally useful, and whether it can emerge in a learning system without hard-wiring it. To address these questions, we trained a reinforcement learning agent with attention to track and catch a ball in a noisy environment. Crucially, the agent had additional neural resources that it could freely use. We asked under which conditions these additional resources develop an attention schema to track attention. We found that the more uncertain the agent was about the location of its attentional state, the more it benefited from these additional resources, which developed an attention schema. Together, these results indicate that an attention schema emerges in simple learning systems where attention is both important and difficult to track."
+        },
+        "filled": true,
+        "author_pub_id": "JXcWFkgAAAAJ:SGW5VrABaM0C",
+        "num_citations": 0,
+        "pub_url": "https://arxiv.org/abs/2402.01056",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:L584DE-GSLkJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]

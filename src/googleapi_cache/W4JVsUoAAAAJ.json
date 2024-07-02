@@ -1,0 +1,42 @@
+[
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Ultrahigh Field fMRI Reveals Different Roles of the Temporal and Frontoparietal Cortices in Subjective Awareness",
+            "pub_year": 2024,
+            "citation": "Journal of Neuroscience 44 (20), 2024",
+            "author": "Marta Poyo Solanas and Minye Zhan and Beatrice de Gelder",
+            "journal": "Journal of Neuroscience",
+            "volume": "44",
+            "number": "20",
+            "publisher": "Society for Neuroscience",
+            "abstract": "A central question in consciousness theories is whether one is dealing with a dichotomous (\u201call-or-none\u201d) or a gradual phenomenon. In this 7T fMRI study, we investigated whether dichotomy or gradualness in fact depends on the brain region associated with perceptual awareness reports. Both male and female human subjects performed an emotion discrimination task (fear vs neutral bodies) presented under continuous flash suppression with trial-based perceptual awareness measures. Behaviorally, recognition sensitivity increased linearly with increased stimuli awareness and was at chance level during perceptual unawareness. Physiologically, threat stimuli triggered a slower heart rate than neutral ones during \u201calmost clear\u201d stimulus experience, indicating freezing behavior. Brain results showed that activity in the occipitotemporal, parietal, and frontal regions as well as in the amygdala increased with \u2026"
+        },
+        "filled": true,
+        "author_pub_id": "W4JVsUoAAAAJ:hC7cP41nSMkC",
+        "num_citations": 0,
+        "pub_url": "https://www.jneurosci.org/content/44/20/e0425232023.abstract",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:t8muSwPGEbwJ:scholar.google.com/",
+        "cites_per_year": {}
+    },
+    {
+        "container_type": "Publication",
+        "source": "AUTHOR_PUBLICATION_ENTRY",
+        "bib": {
+            "title": "Comparative study of abstract representations in humans and non-human primates",
+            "pub_year": 2024,
+            "citation": "Proceedings of the Annual Meeting of the Cognitive Science Society 46, 2024",
+            "author": "Th\u00e9o Morfoisse and Maxence Pajot and Paolo Papale and Pieter Roelfsema and Minye Zhan and Stanislas Dehaene",
+            "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+            "volume": "46",
+            "abstract": "The ability to manipulate and recognize abstract representations seems to be a fundamental aspect of human nature, existing since the dawn of our species and transcending cultural barriers. In contrast, non-human primates exhibit very limited proficiency in recognizing abstract representations. This research delves into this human singularity for visual abstraction, through neuroimaging experiments conducted in both humans and non-human primates. Stimuli presenting the same concept (e.g. a house or a face) but varying in abstraction levels (photos, drawings, symbols, and words) were initially presented to a monkey, while intracranial recording of his brain were obtained (16 Utah arrays distributed in V1, V4 and IT). Preliminary results indicate that monkey display early signs of abstraction, particularly for evolutionarily ancient categories such as faces. MEG and fMRI recordings of human subjects are also currently underway, striving to unveil the neuronal mechanisms that set our species apart in the domain of visual abstraction."
+        },
+        "filled": true,
+        "author_pub_id": "W4JVsUoAAAAJ:hFOr9nPyWt4C",
+        "num_citations": 0,
+        "pub_url": "https://escholarship.org/uc/item/7d31c08h",
+        "url_related_articles": "/scholar?oi=bibs&hl=en&q=related:oyk5B_P5jbMJ:scholar.google.com/",
+        "cites_per_year": {}
+    }
+]
