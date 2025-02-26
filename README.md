@@ -113,17 +113,11 @@ The script accepts several command-line arguments (flags) to customize its behav
 
 - `--authors_path`: Specifies the path to the `authors.json` file.
   - Default: `./src/authors.json`
-  - Example: 
-  ``python main.py --authors_path="./path/to/your/authors.json"``
 
 - `--slack_config_path`: Sets the path to the `slack.config` file which contains Slack API token and channel information.
   - Default: `./src/slack.config`
-  - Example: 
-  ```python main.py --slack_config_path="./path/to/your/slack.config"```
 
 - `--verbose`: (Optional) Provides verbose output for detailed logging and debugging.
-  - Example:
-  ```python main.py --verbose```
 
 - `--test_fetching`: (Optional) Test fetching functions. Do not send message (unless --test_message) or save cache. Mutually exclusive with `--add_scholar_id` and `--update_cache`.
   - Example (fetch only):
