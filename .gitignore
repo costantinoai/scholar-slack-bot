@@ -4,3 +4,5 @@ __pycache__
 test/
 *.sh
 fetch_and_send.sh
+*.bkp
+
