@@ -109,40 +109,6 @@ def get_slack_config(slack_config_path="./src/slack.config"):
     logging.log(STANDARD, f"Fetched Slack configuration from {slack_config_path}.")
     return slack_config
 
-
-def send_to_slack(channel_id, message, token):
-    """
-    Sends a given message to a specified Slack channel using the provided authorization token.
-
-    """
-
-    url = "https://slack.com/api/chat.postMessage"  # The Slack API endpoint for posting messages
-
-    # Define the request headers, including authorization and content type
-    headers = {
-        "Authorization": f"Bearer {token}",  # Use the provided token for authorization
-        "Content-Type": "application/json; charset=utf-8",  # Specify the content type as JSON
-    }
-
-    # Define the request data, which includes the channel ID and the message
-    data = {"channel": channel_id, "text": message}
-
-    # Send a POST request to the Slack API with the headers and data
-    response = requests.post(url, headers=headers, json=data)
-
-    # Return the JSON response from the Slack API
-    response_json = response.json()
-
-    if response_json["ok"] == False:
-        logging.warning(
-            f"Sending message to #{channel_id} failed. Error: {response_json['error']}. Message:\n{message}"
-        )
-    else:
-        logging.log(STANDARD, f"Message succesfully sent to #{channel_id}.")
-
-    return response_json
-
-
 def format_pub_message(pub):
     """
     Format an article dictionary for Slack using a specific markdown style.
@@ -221,3 +187,139 @@ def format_authors_message(authors: list) -> str:
 
     # Return the formatted message
     return formatted_message
+
+
+def get_channel_id_by_name(channel_name, token):
+    """
+    Returns the channel ID given a channel name, or None if not found.
+    This uses the conversations.list API endpoint and checks 'name' for a match.
+    """
+    url = "https://slack.com/api/conversations.list"
+    headers = {"Authorization": f"Bearer {token}"}
+    params = {
+        "types": "public_channel, private_channel",  # Adjust if needed
+        "limit": 1000  # Slack pages results, adjust or paginate if your workspace has many channels
+    }
+
+    while True:
+        response = requests.get(url, headers=headers, params=params).json()
+        if not response["ok"]:
+            logging.warning(f"Failed to list channels: {response['error']}")
+            return None
+
+        for channel in response["channels"]:
+            # 'channel["name"]' is the channel's actual short name without '#'
+            if channel["name"] == channel_name:
+                return channel["id"]
+
+        # Pagination: if there's more, update 'cursor' and keep fetching
+        if response.get("response_metadata", {}).get("next_cursor"):
+            params["cursor"] = response["response_metadata"]["next_cursor"]
+        else:
+            break
+
+    return None
+
+
+def get_user_id_by_name(user_name, token):
+    """
+    Returns the user ID for a given user name, or None if not found.
+    This uses the users.list API endpoint and checks either 'name' or 'real_name'.
+    Adjust logic if you want to match display_name or something else.
+    """
+    url = "https://slack.com/api/users.list"
+    headers = {"Authorization": f"Bearer {token}"}
+    params = {"limit": 1000}
+
+    while True:
+        response = requests.get(url, headers=headers, params=params).json()
+        if not response["ok"]:
+            logging.warning(f"Failed to list users: {response['error']}")
+            return None
+
+        for member in response["members"]:
+            user_handle = member.get("name", "")  # Default to empty string if key is missing
+            real_name = member.get("real_name", "")  # Default to empty string if key is missing
+
+            if user_handle == user_name or real_name == user_name:
+                return member["id"]
+
+        # Pagination
+        if response.get("response_metadata", {}).get("next_cursor"):
+            params["cursor"] = response["response_metadata"]["next_cursor"]
+        else:
+            break
+
+    return None
+
+
+def open_im_channel(user_id, token):
+    """
+    Opens (or retrieves) a DM channel with a user.
+    Returns the channel ID if successful, None otherwise.
+    """
+    url = "https://slack.com/api/conversations.open"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json; charset=utf-8"
+    }
+    data = {"users": user_id}
+
+    response = requests.post(url, headers=headers, json=data).json()
+    if not response["ok"]:
+        logging.warning(f"Error opening DM for user {user_id}: {response}")
+        return None
+
+    return response["channel"]["id"]
+
+
+def send_to_slack(channel_or_user_name, message, token):
+    """
+    Sends a given message to a specified Slack channel name or user name.
+    - If channel_or_user_name is a Slack channel (e.g., "general"), it sends directly.
+    - If it's a user name, it opens a DM and sends privately.
+    - Otherwise, it logs an error.
+    """
+
+    # 1. Try to resolve as a channel name
+    channel_id = get_channel_id_by_name(channel_or_user_name, token)
+    if channel_id:
+        # We found a matching channel name
+        response = _send_message_to_channel(channel_id, message, token)
+        return response
+
+    # 2. Otherwise, try to resolve as a user name
+    user_id = get_user_id_by_name(channel_or_user_name, token)
+    if user_id:
+        # Found a matching user; open DM and send the message
+        dm_channel_id = open_im_channel(user_id, token)
+        if dm_channel_id:
+            response = _send_message_to_channel(dm_channel_id, message, token)
+        return response
+
+    # 3. If neither was found, log an error
+    logging.error(
+        f"Error: '{channel_or_user_name}' is not a valid channel or user in this workspace."
+    )
+
+def _send_message_to_channel(channel_id, message, token):
+    """
+    Internal helper that directly posts to a channel (public, private, or DM).
+    """
+    url = "https://slack.com/api/chat.postMessage"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json; charset=utf-8",
+    }
+    data = {"channel": channel_id, "text": message}
+    response = requests.post(url, headers=headers, json=data).json()
+
+    if not response.get("ok"):
+        logging.warning(
+            f"Sending message to #{channel_id} failed. Error: {response.get('error')}. "
+            f"Message:\n{message}"
+        )
+    else:
+        logging.log(STANDARD, f"Message successfully sent to #{channel_id}.")
+
+    return response
