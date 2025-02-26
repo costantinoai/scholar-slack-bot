@@ -1,4 +1,4 @@
-# 🌟 Slack Bot for Google Scholar Publications 🌟  
+# Slack Bot for Google Scholar Publications
 
 This Slack Bot fetches publications for authors from Google Scholar and sends notifications to a specified Slack channel or user. Keep your team updated with the latest scholarly articles seamlessly!  
 
