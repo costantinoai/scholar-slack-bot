@@ -8,6 +8,7 @@ Created on Fri Oct  6 21:07:18 2023
 import os
 import configparser
 import logging
+import asyncio
 
 from .log_config import MIN, STANDARD
 
@@ -18,55 +19,65 @@ class SlackNotifier:
     def __init__(self, token: str):
         self.token = token
 
-    def _get_channel_id(self, name: str):
-        """Return channel ID for a channel name."""
-        import requests
+    async def _get_channel_id_async(self, name: str):
+        """Return channel ID for a channel name asynchronously."""
+        import aiohttp
 
         url = "https://slack.com/api/conversations.list"
         headers = {"Authorization": f"Bearer {self.token}"}
         params = {"types": "public_channel, private_channel", "limit": 1000}
-        while True:
-            logging.debug("Listing channels with cursor %s", params.get("cursor"))
-            resp = requests.get(url, headers=headers, params=params).json()
-            if not resp.get("ok"):
-                logging.warning("Failed to list channels: %s", resp.get("error"))
-                return None
-            for ch in resp.get("channels", []):
-                if ch.get("name") == name:
-                    return ch.get("id")
-            cursor = resp.get("response_metadata", {}).get("next_cursor")
-            if cursor:
-                params["cursor"] = cursor
-            else:
-                break
+        async with aiohttp.ClientSession() as session:
+            while True:
+                logging.debug("Listing channels with cursor %s", params.get("cursor"))
+                async with session.get(url, headers=headers, params=params) as resp:
+                    data = await resp.json()
+                if not data.get("ok"):
+                    logging.warning("Failed to list channels: %s", data.get("error"))
+                    return None
+                for ch in data.get("channels", []):
+                    if ch.get("name") == name:
+                        return ch.get("id")
+                cursor = data.get("response_metadata", {}).get("next_cursor")
+                if cursor:
+                    params["cursor"] = cursor
+                else:
+                    break
         return None
 
-    def _get_user_id(self, name: str):
-        """Return user ID for a given username or real name."""
-        import requests
+    def _get_channel_id(self, name: str):
+        return asyncio.run(self._get_channel_id_async(name))
+
+    async def _get_user_id_async(self, name: str):
+        """Return user ID for a given username or real name asynchronously."""
+        import aiohttp
 
         url = "https://slack.com/api/users.list"
         headers = {"Authorization": f"Bearer {self.token}"}
         params = {"limit": 1000}
-        while True:
-            logging.debug("Listing users with cursor %s", params.get("cursor"))
-            resp = requests.get(url, headers=headers, params=params).json()
-            if not resp.get("ok"):
-                logging.warning("Failed to list users: %s", resp.get("error"))
-                return None
-            for member in resp.get("members", []):
-                if member.get("name") == name or member.get("real_name") == name:
-                    return member.get("id")
-            cursor = resp.get("response_metadata", {}).get("next_cursor")
-            if cursor:
-                params["cursor"] = cursor
-            else:
-                break
+        async with aiohttp.ClientSession() as session:
+            while True:
+                logging.debug("Listing users with cursor %s", params.get("cursor"))
+                async with session.get(url, headers=headers, params=params) as resp:
+                    data = await resp.json()
+                if not data.get("ok"):
+                    logging.warning("Failed to list users: %s", data.get("error"))
+                    return None
+                for member in data.get("members", []):
+                    if member.get("name") == name or member.get("real_name") == name:
+                        return member.get("id")
+                cursor = data.get("response_metadata", {}).get("next_cursor")
+                if cursor:
+                    params["cursor"] = cursor
+                else:
+                    break
         return None
 
-    def _open_im(self, user_id: str):
-        """Open a DM channel with a user and return the channel ID."""
-        import requests
+    def _get_user_id(self, name: str):
+        return asyncio.run(self._get_user_id_async(name))
+
+    async def _open_im_async(self, user_id: str):
+        """Open a DM channel with a user and return the channel ID asynchronously."""
+        import aiohttp
 
         url = "https://slack.com/api/conversations.open"
         headers = {
@@ -74,15 +85,20 @@ class SlackNotifier:
             "Content-Type": "application/json; charset=utf-8",
         }
         data = {"users": user_id}
-        resp = requests.post(url, headers=headers, json=data).json()
-        if not resp.get("ok"):
-            logging.warning("Error opening DM for %s: %s", user_id, resp)
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, headers=headers, json=data) as resp:
+                data = await resp.json()
+        if not data.get("ok"):
+            logging.warning("Error opening DM for %s: %s", user_id, data)
             return None
-        return resp["channel"]["id"]
+        return data["channel"]["id"]
 
-    def _post_message(self, channel_id: str, message: str):
-        """Send raw message to a channel."""
-        import requests
+    def _open_im(self, user_id: str):
+        return asyncio.run(self._open_im_async(user_id))
+
+    async def _post_message_async(self, channel_id: str, message: str):
+        """Send raw message to a channel asynchronously."""
+        import aiohttp
 
         url = "https://slack.com/api/chat.postMessage"
         headers = {
@@ -91,25 +107,33 @@ class SlackNotifier:
         }
         data = {"channel": channel_id, "text": message}
         logging.debug("Posting message to channel %s", channel_id)
-        resp = requests.post(url, headers=headers, json=data).json()
-        if not resp.get("ok"):
-            logging.warning("Sending message failed: %s", resp.get("error"))
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, headers=headers, json=data) as resp:
+                data = await resp.json()
+        if not data.get("ok"):
+            logging.warning("Sending message failed: %s", data.get("error"))
         else:
             logging.info("Message successfully sent to %s", channel_id)
-        return resp
+        return data
 
-    def send_message(self, target: str, message: str):
-        """Send a message to a channel or user name."""
-        channel_id = self._get_channel_id(target)
+    def _post_message(self, channel_id: str, message: str):
+        return asyncio.run(self._post_message_async(channel_id, message))
+
+    async def send_message_async(self, target: str, message: str):
+        """Send a message to a channel or user name asynchronously."""
+        channel_id = await self._get_channel_id_async(target)
         if channel_id:
-            return self._post_message(channel_id, message)
-        user_id = self._get_user_id(target)
+            return await self._post_message_async(channel_id, message)
+        user_id = await self._get_user_id_async(target)
         if user_id:
-            dm_channel = self._open_im(user_id)
+            dm_channel = await self._open_im_async(user_id)
             if dm_channel:
-                return self._post_message(dm_channel, message)
+                return await self._post_message_async(dm_channel, message)
         logging.error("'%s' is not a valid channel or user", target)
         return {"ok": False, "error": "not_found"}
+
+    def send_message(self, target: str, message: str):
+        return asyncio.run(self.send_message_async(target, message))
 
 
 def send_test_msg(token, ch_name):
@@ -318,3 +342,14 @@ def _send_message_to_channel(channel_id, message, token):
     """Backward compatible helper to send message to a channel."""
     notifier = SlackNotifier(token)
     return notifier._post_message(channel_id, message)
+
+
+async def send_messages_parallel(target: str, messages: list, token: str):
+    """Send multiple messages concurrently to a Slack target."""
+    notifier = SlackNotifier(token)
+
+    async def _send(msg):
+        return await notifier.send_message_async(target, msg)
+
+    tasks = [_send(m) for m in messages]
+    return await asyncio.gather(*tasks)

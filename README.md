@@ -20,7 +20,7 @@ This Slack Bot fetches publications for authors from Google Scholar and sends no
    - See [Setting Up Your Slack Bot](#setting-up-your-slack-bot) for details on obtaining a token.
 4. **Run the bot**
    ```sh
-   scholar-slack-bot --verbose
+   scholar-slack-bot send --verbose
    ```
 
 ---
@@ -98,38 +98,31 @@ Slack apps require specific permissions (scopes) to function. Navigate to **OAut
 
 ## 🚀 Usage  
 
-### Command Line  
+### Command Line
 
-The script accepts several command-line arguments (flags) to customize its behavior:
+Use the tool with one of these subcommands:
 
-- `--authors_path`: Specifies the path to the `authors.json` file.
-  - Default: `./src/authors.json`
+- `send` *(default)* – fetch new publications, post to Slack and update the cache.
+  ```bash
+  scholar-slack-bot send --verbose
+  ```
+- `update-cache` – re-fetch all publications and rebuild the cache.
+  ```bash
+  scholar-slack-bot update-cache
+  ```
+- `add-author <SCHOLAR_ID>` – add an author and fetch their papers.
+  ```bash
+  scholar-slack-bot add-author U4i0WGsAAAAJ
+  ```
+- `test` – combine `--fetch` and/or `--message` to test the workflow without updating the cache.
+  ```bash
+  scholar-slack-bot test --fetch --message
+  ```
 
-- `--slack_config_path`: Sets the path to the `slack.config` file which contains Slack API token and channel information.
-  - Default: `./src/slack.config`
-
-- `--verbose`: (Optional) Provides verbose output for detailed logging and debugging.
-
-- `--test_fetching`: (Optional) Test fetching functions. Do not send message (unless --test_message) or save cache. Mutually exclusive with `--add_scholar_id` and `--update_cache`.
-  - Example (fetch only):
-  Fetch last year's data for two authors in `./src/authors.json`. Do not send messages or update cache.
-  ```python main.py --test_fetching```
-  
-  - Example (fetch and send message)
-  Fetch last year's data for two authors in `./src/authors.json`. Send messages with fetched papers, but do not update cache.
-  ```python main.py --test_fetching --test_message```
-
-- `--test_message`: (Optional) Send test message. Do not fetch, send message (unless --test_fetching) or save cache. Mutually exclusive with `--add_scholar_id` and `--update_cache`.
-  - Example:
-  ```python main.py --test_message```
-
-- `--add_scholar_id`: (Optional) Add a new scholar by Google Scholar ID to the file specified in `--authors_path`, fetch publications and save them to cache (do not send message). Mutually exclusive with `--test_message`, `--test_fetching` and `--update_cache`.
-  - Example:
-  ```python main.py --add_scholar_id="YourGoogleScholarID"```
-
-- `--update_cache`: (Optional) Re-fetch and save publications for all authors (do not send message). It overwrites the old cache. Mutually exclusive with `--test_message`, `--test_fetching` and `--add_scholar_id`.
-  - Example:
-  ```python main.py --update_cache```
+Global options:
+- `--authors_path` path to `authors.json` (default `./src/authors.json`)
+- `--slack_config_path` path to Slack config (default `./src/slack.config`)
+- `--verbose` enable debug logging
 
 
 ### Within the IDE  
@@ -188,11 +181,11 @@ scholar-slack-bot
 
 ## 🛣️ Roadmap & Tasks
 
-- Add asynchronous requests to improve performance when sending messages.
+- ~~Add asynchronous requests to improve performance when sending messages.~~ ✅
 - Provide Docker image for easier deployment.
 - Support additional scholarly sources beyond Google Scholar.
-- Store cached publications in a database backend.
-- Extend command-line interface with subcommands for cache management.
+- Store cached publications in a database backend (currently using gzip files).
+- ~~Extend command-line interface with subcommands for cache management.~~ ✅
 
 ---
 

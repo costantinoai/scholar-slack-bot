@@ -130,14 +130,26 @@ def load_cache(author_id, output_folder):
     - Exception: If there's any error during the loading process.
     """
     # Load cached publications if they exist
-    cache_path = os.path.join(output_folder, f"{author_id}.json")  # Determine the cache file path
+    cache_path = os.path.join(output_folder, f"{author_id}.json.gz")
     if os.path.exists(cache_path):
         logging.log(STANDARD, f"Cache exists for author {author_id}. Loading...")
         try:
-            with open(cache_path, "r") as f:
+            import gzip
+
+            with gzip.open(cache_path, "rt") as f:
                 return json.load(f)
         except Exception as e:
             logging.warning(f"Error loading cache for author {author_id}. {e}")
+            return []
+    # Backward compatibility with uncompressed caches
+    legacy_path = os.path.join(output_folder, f"{author_id}.json")
+    if os.path.exists(legacy_path):
+        logging.log(STANDARD, f"Legacy cache found for author {author_id}. Loading...")
+        try:
+            with open(legacy_path, "r") as f:
+                return json.load(f)
+        except Exception as e:
+            logging.warning(f"Error loading legacy cache for author {author_id}. {e}")
             return []
     else:
         logging.log(STANDARD, f"No cache for author {author_id}. Fetching all.")
@@ -250,11 +262,13 @@ def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args
     - cached_pubs (list): List of previously cached publications.
     - output_folder (str): Directory to save the cache.
     """
-    cache_path = os.path.join(output_folder, f"{author_id}.json")
+    cache_path = os.path.join(output_folder, f"{author_id}.json.gz")
     logging.log(STANDARD, f"Updating cache for author {author_id}.")
-    with open(cache_path, "w") as f:
+    import gzip
+
+    with gzip.open(cache_path, "wt") as f:
         combined_pubs = fetched_pubs + cached_pubs if not args.update_cache else fetched_pubs
-        json.dump(combined_pubs, f, indent=4)
+        json.dump(combined_pubs, f)
 
 
 def fetch_publications_by_id(

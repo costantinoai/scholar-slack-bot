@@ -13,6 +13,7 @@ dependencies = [
     "requests",
     "tqdm",
     "python-dotenv",
+    "aiohttp",
 ]
 
 [project.scripts]

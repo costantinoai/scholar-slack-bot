@@ -25,42 +25,28 @@ from .log_config import MIN, STANDARD, configure_logging
 
 
 def get_args():
-    """
-    Parses command-line arguments for the script.
-
-    Returns:
-    - argparse.Namespace: Parsed arguments.
-    """
-    parser = argparse.ArgumentParser(description="Fetch publication history and send to slack.")
-
-    # Add command-line arguments
+    """Return argument parser and parsed args."""
+    parser = argparse.ArgumentParser(description="Fetch publication history and send to Slack.")
     parser.add_argument("--authors_path", default="./src/authors.json", help="Path to authors.json")
-    parser.add_argument(
-        "--slack_config_path", default="./src/slack.config", help="Path to slack.config"
-    )
-    parser.add_argument("--verbose", action="store_true", help="Verbose output.")
-    parser.add_argument(
-        "--test_fetching",
-        action="store_true",
-        help="Test fetching functions. Do not send message (unless --test_message) or save cache.",
-    )
-    parser.add_argument(
-        "--test_message",
-        action="store_true",
-        help="Send test message. Do not fetch (unless --test_fetching), or save cache.",
-    )
-    parser.add_argument(
-        "--update_cache",
-        action="store_true",
-        help="Re-fetch pubs for all authors and save them to cache. Do not send message.",
-    )
-    parser.add_argument(
-        "--add_scholar_id",
-        help="Add a new scholar by Google Scholar ID to the file specified in --authors_path, fetch publications and save them to cache (do not send message).",
-    )
+    parser.add_argument("--slack_config_path", default="./src/slack.config", help="Path to slack.config")
+    parser.add_argument("--verbose", action="store_true", help="Verbose output")
+
+    sub = parser.add_subparsers(dest="command")
+    sub.add_parser("send", help="Fetch, send message and update cache")
+    sub.add_parser("update-cache", help="Re-fetch all authors and update cache")
+    add_parser = sub.add_parser("add-author", help="Add a new scholar id and fetch")
+    add_parser.add_argument("scholar_id")
+    test_parser = sub.add_parser("test", help="Test fetching and/or messaging")
+    test_parser.add_argument("--fetch", action="store_true", help="Fetch publications during test")
+    test_parser.add_argument("--message", action="store_true", help="Send Slack message during test")
+
+    # Keep old flags for backward compatibility
+    parser.add_argument("--test_fetching", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--test_message", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--update_cache", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--add_scholar_id", help=argparse.SUPPRESS)
 
     args = parser.parse_args()
-
     return parser, args
 
 
@@ -77,9 +63,24 @@ def initialize_args():
 
     # Check if the script is executed via command line
     if len(sys.argv) > 1:
-        # Parse command-line arguments
         parser, args = get_args()
         logging.log(MIN, "Parsed command-line arguments.")
+
+        # Map subcommands to legacy flags
+        if args.command == "send" or args.command is None:
+            pass
+        elif args.command == "update-cache":
+            args.update_cache = True
+        elif args.command == "add-author":
+            args.add_scholar_id = args.scholar_id
+        elif args.command == "test":
+            args.test_fetching = args.fetch
+            args.test_message = args.message
+        # Ensure default values for optional flags
+        args.test_fetching = getattr(args, "test_fetching", False)
+        args.test_message = getattr(args, "test_message", False)
+        args.update_cache = getattr(args, "update_cache", False)
+        args.add_scholar_id = getattr(args, "add_scholar_id", None)
     else:
         # Default configurations for execution in IDE
         class IDEArgs:

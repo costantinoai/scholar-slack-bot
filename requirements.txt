@@ -2,3 +2,4 @@ scholarly
 requests
 tqdm
 python-dotenv
+aiohttp
