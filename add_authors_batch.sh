@@ -1,17 +1,20 @@
 #!/bin/bash
+# Helper script to add multiple authors
 
-declare -a ids=(
+ids=(
     "U4i0WGsAAAAJ"
     "FS0s6WYAAAAJ"
     "Tv-zquoAAAAJ"
 )
 
-source /home/eik-tb/miniconda3/etc/profile.d/conda.sh  # Use the correct path to conda.sh
-conda activate scrape
-cd /home/eik-tb/OneDrive_andreaivan.costantino@kuleuven.be/GitHub/scholar-slack-bot/
+: "${CONDA_ENV:=scholarbot}"
+: "${PROJECT_DIR:=$(cd "$(dirname "$0")" && pwd)}"
 
-for id in "${ids[@]}"
-do
-   python main.py --add_scholar_id $id
+source "$HOME/miniconda3/etc/profile.d/conda.sh"
+conda activate "$CONDA_ENV"
+cd "$PROJECT_DIR"
+
+for id in "${ids[@]}"; do
+    python -m scholar_slack_bot.main --add_scholar_id "$id"
 done
 

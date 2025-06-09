@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scholar_slack_bot"
+version = "0.1.0"
+description = "Slack bot to send Google Scholar updates"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "scholarly",
+    "requests",
+    "tqdm",
+    "python-dotenv",
+]
+
+[project.scripts]
+scholar-slack-bot = "scholar_slack_bot.main:main"

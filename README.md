@@ -4,24 +4,23 @@ This Slack Bot fetches publications for authors from Google Scholar and sends no
 
 ---
 
-## 🚀 Quick Start  
+## 🚀 Quick Start
 
-1. **Clone the repository:**  
+1. **Clone the repository**
    ```sh
    git clone https://github.com/costantinoai/scholar-slack-bot.git
    cd scholar-slack-bot
-   ```  
-2. **Install dependencies:**  
+   ```
+2. **Install the package**
    ```sh
-   pip install -r requirements.txt
-   ```  
-3. **Edit the config file:**  
-   - Add your Slack API token.  
-   - Set the `target_name` field to either a **Slack channel** (public or private, if the bot is added) or a **Slack user** (for direct messages).  
-   - Refer to the section [Setting Up Your Slack Bot](#setting-up-your-slack-bot) below for instructions on obtaining the Slack API token.  
-4. **Run the bot:**  
+   pip install -e .
+   ```
+3. **Configure Slack credentials**
+   - Copy `.env.example` to `.env` and fill in your Slack token and target channel/user.
+   - See [Setting Up Your Slack Bot](#setting-up-your-slack-bot) for details on obtaining a token.
+4. **Run the bot**
    ```sh
-   python main.py
+   scholar-slack-bot --verbose
    ```
 
 ---
@@ -33,37 +32,29 @@ This Slack Bot fetches publications for authors from Google Scholar and sends no
 3. [🚀 Usage](#usage)  
 4. [📂 Directory Structure](#directory-structure)  
 5. [📝 Files Descriptions](#files-descriptions)  
-6. [📄 License](#license)  
+6. [🛣️ Roadmap & Tasks](#roadmap--tasks)
+7. [📄 License](#license)
 
 ---
 
 ## 🔧 Setting Up The Repo  
 
-Clone the repository:  
+Clone the repository and install in editable mode:
 
 ```sh
 git clone https://github.com/costantinoai/scholar-slack-bot.git
 cd scholar-slack-bot
+pip install -e .
 ```
 
-Install dependencies:  
+Create a `.env` file with your Slack credentials:
 
 ```sh
-pip install scholarly tqdm requests configparser
+cp .env.example .env
+# edit .env and set SLACK_API_TOKEN and SLACK_CHANNEL
 ```
 
-Edit `slack.config` with your bot’s API token and target name:  
-
-```ini
-[slack]
-api_token = xoxb-YOUR-API-TOKEN
-channel_name = YOUR-TARGET-NAME  # Can be a channel (e.g., "general") or a user (e.g., "john_doe")
-```
-
-If a **Slack channel name** (e.g., `weekly-papers-update`) is provided, the bot will post there.  
-If a **Slack user name** is provided (e.g., `Andrea Costantino`), the bot will send a direct message.  
-
-Add author details in `src/authors.json`.
+Add author details in `src/authors.json` as shown below.
 
 ---
 
@@ -150,35 +141,37 @@ If running from an IDE (e.g., Spyder, VScode), configurations are set in `IDEarg
 ## 📂 Directory Structure  
 
 ```
-slack-bot
+scholar-slack-bot
+├── scholar_slack_bot
+│   ├── __init__.py
+│   ├── fetch_scholar.py
+│   ├── helper_funcs.py
+│   ├── log_config.py
+│   ├── main.py
+│   ├── slack_bot.py
+│   └── streams_funcs.py
 ├── add_authors_batch.sh
 ├── fetch_and_send.sh
-├── fetch_scholar.py
-├── helper_funcs.py
-├── log_config.py
-├── main.py
-├── README.md
-├── slack_bot.py
-├── streams_funcs.py
+├── pyproject.toml
+├── requirements.txt
 └── src
     ├── authors.json
-    ├── googleapi_cache
-    └── slack.config
+    └── slack-example.config
 ```
 
 ---
 
-## 📝 Files Descriptions  
+## 📝 Files Descriptions
 
-- **`add_authors_batch.sh`**: Bash script for batch-adding authors.  
-- **`fetch_and_send.sh`**: Bash script to run the bot workflow.  
-- **`fetch_scholar.py`**: Internal functions to fetch publications from Google Scholar.  
-- **`helper_funcs.py`**: Internal utility functions.  
-- **`log_config.py`**: Internal Logging configuration.  
-- **`main.py`**: The main script to run the bot.  
-- **`slack_bot.py`**: Internal functions to format and send messages to Slack.  
-- **`streams_funcs.py`**: Internal, handles workflow logic based on CLI flags.  
-- **`authors.json`**: Stores author names and Google Scholar IDs. Example format:  
+- **`add_authors_batch.sh`**: Example shell script for adding multiple authors.
+- **`fetch_and_send.sh`**: Example shell script to run the bot.
+- **Package `scholar_slack_bot/`**: contains the Python modules
+  - `main.py`: command line entry point
+  - `fetch_scholar.py`: fetch publications from Google Scholar
+  - `slack_bot.py`: format and send Slack messages
+  - `streams_funcs.py`: workflow helpers
+  - `helper_funcs.py` and `log_config.py`: utilities
+- **`authors.json`**: Stores author names and Google Scholar IDs. Example format:
 
   ```json
   [
@@ -187,20 +180,23 @@ slack-bot
   ]
   ```
 
-- **`googleapi_cache/`**: Stores cached publication data.  
-- **`slack.config`**: Configuration file for Slack settings. Example format:  
+- **`.env.example`**: Template for environment variables. Copy to `.env` and fill in credentials.
 
-  ```ini
-  [slack]
-  api_token = xoxb-YOUR-API-TOKEN
-  channel_name = your-channel-or-user
-  ```
-
-💡 *You do not need to specify a channel ID — the bot will automatically determine whether `channel_name` refers to a public/private channel or a user.*  
+💡 *You do not need to specify a channel ID — the bot will automatically determine whether `channel_name` refers to a public/private channel or a user.*
 
 ---
 
-## 📄 License  
+## 🛣️ Roadmap & Tasks
+
+- Add asynchronous requests to improve performance when sending messages.
+- Provide Docker image for easier deployment.
+- Support additional scholarly sources beyond Google Scholar.
+- Store cached publications in a database backend.
+- Extend command-line interface with subcommands for cache management.
+
+---
+
+## 📄 License
 
 [MIT](LICENSE) © Andrea Ivan Costantino  
 

@@ -1,8 +1,6 @@
 *.config
-.spyproject
-__pycache__
-test/
-*.sh
-fetch_and_send.sh
-*.bkp
+*.env
+__pycache__/
+.spyproject/
+src/googleapi_cache/
 
