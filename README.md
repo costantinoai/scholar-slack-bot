@@ -184,7 +184,7 @@ scholar-slack-bot
 - ~~Add asynchronous requests to improve performance when sending messages.~~ ✅
 - Provide Docker image for easier deployment.
 - Support additional scholarly sources beyond Google Scholar.
-- Store cached publications in a database backend (currently using gzip files).
+- Store cached publications in a database backend (currently using JSON files).
 - ~~Extend command-line interface with subcommands for cache management.~~ ✅
 
 ---
