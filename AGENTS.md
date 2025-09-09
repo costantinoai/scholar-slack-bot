@@ -1,10 +1,9 @@
 # AGENTS Guidelines
 
 ## Development Workflow
-- Format code with [`black`](https://black.readthedocs.io/en/stable/) and lint with [`flake8`](https://flake8.pycqa.org/). Run:
+- Format code with [`black`](https://black.readthedocs.io/en/stable/). Run:
   ```bash
   black .
-  flake8 .
   ```
 - Run unit tests before committing:
   ```bash

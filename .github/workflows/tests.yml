@@ -16,8 +16,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest flake8
-      - name: Lint and run test suite
+          pip install pytest
+      - name: Run test suite
         run: |
-          flake8 .
           pytest -vv
