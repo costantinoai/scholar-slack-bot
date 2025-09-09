@@ -13,10 +13,8 @@ import logging
 import shutil
 
 from slack_bot import get_slack_config, send_test_msg
-from fetch_scholar import fetch_from_json
 from helper_funcs import has_conflicting_args, delete_temp_cache
 from streams_funcs import (
-    test_fetch_and_message,
     refetch_and_update,
     add_scholar_and_fetch,
     regular_fetch_and_message,
@@ -43,14 +41,9 @@ def get_args():
     )
     parser.add_argument("--verbose", action="store_true", help="Verbose output.")
     parser.add_argument(
-        "--test_fetching",
-        action="store_true",
-        help="Test fetching functions. Do not send message (unless --test_message) or save cache.",
-    )
-    parser.add_argument(
         "--test_message",
         action="store_true",
-        help="Send test message. Do not fetch (unless --test_fetching), or save cache.",
+        help="Send test message. Do not fetch or save cache.",
     )
     parser.add_argument(
         "--update_cache",
@@ -90,7 +83,6 @@ def initialize_args():
                 self.slack_config_path = "./src/slack-test.config"
                 self.authors_path = "./src/authors.json"
                 self.verbose = True
-                self.test_fetching = True
                 self.test_message = True
                 self.add_scholar_id = None
                 self.update_cache = False
@@ -100,7 +92,7 @@ def initialize_args():
     # Checking for mutual exclusivity of the arguments
     if has_conflicting_args(args):
         raise ValueError(
-            "--add_scholar_id and --update_cache cannot be used together or with --test_fetching, --test_message"
+            "--add_scholar_id and --update_cache cannot be used together or with --test_message"
         )
 
     # Reconfigure logging based on DEBUG_FLAG's value
@@ -160,26 +152,18 @@ def main():
     logging.log(MIN, f"Target Slack channel: {ch_name}.")
 
     # Scenario 1: Test message. No fetching or cache update.
-    if args.test_message and not args.test_fetching:
+    if args.test_message:
         send_test_msg(token, ch_name)
 
-    # Scenario 2: Test fetching. No message or cache update.
-    elif not args.test_message and args.test_fetching:
-        _ = fetch_from_json(args)
-
-    # Scenario 3: Test fetching + message. No cache update.
-    elif args.test_message and args.test_fetching:
-        test_fetch_and_message(args, ch_name, token)
-
-    # Scenario 4: Re-fetch all the authors and update cache. No message.
+    # Scenario 2: Re-fetch all the authors and update cache. No message.
     elif args.update_cache:
         refetch_and_update(args)
 
-    # Scenario 5: Add a new scholar ID and fetch. No message.
+    # Scenario 3: Add a new scholar ID and fetch. No message.
     elif args.add_scholar_id:
         add_scholar_and_fetch(args)
 
-    # Scenario 6: Regular stream. Fetch, send message and update cache.
+    # Scenario 4: Regular stream. Fetch, send message and update cache.
     else:
         regular_fetch_and_message(args, ch_name, token)
 
