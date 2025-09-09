@@ -31,10 +31,14 @@ def get_args():
     Returns:
     - argparse.Namespace: Parsed arguments.
     """
-    parser = argparse.ArgumentParser(description="Fetch publication history and send to slack.")
+    parser = argparse.ArgumentParser(
+        description="Fetch publication history and send to slack."
+    )
 
     # Add command-line arguments
-    parser.add_argument("--authors_path", default="./src/authors.json", help="Path to authors.json")
+    parser.add_argument(
+        "--authors_path", default="./src/authors.db", help="Path to authors database"
+    )
     parser.add_argument(
         "--slack_config_path", default="./src/slack.config", help="Path to slack.config"
     )
@@ -80,7 +84,7 @@ def initialize_args():
         class IDEArgs:
             def __init__(self):
                 self.slack_config_path = "./src/slack-test.config"
-                self.authors_path = "./src/authors.json"
+                self.authors_path = "./src/authors.db"
                 self.verbose = True
                 self.test_message = True
                 self.add_scholar_id = None

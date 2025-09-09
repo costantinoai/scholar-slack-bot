@@ -26,7 +26,10 @@ logger = logging.getLogger(__name__)
 
 MAX_RETRIES = 3
 DELAYS = [20, 40, 60]
+DEFAULT_SRC_DIR = "./src"
+DEFAULT_CACHE_DIR = os.path.join(DEFAULT_SRC_DIR, "googleapi_cache")
 DB_NAME = "publications.db"
+DEFAULT_DB_PATH = os.path.join(DEFAULT_CACHE_DIR, DB_NAME)
 
 
 def _init_db(db_path: str) -> sqlite3.Connection:
@@ -55,32 +58,28 @@ def _init_db(db_path: str) -> sqlite3.Connection:
 
 
 def fetch_from_json(args, idx=None):
-    """
-    Fetch author and publication details based on a specified index.
+    """Fetch author and publication details based on a specified index.
 
-    This function retrieves author details from a given JSON path, converts this
-    data into a tuple representation, and fetches publication details for a subset
-    of these authors from a scholarly database. The subset size is determined by the
-    provided index (idx).
+    Author information is now stored in a SQLite database. This helper reads the
+    database located at ``args.authors_path``, converts the records into tuples,
+    and fetches publication details for a subset of these authors from Google
+    Scholar. The subset size is determined by ``idx``.
 
-    Parameters:
-    - args: Arguments containing the path to the authors' JSON and other relevant data.
-    - idx (int, optional): The number of authors for which to fetch publications.
-      Defaults to None, which fetches for all authors.
+    Args:
+        args: Namespace containing the path to the authors database and other
+            relevant options.
+        idx: Optional limit on the number of authors to process. ``None`` means
+            all authors are fetched.
 
     Returns:
-    - tuple: A tuple containing:
-        1. A list of selected authors' details.
-        2. A dictionary with publication details for each selected author.
+        tuple: A pair consisting of the selected authors and their publications.
     """
 
-    # Retrieve authors' details from the specified JSON path.
     authors_json = get_authors_json(args.authors_path)
     logger.debug(f"Fetched authors' details from {args.authors_path}.")
 
-    # Convert the retrieved JSON data into a tuple representation for easier handling.
     authors = convert_json_to_tuple(authors_json)
-    logger.debug("Converted authors' JSON data into tuple representation.")
+    logger.debug("Converted authors' records into tuple representation.")
 
     # Determine the number of authors to process.
     if idx is not None:
@@ -93,7 +92,7 @@ def fetch_from_json(args, idx=None):
         idx = len(authors)
 
     if idx == 0:
-        logger.error("No authors listed in the authors.json file.")
+        logger.error("No authors listed in the authors database.")
         return
 
     # Fetch publication details for the determined number of authors from the scholarly database.
@@ -145,7 +144,7 @@ def fetch_author_details(author_id):
         raise e
 
 
-def load_cache(author_id, output_folder):
+def load_cache(author_id, output_folder=DEFAULT_CACHE_DIR):
     """Load cached publications for an author from the SQLite database.
 
     Args:
@@ -286,21 +285,25 @@ def fetch_selected_pubs(pubs_to_fetch):
                 return []
 
 
-def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args):
+def save_updated_cache(
+    fetched_pubs, cached_pubs, author_id, output_folder=DEFAULT_CACHE_DIR, args=None
+):
     """Persist fetched publications to the SQLite cache.
 
     Parameters:
     - fetched_pubs (list): List of newly fetched publications.
     - cached_pubs (list): Unused; retained for backward compatibility.
-    - output_folder (str): Directory where the cache database is stored.
-    - args: Namespace containing the ``update_cache`` flag.
+    - output_folder (str, optional): Directory where the cache database is stored.
+      Defaults to ``DEFAULT_CACHE_DIR``.
+    - args (argparse.Namespace, optional): Object with the ``update_cache`` flag.
     """
 
     db_path = os.path.join(output_folder, DB_NAME)
     conn = _init_db(db_path)
     logger.debug(f"Updating cache for author {author_id}.")
     try:
-        if args.update_cache:
+        update_cache = getattr(args, "update_cache", False)
+        if update_cache:
             conn.execute("DELETE FROM publications WHERE author_id=?", (author_id,))
         for pub in fetched_pubs:
             title = pub["bib"]["title"]
@@ -319,14 +322,19 @@ def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args
 
 
 def fetch_publications_by_id(
-    author_id, output_folder, args, from_year=2023, exclude_not_cited_papers=False
+    author_id,
+    output_folder=DEFAULT_CACHE_DIR,
+    args=None,
+    from_year=2023,
+    exclude_not_cited_papers=False,
 ):
     """
     Fetches and caches publications of a specific author using their Google Scholar ID.
 
     Parameters:
     - author_id (str): Google Scholar ID of the author.
-    - output_folder (str): Directory where the fetched publications will be cached.
+    - output_folder (str, optional): Directory where the fetched publications will be cached.
+      Defaults to ``DEFAULT_CACHE_DIR``.
     - from_year (int, optional): Limit publications to this year. Defaults to 2023.
     - exclude_not_cited_papers (bool, optional): If True, only return papers that have been cited. Defaults to False.
 
@@ -352,22 +360,17 @@ def fetch_publications_by_id(
     """
     # Ensure the cache directory exists
     ensure_output_folder(output_folder)
-    # Fetch author details from Google Scholar
     author_pubs = fetch_author_details(author_id)
-    # Load cached publications if available
     cached_pubs = load_cache(author_id, output_folder)
-    # Determine the list of publications to fetch
     pubs_to_fetch = get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args)
-    # Fetch selected publications
     fetched_pubs = fetch_selected_pubs(pubs_to_fetch)
-    # Update cache with newly fetched publications
-    if not getattr(args, "test_fetching", False):
+    test_fetching = getattr(args, "test_fetching", False)
+    if not test_fetching:
         save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args)
-    # Return cleaned list of publications
     return clean_pubs(fetched_pubs, from_year, exclude_not_cited_papers)
 
 
-def fetch_pubs_dictionary(authors, args, output_dir="./src"):
+def fetch_pubs_dictionary(authors, args, output_dir=DEFAULT_SRC_DIR):
     """
     Fetch publications for a list of authors for the current year,
     and store them in a cache. Only non-duplicate publications compared

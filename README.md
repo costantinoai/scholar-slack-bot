@@ -64,7 +64,7 @@ channel_name = YOUR-TARGET-NAME  # Can be a channel (e.g., "general") or a user 
 If a **Slack channel name** (e.g., `weekly-papers-update`) is provided, the bot will post there.  
 If a **Slack user name** is provided (e.g., `Andrea Costantino`), the bot will send a direct message.  
 
-Add author details in `src/authors.json`.
+Add author details to `src/authors.db`.
 
 ---
 
@@ -112,8 +112,8 @@ Slack apps require specific permissions (scopes) to function. Navigate to **OAut
 
 The script accepts several command-line arguments (flags) to customize its behavior:
 
-- `--authors_path`: Specifies the path to the `authors.json` file.
-  - Default: `./src/authors.json`
+- `--authors_path`: Specifies the path to the authors database.
+  - Default: `./src/authors.db`
 
 - `--slack_config_path`: Sets the path to the `slack.config` file which contains Slack API token and channel information.
   - Default: `./src/slack.config`
@@ -153,7 +153,7 @@ slack-bot
 ├── slack_bot.py
 ├── streams_funcs.py
 └── src
-    ├── authors.json
+    ├── authors.db
     ├── googleapi_cache
     └── slack.config
 ```
@@ -170,14 +170,7 @@ slack-bot
 - **`main.py`**: The main script to run the bot.  
 - **`slack_bot.py`**: Internal functions to format and send messages to Slack.  
 - **`streams_funcs.py`**: Internal, handles workflow logic based on CLI flags.  
-- **`authors.json`**: Stores author names and Google Scholar IDs. Example format:  
-
-  ```json
-  [
-      {"name": "Daniel Kaiser", "id": "v4CvWHgAAAAJ"},
-      {"name": "Stefania Bracci", "id": "ECBBsv8AAAAJ"}
-  ]
-  ```
+- **`authors.db`**: SQLite database storing author names and Google Scholar IDs.
 
 - **`googleapi_cache/`**: Stores cached publication data.  
 - **`slack.config`**: Configuration file for Slack settings. Example format:  

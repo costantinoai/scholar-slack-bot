@@ -8,7 +8,11 @@ Created on Fri Oct 20 17:02:03 2023
 import os
 import shutil
 import logging
-from helper_funcs import confirm_temp_cache, add_new_author_to_json, convert_json_to_tuple
+from helper_funcs import (
+    confirm_temp_cache,
+    add_new_author_to_json,
+    convert_json_to_tuple,
+)
 from fetch_scholar import fetch_from_json, fetch_pubs_dictionary
 from slack_bot import make_slack_msg, send_to_slack
 
@@ -118,7 +122,9 @@ def regular_fetch_and_message(args, ch_name, token):
     # Handle post-message actions based on the success flag.
     if success:
         confirm_temp_cache(args.temp_cache_path, args.cache_path)
-        logger.info("Fetched publications successfully moved to cache. Temporary cache cleared.")
+        logger.info(
+            "Fetched publications successfully moved to cache. Temporary cache cleared."
+        )
     else:
         # Clear the temporary cache due to the failure in sending messages.
         logger.error(
@@ -147,7 +153,9 @@ def refetch_and_update(args):
             shutil.rmtree(args.cache_path)
             logger.debug(f"Deleted old cache at {args.cache_path}")
         except Exception as e:  # Handle specific exception to avoid broad except.
-            logger.error(f"Failed to delete old cache at {args.cache_path}. Reason: {str(e)}")
+            logger.error(
+                f"Failed to delete old cache at {args.cache_path}. Reason: {str(e)}"
+            )
 
     # Refetch all the author and publication details.
     _ = fetch_from_json(args)
@@ -160,47 +168,39 @@ def refetch_and_update(args):
 
 
 def add_scholar_and_fetch(args):
-    """
-    Add a new scholar's data, fetch their publications, and update the cache.
+    """Add a new scholar, fetch publications, and update the cache.
 
-    This function adds a new scholar to the specified JSON, fetches their publications,
-    and updates the cache with the newly fetched data.
+    The author roster is now stored in a SQLite database. This helper inserts a
+    new scholar into that database, retrieves their publications, and persists
+    the results to the cache.
 
-    Parameters:
-    - args: Arguments containing paths for authors' JSON, cache, temp cache, and other
-            relevant data, as well as the scholar ID of the new author.
-
-    Returns:
-    None
+    Args:
+        args: Object containing paths for the authors database, cache, and the
+            identifier of the new author to add.
     """
 
-    # Check if an author's JSON file with the same ID already exists in the cache path.
     json_filename = f"{args.add_scholar_id}.json"
     json_filepath = os.path.join(args.cache_path, json_filename)
 
     if os.path.exists(json_filepath):
         logger.info(
-            f"Author with scholar ID {args.add_scholar_id} is already in the authors JSON file. Fetching is skipped."
+            f"Author with scholar ID {args.add_scholar_id} already has cached publications. Fetching is skipped."
         )
         return
 
-    # Add the new author's data to the authors' JSON file and get their dictionary representation.
     author_dict = add_new_author_to_json(args.authors_path, args.add_scholar_id)
     logger.debug(
-        f"Added new author with scholar ID {args.add_scholar_id} to authors' JSON."
+        f"Added new author with scholar ID {args.add_scholar_id} to authors database."
     )
 
-    # Create a single-entry list with the new author's data for subsequent processing.
     authors_json = [author_dict]
-
-    # Convert the retrieved JSON data of the new author into a tuple representation for easier handling.
     authors = convert_json_to_tuple(authors_json)
-    logger.debug("Converted new author's JSON data into tuple representation.")
+    logger.debug("Converted new author's record into tuple representation.")
 
-    # Fetch publication details for the new author from the scholarly database.
     articles = fetch_pubs_dictionary(authors, args)
     logger.info(f"Fetched {len(articles)} articles for the new author.")
 
-    # Update the cache with the newly fetched data for the new author.
     update_cache_only(args)
-    logger.info("Added author to JSON. Cache successfully updated with new author's data.")
+    logger.info(
+        "Added author to database. Cache successfully updated with new author's data."
+    )

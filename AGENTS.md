@@ -45,7 +45,7 @@
 - Prefer clarity over brevity: comment liberally to aid future maintainers.
 
 ## Adding Authors
-- Add new authors to `src/authors.json`.
+- Add new authors to `src/authors.db` using the provided CLI utilities.
 - For single additions use:
   ```bash
   python main.py --add_scholar_id="SCHOLAR_ID"

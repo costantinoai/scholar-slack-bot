@@ -1,22 +1,25 @@
 #!/usr/bin/env python3
-"""Migrate JSON caches to a SQLite database.
+"""Migrate JSON caches and authors list to SQLite.
 
-This script reads per-author JSON cache files and stores their contents
-in a SQLite database using the ``publications`` schema.
+This utility converts existing per-author JSON cache files and the legacy
+``authors.json`` into SQLite databases. After a successful migration, the
+original files are moved into an ``obsolete`` folder for archival purposes.
 
 Usage:
-    python migrate_cache.py --json_dir /path/to/json_cache --db_dir /path/to/output
+    python migrate_cache.py --root ./src [--backup_dir ./src/googleapi_cache_bkp]
 """
 
 import argparse
 import json
 import os
+import shutil
 import sqlite3
 
 DB_NAME = "publications.db"
+AUTHORS_DB = "authors.db"
 
 
-def init_db(db_path: str) -> sqlite3.Connection:
+def init_pub_db(db_path: str) -> sqlite3.Connection:
     """Create the publications table if needed and return a connection."""
     conn = sqlite3.connect(db_path)
     conn.execute(
@@ -33,21 +36,35 @@ def init_db(db_path: str) -> sqlite3.Connection:
     return conn
 
 
-def migrate(json_dir: str, db_dir: str) -> None:
-    """Import every JSON cache file into the SQLite database.
+def init_authors_db(db_path: str) -> sqlite3.Connection:
+    """Create the authors table if needed and return a connection."""
+    conn = sqlite3.connect(db_path)
+    conn.execute(
+        """CREATE TABLE IF NOT EXISTS authors (
+                name TEXT,
+                id TEXT PRIMARY KEY
+            )"""
+    )
+    return conn
+
+
+def migrate(root: str, backup_dir: str | None = None) -> None:
+    """Perform the migration and archive legacy files.
 
     Args:
-        json_dir: Directory containing ``<author_id>.json`` files.
-        db_dir: Location where the SQLite database should reside.
+        root: Base directory containing ``authors.json`` and ``googleapi_cache``.
+        backup_dir: Optional path to a legacy backup cache directory.
     """
-    db_path = os.path.join(db_dir, DB_NAME)
-    conn = init_db(db_path)
+
+    cache_dir = os.path.join(root, "googleapi_cache")
+    pub_db_path = os.path.join(cache_dir, DB_NAME)
+    conn = init_pub_db(pub_db_path)
     try:
-        for fname in os.listdir(json_dir):
+        for fname in os.listdir(cache_dir):
             if not fname.endswith(".json"):
                 continue
             author_id = os.path.splitext(fname)[0]
-            with open(os.path.join(json_dir, fname), "r") as f:
+            with open(os.path.join(cache_dir, fname), "r") as f:
                 pubs = json.load(f)
             for pub in pubs:
                 title = pub["bib"]["title"]
@@ -64,16 +81,48 @@ def migrate(json_dir: str, db_dir: str) -> None:
     finally:
         conn.close()
 
+    authors_json = os.path.join(root, "authors.json")
+    if os.path.exists(authors_json):
+        a_conn = init_authors_db(os.path.join(root, AUTHORS_DB))
+        try:
+            with open(authors_json, "r") as f:
+                authors = json.load(f)
+            for author in authors:
+                a_conn.execute(
+                    "INSERT OR REPLACE INTO authors (name, id) VALUES (?, ?)",
+                    (author["name"], author["id"]),
+                )
+            a_conn.commit()
+        finally:
+            a_conn.close()
+
+    obsolete_dir = os.path.join(root, "obsolete")
+    os.makedirs(obsolete_dir, exist_ok=True)
+    if os.path.exists(authors_json):
+        shutil.move(authors_json, os.path.join(obsolete_dir, "authors.json"))
+    if os.path.exists(cache_dir):
+        shutil.move(cache_dir, os.path.join(obsolete_dir, "googleapi_cache"))
+    if backup_dir:
+        bkp = (
+            backup_dir if os.path.isabs(backup_dir) else os.path.join(root, backup_dir)
+        )
+        if os.path.exists(bkp):
+            shutil.move(bkp, os.path.join(obsolete_dir, os.path.basename(bkp)))
+
 
 def main() -> None:
     """Parse arguments and perform the migration."""
     parser = argparse.ArgumentParser(description="Migrate JSON cache to SQLite.")
     parser.add_argument(
-        "--json_dir", required=True, help="Directory with JSON cache files"
+        "--root", default="./src", help="Root directory with authors and cache"
     )
-    parser.add_argument("--db_dir", required=True, help="Directory for the SQLite DB")
+    parser.add_argument(
+        "--backup_dir",
+        help="Optional path to a legacy backup cache directory",
+        default=None,
+    )
     args = parser.parse_args()
-    migrate(args.json_dir, args.db_dir)
+    migrate(args.root, args.backup_dir)
 
 
 if __name__ == "__main__":
