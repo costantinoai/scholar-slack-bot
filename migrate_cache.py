@@ -57,7 +57,9 @@ def migrate(root: str, backup_dir: str | None = None) -> None:
     """
 
     cache_dir = os.path.join(root, "googleapi_cache")
-    pub_db_path = os.path.join(cache_dir, DB_NAME)
+    # Store the new publications database directly under ``root`` so it remains
+    # after the legacy cache folder is archived.
+    pub_db_path = os.path.join(root, DB_NAME)
     conn = init_pub_db(pub_db_path)
     try:
         for fname in os.listdir(cache_dir):
@@ -82,8 +84,10 @@ def migrate(root: str, backup_dir: str | None = None) -> None:
         conn.close()
 
     authors_json = os.path.join(root, "authors.json")
+    authors_db_path = os.path.join(root, AUTHORS_DB)
     if os.path.exists(authors_json):
-        a_conn = init_authors_db(os.path.join(root, AUTHORS_DB))
+        # Ensure the authors database resides in ``root`` before archiving
+        a_conn = init_authors_db(authors_db_path)
         try:
             with open(authors_json, "r") as f:
                 authors = json.load(f)

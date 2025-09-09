@@ -154,7 +154,7 @@ slack-bot
 ├── streams_funcs.py
 └── src
     ├── authors.db
-    ├── googleapi_cache
+    ├── publications.db
     └── slack.config
 ```
 
@@ -172,7 +172,7 @@ slack-bot
 - **`streams_funcs.py`**: Internal, handles workflow logic based on CLI flags.  
 - **`authors.db`**: SQLite database storing author names and Google Scholar IDs.
 
-- **`googleapi_cache/`**: Stores cached publication data.  
+- **`publications.db`**: SQLite database caching publication data.
 - **`slack.config`**: Configuration file for Slack settings. Example format:  
 
   ```ini

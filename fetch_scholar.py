@@ -27,9 +27,9 @@ logger = logging.getLogger(__name__)
 MAX_RETRIES = 3
 DELAYS = [20, 40, 60]
 DEFAULT_SRC_DIR = "./src"
-DEFAULT_CACHE_DIR = os.path.join(DEFAULT_SRC_DIR, "googleapi_cache")
 DB_NAME = "publications.db"
-DEFAULT_DB_PATH = os.path.join(DEFAULT_CACHE_DIR, DB_NAME)
+DEFAULT_DB_DIR = DEFAULT_SRC_DIR
+DEFAULT_DB_PATH = os.path.join(DEFAULT_DB_DIR, DB_NAME)
 
 
 def _init_db(db_path: str) -> sqlite3.Connection:
@@ -144,7 +144,7 @@ def fetch_author_details(author_id):
         raise e
 
 
-def load_cache(author_id, output_folder=DEFAULT_CACHE_DIR):
+def load_cache(author_id, output_folder=DEFAULT_DB_DIR):
     """Load cached publications for an author from the SQLite database.
 
     Args:
@@ -286,7 +286,7 @@ def fetch_selected_pubs(pubs_to_fetch):
 
 
 def save_updated_cache(
-    fetched_pubs, cached_pubs, author_id, output_folder=DEFAULT_CACHE_DIR, args=None
+    fetched_pubs, cached_pubs, author_id, output_folder=DEFAULT_DB_DIR, args=None
 ):
     """Persist fetched publications to the SQLite cache.
 
@@ -294,7 +294,7 @@ def save_updated_cache(
     - fetched_pubs (list): List of newly fetched publications.
     - cached_pubs (list): Unused; retained for backward compatibility.
     - output_folder (str, optional): Directory where the cache database is stored.
-      Defaults to ``DEFAULT_CACHE_DIR``.
+      Defaults to ``DEFAULT_DB_DIR``.
     - args (argparse.Namespace, optional): Object with the ``update_cache`` flag.
     """
 
@@ -323,7 +323,7 @@ def save_updated_cache(
 
 def fetch_publications_by_id(
     author_id,
-    output_folder=DEFAULT_CACHE_DIR,
+    output_folder=DEFAULT_DB_DIR,
     args=None,
     from_year=2023,
     exclude_not_cited_papers=False,
@@ -334,7 +334,7 @@ def fetch_publications_by_id(
     Parameters:
     - author_id (str): Google Scholar ID of the author.
     - output_folder (str, optional): Directory where the fetched publications will be cached.
-      Defaults to ``DEFAULT_CACHE_DIR``.
+      Defaults to ``DEFAULT_DB_DIR``.
     - from_year (int, optional): Limit publications to this year. Defaults to 2023.
     - exclude_not_cited_papers (bool, optional): If True, only return papers that have been cited. Defaults to False.
 
@@ -370,14 +370,14 @@ def fetch_publications_by_id(
     return clean_pubs(fetched_pubs, from_year, exclude_not_cited_papers)
 
 
-def fetch_pubs_dictionary(authors, args, output_dir=DEFAULT_SRC_DIR):
+def fetch_pubs_dictionary(authors, args, output_dir=DEFAULT_DB_DIR):
     """
     Fetch publications for a list of authors for the current year,
     and store them in a cache. Only non-duplicate publications compared
     to the cache are returned.
 
     :param authors: List of tuples containing author name and author ID.
-    :param output_dir: Directory where the cache file will be saved/loaded from.
+    :param output_dir: Directory where the cache database will be stored.
     :return: A dictionary containing non-duplicate publications.
     """
 
@@ -389,15 +389,15 @@ def fetch_pubs_dictionary(authors, args, output_dir=DEFAULT_SRC_DIR):
         "output_root": output_dir,
     }
 
-    # Determine cache directory
+    # Determine database directory. If no path is provided, fall back to the
+    # user's desktop for visibility during ad-hoc runs.
     if params["output_root"] is None:
         if platform.system() == "Windows":
-            desktop = os.path.join(os.path.join(os.environ["USERPROFILE"]), "Desktop")
+            output_folder = os.path.join(os.environ["USERPROFILE"], "Desktop")
         else:
-            desktop = os.path.join(os.path.expanduser("~"), "Desktop")
-        output_folder = os.path.join(desktop, "googleapi_cache")
+            output_folder = os.path.join(os.path.expanduser("~"), "Desktop")
     else:
-        output_folder = os.path.join(params["output_root"], "googleapi_cache")
+        output_folder = params["output_root"]
 
     # Ensure the output directory exists.
     if not os.path.exists(output_folder):
