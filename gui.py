@@ -20,12 +20,12 @@ from __future__ import annotations
 import json
 import sqlite3
 from pathlib import Path
-from subprocess import run
+from subprocess import PIPE, STDOUT, Popen, TimeoutExpired
 from types import SimpleNamespace
 from typing import Iterable
 
 import requests
-from flask import Flask, redirect, render_template_string, request, url_for
+from flask import Flask, Response, redirect, render_template_string, request, url_for
 from configparser import ConfigParser
 
 from fetch_scholar import fetch_pubs_dictionary
@@ -149,6 +149,44 @@ def _get_workspace_name(token: str) -> str | None:
 
 
 # ---------------------------------------------------------------------------
+# Background process management
+# ---------------------------------------------------------------------------
+
+# ``CURRENT_PROCESS`` holds the handle of the subprocess currently running as a
+# workflow or test.  Only one process is allowed at a time so the interface can
+# expose a single stream of output.
+CURRENT_PROCESS: Popen[str] | None = None
+
+
+def _start_process(cmd: list[str]) -> None:
+    """Launch ``cmd`` in the background and capture its output.
+
+    Any previously running process is terminated first to avoid overlapping
+    subprocesses.
+
+    Args:
+        cmd: Sequence forming the command to execute.
+    """
+
+    _stop_current_process()
+    global CURRENT_PROCESS
+    CURRENT_PROCESS = Popen(cmd, stdout=PIPE, stderr=STDOUT, text=True, bufsize=1)
+
+
+def _stop_current_process() -> None:
+    """Terminate the active background process if it exists."""
+
+    global CURRENT_PROCESS
+    if CURRENT_PROCESS and CURRENT_PROCESS.poll() is None:
+        CURRENT_PROCESS.terminate()
+        try:
+            CURRENT_PROCESS.wait(2)
+        except TimeoutExpired:
+            CURRENT_PROCESS.kill()
+    CURRENT_PROCESS = None
+
+
+# ---------------------------------------------------------------------------
 # Utility helpers
 # ---------------------------------------------------------------------------
 
@@ -259,7 +297,6 @@ def index():
     return render_template_string(
         TEMPLATE,
         authors=authors,
-        command_output=None,
         settings=settings_ns,
         slack=slack_ns,
     )
@@ -402,81 +439,77 @@ def publications():
 
 @app.post("/send-test")
 def send_test_message():
-    """Send a test Slack message using ``main.py``."""
+    """Start a subprocess to send a Slack test message."""
 
-    result = run(
+    _start_process(
         [
             "python",
+            "-u",
             "main.py",
             "--test_message",
             "--authors_path",
             settings["authors_db"],
             "--slack_config_path",
             settings["slack_config_path"],
-        ],
-        capture_output=True,
-        text=True,
+        ]
     )
-    authors = get_authors_json(str(AUTHORS_DB))
-    settings_ns = SimpleNamespace(**settings)
-    slack_conf = _load_slack_config()
-    workspace = _get_workspace_name(slack_conf["api_token"])
-    slack_ns = SimpleNamespace(workspace=workspace, **slack_conf)
-    return render_template_string(
-        TEMPLATE,
-        authors=authors,
-        command_output=result.stdout + result.stderr,
-        settings=settings_ns,
-        slack=slack_ns,
-    )
+    return ("", 204)
 
 
 @app.post("/run-workflow")
 def run_workflow():
-    """Run the full fetch-and-send workflow."""
+    """Start a subprocess to run the full fetch-and-send workflow."""
 
-    result = run(
+    _start_process(
         [
             "python",
+            "-u",
             "main.py",
             "--authors_path",
             settings["authors_db"],
             "--slack_config_path",
             settings["slack_config_path"],
-        ],
-        capture_output=True,
-        text=True,
+        ]
     )
-    authors = get_authors_json(str(AUTHORS_DB))
-    settings_ns = SimpleNamespace(**settings)
-    slack_conf = _load_slack_config()
-    workspace = _get_workspace_name(slack_conf["api_token"])
-    slack_ns = SimpleNamespace(workspace=workspace, **slack_conf)
-    return render_template_string(
-        TEMPLATE,
-        authors=authors,
-        command_output=result.stdout + result.stderr,
-        settings=settings_ns,
-        slack=slack_ns,
-    )
+    return ("", 204)
 
 
 @app.post("/run-tests")
 def run_tests():
-    """Execute ``pytest`` and display the output on the main page."""
-    result = run(["pytest", "-vv"], capture_output=True, text=True)
-    authors = get_authors_json(str(AUTHORS_DB))
-    settings_ns = SimpleNamespace(**settings)
-    slack_conf = _load_slack_config()
-    workspace = _get_workspace_name(slack_conf["api_token"])
-    slack_ns = SimpleNamespace(workspace=workspace, **slack_conf)
-    return render_template_string(
-        TEMPLATE,
-        authors=authors,
-        command_output=result.stdout + result.stderr,
-        settings=settings_ns,
-        slack=slack_ns,
-    )
+    """Start a subprocess to execute ``pytest``."""
+
+    _start_process(["pytest", "-vv", "-s"])
+    return ("", 204)
+
+
+@app.get("/stream")
+def stream_output():
+    """Stream stdout from the running subprocess as server-sent events."""
+
+    if CURRENT_PROCESS is None:
+        return Response("data: no process\n\n", mimetype="text/event-stream")
+
+    def generate():
+        while True:
+            line = CURRENT_PROCESS.stdout.readline()
+            if line:
+                yield f"data: {line.rstrip()}\n\n"
+            elif CURRENT_PROCESS.poll() is not None:
+                break
+        code = CURRENT_PROCESS.poll()
+        yield f"data: [exit {code}]\n\n"
+        yield "data: __COMPLETE__\n\n"
+        _stop_current_process()
+
+    return Response(generate(), mimetype="text/event-stream")
+
+
+@app.post("/stop")
+def stop_process():
+    """Terminate the running subprocess, if any."""
+
+    _stop_current_process()
+    return ("", 204)
 
 
 # ---------------------------------------------------------------------------
@@ -496,9 +529,7 @@ TEMPLATE = """
 <body class=\"container py-4\">
   <h1 class=\"mb-4\">Scholar Slack Bot</h1>
 
-  {% if command_output %}
-  <div class=\"alert alert-info\"><pre class=\"mb-0\">{{ command_output }}</pre></div>
-  {% endif %}
+  <div id=\"output-container\" class=\"alert alert-info\" style=\"display:none;\"><pre id=\"output\" class=\"mb-0\"></pre></div>
 
   <div class=\"row g-4\">
     <div class=\"col-md-6\">
@@ -606,22 +637,45 @@ TEMPLATE = """
   <div class=\"mt-4\">
     <h2>Workflows</h2>
     <p>Target: <strong>{{ slack.channel_name or 'unknown channel' }}</strong>{% if slack.workspace %} in <strong>{{ slack.workspace }}</strong>{% else %} in <strong>unknown workspace</strong>{% endif %}</p>
-    <form method=\"post\" action=\"{{ url_for('send_test_message') }}\" onsubmit=\"return confirm('Send test message to {{ slack.channel_name }} in {{ slack.workspace or 'unknown workspace' }}?')\">
-      <button class=\"btn btn-outline-secondary\" type=\"submit\">Send Test Message</button>
-    </form>
-    <form class=\"mt-2\" method=\"post\" action=\"{{ url_for('run_workflow') }}\" onsubmit=\"return confirm('Run workflow and send messages to {{ slack.channel_name }} in {{ slack.workspace or 'unknown workspace' }}?')\">
-      <button class=\"btn btn-outline-success\" type=\"submit\">Run Workflow</button>
-    </form>
+    <button class=\"btn btn-outline-secondary\" onclick=\"startProcess('{{ url_for('send_test_message') }}', 'Send test message to {{ slack.channel_name }} in {{ slack.workspace or 'unknown workspace' }}?')\">Send Test Message</button>
+    <button class=\"btn btn-outline-success mt-2\" onclick=\"startProcess('{{ url_for('run_workflow') }}', 'Run workflow and send messages to {{ slack.channel_name }} in {{ slack.workspace or 'unknown workspace' }}?')\">Run Workflow</button>
+    <button id=\"stop-btn\" class=\"btn btn-danger mt-2\" style=\"display:none;\" onclick=\"stopProcess()\">Stop</button>
   </div>
 
-  <div class=\"mt-4\">
-    <h2>Run Tests</h2>
-    <form method=\"post\" action=\"{{ url_for('run_tests') }}\" onsubmit=\"return confirm('This may take a while. Run tests?')\">
-      <button class=\"btn btn-secondary\" type=\"submit\">pytest</button>
-    </form>
-  </div>
+    <div class=\"mt-4\">
+      <h2>Run Tests</h2>
+      <button class=\"btn btn-secondary\" onclick=\"startProcess('{{ url_for('run_tests') }}', 'This may take a while. Run tests?')\">pytest</button>
+    </div>
 
   <script>
+  let evtSource;
+
+  function startProcess(url, confirmText){
+    if (confirmText && !confirm(confirmText)) return;
+    document.getElementById('output').textContent = '';
+    document.getElementById('output-container').style.display = 'block';
+    fetch(url, {method: 'POST'});
+    if (evtSource) evtSource.close();
+    evtSource = new EventSource('/stream');
+    document.getElementById('stop-btn').style.display = 'inline-block';
+    evtSource.onmessage = function(e){
+      if (e.data === '__COMPLETE__'){
+        evtSource.close();
+        document.getElementById('stop-btn').style.display = 'none';
+      } else {
+        const out = document.getElementById('output');
+        out.textContent += e.data + '\n';
+        out.scrollTop = out.scrollHeight;
+      }
+    };
+  }
+
+  function stopProcess(){
+    fetch('/stop', {method: 'POST'});
+    if (evtSource) evtSource.close();
+    document.getElementById('stop-btn').style.display = 'none';
+  }
+
   const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
   tooltipTriggerList.map(t => new bootstrap.Tooltip(t));
   </script>

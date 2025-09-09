@@ -157,6 +157,7 @@ The responsive page at [http://localhost:5000](http://localhost:5000) offers:
 - Settings editor: adjust database locations, Slack config path, Slack token and channel, and API call delay. Changes are saved to `settings.json` and `slack.config` for future runs.
 - Workflow triggers: send a Slack test message or run the full fetch-and-send workflow directly from the browser. The target channel and workspace are displayed before execution.
 - Utilities: clear all cache and run the project's tests with full output. Destructive actions prompt for confirmation.
+- Live process output: workflow, test, and message runs stream their logs in-place and can be stopped at any time.
 
 ---
 
