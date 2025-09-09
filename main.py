@@ -7,7 +7,6 @@ Created on Sat Oct  7 02:46:59 2023
 """
 
 import os
-import sys
 import argparse
 import logging
 import shutil
@@ -64,48 +63,34 @@ def get_args():
 
 
 def initialize_args():
-    """
-    Initialize arguments based on the mode of execution (Command Line vs IDE).
+    """Parse command-line arguments and configure logging.
 
-    When executed via command line, the function will parse the provided command-line arguments.
-    If executed from an IDE, it will use default configurations.
+    The function always relies on the command-line interface, even when the
+    script is launched without additional arguments (such as from an IDE).
+    Default values defined in :func:`get_args` are therefore applied.
 
     Returns:
-        argparse.Namespace or IDEArgs: Argument object based on the mode of execution.
+        argparse.Namespace: Object holding parsed command-line arguments.
     """
 
-    # Check if the script is executed via command line
-    if len(sys.argv) > 1:
-        # Parse command-line arguments
-        parser, args = get_args()
-        logger.info("Parsed command-line arguments.")
-    else:
-        # Default configurations for execution in IDE
-        class IDEArgs:
-            def __init__(self):
-                self.slack_config_path = "./src/slack-test.config"
-                self.authors_path = "./src/authors.db"
-                self.verbose = True
-                self.test_message = True
-                self.add_scholar_id = None
-                self.update_cache = False
+    # Parse the arguments using the standard CLI interface.
+    parser, args = get_args()
+    logger.info("Parsed command-line arguments.")
 
-        args = IDEArgs()
-
-    # Checking for mutual exclusivity of the arguments
+    # Ensure mutually exclusive options are not combined.
     if has_conflicting_args(args):
         raise ValueError(
             "--add_scholar_id and --update_cache cannot be used together or with --test_message"
         )
 
-    # Configure logging based on verbosity
+    # Configure logging based on requested verbosity.
     setup_logging(verbose=args.verbose)
     if args.verbose:
         logger.debug("Verbose log mode activated.")
     else:
         logger.info("Minimal log mode activated.")
 
-    # Display the arguments being used
+    # Display the arguments being used to aid debugging.
     for arg, value in vars(args).items():
         logger.debug(f"Argument {arg} = {value}")
 
