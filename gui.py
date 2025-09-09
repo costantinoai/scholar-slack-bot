@@ -660,7 +660,8 @@ TEMPLATE = """
     // request completes.  This avoids a race where the EventSource connects
     // before the server has registered the process, resulting in an empty
     // log stream.
-    fetch(url, {method: 'POST'}).then(() => {
+    fetch(url, {method: 'POST'}).then(resp => {
+      if(!resp.ok) throw new Error('HTTP '+resp.status);
       if (evtSource) evtSource.close();
       evtSource = new EventSource('/stream');
       document.getElementById('stop-btn').style.display = 'inline-block';
@@ -673,10 +674,16 @@ TEMPLATE = """
           outEl.scrollTop = outEl.scrollHeight;
         }
       };
+      evtSource.onerror = function(e){
+        outEl.textContent += 'Stream error.\n';
+        evtSource.close();
+        document.getElementById('stop-btn').style.display = 'none';
+      };
     }).catch(err => {
       // Display fetch errors in the output area so the user knows what
       // happened instead of the button appearing to do nothing.
       outEl.textContent = 'Error starting process: ' + err;
+      document.getElementById('stop-btn').style.display = 'none';
     });
   }
 
