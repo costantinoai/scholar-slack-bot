@@ -146,13 +146,14 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
     Returns:
     - list: List of publications to fetch.
     """
-    if args.test_fetching:
-        logger.warning(f"--test_fetching flag True. Loading only cached papers < {str(from_year)}")
+    test_fetching = getattr(args, "test_fetching", False)
+    if test_fetching:
+        logging.warning(f"--test_fetching flag True. Loading only cached papers < {str(from_year)}")
 
-    # Extract titles from cached publications, only titles before from_year if args.test_fetching == True
+    # Extract titles from cached publications, only titles before from_year if test_fetching is True
     cached_titles = (
         [pub["bib"]["title"] for pub in cached_pubs]
-        if not args.test_fetching
+        if not test_fetching
         else [
             pub["bib"]["title"]
             for pub in cached_pubs
@@ -170,7 +171,7 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
             if "pub_year" in item["bib"].keys() and int(item["bib"]["pub_year"]) >= int(from_year)
         ]
     else:
-        # Filter out publications to fetch based on title and year, only titles >= from_year if args.test_fetchin == True
+        # Filter out publications to fetch based on title and year, only titles >= from_year if test_fetching == True
         pubs_to_fetch = [
             item
             for item in author_pubs
@@ -293,7 +294,7 @@ def fetch_publications_by_id(
     # Fetch selected publications
     fetched_pubs = fetch_selected_pubs(pubs_to_fetch)
     # Update cache with newly fetched publications
-    if not args.test_fetching:
+    if not getattr(args, "test_fetching", False):
         save_updated_cache(fetched_pubs, cached_pubs, author_id, temp_output_folder, args)
     # Return cleaned list of publications
     return clean_pubs(fetched_pubs, from_year, exclude_not_cited_papers)
@@ -311,8 +312,9 @@ def fetch_pubs_dictionary(authors, args, output_dir="./src"):
     """
 
     current_year = time.strftime("%Y")  # Get the current year
+    test_fetching = getattr(args, "test_fetching", False)
     params = {
-        "authors": authors if not args.test_fetching else authors[:2],
+        "authors": authors if not test_fetching else authors[:2],
         "from_year": current_year,
         "output_root": output_dir,
     }

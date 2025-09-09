@@ -76,8 +76,7 @@ def confirm_temp_cache(temp_cache_path="./src/temp_cache", old_cache_path="./src
 
 
 def has_conflicting_args(args):
-    """
-    Check if any of the conflicting arguments are set to True or have values.
+    """Check if any of the conflicting arguments are set to True or have values.
 
     Args:
         args (argparse.Namespace): The argument object.
@@ -86,17 +85,14 @@ def has_conflicting_args(args):
         bool: True if any conflicting arguments are set, otherwise False.
     """
 
-    # Check if test_fetching and test_message are used together without any other conflicting arguments
-    if args.test_fetching and args.test_message:
+    if args.test_message:
         return any([args.add_scholar_id, args.update_cache])
 
-    # Check if add_scholar_id is used alone
     if args.add_scholar_id:
-        return any([args.test_fetching, args.test_message, args.update_cache])
+        return any([args.test_message, args.update_cache])
 
-    # Check if update_cache is used alone
     if args.update_cache:
-        return any([args.test_fetching, args.test_message, args.add_scholar_id])
+        return any([args.test_message, args.add_scholar_id])
 
     return False
 

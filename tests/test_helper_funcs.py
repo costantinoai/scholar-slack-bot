@@ -8,6 +8,7 @@ from helper_funcs import (
     convert_json_to_tuple,
     ensure_output_folder,
     has_conflicting_args,
+    confirm_temp_cache,
 )
 
 
@@ -80,7 +81,6 @@ def test_convert_json_to_tuple():
 
 def test_has_conflicting_args_detects_conflict():
     args = SimpleNamespace(
-        test_fetching=True,
         test_message=True,
         add_scholar_id=True,
         update_cache=False,
@@ -90,7 +90,6 @@ def test_has_conflicting_args_detects_conflict():
 
 def test_has_conflicting_args_no_conflict():
     args = SimpleNamespace(
-        test_fetching=True,
         test_message=True,
         add_scholar_id=False,
         update_cache=False,
@@ -115,3 +114,14 @@ def test_add_new_author_to_json(mock_scholarly, tmp_path):
         data = json.load(f)
     assert added == {"name": "New", "id": "N1"}
     assert any(a["id"] == "N1" for a in data)
+
+def test_confirm_temp_cache_moves_files(tmp_path):
+    temp_dir = tmp_path / "tmp"
+    cache_dir = tmp_path / "cache"
+    temp_dir.mkdir()
+    (temp_dir / "file.json").write_text("data")
+
+    confirm_temp_cache(str(temp_dir), str(cache_dir))
+
+    assert (cache_dir / "file.json").exists()
+    assert not temp_dir.exists()
