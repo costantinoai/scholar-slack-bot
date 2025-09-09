@@ -29,11 +29,11 @@ def test_fetch_and_message(args, ch_name, token):
     """
     Test fetching of articles and send formatted messages to a Slack channel.
 
-    This function is used when:
+    This function is used for tests when:
     - Not adding a scholar by ID (`add_scholar_id` is not provided).
     - Not updating the cache only (`update-cache` is False).
-    - Both `test_fetching` and `test_message` are True, indicating a desire
-      to test fetch and send a message for the fetched data.
+    - The test arguments set `test_message` (and optionally a testing flag
+      to limit fetching) to verify fetching and messaging together.
 
     Args:
         args: Arguments used by the `fetch_from_json` function.
@@ -83,8 +83,8 @@ def regular_fetch_and_message(args, ch_name, token):
 
     This function operates under the following conditions:
     - Not adding a scholar by ID (`add_scholar_id` is not provided).
-    - Not updating the cache only (`update-cache` is False).
-    - Both `test_fetching` and `test_message` are False.
+    - Not updating the cache only (`update_cache` is False).
+    - `test_message` is False.
 
     Args:
         args (argparse.Namespace): The argument object.
