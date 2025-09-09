@@ -28,6 +28,7 @@ This Slack Bot fetches publications for authors from Google Scholar and sends no
    ```
    The helper scripts under `scripts/` configure this automatically, so you can
    run `./scripts/fetch_and_send.sh` from any directory.
+   A similar wrapper `./scripts/run_gui.sh` launches the web interface.
 
 ---
 
@@ -150,10 +151,11 @@ defaults defined in the CLI are applied when no explicit arguments are passed.
 
 ### Web Interface
 
-A modern Flask web UI is bundled for managing the bot. Launch it with:
+A modern Flask web UI is bundled for managing the bot. Launch it with the
+helper script which configures the environment automatically:
 
 ```sh
-python -m scholar_slack_bot.ui.gui
+./scripts/run_gui.sh
 ```
 
 The responsive page at [http://localhost:5000](http://localhost:5000) offers:
@@ -176,7 +178,8 @@ scholar-slack-bot
 │   └── slack-example.config
 ├── scripts
 │   ├── add_authors_batch.sh
-│   └── fetch_and_send.sh
+│   ├── fetch_and_send.sh
+│   └── run_gui.sh
 ├── src
 │   └── scholar_slack_bot
 │       ├── __init__.py

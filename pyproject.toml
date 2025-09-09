@@ -27,3 +27,9 @@ scholar-slack-bot = "scholar_slack_bot.cli:main"
 [tool.black]
 line-length = 88
 target-version = ["py38"]
+
+[tool.pytest.ini_options]
+# Ensure tests are discovered and the package source is on ``PYTHONPATH``
+# when running ``pytest`` from the project root without installation.
+testpaths = ["tests"]
+pythonpath = ["src"]
