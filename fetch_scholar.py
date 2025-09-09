@@ -10,7 +10,6 @@ import os
 import platform
 import sqlite3
 from scholarly import scholarly
-from concurrent.futures import ThreadPoolExecutor
 import logging
 import time
 from tqdm import tqdm
@@ -31,6 +30,20 @@ DEFAULT_SRC_DIR = "./src"
 DB_NAME = "publications.db"
 DEFAULT_DB_DIR = DEFAULT_SRC_DIR
 DEFAULT_DB_PATH = os.path.join(DEFAULT_DB_DIR, DB_NAME)
+
+
+def reset_scholarly_session() -> None:
+    """Reinitialize the global :mod:`scholarly` session.
+
+    The scholarly library occasionally closes its internal HTTP client when
+    Google Scholar returns throttling responses. Subsequent requests then raise
+    ``RuntimeError`` because the client is closed. Creating a fresh instance of
+    the :class:`~scholarly._scholarly._Scholarly` class ensures a new session is
+    available for further requests.
+    """
+
+    global scholarly
+    scholarly = scholarly.__class__()
 
 
 def _init_db(db_path: str) -> sqlite3.Connection:
@@ -108,44 +121,91 @@ def fetch_from_json(args, idx=None):
 
 
 def fetch_publication_details(pub):
-    """
-    Fetch and fill details for a given publication.
+    """Populate a publication dictionary with details from Google Scholar.
 
-    Parameters:
-        pub (dict): The scholarly publication dictionary to fetch details for.
+    The scholarly library occasionally closes its internal HTTP session when
+    hitting rate limits. If that happens we recreate the session and retry the
+    request to avoid losing data mid-run.
+
+    Args:
+        pub: The publication skeleton returned by :mod:`scholarly`.
 
     Returns:
-        dict: A scholarly publication dictionary populated with additional details.
-
-    Example:
-        publication = fetch_publication_details(some_scholarly_dict)
+        dict | None: The enriched publication dictionary, or ``None`` if all
+        retries fail.
     """
+
     # Log fetching details only when logging level allows for debug information
-    logger.debug(f"Fetching details for publication {pub['bib']['title']}.")
-    try:
-        return scholarly.fill(pub)
-    except Exception as e:
-        logger.error(f"Error fetching publication: {e}")
-        return None
+    title = pub["bib"]["title"]
+    logger.debug("Fetching details for publication %s.", title)
+
+    for retry in range(MAX_RETRIES):
+        try:
+            # Attempt to fetch publication details with the current session
+            return scholarly.fill(pub)
+        except RuntimeError as err:
+            # When the HTTP client has been closed, reset the session and retry
+            if "client has been closed" in str(err) and retry < MAX_RETRIES - 1:
+                logger.warning(
+                    "Scholarly session closed while fetching '%s'. Resetting session.",
+                    title,
+                )
+                reset_scholarly_session()
+                time.sleep(DELAYS[retry])
+                continue
+            logger.error("Runtime error fetching '%s': %s", title, err)
+            return None
+        except Exception as err:
+            logger.error("Error fetching publication '%s': %s", title, err)
+            if retry < MAX_RETRIES - 1:
+                time.sleep(DELAYS[retry])
+                continue
+            return None
+
+    logger.error("Max retries exceeded for publication '%s'.", title)
+    return None
 
 
 def fetch_author_details(author_id):
-    """
-    Fetches author details using the scholarly library.
+    """Retrieve publications for a given author ID.
+
+    Google Scholar may abruptly close connections which propagates as
+    ``RuntimeError`` from the :mod:`scholarly` library. To keep the workflow
+    resilient we recreate the session and retry.
+
+    Args:
+        author_id: Google Scholar identifier of the author.
 
     Returns:
-    - dict: Details of the author.
-
-    Raises:
-    - Exception: If there's any error during the fetching process.
+        list: Publications associated with the author. An empty list is
+        returned if the author cannot be fetched.
     """
-    try:
-        author = scholarly.search_author_id(author_id)
-        author = scholarly.fill(author)
-        return author["publications"]
-    except Exception as e:
-        logger.error(f"Error fetching author details for ID: {author_id}. {e}")
-        raise e
+
+    for retry in range(MAX_RETRIES):
+        try:
+            author = scholarly.search_author_id(author_id)
+            author = scholarly.fill(author)
+            return author["publications"]
+        except RuntimeError as err:
+            if "client has been closed" in str(err) and retry < MAX_RETRIES - 1:
+                logger.warning(
+                    "Scholarly session closed while fetching author %s. Resetting session.",
+                    author_id,
+                )
+                reset_scholarly_session()
+                time.sleep(DELAYS[retry])
+                continue
+            logger.error("Runtime error fetching author %s: %s", author_id, err)
+            return []
+        except Exception as err:
+            logger.error("Error fetching author details for ID %s. %s", author_id, err)
+            if retry < MAX_RETRIES - 1:
+                time.sleep(DELAYS[retry])
+                continue
+            return []
+
+    logger.error("Max retries exceeded for author %s.", author_id)
+    return []
 
 
 def load_cache(author_id, output_folder=DEFAULT_DB_DIR):
@@ -237,56 +297,38 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
 
 
 def fetch_selected_pubs(pubs_to_fetch):
-    """
-    Fetches selected publications using parallel processing.
+    """Fetch selected publications sequentially.
 
-    Parameters:
-    - pubs_to_fetch (list): List of publications to fetch.
+    The previous implementation relied on multithreading which caused the
+    shared :mod:`scholarly` session to close unexpectedly. A simple loop keeps
+    the session alive and allows per-publication retry logic to handle
+    transient failures.
+
+    Args:
+        pubs_to_fetch: Publications to enrich.
 
     Returns:
-    - list: List of fetched publications.
-
-    Raises:
-    - Exception: If there's any error during the fetching process.
+        list: Successfully fetched publications.
     """
-    # Loop through the retry attempts
-    for retry in range(MAX_RETRIES):
-        try:
-            # Use a ThreadPoolExecutor to parallelize the fetching of publications
-            with ThreadPoolExecutor() as executor:
-                # Check if logging level is set to INFO. If so, display a progress bar
-                if logger.getEffectiveLevel() == logging.INFO and pubs_to_fetch != []:
-                    fetched_pubs = list(
-                        tqdm(
-                            # Execute fetch_publication_details for each item in pubs_to_fetch concurrently
-                            executor.map(fetch_publication_details, pubs_to_fetch),
-                            total=len(pubs_to_fetch),
-                            desc="Fetching publications",
-                        )
-                    )
-                elif logger.getEffectiveLevel() != logging.INFO and pubs_to_fetch != []:
-                    # If not using a progress bar, simply map the function across the publications
-                    fetched_pubs = list(
-                        executor.map(fetch_publication_details, pubs_to_fetch)
-                    )
-                else:
-                    logger.debug("No new publications. Skipping..")
-                    fetched_pubs = []
-            # Return the fetched publications
-            return fetched_pubs
-        except Exception as e:
-            # If an exception occurs and it's not the last retry attempt, log a warning and delay
-            if retry < MAX_RETRIES - 1:
-                logger.warning(
-                    f"Error fetching publications. Retrying in {DELAYS[retry]} seconds. Error: {e}"
-                )
-                time.sleep(
-                    DELAYS[retry]
-                )  # Delay for a specified amount of time before retrying
-            else:
-                # If it's the last retry attempt, log an error and return an empty list
-                logger.error(f"Max retries reached. Exiting fetch process. Error: {e}")
-                return []
+
+    if not pubs_to_fetch:
+        logger.debug("No new publications. Skipping..")
+        return []
+
+    fetched_pubs = []
+
+    iterator = (
+        tqdm(pubs_to_fetch, total=len(pubs_to_fetch), desc="Fetching publications")
+        if logger.getEffectiveLevel() == logging.INFO
+        else pubs_to_fetch
+    )
+
+    for pub in iterator:
+        result = fetch_publication_details(pub)
+        if result is not None:
+            fetched_pubs.append(result)
+
+    return fetched_pubs
 
 
 def save_updated_cache(
