@@ -144,19 +144,18 @@ If running from an IDE (e.g., Spyder, VScode), configurations are set in `IDEarg
 
 ### Web Interface
 
-For a lightweight graphical interface, start the bundled Flask app:
+A modern Flask web UI is bundled for managing the bot. Launch it with:
 
 ```sh
 python gui.py
 ```
 
-The page at [http://localhost:5000](http://localhost:5000) lets you:
+The responsive page at [http://localhost:5000](http://localhost:5000) offers:
 
-- add or remove authors from the database,
-- refresh publications for one or all authors,
-- inspect cached publications in a searchable table,
-- clear the cache, and
-- run the project's test suite from the browser.
+- Author tools: add/remove authors, refresh or clear their cache.
+- Publication browser: view cached papers in a searchable table.
+- Settings editor: adjust database locations, Slack config path, and API call delay. Changes are saved to `settings.json` for future runs.
+- Utilities: clear all cache and run the project's tests. Destructive actions prompt for confirmation.
 
 ---
 
@@ -167,10 +166,12 @@ slack-bot
 ├── add_authors_batch.sh
 ├── fetch_and_send.sh
 ├── fetch_scholar.py
+├── gui.py
 ├── helper_funcs.py
 ├── log_config.py
 ├── main.py
 ├── README.md
+├── settings.json
 ├── slack_bot.py
 ├── streams_funcs.py
 └── src
@@ -185,16 +186,18 @@ slack-bot
 
 - **`add_authors_batch.sh`**: Bash script for batch-adding authors.  
 - **`fetch_and_send.sh`**: Bash script to run the bot workflow.  
-- **`fetch_scholar.py`**: Internal functions to fetch publications from Google Scholar.  
-- **`helper_funcs.py`**: Internal utility functions.  
+- **`fetch_scholar.py`**: Internal functions to fetch publications from Google Scholar.
+- **`gui.py`**: Flask web application for author management and settings.
+- **`helper_funcs.py`**: Internal utility functions.
 - **`log_config.py`**: Internal Logging configuration.  
 - **`main.py`**: The main script to run the bot.  
 - **`slack_bot.py`**: Internal functions to format and send messages to Slack.  
-- **`streams_funcs.py`**: Internal, handles workflow logic based on CLI flags.  
+- **`streams_funcs.py`**: Internal, handles workflow logic based on CLI flags.
 - **`authors.db`**: SQLite database storing author names and Google Scholar IDs.
 
 - **`publications.db`**: SQLite database caching publication data.
-- **`slack.config`**: Configuration file for Slack settings. Example format:  
+- **`slack.config`**: Configuration file for Slack settings. Example format:
+- **`settings.json`**: Persistent options used by the GUI (database paths, API delay, etc.).
 
   ```ini
   [slack]

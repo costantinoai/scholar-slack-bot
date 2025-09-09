@@ -16,6 +16,7 @@ lightweight layer over the established workflow.
 
 from __future__ import annotations
 
+import json
 import sqlite3
 from pathlib import Path
 from subprocess import run
@@ -27,10 +28,50 @@ from flask import Flask, redirect, render_template_string, request, url_for
 from fetch_scholar import fetch_pubs_dictionary
 from helper_funcs import add_new_author_to_json, get_authors_json
 
-# Paths to the SQLite databases used by the application.  Keeping them as
-# constants makes the locations easy to update and re-use throughout the file.
-AUTHORS_DB = Path("./src/authors.db")
-PUBLICATIONS_DB = Path("./src/publications.db")
+
+# ---------------------------------------------------------------------------
+# Persistent settings
+# ---------------------------------------------------------------------------
+
+# ``settings.json`` stores user-tunable paths and API options.  The helper
+# functions below load and save this file so changes made in the web interface
+# are preserved across restarts.
+SETTINGS_FILE = Path("settings.json")
+
+
+def _load_settings() -> dict:
+    """Load settings from :data:`SETTINGS_FILE` or return defaults.
+
+    Returns:
+        dict: Mapping of setting names to values.  The defaults match the
+        original project paths so the GUI works out of the box.
+    """
+
+    if SETTINGS_FILE.exists():
+        with open(SETTINGS_FILE, "r", encoding="utf-8") as fh:
+            return json.load(fh)
+
+    # Defaults used when the settings file is missing.  They mirror the values
+    # previously hard coded into the application.
+    return {
+        "authors_db": "./src/authors.db",
+        "publications_db": "./src/publications.db",
+        "slack_config_path": "./src/slack.config",
+        "api_call_delay": "1.0",
+    }
+
+
+def _save_settings() -> None:
+    """Persist the in-memory settings to :data:`SETTINGS_FILE`."""
+
+    with open(SETTINGS_FILE, "w", encoding="utf-8") as fh:
+        json.dump(settings, fh, indent=2)
+
+
+# Settings are loaded at import time and used to configure database locations.
+settings = _load_settings()
+AUTHORS_DB = Path(settings["authors_db"])
+PUBLICATIONS_DB = Path(settings["publications_db"])
 
 app = Flask(__name__)
 
@@ -53,6 +94,19 @@ def _run_sql(query: str, params: Iterable | None = None) -> None:
 
     conn = sqlite3.connect(PUBLICATIONS_DB)
     try:
+        # Ensure the publications table exists before running the user query.
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS publications (
+                author_id TEXT,
+                title TEXT,
+                year INTEGER,
+                url TEXT,
+                citations INTEGER,
+                PRIMARY KEY (author_id, title)
+            )
+            """
+        )
         conn.execute(query, params or [])
         conn.commit()
     finally:
@@ -66,9 +120,18 @@ def _remove_author(author_id: str) -> None:
         author_id: Google Scholar identifier of the author to remove.
     """
 
-    # Delete the author from the authors database
+    # Delete the author from the authors database, creating the table on demand
+    # so the GUI works on a fresh repository without manual initialization.
     conn = sqlite3.connect(AUTHORS_DB)
     try:
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS authors (
+                name TEXT,
+                id TEXT PRIMARY KEY
+            )
+            """
+        )
         conn.execute("DELETE FROM authors WHERE id=?", (author_id,))
         conn.commit()
     finally:
@@ -115,7 +178,12 @@ def index():
     """Render the main page with author management tools."""
 
     authors = get_authors_json(str(AUTHORS_DB))
-    return render_template_string(TEMPLATE, authors=authors, test_output=None)
+    # Convert settings dict into an object so templates can access fields using
+    # dot notation (``settings.authors_db`` etc.).
+    settings_ns = SimpleNamespace(**settings)
+    return render_template_string(
+        TEMPLATE, authors=authors, test_output=None, settings=settings_ns
+    )
 
 
 @app.post("/add-author")
@@ -186,21 +254,44 @@ def clear_author_cache(author_id: str):
     return redirect(url_for("index"))
 
 
+@app.post("/update-settings")
+def update_settings():
+    """Persist user-supplied configuration from the settings form."""
+
+    # Update each known setting from the submitted form values.
+    for key in settings:
+        if key in request.form:
+            settings[key] = request.form[key].strip()
+
+    _save_settings()
+
+    # Refresh global paths so subsequent requests use the new values.
+    global AUTHORS_DB, PUBLICATIONS_DB
+    AUTHORS_DB = Path(settings["authors_db"])
+    PUBLICATIONS_DB = Path(settings["publications_db"])
+
+    return redirect(url_for("index"))
+
+
 @app.get("/publications")
 def publications():
     """Display cached publications in a searchable table."""
 
+    author_id = request.args.get("author_id")
     conn = sqlite3.connect(PUBLICATIONS_DB)
     try:
-        cursor = conn.execute(
-            """
-            SELECT a.name, p.title, p.year, p.url, p.citations
-            FROM publications p
-            JOIN authors a ON a.id = p.author_id
-            ORDER BY a.name, p.year DESC
-            """
+        # Attach the authors database so names can be joined to cached entries.
+        conn.execute(f"ATTACH DATABASE '{AUTHORS_DB}' AS auth")
+        sql = (
+            "SELECT a.name, p.title, p.year, p.url, p.citations "
+            "FROM publications p JOIN auth.authors a ON a.id = p.author_id"
         )
-        rows = cursor.fetchall()
+        params: list[str] = []
+        if author_id:
+            sql += " WHERE a.id=?"
+            params.append(author_id)
+        sql += " ORDER BY a.name, p.year DESC"
+        rows = conn.execute(sql, params).fetchall()
     finally:
         conn.close()
 
@@ -223,8 +314,12 @@ def run_tests():
 
     result = run(["pytest", "-q"], capture_output=True, text=True)
     authors = get_authors_json(str(AUTHORS_DB))
+    settings_ns = SimpleNamespace(**settings)
     return render_template_string(
-        TEMPLATE, authors=authors, test_output=result.stdout + result.stderr
+        TEMPLATE,
+        authors=authors,
+        test_output=result.stdout + result.stderr,
+        settings=settings_ns,
     )
 
 
@@ -234,92 +329,170 @@ def run_tests():
 
 TEMPLATE = """
 <!doctype html>
-<title>Scholar Slack Bot GUI</title>
-<h1>Author Manager</h1>
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\">
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+  <title>Scholar Slack Bot</title>
+  <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
+  <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\"></script>
+</head>
+<body class=\"container py-4\">
+  <h1 class=\"mb-4\">Scholar Slack Bot</h1>
 
-<h2>Add Author</h2>
-<form method="post" action="{{ url_for('add_author') }}">
-  <input type="text" name="scholar_id" placeholder="Google Scholar ID" required>
-  <input type="submit" value="Add">
-</form>
+  {% if test_output %}
+  <div class=\"alert alert-info\"><pre class=\"mb-0\">{{ test_output }}</pre></div>
+  {% endif %}
 
-<h2>Bulk Add Authors</h2>
-<form method="post" action="{{ url_for('add_bulk') }}">
-  <textarea name="scholar_ids" rows="4" cols="40" placeholder="One ID per line"></textarea><br>
-  <input type="submit" value="Add IDs">
-</form>
+  <div class=\"row g-4\">
+    <div class=\"col-md-6\">
+      <div class=\"card h-100\">
+        <div class=\"card-header\">Add Author</div>
+        <div class=\"card-body\">
+          <form class=\"row gy-2\" method=\"post\" action=\"{{ url_for('add_author') }}\">
+            <div class=\"col-12\">
+              <input type=\"text\" name=\"scholar_id\" class=\"form-control\" placeholder=\"Google Scholar ID\" required>
+            </div>
+            <div class=\"col-12\">
+              <button class=\"btn btn-primary\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Add a single author by ID\">Add</button>
+            </div>
+          </form>
+          <hr>
+          <form method=\"post\" action=\"{{ url_for('add_bulk') }}\">
+            <div class=\"mb-2\">
+              <textarea name=\"scholar_ids\" class=\"form-control\" rows=\"4\" placeholder=\"One ID per line\"></textarea>
+            </div>
+            <button class=\"btn btn-primary\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Add multiple authors at once\">Add Bulk</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
-<h2>Current Authors</h2>
-<table border="1" cellpadding="4" cellspacing="0">
-  <tr><th>Name</th><th>ID</th><th>Actions</th></tr>
-  {% for a in authors %}
-  <tr>
-    <td>{{ a.name }}</td>
-    <td>{{ a.id }}</td>
-    <td>
-      <form style="display:inline" method="post" action="{{ url_for('refresh_author', author_id=a.id) }}">
-        <button type="submit">Refresh</button>
-      </form>
-      <form style="display:inline" method="post" action="{{ url_for('clear_author_cache', author_id=a.id) }}">
-        <button type="submit">Clear Cache</button>
-      </form>
-      <form style="display:inline" method="post" action="{{ url_for('remove_author', author_id=a.id) }}">
-        <button type="submit">Remove</button>
-      </form>
-      <a href="{{ url_for('publications') }}">View Pubs</a>
-    </td>
-  </tr>
-  {% endfor %}
-</table>
+    <div class=\"col-md-6\">
+      <div class=\"card h-100\">
+        <div class=\"card-header\">Settings</div>
+        <div class=\"card-body\">
+          <form method=\"post\" action=\"{{ url_for('update_settings') }}\">
+            <div class=\"mb-2\">
+              <label class=\"form-label\">Authors DB</label>
+              <input type=\"text\" class=\"form-control\" name=\"authors_db\" value=\"{{ settings.authors_db }}\" data-bs-toggle=\"tooltip\" title=\"Path to authors.db\">
+            </div>
+            <div class=\"mb-2\">
+              <label class=\"form-label\">Publications DB</label>
+              <input type=\"text\" class=\"form-control\" name=\"publications_db\" value=\"{{ settings.publications_db }}\" data-bs-toggle=\"tooltip\" title=\"Path to publications.db\">
+            </div>
+            <div class=\"mb-2\">
+              <label class=\"form-label\">Slack Config Path</label>
+              <input type=\"text\" class=\"form-control\" name=\"slack_config_path\" value=\"{{ settings.slack_config_path }}\" data-bs-toggle=\"tooltip\" title=\"Location of slack.config\">
+            </div>
+            <div class=\"mb-2\">
+              <label class=\"form-label\">API Call Delay (s)</label>
+              <input type=\"text\" class=\"form-control\" name=\"api_call_delay\" value=\"{{ settings.api_call_delay }}\" data-bs-toggle=\"tooltip\" title=\"Throttle between API calls\">
+            </div>
+            <button class=\"btn btn-success\" type=\"submit\">Save Settings</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<form method="post" action="{{ url_for('refresh_all') }}">
-  <button type="submit">Refresh All</button>
-</form>
-<form method="post" action="{{ url_for('clear_cache') }}">
-  <button type="submit">Clear All Cache</button>
-</form>
+  <div class=\"mt-4\">
+    <div class=\"d-flex justify-content-between align-items-center\">
+      <h2>Current Authors</h2>
+      <div>
+        <form class=\"d-inline\" method=\"post\" action=\"{{ url_for('refresh_all') }}\" onsubmit=\"return confirm('Refresh publications for all authors?')\">
+          <button class=\"btn btn-outline-primary\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Fetch publications for every author\">Refresh All</button>
+        </form>
+        <form class=\"d-inline\" method=\"post\" action=\"{{ url_for('clear_cache') }}\" onsubmit=\"return confirm('Clear all cached publications?')\">
+          <button class=\"btn btn-outline-danger\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Delete all cached publications\">Clear Cache</button>
+        </form>
+      </div>
+    </div>
+    <div class=\"table-responsive\">
+      <table class=\"table table-striped\">
+        <thead><tr><th>Name</th><th>ID</th><th>Actions</th></tr></thead>
+        <tbody>
+        {% for a in authors %}
+          <tr>
+            <td>{{ a.name }}</td>
+            <td>{{ a.id }}</td>
+            <td>
+              <form class=\"d-inline\" method=\"post\" action=\"{{ url_for('refresh_author', author_id=a.id) }}\" onsubmit=\"return confirm('Refresh publications for {{ a.name }}?')\">
+                <button class=\"btn btn-sm btn-outline-primary\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Update publications for this author\">Refresh</button>
+              </form>
+              <form class=\"d-inline\" method=\"post\" action=\"{{ url_for('clear_author_cache', author_id=a.id) }}\" onsubmit=\"return confirm('Remove cached publications for {{ a.name }}?')\">
+                <button class=\"btn btn-sm btn-outline-warning\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Clear cached publications for this author\">Clear</button>
+              </form>
+              <form class=\"d-inline\" method=\"post\" action=\"{{ url_for('remove_author', author_id=a.id) }}\" onsubmit=\"return confirm('Remove {{ a.name }} from authors?')\">
+                <button class=\"btn btn-sm btn-outline-danger\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Remove author from database\">Remove</button>
+              </form>
+              <a class=\"btn btn-sm btn-outline-secondary\" href=\"{{ url_for('publications', author_id=a.id) }}\" data-bs-toggle=\"tooltip\" title=\"View cached publications\">View Pubs</a>
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-<h2>Run Tests</h2>
-<form method="post" action="{{ url_for('run_tests') }}">
-  <button type="submit">pytest</button>
-</form>
-{% if test_output %}
-  <h3>Test Output</h3>
-  <pre>{{ test_output }}</pre>
-{% endif %}
+  <div class=\"mt-4\">
+    <h2>Run Tests</h2>
+    <form method=\"post\" action=\"{{ url_for('run_tests') }}\" onsubmit=\"return confirm('This may take a while. Run tests?')\">
+      <button class=\"btn btn-secondary\">pytest</button>
+    </form>
+  </div>
+
+  <script>
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  tooltipTriggerList.map(t => new bootstrap.Tooltip(t));
+  </script>
+</body>
+</html>
 """
 
 
 PUB_TEMPLATE = """
 <!doctype html>
-<title>Cached Publications</title>
-<h1>Cached Publications</h1>
-<input type="text" id="filter" onkeyup="filterTable()" placeholder="Filter...">
-<table id="pubs" border="1" cellpadding="4" cellspacing="0">
-  <thead>
-    <tr><th>Author</th><th>Title</th><th>Year</th><th>Citations</th></tr>
-  </thead>
-  <tbody>
-    {% for pub in publications %}
-    <tr>
-      <td>{{ pub.name }}</td>
-      <td><a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a></td>
-      <td>{{ pub.year }}</td>
-      <td>{{ pub.citations }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\">
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+  <title>Cached Publications</title>
+  <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
+  <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\"></script>
+</head>
+<body class=\"container py-4\">
+  <h1>Cached Publications</h1>
+  <input class=\"form-control mb-3\" type=\"text\" id=\"filter\" onkeyup=\"filterTable()\" placeholder=\"Filter...\">
+  <div class=\"table-responsive\">
+    <table id=\"pubs\" class=\"table table-striped\">
+      <thead>
+        <tr><th>Author</th><th>Title</th><th>Year</th><th>Citations</th></tr>
+      </thead>
+      <tbody>
+        {% for pub in publications %}
+        <tr>
+          <td>{{ pub.name }}</td>
+          <td><a href=\"{{ pub.url }}\" target=\"_blank\">{{ pub.title }}</a></td>
+          <td>{{ pub.year }}</td>
+          <td>{{ pub.citations }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 <script>
-function filterTable() {
-  const filter = document.getElementById('filter').value.toLowerCase();
-  const rows = document.querySelectorAll('#pubs tbody tr');
-  rows.forEach(r => {
-    r.style.display = r.innerText.toLowerCase().includes(filter) ? '' : 'none';
+function filterTable(){
+  const filter=document.getElementById('filter').value.toLowerCase();
+  document.querySelectorAll('#pubs tbody tr').forEach(r=>{
+    r.style.display=r.innerText.toLowerCase().includes(filter)?'':'none';
   });
 }
+const tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+tooltipTriggerList.map(t=>new bootstrap.Tooltip(t));
 </script>
+</body>
+</html>
 """
 
 
