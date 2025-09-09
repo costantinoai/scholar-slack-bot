@@ -2,3 +2,4 @@ scholarly
 tqdm
 requests
 configparser
+Flask
