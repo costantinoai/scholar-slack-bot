@@ -7,3 +7,4 @@ test/
 /*.sh
 *.bkp
 **/obsolete
+*.egg-info/

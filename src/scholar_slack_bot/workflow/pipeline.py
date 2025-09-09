@@ -13,7 +13,7 @@ from ..utils.helpers import (
     add_new_author_to_json,
     convert_json_to_tuple,
 )
-from .fetcher import fetch_from_json, fetch_pubs_dictionary
+from ..scholar.fetch import fetch_from_json, fetch_pubs_dictionary
 from ..slack.client import make_slack_msg, send_to_slack
 
 logger = logging.getLogger(__name__)

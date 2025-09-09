@@ -12,7 +12,7 @@ from pathlib import Path
 
 from .slack.client import get_slack_config, send_test_msg
 from .utils.helpers import has_conflicting_args, delete_temp_cache
-from .core.streams import (
+from .workflow.pipeline import (
     refetch_and_update,
     add_scholar_and_fetch,
     regular_fetch_and_message,

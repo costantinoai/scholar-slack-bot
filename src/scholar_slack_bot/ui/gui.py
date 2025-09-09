@@ -26,7 +26,7 @@ from typing import Iterable
 
 from flask import Flask, redirect, render_template_string, request, url_for
 
-from ..core.fetcher import fetch_pubs_dictionary
+from ..scholar.fetch import fetch_pubs_dictionary
 from ..utils.helpers import add_new_author_to_json, get_authors_json
 
 

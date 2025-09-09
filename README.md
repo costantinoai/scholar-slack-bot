@@ -185,10 +185,12 @@ scholar-slack-bot
 │       ├── __init__.py
 │       ├── __main__.py
 │       ├── cli.py
-│       ├── core
+│       ├── scholar
 │       │   ├── __init__.py
-│       │   ├── fetcher.py
-│       │   └── streams.py
+│       │   └── fetch.py
+│       ├── workflow
+│       │   ├── __init__.py
+│       │   └── pipeline.py
 │       ├── slack
 │       │   ├── __init__.py
 │       │   └── client.py
@@ -209,13 +211,13 @@ scholar-slack-bot
 
 - **`scripts/add_authors_batch.sh`**: Bash script for batch-adding authors from a file. Automatically sets `PYTHONPATH`.
 - **`scripts/fetch_and_send.sh`**: Bash script to run the bot workflow. Automatically sets `PYTHONPATH`.
-- **`core/fetcher.py`**: Internal functions to fetch publications from Google Scholar.
+- **`scholar/fetch.py`**: Internal functions to fetch publications from Google Scholar.
 - **`ui/gui.py`**: Flask web application for author management and settings.
 - **`utils/helpers.py`**: Internal utility functions.
 - **`utils/logging.py`**: Internal logging configuration.
 - **`cli.py`**: Command-line interface for running the bot.
 - **`slack/client.py`**: Internal functions to format and send messages to Slack.
-- **`core/streams.py`**: Orchestrates workflow logic based on CLI flags.
+- **`workflow/pipeline.py`**: Orchestrates workflow logic based on CLI flags.
 - **`data/authors.db`**: SQLite database storing author names and Google Scholar IDs.
 
 - **`data/publications.db`**: SQLite database caching publication data.
