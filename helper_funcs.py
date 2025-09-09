@@ -177,28 +177,6 @@ def confirm_temp_cache(
     return
 
 
-def has_conflicting_args(args):
-    """Check if any of the conflicting arguments are set to True or have values.
-
-    Args:
-        args (argparse.Namespace): The argument object.
-
-    Returns:
-        bool: True if any conflicting arguments are set, otherwise False.
-    """
-
-    if args.test_message:
-        return any([args.add_scholar_id, args.update_cache])
-
-    if args.add_scholar_id:
-        return any([args.test_message, args.update_cache])
-
-    if args.update_cache:
-        return any([args.test_message, args.add_scholar_id])
-
-    return False
-
-
 def _init_authors_db(authors_path: str) -> sqlite3.Connection:
     """Ensure the authors database exists and return a connection."""
 
