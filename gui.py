@@ -280,8 +280,29 @@ def publications():
     author_id = request.args.get("author_id")
     conn = sqlite3.connect(PUBLICATIONS_DB)
     try:
-        # Attach the authors database so names can be joined to cached entries.
+        # Ensure the ``publications`` table exists; a fresh database file will
+        # otherwise raise ``OperationalError`` when the user tries to view
+        # cached entries before any have been inserted.
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS publications (
+                author_id TEXT,
+                title TEXT,
+                year INTEGER,
+                url TEXT,
+                citations INTEGER,
+                PRIMARY KEY (author_id, title)
+            )
+            """
+        )
+
+        # Attach the authors database so names can be joined to cached entries
+        # in the display query below.
         conn.execute(f"ATTACH DATABASE '{AUTHORS_DB}' AS auth")
+
+        # Build the base query pulling publication details along with the
+        # associated author's name.  Parameters are collected separately to
+        # protect against SQL injection and keep the query readable.
         sql = (
             "SELECT a.name, p.title, p.year, p.url, p.citations "
             "FROM publications p JOIN auth.authors a ON a.id = p.author_id"
