@@ -19,10 +19,15 @@ This Slack Bot fetches publications for authors from Google Scholar and sends no
    - Add your Slack API token.  
    - Set the `target_name` field to either a **Slack channel** (public or private, if the bot is added) or a **Slack user** (for direct messages).  
    - Refer to the section [Setting Up Your Slack Bot](#setting-up-your-slack-bot) below for instructions on obtaining the Slack API token.  
-4. **Run the bot:**  
+4. **Run the bot:**
+   The package lives under `src/`. Either install it in editable mode or point
+   `PYTHONPATH` at that directory when invoking the CLI:
+
    ```sh
-   python -m scholar_slack_bot
+   PYTHONPATH=src python -m scholar_slack_bot
    ```
+   The helper scripts under `scripts/` configure this automatically, so you can
+   run `./scripts/fetch_and_send.sh` from any directory.
 
 ---
 
@@ -118,10 +123,10 @@ Slack apps require specific permissions (scopes) to function. Navigate to **OAut
 The script accepts several command-line arguments (flags) to customize its behavior:
 
 - `--authors_path`: Specifies the path to the authors database.
-  - Default: `./data/authors.db`
+  - Default: `data/authors.db` relative to the project root
 
 - `--slack_config_path`: Sets the path to the `slack.config` file which contains Slack API token and channel information.
-  - Default: `./data/slack.config`
+  - Default: `data/slack.config` relative to the project root
 
 - `--verbose`: (Optional) Provides verbose output for detailed logging and debugging.
 
@@ -199,8 +204,8 @@ scholar-slack-bot
 
 ## 📝 Files Descriptions  
 
-- **`add_authors_batch.sh`**: Bash script for batch-adding authors from a file.
-- **`fetch_and_send.sh`**: Bash script to run the bot workflow.
+- **`scripts/add_authors_batch.sh`**: Bash script for batch-adding authors from a file. Automatically sets `PYTHONPATH`.
+- **`scripts/fetch_and_send.sh`**: Bash script to run the bot workflow. Automatically sets `PYTHONPATH`.
 - **`core/fetcher.py`**: Internal functions to fetch publications from Google Scholar.
 - **`ui/gui.py`**: Flask web application for author management and settings.
 - **`utils/helpers.py`**: Internal utility functions.

@@ -34,10 +34,11 @@ from ..utils.helpers import add_new_author_to_json, get_authors_json
 # Persistent settings
 # ---------------------------------------------------------------------------
 
-# ``data/settings.json`` stores user-tunable paths and API options.  The helper
-# functions below load and save this file so changes made in the web interface
-# are preserved across restarts.
-SETTINGS_FILE = Path("data/settings.json")
+# ``data/settings.json`` stores user-tunable paths and API options.  Resolve the
+# project root relative to this file so the application can be launched from any
+# working directory without breaking path references.
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+SETTINGS_FILE = PROJECT_ROOT / "data" / "settings.json"
 
 
 def _load_settings() -> dict:
@@ -71,8 +72,10 @@ def _save_settings() -> None:
 
 # Settings are loaded at import time and used to configure database locations.
 settings = _load_settings()
-AUTHORS_DB = Path(settings["authors_db"])
-PUBLICATIONS_DB = Path(settings["publications_db"])
+# Interpret database paths relative to the project root so they resolve
+# consistently regardless of the launch directory.
+AUTHORS_DB = (PROJECT_ROOT / settings["authors_db"]).resolve()
+PUBLICATIONS_DB = (PROJECT_ROOT / settings["publications_db"]).resolve()
 
 
 def _load_slack_config() -> dict:
@@ -85,7 +88,7 @@ def _load_slack_config() -> dict:
     """
 
     cfg = configparser.ConfigParser()
-    cfg_path = Path(settings["slack_config_path"])
+    cfg_path = (PROJECT_ROOT / settings["slack_config_path"]).resolve()
     if cfg_path.exists():
         cfg.read(cfg_path, encoding="utf-8")
     section = cfg["slack"] if cfg.has_section("slack") else {}
@@ -98,7 +101,7 @@ def _save_slack_config() -> None:
 
     cfg = configparser.ConfigParser()
     cfg["slack"] = slack_settings
-    cfg_path = Path(settings["slack_config_path"])
+    cfg_path = (PROJECT_ROOT / settings["slack_config_path"]).resolve()
     cfg_path.parent.mkdir(parents=True, exist_ok=True)
     with open(cfg_path, "w", encoding="utf-8") as fh:
         cfg.write(fh)

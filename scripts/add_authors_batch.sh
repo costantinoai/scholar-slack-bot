@@ -19,9 +19,12 @@ if command -v conda >/dev/null 2>&1; then
     conda activate "${CONDA_ENV:-scholarbot}"
 fi
 
-# Navigate to the repository root regardless of the invocation location.
+# Navigate to the repository root regardless of the invocation location and
+# ensure Python can locate the package in ``src`` when executed without
+# installation.
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
+export PYTHONPATH="$REPO_ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
 
 # Loop through each non-empty line in the IDs file and add the author.
 while IFS= read -r SCHOLAR_ID; do

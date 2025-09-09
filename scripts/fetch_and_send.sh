@@ -11,9 +11,12 @@ if command -v conda >/dev/null 2>&1; then
     conda activate "${CONDA_ENV:-scholarbot}"
 fi
 
-# Change to repository root so relative paths resolve correctly.
+# Change to repository root so relative paths resolve correctly and expose the
+# ``src`` directory on ``PYTHONPATH`` so the package can be imported without
+# installation.
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
+export PYTHONPATH="$REPO_ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
 
 # Run the bot with verbose output by default, forwarding any extra CLI args.
 python -m scholar_slack_bot --verbose "$@"
