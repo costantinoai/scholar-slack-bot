@@ -26,9 +26,10 @@ This Slack Bot fetches publications for authors from Google Scholar and sends no
    ```sh
    PYTHONPATH=src python -m scholar_slack_bot
    ```
-   The helper scripts under `scripts/` configure this automatically, so you can
-   run `./scripts/fetch_and_send.sh` from any directory.
-   A similar wrapper `./scripts/run_gui.sh` launches the web interface.
+   The helper scripts under `scripts/` configure this automatically and ensure
+   required dependencies are installed, so you can run
+   `./scripts/fetch_and_send.sh` from any directory. A similar wrapper
+   `./scripts/run_gui.sh` launches the web interface.
 
 ---
 

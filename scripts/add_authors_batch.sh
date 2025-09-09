@@ -12,19 +12,10 @@ fi
 
 IDS_FILE="$1"
 
-# Optionally activate a Conda environment if available.
-if command -v conda >/dev/null 2>&1; then
-    # shellcheck disable=SC1091  # Location is determined dynamically.
-    source "$(conda info --base)/etc/profile.d/conda.sh"
-    conda activate "${CONDA_ENV:-scholarbot}"
-fi
-
-# Navigate to the repository root regardless of the invocation location and
-# ensure Python can locate the package in ``src`` when executed without
-# installation.
-REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-cd "$REPO_ROOT"
-export PYTHONPATH="$REPO_ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
+# Prepare the environment using shared helpers.
+# shellcheck disable=SC1091
+source "$(dirname "${BASH_SOURCE[0]}")/common.sh"
+setup_env
 
 # Loop through each non-empty line in the IDs file and add the author.
 while IFS= read -r SCHOLAR_ID; do
