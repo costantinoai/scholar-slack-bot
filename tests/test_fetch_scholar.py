@@ -1,4 +1,6 @@
-import json
+"""Tests for scholar fetching utilities using the SQLite cache."""
+
+import sqlite3
 from types import SimpleNamespace
 from unittest.mock import patch
 
@@ -12,32 +14,86 @@ from fetch_scholar import (
 
 
 def test_load_cache_reads_existing_file(tmp_path):
-    data = [{"bib": {"title": "T"}}]
-    (tmp_path / "A1.json").write_text(json.dumps(data))
+    """Existing database entries should be returned by ``load_cache``."""
+    db = sqlite3.connect(tmp_path / "publications.db")
+    db.execute(
+        "CREATE TABLE publications (author_id TEXT, title TEXT, year INTEGER, abstract TEXT, url TEXT, citations INTEGER, PRIMARY KEY(author_id, title))"
+    )
+    db.execute(
+        "INSERT INTO publications VALUES (?,?,?,?,?,?)",
+        ("A1", "T", 2024, "abs", "u", 1),
+    )
+    db.commit()
+    db.close()
     result = load_cache("A1", tmp_path)
-    assert result == data
+    assert result == [
+        {
+            "bib": {"title": "T", "pub_year": "2024", "abstract": "abs"},
+            "pub_url": "u",
+            "num_citations": 1,
+        }
+    ]
 
 
 def test_load_cache_returns_empty_for_missing(tmp_path):
+    """When no cache exists, an empty list should be returned."""
     result = load_cache("missing", tmp_path)
     assert result == []
 
 
 def test_save_updated_cache_combines_and_writes(tmp_path):
-    fetched = [{"bib": {"title": "F"}}]
-    cached = [{"bib": {"title": "C"}}]
+    """``save_updated_cache`` should insert new rows and optionally replace old ones."""
+    # Pre-populate cache with an existing publication
+    db = sqlite3.connect(tmp_path / "publications.db")
+    db.execute(
+        "CREATE TABLE publications (author_id TEXT, title TEXT, year INTEGER, abstract TEXT, url TEXT, citations INTEGER, PRIMARY KEY(author_id, title))"
+    )
+    db.execute(
+        "INSERT INTO publications VALUES (?,?,?,?,?,?)",
+        ("A1", "C", 2023, "a", "u1", 1),
+    )
+    db.commit()
+    db.close()
+
+    fetched = [
+        {
+            "bib": {"title": "F", "pub_year": "2024", "abstract": "b"},
+            "pub_url": "u2",
+            "num_citations": 2,
+        }
+    ]
+    cached = []
     args = SimpleNamespace(update_cache=False)
     save_updated_cache(fetched, cached, "A1", tmp_path, args)
-    content = json.loads((tmp_path / "A1.json").read_text())
-    assert content == fetched + cached
+    db = sqlite3.connect(tmp_path / "publications.db")
+    titles = {
+        row[0]
+        for row in db.execute("SELECT title FROM publications WHERE author_id='A1'")
+    }
+    assert titles == {"C", "F"}
+    db.close()
 
+    # Test update_cache=True replaces previous entries
+    db = sqlite3.connect(tmp_path / "publications.db")
+    db.execute(
+        "INSERT OR REPLACE INTO publications VALUES (?,?,?,?,?,?)",
+        ("A2", "C", 2023, "a", "u1", 1),
+    )
+    db.commit()
+    db.close()
     args = SimpleNamespace(update_cache=True)
     save_updated_cache(fetched, cached, "A2", tmp_path, args)
-    content = json.loads((tmp_path / "A2.json").read_text())
-    assert content == fetched
+    db = sqlite3.connect(tmp_path / "publications.db")
+    titles = {
+        row[0]
+        for row in db.execute("SELECT title FROM publications WHERE author_id='A2'")
+    }
+    assert titles == {"F"}
+    db.close()
 
 
 def test_get_pubs_to_fetch_respects_test_fetching():
+    """``get_pubs_to_fetch`` should honor the ``test_fetching`` flag."""
     author_pubs = [
         {"bib": {"title": "Old", "pub_year": "2023"}},
         {"bib": {"title": "New", "pub_year": "2024"}},
@@ -72,7 +128,10 @@ def test_get_pubs_to_fetch_respects_test_fetching():
     ],
 )
 @patch("fetch_scholar.clean_pubs", return_value=["cleaned"])
-def test_fetch_publications_by_id_calls_save(mock_clean, mock_fetch_author, mock_load, mock_get, mock_fetch, mock_save, tmp_path):
+def test_fetch_publications_by_id_calls_save(
+    mock_clean, mock_fetch_author, mock_load, mock_get, mock_fetch, mock_save, tmp_path
+):
+    """Saving should occur when not in test mode."""
     args = SimpleNamespace(test_fetching=False, update_cache=False)
     result = fetch_publications_by_id("A1", str(tmp_path), args, from_year=2024)
     assert result == ["cleaned"]
@@ -100,7 +159,10 @@ def test_fetch_publications_by_id_calls_save(mock_clean, mock_fetch_author, mock
     ],
 )
 @patch("fetch_scholar.clean_pubs", return_value=["cleaned"])
-def test_fetch_publications_by_id_skips_save_with_test_fetching(mock_clean, mock_fetch_author, mock_load, mock_get, mock_fetch, mock_save, tmp_path):
+def test_fetch_publications_by_id_skips_save_with_test_fetching(
+    mock_clean, mock_fetch_author, mock_load, mock_get, mock_fetch, mock_save, tmp_path
+):
+    """When ``test_fetching`` is True, the cache is not updated."""
     args = SimpleNamespace(test_fetching=True, update_cache=False)
     result = fetch_publications_by_id("A1", str(tmp_path), args, from_year=2024)
     assert result == ["cleaned"]
@@ -112,6 +174,7 @@ def test_fetch_publications_by_id_skips_save_with_test_fetching(mock_clean, mock
     side_effect=[[{"title": "A"}], [{"title": "B"}], [{"title": "C"}]],
 )
 def test_fetch_pubs_dictionary_limits_authors_with_test_fetching(mock_fetch, tmp_path):
+    """Only the first two authors should be processed in test mode."""
     authors = [("A", "1"), ("B", "2"), ("C", "3")]
     args = SimpleNamespace(test_fetching=True)
     result = fetch_pubs_dictionary(authors, args, output_dir=str(tmp_path))
