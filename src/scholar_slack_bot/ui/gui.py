@@ -3,7 +3,7 @@
 
 This module exposes a small Flask application that allows users to:
 
-* Add or remove Google Scholar authors from ``src/authors.db``.
+* Add or remove Google Scholar authors from ``data/authors.db``.
 * Refresh cached publications for individual authors or for all of them.
 * Inspect the cached publications in a searchable table.
 * Clear cached publications.
@@ -26,18 +26,18 @@ from typing import Iterable
 
 from flask import Flask, redirect, render_template_string, request, url_for
 
-from fetch_scholar import fetch_pubs_dictionary
-from helper_funcs import add_new_author_to_json, get_authors_json
+from ..core.fetcher import fetch_pubs_dictionary
+from ..utils.helpers import add_new_author_to_json, get_authors_json
 
 
 # ---------------------------------------------------------------------------
 # Persistent settings
 # ---------------------------------------------------------------------------
 
-# ``settings.json`` stores user-tunable paths and API options.  The helper
+# ``data/settings.json`` stores user-tunable paths and API options.  The helper
 # functions below load and save this file so changes made in the web interface
 # are preserved across restarts.
-SETTINGS_FILE = Path("settings.json")
+SETTINGS_FILE = Path("data/settings.json")
 
 
 def _load_settings() -> dict:
@@ -55,9 +55,9 @@ def _load_settings() -> dict:
     # Defaults used when the settings file is missing.  They mirror the values
     # previously hard coded into the application.
     return {
-        "authors_db": "./src/authors.db",
-        "publications_db": "./src/publications.db",
-        "slack_config_path": "./src/slack.config",
+        "authors_db": "./data/authors.db",
+        "publications_db": "./data/publications.db",
+        "slack_config_path": "./data/slack.config",
         "api_call_delay": "1.0",
     }
 

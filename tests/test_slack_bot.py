@@ -1,6 +1,6 @@
 from unittest.mock import Mock, patch
 
-from slack_bot import (
+from scholar_slack_bot.slack.client import (
     _send_message_to_channel,
     format_authors_message,
     format_pub_message,
@@ -54,7 +54,7 @@ def test_make_slack_msg_no_articles():
     assert messages[1] == "No new publications since my last check."
 
 
-@patch("slack_bot.requests.get")
+@patch("scholar_slack_bot.slack.client.requests.get")
 def test_get_channel_id_by_name_found(mock_get):
     mock_resp = {
         "ok": True,
@@ -73,7 +73,7 @@ def test_get_channel_id_by_name_found(mock_get):
     mock_get.assert_called_once()
 
 
-@patch("slack_bot.requests.get")
+@patch("scholar_slack_bot.slack.client.requests.get")
 def test_get_channel_id_by_name_not_found(mock_get):
     mock_resp = {"ok": True, "channels": [], "response_metadata": {}}
     mock_get.return_value = Mock()
@@ -84,8 +84,8 @@ def test_get_channel_id_by_name_not_found(mock_get):
     assert channel_id is None
 
 
-@patch("slack_bot._send_message_to_channel")
-@patch("slack_bot.get_channel_id_by_name")
+@patch("scholar_slack_bot.slack.client._send_message_to_channel")
+@patch("scholar_slack_bot.slack.client.get_channel_id_by_name")
 def test_send_to_slack_channel(mock_get_channel, mock_send):
     mock_get_channel.return_value = "C123"
     mock_send.return_value = {"ok": True}
@@ -96,10 +96,10 @@ def test_send_to_slack_channel(mock_get_channel, mock_send):
     mock_send.assert_called_once_with("C123", "hi", "token")
 
 
-@patch("slack_bot._send_message_to_channel")
-@patch("slack_bot.open_im_channel")
-@patch("slack_bot.get_user_id_by_name")
-@patch("slack_bot.get_channel_id_by_name")
+@patch("scholar_slack_bot.slack.client._send_message_to_channel")
+@patch("scholar_slack_bot.slack.client.open_im_channel")
+@patch("scholar_slack_bot.slack.client.get_user_id_by_name")
+@patch("scholar_slack_bot.slack.client.get_channel_id_by_name")
 def test_send_to_slack_user(mock_get_channel, mock_get_user, mock_open_im, mock_send):
     mock_get_channel.return_value = None
     mock_get_user.return_value = "U1"
@@ -113,9 +113,9 @@ def test_send_to_slack_user(mock_get_channel, mock_get_user, mock_open_im, mock_
     mock_send.assert_called_once_with("D1", "hi", "token")
 
 
-@patch("slack_bot._send_message_to_channel")
-@patch("slack_bot.get_user_id_by_name")
-@patch("slack_bot.get_channel_id_by_name")
+@patch("scholar_slack_bot.slack.client._send_message_to_channel")
+@patch("scholar_slack_bot.slack.client.get_user_id_by_name")
+@patch("scholar_slack_bot.slack.client.get_channel_id_by_name")
 def test_send_to_slack_invalid(mock_get_channel, mock_get_user, mock_send):
     mock_get_channel.return_value = None
     mock_get_user.return_value = None
@@ -167,7 +167,7 @@ def test_get_slack_config_reads_file(tmp_path):
     assert conf == {"api_token": "tok", "channel_name": "chan"}
 
 
-@patch("slack_bot.requests.get")
+@patch("scholar_slack_bot.slack.client.requests.get")
 def test_get_user_id_by_name_found(mock_get):
     mock_resp = {
         "ok": True,
@@ -179,7 +179,7 @@ def test_get_user_id_by_name_found(mock_get):
     assert get_user_id_by_name("alice", "token") == "U1"
 
 
-@patch("slack_bot.requests.get")
+@patch("scholar_slack_bot.slack.client.requests.get")
 def test_get_user_id_by_name_not_found(mock_get):
     mock_resp = {"ok": True, "members": [], "response_metadata": {}}
     mock_get.return_value = Mock()
@@ -187,21 +187,21 @@ def test_get_user_id_by_name_not_found(mock_get):
     assert get_user_id_by_name("bob", "token") is None
 
 
-@patch("slack_bot.requests.post")
+@patch("scholar_slack_bot.slack.client.requests.post")
 def test_open_im_channel_success(mock_post):
     mock_post.return_value = Mock()
     mock_post.return_value.json.return_value = {"ok": True, "channel": {"id": "D1"}}
     assert open_im_channel("U1", "token") == "D1"
 
 
-@patch("slack_bot.requests.post")
+@patch("scholar_slack_bot.slack.client.requests.post")
 def test_open_im_channel_failure(mock_post):
     mock_post.return_value = Mock()
     mock_post.return_value.json.return_value = {"ok": False, "error": "bad"}
     assert open_im_channel("U1", "token") is None
 
 
-@patch("slack_bot.requests.post")
+@patch("scholar_slack_bot.slack.client.requests.post")
 def test_send_message_to_channel_success(mock_post):
     mock_post.return_value = Mock()
     mock_post.return_value.json.return_value = {"ok": True}
@@ -210,7 +210,7 @@ def test_send_message_to_channel_success(mock_post):
     mock_post.assert_called_once()
 
 
-@patch("slack_bot.requests.post")
+@patch("scholar_slack_bot.slack.client.requests.post")
 def test_send_message_to_channel_failure(mock_post):
     mock_post.return_value = Mock()
     mock_post.return_value.json.return_value = {"ok": False, "error": "bad"}
@@ -218,7 +218,7 @@ def test_send_message_to_channel_failure(mock_post):
     assert resp == {"ok": False, "error": "bad"}
 
 
-@patch("slack_bot.send_to_slack")
+@patch("scholar_slack_bot.slack.client.send_to_slack")
 def test_send_test_msg_formats_message(mock_send):
     send_test_msg("token", "chan")
     unformatted = "This is a test message"

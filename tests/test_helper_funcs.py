@@ -2,7 +2,7 @@ from types import SimpleNamespace
 from unittest.mock import patch
 import sqlite3
 
-from helper_funcs import (
+from scholar_slack_bot.utils.helpers import (
     add_new_author_to_json,
     clean_pubs,
     convert_json_to_tuple,
@@ -104,7 +104,7 @@ def test_ensure_output_folder_creates(tmp_path):
     assert folder.exists()
 
 
-@patch("helper_funcs.scholarly")
+@patch("scholar_slack_bot.utils.helpers.scholarly")
 def test_add_new_author_to_json(mock_scholarly, tmp_path):
     authors_path = tmp_path / "authors.db"
     mock_scholarly.search_author_id.return_value = {"name": "New"}

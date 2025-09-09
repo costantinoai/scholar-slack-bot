@@ -9,5 +9,6 @@ sys.modules.setdefault("scholarly", scholarly_stub)
 
 # Ensure project root is on sys.path for module imports
 ROOT = Path(__file__).resolve().parent.parent
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+for path in (ROOT, ROOT / "src"):
+    if str(path) not in sys.path:
+        sys.path.insert(0, str(path))

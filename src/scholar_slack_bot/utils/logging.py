@@ -33,4 +33,3 @@ def setup_logging(verbose: bool = False) -> None:
         "root": {"handlers": ["console"], "level": level},
     }
     logging.config.dictConfig(config)
-

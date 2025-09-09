@@ -6,7 +6,7 @@ import logging
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from fetch_scholar import (
+from scholar_slack_bot.core.fetcher import (
     load_cache,
     save_updated_cache,
     get_pubs_to_fetch,
@@ -137,27 +137,27 @@ def test_get_pubs_to_fetch_respects_test_fetching():
     assert pubs == [{"bib": {"title": "New", "pub_year": "2024"}}]
 
 
-@patch("fetch_scholar.save_updated_cache")
+@patch("scholar_slack_bot.core.fetcher.save_updated_cache")
 @patch(
-    "fetch_scholar.fetch_selected_pubs",
+    "scholar_slack_bot.core.fetcher.fetch_selected_pubs",
     return_value=[{"bib": {"title": "New", "pub_year": "2024"}}],
 )
 @patch(
-    "fetch_scholar.get_pubs_to_fetch",
+    "scholar_slack_bot.core.fetcher.get_pubs_to_fetch",
     return_value=[{"bib": {"title": "New", "pub_year": "2024"}}],
 )
 @patch(
-    "fetch_scholar.load_cache",
+    "scholar_slack_bot.core.fetcher.load_cache",
     return_value=[{"bib": {"title": "Old", "pub_year": "2023"}}],
 )
 @patch(
-    "fetch_scholar.fetch_author_details",
+    "scholar_slack_bot.core.fetcher.fetch_author_details",
     return_value=[
         {"bib": {"title": "Old", "pub_year": "2023"}},
         {"bib": {"title": "New", "pub_year": "2024"}},
     ],
 )
-@patch("fetch_scholar.clean_pubs", return_value=["cleaned"])
+@patch("scholar_slack_bot.core.fetcher.clean_pubs", return_value=["cleaned"])
 def test_fetch_publications_by_id_calls_save(
     mock_clean, mock_fetch_author, mock_load, mock_get, mock_fetch, mock_save, tmp_path
 ):
@@ -168,27 +168,27 @@ def test_fetch_publications_by_id_calls_save(
     mock_save.assert_called_once()
 
 
-@patch("fetch_scholar.save_updated_cache")
+@patch("scholar_slack_bot.core.fetcher.save_updated_cache")
 @patch(
-    "fetch_scholar.fetch_selected_pubs",
+    "scholar_slack_bot.core.fetcher.fetch_selected_pubs",
     return_value=[{"bib": {"title": "New", "pub_year": "2024"}}],
 )
 @patch(
-    "fetch_scholar.get_pubs_to_fetch",
+    "scholar_slack_bot.core.fetcher.get_pubs_to_fetch",
     return_value=[{"bib": {"title": "New", "pub_year": "2024"}}],
 )
 @patch(
-    "fetch_scholar.load_cache",
+    "scholar_slack_bot.core.fetcher.load_cache",
     return_value=[{"bib": {"title": "Old", "pub_year": "2023"}}],
 )
 @patch(
-    "fetch_scholar.fetch_author_details",
+    "scholar_slack_bot.core.fetcher.fetch_author_details",
     return_value=[
         {"bib": {"title": "Old", "pub_year": "2023"}},
         {"bib": {"title": "New", "pub_year": "2024"}},
     ],
 )
-@patch("fetch_scholar.clean_pubs", return_value=["cleaned"])
+@patch("scholar_slack_bot.core.fetcher.clean_pubs", return_value=["cleaned"])
 def test_fetch_publications_by_id_skips_save_with_test_fetching(
     mock_clean, mock_fetch_author, mock_load, mock_get, mock_fetch, mock_save, tmp_path
 ):
@@ -200,7 +200,7 @@ def test_fetch_publications_by_id_skips_save_with_test_fetching(
 
 
 @patch(
-    "fetch_scholar.fetch_publications_by_id",
+    "scholar_slack_bot.core.fetcher.fetch_publications_by_id",
     side_effect=[[{"title": "A"}], [{"title": "B"}], [{"title": "C"}]],
 )
 def test_fetch_pubs_dictionary_limits_authors_with_test_fetching(mock_fetch, tmp_path):

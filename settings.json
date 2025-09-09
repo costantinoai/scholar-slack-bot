@@ -1,6 +1,0 @@
-{
-  "authors_db": "./src/authors.db",
-  "publications_db": "./src/publications.db",
-  "slack_config_path": "./src/slack.config",
-  "api_call_delay": "1.0"
-}

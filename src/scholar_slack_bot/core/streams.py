@@ -8,13 +8,13 @@ Created on Fri Oct 20 17:02:03 2023
 import os
 import shutil
 import logging
-from helper_funcs import (
+from ..utils.helpers import (
     confirm_temp_cache,
     add_new_author_to_json,
     convert_json_to_tuple,
 )
-from fetch_scholar import fetch_from_json, fetch_pubs_dictionary
-from slack_bot import make_slack_msg, send_to_slack
+from .fetcher import fetch_from_json, fetch_pubs_dictionary
+from ..slack.client import make_slack_msg, send_to_slack
 
 logger = logging.getLogger(__name__)
 

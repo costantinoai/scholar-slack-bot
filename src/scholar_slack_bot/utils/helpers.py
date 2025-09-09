@@ -14,7 +14,7 @@ from scholarly import scholarly
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = "./src"
+DATA_DIR = "./data"
 AUTHORS_DB_PATH = os.path.join(DATA_DIR, "authors.db")
 
 
@@ -129,7 +129,7 @@ def delete_temp_cache(args):
 
 
 def confirm_temp_cache(
-    temp_cache_path="./src/temp_cache", old_cache_path="./src/googleapi_cache"
+    temp_cache_path="./data/temp_cache", old_cache_path="./data/googleapi_cache"
 ):
     """
     Moves the contents of the temporary cache directory to the old cache directory.

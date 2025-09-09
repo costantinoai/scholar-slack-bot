@@ -72,7 +72,9 @@ def make_slack_msg(authors: list, articles: list) -> list:
         # Clean the list (remove duplicates)
         seen_titles = set()
         unique_list_of_articles = [
-            seen_titles.add(d["title"]) or d for d in articles if d["title"] not in seen_titles
+            seen_titles.add(d["title"]) or d
+            for d in articles
+            if d["title"] not in seen_titles
         ]
 
         # Build the message
@@ -88,7 +90,7 @@ def make_slack_msg(authors: list, articles: list) -> list:
     return formatted_messages
 
 
-def get_slack_config(slack_config_path="./src/slack.config"):
+def get_slack_config(slack_config_path="./data/slack.config"):
     """
     Retrieves the Slack configuration details from a configuration file.
 
@@ -108,6 +110,7 @@ def get_slack_config(slack_config_path="./src/slack.config"):
 
     logger.debug(f"Fetched Slack configuration from {slack_config_path}.")
     return slack_config
+
 
 def format_pub_message(pub):
     """
@@ -179,7 +182,10 @@ def format_authors_message(authors: list) -> str:
 
     # Construct the message by listing each author with their ID on separate lines, indented
     formatted_authors = "\n".join(
-        [f"\t{author[0]},\t\tGoogle Scholar ID: {author[1]}" for author in authors_sorted]
+        [
+            f"\t{author[0]},\t\tGoogle Scholar ID: {author[1]}"
+            for author in authors_sorted
+        ]
     )
 
     # Add the code block delimiters and the description
@@ -198,7 +204,7 @@ def get_channel_id_by_name(channel_name, token):
     headers = {"Authorization": f"Bearer {token}"}
     params = {
         "types": "public_channel, private_channel",  # Adjust if needed
-        "limit": 1000  # Slack pages results, adjust or paginate if your workspace has many channels
+        "limit": 1000,  # Slack pages results, adjust or paginate if your workspace has many channels
     }
 
     while True:
@@ -238,8 +244,12 @@ def get_user_id_by_name(user_name, token):
             return None
 
         for member in response["members"]:
-            user_handle = member.get("name", "")  # Default to empty string if key is missing
-            real_name = member.get("real_name", "")  # Default to empty string if key is missing
+            user_handle = member.get(
+                "name", ""
+            )  # Default to empty string if key is missing
+            real_name = member.get(
+                "real_name", ""
+            )  # Default to empty string if key is missing
 
             if user_handle == user_name or real_name == user_name:
                 return member["id"]
@@ -261,7 +271,7 @@ def open_im_channel(user_id, token):
     url = "https://slack.com/api/conversations.open"
     headers = {
         "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json; charset=utf-8"
+        "Content-Type": "application/json; charset=utf-8",
     }
     data = {"users": user_id}
 
@@ -301,6 +311,7 @@ def send_to_slack(channel_or_user_name, message, token):
     logger.error(
         f"Error: '{channel_or_user_name}' is not a valid channel or user in this workspace."
     )
+
 
 def _send_message_to_channel(channel_id, message, token):
     """

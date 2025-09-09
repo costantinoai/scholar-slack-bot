@@ -1,9 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct  7 02:46:59 2023
+"""Command-line interface for the Scholar Slack bot.
 
-@author: costantino_ai
+This module parses CLI arguments and orchestrates the main workflow for
+fetching publications and sending messages to Slack.
 """
 
 import os
@@ -11,14 +9,14 @@ import argparse
 import logging
 import shutil
 
-from slack_bot import get_slack_config, send_test_msg
-from helper_funcs import has_conflicting_args, delete_temp_cache
-from streams_funcs import (
+from .slack.client import get_slack_config, send_test_msg
+from .utils.helpers import has_conflicting_args, delete_temp_cache
+from .core.streams import (
     refetch_and_update,
     add_scholar_and_fetch,
     regular_fetch_and_message,
 )
-from log_config import setup_logging
+from .utils.logging import setup_logging
 
 logger = logging.getLogger(__name__)
 
@@ -36,10 +34,12 @@ def get_args():
 
     # Add command-line arguments
     parser.add_argument(
-        "--authors_path", default="./src/authors.db", help="Path to authors database"
+        "--authors_path", default="./data/authors.db", help="Path to authors database"
     )
     parser.add_argument(
-        "--slack_config_path", default="./src/slack.config", help="Path to slack.config"
+        "--slack_config_path",
+        default="./data/slack.config",
+        help="Path to slack.config",
     )
     parser.add_argument("--verbose", action="store_true", help="Verbose output.")
     parser.add_argument(
