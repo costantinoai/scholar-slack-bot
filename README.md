@@ -11,10 +11,13 @@ This Slack Bot fetches publications for authors from Google Scholar and sends no
    git clone https://github.com/costantinoai/scholar-slack-bot.git
    cd scholar-slack-bot
    ```  
-2. **Install dependencies:**  
+2. **Install dependencies:**
    ```sh
    pip install -r requirements.txt
-   ```  
+   ```
+   The helper scripts in `scripts/` will automatically create a Conda
+   environment named `scholarbot`, install `pip` and the project's
+   dependencies, and activate the environment if it does not already exist.
 3. **Edit the config file:**  
    - Add your Slack API token.  
    - Set the `target_name` field to either a **Slack channel** (public or private, if the bot is added) or a **Slack user** (for direct messages).  
@@ -58,6 +61,9 @@ Install dependencies:
 ```sh
 pip install -r requirements.txt
 ```
+
+The provided helper scripts will bootstrap a Conda environment named
+`scholarbot` and install these requirements automatically when invoked.
 
 
 Edit `slack.config` with your bot’s API token and target name:  
