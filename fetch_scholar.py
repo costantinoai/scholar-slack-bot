@@ -6,50 +6,84 @@ Created on Wed Sep  6 14:06:56 2023
 @author: costantino_ai
 """
 
-import json
 import os
 import platform
+import sqlite3
 from scholarly import scholarly
 from concurrent.futures import ThreadPoolExecutor
 import logging
 import time
 from tqdm import tqdm
 
-from helper_funcs import clean_pubs, get_authors_json, convert_json_to_tuple, ensure_output_folder
+from helper_funcs import (
+    clean_pubs,
+    get_authors_json,
+    convert_json_to_tuple,
+    ensure_output_folder,
+    migrate_legacy_files,
+)
 
 logger = logging.getLogger(__name__)
 
 MAX_RETRIES = 3
 DELAYS = [20, 40, 60]
+DEFAULT_SRC_DIR = "./src"
+DB_NAME = "publications.db"
+DEFAULT_DB_DIR = DEFAULT_SRC_DIR
+DEFAULT_DB_PATH = os.path.join(DEFAULT_DB_DIR, DB_NAME)
+
+
+def _init_db(db_path: str) -> sqlite3.Connection:
+    """Ensure the SQLite database and table exist.
+
+    Args:
+        db_path: Location of the SQLite database file.
+
+    Returns:
+        sqlite3.Connection: Open connection to the database.
+    """
+
+    # Auto-migrate any legacy JSON caches before interacting with the database.
+    migrate_legacy_files(os.path.dirname(db_path))
+
+    conn = sqlite3.connect(db_path)
+    conn.execute(
+        """CREATE TABLE IF NOT EXISTS publications (
+                author_id TEXT,
+                title TEXT,
+                year INTEGER,
+                abstract TEXT,
+                url TEXT,
+                citations INTEGER,
+                PRIMARY KEY (author_id, title)
+            )"""
+    )
+    return conn
 
 
 def fetch_from_json(args, idx=None):
-    """
-    Fetch author and publication details based on a specified index.
+    """Fetch author and publication details based on a specified index.
 
-    This function retrieves author details from a given JSON path, converts this
-    data into a tuple representation, and fetches publication details for a subset
-    of these authors from a scholarly database. The subset size is determined by the
-    provided index (idx).
+    Author information is now stored in a SQLite database. This helper reads the
+    database located at ``args.authors_path``, converts the records into tuples,
+    and fetches publication details for a subset of these authors from Google
+    Scholar. The subset size is determined by ``idx``.
 
-    Parameters:
-    - args: Arguments containing the path to the authors' JSON and other relevant data.
-    - idx (int, optional): The number of authors for which to fetch publications.
-      Defaults to None, which fetches for all authors.
+    Args:
+        args: Namespace containing the path to the authors database and other
+            relevant options.
+        idx: Optional limit on the number of authors to process. ``None`` means
+            all authors are fetched.
 
     Returns:
-    - tuple: A tuple containing:
-        1. A list of selected authors' details.
-        2. A dictionary with publication details for each selected author.
+        tuple: A pair consisting of the selected authors and their publications.
     """
 
-    # Retrieve authors' details from the specified JSON path.
     authors_json = get_authors_json(args.authors_path)
     logger.debug(f"Fetched authors' details from {args.authors_path}.")
 
-    # Convert the retrieved JSON data into a tuple representation for easier handling.
     authors = convert_json_to_tuple(authors_json)
-    logger.debug("Converted authors' JSON data into tuple representation.")
+    logger.debug("Converted authors' records into tuple representation.")
 
     # Determine the number of authors to process.
     if idx is not None:
@@ -62,7 +96,7 @@ def fetch_from_json(args, idx=None):
         idx = len(authors)
 
     if idx == 0:
-        logger.error("No authors listed in the authors.json file.")
+        logger.error("No authors listed in the authors database.")
         return
 
     # Fetch publication details for the determined number of authors from the scholarly database.
@@ -114,29 +148,39 @@ def fetch_author_details(author_id):
         raise e
 
 
-def load_cache(author_id, output_folder):
-    """
-    Loads cached publications details from the file system, if available.
+def load_cache(author_id, output_folder=DEFAULT_DB_DIR):
+    """Load cached publications for an author from the SQLite database.
+
+    Args:
+        author_id: Google Scholar identifier for the author.
+        output_folder: Directory where the cache database is stored.
 
     Returns:
-    - list: List of cached publications or an empty list if cache is not present or corrupted.
-
-    Raises:
-    - Exception: If there's any error during the loading process.
+        list: Publications previously cached for the author.
     """
-    # Load cached publications if they exist
-    cache_path = os.path.join(output_folder, f"{author_id}.json")  # Determine the cache file path
-    if os.path.exists(cache_path):
-        logger.debug(f"Cache exists for author {author_id}. Loading...")
-        try:
-            with open(cache_path, "r") as f:
-                return json.load(f)
-        except Exception as e:
-            logger.warning(f"Error loading cache for author {author_id}. {e}")
-            return []
-    else:
-        logger.debug(f"No cache for author {author_id}. Fetching all.")
+
+    db_path = os.path.join(output_folder, DB_NAME)
+    conn = _init_db(db_path)
+    try:
+        cursor = conn.execute(
+            "SELECT title, year, abstract, url, citations FROM publications WHERE author_id=?",
+            (author_id,),
+        )
+        rows = cursor.fetchall()
+        cached = [
+            {
+                "bib": {"title": title, "pub_year": str(year), "abstract": abstract},
+                "pub_url": url,
+                "num_citations": citations,
+            }
+            for title, year, abstract, url, citations in rows
+        ]
+        return cached
+    except Exception as e:
+        logger.warning(f"Error loading cache for author {author_id}. {e}")
         return []
+    finally:
+        conn.close()
 
 
 def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
@@ -148,7 +192,9 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
     """
     test_fetching = getattr(args, "test_fetching", False)
     if test_fetching:
-        logging.warning(f"--test_fetching flag True. Loading only cached papers < {str(from_year)}")
+        logging.warning(
+            f"--test_fetching flag True. Loading only cached papers < {str(from_year)}"
+        )
 
     # Extract titles from cached publications, only titles before from_year if test_fetching is True
     cached_titles = (
@@ -157,25 +203,31 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
         else [
             pub["bib"]["title"]
             for pub in cached_pubs
-            if "pub_year" in pub["bib"].keys() and int(pub["bib"]["pub_year"]) < int(from_year)
+            if "pub_year" in pub["bib"].keys()
+            and int(pub["bib"]["pub_year"]) < int(from_year)
         ]
     )
 
-    if args.update_cache == True:
+    if args.update_cache:
         # Do not filter pubs. If this is True, it means we want to update the cache. So we fetch
         # all the author's pubs for the last year
-        logger.info("--update_cache flag True. Re-fetching author's pubs and generating new cache.")
+        logger.info(
+            "--update_cache flag True. Re-fetching author's pubs and generating new cache."
+        )
         pubs_to_fetch = [
             item
             for item in author_pubs
-            if "pub_year" in item["bib"].keys() and int(item["bib"]["pub_year"]) >= int(from_year)
+            if "pub_year" in item["bib"].keys()
+            and int(item["bib"]["pub_year"]) >= int(from_year)
         ]
     else:
         # Filter out publications to fetch based on title and year, only titles >= from_year if test_fetching == True
         pubs_to_fetch = [
             item
             for item in author_pubs
-            if not any(item["bib"]["title"].split(' …')[0] in title for title in cached_titles) # this handles the titles that are cut with ' …'
+            if not any(
+                item["bib"]["title"].split(" …")[0] in title for title in cached_titles
+            )  # this handles the titles that are cut with ' …'
             # if item["bib"]["title"] not in cached_titles # this was wrong.. longer titles get cut with ' …' so they get loaded again every time if we use this
             and "pub_year" in item["bib"].keys()
             and int(item["bib"]["pub_year"]) >= int(from_year)
@@ -214,7 +266,9 @@ def fetch_selected_pubs(pubs_to_fetch):
                     )
                 elif logger.getEffectiveLevel() != logging.INFO and pubs_to_fetch != []:
                     # If not using a progress bar, simply map the function across the publications
-                    fetched_pubs = list(executor.map(fetch_publication_details, pubs_to_fetch))
+                    fetched_pubs = list(
+                        executor.map(fetch_publication_details, pubs_to_fetch)
+                    )
                 else:
                     logger.debug("No new publications. Skipping..")
                     fetched_pubs = []
@@ -226,38 +280,65 @@ def fetch_selected_pubs(pubs_to_fetch):
                 logger.warning(
                     f"Error fetching publications. Retrying in {DELAYS[retry]} seconds. Error: {e}"
                 )
-                time.sleep(DELAYS[retry])  # Delay for a specified amount of time before retrying
+                time.sleep(
+                    DELAYS[retry]
+                )  # Delay for a specified amount of time before retrying
             else:
                 # If it's the last retry attempt, log an error and return an empty list
                 logger.error(f"Max retries reached. Exiting fetch process. Error: {e}")
                 return []
 
 
-def save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args):
-    """
-    Updates the cache by saving the combined list of fetched and cached publications.
+def save_updated_cache(
+    fetched_pubs, cached_pubs, author_id, output_folder=DEFAULT_DB_DIR, args=None
+):
+    """Persist fetched publications to the SQLite cache.
 
     Parameters:
     - fetched_pubs (list): List of newly fetched publications.
-    - cached_pubs (list): List of previously cached publications.
-    - output_folder (str): Directory to save the cache.
+    - cached_pubs (list): Unused; retained for backward compatibility.
+    - output_folder (str, optional): Directory where the cache database is stored.
+      Defaults to ``DEFAULT_DB_DIR``.
+    - args (argparse.Namespace, optional): Object with the ``update_cache`` flag.
     """
-    cache_path = os.path.join(output_folder, f"{author_id}.json")
+
+    db_path = os.path.join(output_folder, DB_NAME)
+    conn = _init_db(db_path)
     logger.debug(f"Updating cache for author {author_id}.")
-    with open(cache_path, "w") as f:
-        combined_pubs = fetched_pubs + cached_pubs if not args.update_cache else fetched_pubs
-        json.dump(combined_pubs, f, indent=4)
+    try:
+        update_cache = getattr(args, "update_cache", False)
+        if update_cache:
+            conn.execute("DELETE FROM publications WHERE author_id=?", (author_id,))
+        for pub in fetched_pubs:
+            title = pub["bib"]["title"]
+            year = pub["bib"].get("pub_year")
+            year_val = int(year) if year else None
+            abstract = pub["bib"].get("abstract")
+            url = pub.get("pub_url")
+            citations = pub.get("num_citations")
+            conn.execute(
+                "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
+                (author_id, title, year_val, abstract, url, citations),
+            )
+        conn.commit()
+    finally:
+        conn.close()
 
 
 def fetch_publications_by_id(
-    author_id, output_folder, args, from_year=2023, exclude_not_cited_papers=False
+    author_id,
+    output_folder=DEFAULT_DB_DIR,
+    args=None,
+    from_year=2023,
+    exclude_not_cited_papers=False,
 ):
     """
     Fetches and caches publications of a specific author using their Google Scholar ID.
 
     Parameters:
     - author_id (str): Google Scholar ID of the author.
-    - output_folder (str): Directory where the fetched publications will be cached.
+    - output_folder (str, optional): Directory where the fetched publications will be cached.
+      Defaults to ``DEFAULT_DB_DIR``.
     - from_year (int, optional): Limit publications to this year. Defaults to 2023.
     - exclude_not_cited_papers (bool, optional): If True, only return papers that have been cited. Defaults to False.
 
@@ -281,33 +362,26 @@ def fetch_publications_by_id(
     - This function uses the 'scholarly' library to interact with Google Scholar.
     - Fetching too many papers in a short time might lead to a temporary block by Google Scholar.
     """
-    # Make temp dir path
-    temp_output_folder = os.path.join(output_folder, "tmp")
-    # Check if the output folder exists or create it
-    ensure_output_folder(temp_output_folder)
-    # Fetch author details from Google Scholar
+    # Ensure the cache directory exists
+    ensure_output_folder(output_folder)
     author_pubs = fetch_author_details(author_id)
-    # Load cached publications if available
     cached_pubs = load_cache(author_id, output_folder)
-    # Determine the list of publications to fetch
     pubs_to_fetch = get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args)
-    # Fetch selected publications
     fetched_pubs = fetch_selected_pubs(pubs_to_fetch)
-    # Update cache with newly fetched publications
-    if not getattr(args, "test_fetching", False):
-        save_updated_cache(fetched_pubs, cached_pubs, author_id, temp_output_folder, args)
-    # Return cleaned list of publications
+    test_fetching = getattr(args, "test_fetching", False)
+    if not test_fetching:
+        save_updated_cache(fetched_pubs, cached_pubs, author_id, output_folder, args)
     return clean_pubs(fetched_pubs, from_year, exclude_not_cited_papers)
 
 
-def fetch_pubs_dictionary(authors, args, output_dir="./src"):
+def fetch_pubs_dictionary(authors, args, output_dir=DEFAULT_DB_DIR):
     """
     Fetch publications for a list of authors for the current year,
     and store them in a cache. Only non-duplicate publications compared
     to the cache are returned.
 
     :param authors: List of tuples containing author name and author ID.
-    :param output_dir: Directory where the cache file will be saved/loaded from.
+    :param output_dir: Directory where the cache database will be stored.
     :return: A dictionary containing non-duplicate publications.
     """
 
@@ -319,15 +393,15 @@ def fetch_pubs_dictionary(authors, args, output_dir="./src"):
         "output_root": output_dir,
     }
 
-    # Determine cache directory
+    # Determine database directory. If no path is provided, fall back to the
+    # user's desktop for visibility during ad-hoc runs.
     if params["output_root"] is None:
         if platform.system() == "Windows":
-            desktop = os.path.join(os.path.join(os.environ["USERPROFILE"]), "Desktop")
+            output_folder = os.path.join(os.environ["USERPROFILE"], "Desktop")
         else:
-            desktop = os.path.join(os.path.expanduser("~"), "Desktop")
-        output_folder = os.path.join(desktop, "googleapi_cache")
+            output_folder = os.path.join(os.path.expanduser("~"), "Desktop")
     else:
-        output_folder = os.path.join(params["output_root"], "googleapi_cache")
+        output_folder = params["output_root"]
 
     # Ensure the output directory exists.
     if not os.path.exists(output_folder):

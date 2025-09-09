@@ -8,10 +8,110 @@ Created on Sat Oct  7 14:04:23 2023
 import os
 import shutil
 import logging
+import sqlite3
 import json
 from scholarly import scholarly
 
 logger = logging.getLogger(__name__)
+
+DATA_DIR = "./src"
+AUTHORS_DB_PATH = os.path.join(DATA_DIR, "authors.db")
+
+
+def migrate_legacy_files(root: str = DATA_DIR) -> None:
+    """Migrate legacy JSON caches and authors list to SQLite if present.
+
+    The project originally stored author and publication information in JSON
+    files under ``googleapi_cache`` and ``authors.json``. This helper checks
+    for those legacy locations and, when found, imports their contents into the
+    SQLite databases before archiving the old files under ``obsolete``.
+
+    Args:
+        root: Base directory containing the legacy files. Defaults to
+            :data:`DATA_DIR`.
+    """
+
+    cache_dir = os.path.join(root, "googleapi_cache")
+    authors_json = os.path.join(root, "authors.json")
+    backup_dir = os.path.join(root, "googleapi_cache_bkp")
+
+    # If no legacy artifacts exist, there's nothing to migrate.
+    if not any(os.path.exists(path) for path in [cache_dir, authors_json, backup_dir]):
+        return
+
+    logger.info("Legacy cache detected in %s; starting migration.", root)
+
+    # Prepare publications database and insert cached publications if available.
+    pub_db_path = os.path.join(root, "publications.db")
+    conn_pub = sqlite3.connect(pub_db_path)
+    conn_pub.execute(
+        """CREATE TABLE IF NOT EXISTS publications (
+                author_id TEXT,
+                title TEXT,
+                year INTEGER,
+                abstract TEXT,
+                url TEXT,
+                citations INTEGER,
+                PRIMARY KEY (author_id, title)
+            )"""
+    )
+    if os.path.exists(cache_dir):
+        for fname in os.listdir(cache_dir):
+            if not fname.endswith(".json"):
+                continue
+            author_id = os.path.splitext(fname)[0]
+            with open(os.path.join(cache_dir, fname), "r", encoding="utf-8") as f:
+                pubs = json.load(f)
+            for pub in pubs:
+                title = pub["bib"]["title"]
+                year = pub["bib"].get("pub_year")
+                year_val = int(year) if year else None
+                abstract = pub["bib"].get("abstract")
+                url = pub.get("pub_url")
+                citations = pub.get("num_citations")
+                conn_pub.execute(
+                    "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
+                    (author_id, title, year_val, abstract, url, citations),
+                )
+            logger.info("Migrated cache for author %s", author_id)
+        conn_pub.commit()
+    conn_pub.close()
+
+    # Prepare authors database and import legacy authors list if present.
+    if os.path.exists(authors_json):
+        authors_db_path = os.path.join(root, "authors.db")
+        conn_auth = sqlite3.connect(authors_db_path)
+        conn_auth.execute(
+            """CREATE TABLE IF NOT EXISTS authors (
+                    name TEXT,
+                    id TEXT PRIMARY KEY
+                )"""
+        )
+        with open(authors_json, "r", encoding="utf-8") as f:
+            authors = json.load(f)
+        for author in authors:
+            conn_auth.execute(
+                "INSERT OR REPLACE INTO authors (name, id) VALUES (?, ?)",
+                (author["name"], author["id"]),
+            )
+        conn_auth.commit()
+        conn_auth.close()
+        logger.info("Migrated authors list to SQLite")
+
+    # Move legacy files into an ``obsolete`` folder for safekeeping.
+    obsolete_dir = os.path.join(root, "obsolete")
+    os.makedirs(obsolete_dir, exist_ok=True)
+    if os.path.exists(authors_json):
+        shutil.move(authors_json, os.path.join(obsolete_dir, "authors.json"))
+        logger.info("Archived legacy authors.json to %s", obsolete_dir)
+    if os.path.exists(cache_dir):
+        shutil.move(cache_dir, os.path.join(obsolete_dir, "googleapi_cache"))
+        logger.info("Archived legacy cache to %s", obsolete_dir)
+    if os.path.exists(backup_dir):
+        shutil.move(
+            backup_dir, os.path.join(obsolete_dir, os.path.basename(backup_dir))
+        )
+        logger.info("Archived legacy backup cache to %s", obsolete_dir)
 
 
 def delete_temp_cache(args):
@@ -28,7 +128,9 @@ def delete_temp_cache(args):
         logger.debug(f"Temporary cache not found at {args.temp_cache_path}.")
 
 
-def confirm_temp_cache(temp_cache_path="./src/temp_cache", old_cache_path="./src/googleapi_cache"):
+def confirm_temp_cache(
+    temp_cache_path="./src/temp_cache", old_cache_path="./src/googleapi_cache"
+):
     """
     Moves the contents of the temporary cache directory to the old cache directory.
 
@@ -97,68 +199,69 @@ def has_conflicting_args(args):
     return False
 
 
-def add_new_author_to_json(authors_path, scholar_id):
-    """
-    Add a new author to the existing authors JSON file using the provided Google Scholar ID.
+def _init_authors_db(authors_path: str) -> sqlite3.Connection:
+    """Ensure the authors database exists and return a connection."""
 
-    Parameters:
-    - authors_path (str): Path to the authors JSON file.
-    - scholar_id (str): Google Scholar ID of the author to be added.
+    # Before opening the database, migrate any legacy JSON data that may still
+    # exist alongside it.
+    migrate_legacy_files(os.path.dirname(authors_path))
+
+    conn = sqlite3.connect(authors_path)
+    conn.execute(
+        """CREATE TABLE IF NOT EXISTS authors (
+                name TEXT,
+                id TEXT PRIMARY KEY
+            )"""
+    )
+    return conn
+
+
+def add_new_author_to_json(authors_path: str, scholar_id: str) -> dict:
+    """Insert a new author into the SQLite database.
+
+    Despite the legacy name, this function now writes to a SQLite database
+    located at ``authors_path``.
+
+    Args:
+        authors_path: Path to the ``authors.db`` file.
+        scholar_id: Google Scholar identifier for the author to add.
 
     Returns:
-    None
+        dict: A dictionary with the inserted author's name and id.
 
     Raises:
-    - Exception: If an error occurs while fetching the author using the `scholarly` module.
+        Exception: Propagates exceptions raised while fetching author data.
     """
 
     logger.info(f"Adding author ID {scholar_id} to {authors_path}.")
-    # Get the old authors json
-    with open(authors_path, "r") as f:
-        old_authors_json = json.load(f)
-
-    # Fetch the author's details from Google Scholar using the provided ID
+    conn = _init_authors_db(authors_path)
     try:
-        author_fetched = scholarly.search_author_id(scholar_id)
-    except Exception as e:
-        logger.error(f"Error encountered: {e}")
-        raise  # this will raise the caught exception and stop the code
+        try:
+            author_fetched = scholarly.search_author_id(scholar_id)
+        except Exception as e:
+            logger.error(f"Error encountered: {e}")
+            raise
 
-    # Extract the name of the author and create a dictionary entry
-    author_name = author_fetched["name"]
-    author_dict = {"name": author_name, "id": scholar_id}
-
-    # Append the new author's details to the existing list
-    # Check if the author with the given scholar_id already exists in the old_authors_json
-    if not any(author["id"] == scholar_id for author in old_authors_json):
-        # Append the new author's details to the existing list
-        old_authors_json.append(author_dict)
-    else:
-        # Handle the case where the author already exists, e.g., log a message
-        logger.info(
-            f"Author with ID {scholar_id} already exists in the list and will not be added again."
+        author_name = author_fetched["name"]
+        conn.execute(
+            "INSERT OR IGNORE INTO authors (name, id) VALUES (?, ?)",
+            (author_name, scholar_id),
         )
-
-    try:
-        # Save the updated list of authors back to the JSON file
-        with open(authors_path, "w") as f:
-            json.dump(old_authors_json, f, indent=4)
+        conn.commit()
         logger.debug(f"Author {author_name} added to {authors_path}.")
-    except:
-        logger.error(f"There was an error adding {author_name} to {authors_path}.")
-
-    return author_dict
+        return {"name": author_name, "id": scholar_id}
+    finally:
+        conn.close()
 
 
 def convert_json_to_tuple(authors_json: list) -> list:
-    """
-    Converts the authors' details from a JSON file into a Python tuple representation.
+    """Convert a list of author dictionaries into tuples.
 
-    Parameters:
-    - authors_path (str): Path to the authors' JSON file.
+    Args:
+        authors_json: Sequence of dictionaries with ``name`` and ``id`` keys.
 
     Returns:
-    - str: A Python string representation of authors as a list of tuples.
+        list: Each author represented as ``(name, id)``.
     """
 
     authors_list = []
@@ -173,18 +276,26 @@ def convert_json_to_tuple(authors_json: list) -> list:
 
 
 def get_authors_json(authors_path: str) -> list:
-    """
-    Retrieves authors' details from a JSON file.
+    """Retrieve authors from the SQLite database.
 
-    Parameters:
-    - authors_path (str): Path to the authors' JSON file.
+    The function name is kept for backward compatibility; however, it now
+    reads from a ``.db`` file rather than a JSON document.
+
+    Args:
+        authors_path: Path to the ``authors.db`` database.
 
     Returns:
-    - list[dict]: List of authors in JSON format.
+        list[dict]: Authors stored in the database.
     """
-    with open(authors_path, "r") as file:
-        authors = json.load(file)
-    return authors
+
+    conn = _init_authors_db(authors_path)
+    try:
+        cursor = conn.execute("SELECT name, id FROM authors")
+        return [
+            {"name": name, "id": author_id} for name, author_id in cursor.fetchall()
+        ]
+    finally:
+        conn.close()
 
 
 def clean_pubs(fetched_pubs, from_year=2023, exclude_not_cited_papers=False):
@@ -213,7 +324,8 @@ def clean_pubs(fetched_pubs, from_year=2023, exclude_not_cited_papers=False):
         # Check if the publication meets the year criterion and hasn't been seen before
         if (
             pub["bib"].get("pub_year")  # if the publication has a 'year' field
-            and int(pub["bib"]["pub_year"]) <= int(from_year)  # if the pub year is >= from_year
+            and int(pub["bib"]["pub_year"])
+            <= int(from_year)  # if the pub year is >= from_year
             and (
                 not exclude_not_cited_papers or pub["num_citations"] > 0
             )  # if exclude_not_cited_papers is True, then we select only papers with citations
