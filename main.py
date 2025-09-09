@@ -21,10 +21,9 @@ from streams_funcs import (
     add_scholar_and_fetch,
     regular_fetch_and_message,
 )
-from log_config import MIN, STANDARD
+from log_config import setup_logging
 
-# Configure logging
-logging.basicConfig(level=STANDARD)
+logger = logging.getLogger(__name__)
 
 
 def get_args():
@@ -82,7 +81,7 @@ def initialize_args():
     if len(sys.argv) > 1:
         # Parse command-line arguments
         parser, args = get_args()
-        logging.log(MIN, "Parsed command-line arguments.")
+        logger.info("Parsed command-line arguments.")
     else:
         # Default configurations for execution in IDE
         class IDEArgs:
@@ -103,17 +102,16 @@ def initialize_args():
             "--add_scholar_id and --update_cache cannot be used together or with --test_fetching, --test_message"
         )
 
-    # Reconfigure logging based on DEBUG_FLAG's value
+    # Configure logging based on verbosity
+    setup_logging(verbose=args.verbose)
     if args.verbose:
-        logging.basicConfig(level=STANDARD)
-        logging.log(STANDARD, "STANDARD log mode activated.")
+        logger.debug("Verbose log mode activated.")
     else:
-        logging.basicConfig(level=MIN)
-        logging.log(MIN, "MIN log mode activated.")
+        logger.info("Minimal log mode activated.")
 
     # Display the arguments being used
     for arg, value in vars(args).items():
-        logging.log(STANDARD, f"Argument {arg} = {value}")
+        logger.debug(f"Argument {arg} = {value}")
 
     return args
 
@@ -138,7 +136,8 @@ def main():
     Note: If running from an IDE, configurations are hardcoded.
 
     """
-    logging.log(MIN, "Initializing...")
+    setup_logging()
+    logger.info("Initializing...")
 
     # Get the arguments
     args = initialize_args()
@@ -157,7 +156,7 @@ def main():
     # Assign Slack API token and channel name from the config
     token = slack_config["api_token"]
     ch_name = slack_config["channel_name"]
-    logging.log(MIN, f"Target Slack channel: {ch_name}.")
+    logger.info(f"Target Slack channel: {ch_name}.")
 
     # Scenario 1: Test message. No fetching or cache update.
     if args.test_message and not args.test_fetching:
@@ -186,7 +185,7 @@ def main():
     # Attempt to clean the new temporary cache
     delete_temp_cache(args)
 
-    logging.log(MIN, "Done.")
+    logger.info("Done.")
     return args
 
 

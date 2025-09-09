@@ -10,21 +10,22 @@ import shutil
 import logging
 import json
 from scholarly import scholarly
-from log_config import MIN, STANDARD
+
+logger = logging.getLogger(__name__)
 
 
 def delete_temp_cache(args):
     if os.path.isdir(args.temp_cache_path):
         try:
             shutil.rmtree(args.temp_cache_path)
-            logging.log(STANDARD, "Temporary cache cleared.")
+            logger.debug("Temporary cache cleared.")
         except Exception as e:
-            logging.error(
+            logger.error(
                 f"Failed to delete cache at {args.temp_cache_path}. Please delete the folder manually."
             )
-            logging.error(f"Reason: {str(e)}")
+            logger.error(f"Reason: {str(e)}")
     else:
-        logging.log(STANDARD, f"Temporary cache not found at {args.temp_cache_path}.")
+        logger.debug(f"Temporary cache not found at {args.temp_cache_path}.")
 
 
 def confirm_temp_cache(temp_cache_path="./src/temp_cache", old_cache_path="./src/googleapi_cache"):
@@ -45,18 +46,18 @@ def confirm_temp_cache(temp_cache_path="./src/temp_cache", old_cache_path="./src
 
     # Check if temp_cache_path exists
     if not os.path.exists(temp_cache_path):
-        logging.warning(
+        logger.warning(
             f"Temporary cache path '{temp_cache_path}' does not exist. New articles are NOT saved to cache."
         )
         return
 
     # Check if old_cache_path exists
     if not os.path.exists(old_cache_path):
-        logging.log(MIN, f"Cache path '{old_cache_path}' does not exist. Creating.")
+        logger.info(f"Cache path '{old_cache_path}' does not exist. Creating.")
         os.makedirs(old_cache_path, exist_ok=True)
 
     # Log the beginning of the process
-    logging.log(STANDARD, "Starting to move files from temporary cache to old cache.")
+    logger.debug("Starting to move files from temporary cache to old cache.")
 
     # Iterate over every file in the temporary cache path
     for file_name in os.listdir(temp_cache_path):
@@ -65,11 +66,11 @@ def confirm_temp_cache(temp_cache_path="./src/temp_cache", old_cache_path="./src
 
         # Move file from temporary cache to old cache, overwriting if necessary
         shutil.move(source_path, destination_path)
-        logging.log(STANDARD, f"Moved '{file_name}' from temporary cache to old cache.")
+        logger.debug(f"Moved '{file_name}' from temporary cache to old cache.")
 
     # After moving all files, remove the temporary cache directory
     os.rmdir(temp_cache_path)
-    logging.log(STANDARD, f"Temporary cache path '{temp_cache_path}' has been deleted.")
+    logger.debug(f"Temporary cache path '{temp_cache_path}' has been deleted.")
 
     return
 
@@ -115,7 +116,7 @@ def add_new_author_to_json(authors_path, scholar_id):
     - Exception: If an error occurs while fetching the author using the `scholarly` module.
     """
 
-    logging.log(MIN, f"Adding author ID {scholar_id} to {authors_path}.")
+    logger.info(f"Adding author ID {scholar_id} to {authors_path}.")
     # Get the old authors json
     with open(authors_path, "r") as f:
         old_authors_json = json.load(f)
@@ -124,7 +125,7 @@ def add_new_author_to_json(authors_path, scholar_id):
     try:
         author_fetched = scholarly.search_author_id(scholar_id)
     except Exception as e:
-        print(f"Error encountered: {e}")
+        logger.error(f"Error encountered: {e}")
         raise  # this will raise the caught exception and stop the code
 
     # Extract the name of the author and create a dictionary entry
@@ -138,18 +139,17 @@ def add_new_author_to_json(authors_path, scholar_id):
         old_authors_json.append(author_dict)
     else:
         # Handle the case where the author already exists, e.g., log a message
-        logging.log(
-            MIN,
-            f"Author with ID {scholar_id} already exists in the list and will not be added again.",
+        logger.info(
+            f"Author with ID {scholar_id} already exists in the list and will not be added again."
         )
 
     try:
         # Save the updated list of authors back to the JSON file
         with open(authors_path, "w") as f:
             json.dump(old_authors_json, f, indent=4)
-        logging.log(STANDARD, f"Author {author_name} added to {authors_path}.")
+        logger.debug(f"Author {author_name} added to {authors_path}.")
     except:
-        logging.error(f"There was an error adding {author_name} to {authors_path}.")
+        logger.error(f"There was an error adding {author_name} to {authors_path}.")
 
     return author_dict
 
@@ -255,5 +255,5 @@ def ensure_output_folder(output_folder):
     - Exception: If there's any error during folder creation.
     """
     if not os.path.exists(output_folder):  # Check if directory exists
-        logging.info(f"Output folder '{output_folder}' does not exist. Creating it.")
+        logger.info(f"Output folder '{output_folder}' does not exist. Creating it.")
         os.makedirs(output_folder)  # Create directory

@@ -9,7 +9,7 @@ import requests
 import configparser
 import logging
 
-from log_config import MIN, STANDARD
+logger = logging.getLogger(__name__)
 
 
 def send_test_msg(token, ch_name):
@@ -46,7 +46,7 @@ def send_test_msg(token, ch_name):
 
     # Check if the message was sent successfully and log the outcome.
     if response_json["ok"]:
-        logging.log(MIN, f"Test message successfully sent to #{ch_name}")
+        logger.info(f"Test message successfully sent to #{ch_name}")
 
 
 def make_slack_msg(authors: list, articles: list) -> list:
@@ -106,7 +106,7 @@ def get_slack_config(slack_config_path="./src/slack.config"):
         "channel_name": config.get("slack", "channel_name"),
     }
 
-    logging.log(STANDARD, f"Fetched Slack configuration from {slack_config_path}.")
+    logger.debug(f"Fetched Slack configuration from {slack_config_path}.")
     return slack_config
 
 def format_pub_message(pub):
@@ -158,7 +158,7 @@ def format_pub_message(pub):
 
     # Joining the details list into a single string separated by newline characters
     message = "\n".join(details)
-    print(message)  # Printing the formatted message
+    logger.debug(message)
 
     return message  # Returning the formatted message
 
@@ -204,7 +204,7 @@ def get_channel_id_by_name(channel_name, token):
     while True:
         response = requests.get(url, headers=headers, params=params).json()
         if not response["ok"]:
-            logging.warning(f"Failed to list channels: {response['error']}")
+            logger.warning(f"Failed to list channels: {response['error']}")
             return None
 
         for channel in response["channels"]:
@@ -234,7 +234,7 @@ def get_user_id_by_name(user_name, token):
     while True:
         response = requests.get(url, headers=headers, params=params).json()
         if not response["ok"]:
-            logging.warning(f"Failed to list users: {response['error']}")
+            logger.warning(f"Failed to list users: {response['error']}")
             return None
 
         for member in response["members"]:
@@ -267,7 +267,7 @@ def open_im_channel(user_id, token):
 
     response = requests.post(url, headers=headers, json=data).json()
     if not response["ok"]:
-        logging.warning(f"Error opening DM for user {user_id}: {response}")
+        logger.warning(f"Error opening DM for user {user_id}: {response}")
         return None
 
     return response["channel"]["id"]
@@ -298,7 +298,7 @@ def send_to_slack(channel_or_user_name, message, token):
         return response
 
     # 3. If neither was found, log an error
-    logging.error(
+    logger.error(
         f"Error: '{channel_or_user_name}' is not a valid channel or user in this workspace."
     )
 
@@ -315,11 +315,11 @@ def _send_message_to_channel(channel_id, message, token):
     response = requests.post(url, headers=headers, json=data).json()
 
     if not response.get("ok"):
-        logging.warning(
+        logger.warning(
             f"Sending message to #{channel_id} failed. Error: {response.get('error')}. "
             f"Message:\n{message}"
         )
     else:
-        logging.log(STANDARD, f"Message successfully sent to #{channel_id}.")
+        logger.debug(f"Message successfully sent to #{channel_id}.")
 
     return response
