@@ -125,7 +125,6 @@ def test_send_to_slack_invalid(mock_get_channel, mock_get_user, mock_send):
     assert resp is None
     mock_send.assert_not_called()
 
-
 def test_format_authors_message_sorts_and_formats():
     authors = [("Bob", "B"), ("Alice", "A")]
     message = format_authors_message(authors)
@@ -226,3 +225,4 @@ def test_send_test_msg_formats_message(mock_send):
     top_bottom = "#" * width
     formatted = f"```\n{top_bottom}\n#{unformatted}#\n{top_bottom}```"
     mock_send.assert_called_once_with("chan", formatted, "token")
+

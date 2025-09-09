@@ -73,7 +73,6 @@ def test_clean_pubs_filters_duplicates_and_citations():
         }
     ]
 
-
 def test_convert_json_to_tuple():
     authors_json = [{"name": "Alice", "id": "A1"}, {"name": "Bob", "id": "B2"}]
     assert convert_json_to_tuple(authors_json) == [("Alice", "A1"), ("Bob", "B2")]
