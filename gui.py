@@ -652,22 +652,32 @@ TEMPLATE = """
 
   function startProcess(url, confirmText){
     if (confirmText && !confirm(confirmText)) return;
-    document.getElementById('output').textContent = '';
+    const outEl = document.getElementById('output');
+    outEl.textContent = '';
     document.getElementById('output-container').style.display = 'block';
-    fetch(url, {method: 'POST'});
-    if (evtSource) evtSource.close();
-    evtSource = new EventSource('/stream');
-    document.getElementById('stop-btn').style.display = 'inline-block';
-    evtSource.onmessage = function(e){
-      if (e.data === '__COMPLETE__'){
-        evtSource.close();
-        document.getElementById('stop-btn').style.display = 'none';
-      } else {
-        const out = document.getElementById('output');
-        out.textContent += e.data + '\n';
-        out.scrollTop = out.scrollHeight;
-      }
-    };
+
+    // Launch the backend job and only connect to the stream once the POST
+    // request completes.  This avoids a race where the EventSource connects
+    // before the server has registered the process, resulting in an empty
+    // log stream.
+    fetch(url, {method: 'POST'}).then(() => {
+      if (evtSource) evtSource.close();
+      evtSource = new EventSource('/stream');
+      document.getElementById('stop-btn').style.display = 'inline-block';
+      evtSource.onmessage = function(e){
+        if (e.data === '__COMPLETE__'){
+          evtSource.close();
+          document.getElementById('stop-btn').style.display = 'none';
+        } else {
+          outEl.textContent += e.data + '\n';
+          outEl.scrollTop = outEl.scrollHeight;
+        }
+      };
+    }).catch(err => {
+      // Display fetch errors in the output area so the user knows what
+      // happened instead of the button appearing to do nothing.
+      outEl.textContent = 'Error starting process: ' + err;
+    });
   }
 
   function stopProcess(){
