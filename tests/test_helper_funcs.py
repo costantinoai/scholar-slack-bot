@@ -74,7 +74,6 @@ def test_clean_pubs_filters_duplicates_and_citations():
         }
     ]
 
-
 def test_convert_json_to_tuple():
     authors_json = [{"name": "Alice", "id": "A1"}, {"name": "Bob", "id": "B2"}]
     assert convert_json_to_tuple(authors_json) == [("Alice", "A1"), ("Bob", "B2")]
@@ -115,7 +114,6 @@ def test_add_new_author_to_json(mock_scholarly, tmp_path):
         data = json.load(f)
     assert added == {"name": "New", "id": "N1"}
     assert any(a["id"] == "N1" for a in data)
-
 
 def test_confirm_temp_cache_moves_files(tmp_path):
     temp_dir = tmp_path / "tmp"

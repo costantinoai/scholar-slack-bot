@@ -1,17 +1,36 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Oct  7 17:42:13 2023
-
-@author: costantino_ai
-"""
+"""Logging configuration for scholar-slack-bot."""
 
 import logging
+import logging.config
 
-# Define custom logging levels
-MIN = 35
-STANDARD = 25
 
-# Add custom logging levels
-logging.addLevelName(MIN, "MIN")
-logging.addLevelName(STANDARD, "STANDARD")
+def setup_logging(verbose: bool = False) -> None:
+    """Configure root logger using ``logging.config.dictConfig``.
+
+    Parameters
+    ----------
+    verbose: bool
+        When ``True`` set the logging level to ``DEBUG``; otherwise ``INFO``.
+    """
+    level = "DEBUG" if verbose else "INFO"
+    config = {
+        "version": 1,
+        "disable_existing_loggers": False,
+        "formatters": {
+            "default": {
+                "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+            }
+        },
+        "handlers": {
+            "console": {
+                "class": "logging.StreamHandler",
+                "formatter": "default",
+                "level": "DEBUG",
+            }
+        },
+        "root": {"handlers": ["console"], "level": level},
+    }
+    logging.config.dictConfig(config)
+

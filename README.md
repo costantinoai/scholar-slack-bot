@@ -46,11 +46,12 @@ git clone https://github.com/costantinoai/scholar-slack-bot.git
 cd scholar-slack-bot
 ```
 
-Install dependencies:  
+Install dependencies:
 
 ```sh
-pip install scholarly tqdm requests configparser
+pip install -r requirements.txt
 ```
+
 
 Edit `slack.config` with your bot’s API token and target name:  
 
