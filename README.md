@@ -138,9 +138,25 @@ The script accepts several command-line arguments (flags) to customize its behav
   ```python main.py --update_cache```
 
 
-### Within the IDE  
+### Within the IDE
 
-If running from an IDE (e.g., Spyder, VScode), configurations are set in `IDEargs` in `main.py`. Modify paths or debug settings as needed.  
+If running from an IDE (e.g., Spyder, VScode), configurations are set in `IDEargs` in `main.py`. Modify paths or debug settings as needed.
+
+### Web Interface
+
+For a lightweight graphical interface, start the bundled Flask app:
+
+```sh
+python gui.py
+```
+
+The page at [http://localhost:5000](http://localhost:5000) lets you:
+
+- add or remove authors from the database,
+- refresh publications for one or all authors,
+- inspect cached publications in a searchable table,
+- clear the cache, and
+- run the project's test suite from the browser.
 
 ---
 
