@@ -127,3 +127,4 @@ def test_confirm_temp_cache_moves_files(tmp_path):
 
     assert (cache_dir / "file.json").exists()
     assert not temp_dir.exists()
+
