@@ -19,9 +19,17 @@ This Slack Bot fetches publications for authors from Google Scholar and sends no
    - Add your Slack API token.  
    - Set the `target_name` field to either a **Slack channel** (public or private, if the bot is added) or a **Slack user** (for direct messages).  
    - Refer to the section [Setting Up Your Slack Bot](#setting-up-your-slack-bot) below for instructions on obtaining the Slack API token.  
-4. **Run the bot:**  
+4. **Run the bot:**
    ```sh
-   python main.py
+   python main.py fetch
+   ```
+   Other subcommands provide testing and maintenance workflows:
+
+   ```sh
+   python main.py send                 # send a test message
+   python main.py test-fetch <ID>      # fetch an author without saving
+   python main.py update-cache         # refresh cache only
+   python main.py test-run             # dry run for two authors
    ```
 
 ---
@@ -113,29 +121,33 @@ Slack apps require specific permissions (scopes) to function. Navigate to **OAut
 
 ## 🚀 Usage  
 
-### Command Line  
+### Command Line
 
-The script accepts several command-line arguments (flags) to customize its behavior:
+The CLI now uses **subcommands** instead of boolean flags. Global options may be
+placed before the subcommand:
 
-- `--authors_path`: Specifies the path to the authors database.
-  - Default: `./src/authors.db`
+```sh
+python main.py [--authors_path PATH] [--slack_config_path PATH] [--verbose] <command> [args]
+```
 
-- `--slack_config_path`: Sets the path to the `slack.config` file which contains Slack API token and channel information.
-  - Default: `./src/slack.config`
+Available subcommands:
 
-- `--verbose`: (Optional) Provides verbose output for detailed logging and debugging.
+| Command | Fetches Data | Sends Message | Saves to Cache | Notes |
+|---------|--------------|---------------|----------------|-------|
+| `fetch` | ✅ | ✅ | ✅ | Default workflow for all authors. |
+| `send` | ❌ | ✅ | ❌ | Send a connectivity test message only. |
+| `add-author SCHOLAR_ID` | ✅ | ❌ | ✅ | Add a scholar and store their publications. |
+| `update-cache` | ✅ | ❌ | ✅ | Refresh publications for every author. |
+| `test-fetch SCHOLAR_ID` | ✅ | ❌ | ❌ | Fetch one author without side effects. |
+| `test-run [--limit N]` | ✅ | ✅ | ❌ | Dry run for `N` authors (default 2). |
 
-- `--test_message`: (Optional) Send test message. Do not fetch or save cache. Mutually exclusive with `--add_scholar_id` and `--update_cache`.
-  - Example:
-  ```python main.py --test_message```
+Examples use the format `python main.py <command> [args]`.
 
-- `--add_scholar_id`: (Optional) Add a new scholar by Google Scholar ID to the file specified in `--authors_path`, fetch publications and save them to cache (do not send message). Mutually exclusive with `--test_message` and `--update_cache`.
-  - Example:
-  ```python main.py --add_scholar_id="YourGoogleScholarID"```
+Global options include:
 
-- `--update_cache`: (Optional) Re-fetch and save publications for all authors (do not send message). It overwrites the old cache. Mutually exclusive with `--test_message` and `--add_scholar_id`.
-  - Example:
-  ```python main.py --update_cache```
+- `--authors_path`: Path to the authors database. Default: `./src/authors.db`.
+- `--slack_config_path`: Path to `slack.config`. Default: `./src/slack.config`.
+- `--verbose`: Enable verbose logging output.
 
 
 ### Within the IDE

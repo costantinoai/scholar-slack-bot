@@ -30,20 +30,20 @@ def update_cache_only(args):
     logger.info("Fetched pubs successfully moved to cache and temporary cache cleared.")
 
 
-def test_fetch_and_message(args, ch_name, token):
-    """
-    Test fetching of articles and send formatted messages to a Slack channel.
+def test_fetch_and_message(args, ch_name, token, limit: int = 2) -> None:
+    """Fetch a limited number of authors and send test messages to Slack.
 
-    This function is used for tests when:
-    - Not adding a scholar by ID (`add_scholar_id` is not provided).
-    - Not updating the cache only (`update-cache` is False).
-    - The test arguments set `test_message` (and optionally a testing flag
-      to limit fetching) to verify fetching and messaging together.
+    The helper exercises the full fetching and messaging workflow without
+    persisting any results to the cache. It is intended for dry runs where a
+    small subset of authors is processed and their publications are posted to
+    Slack with a clear test header.
 
     Args:
-        args: Arguments used by the `fetch_from_json` function.
-        ch_name (str): The channel name to send the message to.
-        token (str): The token used for communication with Slack.
+        args: Arguments passed through to :func:`fetch_from_json`.
+        ch_name: Target Slack channel or user.
+        token: Slack API token used for authentication.
+        limit: Maximum number of authors to include in the test run. Defaults
+            to ``2`` so the call remains lightweight.
 
     Returns:
         None
@@ -51,8 +51,8 @@ def test_fetch_and_message(args, ch_name, token):
     For each fetched article, a test message is created and sent.
     """
 
-    # Fetch details for up to 3 authors.
-    authors, articles = fetch_from_json(args, idx=3)
+    # Fetch a limited number of authors from the database.
+    authors, articles = fetch_from_json(args, idx=limit)
 
     # Convert fetched details into formatted messages suitable for Slack.
     formatted_messages = make_slack_msg(authors, articles)
