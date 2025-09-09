@@ -16,6 +16,7 @@ lightweight layer over the established workflow.
 
 from __future__ import annotations
 
+import configparser
 import json
 import sqlite3
 from pathlib import Path
@@ -72,6 +73,40 @@ def _save_settings() -> None:
 settings = _load_settings()
 AUTHORS_DB = Path(settings["authors_db"])
 PUBLICATIONS_DB = Path(settings["publications_db"])
+
+
+def _load_slack_config() -> dict:
+    """Return Slack configuration values from the file on disk.
+
+    The Slack config uses an INI format with a single ``[slack]`` section.  The
+    function reads the file pointed to by ``settings['slack_config_path']`` and
+    returns a mapping of key/value pairs.  Missing files or options yield empty
+    strings so the web form can still render editable fields.
+    """
+
+    cfg = configparser.ConfigParser()
+    cfg_path = Path(settings["slack_config_path"])
+    if cfg_path.exists():
+        cfg.read(cfg_path, encoding="utf-8")
+    section = cfg["slack"] if cfg.has_section("slack") else {}
+    defaults = {"api_token": "", "channel_name": "", "workspace": ""}
+    return {key: section.get(key, "") for key in defaults}
+
+
+def _save_slack_config() -> None:
+    """Persist current :data:`slack_settings` to the configured file."""
+
+    cfg = configparser.ConfigParser()
+    cfg["slack"] = slack_settings
+    cfg_path = Path(settings["slack_config_path"])
+    cfg_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(cfg_path, "w", encoding="utf-8") as fh:
+        cfg.write(fh)
+
+
+# Slack settings are loaded alongside the general project settings so the form
+# can expose API tokens and channel names for editing.
+slack_settings = _load_slack_config()
 
 app = Flask(__name__)
 
@@ -181,8 +216,13 @@ def index():
     # Convert settings dict into an object so templates can access fields using
     # dot notation (``settings.authors_db`` etc.).
     settings_ns = SimpleNamespace(**settings)
+    slack_ns = SimpleNamespace(**slack_settings)
     return render_template_string(
-        TEMPLATE, authors=authors, test_output=None, settings=settings_ns
+        TEMPLATE,
+        authors=authors,
+        test_output=None,
+        settings=settings_ns,
+        slack=slack_ns,
     )
 
 
@@ -263,7 +303,16 @@ def update_settings():
         if key in request.form:
             settings[key] = request.form[key].strip()
 
+    # Slack-related settings are prefixed with ``slack_`` to avoid colliding
+    # with the general project settings above.  Strip the prefix and update the
+    # in-memory mapping before persisting the file to disk.
+    for key in list(slack_settings):
+        form_key = f"slack_{key}"
+        if form_key in request.form:
+            slack_settings[key] = request.form[form_key].strip()
+
     _save_settings()
+    _save_slack_config()
 
     # Refresh global paths so subsequent requests use the new values.
     global AUTHORS_DB, PUBLICATIONS_DB
@@ -333,14 +382,16 @@ def publications():
 def run_tests():
     """Execute ``pytest`` and display the output on the main page."""
 
-    result = run(["pytest", "-q"], capture_output=True, text=True)
+    result = run(["pytest", "-vv"], capture_output=True, text=True)
     authors = get_authors_json(str(AUTHORS_DB))
     settings_ns = SimpleNamespace(**settings)
+    slack_ns = SimpleNamespace(**slack_settings)
     return render_template_string(
         TEMPLATE,
         authors=authors,
         test_output=result.stdout + result.stderr,
         settings=settings_ns,
+        slack=slack_ns,
     )
 
 
@@ -413,6 +464,14 @@ TEMPLATE = """
                 <label class=\"form-label\">API Call Delay (s)</label>
                 <input type=\"text\" class=\"form-control\" name=\"api_call_delay\" value=\"{{ settings.api_call_delay }}\" data-bs-toggle=\"tooltip\" title=\"Throttle between API calls\">
               </div>
+              <hr>
+              <h5>Slack Config</h5>
+              {% for key, value in slack.__dict__.items() %}
+              <div class=\"mb-2\">
+                <label class=\"form-label\">{{ key.replace('_', ' ').title() }}</label>
+                <input type=\"text\" class=\"form-control\" name=\"slack_{{ key }}\" value=\"{{ value }}\" data-bs-toggle=\"tooltip\" title=\"Slack {{ key.replace('_', ' ') }}\">
+              </div>
+              {% endfor %}
               <button class=\"btn btn-success\" type=\"submit\">Save Settings</button>
             </form>
           </div>
