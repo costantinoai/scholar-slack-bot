@@ -12,6 +12,8 @@ import sqlite3
 from scholarly import scholarly
 import logging
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 from tqdm import tqdm
 
 from helper_funcs import (
@@ -31,19 +33,37 @@ DB_NAME = "publications.db"
 DEFAULT_DB_DIR = DEFAULT_SRC_DIR
 DEFAULT_DB_PATH = os.path.join(DEFAULT_DB_DIR, DB_NAME)
 
+# Each thread receives its own Scholarly session to avoid cross-thread
+# interference that previously resulted in closed-client errors.
+thread_local = threading.local()
 
-def reset_scholarly_session() -> None:
-    """Reinitialize the global :mod:`scholarly` session.
 
-    The scholarly library occasionally closes its internal HTTP client when
-    Google Scholar returns throttling responses. Subsequent requests then raise
-    ``RuntimeError`` because the client is closed. Creating a fresh instance of
-    the :class:`~scholarly._scholarly._Scholarly` class ensures a new session is
-    available for further requests.
+def get_scholarly_client():
+    """Return a thread-local :mod:`scholarly` client instance.
+
+    The `scholarly` library is not thread-safe, so sharing a single client across
+    threads can result in the underlying HTTP session being closed unexpectedly.
+    By maintaining a distinct client per thread we keep requests isolated and
+    avoid concurrent access issues.
     """
 
-    global scholarly
-    scholarly = scholarly.__class__()
+    client = getattr(thread_local, "scholarly", None)
+    if client is None:
+        client = scholarly.__class__()
+        thread_local.scholarly = client
+    return client
+
+
+def reset_scholarly_session() -> None:
+    """Create a fresh :mod:`scholarly` session for the current thread.
+
+    When Google Scholar throttles requests, the underlying HTTP client may be
+    closed, causing subsequent requests to fail. Replacing the client within the
+    thread-local storage keeps the workflow resilient without affecting other
+    threads.
+    """
+
+    thread_local.scholarly = scholarly.__class__()
 
 
 def _init_db(db_path: str) -> sqlite3.Connection:
@@ -141,8 +161,9 @@ def fetch_publication_details(pub):
 
     for retry in range(MAX_RETRIES):
         try:
-            # Attempt to fetch publication details with the current session
-            return scholarly.fill(pub)
+            # Attempt to fetch publication details with the thread's session
+            client = get_scholarly_client()
+            return client.fill(pub)
         except RuntimeError as err:
             # When the HTTP client has been closed, reset the session and retry
             if "client has been closed" in str(err) and retry < MAX_RETRIES - 1:
@@ -183,8 +204,9 @@ def fetch_author_details(author_id):
 
     for retry in range(MAX_RETRIES):
         try:
-            author = scholarly.search_author_id(author_id)
-            author = scholarly.fill(author)
+            client = get_scholarly_client()
+            author = client.search_author_id(author_id)
+            author = client.fill(author)
             return author["publications"]
         except RuntimeError as err:
             if "client has been closed" in str(err) and retry < MAX_RETRIES - 1:
@@ -297,12 +319,12 @@ def get_pubs_to_fetch(author_pubs, cached_pubs, from_year, args):
 
 
 def fetch_selected_pubs(pubs_to_fetch):
-    """Fetch selected publications sequentially.
+    """Fetch selected publications concurrently.
 
-    The previous implementation relied on multithreading which caused the
-    shared :mod:`scholarly` session to close unexpectedly. A simple loop keeps
-    the session alive and allows per-publication retry logic to handle
-    transient failures.
+    Each worker thread uses its own :mod:`scholarly` session, preventing shared
+    state from causing ``RuntimeError`` due to closed HTTP clients. The amount
+    of parallelism is intentionally limited to avoid overwhelming Google
+    Scholar.
 
     Args:
         pubs_to_fetch: Publications to enrich.
@@ -316,17 +338,22 @@ def fetch_selected_pubs(pubs_to_fetch):
         return []
 
     fetched_pubs = []
-
-    iterator = (
-        tqdm(pubs_to_fetch, total=len(pubs_to_fetch), desc="Fetching publications")
-        if logger.getEffectiveLevel() == logging.INFO
-        else pubs_to_fetch
-    )
-
-    for pub in iterator:
-        result = fetch_publication_details(pub)
-        if result is not None:
-            fetched_pubs.append(result)
+    max_workers = min(4, len(pubs_to_fetch))
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [
+            executor.submit(fetch_publication_details, pub) for pub in pubs_to_fetch
+        ]
+        iterator = as_completed(futures)
+        if logger.getEffectiveLevel() == logging.INFO:
+            iterator = tqdm(iterator, total=len(futures), desc="Fetching publications")
+        for future in iterator:
+            try:
+                result = future.result()
+            except Exception as err:
+                logger.error("Unhandled error fetching publication: %s", err)
+                continue
+            if result is not None:
+                fetched_pubs.append(result)
 
     return fetched_pubs
 
