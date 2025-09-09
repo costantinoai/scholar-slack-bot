@@ -1,6 +1,8 @@
 """Tests for scholar fetching utilities using the SQLite cache."""
 
 import sqlite3
+import json
+import logging
 from types import SimpleNamespace
 from unittest.mock import patch
 
@@ -39,6 +41,34 @@ def test_load_cache_returns_empty_for_missing(tmp_path):
     """When no cache exists, an empty list should be returned."""
     result = load_cache("missing", tmp_path)
     assert result == []
+
+
+def test_migrate_legacy_files(tmp_path, caplog):
+    """Legacy JSON files should be migrated automatically to SQLite."""
+    cache_dir = tmp_path / "googleapi_cache"
+    cache_dir.mkdir()
+    legacy_pub = [
+        {
+            "bib": {"title": "T", "pub_year": "2024", "abstract": "abs"},
+            "pub_url": "u",
+            "num_citations": 1,
+        }
+    ]
+    (cache_dir / "A1.json").write_text(json.dumps(legacy_pub))
+    (tmp_path / "authors.json").write_text(json.dumps([{"name": "Author", "id": "A1"}]))
+    (tmp_path / "googleapi_cache_bkp").mkdir()
+    with caplog.at_level(logging.INFO):
+        result = load_cache("A1", tmp_path)
+    assert result == legacy_pub
+    conn = sqlite3.connect(tmp_path / "authors.db")
+    rows = list(conn.execute("SELECT name, id FROM authors"))
+    conn.close()
+    assert rows == [("Author", "A1")]
+    obsolete = tmp_path / "obsolete"
+    assert (obsolete / "googleapi_cache").exists()
+    assert (obsolete / "authors.json").exists()
+    assert (obsolete / "googleapi_cache_bkp").exists()
+    assert "Legacy cache detected" in caplog.text
 
 
 def test_save_updated_cache_combines_and_writes(tmp_path):

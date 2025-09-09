@@ -20,6 +20,7 @@ from helper_funcs import (
     get_authors_json,
     convert_json_to_tuple,
     ensure_output_folder,
+    migrate_legacy_files,
 )
 
 logger = logging.getLogger(__name__)
@@ -41,6 +42,9 @@ def _init_db(db_path: str) -> sqlite3.Connection:
     Returns:
         sqlite3.Connection: Open connection to the database.
     """
+
+    # Auto-migrate any legacy JSON caches before interacting with the database.
+    migrate_legacy_files(os.path.dirname(db_path))
 
     conn = sqlite3.connect(db_path)
     conn.execute(

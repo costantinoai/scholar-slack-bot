@@ -61,10 +61,15 @@ api_token = xoxb-YOUR-API-TOKEN
 channel_name = YOUR-TARGET-NAME  # Can be a channel (e.g., "general") or a user (e.g., "john_doe")
 ```
 
-If a **Slack channel name** (e.g., `weekly-papers-update`) is provided, the bot will post there.  
-If a **Slack user name** is provided (e.g., `Andrea Costantino`), the bot will send a direct message.  
+If a **Slack channel name** (e.g., `weekly-papers-update`) is provided, the bot will post there.
+If a **Slack user name** is provided (e.g., `Andrea Costantino`), the bot will send a direct message.
 
 Add author details to `src/authors.db`.
+
+Legacy JSON caches (`authors.json` and per-author files under `googleapi_cache`) are
+detected automatically on startup. When present, their contents are imported into
+the SQLite databases and the original files are moved to `src/obsolete` for
+archival.
 
 ---
 
