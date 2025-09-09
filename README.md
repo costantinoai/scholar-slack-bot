@@ -11,18 +11,28 @@ This Slack Bot fetches publications for authors from Google Scholar and sends no
    git clone https://github.com/costantinoai/scholar-slack-bot.git
    cd scholar-slack-bot
    ```  
-2. **Install dependencies:**  
+2. **Install dependencies:**
    ```sh
    pip install -r requirements.txt
-   ```  
+   ```
+   The helper scripts in `scripts/` will automatically create a Conda
+   environment named `scholarbot`, install `pip` and the project's
+   dependencies, and activate the environment if it does not already exist.
 3. **Edit the config file:**  
    - Add your Slack API token.  
    - Set the `target_name` field to either a **Slack channel** (public or private, if the bot is added) or a **Slack user** (for direct messages).  
    - Refer to the section [Setting Up Your Slack Bot](#setting-up-your-slack-bot) below for instructions on obtaining the Slack API token.  
-4. **Run the bot:**  
+4. **Run the bot:**
+   The package lives under `src/`. Either install it in editable mode or point
+   `PYTHONPATH` at that directory when invoking the CLI:
+
    ```sh
-   python main.py
+   PYTHONPATH=src python -m scholar_slack_bot
    ```
+   The helper scripts under `scripts/` configure this automatically and ensure
+   required dependencies are installed, so you can run
+   `./scripts/fetch_and_send.sh` from any directory. A similar wrapper
+   `./scripts/run_gui.sh` launches the web interface.
 
 ---
 
@@ -52,6 +62,9 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
+The provided helper scripts will bootstrap a Conda environment named
+`scholarbot` and install these requirements automatically when invoked.
+
 
 Edit `slack.config` with your bot’s API token and target name:  
 
@@ -64,11 +77,11 @@ channel_name = YOUR-TARGET-NAME  # Can be a channel (e.g., "general") or a user 
 If a **Slack channel name** (e.g., `weekly-papers-update`) is provided, the bot will post there.
 If a **Slack user name** is provided (e.g., `Andrea Costantino`), the bot will send a direct message.
 
-Add author details to `src/authors.db`.
+Add author details to `data/authors.db`.
 
 Legacy JSON caches (`authors.json` and per-author files under `googleapi_cache`) are
 detected automatically on startup. When present, their contents are imported into
-the SQLite databases and the original files are moved to `src/obsolete` for
+the SQLite databases and the original files are moved to `data/obsolete` for
 archival.
 
 ---
@@ -118,43 +131,45 @@ Slack apps require specific permissions (scopes) to function. Navigate to **OAut
 The script accepts several command-line arguments (flags) to customize its behavior:
 
 - `--authors_path`: Specifies the path to the authors database.
-  - Default: `./src/authors.db`
+  - Default: `data/authors.db` relative to the project root
 
 - `--slack_config_path`: Sets the path to the `slack.config` file which contains Slack API token and channel information.
-  - Default: `./src/slack.config`
+  - Default: `data/slack.config` relative to the project root
 
 - `--verbose`: (Optional) Provides verbose output for detailed logging and debugging.
 
 - `--test_message`: (Optional) Send test message. Do not fetch or save cache. Mutually exclusive with `--add_scholar_id` and `--update_cache`.
   - Example:
-  ```python main.py --test_message```
+  ```python -m scholar_slack_bot --test_message```
 
 - `--add_scholar_id`: (Optional) Add a new scholar by Google Scholar ID to the file specified in `--authors_path`, fetch publications and save them to cache (do not send message). Mutually exclusive with `--test_message` and `--update_cache`.
   - Example:
-  ```python main.py --add_scholar_id="YourGoogleScholarID"```
+  ```python -m scholar_slack_bot --add_scholar_id="YourGoogleScholarID"```
 
 - `--update_cache`: (Optional) Re-fetch and save publications for all authors (do not send message). It overwrites the old cache. Mutually exclusive with `--test_message` and `--add_scholar_id`.
   - Example:
-  ```python main.py --update_cache```
+  ```python -m scholar_slack_bot --update_cache```
 
 
 ### Within the IDE
 
-If running from an IDE (e.g., Spyder, VScode), configurations are set in `IDEargs` in `main.py`. Modify paths or debug settings as needed.
+When launching from an IDE, supply arguments via your run configuration. The
+defaults defined in the CLI are applied when no explicit arguments are passed.
 
 ### Web Interface
 
-A modern Flask web UI is bundled for managing the bot. Launch it with:
+A modern Flask web UI is bundled for managing the bot. Launch it with the
+helper script which configures the environment automatically:
 
 ```sh
-python gui.py
+./scripts/run_gui.sh
 ```
 
 The responsive page at [http://localhost:5000](http://localhost:5000) offers:
 
 - Author tools: add/remove authors, refresh or clear their cache.
 - Publication browser: view cached papers in a searchable table.
-- Settings editor: adjust database locations, Slack config path, and API call delay. Changes are saved to `settings.json` for future runs.
+- Settings editor: adjust database locations, Slack config path, and API call delay. Changes are saved to `data/settings.json` for future runs.
 - Utilities: clear all cache and run the project's tests. Destructive actions prompt for confirmation.
 
 ---
@@ -162,42 +177,60 @@ The responsive page at [http://localhost:5000](http://localhost:5000) offers:
 ## 📂 Directory Structure  
 
 ```
-slack-bot
-├── add_authors_batch.sh
-├── fetch_and_send.sh
-├── fetch_scholar.py
-├── gui.py
-├── helper_funcs.py
-├── log_config.py
-├── main.py
+scholar-slack-bot
+├── data
+│   ├── authors.db
+│   ├── publications.db
+│   ├── settings.json
+│   └── slack-example.config
+├── scripts
+│   ├── add_authors_batch.sh
+│   ├── fetch_and_send.sh
+│   └── run_gui.sh
+├── src
+│   └── scholar_slack_bot
+│       ├── __init__.py
+│       ├── __main__.py
+│       ├── cli.py
+│       ├── scholar
+│       │   ├── __init__.py
+│       │   └── fetch.py
+│       ├── workflow
+│       │   ├── __init__.py
+│       │   └── pipeline.py
+│       ├── slack
+│       │   ├── __init__.py
+│       │   └── client.py
+│       ├── ui
+│       │   ├── __init__.py
+│       │   └── gui.py
+│       └── utils
+│           ├── __init__.py
+│           ├── helpers.py
+│           └── logging.py
+├── pyproject.toml
 ├── README.md
-├── settings.json
-├── slack_bot.py
-├── streams_funcs.py
-└── src
-    ├── authors.db
-    ├── publications.db
-    └── slack.config
 ```
 
 ---
 
 ## 📝 Files Descriptions  
 
-- **`add_authors_batch.sh`**: Bash script for batch-adding authors.  
-- **`fetch_and_send.sh`**: Bash script to run the bot workflow.  
-- **`fetch_scholar.py`**: Internal functions to fetch publications from Google Scholar.
-- **`gui.py`**: Flask web application for author management and settings.
-- **`helper_funcs.py`**: Internal utility functions.
-- **`log_config.py`**: Internal Logging configuration.  
-- **`main.py`**: The main script to run the bot.  
-- **`slack_bot.py`**: Internal functions to format and send messages to Slack.  
-- **`streams_funcs.py`**: Internal, handles workflow logic based on CLI flags.
-- **`authors.db`**: SQLite database storing author names and Google Scholar IDs.
+- **`scripts/add_authors_batch.sh`**: Bash script for batch-adding authors from a file. Automatically sets `PYTHONPATH`.
+- **`scripts/fetch_and_send.sh`**: Bash script to run the bot workflow. Automatically sets `PYTHONPATH`.
+- **`scholar/fetch.py`**: Internal functions to fetch publications from Google Scholar.
+- **`ui/gui.py`**: Flask web application for author management and settings.
+- **`utils/helpers.py`**: Internal utility functions.
+- **`utils/logging.py`**: Internal logging configuration.
+- **`cli.py`**: Command-line interface for running the bot.
+- **`slack/client.py`**: Internal functions to format and send messages to Slack.
+- **`workflow/pipeline.py`**: Orchestrates workflow logic based on CLI flags.
+- **`data/authors.db`**: SQLite database storing author names and Google Scholar IDs.
 
-- **`publications.db`**: SQLite database caching publication data.
-- **`slack.config`**: Configuration file for Slack settings. Example format:
-- **`settings.json`**: Persistent options used by the GUI (database paths, API delay, etc.).
+- **`data/publications.db`**: SQLite database caching publication data.
+- **`data/slack-example.config`**: Sample configuration file for Slack settings. Example format:
+- **`data/settings.json`**: Persistent options used by the GUI (database paths, API delay, etc.).
+- **`pyproject.toml`**: Package metadata and build configuration.
 
   ```ini
   [slack]

@@ -14,9 +14,10 @@ import logging
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
+from pathlib import Path
 from tqdm import tqdm
 
-from helper_funcs import (
+from ..utils.helpers import (
     clean_pubs,
     get_authors_json,
     convert_json_to_tuple,
@@ -28,10 +29,13 @@ logger = logging.getLogger(__name__)
 
 MAX_RETRIES = 3
 DELAYS = [20, 40, 60]
-DEFAULT_SRC_DIR = "./src"
+# Determine the repository root so default paths are independent of the current
+# working directory.
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+DEFAULT_DATA_DIR = PROJECT_ROOT / "data"
 DB_NAME = "publications.db"
-DEFAULT_DB_DIR = DEFAULT_SRC_DIR
-DEFAULT_DB_PATH = os.path.join(DEFAULT_DB_DIR, DB_NAME)
+DEFAULT_DB_DIR = DEFAULT_DATA_DIR
+DEFAULT_DB_PATH = DEFAULT_DB_DIR / DB_NAME
 
 # Each thread receives its own Scholarly session to avoid cross-thread
 # interference that previously resulted in closed-client errors.

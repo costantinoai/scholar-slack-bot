@@ -10,15 +10,22 @@ import shutil
 import logging
 import sqlite3
 import json
+from pathlib import Path
 from scholarly import scholarly
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = "./src"
-AUTHORS_DB_PATH = os.path.join(DATA_DIR, "authors.db")
+# Resolve the repository root so data paths work regardless of the current
+# working directory. ``helpers.py`` lives under ``src/scholar_slack_bot/utils``;
+# two parents up lands at ``src`` and one more at the project root.
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+# Central directory for runtime databases and configuration files.
+DATA_DIR = PROJECT_ROOT / "data"
+# Default location of the authors database used by various helper utilities.
+AUTHORS_DB_PATH = DATA_DIR / "authors.db"
 
 
-def migrate_legacy_files(root: str = DATA_DIR) -> None:
+def migrate_legacy_files(root: str | Path = DATA_DIR) -> None:
     """Migrate legacy JSON caches and authors list to SQLite if present.
 
     The project originally stored author and publication information in JSON
@@ -31,6 +38,7 @@ def migrate_legacy_files(root: str = DATA_DIR) -> None:
             :data:`DATA_DIR`.
     """
 
+    root = str(root)
     cache_dir = os.path.join(root, "googleapi_cache")
     authors_json = os.path.join(root, "authors.json")
     backup_dir = os.path.join(root, "googleapi_cache_bkp")
@@ -129,7 +137,7 @@ def delete_temp_cache(args):
 
 
 def confirm_temp_cache(
-    temp_cache_path="./src/temp_cache", old_cache_path="./src/googleapi_cache"
+    temp_cache_path="./data/temp_cache", old_cache_path="./data/googleapi_cache"
 ):
     """
     Moves the contents of the temporary cache directory to the old cache directory.

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scholar-slack-bot"
+version = "0.1.0"
+description = "Fetch Google Scholar updates and send them to Slack"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "costantino_ai"}]
+requires-python = ">=3.8"
+dependencies = [
+    "scholarly",
+    "tqdm",
+    "requests",
+    "configparser",
+    "Flask",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black"]
+
+[project.scripts]
+scholar-slack-bot = "scholar_slack_bot.cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.pytest.ini_options]
+# Ensure tests are discovered and the package source is on ``PYTHONPATH``
+# when running ``pytest`` from the project root without installation.
+testpaths = ["tests"]
+pythonpath = ["src"]

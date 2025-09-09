@@ -2,7 +2,9 @@
 .spyproject
 __pycache__
 test/
-*.sh
-fetch_and_send.sh
+# Ignore stray shell scripts in the repository root; dedicated scripts live in
+# the ``scripts/`` directory and are tracked.
+/*.sh
 *.bkp
 **/obsolete
+*.egg-info/

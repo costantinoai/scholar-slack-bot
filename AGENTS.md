@@ -44,10 +44,10 @@
 - Prefer clarity over brevity: comment liberally to aid future maintainers.
 
 ## Adding Authors
-- Add new authors to `src/authors.db` using the provided CLI utilities.
+- Add new authors to `data/authors.db` using the provided CLI utilities.
 - For single additions use:
   ```bash
-  python main.py --add_scholar_id="SCHOLAR_ID"
+  python -m scholar_slack_bot --add_scholar_id="SCHOLAR_ID"
   ```
 - For batch additions use:
   ```bash
@@ -56,14 +56,14 @@
 - After modifying authors, run tests and commit the updated file.
 
 ## Running the Bot
-- Copy `src/slack-example.config` to `src/slack.config` and fill in your Slack API token and channel/user.
+- Copy `data/slack-example.config` to `data/slack.config` and fill in your Slack API token and channel/user.
 - Install dependencies:
   ```bash
   pip install -r requirements.txt
   ```
 - Run the bot:
   ```bash
-  python main.py
+  python -m scholar_slack_bot
   ```
   or
   ```bash
@@ -72,5 +72,5 @@
 
 ## Handling Secrets
 - Never commit API tokens or other secrets.
-- Keep secrets in `src/slack.config` (ignored by Git) or environment variables.
+- Keep secrets in `data/slack.config` (ignored by Git) or environment variables.
 - Avoid printing or sharing sensitive values.

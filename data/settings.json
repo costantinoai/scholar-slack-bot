@@ -1,0 +1,6 @@
+{
+  "authors_db": "./data/authors.db",
+  "publications_db": "./data/publications.db",
+  "slack_config_path": "./data/slack.config",
+  "api_call_delay": "1.0"
+}
