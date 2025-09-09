@@ -369,28 +369,32 @@ TEMPLATE = """
     </div>
 
     <div class=\"col-md-6\">
-      <div class=\"card h-100\">
-        <div class=\"card-header\">Settings</div>
-        <div class=\"card-body\">
-          <form method=\"post\" action=\"{{ url_for('update_settings') }}\">
-            <div class=\"mb-2\">
-              <label class=\"form-label\">Authors DB</label>
-              <input type=\"text\" class=\"form-control\" name=\"authors_db\" value=\"{{ settings.authors_db }}\" data-bs-toggle=\"tooltip\" title=\"Path to authors.db\">
-            </div>
-            <div class=\"mb-2\">
-              <label class=\"form-label\">Publications DB</label>
-              <input type=\"text\" class=\"form-control\" name=\"publications_db\" value=\"{{ settings.publications_db }}\" data-bs-toggle=\"tooltip\" title=\"Path to publications.db\">
-            </div>
-            <div class=\"mb-2\">
-              <label class=\"form-label\">Slack Config Path</label>
-              <input type=\"text\" class=\"form-control\" name=\"slack_config_path\" value=\"{{ settings.slack_config_path }}\" data-bs-toggle=\"tooltip\" title=\"Location of slack.config\">
-            </div>
-            <div class=\"mb-2\">
-              <label class=\"form-label\">API Call Delay (s)</label>
-              <input type=\"text\" class=\"form-control\" name=\"api_call_delay\" value=\"{{ settings.api_call_delay }}\" data-bs-toggle=\"tooltip\" title=\"Throttle between API calls\">
-            </div>
-            <button class=\"btn btn-success\" type=\"submit\">Save Settings</button>
-          </form>
+      <!-- Button toggles visibility of the settings panel.  Keeping the panel collapsed by default keeps the interface uncluttered while still allowing advanced configuration edits when needed. -->
+      <button class=\"btn btn-outline-secondary mb-2\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#settings-panel\" aria-expanded=\"false\" aria-controls=\"settings-panel\">Edit Configs</button>
+      <div id=\"settings-panel\" class=\"collapse\">
+        <div class=\"card h-100\">
+          <div class=\"card-header\">Settings</div>
+          <div class=\"card-body\">
+            <form method=\"post\" action=\"{{ url_for('update_settings') }}\">
+              <div class=\"mb-2\">
+                <label class=\"form-label\">Authors DB</label>
+                <input type=\"text\" class=\"form-control\" name=\"authors_db\" value=\"{{ settings.authors_db }}\" data-bs-toggle=\"tooltip\" title=\"Path to authors.db\">
+              </div>
+              <div class=\"mb-2\">
+                <label class=\"form-label\">Publications DB</label>
+                <input type=\"text\" class=\"form-control\" name=\"publications_db\" value=\"{{ settings.publications_db }}\" data-bs-toggle=\"tooltip\" title=\"Path to publications.db\">
+              </div>
+              <div class=\"mb-2\">
+                <label class=\"form-label\">Slack Config Path</label>
+                <input type=\"text\" class=\"form-control\" name=\"slack_config_path\" value=\"{{ settings.slack_config_path }}\" data-bs-toggle=\"tooltip\" title=\"Location of slack.config\">
+              </div>
+              <div class=\"mb-2\">
+                <label class=\"form-label\">API Call Delay (s)</label>
+                <input type=\"text\" class=\"form-control\" name=\"api_call_delay\" value=\"{{ settings.api_call_delay }}\" data-bs-toggle=\"tooltip\" title=\"Throttle between API calls\">
+              </div>
+              <button class=\"btn btn-success\" type=\"submit\">Save Settings</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
