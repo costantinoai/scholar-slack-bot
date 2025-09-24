@@ -696,4 +696,4 @@ if __name__ == "__main__":
     # Running the Flask development server makes the interface available at
     # http://localhost:5000.  In production environments a proper WSGI server
     # should be used instead.
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
