@@ -28,6 +28,7 @@ from typing import Iterable
 
 from flask import Flask, redirect, render_template_string, request, url_for
 
+from main import main as run_workflow
 from fetch_scholar import fetch_pubs_dictionary
 from helper_funcs import add_new_author_to_json, get_authors_json
 from log_config import setup_logging
@@ -455,17 +456,35 @@ def run_tests():
 
 @app.post("/run-main-workflow")
 def run_main_workflow():
-    """Execute ``python main.py`` to trigger the primary workflow."""
+    """Execute the primary workflow directly within the Flask process."""
 
-    # Mirror the command normally typed into the terminal so the GUI button is
-    # a faithful wrapper around the project's main entry point.
-    command = [sys.executable, "main.py"]
-    logger.info("Running main workflow via GUI button: %s", " ".join(command))
+    # Running the workflow in-process ensures logging output streams straight to
+    # the server console instead of being buffered in a subprocess.  This mirrors
+    # invoking ``python main.py`` from the terminal while avoiding the overhead
+    # of spawning a separate interpreter.
+    logger.info("Running main workflow via GUI button in-process")
 
-    # Capture both stdout and stderr to surface progress and potential errors
-    # directly within the browser once the command completes.
-    result = run(command, capture_output=True, text=True)
-    command_output = f"$ {' '.join(command)}\n\n{result.stdout}{result.stderr}"
+    try:
+        # ``main.main`` returns the argparse namespace used during execution so
+        # we can display a brief summary of the active flags back to the user.
+        workflow_args = run_workflow()
+    except Exception as exc:  # pragma: no cover - exercised through manual GUI use
+        logger.exception("Main workflow failed when invoked from the GUI")
+        command_title = "Main Workflow (failed)"
+        command_output = (
+            "Main workflow failed. Check the server logs for detailed output.\n\n"
+            f"Error: {exc}"
+        )
+    else:
+        command_title = "Main Workflow"
+        args_summary = "\n".join(
+            f"{key}={value}" for key, value in sorted(vars(workflow_args).items())
+        )
+        command_output = (
+            "Main workflow executed successfully. Logs were streamed directly to the server console.\n\n"
+            "Arguments in effect:\n"
+            f"{args_summary}"
+        )
 
     authors = get_authors_json(str(AUTHORS_DB))
     settings_ns = SimpleNamespace(**settings)
@@ -474,7 +493,7 @@ def run_main_workflow():
         TEMPLATE,
         authors=authors,
         command_output=command_output,
-        command_title="python main.py",
+        command_title=command_title,
         settings=settings_ns,
         slack=slack_ns,
     )
