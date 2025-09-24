@@ -21,6 +21,7 @@ import json
 import sqlite3
 from pathlib import Path
 import logging
+import sys
 from subprocess import run
 from types import SimpleNamespace
 from typing import Iterable
@@ -244,7 +245,8 @@ def index():
     return render_template_string(
         TEMPLATE,
         authors=authors,
-        test_output=None,
+        command_output=None,
+        command_title=None,
         settings=settings_ns,
         slack=slack_ns,
     )
@@ -427,14 +429,52 @@ def publications():
 def run_tests():
     """Execute ``pytest`` and display the output on the main page."""
 
-    result = run(["pytest", "-vv"], capture_output=True, text=True)
+    # Build the command list explicitly so the Flask process always invokes the
+    # same Python interpreter that launched the web application.  This avoids
+    # surprises when multiple Python versions are installed on the system.
+    command = [sys.executable, "-m", "pytest", "-vv"]
+    logger.info("Running tests via GUI button: %s", " ".join(command))
+
+    # Capture the combined stdout/stderr stream so it can be rendered inside
+    # the template for quick inspection without leaving the browser.
+    result = run(command, capture_output=True, text=True)
+    command_output = f"$ {' '.join(command)}\n\n{result.stdout}{result.stderr}"
+
     authors = get_authors_json(str(AUTHORS_DB))
     settings_ns = SimpleNamespace(**settings)
     slack_ns = SimpleNamespace(**slack_settings)
     return render_template_string(
         TEMPLATE,
         authors=authors,
-        test_output=result.stdout + result.stderr,
+        command_output=command_output,
+        command_title="pytest",
+        settings=settings_ns,
+        slack=slack_ns,
+    )
+
+
+@app.post("/run-main-workflow")
+def run_main_workflow():
+    """Execute ``python main.py`` to trigger the primary workflow."""
+
+    # Mirror the command normally typed into the terminal so the GUI button is
+    # a faithful wrapper around the project's main entry point.
+    command = [sys.executable, "main.py"]
+    logger.info("Running main workflow via GUI button: %s", " ".join(command))
+
+    # Capture both stdout and stderr to surface progress and potential errors
+    # directly within the browser once the command completes.
+    result = run(command, capture_output=True, text=True)
+    command_output = f"$ {' '.join(command)}\n\n{result.stdout}{result.stderr}"
+
+    authors = get_authors_json(str(AUTHORS_DB))
+    settings_ns = SimpleNamespace(**settings)
+    slack_ns = SimpleNamespace(**slack_settings)
+    return render_template_string(
+        TEMPLATE,
+        authors=authors,
+        command_output=command_output,
+        command_title="python main.py",
         settings=settings_ns,
         slack=slack_ns,
     )
@@ -457,8 +497,11 @@ TEMPLATE = """
 <body class=\"container py-4\">
   <h1 class=\"mb-4\">Scholar Slack Bot</h1>
 
-  {% if test_output %}
-  <div class=\"alert alert-info\"><pre class=\"mb-0\">{{ test_output }}</pre></div>
+  {% if command_output %}
+  <div class=\"alert alert-info\">
+    {% if command_title %}<h5 class=\"mb-2\">Output from {{ command_title }}</h5>{% endif %}
+    <pre class=\"mb-0\">{{ command_output }}</pre>
+  </div>
   {% endif %}
 
   <div class=\"row g-4\">
@@ -529,6 +572,11 @@ TEMPLATE = """
     <div class=\"d-flex justify-content-between align-items-center\">
       <h2>Current Authors</h2>
       <div>
+        <!-- Provide quick access to the main workflow so operators can trigger
+             a full Slack update without leaving the GUI. -->
+        <form class=\"d-inline\" method=\"post\" action=\"{{ url_for('run_main_workflow') }}\" onsubmit=\"return confirm('Run the main workflow now? This may take a while.')\">
+          <button class=\"btn btn-outline-success\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Execute python main.py\">Run Workflow</button>
+        </form>
         <form class=\"d-inline\" method=\"post\" action=\"{{ url_for('refresh_all') }}\" onsubmit=\"return confirm('Refresh publications for all authors?')\">
           <button class=\"btn btn-outline-primary\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Fetch publications for every author\">Refresh All</button>
         </form>
