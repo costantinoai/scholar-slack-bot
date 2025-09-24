@@ -20,6 +20,7 @@ import configparser
 import json
 import sqlite3
 from pathlib import Path
+import logging
 from subprocess import run
 from types import SimpleNamespace
 from typing import Iterable
@@ -28,6 +29,7 @@ from flask import Flask, redirect, render_template_string, request, url_for
 
 from fetch_scholar import fetch_pubs_dictionary
 from helper_funcs import add_new_author_to_json, get_authors_json
+from log_config import setup_logging
 
 
 # ---------------------------------------------------------------------------
@@ -108,6 +110,14 @@ def _save_slack_config() -> None:
 # can expose API tokens and channel names for editing.
 slack_settings = _load_slack_config()
 
+# Configure structured logging as soon as the module is imported so every
+# request handled by the Flask application produces informative output.
+setup_logging()
+
+# Create a module-level logger that routes messages through the shared logging
+# configuration established above.
+logger = logging.getLogger(__name__)
+
 app = Flask(__name__)
 
 
@@ -127,6 +137,8 @@ def _run_sql(query: str, params: Iterable | None = None) -> None:
         params: Parameters for the SQL statement, if any.
     """
 
+    # Establish a connection to the publications database for the duration of
+    # the operation that mutates cached publication records.
     conn = sqlite3.connect(PUBLICATIONS_DB)
     try:
         # Ensure the publications table exists before running the user query.
@@ -142,6 +154,9 @@ def _run_sql(query: str, params: Iterable | None = None) -> None:
             )
             """
         )
+        # Execute the caller-supplied statement while capturing minimal debug
+        # information about the parameters for traceability.
+        logger.debug("Executing SQL query %s with params %s", query, params)
         conn.execute(query, params or [])
         conn.commit()
     finally:
@@ -157,6 +172,9 @@ def _remove_author(author_id: str) -> None:
 
     # Delete the author from the authors database, creating the table on demand
     # so the GUI works on a fresh repository without manual initialization.
+    # Announce the removal so operators know which author is being purged.
+    logger.info("Removing author %s", author_id)
+
     conn = sqlite3.connect(AUTHORS_DB)
     try:
         conn.execute(
@@ -185,8 +203,12 @@ def _clear_cache(author_id: str | None = None) -> None:
     """
 
     if author_id:
+        # Log the targeted cache eviction so partial clears are visible.
+        logger.info("Clearing cached publications for author %s", author_id)
         _run_sql("DELETE FROM publications WHERE author_id=?", (author_id,))
     else:
+        # Mention when the entire publications cache is being wiped.
+        logger.info("Clearing cached publications for all authors")
         _run_sql("DELETE FROM publications")
 
 
@@ -199,6 +221,8 @@ def _refresh(authors: list[tuple[str, str]]) -> None:
 
     # ``fetch_pubs_dictionary`` expects an argparse-style namespace.  Only the
     # flags used by the underlying functions are provided here.
+    logger.info("Refreshing cached publications for %d authors", len(authors))
+
     args = SimpleNamespace(update_cache=False, test_fetching=False)
     fetch_pubs_dictionary(authors, args)
 
@@ -232,6 +256,9 @@ def add_author():
 
     scholar_id = request.form.get("scholar_id", "").strip()
     if scholar_id:
+        # Record the attempted addition so mis-typed IDs can be diagnosed from
+        # the server logs.
+        logger.info("Adding author %s", scholar_id)
         add_new_author_to_json(str(AUTHORS_DB), scholar_id)
     return redirect(url_for("index"))
 
@@ -241,10 +268,17 @@ def add_bulk():
     """Add multiple authors supplied in a textarea, one per line."""
 
     ids_text = request.form.get("scholar_ids", "")
+    added_ids: list[str] = []
+
     for line in ids_text.splitlines():
         scholar_id = line.strip()
         if scholar_id:
             add_new_author_to_json(str(AUTHORS_DB), scholar_id)
+            added_ids.append(scholar_id)
+
+    # Summarise the bulk insertion operation for easier auditing.
+    if added_ids:
+        logger.info("Added %d authors: %s", len(added_ids), ", ".join(added_ids))
     return redirect(url_for("index"))
 
 
@@ -263,6 +297,7 @@ def refresh_author(author_id: str):
     authors = get_authors_json(str(AUTHORS_DB))
     to_refresh = [(a["name"], a["id"]) for a in authors if a["id"] == author_id]
     if to_refresh:
+        logger.info("Refreshing cached publications for author %s", author_id)
         _refresh(to_refresh)
     return redirect(url_for("index"))
 
@@ -274,6 +309,7 @@ def refresh_all():
     authors = get_authors_json(str(AUTHORS_DB))
     tuples = [(a["name"], a["id"]) for a in authors]
     if tuples:
+        logger.info("Refreshing cached publications for all authors")
         _refresh(tuples)
     return redirect(url_for("index"))
 
@@ -299,9 +335,14 @@ def update_settings():
     """Persist user-supplied configuration from the settings form."""
 
     # Update each known setting from the submitted form values.
+    # Track which settings changed without echoing sensitive values to the
+    # console logs.
+    updated_keys: list[str] = []
+
     for key in settings:
         if key in request.form:
             settings[key] = request.form[key].strip()
+            updated_keys.append(key)
 
     # Slack-related settings are prefixed with ``slack_`` to avoid colliding
     # with the general project settings above.  Strip the prefix and update the
@@ -310,9 +351,13 @@ def update_settings():
         form_key = f"slack_{key}"
         if form_key in request.form:
             slack_settings[key] = request.form[form_key].strip()
+            updated_keys.append(form_key)
 
     _save_settings()
     _save_slack_config()
+
+    if updated_keys:
+        logger.info("Updated settings: %s", ", ".join(updated_keys))
 
     # Refresh global paths so subsequent requests use the new values.
     global AUTHORS_DB, PUBLICATIONS_DB
