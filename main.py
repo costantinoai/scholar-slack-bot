@@ -39,9 +39,6 @@ def handle_send(args: argparse.Namespace, ch_name: str, token: str) -> None:
 
 def handle_add_author(args: argparse.Namespace, ch_name: str, token: str) -> None:
     """Validate and add a new scholar, then update the cache."""
-    # The subparser ensures ``add_scholar_id`` exists, but double-check for safety.
-    if not args.add_scholar_id:
-        raise ValueError("add-author requires a Google Scholar ID.")
     add_scholar_and_fetch(args)
 
 
