@@ -468,7 +468,7 @@ def run_main_workflow():
         # ``main.main`` returns the argparse namespace used during execution so
         # we can display a brief summary of the active flags back to the user.
         workflow_args = run_workflow()
-    except Exception as exc:  # pragma: no cover - exercised through manual GUI use
+    except BaseException as exc:  # pragma: no cover - exercised through manual GUI use
         logger.exception("Main workflow failed when invoked from the GUI")
         command_title = "Main Workflow (failed)"
         command_output = (
