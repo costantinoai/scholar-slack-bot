@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Plugins - Scholar Slack Bot{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Plugins</h1>
+            <p class="mt-2 text-gray-600">Configure messaging integrations (Slack, etc.).</p>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow p-6">
+        <p class="text-gray-700">Slack plugin configuration via the REST API is available under <code>/api/v1/plugins</code>. A richer UI will be added here.</p>
+    </div>
+</div>
+{% endblock %}
+
