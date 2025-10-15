@@ -16,17 +16,22 @@ lightweight layer over the established workflow.
 
 from __future__ import annotations
 
+import configparser
 import json
 import sqlite3
 from pathlib import Path
+import logging
+import sys
 from subprocess import run
 from types import SimpleNamespace
 from typing import Iterable
 
 from flask import Flask, redirect, render_template_string, request, url_for
 
+from main import main as run_workflow
 from fetch_scholar import fetch_pubs_dictionary
 from helper_funcs import add_new_author_to_json, get_authors_json
+from log_config import setup_logging
 
 
 # ---------------------------------------------------------------------------
@@ -73,6 +78,48 @@ settings = _load_settings()
 AUTHORS_DB = Path(settings["authors_db"])
 PUBLICATIONS_DB = Path(settings["publications_db"])
 
+
+def _load_slack_config() -> dict:
+    """Return Slack configuration values from the file on disk.
+
+    The Slack config uses an INI format with a single ``[slack]`` section.  The
+    function reads the file pointed to by ``settings['slack_config_path']`` and
+    returns a mapping of key/value pairs.  Missing files or options yield empty
+    strings so the web form can still render editable fields.
+    """
+
+    cfg = configparser.ConfigParser()
+    cfg_path = Path(settings["slack_config_path"])
+    if cfg_path.exists():
+        cfg.read(cfg_path, encoding="utf-8")
+    section = cfg["slack"] if cfg.has_section("slack") else {}
+    defaults = {"api_token": "", "channel_name": "", "workspace": ""}
+    return {key: section.get(key, "") for key in defaults}
+
+
+def _save_slack_config() -> None:
+    """Persist current :data:`slack_settings` to the configured file."""
+
+    cfg = configparser.ConfigParser()
+    cfg["slack"] = slack_settings
+    cfg_path = Path(settings["slack_config_path"])
+    cfg_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(cfg_path, "w", encoding="utf-8") as fh:
+        cfg.write(fh)
+
+
+# Slack settings are loaded alongside the general project settings so the form
+# can expose API tokens and channel names for editing.
+slack_settings = _load_slack_config()
+
+# Configure structured logging as soon as the module is imported so every
+# request handled by the Flask application produces informative output.
+setup_logging()
+
+# Create a module-level logger that routes messages through the shared logging
+# configuration established above.
+logger = logging.getLogger(__name__)
+
 app = Flask(__name__)
 
 
@@ -92,6 +139,8 @@ def _run_sql(query: str, params: Iterable | None = None) -> None:
         params: Parameters for the SQL statement, if any.
     """
 
+    # Establish a connection to the publications database for the duration of
+    # the operation that mutates cached publication records.
     conn = sqlite3.connect(PUBLICATIONS_DB)
     try:
         # Ensure the publications table exists before running the user query.
@@ -107,6 +156,9 @@ def _run_sql(query: str, params: Iterable | None = None) -> None:
             )
             """
         )
+        # Execute the caller-supplied statement while capturing minimal debug
+        # information about the parameters for traceability.
+        logger.debug("Executing SQL query %s with params %s", query, params)
         conn.execute(query, params or [])
         conn.commit()
     finally:
@@ -122,6 +174,9 @@ def _remove_author(author_id: str) -> None:
 
     # Delete the author from the authors database, creating the table on demand
     # so the GUI works on a fresh repository without manual initialization.
+    # Announce the removal so operators know which author is being purged.
+    logger.info("Removing author %s", author_id)
+
     conn = sqlite3.connect(AUTHORS_DB)
     try:
         conn.execute(
@@ -150,8 +205,12 @@ def _clear_cache(author_id: str | None = None) -> None:
     """
 
     if author_id:
+        # Log the targeted cache eviction so partial clears are visible.
+        logger.info("Clearing cached publications for author %s", author_id)
         _run_sql("DELETE FROM publications WHERE author_id=?", (author_id,))
     else:
+        # Mention when the entire publications cache is being wiped.
+        logger.info("Clearing cached publications for all authors")
         _run_sql("DELETE FROM publications")
 
 
@@ -164,6 +223,8 @@ def _refresh(authors: list[tuple[str, str]]) -> None:
 
     # ``fetch_pubs_dictionary`` expects an argparse-style namespace.  Only the
     # flags used by the underlying functions are provided here.
+    logger.info("Refreshing cached publications for %d authors", len(authors))
+
     args = SimpleNamespace(update_cache=False, test_fetching=False)
     fetch_pubs_dictionary(authors, args)
 
@@ -181,8 +242,14 @@ def index():
     # Convert settings dict into an object so templates can access fields using
     # dot notation (``settings.authors_db`` etc.).
     settings_ns = SimpleNamespace(**settings)
+    slack_ns = SimpleNamespace(**slack_settings)
     return render_template_string(
-        TEMPLATE, authors=authors, test_output=None, settings=settings_ns
+        TEMPLATE,
+        authors=authors,
+        command_output=None,
+        command_title=None,
+        settings=settings_ns,
+        slack=slack_ns,
     )
 
 
@@ -192,6 +259,9 @@ def add_author():
 
     scholar_id = request.form.get("scholar_id", "").strip()
     if scholar_id:
+        # Record the attempted addition so mis-typed IDs can be diagnosed from
+        # the server logs.
+        logger.info("Adding author %s", scholar_id)
         add_new_author_to_json(str(AUTHORS_DB), scholar_id)
     return redirect(url_for("index"))
 
@@ -201,10 +271,17 @@ def add_bulk():
     """Add multiple authors supplied in a textarea, one per line."""
 
     ids_text = request.form.get("scholar_ids", "")
+    added_ids: list[str] = []
+
     for line in ids_text.splitlines():
         scholar_id = line.strip()
         if scholar_id:
             add_new_author_to_json(str(AUTHORS_DB), scholar_id)
+            added_ids.append(scholar_id)
+
+    # Summarise the bulk insertion operation for easier auditing.
+    if added_ids:
+        logger.info("Added %d authors: %s", len(added_ids), ", ".join(added_ids))
     return redirect(url_for("index"))
 
 
@@ -223,6 +300,7 @@ def refresh_author(author_id: str):
     authors = get_authors_json(str(AUTHORS_DB))
     to_refresh = [(a["name"], a["id"]) for a in authors if a["id"] == author_id]
     if to_refresh:
+        logger.info("Refreshing cached publications for author %s", author_id)
         _refresh(to_refresh)
     return redirect(url_for("index"))
 
@@ -234,6 +312,7 @@ def refresh_all():
     authors = get_authors_json(str(AUTHORS_DB))
     tuples = [(a["name"], a["id"]) for a in authors]
     if tuples:
+        logger.info("Refreshing cached publications for all authors")
         _refresh(tuples)
     return redirect(url_for("index"))
 
@@ -259,11 +338,29 @@ def update_settings():
     """Persist user-supplied configuration from the settings form."""
 
     # Update each known setting from the submitted form values.
+    # Track which settings changed without echoing sensitive values to the
+    # console logs.
+    updated_keys: list[str] = []
+
     for key in settings:
         if key in request.form:
             settings[key] = request.form[key].strip()
+            updated_keys.append(key)
+
+    # Slack-related settings are prefixed with ``slack_`` to avoid colliding
+    # with the general project settings above.  Strip the prefix and update the
+    # in-memory mapping before persisting the file to disk.
+    for key in list(slack_settings):
+        form_key = f"slack_{key}"
+        if form_key in request.form:
+            slack_settings[key] = request.form[form_key].strip()
+            updated_keys.append(form_key)
 
     _save_settings()
+    _save_slack_config()
+
+    if updated_keys:
+        logger.info("Updated settings: %s", ", ".join(updated_keys))
 
     # Refresh global paths so subsequent requests use the new values.
     global AUTHORS_DB, PUBLICATIONS_DB
@@ -280,8 +377,29 @@ def publications():
     author_id = request.args.get("author_id")
     conn = sqlite3.connect(PUBLICATIONS_DB)
     try:
-        # Attach the authors database so names can be joined to cached entries.
+        # Ensure the ``publications`` table exists; a fresh database file will
+        # otherwise raise ``OperationalError`` when the user tries to view
+        # cached entries before any have been inserted.
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS publications (
+                author_id TEXT,
+                title TEXT,
+                year INTEGER,
+                url TEXT,
+                citations INTEGER,
+                PRIMARY KEY (author_id, title)
+            )
+            """
+        )
+
+        # Attach the authors database so names can be joined to cached entries
+        # in the display query below.
         conn.execute(f"ATTACH DATABASE '{AUTHORS_DB}' AS auth")
+
+        # Build the base query pulling publication details along with the
+        # associated author's name.  Parameters are collected separately to
+        # protect against SQL injection and keep the query readable.
         sql = (
             "SELECT a.name, p.title, p.year, p.url, p.citations "
             "FROM publications p JOIN auth.authors a ON a.id = p.author_id"
@@ -312,14 +430,72 @@ def publications():
 def run_tests():
     """Execute ``pytest`` and display the output on the main page."""
 
-    result = run(["pytest", "-q"], capture_output=True, text=True)
+    # Build the command list explicitly so the Flask process always invokes the
+    # same Python interpreter that launched the web application.  This avoids
+    # surprises when multiple Python versions are installed on the system.
+    command = [sys.executable, "-m", "pytest", "-vv"]
+    logger.info("Running tests via GUI button: %s", " ".join(command))
+
+    # Capture the combined stdout/stderr stream so it can be rendered inside
+    # the template for quick inspection without leaving the browser.
+    result = run(command, capture_output=True, text=True)
+    command_output = f"$ {' '.join(command)}\n\n{result.stdout}{result.stderr}"
+
     authors = get_authors_json(str(AUTHORS_DB))
     settings_ns = SimpleNamespace(**settings)
+    slack_ns = SimpleNamespace(**slack_settings)
     return render_template_string(
         TEMPLATE,
         authors=authors,
-        test_output=result.stdout + result.stderr,
+        command_output=command_output,
+        command_title="pytest",
         settings=settings_ns,
+        slack=slack_ns,
+    )
+
+
+@app.post("/run-main-workflow")
+def run_main_workflow():
+    """Execute the primary workflow directly within the Flask process."""
+
+    # Running the workflow in-process ensures logging output streams straight to
+    # the server console instead of being buffered in a subprocess.  This mirrors
+    # invoking ``python main.py`` from the terminal while avoiding the overhead
+    # of spawning a separate interpreter.
+    logger.info("Running main workflow via GUI button in-process")
+
+    try:
+        # ``main.main`` returns the argparse namespace used during execution so
+        # we can display a brief summary of the active flags back to the user.
+        workflow_args = run_workflow()
+    except BaseException as exc:  # pragma: no cover - exercised through manual GUI use
+        logger.exception("Main workflow failed when invoked from the GUI")
+        command_title = "Main Workflow (failed)"
+        command_output = (
+            "Main workflow failed. Check the server logs for detailed output.\n\n"
+            f"Error: {exc}"
+        )
+    else:
+        command_title = "Main Workflow"
+        args_summary = "\n".join(
+            f"{key}={value}" for key, value in sorted(vars(workflow_args).items())
+        )
+        command_output = (
+            "Main workflow executed successfully. Logs were streamed directly to the server console.\n\n"
+            "Arguments in effect:\n"
+            f"{args_summary}"
+        )
+
+    authors = get_authors_json(str(AUTHORS_DB))
+    settings_ns = SimpleNamespace(**settings)
+    slack_ns = SimpleNamespace(**slack_settings)
+    return render_template_string(
+        TEMPLATE,
+        authors=authors,
+        command_output=command_output,
+        command_title=command_title,
+        settings=settings_ns,
+        slack=slack_ns,
     )
 
 
@@ -340,8 +516,11 @@ TEMPLATE = """
 <body class=\"container py-4\">
   <h1 class=\"mb-4\">Scholar Slack Bot</h1>
 
-  {% if test_output %}
-  <div class=\"alert alert-info\"><pre class=\"mb-0\">{{ test_output }}</pre></div>
+  {% if command_output %}
+  <div class=\"alert alert-info\">
+    {% if command_title %}<h5 class=\"mb-2\">Output from {{ command_title }}</h5>{% endif %}
+    <pre class=\"mb-0\">{{ command_output }}</pre>
+  </div>
   {% endif %}
 
   <div class=\"row g-4\">
@@ -369,28 +548,40 @@ TEMPLATE = """
     </div>
 
     <div class=\"col-md-6\">
-      <div class=\"card h-100\">
-        <div class=\"card-header\">Settings</div>
-        <div class=\"card-body\">
-          <form method=\"post\" action=\"{{ url_for('update_settings') }}\">
-            <div class=\"mb-2\">
-              <label class=\"form-label\">Authors DB</label>
-              <input type=\"text\" class=\"form-control\" name=\"authors_db\" value=\"{{ settings.authors_db }}\" data-bs-toggle=\"tooltip\" title=\"Path to authors.db\">
-            </div>
-            <div class=\"mb-2\">
-              <label class=\"form-label\">Publications DB</label>
-              <input type=\"text\" class=\"form-control\" name=\"publications_db\" value=\"{{ settings.publications_db }}\" data-bs-toggle=\"tooltip\" title=\"Path to publications.db\">
-            </div>
-            <div class=\"mb-2\">
-              <label class=\"form-label\">Slack Config Path</label>
-              <input type=\"text\" class=\"form-control\" name=\"slack_config_path\" value=\"{{ settings.slack_config_path }}\" data-bs-toggle=\"tooltip\" title=\"Location of slack.config\">
-            </div>
-            <div class=\"mb-2\">
-              <label class=\"form-label\">API Call Delay (s)</label>
-              <input type=\"text\" class=\"form-control\" name=\"api_call_delay\" value=\"{{ settings.api_call_delay }}\" data-bs-toggle=\"tooltip\" title=\"Throttle between API calls\">
-            </div>
-            <button class=\"btn btn-success\" type=\"submit\">Save Settings</button>
-          </form>
+      <!-- Button toggles visibility of the settings panel.  Keeping the panel collapsed by default keeps the interface uncluttered while still allowing advanced configuration edits when needed. -->
+      <button class=\"btn btn-outline-secondary mb-2\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#settings-panel\" aria-expanded=\"false\" aria-controls=\"settings-panel\">Edit Configs</button>
+      <div id=\"settings-panel\" class=\"collapse\">
+        <div class=\"card h-100\">
+          <div class=\"card-header\">Settings</div>
+          <div class=\"card-body\">
+            <form method=\"post\" action=\"{{ url_for('update_settings') }}\">
+              <div class=\"mb-2\">
+                <label class=\"form-label\">Authors DB</label>
+                <input type=\"text\" class=\"form-control\" name=\"authors_db\" value=\"{{ settings.authors_db }}\" data-bs-toggle=\"tooltip\" title=\"Path to authors.db\">
+              </div>
+              <div class=\"mb-2\">
+                <label class=\"form-label\">Publications DB</label>
+                <input type=\"text\" class=\"form-control\" name=\"publications_db\" value=\"{{ settings.publications_db }}\" data-bs-toggle=\"tooltip\" title=\"Path to publications.db\">
+              </div>
+              <div class=\"mb-2\">
+                <label class=\"form-label\">Slack Config Path</label>
+                <input type=\"text\" class=\"form-control\" name=\"slack_config_path\" value=\"{{ settings.slack_config_path }}\" data-bs-toggle=\"tooltip\" title=\"Location of slack.config\">
+              </div>
+              <div class=\"mb-2\">
+                <label class=\"form-label\">API Call Delay (s)</label>
+                <input type=\"text\" class=\"form-control\" name=\"api_call_delay\" value=\"{{ settings.api_call_delay }}\" data-bs-toggle=\"tooltip\" title=\"Throttle between API calls\">
+              </div>
+              <hr>
+              <h5>Slack Config</h5>
+              {% for key, value in slack.__dict__.items() %}
+              <div class=\"mb-2\">
+                <label class=\"form-label\">{{ key.replace('_', ' ').title() }}</label>
+                <input type=\"text\" class=\"form-control\" name=\"slack_{{ key }}\" value=\"{{ value }}\" data-bs-toggle=\"tooltip\" title=\"Slack {{ key.replace('_', ' ') }}\">
+              </div>
+              {% endfor %}
+              <button class=\"btn btn-success\" type=\"submit\">Save Settings</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -400,6 +591,11 @@ TEMPLATE = """
     <div class=\"d-flex justify-content-between align-items-center\">
       <h2>Current Authors</h2>
       <div>
+        <!-- Provide quick access to the main workflow so operators can trigger
+             a full Slack update without leaving the GUI. -->
+        <form class=\"d-inline\" method=\"post\" action=\"{{ url_for('run_main_workflow') }}\" onsubmit=\"return confirm('Run the main workflow now? This may take a while.')\">
+          <button class=\"btn btn-outline-success\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Execute python main.py\">Run Workflow</button>
+        </form>
         <form class=\"d-inline\" method=\"post\" action=\"{{ url_for('refresh_all') }}\" onsubmit=\"return confirm('Refresh publications for all authors?')\">
           <button class=\"btn btn-outline-primary\" type=\"submit\" data-bs-toggle=\"tooltip\" title=\"Fetch publications for every author\">Refresh All</button>
         </form>
@@ -500,4 +696,4 @@ if __name__ == "__main__":
     # Running the Flask development server makes the interface available at
     # http://localhost:5000.  In production environments a proper WSGI server
     # should be used instead.
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
