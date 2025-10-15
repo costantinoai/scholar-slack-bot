@@ -1,0 +1,207 @@
+#!/bin/bash
+# Pre-push hook to enforce golden tests
+# This hook ensures that the REAL golden test passes before allowing a push
+
+set -e  # Exit on any error
+
+echo ""
+echo "╔════════════════════════════════════════════════════════════════╗"
+echo "║  🛡️  PRE-PUSH VALIDATION - GOLDEN TESTS REQUIRED             ║"
+echo "╚════════════════════════════════════════════════════════════════╝"
+echo ""
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# ============================================================================
+# Conda environment setup
+# ============================================================================
+# Default conda environment name
+CONDA_ENV_NAME="${CONDA_ENV_NAME:-scholarbot}"
+
+# Check if conda is available
+if command -v conda >/dev/null 2>&1; then
+    # Initialize conda for bash
+    eval "$(conda shell.bash hook)"
+
+    # Try to activate the environment
+    if conda activate "$CONDA_ENV_NAME" 2>/dev/null; then
+        echo "✅ Activated conda environment: $CONDA_ENV_NAME"
+        echo ""
+    else
+        echo -e "${YELLOW}⚠️  Could not activate conda environment: $CONDA_ENV_NAME${NC}"
+        echo "   Tests will run in current environment"
+        echo ""
+        echo "   To specify a different environment, set CONDA_ENV_NAME:"
+        echo "   export CONDA_ENV_NAME=your_env_name"
+        echo ""
+    fi
+else
+    echo -e "${YELLOW}⚠️  Conda not found - using current Python environment${NC}"
+    echo ""
+fi
+
+# Function to check if command exists
+command_exists() {
+    command -v "$1" >/dev/null 2>&1
+}
+
+# Check if pytest is available
+if ! command_exists pytest; then
+    echo -e "${RED}❌ ERROR: pytest not found${NC}"
+    echo "   Install with: pip install pytest"
+    exit 1
+fi
+
+# ============================================================================
+# Step 1: Run fast tests
+# ============================================================================
+echo "📋 Step 1: Running fast tests (with mocks)..."
+echo ""
+
+if pytest tests/test_golden_simple.py -v --tb=short; then
+    echo ""
+    echo -e "${GREEN}✅ Fast golden tests passed${NC}"
+else
+    echo ""
+    echo -e "${RED}❌ Fast golden tests FAILED${NC}"
+    echo ""
+    echo "Fix the failing tests before pushing."
+    exit 1
+fi
+
+# ============================================================================
+# Step 2: Check if real golden test should run
+# ============================================================================
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+echo "📋 Step 2: Checking real golden test requirements..."
+echo ""
+
+# Check for credentials
+HAS_CREDENTIALS=false
+
+if [ ! -z "$SLACK_API_TOKEN" ]; then
+    echo "   ✅ Found SLACK_API_TOKEN in environment"
+    HAS_CREDENTIALS=true
+elif [ -f "./src/slack.config" ]; then
+    if grep -q "api_token" "./src/slack.config" 2>/dev/null; then
+        echo "   ✅ Found credentials in ./src/slack.config"
+        HAS_CREDENTIALS=true
+    fi
+fi
+
+if [ "$HAS_CREDENTIALS" = false ]; then
+    echo ""
+    echo -e "${YELLOW}⚠️  WARNING: No Slack credentials found${NC}"
+    echo ""
+    echo "The REAL golden test (with actual API calls) will be skipped."
+    echo ""
+    echo "To run the real golden test before pushing:"
+    echo "  1. Configure ./src/slack.config with your Slack token"
+    echo "     OR"
+    echo "  2. Export SLACK_API_TOKEN environment variable"
+    echo ""
+    echo "Then run:"
+    echo "  export RUN_GOLDEN_TEST=1"
+    echo "  pytest tests/test_golden_real.py -v -s"
+    echo ""
+    echo -e "${YELLOW}Continue with push? [y/N]${NC}"
+    read -r response
+    case "$response" in
+        [yY][eE][sS]|[yY])
+            echo ""
+            echo -e "${YELLOW}⚠️  Proceeding without real golden test validation${NC}"
+            echo ""
+            exit 0
+            ;;
+        *)
+            echo ""
+            echo -e "${RED}❌ Push cancelled${NC}"
+            echo ""
+            echo "Set up credentials and run the real golden test, then try again."
+            exit 1
+            ;;
+    esac
+fi
+
+# ============================================================================
+# Step 3: Run real golden test
+# ============================================================================
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+echo "📋 Step 3: Running REAL golden test (actual API calls)..."
+echo ""
+echo -e "${YELLOW}⚠️  This will:"
+echo "   • Fetch data from Google Scholar"
+echo "   • Send a [TEST] message to your Slack channel"
+echo "   • Validate the complete end-to-end workflow"
+echo ""
+echo "Continue? [y/N]${NC}"
+read -r response
+case "$response" in
+    [yY][eE][sS]|[yY])
+        ;;
+    *)
+        echo ""
+        echo -e "${RED}❌ Real golden test declined - push cancelled${NC}"
+        echo ""
+        echo "The real golden test MUST pass before pushing."
+        echo "Run it manually with:"
+        echo "  export RUN_GOLDEN_TEST=1"
+        echo "  pytest tests/test_golden_real.py -v -s"
+        exit 1
+        ;;
+esac
+
+echo ""
+echo "Running real golden test..."
+echo ""
+
+# Enable the real golden test
+export RUN_GOLDEN_TEST=1
+
+if pytest tests/test_golden_real.py::test_golden_real_workflow_complete -v -s; then
+    echo ""
+    echo -e "${GREEN}✅ Real golden test passed${NC}"
+    echo ""
+    echo "Check your Slack channel to verify the [TEST] message was received."
+    echo ""
+else
+    echo ""
+    echo -e "${RED}❌ Real golden test FAILED${NC}"
+    echo ""
+    echo "The main workflow is broken! Do not push until this is fixed."
+    echo ""
+    echo "Debug steps:"
+    echo "  1. Check Google Scholar API is accessible"
+    echo "  2. Verify Slack credentials are correct"
+    echo "  3. Check for errors in the test output above"
+    echo "  4. Fix the issues and try again"
+    exit 1
+fi
+
+# ============================================================================
+# Step 4: Final confirmation
+# ============================================================================
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+echo "╔════════════════════════════════════════════════════════════════╗"
+echo "║  ✅ ALL VALIDATIONS PASSED                                     ║"
+echo "╚════════════════════════════════════════════════════════════════╝"
+echo ""
+echo "Summary:"
+echo "  ✅ Fast golden tests: PASSED"
+echo "  ✅ Real golden test: PASSED"
+echo "  ✅ Slack message sent successfully"
+echo ""
+echo -e "${GREEN}Safe to push!${NC}"
+echo ""
+
+exit 0
