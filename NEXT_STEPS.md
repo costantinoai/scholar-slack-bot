@@ -159,3 +159,20 @@ Would you like me to:
 1. Implement the Slack plugin first? ✅ **RECOMMENDED**
 2. Fix the UI by converting to traditional forms?
 3. Debug the current HTMX approach?
+
+---
+
+## Strategic Migration: Switch to OpenAlex API
+
+OpenAlex provides an official, rate-limited API (up to ~10 req/s and ~100k/day) and richer metadata (topics, related works, institutions). Migrating to OpenAlex will allow us to:
+
+- Fetch complete publication histories (not just the current year)
+- Reduce throttling/instability from scraping
+- Enhance UI with topics, related works, and institutional data
+
+Planned steps:
+- Introduce an `openalex` client/service layer
+- Migrate fetch workflows to OpenAlex while keeping our DB schema stable
+- Enrich stored fields and UI to leverage new metadata
+- Maintain dual-mode (feature flag) during migration; then remove scholarly
+- Expand tests and add rate-limiting configs per OpenAlex guidance

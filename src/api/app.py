@@ -22,8 +22,10 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.api.models import HealthResponse, VersionResponse, ErrorResponse, StatisticsResponse
 from src.api.routes import authors_router, publications_router, plugins_router
+from src.api.routes.settings import router as settings_router
 from src.api.routes.operations import router as operations_router
 from src.api.deps import get_authors_db, get_publications_db, get_plugin_registry
+from src.api.scheduler import get_scheduler, shutdown_scheduler
 
 logger = logging.getLogger(__name__)
 
@@ -56,10 +58,20 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.warning(f"Failed to register Slack plugin: {e}")
 
+    # Start scheduler
+    try:
+        _ = get_scheduler()
+    except Exception as e:
+        logger.warning(f"Failed to start scheduler: {e}")
+
     yield
 
     # Shutdown
     logger.info("Shutting down Scholar Slack Bot API")
+    try:
+        shutdown_scheduler()
+    except Exception as e:
+        logger.warning(f"Scheduler shutdown error: {e}")
 
 
 # ============================================================================
@@ -373,6 +385,7 @@ app.include_router(authors_router, prefix="/api/v1")
 app.include_router(publications_router, prefix="/api/v1")
 app.include_router(plugins_router, prefix="/api/v1")
 app.include_router(operations_router, prefix="/api/v1")
+app.include_router(settings_router, prefix="/api/v1")
 
 # Mount web UI routes
 try:

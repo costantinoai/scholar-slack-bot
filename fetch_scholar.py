@@ -385,9 +385,9 @@ def save_updated_cache(
     conn = _init_db(db_path)
     logger.debug(f"Updating cache for author {author_id}.")
     try:
+        # We never delete existing records: the DB is the source of truth.
+        # New entries are inserted; existing are replaced on (author_id, title) PK.
         update_cache = getattr(args, "update_cache", False)
-        if update_cache:
-            conn.execute("DELETE FROM publications WHERE author_id=?", (author_id,))
         for pub in fetched_pubs:
             title = pub["bib"]["title"]
             year = pub["bib"].get("pub_year")

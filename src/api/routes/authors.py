@@ -9,7 +9,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 
 from src.api.models import AuthorCreate, AuthorResponse, ErrorResponse
 from src.api.deps import get_authors_db, get_publications_db, get_current_user
-from fetch_scholar import fetch_publications_by_id
+from fetch_backend import fetch_publications_by_id
 from plugins.config import load_plugin_config
 from plugins.registry import get_global_registry
 from plugins.slack import SlackPlugin

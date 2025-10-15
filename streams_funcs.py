@@ -13,7 +13,7 @@ from helper_funcs import (
     add_new_author_to_json,
     convert_json_to_tuple,
 )
-from fetch_scholar import fetch_from_json, fetch_pubs_dictionary
+from fetch_backend import fetch_from_json
 from slack_bot import make_slack_msg
 from plugins.registry import get_global_registry
 from plugins.slack import SlackPlugin

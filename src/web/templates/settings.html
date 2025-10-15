@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Settings - Scholar Slack Bot{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Settings</h1>
+            <p class="mt-2 text-gray-600">Configure core options for fetching and behavior.</p>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow p-6 space-y-4">
+        <div>
+            <label class="block text-sm text-gray-600 mb-1">Backend</label>
+            <select id="backend" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                <option value="scholar">Google Scholar (current year only)</option>
+                <option value="openalex">OpenAlex (polite pool)</option>
+            </select>
+            <p class="mt-1 text-xs text-gray-500">Choose data source for publications. OpenAlex requires a contact email to join the polite pool.</p>
+        </div>
+
+        <div>
+            <label class="block text-sm text-gray-600 mb-1">OpenAlex Contact Email</label>
+            <input id="openalex_email" type="email" placeholder="you@example.com"
+                   class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+            <p class="mt-1 text-xs text-gray-500">Used only to identify our app to OpenAlex (polite rate limits). Not sent anywhere else.</p>
+        </div>
+
+        <div class="bg-yellow-50 border border-yellow-200 text-yellow-900 rounded p-3">
+            <p class="text-sm">Note: When using OpenAlex and fetching all authors, initial loads for new authors can take up to about 1 minute per author (polite pool). Use with care.</p>
+        </div>
+
+        <div class="flex items-center space-x-3">
+            <button onclick="saveSettings()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Save</button>
+            <button onclick="reloadSettings()" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Reset</button>
+        </div>
+    </div>
+</div>
+
+<script>
+async function reloadSettings() {
+    try {
+        const res = await fetch('/api/v1/settings');
+        const data = await res.json();
+        document.getElementById('backend').value = data.backend || 'scholar';
+        document.getElementById('openalex_email').value = data.openalex_email || '';
+    } catch (e) {
+        showToast('Failed to load settings', 'error');
+    }
+}
+
+async function saveSettings() {
+    try {
+        const body = {
+            backend: document.getElementById('backend').value,
+            openalex_email: document.getElementById('openalex_email').value || null,
+            api_call_delay: '1.0',
+        };
+        const res = await fetch('/api/v1/settings', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        });
+        if (res.ok) {
+            showToast('Settings saved', 'success');
+        } else {
+            const err = await res.json();
+            showToast(err.detail || 'Failed to save settings', 'error');
+        }
+    } catch (e) {
+        showToast('Failed to save settings', 'error');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', reloadSettings);
+</script>
+{% endblock %}
+

@@ -50,6 +50,12 @@ async def plugins_page(request: Request):
     return templates.TemplateResponse("plugins.html", {"request": request})
 
 
+@router.get("/settings", response_class=HTMLResponse)
+async def settings_page(request: Request):
+    """Render the application settings page."""
+    return templates.TemplateResponse("settings.html", {"request": request})
+
+
 # ============================================================================
 # HTMX Partial Routes (HTML fragments for dynamic updates)
 # ============================================================================
