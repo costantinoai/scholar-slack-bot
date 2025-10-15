@@ -367,7 +367,12 @@ async def send_test_notification(
 
         # Use default target from config if not specified
         if target is None:
-            target = config.get("channel") or config.get("default_target", "")
+            # Prefer explicit channel, then generic default_target, then plugin's default_channel
+            target = (
+                config.get("channel")
+                or config.get("default_target")
+                or config.get("default_channel", "")
+            )
 
         # Format test message
         formatted_message = instance.format_test_message(message)
