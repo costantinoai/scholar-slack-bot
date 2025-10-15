@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8">
+    <h1 class="text-2xl font-bold mb-4">UI Interactivity Test</h1>
+
+    <!-- Test 1: Simple button with onclick -->
+    <button onclick="alert('Button clicked!')"
+            class="px-4 py-2 bg-blue-600 text-white rounded mb-4">
+        Test Button (onclick)
+    </button>
+
+    <br>
+
+    <!-- Test 2: Button with JavaScript function -->
+    <button id="test-btn-2" class="px-4 py-2 bg-green-600 text-white rounded mb-4">
+        Test Button (addEventListener)
+    </button>
+
+    <br>
+
+    <!-- Test 3: Input field -->
+    <input type="text"
+           class="px-4 py-2 border border-gray-300 rounded mb-4"
+           placeholder="Can you type here?"
+           id="test-input">
+
+    <br>
+
+    <!-- Test 4: Traditional form -->
+    <form method="get" action="#" class="mb-4">
+        <input type="text" name="test" class="px-4 py-2 border border-gray-300 rounded" placeholder="Form input">
+        <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded">Submit Form</button>
+    </form>
+
+    <div id="output" class="mt-4 p-4 bg-gray-100 rounded"></div>
+
+    <script>
+        console.log('JavaScript is running!');
+
+        // Test addEventListener
+        document.getElementById('test-btn-2').addEventListener('click', function() {
+            document.getElementById('output').innerHTML = '<p class="text-green-600 font-bold">addEventListener works!</p>';
+        });
+
+        // Test input
+        document.getElementById('test-input').addEventListener('input', function(e) {
+            document.getElementById('output').innerHTML = '<p>You typed: ' + e.target.value + '</p>';
+        });
+
+        // Log that script completed
+        console.log('Script setup complete');
+    </script>
+</body>
+</html>
