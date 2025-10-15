@@ -28,6 +28,8 @@ SETTINGS_FILE = Path("./settings.json")
 class SettingsModel(BaseModel):
     backend: str = Field("scholar", pattern="^(scholar|openalex)$", description="Publication backend")
     openalex_email: Optional[str] = Field(None, description="Contact email for OpenAlex polite pool")
+    fetch_full_history: Optional[bool] = Field(False, description="Fetch full author history (OpenAlex)")
+    from_year: Optional[int] = Field(None, description="Fetch from this year onward; ignored if fetch_full_history is true")
     api_call_delay: Optional[str] = Field("1.0", description="Legacy UI delay; kept for compatibility")
 
 
@@ -45,6 +47,8 @@ def _read_settings() -> dict:
         "api_call_delay": "1.0",
         "backend": "scholar",
         "openalex_email": None,
+        "fetch_full_history": False,
+        "from_year": None,
     }
 
 
@@ -66,6 +70,8 @@ async def get_settings():
     return SettingsModel(
         backend=raw.get("backend", "scholar"),
         openalex_email=raw.get("openalex_email"),
+        fetch_full_history=bool(raw.get("fetch_full_history", False)),
+        from_year=raw.get("from_year"),
         api_call_delay=str(raw.get("api_call_delay", "1.0")),
     )
 

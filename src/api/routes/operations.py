@@ -37,7 +37,7 @@ router = APIRouter(
 )
 
 
-def do_refresh_cache_all(authors_db: sqlite3.Connection) -> dict:
+def do_refresh_cache_all(authors_db: sqlite3.Connection, job_id: str | None = None) -> dict:
     """Core function to refresh cache for all authors."""
     cursor = authors_db.execute("SELECT id, name FROM authors")
     authors = cursor.fetchall()
@@ -46,8 +46,10 @@ def do_refresh_cache_all(authors_db: sqlite3.Connection) -> dict:
 
     total_refreshed = 0
     year = datetime.now().year
+    processed = 0
     for row in authors:
         author_id = row["id"]
+        author_name = row["name"]
         pubs = fetch_publications_by_id(
             author_id,
             output_folder="./src",
@@ -55,9 +57,83 @@ def do_refresh_cache_all(authors_db: sqlite3.Connection) -> dict:
             from_year=year,
         )
         total_refreshed += len(pubs or [])
+        processed += 1
+        if job_id:
+            try:
+                from src.api.scheduler import set_job_status  # local import to avoid cycles
+                set_job_status(job_id, status="running", processed=processed, total=len(authors), current_author=author_name)
+            except Exception:
+                pass
 
     logger.info("Refreshed cache for %d author(s), %d pubs total", len(authors), total_refreshed)
     return {"success": True, "authors": len(authors), "refreshed": total_refreshed}
+
+
+def do_fetch_and_send_all_progress(job_id: str | None = None) -> dict:
+    # Load plugin config
+    config = load_plugin_config("slack")
+    if not config or "api_token" not in config:
+        raise RuntimeError("Slack plugin not configured")
+
+    # Gather authors list for progress
+    db_gen = get_authors_db()
+    conn = next(db_gen)
+    try:
+        rows = conn.execute("SELECT id, name FROM authors").fetchall()
+    finally:
+        try:
+            next(db_gen)
+        except StopIteration:
+            pass
+
+    total = len(rows)
+    processed = 0
+    all_works = []
+    year = datetime.now().year
+    for r in rows:
+        author_id = r["id"]
+        author_name = r["name"]
+        works = fetch_publications_by_id(
+            author_id,
+            output_folder="./src",
+            args=SimpleNamespace(update_cache=False, test_fetching=False),
+            from_year=year,
+        ) or []
+        all_works.extend(works)
+        processed += 1
+        if job_id:
+            try:
+                from src.api.scheduler import set_job_status
+                set_job_status(job_id, status="running", processed=processed, total=total, current_author=author_name)
+            except Exception:
+                pass
+
+    # Prepare plugin
+    registry = get_global_registry()
+    if "slack" not in registry.list_plugins():
+        registry.register(SlackPlugin)
+    plugin = registry.create_instance("slack", config, cache=True)
+
+    # Convert to Publication dataclasses
+    publications: List[Publication] = [
+        Publication(
+            title=p.get("title", ""),
+            authors=p.get("authors", ""),
+            year=str(p.get("year", "")),
+            abstract=p.get("abstract", ""),
+            pub_url=p.get("pub_url", ""),
+            journal=p.get("journal", ""),
+            citations=p.get("num_citations"),
+        )
+        for p in all_works
+    ]
+
+    message = plugin.format_publications(publications)
+    target = config.get("default_channel") or config.get("channel", "")
+    ok = plugin.send_message(message, target)
+    if not ok:
+        raise RuntimeError("Failed to send notification")
+    return {"success": True, "sent": True, "count": len(publications)}
 
 
 @router.post("/refresh-cache", summary="Refresh cache for all authors (no send)")
@@ -201,7 +277,7 @@ async def run_async_action(payload: dict, user: dict = Depends(get_current_user)
                 db_gen = get_authors_db()
                 conn = next(db_gen)
                 try:
-                    res = do_refresh_cache_all(conn)
+                    res = do_refresh_cache_all(conn, job_id=job_id)
                 finally:
                     try:
                         next(db_gen)
@@ -209,7 +285,7 @@ async def run_async_action(payload: dict, user: dict = Depends(get_current_user)
                         pass
                 set_job_status(job_id, status="completed", finished_at=datetime.now().isoformat(), result=res)
             else:
-                res = do_fetch_and_send_all()
+                res = do_fetch_and_send_all_progress(job_id=job_id)
                 set_job_status(job_id, status="completed", finished_at=datetime.now().isoformat(), result=res)
         except Exception as e:  # pragma: no cover
             set_job_status(job_id, status="failed", finished_at=datetime.now().isoformat(), error=str(e))

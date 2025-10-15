@@ -78,6 +78,15 @@ def get_publications_db() -> Generator[sqlite3.Connection, None, None]:
                 PRIMARY KEY (author_id, title)
             )"""
         )
+        # Ensure optional columns exist
+        try:
+            cols = [row[1] for row in conn.execute("PRAGMA table_info(publications)").fetchall()]
+            if 'journal' not in cols:
+                conn.execute("ALTER TABLE publications ADD COLUMN journal TEXT")
+            if 'authors' not in cols:
+                conn.execute("ALTER TABLE publications ADD COLUMN authors TEXT")
+        except Exception as e:
+            logger.debug(f"Publications table alter skipped/failed: {e}")
         yield conn
         conn.commit()
     except Exception as e:

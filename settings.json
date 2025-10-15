@@ -4,5 +4,7 @@
   "slack_config_path": "./src/slack.config",
   "api_call_delay": "1.0",
   "backend": "openalex",
-  "openalex_email": null
+  "openalex_email": "andreaivan.costantino@kuleuven.be",
+  "fetch_full_history": true,
+  "from_year": null
 }

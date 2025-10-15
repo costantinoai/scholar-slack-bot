@@ -15,6 +15,7 @@ from helper_funcs import get_authors_json
 import fetch_scholar
 from src.openalex.client import find_author_id_by_name, fetch_works_for_author, upsert_publications, _get_mailto
 from helper_funcs import _init_authors_db  # type: ignore
+import json
 
 
 def _backend() -> str:
@@ -23,6 +24,13 @@ def _backend() -> str:
         return cfg.get("backend", "scholar").lower()
     except Exception:
         return "scholar"
+
+
+def _settings() -> dict:
+    try:
+        return json.loads(Path("./settings.json").read_text())
+    except Exception:
+        return {}
 
 
 def fetch_from_json(args, idx=None):  # noqa: ANN001
@@ -36,7 +44,11 @@ def fetch_from_json(args, idx=None):  # noqa: ANN001
         authors = authors[:idx]
 
     mailto = _get_mailto()
-    from_year = int(__import__("time").strftime("%Y"))
+    cfg = _settings()
+    # Determine from_year: respect settings when OpenAlex backend is active
+    from_year = None
+    if not cfg.get("fetch_full_history", False):
+        from_year = cfg.get("from_year") or int(__import__("time").strftime("%Y"))
     pubs: List[dict] = []
     for name, author_id in authors:
         # Reuse stored OpenAlex ID if present
@@ -81,6 +93,10 @@ def fetch_publications_by_id(
 
     # OpenAlex path
     mailto = _get_mailto()
+    cfg = _settings()
+    # For scholar backend, default to current year if from_year is None
+    if _backend() == "scholar" and from_year is None:
+        from_year = int(__import__("time").strftime("%Y"))
     conn = _init_authors_db(f"{output_folder}/authors.db")
     try:
         row = conn.execute("SELECT name, openalex_id FROM authors WHERE id=?", (author_id,)).fetchone()
@@ -89,6 +105,10 @@ def fetch_publications_by_id(
     if not row:
         return []
     name, existing_oa = row
+    # Determine from_year for OpenAlex (full history if enabled)
+    cfg = _settings()
+    if cfg.get("fetch_full_history", False):
+        from_year = None
     openalex_id = existing_oa or find_author_id_by_name(name, mailto)
     if openalex_id and not existing_oa:
         conn = _init_authors_db(f"{output_folder}/authors.db")

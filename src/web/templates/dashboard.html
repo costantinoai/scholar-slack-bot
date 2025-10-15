@@ -94,6 +94,7 @@
                 </div>
             </div>
             <div class="p-6 space-y-3">
+                <div id="job-progress" class="hidden px-4 py-3 bg-blue-50 text-blue-700 rounded"></div>
                 <a href="/authors?action=add" class="block w-full px-4 py-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-center font-medium">
                     + Add New Author
                 </a>
@@ -103,9 +104,7 @@
                 <a href="/plugins" class="block w-full px-4 py-3 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-center font-medium">
                     ⚙️ Configure Plugins
                 </a>
-                <button onclick="checkHealth()" class="block w-full px-4 py-3 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors text-center font-medium">
-                    🔍 System Health Check
-                </button>
+                
             </div>
 
             <!-- System status -->
@@ -252,6 +251,18 @@
             const r = await fetch(url);
             if (!r.ok) return;
             const st = await r.json();
+            // Update progress banner
+            try {
+                const box = document.getElementById('job-progress');
+                if (st.status === 'running' && st.total) {
+                    box.classList.remove('hidden');
+                    const pct = Math.floor((st.processed || 0) * 100 / st.total);
+                    box.textContent = `Running: ${st.processed || 0}/${st.total} (${pct}%) ${st.current_author ? '– ' + st.current_author : ''}`;
+                }
+                if (st.status !== 'running') {
+                    box.classList.add('hidden');
+                }
+            } catch(e) {}
             if (st.status === 'completed') {
                 const count = st.result && (st.result.count || st.result.refreshed || 0);
                 showToast(`Completed (${count} items)`, 'success');
@@ -281,17 +292,20 @@
             const response = await fetch('/api/v1/health');
             const health = await response.json();
             if (health.status === 'healthy') {
+                showToast('System is healthy', 'success');
                 document.getElementById('api-status').innerHTML = `
                     <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Healthy
                 `;
             } else {
+                showToast('System has issues', 'warning');
                 document.getElementById('api-status').innerHTML = `
                     <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
                     Degraded
                 `;
             }
         } catch (error) {
+            showToast('Cannot reach API', 'error');
             document.getElementById('api-status').innerHTML = `
                 <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
                 Offline

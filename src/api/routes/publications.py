@@ -64,7 +64,7 @@ async def query_publications(
     """
     try:
         # Build dynamic query
-        query_parts = ["SELECT author_id, title, year, abstract, url, citations FROM publications WHERE 1=1"]
+        query_parts = ["SELECT author_id, title, year, abstract, url, citations, journal, authors FROM publications WHERE 1=1"]
         params = []
 
         # Add filters
@@ -108,12 +108,12 @@ async def query_publications(
             result.append(PublicationResponse(
                 author_id=pub_dict["author_id"],
                 title=pub_dict["title"],
-                authors="",  # Not stored in current schema
+                authors=pub_dict.get("authors") or "",
                 year=pub_dict.get("year"),
                 abstract=pub_dict.get("abstract"),
                 url=pub_dict.get("url"),
                 citations=pub_dict.get("citations", 0),
-                journal=None  # Not stored in current schema
+                journal=pub_dict.get("journal")
             ))
 
         logger.info(f"Retrieved {len(result)} publications (limit={limit}, offset={offset})")

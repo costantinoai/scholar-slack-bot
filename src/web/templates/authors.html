@@ -35,17 +35,21 @@
                 <option value="name-desc">Name (Z-A)</option>
                 <option value="pubs-desc">Most Publications</option>
                 <option value="pubs-asc">Least Publications</option>
+                <option value="cites-desc">Most Citations</option>
+                <option value="cites-asc">Least Citations</option>
+                <option value="hindex-desc">Highest h-index</option>
+                <option value="hindex-asc">Lowest h-index</option>
             </select>
         </div>
     </div>
 
-    <!-- Authors list -->
+    <!-- Authors list (cards) -->
     <div id="authors-list"
          hx-get="/web/authors-list"
          hx-trigger="load, refreshAuthors from:body"
          hx-swap="innerHTML"
          class="space-y-4">
-        <!-- Loading skeleton -->
+        <!-- Loading skeletons -->
         <div class="bg-white rounded-lg shadow p-6 animate-pulse">
             <div class="flex items-center justify-between">
                 <div class="flex-1">
@@ -257,9 +261,9 @@
         }
     }
 
-    // Fetch author publications
+    // View author details
     async function viewPublications(authorId) {
-        window.location.href = `/publications?author=${authorId}`;
+        window.location.href = `/author/${authorId}`;
     }
 
     // Refresh author cache
@@ -305,20 +309,15 @@
         }
     }
 
-    // Filter authors
     function filterAuthors() {
-        const searchTerm = document.getElementById('author-search').value.toLowerCase();
-        const authorCards = document.querySelectorAll('[data-author-name]');
-
-        authorCards.forEach(card => {
-            const authorName = card.getAttribute('data-author-name').toLowerCase();
-            if (authorName.includes(searchTerm)) {
-                card.style.display = '';
-            } else {
-                card.style.display = 'none';
-            }
+        const searchTerm = (document.getElementById('author-search').value || '').toLowerCase();
+        document.querySelectorAll('#authors-list > div').forEach(card => {
+            const name = (card.getAttribute('data-author-name') || '').toLowerCase();
+            card.style.display = name.includes(searchTerm) ? '' : 'none';
         });
     }
+
+    // Sorting cards
 
     // Sort authors
     function sortAuthors(sortBy) {
@@ -340,6 +339,14 @@
                     return pubsB - pubsA;
                 case 'pubs-asc':
                     return pubsA - pubsB;
+                case 'cites-desc':
+                    return citesB - citesA;
+                case 'cites-asc':
+                    return citesA - citesB;
+                case 'hindex-desc':
+                    return hB - hA;
+                case 'hindex-asc':
+                    return hA - hB;
                 default:
                     return 0;
             }
@@ -355,6 +362,8 @@
             hideDeleteModal();
         }
     });
+
+    document.addEventListener('DOMContentLoaded', loadAuthors);
 
     // Final verification
     console.log('===== Authors Page JavaScript Loaded =====');

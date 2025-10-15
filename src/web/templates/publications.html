@@ -57,9 +57,12 @@
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-50">
                     <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Year</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Citations</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortPubs('title')">Title</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortPubs('year')">Year</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortPubs('citations')">Citations</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Authors</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Journal</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Abstract</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Link</th>
                     </tr>
                 </thead>
@@ -72,6 +75,8 @@
 </div>
 
 <script>
+    let pubsData = [];
+    let pubSort = { column: 'year', dir: 'desc' };
     function getQueryParam(name) {
         const params = new URLSearchParams(window.location.search);
         return params.get(name) || '';
@@ -103,31 +108,51 @@
             params.set('limit', '200');
 
             const res = await fetch(`/api/v1/publications?${params.toString()}`);
-            const data = await res.json();
-
-            const tbody = document.getElementById('pubs-body');
-            tbody.innerHTML = '';
-            document.getElementById('results-count').textContent = `${data.length} result(s)`;
-
-            if (!Array.isArray(data) || data.length === 0) {
-                tbody.innerHTML = '<tr><td class="px-6 py-4 text-sm text-gray-500" colspan="4">No publications found</td></tr>';
-                return;
-            }
-
-            for (const pub of data) {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td class="px-6 py-4 text-sm text-gray-900">${pub.title || ''}</td>
-                    <td class="px-6 py-4 text-sm text-gray-700">${pub.year || ''}</td>
-                    <td class="px-6 py-4 text-sm text-gray-700">${pub.citations ?? 0}</td>
-                    <td class="px-6 py-4 text-sm">${pub.url ? `<a class=\"text-blue-600 hover:text-blue-800\" href=\"${pub.url}\" target=\"_blank\">Open →</a>` : ''}</td>
-                `;
-                tbody.appendChild(tr);
-            }
+            pubsData = await res.json();
+            renderPubs();
         } catch (err) {
             console.error('Failed to load publications', err);
             showToast('Failed to load publications', 'error');
         }
+    }
+
+    function renderPubs() {
+        const tbody = document.getElementById('pubs-body');
+        tbody.innerHTML = '';
+        document.getElementById('results-count').textContent = `${pubsData.length} result(s)`;
+
+        if (!Array.isArray(pubsData) || pubsData.length === 0) {
+                tbody.innerHTML = '<tr><td class="px-6 py-4 text-sm text-gray-500" colspan="4">No publications found</td></tr>';
+                return;
+        }
+
+        for (const pub of pubsData) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td class="px-6 py-4 text-sm text-gray-900">${pub.title || ''}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">${pub.year || ''}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">${pub.citations ?? 0}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">${pub.authors || ''}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">${pub.journal || ''}</td>
+                <td class="px-6 py-4 text-sm text-gray-600">${(pub.abstract || '').slice(0,160)}${(pub.abstract && pub.abstract.length>160)?'…':''}</td>
+                <td class="px-6 py-4 text-sm">${pub.url ? `<a class=\"text-blue-600 hover:text-blue-800\" href=\"${pub.url}\" target=\"_blank\">Open →</a>` : ''}</td>
+            `;
+            tbody.appendChild(tr);
+        }
+    }
+
+    function sortPubs(column) {
+        if (pubSort.column === column) { pubSort.dir = pubSort.dir === 'asc' ? 'desc' : 'asc'; }
+        else { pubSort.column = column; pubSort.dir = 'asc'; }
+        pubsData.sort((a,b) => {
+            let av = a[column], bv = b[column];
+            if (typeof av === 'string') av = av.toLowerCase();
+            if (typeof bv === 'string') bv = bv.toLowerCase();
+            if (av < bv) return pubSort.dir === 'asc' ? -1 : 1;
+            if (av > bv) return pubSort.dir === 'asc' ? 1 : -1;
+            return 0;
+        });
+        renderPubs();
     }
 
     // Initialize with author param if present
@@ -140,4 +165,3 @@
     });
 </script>
 {% endblock %}
-

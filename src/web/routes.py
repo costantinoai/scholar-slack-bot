@@ -56,6 +56,12 @@ async def settings_page(request: Request):
     return templates.TemplateResponse("settings.html", {"request": request})
 
 
+@router.get("/author/{author_id}", response_class=HTMLResponse)
+async def author_detail_page(request: Request, author_id: str):
+    """Render author detail view with sortable publications table."""
+    return templates.TemplateResponse("author_detail.html", {"request": request, "author_id": author_id})
+
+
 # ============================================================================
 # HTMX Partial Routes (HTML fragments for dynamic updates)
 # ============================================================================
@@ -234,10 +240,35 @@ async def get_authors_list(
             )
             pub_count = pub_cursor.fetchone()["count"]
 
+            # Total citations
+            cit_cursor = pubs_db.execute(
+                "SELECT COALESCE(SUM(citations), 0) as total FROM publications WHERE author_id = ?",
+                (author_id,)
+            )
+            total_citations = int(cit_cursor.fetchone()["total"]) if cit_cursor.fetchone() else 0
+
+            # h-index
+            h = 0
+            try:
+                cits = pubs_db.execute(
+                    "SELECT citations FROM publications WHERE author_id = ? ORDER BY citations DESC",
+                    (author_id,)
+                ).fetchall()
+                sorted_cits = [int((row["citations"] or 0)) for row in cits]
+                for i, c in enumerate(sorted_cits, start=1):
+                    if c >= i:
+                        h = i
+                    else:
+                        break
+            except Exception:
+                h = 0
+
             html_parts.append(f"""
             <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow"
                  data-author-name="{author_name}"
-                 data-pub-count="{pub_count}">
+                 data-pub-count="{pub_count}"
+                 data-total-citations="{total_citations}"
+                 data-h-index="{h}">
                 <div class="p-6">
                     <div class="flex items-start justify-between">
                         <div class="flex-1">
@@ -257,6 +288,18 @@ async def get_authors_list(
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                                     </svg>
                                     <span class="font-medium">{pub_count}</span> publications
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <svg class="w-5 h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 4h6"/>
+                                    </svg>
+                                    <span class="font-medium">{total_citations}</span> citations
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <svg class="w-5 h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                    </svg>
+                                    h-index <span class="ml-1 font-medium">{h}</span>
                                 </div>
                             </div>
                         </div>

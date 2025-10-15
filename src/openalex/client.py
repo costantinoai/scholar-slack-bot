@@ -52,13 +52,16 @@ def find_author_id_by_name(name: str, mailto: Optional[str]) -> Optional[str]:
     return None
 
 
-def fetch_works_for_author(author_openalex_id: str, from_year: int, mailto: Optional[str]) -> List[Dict]:
+def fetch_works_for_author(author_openalex_id: str, from_year: Optional[int], mailto: Optional[str]) -> List[Dict]:
     """Fetch works for an OpenAlex author using polite pagination."""
     works: List[Dict] = []
     try:
         s = _session(mailto)
         # Filter by authorship author id and from year via publication_date
-        filt = f"authorships.author.id:{author_openalex_id},from_publication_date:{from_year}-01-01"
+        # Build filter: always filter by author; add from_publication_date if requested
+        filt = f"authorships.author.id:{author_openalex_id}"
+        if from_year:
+            filt = f"{filt},from_publication_date:{from_year}-01-01"
         cursor = "*"
         while True:
             params = {
@@ -69,18 +72,26 @@ def fetch_works_for_author(author_openalex_id: str, from_year: int, mailto: Opti
             }
             resp = s.get(f"{BASE_URL}/works", params=params, timeout=30)
             data = resp.json()
-            batch = data.get("results", [])
+            batch = data.get("results", []) or []
             for w in batch:
-                title = w.get("display_name") or ""
-                year = w.get("publication_year")
-                abstract = _decode_abstract(w.get("abstract_inverted_index"))
-                url = w.get("primary_location", {}).get("landing_page_url") or w.get("openalex")
-                journal = w.get("host_venue", {}).get("display_name")
-                cites = w.get("cited_by_count")
+                title = (w or {}).get("display_name") or ""
+                year = (w or {}).get("publication_year")
+                wtype = (w or {}).get("type")
+                # Filter out datasets/components and file-like titles
+                if _looks_like_file_title(title):
+                    continue
+                allowed_types = {"journal-article", "proceedings-article", "book-chapter", "report", "book", "preprint"}
+                if wtype and wtype not in allowed_types:
+                    continue
+                abstract = _decode_abstract((w or {}).get("abstract_inverted_index"))
+                primary_location = (w or {}).get("primary_location") or {}
+                url = primary_location.get("landing_page_url") or (w or {}).get("openalex")
+                host_venue = (w or {}).get("host_venue") or {}
+                journal = host_venue.get("display_name")
+                cites = (w or {}).get("cited_by_count")
                 # Join authors
-                auths = ", ".join([
-                    a.get("author", {}).get("display_name", "") for a in (w.get("authorships") or [])
-                ])
+                authorships = (w or {}).get("authorships") or []
+                auths = ", ".join([ (a.get("author") or {}).get("display_name", "") for a in authorships ])
                 works.append({
                     "title": title,
                     "authors": auths,
@@ -114,6 +125,20 @@ def _decode_abstract(inv_index: Optional[Dict[str, List[int]]]) -> Optional[str]
     return " ".join([w for w in words if w])
 
 
+def _looks_like_file_title(title: str) -> bool:
+    if not title:
+        return False
+    t = title.strip().lower()
+    import re
+    # Typical file extensions
+    if re.search(r"\.(zip|tar|tar\.gz|gz|bz2|7z|rar|mat|csv|tsv|xlsx|xls|docx?|pptx?|txt)$", t):
+        return True
+    # Likely file-like if contains no spaces and has an extension
+    if ('.' in t) and (' ' not in t):
+        return True
+    return False
+
+
 def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = Path("./src/publications.db")) -> int:
     """Insert/replace works into publications DB for the author.
 
@@ -132,10 +157,19 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
                 PRIMARY KEY (author_id, title)
             )"""
         )
+        # Ensure optional columns
+        try:
+            cols = [row[1] for row in conn.execute("PRAGMA table_info(publications)").fetchall()]
+            if 'journal' not in cols:
+                conn.execute("ALTER TABLE publications ADD COLUMN journal TEXT")
+            if 'authors' not in cols:
+                conn.execute("ALTER TABLE publications ADD COLUMN authors TEXT")
+        except Exception:
+            pass
         count = 0
         for w in works:
             conn.execute(
-                "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
+                "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations, journal, authors) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                 (
                     author_id,
                     w.get("title", ""),
@@ -143,6 +177,8 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
                     w.get("abstract"),
                     w.get("pub_url"),
                     w.get("num_citations"),
+                    w.get("journal"),
+                    w.get("authors"),
                 ),
             )
             count += 1
@@ -150,4 +186,3 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
         return count
     finally:
         conn.close()
-
