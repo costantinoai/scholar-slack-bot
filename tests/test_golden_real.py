@@ -6,11 +6,13 @@ This test makes REAL calls to:
 
 This ensures the complete workflow actually works end-to-end, not just with mocks.
 
-IMPORTANT:
-- Only runs if SLACK_API_TOKEN environment variable is set
+BEHAVIOR:
+- RUNS LOCALLY: If src/slack.config exists with valid credentials
+- SKIPS IN CI/CD: If no credentials are found (as expected on GitHub)
 - Uses a well-known, stable Google Scholar ID (Albert Einstein)
 - Sends message with clear [TEST] tag to avoid confusion
-- Can be run manually before releases to validate everything works
+
+No environment variables needed locally - just configure src/slack.config
 """
 
 import os
@@ -27,9 +29,33 @@ TEST_AUTHOR_ID = "qc6CJjYAAAAJ"  # Albert Einstein - stable, public profile
 TEST_AUTHOR_NAME = "Albert Einstein"
 
 
-def is_golden_test_enabled():
-    """Check if real golden test should run."""
-    return os.environ.get("RUN_GOLDEN_TEST") == "1"
+def has_credentials():
+    """Check if Slack credentials are available.
+
+    Returns True if credentials exist (either in environment or config file).
+    This allows the test to run locally where credentials are configured,
+    but skip in CI/CD where credentials are not available.
+    """
+    # Check environment variable
+    if os.environ.get("SLACK_API_TOKEN"):
+        return True
+
+    # Check config file
+    config_path = Path("./src/slack.config")
+    if config_path.exists():
+        import configparser
+        config = configparser.ConfigParser()
+        try:
+            config.read(config_path)
+            if config.has_option("slack", "api_token"):
+                token = config.get("slack", "api_token")
+                # Make sure it's not empty or a placeholder
+                if token and not token.startswith("xoxb-your-"):
+                    return True
+        except Exception:
+            pass
+
+    return False
 
 
 def get_slack_token():
@@ -71,8 +97,8 @@ def get_slack_channel():
 
 
 @pytest.mark.skipif(
-    not is_golden_test_enabled(),
-    reason="Golden test only runs when RUN_GOLDEN_TEST=1 (makes real API calls)"
+    not has_credentials(),
+    reason="Skipping real golden test: no Slack credentials found (expected in CI/CD)"
 )
 def test_golden_real_workflow_complete(tmp_path):
     """⭐ REAL GOLDEN TEST - Complete workflow with actual API calls.
@@ -83,17 +109,21 @@ def test_golden_real_workflow_complete(tmp_path):
     3. Format message
     4. Send to Slack (real API call with [TEST] tag)
 
-    To run this test:
-        export RUN_GOLDEN_TEST=1
-        export SLACK_API_TOKEN=xoxb-your-token  # or configure in src/slack.config
-        export SLACK_TEST_CHANNEL=your-channel  # optional
+    To run this test locally:
+        1. Configure src/slack.config with your credentials (already done)
+        2. Run: pytest tests/test_golden_real.py::test_golden_real_workflow_complete -v -s
+
+    OR use environment variables:
+        export SLACK_API_TOKEN=xoxb-your-token
+        export SLACK_TEST_CHANNEL=your-channel
         pytest tests/test_golden_real.py::test_golden_real_workflow_complete -v -s
 
     This test makes REAL API calls, so:
-    - It requires valid credentials
+    - It requires valid credentials (auto-detected from src/slack.config)
     - It will send a real Slack message (marked as [TEST])
     - It will fetch real data from Google Scholar
     - It may be rate-limited if run too frequently
+    - It automatically SKIPS in CI/CD when no credentials are present
     """
 
     # ========================================================================
@@ -301,8 +331,8 @@ def test_golden_real_workflow_complete(tmp_path):
 
 
 @pytest.mark.skipif(
-    not is_golden_test_enabled(),
-    reason="Golden test only runs when RUN_GOLDEN_TEST=1"
+    not has_credentials(),
+    reason="Skipping Slack connectivity test: no credentials found"
 )
 def test_golden_real_slack_connectivity():
     """Quick test to verify Slack API token works.
@@ -339,24 +369,25 @@ if __name__ == "__main__":
     print("REAL GOLDEN TEST")
     print("=" * 70)
     print("\nThis test makes REAL API calls to Google Scholar and Slack.")
-    print("\nPrerequisites:")
-    print("  1. Set environment variable: export RUN_GOLDEN_TEST=1")
-    print("  2. Configure Slack token (one of):")
-    print("     - export SLACK_API_TOKEN=xoxb-your-token")
-    print("     - Configure ./src/slack.config")
-    print("  3. (Optional) export SLACK_TEST_CHANNEL=your-channel")
+    print("\nHow it works:")
+    print("  • LOCALLY: Runs automatically if src/slack.config has credentials")
+    print("  • IN CI/CD: Skips automatically (no credentials available)")
+    print("\nPrerequisites (choose one):")
+    print("  Option A (recommended): Configure ./src/slack.config")
+    print("  Option B: Set environment variables")
+    print("     export SLACK_API_TOKEN=xoxb-your-token")
+    print("     export SLACK_TEST_CHANNEL=your-channel")
     print("\nTo run:")
-    print("  export RUN_GOLDEN_TEST=1")
     print("  pytest tests/test_golden_real.py -v -s")
     print("=" * 70)
 
-    # Check if enabled
-    if not is_golden_test_enabled():
-        print("\n⚠️  Golden test is DISABLED")
-        print("    Set RUN_GOLDEN_TEST=1 to enable")
+    # Check credentials
+    if not has_credentials():
+        print("\n⚠️  No Slack credentials found")
+        print("    Configure ./src/slack.config or set SLACK_API_TOKEN")
+        print("    Test will be SKIPPED (expected in CI/CD)")
         sys.exit(0)
 
-    # Check credentials
     if not get_slack_token():
         print("\n❌ ERROR: No Slack token found")
         print("   Set SLACK_API_TOKEN or configure ./src/slack.config")
@@ -367,5 +398,5 @@ if __name__ == "__main__":
         print("   Set SLACK_TEST_CHANNEL or configure ./src/slack.config")
         sys.exit(1)
 
-    print("\n✅ Prerequisites met - running golden test...")
+    print("\n✅ Credentials found - running golden test...")
     pytest.main([__file__, "-v", "-s"])

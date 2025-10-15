@@ -143,7 +143,7 @@ else
 fi
 
 # ============================================================================
-# Step 2: Check if real golden test should run
+# Step 2: Check if real golden test will run
 # ============================================================================
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -154,105 +154,111 @@ echo ""
 # Check for credentials
 HAS_CREDENTIALS=false
 
-if [ ! -z "$SLACK_API_TOKEN" ]; then
+if [ ! -z "${SLACK_API_TOKEN:-}" ]; then
     echo "   ✅ Found SLACK_API_TOKEN in environment"
     HAS_CREDENTIALS=true
 elif [ -f "./src/slack.config" ]; then
     if grep -q "api_token" "./src/slack.config" 2>/dev/null; then
-        echo "   ✅ Found credentials in ./src/slack.config"
-        HAS_CREDENTIALS=true
+        token=$(grep "api_token" "./src/slack.config" | cut -d= -f2 | tr -d ' ')
+        # Check it's not a placeholder
+        if [ ! -z "$token" ] && [[ ! "$token" =~ ^xoxb-your- ]]; then
+            echo "   ✅ Found credentials in ./src/slack.config"
+            HAS_CREDENTIALS=true
+        fi
     fi
 fi
 
 if [ "$HAS_CREDENTIALS" = false ]; then
     echo ""
-    echo -e "${YELLOW}⚠️  WARNING: No Slack credentials found${NC}"
+    echo -e "${YELLOW}⚠️  No Slack credentials found - real golden test will be SKIPPED${NC}"
     echo ""
-    echo "The REAL golden test (with actual API calls) will be skipped."
+    echo "This is expected in CI/CD environments."
+    echo "If running locally, you should configure credentials:"
+    echo "  • Edit ./src/slack.config with your Slack token"
+    echo "  • OR export SLACK_API_TOKEN=xoxb-your-token"
     echo ""
-    echo "To run the real golden test before pushing:"
-    echo "  1. Configure ./src/slack.config with your Slack token"
-    echo "     OR"
-    echo "  2. Export SLACK_API_TOKEN environment variable"
+    echo "Real golden test validates the complete workflow with actual APIs."
+    echo "It's recommended to run it at least once before pushing major changes."
     echo ""
-    echo "Then run:"
-    echo "  export RUN_GOLDEN_TEST=1"
-    echo "  pytest tests/test_golden_real.py -v -s"
-    echo ""
-    echo -e "${YELLOW}Continue with push? [y/N]${NC}"
-    read -r response
-    case "$response" in
-        [yY][eE][sS]|[yY])
-            echo ""
-            echo -e "${YELLOW}⚠️  Proceeding without real golden test validation${NC}"
-            echo ""
-            exit 0
-            ;;
-        *)
-            echo ""
-            echo -e "${RED}❌ Push cancelled${NC}"
-            echo ""
-            echo "Set up credentials and run the real golden test, then try again."
-            exit 1
-            ;;
-    esac
 fi
 
 # ============================================================================
-# Step 3: Run real golden test
+# Step 3: Run real golden test (if credentials available)
 # ============================================================================
-echo ""
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo ""
-echo "📋 Step 3: Running REAL golden test (actual API calls)..."
-echo ""
-echo -e "${YELLOW}⚠️  This will:"
-echo "   • Fetch data from Google Scholar"
-echo "   • Send a [TEST] message to your Slack channel"
-echo "   • Validate the complete end-to-end workflow"
-echo ""
-echo "Continue? [y/N]${NC}"
-read -r response
-case "$response" in
-    [yY][eE][sS]|[yY])
-        ;;
-    *)
+if [ "$HAS_CREDENTIALS" = true ]; then
+    echo ""
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo ""
+    echo "📋 Step 3: Running REAL golden test (actual API calls)..."
+    echo ""
+    echo -e "${YELLOW}⚠️  This will make REAL API calls:"
+    echo "   • Fetch data from Google Scholar (Albert Einstein test author)"
+    echo "   • Send a [TEST] message to your Slack channel"
+    echo "   • Validate the complete end-to-end workflow"
+    echo ""
+    echo "Continue? [y/N]${NC}"
+    read -r response
+    case "$response" in
+        [yY][eE][sS]|[yY])
+            ;;
+        *)
+            echo ""
+            echo -e "${YELLOW}⚠️  Real golden test skipped by user${NC}"
+            echo ""
+            echo "You can run it manually with:"
+            echo "  pytest tests/test_golden_real.py -v -s"
+            echo ""
+            echo -e "${YELLOW}Continue with push without real test? [y/N]${NC}"
+            read -r response2
+            case "$response2" in
+                [yY][eE][sS]|[yY])
+                    echo ""
+                    echo -e "${YELLOW}⚠️  Proceeding without real golden test${NC}"
+                    echo ""
+                    exit 0
+                    ;;
+                *)
+                    echo ""
+                    echo -e "${RED}❌ Push cancelled${NC}"
+                    exit 1
+                    ;;
+            esac
+            ;;
+    esac
+
+    echo ""
+    echo "Running real golden test..."
+    echo ""
+
+    # Test will auto-detect credentials from src/slack.config
+    if pytest tests/test_golden_real.py::test_golden_real_workflow_complete -v -s; then
         echo ""
-        echo -e "${RED}❌ Real golden test declined - push cancelled${NC}"
+        echo -e "${GREEN}✅ Real golden test passed${NC}"
         echo ""
-        echo "The real golden test MUST pass before pushing."
-        echo "Run it manually with:"
-        echo "  export RUN_GOLDEN_TEST=1"
-        echo "  pytest tests/test_golden_real.py -v -s"
+        echo "Check your Slack channel to verify the [TEST] message was received."
+        echo ""
+    else
+        echo ""
+        echo -e "${RED}❌ Real golden test FAILED${NC}"
+        echo ""
+        echo "The main workflow is broken! Do not push until this is fixed."
+        echo ""
+        echo "Debug steps:"
+        echo "  1. Check Google Scholar API is accessible"
+        echo "  2. Verify Slack credentials are correct (./src/slack.config)"
+        echo "  3. Check for errors in the test output above"
+        echo "  4. Fix the issues and try again"
         exit 1
-        ;;
-esac
-
-echo ""
-echo "Running real golden test..."
-echo ""
-
-# Enable the real golden test
-export RUN_GOLDEN_TEST=1
-
-if pytest tests/test_golden_real.py::test_golden_real_workflow_complete -v -s; then
-    echo ""
-    echo -e "${GREEN}✅ Real golden test passed${NC}"
-    echo ""
-    echo "Check your Slack channel to verify the [TEST] message was received."
-    echo ""
+    fi
 else
     echo ""
-    echo -e "${RED}❌ Real golden test FAILED${NC}"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo ""
-    echo "The main workflow is broken! Do not push until this is fixed."
+    echo "📋 Step 3: Skipping real golden test (no credentials)"
     echo ""
-    echo "Debug steps:"
-    echo "  1. Check Google Scholar API is accessible"
-    echo "  2. Verify Slack credentials are correct"
-    echo "  3. Check for errors in the test output above"
-    echo "  4. Fix the issues and try again"
-    exit 1
+    echo "   This is normal for CI/CD environments."
+    echo "   Fast tests (with mocks) have already verified the code."
+    echo ""
 fi
 
 # ============================================================================
@@ -267,8 +273,12 @@ echo "╚═══════════════════════�
 echo ""
 echo "Summary:"
 echo "  ✅ Fast golden tests: PASSED"
-echo "  ✅ Real golden test: PASSED"
-echo "  ✅ Slack message sent successfully"
+if [ "$HAS_CREDENTIALS" = true ]; then
+    echo "  ✅ Real golden test: PASSED"
+    echo "  ✅ Slack message sent successfully"
+else
+    echo "  ⏭️  Real golden test: SKIPPED (no credentials)"
+fi
 echo ""
 echo -e "${GREEN}Safe to push!${NC}"
 echo ""
