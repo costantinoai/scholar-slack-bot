@@ -12,6 +12,6 @@ cd /home/eik-tb/OneDrive_andreaivan.costantino@kuleuven.be/GitHub/scholar-slack-
 
 for id in "${ids[@]}"
 do
-   python main.py --add_scholar_id $id
+   python main.py add-author $id
 done
 

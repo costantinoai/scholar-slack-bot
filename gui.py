@@ -460,11 +460,16 @@ def run_main_workflow():
 
     # Running the workflow in-process ensures logging output streams straight to
     # the server console instead of being buffered in a subprocess.  This mirrors
-    # invoking ``python main.py`` from the terminal while avoiding the overhead
+    # invoking ``python main.py fetch`` from the terminal while avoiding the overhead
     # of spawning a separate interpreter.
     logger.info("Running main workflow via GUI button in-process")
 
     try:
+        # Temporarily modify sys.argv to inject the 'fetch' subcommand so the
+        # argument parser inside main() can parse it correctly.
+        original_argv = sys.argv
+        sys.argv = ['main.py', 'fetch']
+
         # ``main.main`` returns the argparse namespace used during execution so
         # we can display a brief summary of the active flags back to the user.
         workflow_args = run_workflow()
@@ -485,6 +490,9 @@ def run_main_workflow():
             "Arguments in effect:\n"
             f"{args_summary}"
         )
+    finally:
+        # Always restore the original sys.argv
+        sys.argv = original_argv
 
     authors = get_authors_json(str(AUTHORS_DB))
     settings_ns = SimpleNamespace(**settings)

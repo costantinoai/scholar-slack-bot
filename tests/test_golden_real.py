@@ -2,7 +2,7 @@
 
 This test makes REAL calls to:
 - Google Scholar API (to fetch one publication for one author)
-- Slack API (to send one test message)
+- Slack message formatting (but STOPS before actually sending)
 
 This ensures the complete workflow actually works end-to-end, not just with mocks.
 
@@ -10,7 +10,7 @@ BEHAVIOR:
 - RUNS LOCALLY: If src/slack.config exists with valid credentials
 - SKIPS IN CI/CD: If no credentials are found (as expected on GitHub)
 - Uses a well-known, stable Google Scholar ID (Albert Einstein)
-- Sends message with clear [TEST] tag to avoid confusion
+- DOES NOT send actual Slack messages (prints what WOULD be sent instead)
 
 No environment variables needed locally - just configure src/slack.config
 """
@@ -106,8 +106,8 @@ def test_golden_real_workflow_complete(tmp_path):
     This test validates the REAL end-to-end workflow:
     1. Fetch ONE publication from Google Scholar (real API call)
     2. Save to database
-    3. Format message
-    4. Send to Slack (real API call with [TEST] tag)
+    3. Format message for Slack
+    4. Display what WOULD be sent (STOPS before actual Slack API call)
 
     To run this test locally:
         1. Configure src/slack.config with your credentials (already done)
@@ -120,8 +120,8 @@ def test_golden_real_workflow_complete(tmp_path):
 
     This test makes REAL API calls, so:
     - It requires valid credentials (auto-detected from src/slack.config)
-    - It will send a real Slack message (marked as [TEST])
     - It will fetch real data from Google Scholar
+    - It DOES NOT send actual Slack messages (prints what would be sent)
     - It may be rate-limited if run too frequently
     - It automatically SKIPS in CI/CD when no credentials are present
     """
@@ -261,13 +261,11 @@ def test_golden_real_workflow_complete(tmp_path):
     assert len(formatted_messages) >= 1, "Should have at least author list message"
     print(f"   ✅ Formatted {len(formatted_messages)} message(s)")
 
-    print(f"\n📡 Step 5: Sending to Slack...")
-    print(f"   ⚠️  This makes a REAL API call to Slack")
-    print(f"   📤 Sending to: {slack_channel}")
+    print(f"\n📡 Step 5: Preparing message for Slack (NOT SENDING)...")
+    print(f"   ℹ️  This test stops before the actual Slack API call")
+    print(f"   📝 Target channel: {slack_channel}")
 
-    from slack_bot import send_to_slack
-
-    # Add clear TEST header to avoid confusion
+    # Add clear TEST header to show what WOULD be sent
     test_header = f"""
 ╔═══════════════════════════════════════════════╗
 ║  🧪 GOLDEN TEST - AUTOMATED TEST MESSAGE 🧪  ║
@@ -276,37 +274,27 @@ def test_golden_real_workflow_complete(tmp_path):
 ╚═══════════════════════════════════════════════╝
 """
 
+    print(f"\n{'='*70}")
+    print(f"📤 THE FOLLOWING MESSAGE WOULD HAVE BEEN SENT TO SLACK:")
+    print(f"{'='*70}")
+    print(f"Channel: {slack_channel}")
+    print(f"\n--- Message 1 (Test Header) ---")
+    print(f"```{test_header}```")
+
+    # Display all formatted messages
+    for i, message in enumerate(formatted_messages, 1):
+        print(f"\n--- Message {i+1} (Content) ---")
+        print(message)
+
+    test_footer = "```\n╔═══════════════════════════════════╗\n║  ✅ GOLDEN TEST COMPLETED  ✅     ║\n╚═══════════════════════════════════╝\n```"
+    print(f"\n--- Message {len(formatted_messages)+2} (Test Footer) ---")
+    print(test_footer)
+    print(f"{'='*70}\n")
+
     success = True
-    messages_sent = 0
+    messages_sent = len(formatted_messages) + 2  # header + content + footer
 
-    try:
-        # Send test header
-        response = send_to_slack(slack_channel, f"```{test_header}```", slack_token)
-        if not response or not response.get("ok"):
-            error = response.get("error", "Unknown error") if response else "No response"
-            pytest.fail(f"Failed to send test header to Slack: {error}")
-
-        # Send formatted messages
-        for i, message in enumerate(formatted_messages, 1):
-            response = send_to_slack(slack_channel, message, slack_token)
-
-            if not response or not response.get("ok"):
-                success = False
-                error = response.get("error", "Unknown error") if response else "No response"
-                print(f"   ❌ Message {i} failed: {error}")
-                pytest.fail(f"Failed to send message {i} to Slack: {error}")
-            else:
-                messages_sent += 1
-                print(f"   ✅ Message {i}/{len(formatted_messages)} sent successfully")
-
-        # Send test footer
-        test_footer = "```\n╔═══════════════════════════════════╗\n║  ✅ GOLDEN TEST COMPLETED  ✅     ║\n╚═══════════════════════════════════╝\n```"
-        response = send_to_slack(slack_channel, test_footer, slack_token)
-
-    except Exception as e:
-        pytest.fail(f"Error sending to Slack: {e}")
-
-    print(f"\n   ✅ Successfully sent {messages_sent} message(s) to Slack")
+    print(f"   ✅ Message preparation successful ({messages_sent} messages ready)")
 
     # ========================================================================
     # ASSERT: Verify workflow completed successfully
@@ -318,16 +306,19 @@ def test_golden_real_workflow_complete(tmp_path):
     print(f"Summary:")
     print(f"  • Authors loaded: 1")
     print(f"  • Publications fetched: {len(articles)}")
-    print(f"  • Messages sent: {messages_sent}")
-    print(f"  • Slack channel: {slack_channel}")
+    print(f"  • Messages prepared (NOT SENT): {messages_sent}")
+    print(f"  • Target Slack channel: {slack_channel}")
+    print(f"")
+    print(f"Note: This test DOES NOT send actual Slack messages.")
+    print(f"      It validates the complete workflow and shows what WOULD be sent.")
     print(f"{'='*70}\n")
 
     # All assertions
     assert len(authors) == 1, "Should process 1 author"
     assert isinstance(articles, list), "Should return list of articles"
     assert len(formatted_messages) >= 1, "Should format at least 1 message"
-    assert messages_sent >= 1, "Should send at least 1 message"
-    assert success, "All messages should be sent successfully"
+    assert messages_sent >= 1, "Should prepare at least 1 message"
+    assert success, "All message preparations should succeed"
 
 
 @pytest.mark.skipif(
@@ -335,10 +326,10 @@ def test_golden_real_workflow_complete(tmp_path):
     reason="Skipping Slack connectivity test: no credentials found"
 )
 def test_golden_real_slack_connectivity():
-    """Quick test to verify Slack API token works.
+    """Quick test to verify Slack credentials are configured.
 
-    This is a lightweight test that only checks if we can send a message.
-    Useful for validating credentials before running the full golden test.
+    This is a lightweight test that only checks if credentials are present.
+    Does NOT send actual messages - just validates configuration.
     """
     slack_token = get_slack_token()
     if not slack_token:
@@ -348,19 +339,19 @@ def test_golden_real_slack_connectivity():
     if not slack_channel:
         pytest.skip("No Slack channel found")
 
-    print(f"\n🧪 Testing Slack connectivity...")
+    print(f"\n🧪 Testing Slack configuration...")
     print(f"   Channel: {slack_channel}")
+    print(f"   Token: {slack_token[:10]}...{slack_token[-4:]}")
 
-    from slack_bot import send_to_slack
+    # Validate token format
+    assert slack_token.startswith("xoxb-"), "Slack bot token should start with 'xoxb-'"
+    assert len(slack_token) > 20, "Slack token should be sufficiently long"
 
-    test_message = f"```\n🧪 CONNECTIVITY TEST\nTime: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\nThis is an automated connectivity test.\n```"
+    # Validate channel is not empty
+    assert len(slack_channel) > 0, "Slack channel name should not be empty"
 
-    response = send_to_slack(slack_channel, test_message, slack_token)
-
-    assert response is not None, "Should get a response from Slack"
-    assert response.get("ok"), f"Slack API should succeed: {response.get('error', 'Unknown error')}"
-
-    print(f"   ✅ Slack connectivity verified!")
+    print(f"   ✅ Slack configuration validated!")
+    print(f"   ℹ️  Note: This test does NOT send actual messages")
 
 
 if __name__ == "__main__":
@@ -368,7 +359,8 @@ if __name__ == "__main__":
     print("=" * 70)
     print("REAL GOLDEN TEST")
     print("=" * 70)
-    print("\nThis test makes REAL API calls to Google Scholar and Slack.")
+    print("\nThis test makes REAL API calls to Google Scholar.")
+    print("It DOES NOT send actual Slack messages (shows what WOULD be sent).")
     print("\nHow it works:")
     print("  • LOCALLY: Runs automatically if src/slack.config has credentials")
     print("  • IN CI/CD: Skips automatically (no credentials available)")

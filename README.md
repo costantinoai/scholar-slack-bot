@@ -150,10 +150,6 @@ Global options include:
 - `--verbose`: Enable verbose logging output.
 
 
-### Within the IDE
-
-If running from an IDE (e.g., Spyder, VScode), configurations are set in `IDEargs` in `main.py`. Modify paths or debug settings as needed.
-
 ### Web Interface
 
 A modern Flask web UI is bundled for managing the bot. Launch it with:
@@ -171,53 +167,82 @@ The responsive page at [http://localhost:5000](http://localhost:5000) offers:
 
 ---
 
-## 📂 Directory Structure  
+## 📂 Directory Structure
 
 ```
-slack-bot
-├── add_authors_batch.sh
-├── fetch_and_send.sh
-├── fetch_scholar.py
-├── gui.py
-├── helper_funcs.py
-├── log_config.py
-├── main.py
+scholar-slack-bot/
+├── .github/
+│   └── workflows/          # GitHub Actions (if configured)
+├── .githooks/
+│   └── pre-push           # Pre-push validation hook
+├── scripts/
+│   ├── setup-hooks.sh     # Install git hooks
+│   └── validate-before-push.sh  # Validation script
+├── src/
+│   ├── authors.db         # SQLite database of monitored authors
+│   ├── publications.db    # SQLite cache of publications
+│   └── slack.config       # Slack API configuration
+├── tests/
+│   ├── test_golden_real.py      # End-to-end integration tests
+│   ├── test_golden_simple.py    # Unit tests with mocked data
+│   ├── test_gui.py              # Flask GUI tests
+│   ├── test_log_config.py       # Logging tests
+│   ├── test_main.py             # Main module tests
+│   └── test_streams_funcs.py    # Workflow tests
+├── add_authors_batch.sh   # Optional: batch add authors via CLI
+├── fetch_and_send.sh      # Optional: automation script for cron
+├── fetch_scholar.py       # Google Scholar API interaction
+├── gui.py                 # Flask web interface
+├── helper_funcs.py        # Utility functions
+├── log_config.py          # Logging configuration
+├── main.py                # Main CLI entry point
+├── pytest.ini             # Pytest configuration
 ├── README.md
-├── settings.json
-├── slack_bot.py
-├── streams_funcs.py
-└── src
-    ├── authors.db
-    ├── publications.db
-    └── slack.config
+├── requirements.txt       # Python dependencies
+├── settings.json          # GUI persistent settings
+├── slack_bot.py           # Slack messaging functions
+└── streams_funcs.py       # Workflow orchestration
 ```
 
 ---
 
-## 📝 Files Descriptions  
+## 📝 Key Files
 
-- **`add_authors_batch.sh`**: Bash script for batch-adding authors.  
-- **`fetch_and_send.sh`**: Bash script to run the bot workflow.  
-- **`fetch_scholar.py`**: Internal functions to fetch publications from Google Scholar.
-- **`gui.py`**: Flask web application for author management and settings.
-- **`helper_funcs.py`**: Internal utility functions.
-- **`log_config.py`**: Internal Logging configuration.  
-- **`main.py`**: The main script to run the bot.  
-- **`slack_bot.py`**: Internal functions to format and send messages to Slack.  
-- **`streams_funcs.py`**: Internal, handles workflow logic based on CLI flags.
-- **`authors.db`**: SQLite database storing author names and Google Scholar IDs.
+### Core Application Files
+- **`main.py`**: CLI entry point with subcommand-based interface
+- **`fetch_scholar.py`**: Google Scholar API interactions and data fetching
+- **`slack_bot.py`**: Slack message formatting and API communication
+- **`streams_funcs.py`**: Workflow orchestration for different command modes
+- **`helper_funcs.py`**: Utility functions (database operations, cache management)
+- **`log_config.py`**: Centralized logging configuration
+- **`gui.py`**: Flask web interface for visual management
 
-- **`publications.db`**: SQLite database caching publication data.
-- **`slack.config`**: Configuration file for Slack settings. Example format:
-- **`settings.json`**: Persistent options used by the GUI (database paths, API delay, etc.).
-
+### Configuration Files
+- **`src/slack.config`**: Slack API credentials and channel configuration
   ```ini
   [slack]
   api_token = xoxb-YOUR-API-TOKEN
-  channel_name = your-channel-or-user
+  channel_name = your-channel-or-user  # Channel name or direct message target
   ```
+  💡 *No channel ID needed — the bot auto-detects channels vs. users*
 
-💡 *You do not need to specify a channel ID — the bot will automatically determine whether `channel_name` refers to a public/private channel or a user.*  
+- **`settings.json`**: GUI persistent settings (database paths, API delay, etc.)
+- **`pytest.ini`**: Test framework configuration
+
+### Database Files
+- **`src/authors.db`**: SQLite database storing monitored authors (name + Google Scholar ID)
+- **`src/publications.db`**: SQLite cache of fetched publications with metadata
+
+### Testing
+- **`tests/`**: Comprehensive test suite including:
+  - Golden tests (mocked + real API integration)
+  - GUI tests (Flask routes and actions)
+  - Workflow tests (command orchestration)
+  - Unit tests (individual modules)
+
+### Automation Scripts (Optional)
+- **`add_authors_batch.sh`**: Batch add multiple authors via CLI
+- **`fetch_and_send.sh`**: Run full workflow (useful for cron jobs)  
 
 ---
 
