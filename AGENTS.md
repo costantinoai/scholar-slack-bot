@@ -1,5 +1,17 @@
 # AGENTS Guidelines
 
+## Environment Setup
+- **Python Environment**: Use the `scholarbot` conda/mamba environment
+- **Package Installation**:
+  - Prefer `mamba` for package installation (faster than conda)
+  - Fallback to `pip` if package not available in mamba/conda
+  - Example:
+    ```bash
+    conda activate scholarbot
+    mamba install package_name  # Try mamba first
+    pip install package_name     # Fallback to pip
+    ```
+
 ## Development Workflow
 - Format code with [`black`](https://black.readthedocs.io/en/stable/). Run:
   ```bash
