@@ -19,32 +19,76 @@ NC='\033[0m' # No Color
 # ============================================================================
 # Conda environment setup
 # ============================================================================
-# Default conda environment name
 CONDA_ENV_NAME="${CONDA_ENV_NAME:-scholarbot}"
 
+# Try very hard to load conda into this non-interactive shell
 load_conda() {
-  if ! command -v conda >/dev/null 2>&1; then
-    return 1
+  # If conda is already present, try to convert it into a shell function
+  if command -v conda >/dev/null 2>&1; then
+    # Already a function?
+    if type conda 2>/dev/null | grep -q 'is a function'; then
+      return 0
+    fi
+    # Not a function: try official init paths
+    local base
+    base="$(conda info --base 2>/dev/null || true)"
+    if [[ -n "${base:-}" && -f "$base/etc/profile.d/conda.sh" ]]; then
+      # shellcheck disable=SC1091
+      source "$base/etc/profile.d/conda.sh"
+      return 0
+    fi
+    # Fallback hook
+    if eval "$(conda shell.bash hook 2>/dev/null)"; then
+      return 0
+    fi
   fi
 
-  # If conda is already a shell function, nothing else to do.
-  if type conda 2>/dev/null | grep -q "is a function"; then
-    return 0
+  # Not on PATH — search common install roots (macOS/Linux + Git Bash on Windows)
+  # Add more here if your setup is custom.
+  local candidates=(
+    "$HOME/miniconda3"
+    "$HOME/anaconda3"
+    "$HOME/miniforge3"
+    "$HOME/mambaforge"
+    "/opt/miniconda3"
+    "/opt/anaconda3"
+    "/usr/local/miniconda3"
+    "/usr/local/anaconda3"
+  )
+
+  # Git Bash on Windows typical locations
+  if [[ -n "${USERNAME:-}" ]]; then
+    candidates+=(
+      "/c/Users/$USERNAME/Miniconda3"
+      "/c/Users/$USERNAME/Anaconda3"
+      "/c/ProgramData/Miniconda3"
+      "/c/ProgramData/Anaconda3"
+    )
   fi
 
-  # Try sourcing conda.sh from the base install (most reliable)
-  local conda_base
-  conda_base="$(conda info --base 2>/dev/null || true)"
-  if [[ -n "${conda_base:-}" && -f "$conda_base/etc/profile.d/conda.sh" ]]; then
-    # shellcheck disable=SC1091
-    source "$conda_base/etc/profile.d/conda.sh"
-    return 0
-  fi
-
-  # Fallback: use the hook initializer (older installs)
-  if eval "$(conda shell.bash hook 2>/dev/null)"; then
-    return 0
-  fi
+  for root in "${candidates[@]}"; do
+    if [[ -d "$root" ]]; then
+      if [[ -f "$root/etc/profile.d/conda.sh" ]]; then
+        # shellcheck disable=SC1091
+        source "$root/etc/profile.d/conda.sh"
+        return 0
+      fi
+      if [[ -x "$root/bin/conda" ]]; then
+        PATH="$root/bin:$PATH"
+        # Try again to turn it into a function
+        if eval "$("$root/bin/conda" shell.bash hook 2>/dev/null)"; then
+          return 0
+        fi
+      fi
+      # Windows Git Bash may have conda.exe in Scripts
+      if [[ -x "$root/Scripts/conda.exe" ]]; then
+        PATH="$root/Scripts:$PATH"
+        if eval "$("$root/Scripts/conda.exe" shell.bash hook 2>/dev/null)"; then
+          return 0
+        fi
+      fi
+    fi
+  done
 
   return 1
 }
@@ -62,7 +106,9 @@ if load_conda; then
     echo ""
   fi
 else
-  echo -e "${YELLOW}⚠️  Conda not found on PATH in this hook's shell - using current Python environment${NC}"
+  echo -e "${YELLOW}⚠️  Conda not found in this hook's PATH; using current Python environment${NC}"
+  echo "   (Hooks run in a minimal, non-interactive shell. If you installed Conda to a"
+  echo "    non-standard path, add it above in the 'candidates' list.)"
   echo ""
 fi
 
@@ -75,6 +121,7 @@ command_exists() {
 if ! command_exists pytest; then
   echo -e "${RED}❌ ERROR: pytest not found${NC}"
   echo "   Install with: pip install pytest"
+  echo "   Or ensure it's available inside the activated Conda env."
   exit 1
 fi
 

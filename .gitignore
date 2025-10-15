@@ -6,7 +6,8 @@ test/
 fetch_and_send.sh
 *.bkp
 **/obsolete
+
+# Internal documentation (not for GitHub)
 DEVELOPMENT.md
 MERGE_ASSESSMENT.md
 MODERNIZATION_PLAN.md
-tests/README_GOLDEN_TESTS.md
