@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Pre-push hook to enforce golden tests
 # This hook ensures that the REAL golden test passes before allowing a push
 
-set -e  # Exit on any error
+set -euo pipefail
 
 echo ""
 echo "╔════════════════════════════════════════════════════════════════╗"
@@ -22,38 +22,60 @@ NC='\033[0m' # No Color
 # Default conda environment name
 CONDA_ENV_NAME="${CONDA_ENV_NAME:-scholarbot}"
 
-# Check if conda is available
-if command -v conda >/dev/null 2>&1; then
-    # Initialize conda for bash
-    eval "$(conda shell.bash hook)"
+load_conda() {
+  if ! command -v conda >/dev/null 2>&1; then
+    return 1
+  fi
 
-    # Try to activate the environment
-    if conda activate "$CONDA_ENV_NAME" 2>/dev/null; then
-        echo "✅ Activated conda environment: $CONDA_ENV_NAME"
-        echo ""
-    else
-        echo -e "${YELLOW}⚠️  Could not activate conda environment: $CONDA_ENV_NAME${NC}"
-        echo "   Tests will run in current environment"
-        echo ""
-        echo "   To specify a different environment, set CONDA_ENV_NAME:"
-        echo "   export CONDA_ENV_NAME=your_env_name"
-        echo ""
-    fi
-else
-    echo -e "${YELLOW}⚠️  Conda not found - using current Python environment${NC}"
+  # If conda is already a shell function, nothing else to do.
+  if type conda 2>/dev/null | grep -q "is a function"; then
+    return 0
+  fi
+
+  # Try sourcing conda.sh from the base install (most reliable)
+  local conda_base
+  conda_base="$(conda info --base 2>/dev/null || true)"
+  if [[ -n "${conda_base:-}" && -f "$conda_base/etc/profile.d/conda.sh" ]]; then
+    # shellcheck disable=SC1091
+    source "$conda_base/etc/profile.d/conda.sh"
+    return 0
+  fi
+
+  # Fallback: use the hook initializer (older installs)
+  if eval "$(conda shell.bash hook 2>/dev/null)"; then
+    return 0
+  fi
+
+  return 1
+}
+
+if load_conda; then
+  if conda activate "$CONDA_ENV_NAME" >/dev/null 2>&1; then
+    echo -e "✅ Activated conda environment: $CONDA_ENV_NAME"
     echo ""
+  else
+    echo -e "${YELLOW}⚠️  Could not activate conda environment: $CONDA_ENV_NAME${NC}"
+    echo "   Tests will run in current environment"
+    echo ""
+    echo "   To specify a different environment, set CONDA_ENV_NAME:"
+    echo "   export CONDA_ENV_NAME=your_env_name"
+    echo ""
+  fi
+else
+  echo -e "${YELLOW}⚠️  Conda not found on PATH in this hook's shell - using current Python environment${NC}"
+  echo ""
 fi
 
 # Function to check if command exists
 command_exists() {
-    command -v "$1" >/dev/null 2>&1
+  command -v "$1" >/dev/null 2>&1
 }
 
 # Check if pytest is available
 if ! command_exists pytest; then
-    echo -e "${RED}❌ ERROR: pytest not found${NC}"
-    echo "   Install with: pip install pytest"
-    exit 1
+  echo -e "${RED}❌ ERROR: pytest not found${NC}"
+  echo "   Install with: pip install pytest"
+  exit 1
 fi
 
 # ============================================================================
