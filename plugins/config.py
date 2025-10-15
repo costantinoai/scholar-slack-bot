@@ -5,6 +5,7 @@ from various sources (files, environment variables, etc.).
 """
 
 import json
+import os
 import configparser
 import logging
 from pathlib import Path
@@ -263,6 +264,17 @@ def load_plugin_config(plugin_name: str) -> Optional[Dict[str, Any]]:
         return config
     except (FileNotFoundError, KeyError):
         pass
+
+    # Environment variable fallback for Slack
+    if plugin_name == "slack":
+        token = os.getenv("SLACK_API_TOKEN")
+        default_channel = os.getenv("SLACK_DEFAULT_CHANNEL") or os.getenv("SLACK_CHANNEL")
+        if token:
+            logger.info("Loaded Slack configuration from environment variables")
+            cfg = {"api_token": token}
+            if default_channel:
+                cfg["default_channel"] = default_channel
+            return cfg
 
     # No configuration found
     logger.debug(f"No configuration found for plugin: {plugin_name}")

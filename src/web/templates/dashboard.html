@@ -215,8 +215,23 @@
 
     // Quick action functions
     async function fetchAllAuthors() {
-        showToast('Fetch operation would be triggered here', 'info');
-        // TODO: Implement fetch trigger endpoint
+        showToast('Fetching latest pubs and sending...', 'info');
+        try {
+            const res = await fetch('/api/v1/fetch/fetch-and-send', { method: 'POST' });
+            if (res.ok) {
+                const data = await res.json();
+                if (data.sent) {
+                    showToast(`Sent update (${data.count || 0} items)`, 'success');
+                } else {
+                    showToast('Nothing to send', 'info');
+                }
+            } else {
+                const err = await res.json();
+                showToast(err.detail || 'Fetch & send failed', 'error');
+            }
+        } catch (e) {
+            showToast('Network error during fetch & send', 'error');
+        }
     }
 
     async function sendTestNotification() {

@@ -302,8 +302,7 @@ def clean_pubs(fetched_pubs, from_year=2023, exclude_not_cited_papers=False):
         # Check if the publication meets the year criterion and hasn't been seen before
         if (
             pub["bib"].get("pub_year")  # if the publication has a 'year' field
-            and int(pub["bib"]["pub_year"])
-            <= int(from_year)  # if the pub year is >= from_year
+            and int(pub["bib"]["pub_year"]) >= int(from_year)
             and (
                 not exclude_not_cited_papers or pub["num_citations"] > 0
             )  # if exclude_not_cited_papers is True, then we select only papers with citations

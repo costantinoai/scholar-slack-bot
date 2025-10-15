@@ -9,6 +9,7 @@ import sys
 import time
 import logging
 from contextlib import asynccontextmanager
+import uuid
 
 from fastapi import FastAPI, Request, status
 from fastapi.responses import JSONResponse
@@ -21,6 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.api.models import HealthResponse, VersionResponse, ErrorResponse, StatisticsResponse
 from src.api.routes import authors_router, publications_router, plugins_router
+from src.api.routes.operations import router as operations_router
 from src.api.deps import get_authors_db, get_publications_db, get_plugin_registry
 
 logger = logging.getLogger(__name__)
@@ -147,6 +149,7 @@ app.add_middleware(
 async def log_requests(request: Request, call_next):
     """Log all incoming requests."""
     start_time = time.time()
+    request_id = request.headers.get("X-Request-ID") or str(uuid.uuid4())
 
     # Process request
     response = await call_next(request)
@@ -156,11 +159,13 @@ async def log_requests(request: Request, call_next):
     logger.info(
         f"{request.method} {request.url.path} "
         f"status={response.status_code} "
-        f"duration={process_time:.3f}s"
+        f"duration={process_time:.3f}s "
+        f"request_id={request_id}"
     )
 
     # Add custom header
     response.headers["X-Process-Time"] = str(process_time)
+    response.headers["X-Request-ID"] = request_id
 
     return response
 
@@ -367,6 +372,7 @@ async def get_statistics():
 app.include_router(authors_router, prefix="/api/v1")
 app.include_router(publications_router, prefix="/api/v1")
 app.include_router(plugins_router, prefix="/api/v1")
+app.include_router(operations_router, prefix="/api/v1")
 
 # Mount web UI routes
 try:

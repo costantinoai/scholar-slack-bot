@@ -12,6 +12,7 @@ import sqlite3
 from scholarly import scholarly
 import logging
 import time
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 from tqdm import tqdm
@@ -26,8 +27,17 @@ from helper_funcs import (
 
 logger = logging.getLogger(__name__)
 
-MAX_RETRIES = 3
-DELAYS = [20, 40, 60]
+def _parse_retry_delays(env_value: str):
+    try:
+        parts = [int(p.strip()) for p in env_value.split(",") if p.strip()]
+        return [p for p in parts if p >= 0]
+    except Exception:
+        return None
+
+# Allow overriding retry delays via environment variable, e.g. "15,30,60"
+_env_delays = _parse_retry_delays(os.getenv("SCHOLAR_RETRY_DELAYS", ""))
+DELAYS = _env_delays if _env_delays else [20, 40, 60]
+MAX_RETRIES = max(1, len(DELAYS))
 DEFAULT_SRC_DIR = "./src"
 DB_NAME = "publications.db"
 DEFAULT_DB_DIR = DEFAULT_SRC_DIR

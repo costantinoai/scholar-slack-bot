@@ -9,6 +9,7 @@
         <div>
             <h1 class="text-3xl font-bold text-gray-900">Authors</h1>
             <p class="mt-2 text-gray-600">Manage monitored authors and their publications</p>
+            <p id="plugin-status" class="mt-1 text-sm text-gray-500">Loading plugin status…</p>
         </div>
         <button onclick="showAddAuthorModal()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,6 +146,22 @@
     console.log('===== Authors Page JavaScript Loading =====');
     let authorsData = [];
     let deleteAuthorId = null;
+
+    // Prefill plugin status (no secrets)
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const res = await fetch('/api/v1/plugins/slack');
+            if (!res.ok) throw new Error('Failed');
+            const info = await res.json();
+            const statusEl = document.getElementById('plugin-status');
+            const configured = info.is_configured ? 'Configured' : 'Not configured';
+            const healthy = info.is_healthy === true ? 'Healthy' : (info.is_healthy === False ? 'Unhealthy' : 'Unknown');
+            statusEl.textContent = `Slack plugin: ${configured} • Health: ${healthy}`;
+        } catch (e) {
+            const statusEl = document.getElementById('plugin-status');
+            statusEl.textContent = 'Slack plugin status unavailable';
+        }
+    });
 
     // Modal functions
     function showAddAuthorModal() {
