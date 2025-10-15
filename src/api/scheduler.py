@@ -5,11 +5,14 @@ from typing import Callable, Dict
 
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
+from apscheduler.triggers.date import DateTrigger
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
 _scheduler: BackgroundScheduler | None = None
 _job_meta: dict[str, dict] = {}
+_job_status: dict[str, dict] = {}
 
 
 def get_scheduler() -> BackgroundScheduler:
@@ -73,6 +76,22 @@ def run_job(job_id: str) -> bool:
     job = sched.get_job(job_id)
     if not job:
         return False
+
+
+def get_job_status(job_id: str) -> dict | None:
+    return _job_status.get(job_id)
+
+
+def set_job_status(job_id: str, **kwargs) -> None:  # noqa: ANN001
+    status = _job_status.get(job_id, {})
+    status.update(kwargs)
+    _job_status[job_id] = status
+
+
+def schedule_immediate(job_id: str, func, *args, **kwargs):  # noqa: ANN001
+    sched = get_scheduler()
+    sched.add_job(func, trigger=DateTrigger(run_date=datetime.now()), id=job_id, replace_existing=True, args=args, kwargs=kwargs)
+    logger.info("Scheduled immediate job %s", job_id)
     try:
         # Directly call the stored function
         func = job.func

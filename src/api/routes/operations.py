@@ -14,7 +14,15 @@ from plugins.slack import SlackPlugin
 from plugins.config import load_plugin_config
 from plugins.base import Publication
 from fetch_backend import fetch_from_json, fetch_publications_by_id
-from src.api.scheduler import add_cron_job, list_jobs, remove_job, run_job
+from src.api.scheduler import (
+    add_cron_job,
+    list_jobs,
+    remove_job,
+    run_job,
+    schedule_immediate,
+    set_job_status,
+    get_job_status,
+)
 from src.api.models import JobCreate, JobResponse
 
 logger = logging.getLogger(__name__)
@@ -176,3 +184,43 @@ async def run_job_now(job_id: str):
     if not run_job(job_id):
         raise HTTPException(status_code=404, detail="Job not found or execution failed")
     return {"success": True, "job_id": job_id}
+
+
+@router.post("/run", summary="Run fetch action asynchronously")
+async def run_async_action(payload: dict, user: dict = Depends(get_current_user)):
+    action = payload.get("action")
+    if action not in ("fetch", "fetch_and_notify"):
+        raise HTTPException(status_code=400, detail="Invalid action")
+
+    job_id = f"run_{hash((action, datetime.now().isoformat())) & 0xFFFFFFFF}"
+    set_job_status(job_id, status="running", started_at=datetime.now().isoformat(), message=f"Starting {action}")
+
+    def _runner():
+        try:
+            if action == "fetch":
+                db_gen = get_authors_db()
+                conn = next(db_gen)
+                try:
+                    res = do_refresh_cache_all(conn)
+                finally:
+                    try:
+                        next(db_gen)
+                    except StopIteration:
+                        pass
+                set_job_status(job_id, status="completed", finished_at=datetime.now().isoformat(), result=res)
+            else:
+                res = do_fetch_and_send_all()
+                set_job_status(job_id, status="completed", finished_at=datetime.now().isoformat(), result=res)
+        except Exception as e:  # pragma: no cover
+            set_job_status(job_id, status="failed", finished_at=datetime.now().isoformat(), error=str(e))
+
+    schedule_immediate(job_id, _runner)
+    return {"job_id": job_id, "status": "running", "status_url": f"/api/v1/fetch/jobs/{job_id}/status"}
+
+
+@router.get("/jobs/{job_id}/status", summary="Get job status")
+async def get_status(job_id: str):
+    st = get_job_status(job_id)
+    if not st:
+        raise HTTPException(status_code=404, detail="Job not found")
+    return st

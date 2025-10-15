@@ -14,6 +14,7 @@ from typing import List, Tuple
 from helper_funcs import get_authors_json
 import fetch_scholar
 from src.openalex.client import find_author_id_by_name, fetch_works_for_author, upsert_publications, _get_mailto
+from helper_funcs import _init_authors_db  # type: ignore
 
 
 def _backend() -> str:
@@ -38,7 +39,21 @@ def fetch_from_json(args, idx=None):  # noqa: ANN001
     from_year = int(__import__("time").strftime("%Y"))
     pubs: List[dict] = []
     for name, author_id in authors:
-        openalex_id = find_author_id_by_name(name, mailto)
+        # Reuse stored OpenAlex ID if present
+        conn = _init_authors_db(args.authors_path)
+        try:
+            row = conn.execute("SELECT openalex_id FROM authors WHERE id=?", (author_id,)).fetchone()
+        finally:
+            conn.close()
+        openalex_id = row[0] if row and row[0] else find_author_id_by_name(name, mailto)
+        # Persist for future
+        if openalex_id:
+            conn = _init_authors_db(args.authors_path)
+            try:
+                conn.execute("UPDATE authors SET openalex_id=? WHERE id=?", (openalex_id, author_id))
+                conn.commit()
+            finally:
+                conn.close()
         if not openalex_id:
             continue
         works = fetch_works_for_author(openalex_id, from_year, mailto)
@@ -66,19 +81,22 @@ def fetch_publications_by_id(
 
     # OpenAlex path
     mailto = _get_mailto()
-    # We require author's name to find OpenAlex ID
-    # Load from authors DB (same location as output_folder)
-    from helper_funcs import _init_authors_db  # type: ignore
-
     conn = _init_authors_db(f"{output_folder}/authors.db")
     try:
-        row = conn.execute("SELECT name FROM authors WHERE id=?", (author_id,)).fetchone()
+        row = conn.execute("SELECT name, openalex_id FROM authors WHERE id=?", (author_id,)).fetchone()
     finally:
         conn.close()
     if not row:
         return []
-    name = row[0]
-    openalex_id = find_author_id_by_name(name, mailto)
+    name, existing_oa = row
+    openalex_id = existing_oa or find_author_id_by_name(name, mailto)
+    if openalex_id and not existing_oa:
+        conn = _init_authors_db(f"{output_folder}/authors.db")
+        try:
+            conn.execute("UPDATE authors SET openalex_id=? WHERE id=?", (openalex_id, author_id))
+            conn.commit()
+        finally:
+            conn.close()
     if not openalex_id:
         return []
     works = fetch_works_for_author(openalex_id, from_year, mailto)
@@ -87,4 +105,3 @@ def fetch_publications_by_id(
     if exclude_not_cited_papers:
         works = [w for w in works if (w.get("num_citations") or 0) > 0]
     return works
-

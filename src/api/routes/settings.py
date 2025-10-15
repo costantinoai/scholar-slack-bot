@@ -12,6 +12,7 @@ from typing import Optional
 
 from fastapi import APIRouter, HTTPException, status
 from pydantic import BaseModel, Field
+import requests
 
 logger = logging.getLogger(__name__)
 
@@ -85,3 +86,28 @@ async def update_settings(payload: SettingsModel):
         logger.error(f"Failed to update settings: {e}")
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
 
+
+@router.get("/test/openalex")
+async def test_openalex_connectivity():
+    """Test connectivity to the OpenAlex API (polite pool if email is set)."""
+    try:
+        email = _read_settings().get("openalex_email")
+        params = {"search": "test", "per_page": 1}
+        if email:
+            params["mailto"] = email
+        r = requests.get("https://api.openalex.org/authors", params=params, timeout=10)
+        ok = r.status_code == 200
+        return {"success": ok, "status": r.status_code}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+
+@router.get("/test/scholar")
+async def test_scholar_connectivity():
+    """Best-effort test for scholarly availability (no real scrape)."""
+    try:
+        import scholarly  # noqa: F401
+        # We avoid real requests to Scholar here to be respectful.
+        return {"success": True, "message": "scholarly library available"}
+    except Exception as e:
+        return {"success": False, "error": str(e)}

@@ -88,7 +88,10 @@
         <!-- Quick actions -->
         <div class="bg-white rounded-lg shadow">
             <div class="px-6 py-4 border-b border-gray-200">
-                <h3 class="text-lg font-semibold text-gray-900">Quick Actions</h3>
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-semibold text-gray-900">Quick Actions</h3>
+                    <button onclick="checkHealth()" class="px-3 py-1 text-sm bg-gray-100 text-gray-800 rounded hover:bg-gray-200">Check Health</button>
+                </div>
             </div>
             <div class="p-6 space-y-3">
                 <a href="/authors?action=add" class="block w-full px-4 py-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-center font-medium">
@@ -224,22 +227,37 @@
             const ok = confirm('OpenAlex backend is active. This may take up to ~1 minute per new author. Proceed?');
             if (!ok) return;
         }
-        showToast('Fetching latest pubs and sending...', 'info');
+        showLoading(true);
         try {
-            const res = await fetch('/api/v1/fetch/fetch-and-send', { method: 'POST' });
-            if (res.ok) {
-                const data = await res.json();
-                if (data.sent) {
-                    showToast(`Sent update (${data.count || 0} items)`, 'success');
-                } else {
-                    showToast('Nothing to send', 'info');
-                }
-            } else {
-                const err = await res.json();
-                showToast(err.detail || 'Fetch & send failed', 'error');
-            }
+            const res = await fetch('/api/v1/fetch/run', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'fetch_and_notify' }) });
+            if (!res.ok) { const err = await res.json(); throw new Error(err.detail || 'Failed to start job'); }
+            const { job_id } = await res.json();
+            await pollJob(job_id);
         } catch (e) {
             showToast('Network error during fetch & send', 'error');
+        } finally { showLoading(false); }
+    }
+
+    function showLoading(on) {
+        const overlay = document.getElementById('loading-overlay');
+        if (!overlay) return;
+        overlay.style.display = on ? 'flex' : 'none';
+        overlay.style.pointerEvents = 'none';
+    }
+
+    async function pollJob(jobId) {
+        const url = `/api/v1/fetch/jobs/${jobId}/status`;
+        while (true) {
+            await new Promise(r => setTimeout(r, 2000));
+            const r = await fetch(url);
+            if (!r.ok) return;
+            const st = await r.json();
+            if (st.status === 'completed') {
+                const count = st.result && (st.result.count || st.result.refreshed || 0);
+                showToast(`Completed (${count} items)`, 'success');
+                break;
+            }
+            if (st.status === 'failed') { showToast('Job failed: ' + (st.error || ''), 'error'); break; }
         }
     }
 
@@ -263,16 +281,17 @@
             const response = await fetch('/api/v1/health');
             const health = await response.json();
             if (health.status === 'healthy') {
-                showToast('System is healthy!', 'success');
                 document.getElementById('api-status').innerHTML = `
                     <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Healthy
                 `;
             } else {
-                showToast('System has issues', 'warning');
+                document.getElementById('api-status').innerHTML = `
+                    <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                    Degraded
+                `;
             }
         } catch (error) {
-            showToast('Cannot reach API', 'error');
             document.getElementById('api-status').innerHTML = `
                 <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
                 Offline
@@ -283,7 +302,6 @@
     // Load dashboard on page load
     document.addEventListener('DOMContentLoaded', loadDashboard);
 
-    // Check health every 30 seconds
-    setInterval(checkHealth, 30000);
+    // Health checks only when requested
 </script>
 {% endblock %}

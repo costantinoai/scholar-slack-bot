@@ -146,6 +146,7 @@
     console.log('===== Authors Page JavaScript Loading =====');
     let authorsData = [];
     let deleteAuthorId = null;
+    let pluginSlackConfigured = false;
 
     // Prefill plugin status (no secrets)
     document.addEventListener('DOMContentLoaded', async () => {
@@ -157,6 +158,17 @@
             const configured = info.is_configured ? 'Configured' : 'Not configured';
             const healthy = info.is_healthy === true ? 'Healthy' : (info.is_healthy === False ? 'Unhealthy' : 'Unknown');
             statusEl.textContent = `Slack plugin: ${configured} • Health: ${healthy}`;
+            pluginSlackConfigured = !!info.is_configured;
+            // Disable Fetch & Send buttons if not configured
+            if (!pluginSlackConfigured) {
+                document.querySelectorAll('button').forEach(btn => {
+                    if (btn.textContent && btn.textContent.includes('Fetch & Send')) {
+                        btn.disabled = true;
+                        btn.title = 'Configure Slack plugin first';
+                        btn.classList.add('opacity-50', 'cursor-not-allowed');
+                    }
+                });
+            }
         } catch (e) {
             const statusEl = document.getElementById('plugin-status');
             statusEl.textContent = 'Slack plugin status unavailable';

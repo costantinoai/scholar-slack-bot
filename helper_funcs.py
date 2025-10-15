@@ -191,6 +191,13 @@ def _init_authors_db(authors_path: str) -> sqlite3.Connection:
                 id TEXT PRIMARY KEY
             )"""
     )
+    # Add optional columns if missing (e.g., openalex_id)
+    try:
+        cols = [row[1] for row in conn.execute("PRAGMA table_info(authors)").fetchall()]
+        if 'openalex_id' not in cols:
+            conn.execute("ALTER TABLE authors ADD COLUMN openalex_id TEXT")
+    except Exception:
+        pass
     return conn
 
 
