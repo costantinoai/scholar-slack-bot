@@ -14,7 +14,9 @@ from helper_funcs import (
     convert_json_to_tuple,
 )
 from fetch_scholar import fetch_from_json, fetch_pubs_dictionary
-from slack_bot import make_slack_msg, send_to_slack
+from slack_bot import make_slack_msg
+from plugins.registry import get_global_registry
+from plugins.slack import SlackPlugin
 
 logger = logging.getLogger(__name__)
 
@@ -62,16 +64,23 @@ def test_fetch_and_message(args, ch_name, token, limit: int = 2) -> None:
     success = True  # To track if all messages are sent successfully.
 
     # Loop through each formatted message and send it to Slack.
+    # Send via plugin registry (preferred)
+    registry = get_global_registry()
+    try:
+        # Register once if not present
+        if "slack" not in registry.list_plugins():
+            registry.register(SlackPlugin)
+        plugin = registry.create_instance("slack", {"api_token": token, "default_channel": ch_name}, cache=True)
+    except Exception as e:
+        logger.error(f"Failed to initialize Slack plugin: {e}")
+        return
+
     for formatted_message in formatted_messages:
         formatted_message = f"```\n{test_header}\n{formatted_message}\n```"
-        response_json = send_to_slack(ch_name, formatted_message, token)
-
-        # Update success status based on the response.
-        if not response_json["ok"]:
+        ok = plugin.send_message(formatted_message, ch_name)
+        if not ok:
             success = False
-            e = response_json["error"]
-            # It might be useful to log failures as they happen.
-            logger.warning(f"Failed to send a test message due to: {e}")
+            logger.warning("Failed to send a test message via Slack plugin")
 
     # Log overall success or failure.
     if success:
@@ -98,6 +107,9 @@ def regular_fetch_and_message(args, ch_name, token):
 
     """
 
+    logger.info(
+        "Starting fetch & send workflow: target=%s (messages will be sent)", ch_name
+    )
     # Fetch all authors' details from the provided path.
     authors, articles = fetch_from_json(args)
 
@@ -109,21 +121,30 @@ def regular_fetch_and_message(args, ch_name, token):
     success = True
     error_message = None  # To store any error encountered.
 
-    # Send each formatted message to Slack.
-    for formatted_message in formatted_messages:
-        response_json = send_to_slack(ch_name, formatted_message, token)
+    # Send each formatted message via Slack plugin
+    registry = get_global_registry()
+    try:
+        if "slack" not in registry.list_plugins():
+            registry.register(SlackPlugin)
+        plugin = registry.create_instance("slack", {"api_token": token, "default_channel": ch_name}, cache=True)
+    except Exception as e:
+        logger.error(f"Failed to initialize Slack plugin: {e}")
+        plugin = None
 
-        # If any message fails, update the success flag and store the error.
-        if not response_json["ok"]:
+    for formatted_message in formatted_messages:
+        if plugin is None:
+            break
+        ok = plugin.send_message(formatted_message, ch_name)
+        if not ok:
             success = False
-            error_message = response_json.get("error", "Unknown error")
+            error_message = "send_message returned False"
             logger.warning(f"Failed to send a message due to: {error_message}")
 
     # Handle post-message actions based on the success flag.
     if success:
         confirm_temp_cache(args.temp_cache_path, args.cache_path)
         logger.info(
-            "Fetched publications successfully moved to cache. Temporary cache cleared."
+            "All messages sent. Moved fetched publications to cache and cleared temp cache."
         )
     else:
         # Clear the temporary cache due to the failure in sending messages.

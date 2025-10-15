@@ -3,10 +3,17 @@
 import logging
 import sqlite3
 from typing import List
+from datetime import datetime
+from types import SimpleNamespace
 from fastapi import APIRouter, Depends, HTTPException, status
 
 from src.api.models import AuthorCreate, AuthorResponse, ErrorResponse
 from src.api.deps import get_authors_db, get_publications_db, get_current_user
+from fetch_scholar import fetch_publications_by_id
+from plugins.config import load_plugin_config
+from plugins.registry import get_global_registry
+from plugins.slack import SlackPlugin
+from plugins.base import Publication
 from helper_funcs import add_new_author_to_json, get_authors_json
 
 logger = logging.getLogger(__name__)
@@ -349,3 +356,113 @@ async def get_author_publications(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to retrieve publications: {str(e)}"
         )
+
+
+@router.post(
+    "/{author_id}/refresh-cache",
+    summary="Refresh author cache (no send)",
+    description="Fetch latest publications for an author and update the cache. Does NOT send messages.",
+)
+async def refresh_author_cache(
+    author_id: str,
+    db: sqlite3.Connection = Depends(get_authors_db),
+    pub_db: sqlite3.Connection = Depends(get_publications_db),
+    user: dict = Depends(get_current_user),
+):
+    """Refresh cached publications for a specific author without sending notifications."""
+    try:
+        # Verify author exists
+        cursor = db.execute("SELECT name FROM authors WHERE id=?", (author_id,))
+        row = cursor.fetchone()
+        if not row:
+            raise HTTPException(status_code=404, detail="Author not found")
+
+        author_name = row["name"]
+        year = datetime.now().year
+        logger.info("Refreshing cache only for author %s (%s), year >= %s", author_name, author_id, year)
+
+        # Update cache via fetch pipeline (writes into ./src/publications.db)
+        pubs = fetch_publications_by_id(
+            author_id,
+            output_folder="./src",
+            args=SimpleNamespace(update_cache=True, test_fetching=False),
+            from_year=year,
+        )
+        count = len(pubs or [])
+        logger.info("Cache refresh complete for %s: %d publication(s)", author_id, count)
+        return {"success": True, "author_id": author_id, "count": count}
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error refreshing cache for author {author_id}: {e}")
+        raise HTTPException(status_code=500, detail=f"Refresh failed: {e}")
+
+
+@router.post(
+    "/{author_id}/fetch-and-send",
+    summary="Fetch and send for author",
+    description="Fetch latest publications for an author and send a Slack notification using configured plugin.",
+)
+async def fetch_and_send_author(
+    author_id: str,
+    db: sqlite3.Connection = Depends(get_authors_db),
+    user: dict = Depends(get_current_user),
+):
+    """Fetch latest publications for an author and send via Slack plugin."""
+    try:
+        # Verify author exists
+        cursor = db.execute("SELECT name FROM authors WHERE id=?", (author_id,))
+        row = cursor.fetchone()
+        if not row:
+            raise HTTPException(status_code=404, detail="Author not found")
+        author_name = row["name"]
+
+        year = datetime.now().year
+        logger.info("Fetch & send for author %s (%s), year >= %s", author_name, author_id, year)
+
+        # Fetch publications (returns the new/filtered list)
+        pubs = fetch_publications_by_id(
+            author_id,
+            output_folder="./src",
+            args=SimpleNamespace(update_cache=False, test_fetching=False),
+            from_year=year,
+        ) or []
+
+        # Prepare plugin
+        config = load_plugin_config("slack")
+        if not config or "api_token" not in config:
+            raise HTTPException(status_code=400, detail="Slack plugin not configured")
+        registry = get_global_registry()
+        if "slack" not in registry.list_plugins():
+            registry.register(SlackPlugin)
+        plugin = registry.create_instance("slack", config, cache=True)
+
+        # Convert to dataclasses for formatting
+        publications = [
+            Publication(
+                title=p.get("title", ""),
+                authors=p.get("authors", ""),
+                year=str(p.get("year", "")),
+                abstract=p.get("abstract", ""),
+                pub_url=p.get("pub_url", ""),
+                journal=p.get("journal", ""),
+                citations=p.get("num_citations"),
+            )
+            for p in pubs
+        ]
+
+        message = plugin.format_publications(publications)
+        target = config.get("default_channel") or config.get("channel", "")
+        ok = plugin.send_message(message, target)
+        logger.info("Fetch & send completed for %s: %d pubs, send_ok=%s", author_id, len(publications), ok)
+        if not ok:
+            raise HTTPException(status_code=500, detail="Failed to send notification")
+
+        return {"success": True, "author_id": author_id, "sent_count": len(publications)}
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error in fetch & send for author {author_id}: {e}")
+        raise HTTPException(status_code=500, detail=f"Fetch & send failed: {e}")

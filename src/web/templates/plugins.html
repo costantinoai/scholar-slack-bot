@@ -14,9 +14,12 @@
 
     <!-- Slack Plugin Card -->
     <div class="bg-white rounded-lg shadow">
-        <div class="px-6 py-4 border-b border-gray-200">
-            <h3 class="text-lg font-semibold text-gray-900">Slack</h3>
-            <p class="text-sm text-gray-600">Send notifications to Slack channels or direct messages</p>
+        <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900">Slack</h3>
+                <p class="text-sm text-gray-600">Send notifications to Slack channels or direct messages</p>
+            </div>
+            <div id="slack-status" class="text-sm text-gray-600">Loading status…</div>
         </div>
         <div class="p-6 space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -53,6 +56,21 @@
 </div>
 
 <script>
+    // Prefill human-readable status (no secrets) from API
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const res = await fetch('/api/v1/plugins/slack');
+            if (!res.ok) throw new Error('Failed to load plugin info');
+            const info = await res.json();
+            const statusEl = document.getElementById('slack-status');
+            const configured = info.is_configured ? 'Configured' : 'Not configured';
+            const healthy = info.is_healthy === true ? 'Healthy' : (info.is_healthy === False ? 'Unhealthy' : 'Unknown');
+            statusEl.textContent = `${configured} • Health: ${healthy}`;
+        } catch (e) {
+            const statusEl = document.getElementById('slack-status');
+            statusEl.textContent = 'Status unavailable';
+        }
+    });
     async function saveSlackConfig() {
         try {
             const token = document.getElementById('slack-token').value.trim();

@@ -235,12 +235,36 @@
 
     // Refresh author cache
     async function refreshAuthorCache(authorId) {
-        showToast('Refreshing publications for author...', 'info');
-        // TODO: Implement fetch trigger for specific author
-        setTimeout(() => {
-            showToast('Refresh complete', 'success');
-            document.body.dispatchEvent(new CustomEvent('refreshAuthors'));
-        }, 2000);
+        showToast('Refreshing cache for author (no send)...', 'info');
+        try {
+            const res = await fetch(`/api/v1/authors/${authorId}/refresh-cache`, { method: 'POST' });
+            if (res.ok) {
+                const data = await res.json();
+                showToast(`Cache refresh complete (${data.count} items). No messages sent.`, 'success');
+                document.body.dispatchEvent(new CustomEvent('refreshAuthors'));
+            } else {
+                const err = await res.json();
+                showToast(err.detail || 'Refresh failed', 'error');
+            }
+        } catch (e) {
+            showToast('Network error while refreshing', 'error');
+        }
+    }
+
+    async function fetchAndSendAuthor(authorId) {
+        showToast('Fetching latest pubs and sending...', 'info');
+        try {
+            const res = await fetch(`/api/v1/authors/${authorId}/fetch-and-send`, { method: 'POST' });
+            if (res.ok) {
+                const data = await res.json();
+                showToast(`Sent update (${data.sent_count} items)`, 'success');
+            } else {
+                const err = await res.json();
+                showToast(err.detail || 'Send failed', 'error');
+            }
+        } catch (e) {
+            showToast('Network error while sending', 'error');
+        }
     }
 
     // Filter authors
@@ -296,7 +320,7 @@
 
     // Final verification
     console.log('===== Authors Page JavaScript Loaded =====');
-    console.log('Available functions:', {
+        console.log('Available functions:', {
         showAddAuthorModal: typeof showAddAuthorModal,
         hideAddAuthorModal: typeof hideAddAuthorModal,
         showDeleteModal: typeof showDeleteModal,
@@ -305,6 +329,7 @@
         confirmDelete: typeof confirmDelete,
         viewPublications: typeof viewPublications,
         refreshAuthorCache: typeof refreshAuthorCache,
+        fetchAndSendAuthor: typeof fetchAndSendAuthor,
         filterAuthors: typeof filterAuthors,
         sortAuthors: typeof sortAuthors
     });

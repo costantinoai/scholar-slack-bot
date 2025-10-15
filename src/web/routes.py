@@ -261,8 +261,12 @@ async def get_authors_list(
                                 View Pubs
                             </button>
                             <button onclick="refreshAuthorCache('{author_id}')"
-                                    class="px-3 py-1 text-sm bg-green-50 text-green-700 rounded hover:bg-green-100 transition-colors">
-                                Refresh
+                                    class="px-3 py-1 text-sm bg-yellow-50 text-yellow-700 rounded hover:bg-yellow-100 transition-colors" title="Refreshes cache only; does not send messages">
+                                Refresh Cache
+                            </button>
+                            <button onclick="fetchAndSendAuthor('{author_id}')"
+                                    class="px-3 py-1 text-sm bg-green-50 text-green-700 rounded hover:bg-green-100 transition-colors" title="Fetch new publications and send via configured plugin">
+                                Fetch & Send
                             </button>
                             <button onclick="showDeleteModal('{author_id}', '{author_name}')"
                                     class="px-3 py-1 text-sm bg-red-50 text-red-700 rounded hover:bg-red-100 transition-colors">
