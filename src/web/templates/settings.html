@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="bg-white rounded-lg shadow p-6 space-y-4">
+<div class="bg-white rounded-lg shadow p-6 space-y-4">
         <div>
             <label class="block text-sm text-gray-600 mb-1">Backend</label>
             <select id="backend" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
@@ -35,6 +35,48 @@
         <div class="flex items-center space-x-3">
             <button onclick="saveSettings()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Save</button>
             <button onclick="reloadSettings()" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Reset</button>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow p-6 space-y-4">
+        <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-gray-900">Scheduled Jobs</h3>
+            <button onclick="loadJobs()" class="px-3 py-1 text-sm bg-gray-100 rounded hover:bg-gray-200">Refresh</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Cron Expression</label>
+                <input id="cron" placeholder="0 9 * * *" class="w-full px-3 py-2 border border-gray-300 rounded-lg">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Action</label>
+                <select id="action" class="w-full px-3 py-2 border border-gray-300 rounded-lg">
+                    <option value="fetch">Refresh Cache (All)</option>
+                    <option value="fetch_and_notify">Fetch & Send (All)</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Name</label>
+                <input id="job_name" class="w-full px-3 py-2 border border-gray-300 rounded-lg" placeholder="My Job">
+            </div>
+            <div class="flex items-end">
+                <button onclick="createJob()" class="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">Create</button>
+            </div>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">ID</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Action</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Cron</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Next Run</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="jobs-body" class="bg-white divide-y divide-gray-200"></tbody>
+            </table>
         </div>
     </div>
 </div>
@@ -75,6 +117,82 @@ async function saveSettings() {
 }
 
 document.addEventListener('DOMContentLoaded', reloadSettings);
+
+async function loadJobs() {
+    try {
+        const res = await fetch('/api/v1/fetch/jobs');
+        const jobs = await res.json();
+        const tbody = document.getElementById('jobs-body');
+        tbody.innerHTML = '';
+        for (const j of jobs) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td class="px-4 py-2 text-sm">${j.id}</td>
+                <td class="px-4 py-2 text-sm">${j.name || ''}</td>
+                <td class="px-4 py-2 text-sm">${j.action || ''}</td>
+                <td class="px-4 py-2 text-sm">${j.cron || ''}</td>
+                <td class="px-4 py-2 text-sm">${j.next_run || ''}</td>
+                <td class="px-4 py-2 text-sm space-x-2">
+                    <button onclick="runJob('${j.id}')" class="px-3 py-1 text-xs bg-blue-50 text-blue-700 rounded hover:bg-blue-100">Run Now</button>
+                    <button onclick="deleteJob('${j.id}')" class="px-3 py-1 text-xs bg-red-50 text-red-700 rounded hover:bg-red-100">Delete</button>
+                </td>
+            `;
+            tbody.appendChild(tr);
+        }
+    } catch (e) {
+        showToast('Failed to load jobs', 'error');
+    }
+}
+
+async function createJob() {
+    try {
+        const body = {
+            name: document.getElementById('job_name').value || undefined,
+            description: undefined,
+            cron_expression: document.getElementById('cron').value,
+            action: document.getElementById('action').value,
+        };
+        const res = await fetch('/api/v1/fetch/jobs', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+        if (res.ok) {
+            showToast('Job created', 'success');
+            loadJobs();
+        } else {
+            const err = await res.json();
+            showToast(err.detail || 'Failed to create job', 'error');
+        }
+    } catch (e) {
+        showToast('Failed to create job', 'error');
+    }
+}
+
+async function deleteJob(id) {
+    if (!confirm('Delete job ' + id + '?')) return;
+    try {
+        const res = await fetch(`/api/v1/fetch/jobs/${id}`, { method: 'DELETE' });
+        if (res.ok) {
+            showToast('Job deleted', 'success');
+            loadJobs();
+        } else {
+            showToast('Failed to delete job', 'error');
+        }
+    } catch (e) {
+        showToast('Failed to delete job', 'error');
+    }
+}
+
+async function runJob(id) {
+    try {
+        const res = await fetch(`/api/v1/fetch/jobs/${id}/run`, { method: 'POST' });
+        if (res.ok) {
+            showToast('Job executed', 'success');
+        } else {
+            showToast('Failed to run job', 'error');
+        }
+    } catch (e) {
+        showToast('Failed to run job', 'error');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadJobs);
 </script>
 {% endblock %}
-

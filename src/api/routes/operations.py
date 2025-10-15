@@ -14,7 +14,7 @@ from plugins.slack import SlackPlugin
 from plugins.config import load_plugin_config
 from plugins.base import Publication
 from fetch_backend import fetch_from_json, fetch_publications_by_id
-from src.api.scheduler import add_cron_job
+from src.api.scheduler import add_cron_job, list_jobs, remove_job, run_job
 from src.api.models import JobCreate, JobResponse
 
 logger = logging.getLogger(__name__)
@@ -133,7 +133,11 @@ async def schedule_job(payload: JobCreate):
             raise HTTPException(status_code=400, detail="Invalid action")
 
         job_id = f"job_{hash((payload.cron_expression, payload.action)) & 0xFFFFFFFF}"
-        add_cron_job(job_id, payload.cron_expression, job_func)
+        add_cron_job(job_id, payload.cron_expression, job_func, meta={
+            "action": payload.action,
+            "name": name,
+            "description": payload.description,
+        })
         logger.info("Scheduled %s (%s) with cron %s", name, job_id, payload.cron_expression)
         return JobResponse(
             id=job_id.__hash__() & 0x7FFFFFFF,
@@ -153,3 +157,22 @@ async def schedule_job(payload: JobCreate):
     except Exception as e:
         logger.error(f"Failed to schedule job: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/jobs", summary="List scheduled jobs")
+async def list_scheduled_jobs():
+    return list_jobs()
+
+
+@router.delete("/jobs/{job_id}", summary="Delete a scheduled job")
+async def delete_job(job_id: str):
+    if not remove_job(job_id):
+        raise HTTPException(status_code=404, detail="Job not found")
+    return {"success": True, "job_id": job_id}
+
+
+@router.post("/jobs/{job_id}/run", summary="Run job immediately")
+async def run_job_now(job_id: str):
+    if not run_job(job_id):
+        raise HTTPException(status_code=404, detail="Job not found or execution failed")
+    return {"success": True, "job_id": job_id}

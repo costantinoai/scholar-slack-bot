@@ -268,7 +268,16 @@
         }
     }
 
+    let settingsCache = { backend: 'scholar' };
+    document.addEventListener('DOMContentLoaded', async () => {
+        try { const r = await fetch('/api/v1/settings'); settingsCache = await r.json(); } catch (e) {}
+    });
+
     async function fetchAndSendAuthor(authorId) {
+        if (settingsCache.backend === 'openalex') {
+            const ok = confirm('OpenAlex backend is active. This may take ~1 minute for new authors. Proceed?');
+            if (!ok) return;
+        }
         showToast('Fetching latest pubs and sending...', 'info');
         try {
             const res = await fetch(`/api/v1/authors/${authorId}/fetch-and-send`, { method: 'POST' });

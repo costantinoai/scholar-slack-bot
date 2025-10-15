@@ -9,6 +9,7 @@ from apscheduler.triggers.cron import CronTrigger
 logger = logging.getLogger(__name__)
 
 _scheduler: BackgroundScheduler | None = None
+_job_meta: dict[str, dict] = {}
 
 
 def get_scheduler() -> BackgroundScheduler:
@@ -28,10 +29,57 @@ def shutdown_scheduler():
         _scheduler = None
 
 
-def add_cron_job(job_id: str, cron_expr: str, func: Callable, args: tuple = ()):  # noqa: ANN001
+def add_cron_job(job_id: str, cron_expr: str, func: Callable, args: tuple = (), meta: dict | None = None):  # noqa: ANN001
     sched = get_scheduler()
     trigger = CronTrigger.from_crontab(cron_expr)
     sched.add_job(func, trigger=trigger, id=job_id, replace_existing=True, args=args)
     logger.info("Scheduled job %s with cron '%s'", job_id, cron_expr)
+    if meta is None:
+        meta = {}
+    _job_meta[job_id] = {"cron": cron_expr, **meta}
     return job_id
 
+
+def list_jobs() -> list[dict]:
+    sched = get_scheduler()
+    jobs = []
+    for j in sched.get_jobs():
+        meta = _job_meta.get(j.id, {})
+        jobs.append({
+            "id": j.id,
+            "cron": meta.get("cron"),
+            "action": meta.get("action"),
+            "name": meta.get("name"),
+            "description": meta.get("description"),
+            "next_run": j.next_run_time.isoformat() if j.next_run_time else None,
+        })
+    return jobs
+
+
+def remove_job(job_id: str) -> bool:
+    sched = get_scheduler()
+    try:
+        sched.remove_job(job_id)
+        _job_meta.pop(job_id, None)
+        logger.info("Removed job %s", job_id)
+        return True
+    except Exception as e:
+        logger.warning("Failed to remove job %s: %s", job_id, e)
+        return False
+
+
+def run_job(job_id: str) -> bool:
+    sched = get_scheduler()
+    job = sched.get_job(job_id)
+    if not job:
+        return False
+    try:
+        # Directly call the stored function
+        func = job.func
+        args = job.args or ()
+        func(*args)
+        logger.info("Executed job %s immediately", job_id)
+        return True
+    except Exception as e:
+        logger.error("Immediate run for job %s failed: %s", job_id, e)
+        return False

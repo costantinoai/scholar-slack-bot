@@ -214,7 +214,16 @@
     }
 
     // Quick action functions
+    let appSettings = { backend: 'scholar' };
+    document.addEventListener('DOMContentLoaded', async () => {
+        try { const r = await fetch('/api/v1/settings'); appSettings = await r.json(); } catch (e) {}
+    });
+
     async function fetchAllAuthors() {
+        if (appSettings.backend === 'openalex') {
+            const ok = confirm('OpenAlex backend is active. This may take up to ~1 minute per new author. Proceed?');
+            if (!ok) return;
+        }
         showToast('Fetching latest pubs and sending...', 'info');
         try {
             const res = await fetch('/api/v1/fetch/fetch-and-send', { method: 'POST' });
