@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}Publications - Scholar Slack Bot{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Publications</h1>
+            <p class="mt-2 text-gray-600">Browse and filter cached publications</p>
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="bg-white rounded-lg shadow p-4">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Search</label>
+                <input id="filter-search" type="search" placeholder="Title or abstract..."
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Author ID</label>
+                <input id="filter-author" type="text" placeholder="e.g. abc123xyz"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Min Year</label>
+                <input id="filter-min-year" type="number" min="1900" max="2100"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Max Year</label>
+                <input id="filter-max-year" type="number" min="1900" max="2100"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Min Citations</label>
+                <input id="filter-min-citations" type="number" min="0"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+        </div>
+        <div class="mt-4 flex items-center space-x-3">
+            <button onclick="loadPublications()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Apply</button>
+            <button onclick="resetFilters()" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Reset</button>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div class="bg-white rounded-lg shadow">
+        <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-gray-900">Results</h3>
+            <span id="results-count" class="text-sm text-gray-500"></span>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Year</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Citations</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Link</th>
+                    </tr>
+                </thead>
+                <tbody id="pubs-body" class="bg-white divide-y divide-gray-200">
+                    <!-- Rows injected by JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    function getQueryParam(name) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(name) || '';
+    }
+
+    function resetFilters() {
+        document.getElementById('filter-search').value = '';
+        document.getElementById('filter-author').value = '';
+        document.getElementById('filter-min-year').value = '';
+        document.getElementById('filter-max-year').value = '';
+        document.getElementById('filter-min-citations').value = '';
+        loadPublications();
+    }
+
+    async function loadPublications() {
+        try {
+            const search = document.getElementById('filter-search').value.trim();
+            const author = document.getElementById('filter-author').value.trim();
+            const minYear = document.getElementById('filter-min-year').value.trim();
+            const maxYear = document.getElementById('filter-max-year').value.trim();
+            const minCites = document.getElementById('filter-min-citations').value.trim();
+
+            const params = new URLSearchParams();
+            if (search) params.set('search', search);
+            if (author) params.set('author_id', author);
+            if (minYear) params.set('min_year', minYear);
+            if (maxYear) params.set('max_year', maxYear);
+            if (minCites) params.set('min_citations', minCites);
+            params.set('limit', '200');
+
+            const res = await fetch(`/api/v1/publications?${params.toString()}`);
+            const data = await res.json();
+
+            const tbody = document.getElementById('pubs-body');
+            tbody.innerHTML = '';
+            document.getElementById('results-count').textContent = `${data.length} result(s)`;
+
+            if (!Array.isArray(data) || data.length === 0) {
+                tbody.innerHTML = '<tr><td class="px-6 py-4 text-sm text-gray-500" colspan="4">No publications found</td></tr>';
+                return;
+            }
+
+            for (const pub of data) {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="px-6 py-4 text-sm text-gray-900">${pub.title || ''}</td>
+                    <td class="px-6 py-4 text-sm text-gray-700">${pub.year || ''}</td>
+                    <td class="px-6 py-4 text-sm text-gray-700">${pub.citations ?? 0}</td>
+                    <td class="px-6 py-4 text-sm">${pub.url ? `<a class=\"text-blue-600 hover:text-blue-800\" href=\"${pub.url}\" target=\"_blank\">Open →</a>` : ''}</td>
+                `;
+                tbody.appendChild(tr);
+            }
+        } catch (err) {
+            console.error('Failed to load publications', err);
+            showToast('Failed to load publications', 'error');
+        }
+    }
+
+    // Initialize with author param if present
+    document.addEventListener('DOMContentLoaded', () => {
+        const author = getQueryParam('author');
+        if (author) {
+            document.getElementById('filter-author').value = author;
+        }
+        loadPublications();
+    });
+</script>
+{% endblock %}
+
