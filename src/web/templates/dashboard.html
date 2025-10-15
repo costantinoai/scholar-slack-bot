@@ -1,0 +1,265 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Scholar Slack Bot{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <!-- Page header -->
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+            <p class="mt-2 text-gray-600">Overview of your publication monitoring system</p>
+        </div>
+        <div class="flex space-x-3">
+            <button onclick="fetchAllAuthors()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+                <span>Fetch All</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Statistics cards -->
+    <div id="stats-cards" hx-get="/web/stats" hx-trigger="load" hx-swap="innerHTML">
+        <!-- Loading skeleton -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+                <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+                <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+                <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+                <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+                <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+                <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+                <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+                <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Publications by year -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Publications by Year</h3>
+            <canvas id="pubsByYearChart" height="200"></canvas>
+        </div>
+
+        <!-- Top authors by publications -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Top Authors</h3>
+            <canvas id="topAuthorsChart" height="200"></canvas>
+        </div>
+    </div>
+
+    <!-- Recent activity & quick actions -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Recent activity -->
+        <div class="lg:col-span-2 bg-white rounded-lg shadow">
+            <div class="px-6 py-4 border-b border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900">Recent Publications</h3>
+            </div>
+            <div id="recent-pubs" hx-get="/web/recent-publications?limit=5" hx-trigger="load" hx-swap="innerHTML" class="divide-y divide-gray-200">
+                <!-- Loading skeleton -->
+                <div class="px-6 py-4 animate-pulse">
+                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                    <div class="h-3 bg-gray-200 rounded w-1/2"></div>
+                </div>
+                <div class="px-6 py-4 animate-pulse">
+                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                    <div class="h-3 bg-gray-200 rounded w-1/2"></div>
+                </div>
+                <div class="px-6 py-4 animate-pulse">
+                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                    <div class="h-3 bg-gray-200 rounded w-1/2"></div>
+                </div>
+            </div>
+            <div class="px-6 py-4 bg-gray-50 text-center">
+                <a href="/publications" class="text-blue-600 hover:text-blue-800 font-medium">View all publications →</a>
+            </div>
+        </div>
+
+        <!-- Quick actions -->
+        <div class="bg-white rounded-lg shadow">
+            <div class="px-6 py-4 border-b border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900">Quick Actions</h3>
+            </div>
+            <div class="p-6 space-y-3">
+                <a href="/authors?action=add" class="block w-full px-4 py-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-center font-medium">
+                    + Add New Author
+                </a>
+                <button onclick="sendTestNotification()" class="block w-full px-4 py-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-center font-medium">
+                    📤 Send Test Notification
+                </button>
+                <a href="/plugins" class="block w-full px-4 py-3 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-center font-medium">
+                    ⚙️ Configure Plugins
+                </a>
+                <button onclick="checkHealth()" class="block w-full px-4 py-3 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors text-center font-medium">
+                    🔍 System Health Check
+                </button>
+            </div>
+
+            <!-- System status -->
+            <div class="px-6 py-4 border-t border-gray-200 bg-gray-50">
+                <div class="flex items-center justify-between text-sm">
+                    <span class="text-gray-600">API Status</span>
+                    <span id="api-status" class="flex items-center text-green-600">
+                        <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                        Healthy
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Fetch statistics and render charts
+    async function loadDashboard() {
+        try {
+            // Get publication stats
+            const pubStatsRes = await fetch('/api/v1/publications/stats');
+            const pubStats = await pubStatsRes.json();
+
+            // Render publications by year chart
+            if (pubStats.publications_by_year && pubStats.publications_by_year.length > 0) {
+                const ctx1 = document.getElementById('pubsByYearChart');
+                new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: pubStats.publications_by_year.map(d => d.year),
+                        datasets: [{
+                            label: 'Publications',
+                            data: pubStats.publications_by_year.map(d => d.count),
+                            backgroundColor: 'rgba(59, 130, 246, 0.6)',
+                            borderColor: 'rgb(59, 130, 246)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 1
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Get all authors and render top authors chart
+            const authorsRes = await fetch('/api/v1/authors');
+            const authors = await authorsRes.json();
+
+            // Sort by publication count and take top 10
+            const topAuthors = authors
+                .sort((a, b) => b.publication_count - a.publication_count)
+                .slice(0, 10);
+
+            if (topAuthors.length > 0) {
+                const ctx2 = document.getElementById('topAuthorsChart');
+                new Chart(ctx2, {
+                    // Use standard bar chart with a horizontal index axis (Chart.js v3+)
+                    type: 'bar',
+                    data: {
+                        labels: topAuthors.map(a => a.name.split(' ').slice(-1)[0]), // Last name only
+                        datasets: [{
+                            label: 'Publications',
+                            data: topAuthors.map(a => a.publication_count),
+                            backgroundColor: 'rgba(16, 185, 129, 0.6)',
+                            borderColor: 'rgb(16, 185, 129)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 1
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+        } catch (error) {
+            console.error('Error loading dashboard:', error);
+        }
+    }
+
+    // Quick action functions
+    async function fetchAllAuthors() {
+        showToast('Fetch operation would be triggered here', 'info');
+        // TODO: Implement fetch trigger endpoint
+    }
+
+    async function sendTestNotification() {
+        try {
+            const response = await fetch('/api/v1/plugins/slack/notify?message=Test from Dashboard', {
+                method: 'POST'
+            });
+            if (response.ok) {
+                showToast('Test notification sent!', 'success');
+            } else {
+                showToast('Failed to send notification', 'error');
+            }
+        } catch (error) {
+            showToast('Plugin not configured', 'warning');
+        }
+    }
+
+    async function checkHealth() {
+        try {
+            const response = await fetch('/api/v1/health');
+            const health = await response.json();
+            if (health.status === 'healthy') {
+                showToast('System is healthy!', 'success');
+                document.getElementById('api-status').innerHTML = `
+                    <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    Healthy
+                `;
+            } else {
+                showToast('System has issues', 'warning');
+            }
+        } catch (error) {
+            showToast('Cannot reach API', 'error');
+            document.getElementById('api-status').innerHTML = `
+                <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                Offline
+            `;
+        }
+    }
+
+    // Load dashboard on page load
+    document.addEventListener('DOMContentLoaded', loadDashboard);
+
+    // Check health every 30 seconds
+    setInterval(checkHealth, 30000);
+</script>
+{% endblock %}
