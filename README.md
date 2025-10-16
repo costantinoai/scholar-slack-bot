@@ -1,20 +1,93 @@
-# Slack Bot for Google Scholar Publications
+# Scholar Slack Bot (API + Web UI)
 
-This Slack Bot fetches publications for authors from Google Scholar and sends notifications to a specified Slack channel or user. Keep your team updated with the latest scholarly articles seamlessly!  
+This bot fetches publications for authors (Google Scholar and/or OpenAlex) and can send notifications to Slack. It also ships a modern web UI for browsing, dashboards, and scheduling.
 
 ---
 
-## 🚀 Quick Start  
+## 🐳 Docker Installation (Recommended)
+
+Run the API + Web UI with Docker and mount a local `src/` directory to persist your databases and configuration.
+
+1) Build the image
+
+```bash
+docker build -t scholar-slack-bot .
+```
+
+2) Prepare local data/config directory
+
+```bash
+mkdir -p src
+cp src/slack-example.config src/slack.config  # fill in your Slack token + target
+```
+
+3) Run the server (serves API + UI)
+
+```bash
+docker run --rm -p 8000:8000 \
+  -e API_KEY=changeme-optional \
+  -v $(pwd)/src:/app/src \
+  --name scholar-bot scholar-slack-bot
+```
+
+Open http://localhost:8000 in your browser.
+
+Notes
+- Secrets/config: Put plugin secrets in `src/slack.config`. The file stays on your host and is mounted into the container.
+- API auth: Set `API_KEY` to protect endpoints; omit for local development.
+- Data: `authors.db`, `publications.db`, and `settings.json` live under `src/` and persist via the bind mount.
+
+### CLI via Docker
+
+You can run any CLI subcommand inside the container. The bind mount ensures reads/writes go to your host `src/` path.
+
+```bash
+# Add an author (Google Scholar ID or OpenAlex/ORCID depending on backend)
+docker run --rm -it -v $(pwd)/src:/app/src scholar-slack-bot \
+  python main.py add-author ABC123XYZ
+
+# Fetch + send for all authors (full workflow)
+docker run --rm -it -v $(pwd)/src:/app/src scholar-slack-bot \
+  python main.py fetch
+
+# Refresh cache only (no send)
+docker run --rm -it -v $(pwd)/src:/app/src scholar-slack-bot \
+  python main.py update-cache
+```
+
+If your Slack token and channel/user are configured in `src/slack.config`, `python main.py fetch` will perform the full workflow (fetch, save, and notify).
+
+### Scheduling
+
+Two options:
+
+- Web UI Scheduler: Go to Settings → Jobs. Create a cron schedule (e.g., `0 9 * * MON`) for actions such as `fetch_and_notify` or `fetch`. Jobs run inside the API server using APScheduler. Progress appears inline.
+- Host Cron + Docker: Schedule the CLI using your host’s cron. Example (run weekdays at 9am):
+
+  ```cron
+  0 9 * * 1-5 docker run --rm -v /path/to/your/src:/app/src scholar-slack-bot \
+    python main.py fetch >> /var/log/scholar-bot.log 2>&1
+  ```
+
+---
+
+## 🚀 Bare-Metal Quick Start (Advanced)
 
 1. **Clone the repository:**  
    ```sh
    git clone https://github.com/costantinoai/scholar-slack-bot.git
    cd scholar-slack-bot
    ```  
-2. **Install dependencies:**  
-   ```sh
-   pip install -r requirements.txt
-   ```  
+2. **Install dependencies:**
+   - Recommended: conda/mamba env named `scholarbot`.
+   - Example:
+
+   ```bash
+   conda create -n scholarbot python=3.11 -y
+   conda activate scholarbot
+   mamba install -y fastapi uvicorn pydantic python-multipart apscheduler requests tqdm scholarly flask || \
+     pip install -r requirements.txt
+   ```
 3. **Edit the config file:**  
    - Add your Slack API token.  
    - Set the `target_name` field to either a **Slack channel** (public or private, if the bot is added) or a **Slack user** (for direct messages).  
@@ -155,7 +228,7 @@ Global options include:
 Run the API + Web UI with Uvicorn:
 
 ```bash
-python -m uvicorn src.api.app:app --reload --host 0.0.0.0 --port 8000
+python -m uvicorn src.api.app:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 Open http://localhost:8000 and use the left menu:
@@ -232,22 +305,20 @@ scholar-slack-bot/
 
 ---
 
-## 🐳 Docker
+## 🔐 Configuration & Secrets
 
-Build and run the API + Web UI with Docker:
-
-```bash
-docker build -t scholar-slack-bot .
-docker run --rm -p 8000:8000 \
-  -v $(pwd)/src:/app/src \
-  --name scholar-bot scholar-slack-bot
-```
-
-Visit http://localhost:8000 to access the dashboard.
-
-Notes:
-- The `-v $(pwd)/src:/app/src` mount persists `authors.db`, `publications.db`, and `settings.json`.
-- Configure OpenAlex `mailto` and backend in Settings after the container starts.
+- Slack plugin: configure in `src/slack.config` (not committed to git). Example:
+  ```ini
+  [slack]
+  api_token = xoxb-YOUR-API-TOKEN
+  channel_name = your-channel-or-user
+  ```
+- API auth (optional): set `API_KEY` env var. Send header `X-API-Key: <key>` or `Authorization: Bearer <key>`.
+- Backend: configure in the UI (Settings) or via `settings.json`:
+  - backend: `openalex` or `scholar`
+  - openalex_email: your contact email for the polite pool
+  - fetch_full_history: `true` or `false`
+  - from_year: integer year
 
 ---
 
