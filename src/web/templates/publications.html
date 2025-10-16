@@ -77,6 +77,9 @@
                 </tbody>
             </table>
         </div>
+        <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-center">
+            <button id="load-more-btn" onclick="loadMore()" class="hidden px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Load more</button>
+        </div>
     </div>
 </div>
 
@@ -84,6 +87,7 @@
     let pubsData = [];
     let authorsMap = {};
     let pubSort = { column: 'year', dir: 'desc' };
+    let lastChunkCount = 0;
     let currentOffset = 0;
     const PAGE_SIZE = 500; // fetch up to 500 at a time for completeness
     function getQueryParam(name) {
@@ -129,8 +133,15 @@
 
             const res = await fetch(`/api/v1/publications?${params.toString()}`);
             const chunk = await res.json();
+            lastChunkCount = Array.isArray(chunk) ? chunk.length : 0;
             if (currentOffset === 0) pubsData = chunk; else pubsData = pubsData.concat(chunk);
             renderPubs();
+            // Toggle load more button based on whether we likely have more
+            const btn = document.getElementById('load-more-btn');
+            if (btn) {
+                if (lastChunkCount >= PAGE_SIZE) btn.classList.remove('hidden');
+                else btn.classList.add('hidden');
+            }
         } catch (err) {
             console.error('Failed to load publications', err);
             showToast('Failed to load publications', 'error');
@@ -142,12 +153,19 @@
         const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
         if (nearBottom) {
             // Attempt to fetch next page if the last fetch returned a full page
-            if (Array.isArray(pubsData) && pubsData.length >= currentOffset + PAGE_SIZE) {
+            if (lastChunkCount >= PAGE_SIZE) {
                 currentOffset += PAGE_SIZE;
                 loadPublications();
             }
         }
     });
+
+    function loadMore() {
+        if (lastChunkCount >= PAGE_SIZE) {
+            currentOffset += PAGE_SIZE;
+            loadPublications();
+        }
+    }
 
     function renderPubs() {
         const tbody = document.getElementById('pubs-body');
