@@ -201,11 +201,19 @@ async def get_recent_publications(
 ):
     """Get recent publications HTML fragment."""
     try:
+        # Prefer day-level publication_date when present; otherwise fallback to year.
+        # Break ties by fetched_at timestamp (latest first).
         cursor = pubs_db.execute(
-            """SELECT author_id, title, year, citations, url
-               FROM publications
-               ORDER BY year DESC, citations DESC
-               LIMIT ?""",
+            """
+               SELECT author_id, title, year, citations, url, journal, authors,
+                      publication_date, fetched_at
+                 FROM publications
+                ORDER BY (publication_date IS NOT NULL) DESC,
+                         publication_date DESC,
+                         year DESC,
+                         datetime(fetched_at) DESC
+                LIMIT ?
+            """,
             (limit,)
         )
         publications = cursor.fetchall()
@@ -220,7 +228,7 @@ async def get_recent_publications(
             <div class="px-6 py-4 hover:bg-gray-50 transition-colors">
                 <h4 class="font-medium text-gray-900 mb-1">{pub_dict['title']}</h4>
                 <div class="flex items-center text-sm text-gray-600 space-x-4">
-                    <span>{pub_dict['year'] or 'N/A'}</span>
+                    {f"<span>Published: {pub_dict['publication_date']}</span>" if pub_dict.get('publication_date') else f"<span>{pub_dict.get('year') or 'N/A'}</span>"}
                     <span>•</span>
                     <span>{pub_dict['citations'] or 0} citations</span>
                     {f'<a href="{pub_dict["url"]}" target="_blank" class="text-blue-600 hover:text-blue-800">View →</a>' if pub_dict.get('url') else ''}

@@ -405,6 +405,8 @@ def save_updated_cache(
             cols = []
         has_source_id = 'source_id' in cols
         has_doi = 'doi' in cols
+        has_pubdate = 'publication_date' in cols
+        has_fetched = 'fetched_at' in cols
 
         for pub in fetched_pubs:
             title = (pub["bib"].get("title") or "").strip()
@@ -417,6 +419,20 @@ def save_updated_cache(
                 citations = int(cites) if cites is not None else 0
             except Exception:
                 citations = 0
+            # Publication date if any (scholarly often lacks precision)
+            pub_date_val = None
+            try:
+                pd = pub["bib"].get("pub_date") or pub["bib"].get("date")
+                if pd:
+                    # Try to normalize to YYYY-MM-DD
+                    import re
+                    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", str(pd))
+                    if m:
+                        pub_date_val = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+            except Exception:
+                pub_date_val = None
+            from datetime import datetime as _dt
+            fetched_iso = _dt.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
 
             # If an entry exists for same (author_id, title) but different URL, keep both
             existing = conn.execute(
@@ -425,50 +441,62 @@ def save_updated_cache(
             ).fetchone()
 
             if existing is None:
+                fields = ["author_id","title"]
+                values = [author_id, title]
                 if has_source_id:
                     source_id = url or title
-                    doi_val = None
-                    conn.execute(
-                        "INSERT OR REPLACE INTO publications (author_id, title, source_id, year, abstract, url, doi, citations) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-                        (author_id, title, source_id, year_val, abstract, url, doi_val, citations),
-                    )
-                else:
-                    conn.execute(
-                        "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
-                        (author_id, title, year_val, abstract, url, citations),
-                    )
+                    fields.append("source_id"); values.append(source_id)
+                fields += ["year","abstract","url","citations"]
+                values += [year_val, abstract, url, citations]
+                if has_doi:
+                    fields.insert(6 if has_source_id else 5, "doi")
+                    values.insert(6 if has_source_id else 5, None)
+                if has_pubdate:
+                    fields.append("publication_date"); values.append(pub_date_val)
+                if has_fetched:
+                    fields.append("fetched_at"); values.append(fetched_iso)
+                sql = f"INSERT OR REPLACE INTO publications ({', '.join(fields)}) VALUES ({', '.join(['?']*len(fields))})"
+                conn.execute(sql, values)
                 continue
 
             ex_url = (existing[0] or "").strip()
             if ex_url == url or (ex_url == "" and url == ""):
+                fields = ["author_id","title"]
+                values = [author_id, title]
                 if has_source_id:
                     source_id = url or title
-                    doi_val = None
-                    conn.execute(
-                        "INSERT OR REPLACE INTO publications (author_id, title, source_id, year, abstract, url, doi, citations) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-                        (author_id, title, source_id, year_val, abstract, url, doi_val, citations),
-                    )
-                else:
-                    conn.execute(
-                        "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
-                        (author_id, title, year_val, abstract, url, citations),
-                    )
+                    fields.append("source_id"); values.append(source_id)
+                fields += ["year","abstract","url","citations"]
+                values += [year_val, abstract, url, citations]
+                if has_doi:
+                    fields.insert(6 if has_source_id else 5, "doi")
+                    values.insert(6 if has_source_id else 5, None)
+                if has_pubdate:
+                    fields.append("publication_date"); values.append(pub_date_val)
+                if has_fetched:
+                    fields.append("fetched_at"); values.append(fetched_iso)
+                sql = f"INSERT OR REPLACE INTO publications ({', '.join(fields)}) VALUES ({', '.join(['?']*len(fields))})"
+                conn.execute(sql, values)
             else:
                 # Different source (e.g., preprint vs journal). Disambiguate title with domain tag.
                 domain = _extract_domain(url) or "alt"
                 alt_title = f"{title} [{domain}]"
+                fields = ["author_id","title"]
+                values = [author_id, alt_title]
                 if has_source_id:
                     source_id = url or alt_title
-                    doi_val = None
-                    conn.execute(
-                        "INSERT OR REPLACE INTO publications (author_id, title, source_id, year, abstract, url, doi, citations) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-                        (author_id, alt_title, source_id, year_val, abstract, url, doi_val, citations),
-                    )
-                else:
-                    conn.execute(
-                        "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
-                        (author_id, alt_title, year_val, abstract, url, citations),
-                    )
+                    fields.append("source_id"); values.append(source_id)
+                fields += ["year","abstract","url","citations"]
+                values += [year_val, abstract, url, citations]
+                if has_doi:
+                    fields.insert(6 if has_source_id else 5, "doi")
+                    values.insert(6 if has_source_id else 5, None)
+                if has_pubdate:
+                    fields.append("publication_date"); values.append(pub_date_val)
+                if has_fetched:
+                    fields.append("fetched_at"); values.append(fetched_iso)
+                sql = f"INSERT OR REPLACE INTO publications ({', '.join(fields)}) VALUES ({', '.join(['?']*len(fields))})"
+                conn.execute(sql, values)
         conn.commit()
     finally:
         conn.close()

@@ -99,6 +99,11 @@ def get_publications_db() -> Generator[sqlite3.Connection, None, None]:
                 conn.execute("ALTER TABLE publications ADD COLUMN doi TEXT")
             if 'source_id' not in cols:
                 conn.execute("ALTER TABLE publications ADD COLUMN source_id TEXT DEFAULT ''")
+            # Optional high-precision publication date and fetch timestamp
+            if 'publication_date' not in cols:
+                conn.execute("ALTER TABLE publications ADD COLUMN publication_date TEXT")
+            if 'fetched_at' not in cols:
+                conn.execute("ALTER TABLE publications ADD COLUMN fetched_at TEXT")
 
             # Detect if PK is still (author_id, title) and migrate to (author_id, title, source_id)
             pk_cols = [row[1] for row in cols_info if row[5] > 0]  # row[5] is pk flag/order
@@ -121,6 +126,8 @@ def get_publications_db() -> Generator[sqlite3.Connection, None, None]:
                         citations INTEGER,
                         journal TEXT,
                         authors TEXT,
+                        publication_date TEXT,
+                        fetched_at TEXT,
                         PRIMARY KEY (author_id, title, source_id)
                     )
                     """
@@ -129,7 +136,7 @@ def get_publications_db() -> Generator[sqlite3.Connection, None, None]:
                 conn.execute(
                     """
                     INSERT OR REPLACE INTO publications_v2 (
-                        author_id, title, source_id, year, abstract, url, doi, citations, journal, authors
+                        author_id, title, source_id, year, abstract, url, doi, citations, journal, authors, publication_date, fetched_at
                     )
                     SELECT
                         author_id,
@@ -145,7 +152,9 @@ def get_publications_db() -> Generator[sqlite3.Connection, None, None]:
                         doi,
                         citations,
                         journal,
-                        authors
+                        authors,
+                        publication_date,
+                        fetched_at
                     FROM publications
                     """
                 )

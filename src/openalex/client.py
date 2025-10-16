@@ -13,6 +13,7 @@ import logging
 import sqlite3
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
+from datetime import datetime
 
 import requests
 
@@ -164,6 +165,7 @@ def fetch_works_for_author(author_openalex_id: str, from_year: Optional[int], ma
                     "doi",
                     "display_name",
                     "publication_year",
+                    "publication_date",
                     "abstract_inverted_index",
                     "primary_location",
                     "cited_by_count",
@@ -182,6 +184,7 @@ def fetch_works_for_author(author_openalex_id: str, from_year: Optional[int], ma
             for w in batch:
                 title = (w or {}).get("display_name") or ""
                 year = (w or {}).get("publication_year")
+                pub_date = (w or {}).get("publication_date") or None
                 wtype = (w or {}).get("type")
                 wtype_xref = None  # not selected; keep variable for backward-compat in checks
                 # Filter out datasets/components and file-like titles
@@ -257,6 +260,7 @@ def fetch_works_for_author(author_openalex_id: str, from_year: Optional[int], ma
                     "authors": auths,
                     "abstract": abstract or "",
                     "year": year,
+                    "publication_date": pub_date,
                     "num_citations": cites,
                     "journal": journal or "",
                     "pub_url": url or "",
@@ -382,6 +386,10 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
                 conn.execute("ALTER TABLE publications ADD COLUMN doi TEXT")
             if 'source_id' not in cols:
                 conn.execute("ALTER TABLE publications ADD COLUMN source_id TEXT DEFAULT ''")
+            if 'publication_date' not in cols:
+                conn.execute("ALTER TABLE publications ADD COLUMN publication_date TEXT")
+            if 'fetched_at' not in cols:
+                conn.execute("ALTER TABLE publications ADD COLUMN fetched_at TEXT")
 
             # Migrate PK to (author_id, title, source_id) if still on old schema
             pk_cols = [row[1] for row in cols_info if row[5] > 0]
@@ -400,6 +408,8 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
                         citations INTEGER,
                         journal TEXT,
                         authors TEXT,
+                        publication_date TEXT,
+                        fetched_at TEXT,
                         PRIMARY KEY (author_id, title, source_id)
                     )
                     """
@@ -407,7 +417,7 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
                 conn.execute(
                     """
                     INSERT OR REPLACE INTO publications_v2 (
-                        author_id, title, source_id, year, abstract, url, doi, citations, journal, authors
+                        author_id, title, source_id, year, abstract, url, doi, citations, journal, authors, publication_date, fetched_at
                     )
                     SELECT
                         author_id,
@@ -423,7 +433,9 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
                         doi,
                         citations,
                         journal,
-                        authors
+                        authors,
+                        publication_date,
+                        fetched_at
                     FROM publications
                     """
                 )
@@ -486,6 +498,15 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
             return None
 
         count = 0
+        # Recompute columns after any migration
+        try:
+            cols_info2 = conn.execute("PRAGMA table_info(publications)").fetchall()
+            cols2 = [row[1] for row in cols_info2]
+        except Exception:
+            cols2 = []
+        has_pubdate = 'publication_date' in cols2
+        has_fetched = 'fetched_at' in cols2
+        has_source_id = 'source_id' in cols2
         for w in works:
             title = (w.get("title") or "").strip()
             year = w.get("year")
@@ -512,11 +533,21 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
             ).fetchone()
 
             source_id = doi if doi else (url if url else title)
+            pub_date = (w.get("publication_date") or None)
+            now_iso = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
             if existing is None:
-                conn.execute(
-                    "INSERT OR REPLACE INTO publications (author_id, title, source_id, year, abstract, url, doi, citations, journal, authors) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                    (author_id, title, source_id, year, abstract, url, doi, citations_val, journal, authors),
-                )
+                fields = ["author_id","title"]
+                values = [author_id, title]
+                if has_source_id:
+                    fields.append("source_id"); values.append(source_id)
+                fields += ["year","abstract","url","doi","citations","journal","authors"]
+                values += [year, abstract, url, doi, citations_val, journal, authors]
+                if has_pubdate:
+                    fields.append("publication_date"); values.append(pub_date)
+                if has_fetched:
+                    fields.append("fetched_at"); values.append(now_iso)
+                sql = f"INSERT OR REPLACE INTO publications ({', '.join(fields)}) VALUES ({', '.join(['?']*len(fields))})"
+                conn.execute(sql, values)
                 # Upsert topics for this source
                 try:
                     if topics:
@@ -582,10 +613,18 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
             same_source = (ex_url == url and ex_url != "") or (ex_journal and ex_journal == journal)
             if same_source:
                 # Update/replace existing
-                conn.execute(
-                    "INSERT OR REPLACE INTO publications (author_id, title, source_id, year, abstract, url, doi, citations, journal, authors) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                    (author_id, title, source_id, year, abstract, url, doi, citations_val, journal, authors),
-                )
+                fields = ["author_id","title"]
+                values = [author_id, title]
+                if has_source_id:
+                    fields.append("source_id"); values.append(source_id)
+                fields += ["year","abstract","url","doi","citations","journal","authors"]
+                values += [year, abstract, url, doi, citations_val, journal, authors]
+                if has_pubdate:
+                    fields.append("publication_date"); values.append(pub_date)
+                if has_fetched:
+                    fields.append("fetched_at"); values.append(now_iso)
+                sql = f"INSERT OR REPLACE INTO publications ({', '.join(fields)}) VALUES ({', '.join(['?']*len(fields))})"
+                conn.execute(sql, values)
                 # Replace topics for this source
                 try:
                     if topics:
@@ -632,10 +671,18 @@ def upsert_publications(author_id: str, works: Iterable[Dict], db_path: Path = P
                 tag = _source_tag(journal, url) or "alt"
                 alt_title = f"{title} [{tag}]"
                 alt_source = doi if doi else (url if url else alt_title)
-                conn.execute(
-                    "INSERT OR REPLACE INTO publications (author_id, title, source_id, year, abstract, url, doi, citations, journal, authors) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                    (author_id, alt_title, alt_source, year, abstract, url, doi, citations_val, journal, authors),
-                )
+                fields = ["author_id","title"]
+                values = [author_id, alt_title]
+                if has_source_id:
+                    fields.append("source_id"); values.append(alt_source)
+                fields += ["year","abstract","url","doi","citations","journal","authors"]
+                values += [year, abstract, url, doi, citations_val, journal, authors]
+                if has_pubdate:
+                    fields.append("publication_date"); values.append(pub_date)
+                if has_fetched:
+                    fields.append("fetched_at"); values.append(now_iso)
+                sql = f"INSERT OR REPLACE INTO publications ({', '.join(fields)}) VALUES ({', '.join(['?']*len(fields))})"
+                conn.execute(sql, values)
                 # Insert topics for alt source as well
                 try:
                     if topics:
