@@ -12,6 +12,7 @@ from __future__ import annotations
 import logging
 import sqlite3
 from pathlib import Path
+import os
 from typing import Dict, Iterable, List, Optional, Tuple
 from datetime import datetime
 
@@ -24,8 +25,11 @@ BASE_URL = "https://api.openalex.org"
 
 def _get_mailto(settings_path: Path = Path("./settings.json")) -> Optional[str]:
     try:
+        # Prefer environment variable for privacy (not tracked in VCS)
+        env_mail = os.getenv("OPENALEX_EMAIL")
+        if env_mail:
+            return env_mail
         import json
-
         raw = json.loads(settings_path.read_text())
         return raw.get("openalex_email")
     except Exception:

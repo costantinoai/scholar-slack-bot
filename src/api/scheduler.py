@@ -76,6 +76,25 @@ def run_job(job_id: str) -> bool:
     job = sched.get_job(job_id)
     if not job:
         return False
+    try:
+        # Trigger ASAP by setting next_run_time to now
+        sched.modify_job(job_id, next_run_time=datetime.now())
+        logger.info("Triggered job %s to run immediately", job_id)
+        return True
+    except Exception as e:
+        logger.warning("Failed to run job %s immediately: %s", job_id, e)
+        try:
+            # As a fallback, execute the callable synchronously if available
+            func = getattr(job, 'func', None)
+            args = getattr(job, 'args', ()) or ()
+            kwargs = getattr(job, 'kwargs', {}) or {}
+            if callable(func):
+                func(*args, **kwargs)
+                logger.info("Executed job %s synchronously as fallback", job_id)
+                return True
+        except Exception as e2:
+            logger.error("Fallback run failed for job %s: %s", job_id, e2)
+        return False
 
 
 def get_job_status(job_id: str) -> dict | None:
