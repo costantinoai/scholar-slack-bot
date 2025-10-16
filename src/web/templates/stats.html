@@ -114,7 +114,10 @@
   <!-- Word Cloud -->
   <div class="bg-white rounded-lg shadow p-6">
     <h3 class="text-lg font-semibold text-gray-900 mb-4">Keywords Word Cloud</h3>
-    <canvas id="statsWordCloud" height="280"></canvas>
+    <div class="relative">
+      <canvas id="statsWordCloud" height="280"></canvas>
+      <div id="statsWordCloudFallback" class="hidden flex flex-wrap gap-2"></div>
+    </div>
     <p class="mt-2 text-xs text-gray-500">Common words removed; similar words collapsed (plurals, common UK/US variants).</p>
   </div>
 </div>
@@ -256,15 +259,46 @@
         const labelsWC = Array.from(counts.keys());
         const dataWC = Array.from(counts.values());
         const ctxWC = document.getElementById('statsWordCloud');
-        if (ctxWC && window.Chart) {
+        const fb = document.getElementById('statsWordCloudFallback');
+        const haveData = labelsWC.length > 0 && dataWC.some(v => v > 0);
+        const pluginReady = !!(window.Chart && Chart.registry && Chart.registry.controllers && Chart.registry.controllers.wordCloud);
+        console.log('WordCloud data size:', labelsWC.length, 'pluginReady:', pluginReady);
+        if (ctxWC && haveData && pluginReady) {
           try { if (chartWordCloud) chartWordCloud.destroy(); } catch (e) {}
           chartWordCloud = new Chart(ctxWC, {
             type: 'wordCloud',
             data: { labels: labelsWC, datasets: [{ label: 'Keywords', data: dataWC }] },
             options: { plugins: { legend: { display: false } } }
           });
+          if (fb) fb.classList.add('hidden');
+          ctxWC.classList.remove('hidden');
+        } else {
+          // Fallback: render words as spans with scaled font-size
+          if (fb) {
+            const max = Math.max(...dataWC, 1);
+            fb.innerHTML = '';
+            labelsWC.forEach((w, i) => {
+              const weight = dataWC[i] || 1;
+              const size = 12 + Math.round((weight / max) * 18); // 12px..30px
+              const span = document.createElement('span');
+              span.textContent = w;
+              span.style.fontSize = size + 'px';
+              span.className = 'text-gray-700';
+              fb.appendChild(span);
+            });
+            if (ctxWC) ctxWC.classList.add('hidden');
+            fb.classList.remove('hidden');
+          }
         }
-      } catch (e) { /* non-fatal */ }
+      } catch (e) {
+        console.warn('WordCloud build failed; using fallback', e);
+        const fb = document.getElementById('statsWordCloudFallback');
+        if (fb) {
+          fb.classList.remove('hidden');
+          const c = document.getElementById('statsWordCloud');
+          if (c) c.classList.add('hidden');
+        }
+      }
 
       // Top authors by h-index
       const hlist = (stats.authors_summary && Array.isArray(stats.authors_summary.top_authors_by_h_index)) ? stats.authors_summary.top_authors_by_h_index : [];
