@@ -19,7 +19,7 @@ from plugins.registry import get_global_registry
 from plugins.slack import SlackPlugin
 
 
-def send_to_slack(channel_name: str, token: str, message: str) -> bool:
+def send_to_slack(channel_name: str, message: str, token: str):
     """Compat shim to send a message to Slack via the plugin system.
 
     Tests may patch this function. Production code uses it to route messages
@@ -37,7 +37,8 @@ def send_to_slack(channel_name: str, token: str, message: str) -> bool:
     if "slack" not in registry.list_plugins():
         registry.register(SlackPlugin)
     plugin = registry.create_instance("slack", {"api_token": token, "default_channel": channel_name}, cache=True)
-    return bool(plugin.send_message(message, channel_name))
+    ok = bool(plugin.send_message(message, channel_name))
+    return {"ok": ok}
 
 logger = logging.getLogger(__name__)
 
@@ -87,8 +88,9 @@ def test_fetch_and_message(args, ch_name, token, limit: int = 2) -> None:
     # Loop through each formatted message and send it to Slack.
     for formatted_message in formatted_messages:
         formatted_message = f"```\n{test_header}\n{formatted_message}\n```"
-        ok = send_to_slack(ch_name, token, formatted_message)
-        if not ok:
+        ok = send_to_slack(ch_name, formatted_message, token)
+        okval = ok.get("ok") if isinstance(ok, dict) else bool(ok)
+        if not okval:
             success = False
             logger.warning("Failed to send a test message via Slack plugin")
 
@@ -132,10 +134,11 @@ def regular_fetch_and_message(args, ch_name, token):
     error_message = None  # To store any error encountered.
 
     for formatted_message in formatted_messages:
-        ok = send_to_slack(ch_name, token, formatted_message)
-        if not ok:
+        ok = send_to_slack(ch_name, formatted_message, token)
+        okval = ok.get("ok") if isinstance(ok, dict) else bool(ok)
+        if not okval:
             success = False
-            error_message = "send_message returned False"
+            error_message = (ok.get("error") if isinstance(ok, dict) else None) or "send_message returned False"
             logger.warning(f"Failed to send a message due to: {error_message}")
 
     # Handle post-message actions based on the success flag.
