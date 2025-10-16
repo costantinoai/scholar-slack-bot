@@ -162,6 +162,17 @@ Would you like me to:
 
 ---
 
+## TODOs / Roadmap Additions
+
+- Docker packaging and deployment
+  - Containerize API + Web UI (FastAPI + Uvicorn)
+  - Provide multi-stage Dockerfile (slim runtime, cache dependencies)
+  - Optional docker-compose with volume mounts for `src/*.db` and hot reload in dev
+  - Document environment variables (e.g., `API_KEY`, `OPENALEX_MAILTO`)
+- Persist scheduler jobs across restarts (APScheduler SQLAlchemyJobStore)
+- OpenAlex concepts ingestion to support canonical topics in Stats
+- Background jobs UX unification (progress banners across pages)
+
 ## Strategic Migration: Switch to OpenAlex API
 
 OpenAlex provides an official, rate-limited API (up to ~10 req/s and ~100k/day) and richer metadata (topics, related works, institutions). Migrating to OpenAlex will allow us to:

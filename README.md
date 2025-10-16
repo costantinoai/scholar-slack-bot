@@ -150,58 +150,44 @@ Global options include:
 - `--verbose`: Enable verbose logging output.
 
 
-### Web Interface
+### Web Interface (FastAPI + HTMX)
 
-A modern Flask web UI is bundled for managing the bot. Launch it with:
+Run the API + Web UI with Uvicorn:
 
-```sh
-python gui.py
+```bash
+python -m uvicorn src.api.app:app --reload --host 0.0.0.0 --port 8000
 ```
 
-The responsive page at [http://localhost:5000](http://localhost:5000) offers:
+Open http://localhost:8000 and use the left menu:
 
-- Author tools: add/remove authors, refresh or clear their cache.
-- Publication browser: view cached papers in a searchable table.
-- Settings editor: adjust database locations, Slack config path, and API call delay. Changes are saved to `settings.json` for future runs.
-- Utilities: clear all cache and run the project's tests. Destructive actions prompt for confirmation.
+- Dashboard: overview charts and quick actions
+- Authors: manage monitored authors (Scholar/OpenAlex/ORCID), refresh cache, preview & send
+- Publications: browse/filter cached publications; open links; deduplicated grouped variants
+- Plugins: configure Slack plugin and test connectivity
+- Settings: select backend (OpenAlex/Scholar), connectivity tests, hard reset in background
+- Stats: deep statistics (year trends, top journals, keywords, h-index)
 
 ---
 
-## 📂 Directory Structure
+## 📂 Directory Structure (FastAPI)
 
 ```
 scholar-slack-bot/
-├── .github/
-│   └── workflows/          # GitHub Actions (if configured)
-├── .githooks/
-│   └── pre-push           # Pre-push validation hook
-├── scripts/
-│   ├── setup-hooks.sh     # Install git hooks
-│   └── validate-before-push.sh  # Validation script
 ├── src/
-│   ├── authors.db         # SQLite database of monitored authors
-│   ├── publications.db    # SQLite cache of publications
-│   └── slack.config       # Slack API configuration
-├── tests/
-│   ├── test_golden_real.py      # End-to-end integration tests
-│   ├── test_golden_simple.py    # Unit tests with mocked data
-│   ├── test_gui.py              # Flask GUI tests
-│   ├── test_log_config.py       # Logging tests
-│   ├── test_main.py             # Main module tests
-│   └── test_streams_funcs.py    # Workflow tests
-├── add_authors_batch.sh   # Optional: batch add authors via CLI
-├── fetch_and_send.sh      # Optional: automation script for cron
-├── fetch_scholar.py       # Google Scholar API interaction
-├── gui.py                 # Flask web interface
-├── helper_funcs.py        # Utility functions
-├── log_config.py          # Logging configuration
-├── main.py                # Main CLI entry point
-├── pytest.ini             # Pytest configuration
-├── README.md
-├── requirements.txt       # Python dependencies
-├── settings.json          # GUI persistent settings
-├── slack_bot.py           # Slack messaging functions
-└── streams_funcs.py       # Workflow orchestration
+│   ├── api/                  # FastAPI app (routes, models, deps)
+│   ├── web/                  # Jinja2 templates, routes, static (HTMX+Chart.js)
+│   ├── openalex/             # OpenAlex client + persistence helpers
+│   ├── publications.db       # SQLite cache of publications
+│   ├── authors.db            # SQLite database of monitored authors
+│   └── slack.config          # Slack plugin config (gitignored example provided)
+├── plugins/                  # Plugin system (Slack implemented)
+├── tests/                    # Unit tests (no real tokens used)
+├── main.py                   # Legacy CLI (fetch/send; still supported)
+├── fetch_scholar.py          # Scholar backend (optional if using OpenAlex)
+├── helper_funcs.py           # Legacy utilities (CLI compatibility)
+├── requirements.txt
+├── settings.json             # UI settings
+└── README.md
 ```
 
 ---
@@ -246,7 +232,25 @@ scholar-slack-bot/
 
 ---
 
+## 🐳 Docker
+
+Build and run the API + Web UI with Docker:
+
+```bash
+docker build -t scholar-slack-bot .
+docker run --rm -p 8000:8000 \
+  -v $(pwd)/src:/app/src \
+  --name scholar-bot scholar-slack-bot
+```
+
+Visit http://localhost:8000 to access the dashboard.
+
+Notes:
+- The `-v $(pwd)/src:/app/src` mount persists `authors.db`, `publications.db`, and `settings.json`.
+- Configure OpenAlex `mailto` and backend in Settings after the container starts.
+
+---
+
 ## 📄 License  
 
 [MIT](LICENSE) © Andrea Ivan Costantino  
-
