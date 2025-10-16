@@ -44,6 +44,16 @@
             </div>
         </div>
 
+        <div>
+            <label class="block text-sm text-gray-600 mb-1">Theme</label>
+            <select id="ui_theme" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                <option value="tailwind">Tailwind (default)</option>
+                <option value="material">Material</option>
+            </select>
+            <p class="mt-1 text-xs text-gray-500">Switches the UI base template. Stored in a cookie; takes effect on next navigation.</p>
+            <button onclick="saveTheme()" class="mt-2 px-3 py-2 bg-gray-100 text-gray-800 rounded hover:bg-gray-200">Save Theme</button>
+        </div>
+
         <div class="bg-yellow-50 border border-yellow-200 text-yellow-900 rounded p-3">
             <p class="text-sm">Note: When using OpenAlex and fetching all authors, initial loads for new authors can take up to about 1 minute per author (polite pool). Use with care.</p>
         </div>
@@ -164,6 +174,11 @@ document.addEventListener('DOMContentLoaded', reloadSettings);
 document.addEventListener('DOMContentLoaded', () => {
     const sel = document.getElementById('backend');
     if (sel) sel.addEventListener('change', toggleBackendFields);
+    // Initialize theme select from cookie
+    const m = document.cookie.match(/(?:^|; )ui_theme=([^;]+)/);
+    const theme = m ? decodeURIComponent(m[1]) : '';
+    const tsel = document.getElementById('ui_theme');
+    if (theme && tsel) tsel.value = theme;
 });
 
 async function loadJobs() {
@@ -269,6 +284,14 @@ async function testScholar() {
     } catch (e) {
         showToast('Scholar test failed', 'error');
     }
+}
+
+function saveTheme() {
+    const val = document.getElementById('ui_theme').value;
+    const expires = new Date(Date.now() + 365*24*60*60*1000).toUTCString(); // 1 year
+    document.cookie = `ui_theme=${encodeURIComponent(val)}; expires=${expires}; path=/`;
+    showToast('Theme preference saved. Reloading…', 'info');
+    setTimeout(() => window.location.href = `/?theme=${val}`, 300);
 }
 
 // Show/hide OpenAlex-only fields based on backend selection

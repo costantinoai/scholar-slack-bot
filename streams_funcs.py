@@ -18,6 +18,27 @@ from slack_bot import make_slack_msg
 from plugins.registry import get_global_registry
 from plugins.slack import SlackPlugin
 
+
+def send_to_slack(channel_name: str, token: str, message: str) -> bool:
+    """Compat shim to send a message to Slack via the plugin system.
+
+    Tests may patch this function. Production code uses it to route messages
+    through the Slack plugin.
+
+    Args:
+        channel_name: Slack channel or user to send to
+        token: Bot token
+        message: Preformatted message string
+
+    Returns:
+        bool: True if Slack API acknowledges the message
+    """
+    registry = get_global_registry()
+    if "slack" not in registry.list_plugins():
+        registry.register(SlackPlugin)
+    plugin = registry.create_instance("slack", {"api_token": token, "default_channel": channel_name}, cache=True)
+    return bool(plugin.send_message(message, channel_name))
+
 logger = logging.getLogger(__name__)
 
 
@@ -64,20 +85,9 @@ def test_fetch_and_message(args, ch_name, token, limit: int = 2) -> None:
     success = True  # To track if all messages are sent successfully.
 
     # Loop through each formatted message and send it to Slack.
-    # Send via plugin registry (preferred)
-    registry = get_global_registry()
-    try:
-        # Register once if not present
-        if "slack" not in registry.list_plugins():
-            registry.register(SlackPlugin)
-        plugin = registry.create_instance("slack", {"api_token": token, "default_channel": ch_name}, cache=True)
-    except Exception as e:
-        logger.error(f"Failed to initialize Slack plugin: {e}")
-        return
-
     for formatted_message in formatted_messages:
         formatted_message = f"```\n{test_header}\n{formatted_message}\n```"
-        ok = plugin.send_message(formatted_message, ch_name)
+        ok = send_to_slack(ch_name, token, formatted_message)
         if not ok:
             success = False
             logger.warning("Failed to send a test message via Slack plugin")
@@ -121,20 +131,8 @@ def regular_fetch_and_message(args, ch_name, token):
     success = True
     error_message = None  # To store any error encountered.
 
-    # Send each formatted message via Slack plugin
-    registry = get_global_registry()
-    try:
-        if "slack" not in registry.list_plugins():
-            registry.register(SlackPlugin)
-        plugin = registry.create_instance("slack", {"api_token": token, "default_channel": ch_name}, cache=True)
-    except Exception as e:
-        logger.error(f"Failed to initialize Slack plugin: {e}")
-        plugin = None
-
     for formatted_message in formatted_messages:
-        if plugin is None:
-            break
-        ok = plugin.send_message(formatted_message, ch_name)
+        ok = send_to_slack(ch_name, token, formatted_message)
         if not ok:
             success = False
             error_message = "send_message returned False"
@@ -218,6 +216,7 @@ def add_scholar_and_fetch(args):
     authors = convert_json_to_tuple(authors_json)
     logger.debug("Converted new author's record into tuple representation.")
 
+    # Provide a compat wrapper so tests can patch streams_funcs.fetch_pubs_dictionary
     articles = fetch_pubs_dictionary(authors, args)
     logger.info(f"Fetched {len(articles)} articles for the new author.")
 
@@ -225,3 +224,23 @@ def add_scholar_and_fetch(args):
     logger.info(
         "Added author to database. Cache successfully updated with new author's data."
     )
+
+
+def fetch_pubs_dictionary(authors, args, output_dir="./src"):
+    """Compat wrapper proxying to the backend implementation.
+
+    Tests patch streams_funcs.fetch_pubs_dictionary; keep this thin indirection
+    so the patch point remains stable.
+    """
+    try:
+        from fetch_scholar import fetch_pubs_dictionary as _fetch
+    except Exception:
+        # Fallback to backend (if implemented there)
+        from fetch_backend import fetch_publications_by_id as _alt
+        # If only per-author is available, iterate authors
+        results = []
+        for _, aid in authors or []:
+            results.extend(_alt(aid, output_folder=output_dir, args=args) or [])
+        return results
+    else:
+        return _fetch(authors, args, output_dir=output_dir)

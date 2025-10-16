@@ -21,9 +21,19 @@ logger = logging.getLogger(__name__)
 security = HTTPBearer(auto_error=False)
 
 # Configuration
-DATA_DIR = os.getenv("DATA_DIR", "./src")
-AUTHORS_DB_PATH = os.getenv("AUTHORS_DB_PATH", os.path.join(DATA_DIR, "authors.db"))
-PUBLICATIONS_DB_PATH = os.getenv("PUBLICATIONS_DB_PATH", os.path.join(DATA_DIR, "publications.db"))
+def _data_dir() -> str:
+    """Resolve data directory at call time to honor env changes in tests."""
+    return os.getenv("DATA_DIR", "./src")
+
+
+def _authors_db_path() -> str:
+    base = _data_dir()
+    return os.getenv("AUTHORS_DB_PATH", os.path.join(base, "authors.db"))
+
+
+def _publications_db_path() -> str:
+    base = _data_dir()
+    return os.getenv("PUBLICATIONS_DB_PATH", os.path.join(base, "publications.db"))
 API_KEY = os.getenv("API_KEY", None)  # Optional API key for simple auth
 
 
@@ -37,7 +47,7 @@ def get_authors_db() -> Generator[sqlite3.Connection, None, None]:
     Yields:
         sqlite3.Connection: Database connection with row factory enabled
     """
-    conn = sqlite3.connect(AUTHORS_DB_PATH, check_same_thread=False)
+    conn = sqlite3.connect(_authors_db_path(), check_same_thread=False)
     conn.row_factory = sqlite3.Row
     try:
         # Ensure table exists
@@ -72,7 +82,7 @@ def get_publications_db() -> Generator[sqlite3.Connection, None, None]:
     Yields:
         sqlite3.Connection: Database connection with row factory enabled
     """
-    conn = sqlite3.connect(PUBLICATIONS_DB_PATH, check_same_thread=False)
+    conn = sqlite3.connect(_publications_db_path(), check_same_thread=False)
     conn.row_factory = sqlite3.Row
     try:
         # Ensure table exists

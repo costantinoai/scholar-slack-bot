@@ -14,7 +14,7 @@
 
     <!-- Filters -->
     <div class="bg-white rounded-lg shadow p-4">
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-3">
             <div>
                 <label class="block text-sm text-gray-600 mb-1">Search</label>
                 <input id="filter-search" type="search" placeholder="Title or abstract..."
@@ -39,6 +39,14 @@
                 <label class="block text-sm text-gray-600 mb-1">Min Citations</label>
                 <input id="filter-min-citations" type="number" min="0"
                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Sort</label>
+                <select id="filter-order" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                    <option value="recent" selected>Most Recent</option>
+                    <option value="citations">Most Cited</option>
+                    <option value="title">Title (A→Z)</option>
+                </select>
             </div>
         </div>
         <div class="mt-4 flex items-center space-x-3">
@@ -76,6 +84,8 @@
     let pubsData = [];
     let authorsMap = {};
     let pubSort = { column: 'year', dir: 'desc' };
+    let currentOffset = 0;
+    const PAGE_SIZE = 500; // fetch up to 500 at a time for completeness
     function getQueryParam(name) {
         const params = new URLSearchParams(window.location.search);
         return params.get(name) || '';
@@ -97,6 +107,7 @@
             const minYear = document.getElementById('filter-min-year').value.trim();
             const maxYear = document.getElementById('filter-max-year').value.trim();
             const minCites = document.getElementById('filter-min-citations').value.trim();
+            const order = document.getElementById('filter-order').value;
 
             const params = new URLSearchParams();
             if (search) params.set('search', search);
@@ -104,7 +115,9 @@
             if (minYear) params.set('min_year', minYear);
             if (maxYear) params.set('max_year', maxYear);
             if (minCites) params.set('min_citations', minCites);
-            params.set('limit', '200');
+            if (order) params.set('order', order);
+            params.set('limit', String(PAGE_SIZE));
+            params.set('offset', String(currentOffset));
 
             // Load authors map once per load; used to display the single monitored author name
             try {
@@ -115,13 +128,26 @@
             } catch (e) { /* non-fatal */ }
 
             const res = await fetch(`/api/v1/publications?${params.toString()}`);
-            pubsData = await res.json();
+            const chunk = await res.json();
+            if (currentOffset === 0) pubsData = chunk; else pubsData = pubsData.concat(chunk);
             renderPubs();
         } catch (err) {
             console.error('Failed to load publications', err);
             showToast('Failed to load publications', 'error');
         }
     }
+
+    // Simple infinite scroll/load-more if needed
+    window.addEventListener('scroll', () => {
+        const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
+        if (nearBottom) {
+            // Attempt to fetch next page if the last fetch returned a full page
+            if (Array.isArray(pubsData) && pubsData.length >= currentOffset + PAGE_SIZE) {
+                currentOffset += PAGE_SIZE;
+                loadPublications();
+            }
+        }
+    });
 
     function renderPubs() {
         const tbody = document.getElementById('pubs-body');
@@ -220,6 +246,7 @@
         if (author) {
             document.getElementById('filter-author').value = author;
         }
+        currentOffset = 0;
         loadPublications();
     });
 </script>

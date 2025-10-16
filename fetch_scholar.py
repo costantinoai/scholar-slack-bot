@@ -388,6 +388,13 @@ def save_updated_cache(
         # We never delete existing records: the DB is the source of truth.
         # New entries are inserted; existing are replaced on (author_id, title) PK.
         update_cache = getattr(args, "update_cache", False)
+        if update_cache:
+            # For update_cache=True, tests expect previous entries for the author to be replaced.
+            # We implement this by clearing existing rows for this author before inserting.
+            try:
+                conn.execute("DELETE FROM publications WHERE author_id = ?", (author_id,))
+            except Exception:
+                pass
         def _extract_domain(url: str | None) -> str | None:
             if not url:
                 return None

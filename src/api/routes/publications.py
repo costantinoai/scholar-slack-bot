@@ -33,6 +33,10 @@ async def query_publications(
     max_year: Optional[int] = Query(None, description="Maximum year (inclusive)"),
     min_citations: Optional[int] = Query(None, description="Minimum citations"),
     search: Optional[str] = Query(None, description="Search in title and abstract"),
+    order: Optional[str] = Query(
+        None,
+        description="Sort order: 'citations' (default) or 'recent' or 'title'",
+    ),
     limit: int = Query(100, ge=1, le=1000, description="Maximum results"),
     offset: int = Query(0, ge=0, description="Results to skip"),
     db: sqlite3.Connection = Depends(get_publications_db),
@@ -94,7 +98,16 @@ async def query_publications(
             params.extend([search_pattern, search_pattern])
 
         # Add ordering and pagination
-        query_parts.append("ORDER BY citations DESC, year DESC LIMIT ? OFFSET ?")
+        ord_clause = "citations DESC, year DESC"
+        if order:
+            o = (order or "").lower().strip()
+            if o == "recent":
+                ord_clause = "year DESC, citations DESC"
+            elif o == "title":
+                ord_clause = "title COLLATE NOCASE ASC"
+            else:
+                ord_clause = "citations DESC, year DESC"
+        query_parts.append(f"ORDER BY {ord_clause} LIMIT ? OFFSET ?")
         params.extend([limit, offset])
 
         # Execute query
