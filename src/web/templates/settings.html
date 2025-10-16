@@ -1,4 +1,4 @@
-{% extends base_template %}
+{% extends "base.html" %}
 
 {% block title %}Settings - Scholar Slack Bot{% endblock %}
 
@@ -47,10 +47,13 @@
         <div>
             <label class="block text-sm text-gray-600 mb-1">Theme</label>
             <select id="ui_theme" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
-                <option value="tailwind">Tailwind (default)</option>
-                <option value="material">Material</option>
+                <option value="ocean">Ocean (default)</option>
+                <option value="emerald">Emerald</option>
+                <option value="rose">Rose</option>
+                <option value="slate">Slate</option>
+                <option value="amber">Amber</option>
             </select>
-            <p class="mt-1 text-xs text-gray-500">Switches the UI base template. Stored in a cookie; takes effect on next navigation.</p>
+            <p class="mt-1 text-xs text-gray-500">Tailwind-only themes; stored in a cookie. Reload to apply across pages.</p>
             <button onclick="saveTheme()" class="mt-2 px-3 py-2 bg-gray-100 text-gray-800 rounded hover:bg-gray-200">Save Theme</button>
         </div>
 
@@ -291,7 +294,7 @@ function saveTheme() {
     const expires = new Date(Date.now() + 365*24*60*60*1000).toUTCString(); // 1 year
     document.cookie = `ui_theme=${encodeURIComponent(val)}; expires=${expires}; path=/`;
     showToast('Theme preference saved. Reloading…', 'info');
-    setTimeout(() => window.location.href = `/?theme=${val}`, 300);
+    setTimeout(() => window.location.reload(), 300);
 }
 
 // Show/hide OpenAlex-only fields based on backend selection

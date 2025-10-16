@@ -22,25 +22,6 @@ router = APIRouter(tags=["web"])
 templates = Jinja2Templates(directory="src/web/templates")
 
 
-def _resolve_base_template(request: Request) -> str:
-    """Choose which base template to use for this request.
-
-    We support a simple query parameter toggle `?theme=material` to switch the
-    UI to a Material Design flavored base. The default theme remains the
-    Tailwind-based layout (`base.html`). A cookie `ui_theme=material` is also
-    honored if present.
-    """
-    try:
-        theme = (request.query_params.get("theme") or "").lower().strip()
-        if not theme:
-            theme = (request.cookies.get("ui_theme") or "").lower().strip()
-        if theme in {"material", "md", "material3"}:
-            return "base_material.html"
-    except Exception:
-        pass
-    return "base.html"
-
-
 # ============================================================================
 # Page Routes (Full HTML pages)
 # ============================================================================
@@ -48,31 +29,31 @@ def _resolve_base_template(request: Request) -> str:
 @router.get("/", response_class=HTMLResponse)
 async def dashboard(request: Request):
     """Render the main dashboard page."""
-    return templates.TemplateResponse("dashboard.html", {"request": request, "base_template": _resolve_base_template(request)})
+    return templates.TemplateResponse("dashboard.html", {"request": request})
 
 
 @router.get("/authors", response_class=HTMLResponse)
 async def authors_page(request: Request):
     """Render the authors management page."""
-    return templates.TemplateResponse("authors.html", {"request": request, "base_template": _resolve_base_template(request)})
+    return templates.TemplateResponse("authors.html", {"request": request})
 
 
 @router.get("/publications", response_class=HTMLResponse)
 async def publications_page(request: Request):
     """Render the publications browser page."""
-    return templates.TemplateResponse("publications.html", {"request": request, "base_template": _resolve_base_template(request)})
+    return templates.TemplateResponse("publications.html", {"request": request})
 
 
 @router.get("/plugins", response_class=HTMLResponse)
 async def plugins_page(request: Request):
     """Render the plugins configuration page."""
-    return templates.TemplateResponse("plugins.html", {"request": request, "base_template": _resolve_base_template(request)})
+    return templates.TemplateResponse("plugins.html", {"request": request})
 
 
 @router.get("/settings", response_class=HTMLResponse)
 async def settings_page(request: Request):
     """Render the application settings page."""
-    return templates.TemplateResponse("settings.html", {"request": request, "base_template": _resolve_base_template(request)})
+    return templates.TemplateResponse("settings.html", {"request": request})
 
 
 @router.get("/stats", response_class=HTMLResponse)
@@ -86,13 +67,13 @@ async def stats_page(request: Request):
     - Top authors by h-index and by citations
     It consumes the `/api/v1/publications/stats` endpoint.
     """
-    return templates.TemplateResponse("stats.html", {"request": request, "base_template": _resolve_base_template(request)})
+    return templates.TemplateResponse("stats.html", {"request": request})
 
 
 @router.get("/author/{author_id}", response_class=HTMLResponse)
 async def author_detail_page(request: Request, author_id: str):
     """Render author detail view with sortable publications table."""
-    return templates.TemplateResponse("author_detail.html", {"request": request, "author_id": author_id, "base_template": _resolve_base_template(request)})
+    return templates.TemplateResponse("author_detail.html", {"request": request, "author_id": author_id})
 
 
 # ============================================================================

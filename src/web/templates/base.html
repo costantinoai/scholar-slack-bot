@@ -69,6 +69,39 @@
         }
     </style>
 
+    <script>
+      // Tailwind theme mapping: replace -blue- utilities with target palette.
+      function applyTailwindTheme(theme) {
+        if (!theme || theme === 'ocean') return; // default blues
+        const from = 'blue';
+        const to = theme; // e.g., 'emerald', 'rose', 'slate', 'amber'
+        const nodes = document.querySelectorAll('[class]');
+        nodes.forEach((el) => {
+          const classes = el.className.split(/\s+/);
+          let changed = false;
+          for (let i = 0; i < classes.length; i++) {
+            const c = classes[i];
+            // Replace tokens like bg-blue-600, text-blue-700, border-blue-200, from-blue-900, to-blue-800
+            if (c.includes(`-${from}-`)) {
+              classes[i] = c.replace(`-${from}-`, `-${to}-`);
+              changed = true;
+            }
+          }
+          if (changed) el.className = classes.join(' ');
+        });
+      }
+
+      function getCookie(name) {
+        const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]+)'));
+        return m ? decodeURIComponent(m[1]) : '';
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const theme = getCookie('ui_theme') || 'ocean';
+        applyTailwindTheme(theme);
+      });
+    </script>
+
     {% block extra_head %}{% endblock %}
 </head>
 <body class="h-full">
