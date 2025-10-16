@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends base_template %}
 
 {% block title %}Authors - Scholar Slack Bot{% endblock %}
 
@@ -87,18 +87,21 @@
 
         <form id="add-author-form" onsubmit="addAuthor(event)" class="px-6 py-4">
             <div class="mb-4">
-                <label for="scholar-id" class="block text-sm font-medium text-gray-700 mb-2">
-                    Google Scholar ID
-                </label>
-                <input type="text"
-                       id="scholar-id"
-                       name="scholar_id"
-                       required
-                       placeholder="e.g., abc123xyz"
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                <p class="mt-2 text-sm text-gray-500">
-                    Find the Scholar ID in the author's Google Scholar profile URL
-                </p>
+                <div class="flex items-center space-x-3">
+                    <div class="flex-1">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Author ID</label>
+                        <input type="text" id="author-id-input" required placeholder="e.g., abc123xyz or https://openalex.org/A..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <p class="mt-2 text-sm text-gray-500">Provide a Google Scholar ID or an OpenAlex author URL/ID.</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">ID Type</label>
+                        <select id="author-id-type" class="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <option value="scholar">Scholar</option>
+                            <option value="openalex">OpenAlex</option>
+                            <option value="orcid">ORCID</option>
+                        </select>
+                    </div>
+                </div>
             </div>
 
             <div class="flex items-center justify-end space-x-3">
@@ -143,6 +146,38 @@
         </div>
     </div>
 </div>
+<!-- Preview Modal -->
+<div id="preview-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-xl max-w-3xl w-full mx-4">
+        <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-gray-900">Fetch & Preview</h3>
+            <button onclick="hidePreviewModal()" class="text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="px-6 py-4 max-h-[60vh] overflow-y-auto" id="preview-list">
+            <p class="text-gray-600">Loading…</p>
+        </div>
+        <div class="px-6 py-4 bg-gray-50 flex items-center justify-between rounded-b-lg">
+            <div class="flex items-center space-x-3">
+                <label class="text-sm text-gray-700"><input type="checkbox" id="preview-select-all" class="mr-2">Select all</label>
+            </div>
+            <div class="flex items-center space-x-2">
+                <select id="preview-plugin" class="px-2 py-2 border border-gray-300 rounded-lg text-sm" title="Select plugin">
+                    <option value="">Loading plugins…</option>
+                </select>
+                <input id="preview-target" placeholder="Target (optional)" class="px-2 py-2 border border-gray-300 rounded-lg text-sm w-48" />
+                <button onclick="openSelectedLinks()" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Open Links</button>
+                <button onclick="saveSelectedPublications()" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Save Selected</button>
+                <button id="preview-send-btn" onclick="sendSelectedPublications()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">Send Selected</button>
+                <span id="plugin-cta" class="ml-2 text-sm text-gray-600 hidden">No plugin configured. <a href="/plugins" class="text-blue-600 hover:text-blue-800 underline">Configure Plugins →</a></span>
+            </div>
+        </div>
+    </div>
+    
+</div>
 {% endblock %}
 
 {% block extra_scripts %}
@@ -164,15 +199,7 @@
             statusEl.textContent = `Slack plugin: ${configured} • Health: ${healthy}`;
             pluginSlackConfigured = !!info.is_configured;
             // Disable Fetch & Send buttons if not configured
-            if (!pluginSlackConfigured) {
-                document.querySelectorAll('button').forEach(btn => {
-                    if (btn.textContent && btn.textContent.includes('Fetch & Send')) {
-                        btn.disabled = true;
-                        btn.title = 'Configure Slack plugin first';
-                        btn.classList.add('opacity-50', 'cursor-not-allowed');
-                    }
-                });
-            }
+            // Do not disable Preview & Send button; modal will manage send availability per plugin
         } catch (e) {
             const statusEl = document.getElementById('plugin-status');
             statusEl.textContent = 'Slack plugin status unavailable';
@@ -194,6 +221,189 @@
     }
     console.log('showAddAuthorModal function defined');
 
+    // Preview & Send flow
+    let previewItems = [];
+    let previewAuthorId = null;
+    let previewPlugins = [];
+    async function previewFetchAuthor(authorId) {
+        if (settingsCache.backend === 'openalex') {
+            const ok = confirm('OpenAlex backend is active. This may take ~1 minute for new authors. Proceed?');
+            if (!ok) return;
+        }
+        previewAuthorId = authorId;
+        document.getElementById('preview-list').innerHTML = '<p class="text-gray-600">Loading…</p>';
+        document.getElementById('preview-modal').classList.remove('hidden');
+        try {
+            const res = await fetch(`/api/v1/authors/${authorId}/fetch-preview`, { method: 'POST' });
+            if (!res.ok) {
+                const err = await res.json();
+                showToast(err.detail || 'Preview failed', 'error');
+                return;
+            }
+            previewItems = await res.json();
+            await loadPreviewPlugins();
+            await loadPreviewAuthorName(authorId);
+            renderPreviewList();
+        } catch (e) {
+            showToast('Network error during preview', 'error');
+        }
+    }
+
+    let previewAuthorName = '';
+    async function loadPreviewAuthorName(authorId) {
+        try {
+            const r = await fetch(`/api/v1/authors/${authorId}`);
+            if (r.ok) { const a = await r.json(); previewAuthorName = a.name || authorId; }
+            else { previewAuthorName = authorId; }
+        } catch (e) { previewAuthorName = authorId; }
+    }
+
+    async function loadPreviewPlugins() {
+        try {
+            const res = await fetch('/api/v1/plugins');
+            previewPlugins = await res.json();
+        } catch (e) {
+            previewPlugins = [];
+        }
+        const sel = document.getElementById('preview-plugin');
+        if (!sel) return;
+        sel.innerHTML = '';
+        // Always include a None option (no sending)
+        {
+            const noneOpt = document.createElement('option'); noneOpt.value=''; noneOpt.textContent='None (no sending)'; sel.appendChild(noneOpt);
+        }
+        if (!Array.isArray(previewPlugins) || previewPlugins.length === 0) {
+            // keep only None
+        } else {
+            // Preselect first configured plugin; else first
+            let idx = previewPlugins.findIndex(p => p.is_configured);
+            previewPlugins.forEach((p, i) => {
+                const opt = document.createElement('option');
+                opt.value = p.name; opt.textContent = `${p.display_name || p.name}${p.is_configured ? '' : ' (not configured)'}`;
+                if (i === idx) opt.selected = true;
+                sel.appendChild(opt);
+            });
+        }
+        sel.onchange = updatePreviewSendState;
+        updatePreviewSendState();
+    }
+
+    function updatePreviewSendState() {
+        const sendBtn = document.getElementById('preview-send-btn');
+        const sel = document.getElementById('preview-plugin');
+        const cta = document.getElementById('plugin-cta');
+        if (!sendBtn || !sel) return;
+        const p = (previewPlugins || []).find(x => x.name === sel.value);
+        const configured = !!(p && p.is_configured);
+        sendBtn.disabled = !configured;
+        if (!configured) {
+            sendBtn.title = 'Configure selected plugin first';
+            sendBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            if (cta) cta.classList.remove('hidden');
+        } else {
+            sendBtn.title = '';
+            sendBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            if (cta) cta.classList.add('hidden');
+        }
+    }
+
+    function renderPreviewList() {
+        const list = document.getElementById('preview-list');
+        if (!Array.isArray(previewItems) || previewItems.length === 0) {
+            list.innerHTML = '<p class="text-gray-600">No new publications found.</p>';
+            return;
+        }
+        list.innerHTML = previewItems.map((p, idx) => {
+            const title = p.title || '';
+            const abs = p.abstract || '';
+            const year = p.year || '';
+            const url = p.url || '';
+            return `
+                <div class="py-3 border-b border-gray-100 flex items-start">
+                    <input type="checkbox" class="mt-1 mr-3" data-preview-index="${idx}">
+                    <div>
+                        <div class="font-medium text-gray-900">${title} <span class=\"text-gray-500 font-normal\">– ${previewAuthorName}</span></div>
+                        ${abs ? `<div class=\"text-gray-600 text-sm\">${abs}</div>` : ''}
+                        <div class="text-gray-500 text-xs mt-1">${year ? year + ' • ' : ''}${url ? `<a href=\"${url}\" target=\"_blank\" class=\"text-blue-600\">Open →</a>` : ''}</div>
+                    </div>
+                </div>`;
+        }).join('');
+        const selectAll = document.getElementById('preview-select-all');
+        if (selectAll) {
+            selectAll.checked = false;
+            selectAll.onchange = () => {
+                document.querySelectorAll('#preview-list input[type="checkbox"]').forEach(cb => cb.checked = selectAll.checked);
+            };
+        }
+        updatePreviewSendState();
+    }
+
+    function hidePreviewModal() {
+        document.getElementById('preview-modal').classList.add('hidden');
+        previewItems = [];
+        previewAuthorId = null;
+    }
+
+    function openSelectedLinks() {
+        const selected = Array.from(document.querySelectorAll('#preview-list input[type="checkbox"]:checked'))
+            .map(cb => previewItems[parseInt(cb.getAttribute('data-preview-index'))])
+            .filter(x => x && x.url);
+        const maxToOpen = 5;
+        selected.slice(0, maxToOpen).forEach(it => window.open(it.url, '_blank'));
+        if (selected.length > maxToOpen) {
+            showToast(`Opened ${maxToOpen}/${selected.length} (pop-up limit)`, 'info');
+        }
+    }
+
+    async function sendSelectedPublications() {
+        const selected = Array.from(document.querySelectorAll('#preview-list input[type=\"checkbox\"]:checked'))
+            .map(cb => previewItems[parseInt(cb.getAttribute('data-preview-index'))])
+            .filter(Boolean);
+        if (selected.length === 0) { showToast('Select at least one publication', 'warning'); return; }
+        try {
+            const pluginSel = document.getElementById('preview-plugin');
+            const targetEl = document.getElementById('preview-target');
+            const res = await fetch('/api/v1/fetch/notify/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ plugin_name: (pluginSel && pluginSel.value) || 'slack', target: (targetEl && targetEl.value) || null, items: selected })
+            });
+            if (res.ok) {
+                const data = await res.json();
+                showToast(`Sent ${data.count} publication(s)`, 'success');
+                hidePreviewModal();
+            } else {
+                const err = await res.json();
+                showToast(err.detail || 'Failed to send', 'error');
+            }
+        } catch (e) {
+            showToast('Network error while sending', 'error');
+        }
+    }
+
+    async function saveSelectedPublications() {
+        const selected = Array.from(document.querySelectorAll('#preview-list input[type=\"checkbox\"]:checked'))
+            .map(cb => previewItems[parseInt(cb.getAttribute('data-preview-index'))])
+            .filter(Boolean);
+        if (selected.length === 0) { showToast('Select at least one publication', 'warning'); return; }
+        try {
+            const res = await fetch(`/api/v1/authors/${previewAuthorId}/preview/save`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ items: selected })
+            });
+            if (res.ok) {
+                const data = await res.json();
+                showToast(`Saved ${data.saved || 0} publication(s)`, 'success');
+            } else {
+                const err = await res.json();
+                showToast(err.detail || 'Failed to save', 'error');
+            }
+        } catch (e) {
+            showToast('Network error while saving', 'error');
+        }
+    }
+
     function hideAddAuthorModal() {
         document.getElementById('add-author-modal').classList.add('hidden');
         document.getElementById('add-author-form').reset();
@@ -212,7 +422,18 @@
     // Add author
     async function addAuthor(event) {
         event.preventDefault();
-        const scholarId = document.getElementById('scholar-id').value;
+        const idType = document.getElementById('author-id-type').value;
+        const rawId = document.getElementById('author-id-input').value.trim();
+        if (!rawId) { showToast('Please provide an ID', 'warning'); return; }
+
+        let payload = {};
+        if (idType === 'openalex') {
+            payload = { openalex_id: rawId };
+        } else if (idType === 'orcid') {
+            payload = { orcid: rawId };
+        } else { // scholar
+            payload = { scholar_id: rawId };
+        }
 
         try {
             const response = await fetch('/api/v1/authors', {
@@ -220,7 +441,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ scholar_id: scholarId })
+                body: JSON.stringify(payload)
             });
 
             if (response.ok) {
@@ -263,7 +484,8 @@
 
     // View author details
     async function viewPublications(authorId) {
-        window.location.href = `/author/${authorId}`;
+        // Navigate to publications page filtered by this author
+        window.location.href = `/publications?author=${authorId}`;
     }
 
     // Refresh author cache
@@ -289,25 +511,7 @@
         try { const r = await fetch('/api/v1/settings'); settingsCache = await r.json(); } catch (e) {}
     });
 
-    async function fetchAndSendAuthor(authorId) {
-        if (settingsCache.backend === 'openalex') {
-            const ok = confirm('OpenAlex backend is active. This may take ~1 minute for new authors. Proceed?');
-            if (!ok) return;
-        }
-        showToast('Fetching latest pubs and sending...', 'info');
-        try {
-            const res = await fetch(`/api/v1/authors/${authorId}/fetch-and-send`, { method: 'POST' });
-            if (res.ok) {
-                const data = await res.json();
-                showToast(`Sent update (${data.sent_count} items)`, 'success');
-            } else {
-                const err = await res.json();
-                showToast(err.detail || 'Send failed', 'error');
-            }
-        } catch (e) {
-            showToast('Network error while sending', 'error');
-        }
-    }
+    // Preview modal elements and logic will be appended below
 
     function filterAuthors() {
         const searchTerm = (document.getElementById('author-search').value || '').toLowerCase();
@@ -325,12 +529,17 @@
         const cards = Array.from(container.children);
 
         cards.sort((a, b) => {
-            const nameA = a.getAttribute('data-author-name') || '';
-            const nameB = b.getAttribute('data-author-name') || '';
-            const pubsA = parseInt(a.getAttribute('data-pub-count')) || 0;
-            const pubsB = parseInt(b.getAttribute('data-pub-count')) || 0;
+            // Read attributes from each card, with safe defaults
+            const nameA = (a.getAttribute('data-author-name') || '').toLowerCase();
+            const nameB = (b.getAttribute('data-author-name') || '').toLowerCase();
+            const pubsA = parseInt(a.getAttribute('data-pub-count') || '0', 10) || 0;
+            const pubsB = parseInt(b.getAttribute('data-pub-count') || '0', 10) || 0;
+            const citesA = parseInt(a.getAttribute('data-total-citations') || '0', 10) || 0;
+            const citesB = parseInt(b.getAttribute('data-total-citations') || '0', 10) || 0;
+            const hA = parseInt(a.getAttribute('data-h-index') || '0', 10) || 0;
+            const hB = parseInt(b.getAttribute('data-h-index') || '0', 10) || 0;
 
-            switch(sortBy) {
+            switch (sortBy) {
                 case 'name-asc':
                     return nameA.localeCompare(nameB);
                 case 'name-desc':

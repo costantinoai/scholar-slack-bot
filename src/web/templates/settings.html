@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends base_template %}
 
 {% block title %}Settings - Scholar Slack Bot{% endblock %}
 
@@ -11,7 +11,7 @@
         </div>
     </div>
 
-<div class="bg-white rounded-lg shadow p-6 space-y-4">
+    <div class="bg-white rounded-lg shadow p-6 space-y-4">
         <div>
             <label class="block text-sm text-gray-600 mb-1">Backend</label>
             <select id="backend" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
@@ -21,24 +21,26 @@
             <p class="mt-1 text-xs text-gray-500">Choose data source for publications. OpenAlex requires a contact email to join the polite pool.</p>
         </div>
 
-        <div>
-            <label class="block text-sm text-gray-600 mb-1">OpenAlex Contact Email</label>
-            <input id="openalex_email" type="email" placeholder="you@example.com"
-                   class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
-            <p class="mt-1 text-xs text-gray-500">Used only to identify our app to OpenAlex (polite rate limits). Not sent anywhere else.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div id="openalex-extra" class="space-y-4 hidden">
             <div>
-                <label class="block text-sm text-gray-600 mb-1">Fetch Full History (OpenAlex)</label>
-                <input id="fetch_full_history" type="checkbox" class="mr-2">
-                <span class="text-sm text-gray-700">If checked, fetch all publications for each author.</span>
-            </div>
-            <div>
-                <label class="block text-sm text-gray-600 mb-1">From Year</label>
-                <input id="from_year" type="number" min="1900" max="2100" placeholder="e.g., 2010"
+                <label class="block text-sm text-gray-600 mb-1">OpenAlex Contact Email</label>
+                <input id="openalex_email" type="email" placeholder="you@example.com"
                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
-                <p class="mt-1 text-xs text-gray-500">Ignored when Fetch Full History is enabled.</p>
+                <p class="mt-1 text-xs text-gray-500">Used only to identify our app to OpenAlex (polite rate limits). Not sent anywhere else.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-sm text-gray-600 mb-1">Fetch Full History (OpenAlex)</label>
+                    <input id="fetch_full_history" type="checkbox" class="mr-2">
+                    <span class="text-sm text-gray-700">If checked, fetch all publications for each author.</span>
+                </div>
+                <div>
+                    <label class="block text-sm text-gray-600 mb-1">From Year</label>
+                    <input id="from_year" type="number" min="1900" max="2100" placeholder="e.g., 2010"
+                           class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                    <p class="mt-1 text-xs text-gray-500">Ignored when Fetch Full History is enabled.</p>
+                </div>
             </div>
         </div>
 
@@ -49,6 +51,17 @@
         <div class="flex items-center space-x-3">
             <button onclick="saveSettings()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Save</button>
             <button onclick="reloadSettings()" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Reset</button>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow p-6 space-y-4">
+        <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-gray-900">Connectivity Tests</h3>
+        </div>
+        <p class="text-sm text-gray-600">Run quick connectivity checks. These do not use or expose any secrets.</p>
+        <div class="flex items-center space-x-3">
+            <button onclick="testOpenAlex()" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Test OpenAlex</button>
+            <button onclick="testScholar()" class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-black">Test Scholar</button>
         </div>
     </div>
 
@@ -93,6 +106,18 @@
             </table>
         </div>
     </div>
+
+    <!-- Danger Zone -->
+    <div class="bg-white rounded-lg shadow p-6 space-y-4 border border-red-200">
+        <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-red-700">Danger Zone</h3>
+        </div>
+        <p class="text-sm text-red-700">Hard reset will delete the publications cache and refetch all authors. This may take a long time.</p>
+        <div class="flex items-center space-x-3">
+            <button onclick="hardResetDb()" class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">Hard Reset Publications DB</button>
+            <div id="hard-reset-progress" class="hidden px-3 py-2 text-sm bg-red-50 text-red-700 rounded"></div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -104,6 +129,7 @@ async function reloadSettings() {
         document.getElementById('openalex_email').value = data.openalex_email || '';
         document.getElementById('fetch_full_history').checked = !!data.fetch_full_history;
         document.getElementById('from_year').value = data.from_year || '';
+        toggleBackendFields();
     } catch (e) {
         showToast('Failed to load settings', 'error');
     }
@@ -135,6 +161,10 @@ async function saveSettings() {
 }
 
 document.addEventListener('DOMContentLoaded', reloadSettings);
+document.addEventListener('DOMContentLoaded', () => {
+    const sel = document.getElementById('backend');
+    if (sel) sel.addEventListener('change', toggleBackendFields);
+});
 
 async function loadJobs() {
     try {
@@ -212,5 +242,85 @@ async function runJob(id) {
 }
 
 document.addEventListener('DOMContentLoaded', loadJobs);
+
+async function testOpenAlex() {
+    try {
+        const res = await fetch('/api/v1/settings/test/openalex');
+        const data = await res.json();
+        if (data.success) {
+            showToast(`OpenAlex OK (status ${data.status || '200'})`, 'success');
+        } else {
+            showToast(`OpenAlex failed: ${data.error || data.status || 'unknown error'}`, 'error');
+        }
+    } catch (e) {
+        showToast('OpenAlex test failed', 'error');
+    }
+}
+
+async function testScholar() {
+    try {
+        const res = await fetch('/api/v1/settings/test/scholar');
+        const data = await res.json();
+        if (data.success) {
+            showToast(`Scholar OK: ${data.message || 'library available'}`, 'success');
+        } else {
+            showToast(`Scholar failed: ${data.error || 'unknown error'}`, 'error');
+        }
+    } catch (e) {
+        showToast('Scholar test failed', 'error');
+    }
+}
+
+// Show/hide OpenAlex-only fields based on backend selection
+function toggleBackendFields() {
+    const backendEl = document.getElementById('backend');
+    const extra = document.getElementById('openalex-extra');
+    if (!backendEl || !extra) return;
+    if (backendEl.value === 'openalex') {
+        extra.classList.remove('hidden');
+    } else {
+        extra.classList.add('hidden');
+    }
+}
+
+async function hardResetDb() {
+    if (!confirm('This will delete the publications cache and refetch all authors. Proceed?')) return;
+    try {
+        const res = await fetch('/api/v1/fetch/hard-reset', { method: 'POST' });
+        if (!res.ok) { const err = await res.json(); showToast(err.detail || 'Hard reset failed to start', 'error'); return; }
+        const { job_id } = await res.json();
+        const box = document.getElementById('hard-reset-progress');
+        if (box) box.classList.remove('hidden');
+        // Poll status
+        const url = `/api/v1/fetch/jobs/${job_id}/status`;
+        (async function poll(){
+            try {
+                const r = await fetch(url);
+                if (!r.ok) return;
+                const st = await r.json();
+                if (box) {
+                    if (st.status === 'running' && st.total) {
+                        const pct = Math.floor((st.processed || 0) * 100 / st.total);
+                        box.textContent = `Resetting: ${st.processed || 0}/${st.total} (${pct}%) ${st.current_author ? '– ' + st.current_author : ''}`;
+                    }
+                    if (st.status === 'completed') {
+                        box.classList.add('hidden');
+                        const res = st.result || {};
+                        showToast(`Hard reset complete: ${res.publications || 0} publications for ${res.authors || 0} authors`, 'success');
+                        return;
+                    }
+                    if (st.status === 'failed') {
+                        box.classList.add('hidden');
+                        showToast('Hard reset failed: ' + (st.error || ''), 'error');
+                        return;
+                    }
+                }
+            } catch (e) {}
+            setTimeout(poll, 2000);
+        })();
+    } catch (e) {
+        showToast('Network error during hard reset', 'error');
+    }
+}
 </script>
 {% endblock %}

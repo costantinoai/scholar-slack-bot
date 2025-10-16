@@ -83,6 +83,8 @@ curl -H "Authorization: Bearer your-secret-api-key-here" \
      http://localhost:8000/api/v1/authors
 ```
 
+Tip: For the web UI, you can also pass `?api_key=...` in development; use headers for production.
+
 ## Interactive Documentation
 
 The API provides two interactive documentation interfaces:
@@ -104,6 +106,8 @@ All API endpoints are prefixed with `/api/v1`:
 ```
 http://localhost:8000/api/v1/
 ```
+
+All endpoints are versioned. Breaking changes increment the prefix (e.g., `/api/v2`).
 
 ## Response Format
 
@@ -127,6 +131,16 @@ Error responses include an error message:
 }
 ```
 
+Error schema (FastAPI/Pydantic):
+
+```
+{
+  "error": "<MachineReadableCode>",
+  "message": "Human readable summary",
+  "detail": null | object
+}
+```
+
 ## HTTP Status Codes
 
 The API uses standard HTTP status codes:
@@ -146,6 +160,8 @@ The API uses standard HTTP status codes:
 ## Rate Limiting
 
 Rate limiting is planned for a future version but not currently implemented.
+
+To prevent abuse, you should deploy behind an API gateway or set up a reverse proxy (e.g., NGINX) with throttling in production.
 
 ## Endpoints Overview
 
@@ -174,6 +190,97 @@ Rate limiting is planned for a future version but not currently implemented.
 |----------|--------|-------------|
 | `/api/v1/publications` | GET | Query publications with filters |
 | `/api/v1/publications/stats` | GET | Publication statistics |
+ 
+#### Publication statistics response
+
+The statistics response includes aggregate fields and top lists useful for charts:
+
+```
+{
+  "total_publications": 1247,
+  "total_citations": 12845,
+  "publications_by_year": [ {"year": 2016, "count": 42}, ... ],
+  "top_cited": [ {"title": "...", "citations": 470, "year": 2008}, ... ],
+  "top_authors_by_citations": [ {"author_id": "...", "name": "...", "citations": 320}, ... ],
+  "top_journals": [ {"journal": "Nature", "publications": 12, "citations": 540}, ... ],
+  "authors_summary": {
+    "total_authors": 42,
+    "avg_pubs_per_author": 31.2,
+    "avg_citations_per_author": 305.8,
+    "avg_citations_per_publication": 10.3,
+    "top_authors_by_h_index": [ {"author_id": "...", "name": "...", "h_index": 45}, ... ]
+  },
+  "top_keywords": [ {"term": "memory", "count": 32}, ... ]
+}
+```
+
+Fields description:
+- `publications_by_year`: Totals by `year` in the selected window.
+- `top_cited`: Top globally cited works within the window.
+- `top_authors_by_citations`: Authors ranked by summed citations in the window (resolved via `authors.db`).
+- `top_journals`: Sources ranked by publication count and citations.
+- `institutions_by_country`: Aggregation from optional `publication_institutions` table; present only if table exists.
+- `authors_summary`: Global totals and a local h-index leaderboard computed from the DB.
+- `top_keywords`: Lightweight keyword extraction from titles and abstracts; if concepts are ingested, uses canonical topics.
+
+Note: The web UI omits the world map. Country totals are still available via `institutions_by_country` for list or bar chart visualizations.
+
+---
+
+## Filtering & Pagination
+
+The `/publications` endpoint supports rich filtering and pagination:
+
+- `author_id` (string): Filter by a specific author ID.
+- `year` (int): Exact publication year.
+- `min_year` (int): Minimum year (inclusive).
+- `max_year` (int): Maximum year (inclusive).
+- `min_citations` (int): Minimum citations.
+- `search` (string): Substring match on `title` and `abstract`.
+- `limit` (1..1000): Max results; default 100.
+- `offset` (>=0): Pagination offset; default 0.
+
+Examples:
+
+```bash
+# Highly cited recent works
+curl "http://localhost:8000/api/v1/publications?min_year=2022&min_citations=50&limit=25"
+
+# Search by keyword
+curl "http://localhost:8000/api/v1/publications?search=foundation+models&limit=50"
+
+# Browse one author's outputs
+curl "http://localhost:8000/api/v1/publications?author_id=A5087337335&min_year=2018"
+
+# Cursor-like pagination with limit/offset
+curl "http://localhost:8000/api/v1/publications?limit=100&offset=100"
+```
+
+The API orders results by `citations DESC, year DESC` to surface influential works first.
+
+---
+
+## Running via Docker
+
+You can run the API and web UI in a container:
+
+```bash
+docker build -t scholar-slack-bot .
+docker run --rm -p 8000:8000 \
+  -v $(pwd)/src:/app/src \
+  --name scholar-bot scholar-slack-bot
+```
+
+Visit `http://localhost:8000` for the UI and `http://localhost:8000/docs` for Swagger.
+
+Notes:
+- The bind-mount persists `authors.db`, `publications.db`, and `settings.json`.
+- Configure OpenAlex `mailto` and backend in Settings after the container starts.
+
+Notes:
+- `top_keywords` are derived locally from titles/abstracts as a proxy for topics.
+- For canonical topics (OpenAlex concepts), add concept ingestion in the DB (TODO).
+- Year filtering via `min_year`/`max_year` applies to all aggregates in the response.
 | `/api/v1/publications/{author_id}/{title}` | DELETE | Delete a publication |
 
 ### Plugins

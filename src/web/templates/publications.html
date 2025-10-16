@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends base_template %}
 
 {% block title %}Publications - Scholar Slack Bot{% endblock %}
 
@@ -61,8 +61,6 @@
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortPubs('year')">Year</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortPubs('citations')">Citations</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Authors</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Journal</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Abstract</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Link</th>
                     </tr>
                 </thead>
@@ -76,6 +74,7 @@
 
 <script>
     let pubsData = [];
+    let authorsMap = {};
     let pubSort = { column: 'year', dir: 'desc' };
     function getQueryParam(name) {
         const params = new URLSearchParams(window.location.search);
@@ -107,6 +106,14 @@
             if (minCites) params.set('min_citations', minCites);
             params.set('limit', '200');
 
+            // Load authors map once per load; used to display the single monitored author name
+            try {
+                const authorsRes = await fetch('/api/v1/authors');
+                const authors = await authorsRes.json();
+                authorsMap = {};
+                for (const a of authors) { authorsMap[a.id] = a.name; }
+            } catch (e) { /* non-fatal */ }
+
             const res = await fetch(`/api/v1/publications?${params.toString()}`);
             pubsData = await res.json();
             renderPubs();
@@ -119,25 +126,77 @@
     function renderPubs() {
         const tbody = document.getElementById('pubs-body');
         tbody.innerHTML = '';
-        document.getElementById('results-count').textContent = `${pubsData.length} result(s)`;
 
         if (!Array.isArray(pubsData) || pubsData.length === 0) {
-                tbody.innerHTML = '<tr><td class="px-6 py-4 text-sm text-gray-500" colspan="4">No publications found</td></tr>';
-                return;
+            tbody.innerHTML = '<tr><td class="px-6 py-4 text-sm text-gray-500" colspan="5">No publications found</td></tr>';
+            document.getElementById('results-count').textContent = '0 result(s)';
+            return;
         }
 
-        for (const pub of pubsData) {
+        // Deduplicate by DOI when available; otherwise by title+year+url; and aggregate authors
+        const groups = new Map();
+        pubsData.forEach((pub) => {
+            const doiKey = (pub.doi || '').toLowerCase();
+            const key = doiKey ? `doi:${doiKey}` : `${pub.title || ''}||${pub.year || ''}||${pub.url || ''}`;
+            if (!groups.has(key)) {
+                groups.set(key, { ...pub, author_ids: new Set([pub.author_id]), authors_names: new Set([authorsMap[pub.author_id] || pub.author_id || '']) });
+            } else {
+                const g = groups.get(key);
+                g.author_ids.add(pub.author_id);
+                g.authors_names.add(authorsMap[pub.author_id] || pub.author_id || '');
+                // Prefer max citations and non-empty abstract
+                if ((pub.citations || 0) > (g.citations || 0)) g.citations = pub.citations || 0;
+                if (!g.abstract && pub.abstract) g.abstract = pub.abstract;
+                if (!g.url && pub.url) g.url = pub.url;
+            }
+        });
+
+        const deduped = Array.from(groups.values());
+        document.getElementById('results-count').textContent = `${deduped.length} result(s)`;
+
+        deduped.forEach((pub, idx) => {
             const tr = document.createElement('tr');
+            const authorsList = Array.from(pub.authors_names).filter(Boolean).join(', ');
+            const abstract = pub.abstract || '';
+            const short = abstract && abstract.length > 240 ? abstract.slice(0, 240) + '…' : abstract;
+            const needsToggle = abstract && abstract.length > 240;
+            const absHTML = abstract ? `
+                <div class=\"mt-1 text-gray-600\">
+                    <span id=\"abs-short-${idx}\">${short}</span>
+                    ${needsToggle ? `<span id=\"abs-full-${idx}\" class=\"hidden\">${abstract}</span>
+                    <button id=\"abs-btn-${idx}\" class=\"ml-2 text-xs text-blue-600 hover:text-blue-800\" onclick=\"toggleAbs(${idx})\" aria-expanded=\"false\">More</button>` : ''}
+                </div>` : '';
+
             tr.innerHTML = `
-                <td class="px-6 py-4 text-sm text-gray-900">${pub.title || ''}</td>
+                <td class="px-6 py-4 text-sm">
+                    <div class="font-semibold text-gray-900">${pub.title || ''}</div>
+                    ${absHTML}
+                </td>
                 <td class="px-6 py-4 text-sm text-gray-700">${pub.year || ''}</td>
                 <td class="px-6 py-4 text-sm text-gray-700">${pub.citations ?? 0}</td>
-                <td class="px-6 py-4 text-sm text-gray-700">${pub.authors || ''}</td>
-                <td class="px-6 py-4 text-sm text-gray-700">${pub.journal || ''}</td>
-                <td class="px-6 py-4 text-sm text-gray-600">${(pub.abstract || '').slice(0,160)}${(pub.abstract && pub.abstract.length>160)?'…':''}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">${authorsList}</td>
                 <td class="px-6 py-4 text-sm">${pub.url ? `<a class=\"text-blue-600 hover:text-blue-800\" href=\"${pub.url}\" target=\"_blank\">Open →</a>` : ''}</td>
             `;
             tbody.appendChild(tr);
+        });
+    }
+
+    function toggleAbs(idx) {
+        const s = document.getElementById(`abs-short-${idx}`);
+        const f = document.getElementById(`abs-full-${idx}`);
+        const b = document.getElementById(`abs-btn-${idx}`);
+        if (!s || !f || !b) return;
+        const expanded = b.getAttribute('aria-expanded') === 'true';
+        if (expanded) {
+            f.classList.add('hidden');
+            s.classList.remove('hidden');
+            b.textContent = 'More';
+            b.setAttribute('aria-expanded', 'false');
+        } else {
+            s.classList.add('hidden');
+            f.classList.remove('hidden');
+            b.textContent = 'Less';
+            b.setAttribute('aria-expanded', 'true');
         }
     }
 

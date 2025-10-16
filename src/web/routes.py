@@ -22,6 +22,25 @@ router = APIRouter(tags=["web"])
 templates = Jinja2Templates(directory="src/web/templates")
 
 
+def _resolve_base_template(request: Request) -> str:
+    """Choose which base template to use for this request.
+
+    We support a simple query parameter toggle `?theme=material` to switch the
+    UI to a Material Design flavored base. The default theme remains the
+    Tailwind-based layout (`base.html`). A cookie `ui_theme=material` is also
+    honored if present.
+    """
+    try:
+        theme = (request.query_params.get("theme") or "").lower().strip()
+        if not theme:
+            theme = (request.cookies.get("ui_theme") or "").lower().strip()
+        if theme in {"material", "md", "material3"}:
+            return "base_material.html"
+    except Exception:
+        pass
+    return "base.html"
+
+
 # ============================================================================
 # Page Routes (Full HTML pages)
 # ============================================================================
@@ -29,37 +48,51 @@ templates = Jinja2Templates(directory="src/web/templates")
 @router.get("/", response_class=HTMLResponse)
 async def dashboard(request: Request):
     """Render the main dashboard page."""
-    return templates.TemplateResponse("dashboard.html", {"request": request})
+    return templates.TemplateResponse("dashboard.html", {"request": request, "base_template": _resolve_base_template(request)})
 
 
 @router.get("/authors", response_class=HTMLResponse)
 async def authors_page(request: Request):
     """Render the authors management page."""
-    return templates.TemplateResponse("authors.html", {"request": request})
+    return templates.TemplateResponse("authors.html", {"request": request, "base_template": _resolve_base_template(request)})
 
 
 @router.get("/publications", response_class=HTMLResponse)
 async def publications_page(request: Request):
     """Render the publications browser page."""
-    return templates.TemplateResponse("publications.html", {"request": request})
+    return templates.TemplateResponse("publications.html", {"request": request, "base_template": _resolve_base_template(request)})
 
 
 @router.get("/plugins", response_class=HTMLResponse)
 async def plugins_page(request: Request):
     """Render the plugins configuration page."""
-    return templates.TemplateResponse("plugins.html", {"request": request})
+    return templates.TemplateResponse("plugins.html", {"request": request, "base_template": _resolve_base_template(request)})
 
 
 @router.get("/settings", response_class=HTMLResponse)
 async def settings_page(request: Request):
     """Render the application settings page."""
-    return templates.TemplateResponse("settings.html", {"request": request})
+    return templates.TemplateResponse("settings.html", {"request": request, "base_template": _resolve_base_template(request)})
+
+
+@router.get("/stats", response_class=HTMLResponse)
+async def stats_page(request: Request):
+    """Render the statistics page.
+
+    This full page uses Chart.js to visualize:
+    - Publications by year (all years or last 10)
+    - Top journals (by publications)
+    - Top keywords/topics extracted from titles/abstracts
+    - Top authors by h-index and by citations
+    It consumes the `/api/v1/publications/stats` endpoint.
+    """
+    return templates.TemplateResponse("stats.html", {"request": request, "base_template": _resolve_base_template(request)})
 
 
 @router.get("/author/{author_id}", response_class=HTMLResponse)
 async def author_detail_page(request: Request, author_id: str):
     """Render author detail view with sortable publications table."""
-    return templates.TemplateResponse("author_detail.html", {"request": request, "author_id": author_id})
+    return templates.TemplateResponse("author_detail.html", {"request": request, "author_id": author_id, "base_template": _resolve_base_template(request)})
 
 
 # ============================================================================
@@ -210,8 +243,15 @@ async def get_authors_list(
 ):
     """Get authors list HTML fragment."""
     try:
-        cursor = authors_db.execute("SELECT name, id FROM authors ORDER BY name")
-        authors = cursor.fetchall()
+        # Try to include optional columns when available for contextual labeling
+        try:
+            cursor = authors_db.execute("SELECT name, id, openalex_id FROM authors ORDER BY name")
+            authors = cursor.fetchall()
+            include_openalex = True
+        except Exception:
+            cursor = authors_db.execute("SELECT name, id FROM authors ORDER BY name")
+            authors = cursor.fetchall()
+            include_openalex = False
 
         if not authors:
             return HTMLResponse(content="""
@@ -232,6 +272,8 @@ async def get_authors_list(
             author_dict = dict(author)
             author_id = author_dict['id']
             author_name = author_dict['name']
+            openalex_val = author_dict.get('openalex_id') if include_openalex else None
+            id_label = 'OpenAlex ID' if openalex_val else 'Scholar ID'
 
             # Get publication count
             pub_cursor = pubs_db.execute(
@@ -241,11 +283,11 @@ async def get_authors_list(
             pub_count = pub_cursor.fetchone()["count"]
 
             # Total citations
-            cit_cursor = pubs_db.execute(
+            cit_row = pubs_db.execute(
                 "SELECT COALESCE(SUM(citations), 0) as total FROM publications WHERE author_id = ?",
                 (author_id,)
-            )
-            total_citations = int(cit_cursor.fetchone()["total"]) if cit_cursor.fetchone() else 0
+            ).fetchone()
+            total_citations = int(cit_row["total"]) if cit_row is not None else 0
 
             # h-index
             h = 0
@@ -278,7 +320,7 @@ async def get_authors_list(
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold text-gray-900">{author_name}</h3>
-                                    <p class="text-sm text-gray-500">Scholar ID: {author_id}</p>
+                                    <p class="text-sm text-gray-500">{id_label}: {author_id}</p>
                                 </div>
                             </div>
 
@@ -313,9 +355,9 @@ async def get_authors_list(
                                     class="px-3 py-1 text-sm bg-yellow-50 text-yellow-700 rounded hover:bg-yellow-100 transition-colors" title="Refreshes cache only; does not send messages">
                                 Refresh Cache
                             </button>
-                            <button onclick="fetchAndSendAuthor('{author_id}')"
-                                    class="px-3 py-1 text-sm bg-green-50 text-green-700 rounded hover:bg-green-100 transition-colors" title="Fetch new publications and send via configured plugin">
-                                Fetch & Send
+                            <button onclick="previewFetchAuthor('{author_id}')"
+                                    class="px-3 py-1 text-sm bg-green-50 text-green-700 rounded hover:bg-green-100 transition-colors" title="Fetch latest publications (saved) and preview; sending is optional">
+                                Fetch & Preview
                             </button>
                             <button onclick="showDeleteModal('{author_id}', '{author_name}')"
                                     class="px-3 py-1 text-sm bg-red-50 text-red-700 rounded hover:bg-red-100 transition-colors">
