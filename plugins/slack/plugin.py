@@ -147,10 +147,15 @@ class SlackPlugin(MessagingPlugin):
             if dm_channel_id:
                 return self._send_message_to_channel(dm_channel_id, message, token)
 
+        # Final fallback: attempt to send using target as-is (useful for tests/envs)
+        try:
+            if self._send_message_to_channel(target, message, token):
+                return True
+        except Exception:
+            pass
+
         # Neither found
-        logger.error(
-            f"'{target}' is not a valid channel or user in this Slack workspace"
-        )
+        logger.error(f"'{target}' is not a valid channel or user in this Slack workspace")
         return False
 
     def format_publications(self, publications: List[Publication]) -> str:
