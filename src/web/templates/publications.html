@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+
+{% block title %}Publications - Scholar Slack Bot{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Publications</h1>
+            <p class="mt-2 text-gray-600">Browse and filter cached publications</p>
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="bg-white rounded-lg shadow p-4">
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-3">
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Search</label>
+                <input id="filter-search" type="search" placeholder="Title or abstract..."
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Author ID</label>
+                <input id="filter-author" type="text" placeholder="e.g. abc123xyz"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Min Year</label>
+                <input id="filter-min-year" type="number" min="1900" max="2100"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Max Year</label>
+                <input id="filter-max-year" type="number" min="1900" max="2100"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Min Citations</label>
+                <input id="filter-min-citations" type="number" min="0"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm text-gray-600 mb-1">Sort</label>
+                <select id="filter-order" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                    <option value="recent" selected>Most Recent</option>
+                    <option value="citations">Most Cited</option>
+                    <option value="title">Title (A→Z)</option>
+                </select>
+            </div>
+        </div>
+        <div class="mt-4 flex items-center space-x-3">
+            <button onclick="loadPublications()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Apply</button>
+            <button onclick="resetFilters()" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Reset</button>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div class="bg-white rounded-lg shadow">
+        <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-gray-900">Results</h3>
+            <span id="results-count" class="text-sm text-gray-500"></span>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortPubs('title')">Title</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortPubs('year')">Year</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortPubs('citations')">Citations</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Authors</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Link</th>
+                    </tr>
+                </thead>
+                <tbody id="pubs-body" class="bg-white divide-y divide-gray-200">
+                    <!-- Rows injected by JS -->
+                </tbody>
+            </table>
+        </div>
+        <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-center">
+            <button id="load-more-btn" onclick="loadMore()" class="hidden px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Load more</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let pubsData = [];
+    let authorsMap = {};
+    let pubSort = { column: 'year', dir: 'desc' };
+    let lastChunkCount = 0;
+    let currentOffset = 0;
+    const PAGE_SIZE = 500; // fetch up to 500 at a time for completeness
+    function getQueryParam(name) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(name) || '';
+    }
+
+    function resetFilters() {
+        document.getElementById('filter-search').value = '';
+        document.getElementById('filter-author').value = '';
+        document.getElementById('filter-min-year').value = '';
+        document.getElementById('filter-max-year').value = '';
+        document.getElementById('filter-min-citations').value = '';
+        loadPublications();
+    }
+
+    async function loadPublications() {
+        try {
+            const search = document.getElementById('filter-search').value.trim();
+            const author = document.getElementById('filter-author').value.trim();
+            const minYear = document.getElementById('filter-min-year').value.trim();
+            const maxYear = document.getElementById('filter-max-year').value.trim();
+            const minCites = document.getElementById('filter-min-citations').value.trim();
+            const order = document.getElementById('filter-order').value;
+
+            const params = new URLSearchParams();
+            if (search) params.set('search', search);
+            if (author) params.set('author_id', author);
+            if (minYear) params.set('min_year', minYear);
+            if (maxYear) params.set('max_year', maxYear);
+            if (minCites) params.set('min_citations', minCites);
+            if (order) params.set('order', order);
+            params.set('limit', String(PAGE_SIZE));
+            params.set('offset', String(currentOffset));
+
+            // Load authors map once per load; used to display the single monitored author name
+            try {
+                const authorsRes = await fetch('/api/v1/authors');
+                const authors = await authorsRes.json();
+                authorsMap = {};
+                for (const a of authors) { authorsMap[a.id] = a.name; }
+            } catch (e) { /* non-fatal */ }
+
+            const res = await fetch(`/api/v1/publications?${params.toString()}`);
+            const chunk = await res.json();
+            lastChunkCount = Array.isArray(chunk) ? chunk.length : 0;
+            if (currentOffset === 0) pubsData = chunk; else pubsData = pubsData.concat(chunk);
+            renderPubs();
+            // Toggle load more button based on whether we likely have more
+            const btn = document.getElementById('load-more-btn');
+            if (btn) {
+                if (lastChunkCount >= PAGE_SIZE) btn.classList.remove('hidden');
+                else btn.classList.add('hidden');
+            }
+        } catch (err) {
+            console.error('Failed to load publications', err);
+            showToast('Failed to load publications', 'error');
+        }
+    }
+
+    // Simple infinite scroll/load-more if needed
+    window.addEventListener('scroll', () => {
+        const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
+        if (nearBottom) {
+            // Attempt to fetch next page if the last fetch returned a full page
+            if (lastChunkCount >= PAGE_SIZE) {
+                currentOffset += PAGE_SIZE;
+                loadPublications();
+            }
+        }
+    });
+
+    function loadMore() {
+        if (lastChunkCount >= PAGE_SIZE) {
+            currentOffset += PAGE_SIZE;
+            loadPublications();
+        }
+    }
+
+    function renderPubs() {
+        const tbody = document.getElementById('pubs-body');
+        tbody.innerHTML = '';
+
+        if (!Array.isArray(pubsData) || pubsData.length === 0) {
+            tbody.innerHTML = '<tr><td class="px-6 py-4 text-sm text-gray-500" colspan="5">No publications found</td></tr>';
+            document.getElementById('results-count').textContent = '0 result(s)';
+            return;
+        }
+
+        // Deduplicate by DOI when available; otherwise by title+year+url; and aggregate authors
+        const groups = new Map();
+        pubsData.forEach((pub) => {
+            const doiKey = (pub.doi || '').toLowerCase();
+            const key = doiKey ? `doi:${doiKey}` : `${pub.title || ''}||${pub.year || ''}||${pub.url || ''}`;
+            if (!groups.has(key)) {
+                groups.set(key, { ...pub, author_ids: new Set([pub.author_id]), authors_names: new Set([authorsMap[pub.author_id] || pub.author_id || '']) });
+            } else {
+                const g = groups.get(key);
+                g.author_ids.add(pub.author_id);
+                g.authors_names.add(authorsMap[pub.author_id] || pub.author_id || '');
+                // Prefer max citations and non-empty abstract
+                if ((pub.citations || 0) > (g.citations || 0)) g.citations = pub.citations || 0;
+                if (!g.abstract && pub.abstract) g.abstract = pub.abstract;
+                if (!g.url && pub.url) g.url = pub.url;
+            }
+        });
+
+        const deduped = Array.from(groups.values());
+        document.getElementById('results-count').textContent = `${deduped.length} result(s)`;
+
+        deduped.forEach((pub, idx) => {
+            const tr = document.createElement('tr');
+            const authorsList = Array.from(pub.authors_names).filter(Boolean).join(', ');
+            const abstract = pub.abstract || '';
+            const short = abstract && abstract.length > 240 ? abstract.slice(0, 240) + '…' : abstract;
+            const needsToggle = abstract && abstract.length > 240;
+            const absHTML = abstract ? `
+                <div class=\"mt-1 text-gray-600\">
+                    <span id=\"abs-short-${idx}\">${short}</span>
+                    ${needsToggle ? `<span id=\"abs-full-${idx}\" class=\"hidden\">${abstract}</span>
+                    <button id=\"abs-btn-${idx}\" class=\"ml-2 text-xs text-blue-600 hover:text-blue-800\" onclick=\"toggleAbs(${idx})\" aria-expanded=\"false\">More</button>` : ''}
+                </div>` : '';
+
+            tr.innerHTML = `
+                <td class="px-6 py-4 text-sm">
+                    <div class="font-semibold text-gray-900">${pub.title || ''}</div>
+                    ${absHTML}
+                </td>
+                <td class="px-6 py-4 text-sm text-gray-700">${pub.year || ''}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">${pub.citations ?? 0}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">${authorsList}</td>
+                <td class="px-6 py-4 text-sm">${pub.url ? `<a class=\"text-blue-600 hover:text-blue-800\" href=\"${pub.url}\" target=\"_blank\">Open →</a>` : ''}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    function toggleAbs(idx) {
+        const s = document.getElementById(`abs-short-${idx}`);
+        const f = document.getElementById(`abs-full-${idx}`);
+        const b = document.getElementById(`abs-btn-${idx}`);
+        if (!s || !f || !b) return;
+        const expanded = b.getAttribute('aria-expanded') === 'true';
+        if (expanded) {
+            f.classList.add('hidden');
+            s.classList.remove('hidden');
+            b.textContent = 'More';
+            b.setAttribute('aria-expanded', 'false');
+        } else {
+            s.classList.add('hidden');
+            f.classList.remove('hidden');
+            b.textContent = 'Less';
+            b.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    function sortPubs(column) {
+        if (pubSort.column === column) { pubSort.dir = pubSort.dir === 'asc' ? 'desc' : 'asc'; }
+        else { pubSort.column = column; pubSort.dir = 'asc'; }
+        pubsData.sort((a,b) => {
+            let av = a[column], bv = b[column];
+            if (typeof av === 'string') av = av.toLowerCase();
+            if (typeof bv === 'string') bv = bv.toLowerCase();
+            if (av < bv) return pubSort.dir === 'asc' ? -1 : 1;
+            if (av > bv) return pubSort.dir === 'asc' ? 1 : -1;
+            return 0;
+        });
+        renderPubs();
+    }
+
+    // Initialize with author param if present
+    document.addEventListener('DOMContentLoaded', () => {
+        const author = getQueryParam('author');
+        if (author) {
+            document.getElementById('filter-author').value = author;
+        }
+        currentOffset = 0;
+        loadPublications();
+    });
+</script>
+{% endblock %}

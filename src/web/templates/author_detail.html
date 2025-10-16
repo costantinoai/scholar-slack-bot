@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Author Details - Scholar Slack Bot{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Author Details</h1>
+            <p class="mt-2 text-gray-600">Publications for <span id="author-name"></span> (<code id="author-id"></code>)</p>
+        </div>
+        <div class="space-x-2">
+            <button onclick="refreshAuthorCache()" class="px-3 py-2 bg-yellow-50 text-yellow-700 rounded hover:bg-yellow-100">Refresh Cache</button>
+            <button onclick="fetchAndSend()" class="px-3 py-2 bg-green-50 text-green-700 rounded hover:bg-green-100">Fetch & Send</button>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow">
+        <div class="px-6 py-4 border-b border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-900">Publications</h3>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortBy('title')">Title</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortBy('year')">Year</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" onclick="sortBy('citations')">Citations</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Link</th>
+                    </tr>
+                </thead>
+                <tbody id="pubs-body" class="bg-white divide-y divide-gray-200"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    const authorId = '{{ author_id }}';
+    let pubs = [];
+    let sortState = { column: 'year', dir: 'desc' };
+    let settingsCache = { backend: 'scholar' };
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        document.getElementById('author-id').textContent = authorId;
+        try { const r = await fetch('/api/v1/settings'); settingsCache = await r.json(); } catch (e) {}
+        await loadAuthor();
+        await loadPublications();
+    });
+
+    async function loadAuthor() {
+        try {
+            const res = await fetch(`/api/v1/authors/${authorId}`);
+            const a = await res.json();
+            document.getElementById('author-name').textContent = a.name || '';
+        } catch (e) { showToast('Failed to load author', 'error'); }
+    }
+
+    async function loadPublications() {
+        try {
+            const res = await fetch(`/api/v1/authors/${authorId}/publications?limit=1000`);
+            pubs = await res.json();
+            renderPubs();
+        } catch (e) { showToast('Failed to load publications', 'error'); }
+    }
+
+    function renderPubs() {
+        const body = document.getElementById('pubs-body');
+        body.innerHTML = '';
+        for (const p of pubs) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td class="px-6 py-4 text-sm text-gray-900">${p.title || ''}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">${p.year || ''}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">${p.citations || 0}</td>
+                <td class="px-6 py-4 text-sm">${p.url ? `<a class=\"text-blue-600 hover:text-blue-800\" href=\"${p.url}\" target=\"_blank\">Open →</a>` : ''}</td>
+            `;
+            body.appendChild(tr);
+        }
+    }
+
+    function sortBy(column) {
+        if (sortState.column === column) sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+        else { sortState.column = column; sortState.dir = 'asc'; }
+        pubs.sort((a,b) => {
+            let av = a[column], bv = b[column];
+            if (typeof av === 'string') av = av.toLowerCase();
+            if (typeof bv === 'string') bv = bv.toLowerCase();
+            if (av < bv) return sortState.dir === 'asc' ? -1 : 1;
+            if (av > bv) return sortState.dir === 'asc' ? 1 : -1;
+            return 0;
+        });
+        renderPubs();
+    }
+
+    async function refreshAuthorCache() {
+        showToast('Refreshing cache (no send)...', 'info');
+        try {
+            const res = await fetch(`/api/v1/authors/${authorId}/refresh-cache`, { method: 'POST' });
+            if (res.ok) { showToast('Cache refreshed', 'success'); loadPublications(); }
+            else { showToast('Refresh failed', 'error'); }
+        } catch (e) { showToast('Network error', 'error'); }
+    }
+
+    async function fetchAndSend() {
+        if (settingsCache.backend === 'openalex') {
+            const ok = confirm('OpenAlex backend is active. This may take ~1 minute for new authors. Proceed?');
+            if (!ok) return;
+        }
+        showToast('Fetching & sending...', 'info');
+        try {
+            const res = await fetch(`/api/v1/authors/${authorId}/fetch-and-send`, { method: 'POST' });
+            if (res.ok) { const data = await res.json(); showToast(`Sent ${data.sent_count} items`, 'success'); }
+            else { const err = await res.json(); showToast(err.detail || 'Send failed', 'error'); }
+        } catch (e) { showToast('Network error', 'error'); }
+    }
+</script>
+{% endblock %}

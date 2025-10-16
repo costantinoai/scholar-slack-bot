@@ -1,0 +1,593 @@
+{% extends "base.html" %}
+
+{% block title %}Authors - Scholar Slack Bot{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <!-- Page header -->
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Authors</h1>
+            <p class="mt-2 text-gray-600">Manage monitored authors and their publications</p>
+            <p id="plugin-status" class="mt-1 text-sm text-gray-500">Loading plugin status…</p>
+        </div>
+        <button onclick="showAddAuthorModal()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+            <span>Add Author</span>
+        </button>
+    </div>
+
+    <!-- Search and filters -->
+    <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex-1">
+                <input type="search"
+                       id="author-search"
+                       placeholder="Search authors by name..."
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                       onkeyup="filterAuthors()">
+            </div>
+            <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    onchange="sortAuthors(this.value)">
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="pubs-desc">Most Publications</option>
+                <option value="pubs-asc">Least Publications</option>
+                <option value="cites-desc">Most Citations</option>
+                <option value="cites-asc">Least Citations</option>
+                <option value="hindex-desc">Highest h-index</option>
+                <option value="hindex-asc">Lowest h-index</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Authors list (cards) -->
+    <div id="authors-list"
+         hx-get="/web/authors-list"
+         hx-trigger="load, refreshAuthors from:body"
+         hx-swap="innerHTML"
+         class="space-y-4">
+        <!-- Loading skeletons -->
+        <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+            <div class="flex items-center justify-between">
+                <div class="flex-1">
+                    <div class="h-6 bg-gray-200 rounded w-1/3 mb-2"></div>
+                    <div class="h-4 bg-gray-200 rounded w-1/4"></div>
+                </div>
+                <div class="h-10 bg-gray-200 rounded w-32"></div>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+            <div class="flex items-center justify-between">
+                <div class="flex-1">
+                    <div class="h-6 bg-gray-200 rounded w-1/3 mb-2"></div>
+                    <div class="h-4 bg-gray-200 rounded w-1/4"></div>
+                </div>
+                <div class="h-10 bg-gray-200 rounded w-32"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Author Modal -->
+<div id="add-author-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+        <div class="px-6 py-4 border-b border-gray-200">
+            <div class="flex items-center justify-between">
+                <h3 class="text-lg font-semibold text-gray-900">Add New Author</h3>
+                <button onclick="hideAddAuthorModal()" class="text-gray-400 hover:text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <form id="add-author-form" onsubmit="addAuthor(event)" class="px-6 py-4">
+            <div class="mb-4">
+                <div class="flex items-center space-x-3">
+                    <div class="flex-1">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Author ID</label>
+                        <input type="text" id="author-id-input" required placeholder="e.g., abc123xyz or https://openalex.org/A..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <p class="mt-2 text-sm text-gray-500">Provide a Google Scholar ID or an OpenAlex author URL/ID.</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">ID Type</label>
+                        <select id="author-id-type" class="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <option value="scholar">Scholar</option>
+                            <option value="openalex">OpenAlex</option>
+                            <option value="orcid">ORCID</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-end space-x-3">
+                <button type="button"
+                        onclick="hideAddAuthorModal()"
+                        class="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+                    Cancel
+                </button>
+                <button type="submit"
+                        class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    Add Author
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div id="delete-confirm-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+        <div class="px-6 py-4 border-b border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-900">Confirm Deletion</h3>
+        </div>
+        <div class="px-6 py-4">
+            <p class="text-gray-600">
+                Are you sure you want to delete this author? This will also remove all their cached publications.
+            </p>
+            <p class="mt-2 text-sm text-red-600 font-medium">
+                This action cannot be undone.
+            </p>
+        </div>
+        <div class="px-6 py-4 bg-gray-50 flex items-center justify-end space-x-3 rounded-b-lg">
+            <button onclick="hideDeleteModal()"
+                    class="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                Cancel
+            </button>
+            <button id="confirm-delete-btn"
+                    onclick="confirmDelete()"
+                    class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
+                Delete Author
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Preview Modal -->
+<div id="preview-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-xl max-w-3xl w-full mx-4">
+        <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-gray-900">Fetch & Preview</h3>
+            <button onclick="hidePreviewModal()" class="text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="px-6 py-4 max-h-[60vh] overflow-y-auto" id="preview-list">
+            <p class="text-gray-600">Loading…</p>
+        </div>
+        <div class="px-6 py-4 bg-gray-50 flex items-center justify-between rounded-b-lg">
+            <div class="flex items-center space-x-3">
+                <label class="text-sm text-gray-700"><input type="checkbox" id="preview-select-all" class="mr-2">Select all</label>
+            </div>
+            <div class="flex items-center space-x-2">
+                <select id="preview-plugin" class="px-2 py-2 border border-gray-300 rounded-lg text-sm" title="Select plugin">
+                    <option value="">Loading plugins…</option>
+                </select>
+                <input id="preview-target" placeholder="Target (optional)" class="px-2 py-2 border border-gray-300 rounded-lg text-sm w-48" />
+                <button onclick="openSelectedLinks()" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Open Links</button>
+                <button onclick="saveSelectedPublications()" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Save Selected</button>
+                <button id="preview-send-btn" onclick="sendSelectedPublications()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">Send Selected</button>
+                <span id="plugin-cta" class="ml-2 text-sm text-gray-600 hidden">No plugin configured. <a href="/plugins" class="text-blue-600 hover:text-blue-800 underline">Configure Plugins →</a></span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    console.log('===== Authors Page JavaScript Loading =====');
+    let authorsData = [];
+    let deleteAuthorId = null;
+    let pluginSlackConfigured = false;
+
+    // Prefill plugin status (no secrets)
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const res = await fetch('/api/v1/plugins/slack');
+            if (!res.ok) throw new Error('Failed');
+            const info = await res.json();
+            const statusEl = document.getElementById('plugin-status');
+            const configured = info.is_configured ? 'Configured' : 'Not configured';
+            const healthy = info.is_healthy === true ? 'Healthy' : (info.is_healthy === False ? 'Unhealthy' : 'Unknown');
+            statusEl.textContent = `Slack plugin: ${configured} • Health: ${healthy}`;
+            pluginSlackConfigured = !!info.is_configured;
+            // Disable Fetch & Send buttons if not configured
+            // Do not disable Preview & Send button; modal will manage send availability per plugin
+        } catch (e) {
+            const statusEl = document.getElementById('plugin-status');
+            statusEl.textContent = 'Slack plugin status unavailable';
+        }
+    });
+
+    // Modal functions
+    function showAddAuthorModal() {
+        console.log('showAddAuthorModal called');
+        const modal = document.getElementById('add-author-modal');
+        console.log('Modal element:', modal);
+        if (modal) {
+            modal.classList.remove('hidden');
+            document.getElementById('scholar-id').focus();
+            console.log('Modal should now be visible');
+        } else {
+            console.error('Modal element not found!');
+        }
+    }
+    console.log('showAddAuthorModal function defined');
+
+    // Preview & Send flow
+    let previewItems = [];
+    let previewAuthorId = null;
+    let previewPlugins = [];
+    async function previewFetchAuthor(authorId) {
+        if (settingsCache.backend === 'openalex') {
+            const ok = confirm('OpenAlex backend is active. This may take ~1 minute for new authors. Proceed?');
+            if (!ok) return;
+        }
+        previewAuthorId = authorId;
+        document.getElementById('preview-list').innerHTML = '<p class="text-gray-600">Loading…</p>';
+        document.getElementById('preview-modal').classList.remove('hidden');
+        try {
+            const res = await fetch(`/api/v1/authors/${authorId}/fetch-preview`, { method: 'POST' });
+            if (!res.ok) {
+                const err = await res.json();
+                showToast(err.detail || 'Preview failed', 'error');
+                return;
+            }
+            previewItems = await res.json();
+            await loadPreviewPlugins();
+            await loadPreviewAuthorName(authorId);
+            renderPreviewList();
+        } catch (e) {
+            showToast('Network error during preview', 'error');
+        }
+    }
+
+    let previewAuthorName = '';
+    async function loadPreviewAuthorName(authorId) {
+        try {
+            const r = await fetch(`/api/v1/authors/${authorId}`);
+            if (r.ok) { const a = await r.json(); previewAuthorName = a.name || authorId; }
+            else { previewAuthorName = authorId; }
+        } catch (e) { previewAuthorName = authorId; }
+    }
+
+    async function loadPreviewPlugins() {
+        try {
+            const res = await fetch('/api/v1/plugins');
+            previewPlugins = await res.json();
+        } catch (e) {
+            previewPlugins = [];
+        }
+        const sel = document.getElementById('preview-plugin');
+        if (!sel) return;
+        sel.innerHTML = '';
+        // Always include a None option (no sending)
+        {
+            const noneOpt = document.createElement('option'); noneOpt.value=''; noneOpt.textContent='None (no sending)'; sel.appendChild(noneOpt);
+        }
+        if (!Array.isArray(previewPlugins) || previewPlugins.length === 0) {
+            // keep only None
+        } else {
+            // Preselect first configured plugin; else first
+            let idx = previewPlugins.findIndex(p => p.is_configured);
+            previewPlugins.forEach((p, i) => {
+                const opt = document.createElement('option');
+                opt.value = p.name; opt.textContent = `${p.display_name || p.name}${p.is_configured ? '' : ' (not configured)'}`;
+                if (i === idx) opt.selected = true;
+                sel.appendChild(opt);
+            });
+        }
+        sel.onchange = updatePreviewSendState;
+        updatePreviewSendState();
+    }
+
+    function updatePreviewSendState() {
+        const sendBtn = document.getElementById('preview-send-btn');
+        const sel = document.getElementById('preview-plugin');
+        const cta = document.getElementById('plugin-cta');
+        if (!sendBtn || !sel) return;
+        const p = (previewPlugins || []).find(x => x.name === sel.value);
+        const configured = !!(p && p.is_configured);
+        sendBtn.disabled = !configured;
+        if (!configured) {
+            sendBtn.title = 'Configure selected plugin first';
+            sendBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            if (cta) cta.classList.remove('hidden');
+        } else {
+            sendBtn.title = '';
+            sendBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            if (cta) cta.classList.add('hidden');
+        }
+    }
+
+    function renderPreviewList() {
+        const list = document.getElementById('preview-list');
+        if (!Array.isArray(previewItems) || previewItems.length === 0) {
+            list.innerHTML = '<p class="text-gray-600">No new publications found.</p>';
+            return;
+        }
+        list.innerHTML = previewItems.map((p, idx) => {
+            const title = p.title || '';
+            const abs = p.abstract || '';
+            const year = p.year || '';
+            const url = p.url || '';
+            return `
+                <div class="py-3 border-b border-gray-100 flex items-start">
+                    <input type="checkbox" class="mt-1 mr-3" data-preview-index="${idx}">
+                    <div>
+                        <div class="font-medium text-gray-900">${title} <span class=\"text-gray-500 font-normal\">– ${previewAuthorName}</span></div>
+                        ${abs ? `<div class=\"text-gray-600 text-sm\">${abs}</div>` : ''}
+                        <div class="text-gray-500 text-xs mt-1">${year ? year + ' • ' : ''}${url ? `<a href=\"${url}\" target=\"_blank\" class=\"text-blue-600\">Open →</a>` : ''}</div>
+                    </div>
+                </div>`;
+        }).join('');
+        const selectAll = document.getElementById('preview-select-all');
+        if (selectAll) {
+            selectAll.checked = false;
+            selectAll.onchange = () => {
+                document.querySelectorAll('#preview-list input[type="checkbox"]').forEach(cb => cb.checked = selectAll.checked);
+            };
+        }
+        updatePreviewSendState();
+    }
+
+    function hidePreviewModal() {
+        document.getElementById('preview-modal').classList.add('hidden');
+        previewItems = [];
+        previewAuthorId = null;
+    }
+
+    function openSelectedLinks() {
+        const selected = Array.from(document.querySelectorAll('#preview-list input[type="checkbox"]:checked'))
+            .map(cb => previewItems[parseInt(cb.getAttribute('data-preview-index'))])
+            .filter(x => x && x.url);
+        const maxToOpen = 5;
+        selected.slice(0, maxToOpen).forEach(it => window.open(it.url, '_blank'));
+        if (selected.length > maxToOpen) {
+            showToast(`Opened ${maxToOpen}/${selected.length} (pop-up limit)`, 'info');
+        }
+    }
+
+    async function sendSelectedPublications() {
+        const selected = Array.from(document.querySelectorAll('#preview-list input[type=\"checkbox\"]:checked'))
+            .map(cb => previewItems[parseInt(cb.getAttribute('data-preview-index'))])
+            .filter(Boolean);
+        if (selected.length === 0) { showToast('Select at least one publication', 'warning'); return; }
+        try {
+            const pluginSel = document.getElementById('preview-plugin');
+            const targetEl = document.getElementById('preview-target');
+            const res = await fetch('/api/v1/fetch/notify/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ plugin_name: (pluginSel && pluginSel.value) || 'slack', target: (targetEl && targetEl.value) || null, items: selected })
+            });
+            if (res.ok) {
+                const data = await res.json();
+                showToast(`Sent ${data.count} publication(s)`, 'success');
+                hidePreviewModal();
+            } else {
+                const err = await res.json();
+                showToast(err.detail || 'Failed to send', 'error');
+            }
+        } catch (e) {
+            showToast('Network error while sending', 'error');
+        }
+    }
+
+    async function saveSelectedPublications() {
+        const selected = Array.from(document.querySelectorAll('#preview-list input[type=\"checkbox\"]:checked'))
+            .map(cb => previewItems[parseInt(cb.getAttribute('data-preview-index'))])
+            .filter(Boolean);
+        if (selected.length === 0) { showToast('Select at least one publication', 'warning'); return; }
+        try {
+            const res = await fetch(`/api/v1/authors/${previewAuthorId}/preview/save`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ items: selected })
+            });
+            if (res.ok) {
+                const data = await res.json();
+                showToast(`Saved ${data.saved || 0} publication(s)`, 'success');
+            } else {
+                const err = await res.json();
+                showToast(err.detail || 'Failed to save', 'error');
+            }
+        } catch (e) {
+            showToast('Network error while saving', 'error');
+        }
+    }
+
+    function hideAddAuthorModal() {
+        document.getElementById('add-author-modal').classList.add('hidden');
+        document.getElementById('add-author-form').reset();
+    }
+
+    function showDeleteModal(authorId, authorName) {
+        deleteAuthorId = authorId;
+        document.getElementById('delete-confirm-modal').classList.remove('hidden');
+    }
+
+    function hideDeleteModal() {
+        document.getElementById('delete-confirm-modal').classList.add('hidden');
+        deleteAuthorId = null;
+    }
+
+    // Add author
+    async function addAuthor(event) {
+        event.preventDefault();
+        const idType = document.getElementById('author-id-type').value;
+        const rawId = document.getElementById('author-id-input').value.trim();
+        if (!rawId) { showToast('Please provide an ID', 'warning'); return; }
+
+        let payload = {};
+        if (idType === 'openalex') {
+            payload = { openalex_id: rawId };
+        } else if (idType === 'orcid') {
+            payload = { orcid: rawId };
+        } else { // scholar
+            payload = { scholar_id: rawId };
+        }
+
+        try {
+            const response = await fetch('/api/v1/authors', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            if (response.ok) {
+                const author = await response.json();
+                showToast(`Added ${author.name}`, 'success');
+                hideAddAuthorModal();
+                // Trigger refresh
+                document.body.dispatchEvent(new CustomEvent('refreshAuthors'));
+            } else {
+                const error = await response.json();
+                showToast(error.detail || 'Failed to add author', 'error');
+            }
+        } catch (error) {
+            showToast('Network error: ' + error.message, 'error');
+        }
+    }
+
+    // Delete author
+    async function confirmDelete() {
+        if (!deleteAuthorId) return;
+
+        try {
+            const response = await fetch(`/api/v1/authors/${deleteAuthorId}`, {
+                method: 'DELETE'
+            });
+
+            if (response.ok) {
+                showToast('Author deleted successfully', 'success');
+                hideDeleteModal();
+                // Trigger refresh
+                document.body.dispatchEvent(new CustomEvent('refreshAuthors'));
+            } else {
+                const error = await response.json();
+                showToast(error.detail || 'Failed to delete author', 'error');
+            }
+        } catch (error) {
+            showToast('Network error: ' + error.message, 'error');
+        }
+    }
+
+    // View author details
+    async function viewPublications(authorId) {
+        // Navigate to publications page filtered by this author
+        window.location.href = `/publications?author=${authorId}`;
+    }
+
+    // Refresh author cache
+    async function refreshAuthorCache(authorId) {
+        showToast('Refreshing cache for author (no send)...', 'info');
+        try {
+            const res = await fetch(`/api/v1/authors/${authorId}/refresh-cache`, { method: 'POST' });
+            if (res.ok) {
+                const data = await res.json();
+                showToast(`Cache refresh complete (${data.count} items). No messages sent.`, 'success');
+                document.body.dispatchEvent(new CustomEvent('refreshAuthors'));
+            } else {
+                const err = await res.json();
+                showToast(err.detail || 'Refresh failed', 'error');
+            }
+        } catch (e) {
+            showToast('Network error while refreshing', 'error');
+        }
+    }
+
+    let settingsCache = { backend: 'scholar' };
+    document.addEventListener('DOMContentLoaded', async () => {
+        try { const r = await fetch('/api/v1/settings'); settingsCache = await r.json(); } catch (e) {}
+    });
+
+    // Preview modal elements and logic will be appended below
+
+    function filterAuthors() {
+        const searchTerm = (document.getElementById('author-search').value || '').toLowerCase();
+        document.querySelectorAll('#authors-list > div').forEach(card => {
+            const name = (card.getAttribute('data-author-name') || '').toLowerCase();
+            card.style.display = name.includes(searchTerm) ? '' : 'none';
+        });
+    }
+
+    // Sorting cards
+
+    // Sort authors
+    function sortAuthors(sortBy) {
+        const container = document.getElementById('authors-list');
+        const cards = Array.from(container.children);
+
+        cards.sort((a, b) => {
+            // Read attributes from each card, with safe defaults
+            const nameA = (a.getAttribute('data-author-name') || '').toLowerCase();
+            const nameB = (b.getAttribute('data-author-name') || '').toLowerCase();
+            const pubsA = parseInt(a.getAttribute('data-pub-count') || '0', 10) || 0;
+            const pubsB = parseInt(b.getAttribute('data-pub-count') || '0', 10) || 0;
+            const citesA = parseInt(a.getAttribute('data-total-citations') || '0', 10) || 0;
+            const citesB = parseInt(b.getAttribute('data-total-citations') || '0', 10) || 0;
+            const hA = parseInt(a.getAttribute('data-h-index') || '0', 10) || 0;
+            const hB = parseInt(b.getAttribute('data-h-index') || '0', 10) || 0;
+
+            switch (sortBy) {
+                case 'name-asc':
+                    return nameA.localeCompare(nameB);
+                case 'name-desc':
+                    return nameB.localeCompare(nameA);
+                case 'pubs-desc':
+                    return pubsB - pubsA;
+                case 'pubs-asc':
+                    return pubsA - pubsB;
+                case 'cites-desc':
+                    return citesB - citesA;
+                case 'cites-asc':
+                    return citesA - citesB;
+                case 'hindex-desc':
+                    return hB - hA;
+                case 'hindex-asc':
+                    return hA - hB;
+                default:
+                    return 0;
+            }
+        });
+
+        cards.forEach(card => container.appendChild(card));
+    }
+
+    // Close modals on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            hideAddAuthorModal();
+            hideDeleteModal();
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', loadAuthors);
+
+    // Final verification
+    console.log('===== Authors Page JavaScript Loaded =====');
+        console.log('Available functions:', {
+        showAddAuthorModal: typeof showAddAuthorModal,
+        hideAddAuthorModal: typeof hideAddAuthorModal,
+        showDeleteModal: typeof showDeleteModal,
+        hideDeleteModal: typeof hideDeleteModal,
+        addAuthor: typeof addAuthor,
+        confirmDelete: typeof confirmDelete,
+        viewPublications: typeof viewPublications,
+        refreshAuthorCache: typeof refreshAuthorCache,
+        fetchAndSendAuthor: typeof fetchAndSendAuthor,
+        filterAuthors: typeof filterAuthors,
+        sortAuthors: typeof sortAuthors
+    });
+</script>
+{% endblock %}

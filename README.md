@@ -1,27 +1,108 @@
-# Slack Bot for Google Scholar Publications
+# Scholar Slack Bot (API + Web UI)
 
-This Slack Bot fetches publications for authors from Google Scholar and sends notifications to a specified Slack channel or user. Keep your team updated with the latest scholarly articles seamlessly!  
+This bot fetches publications for authors (Google Scholar and/or OpenAlex) and can send notifications to Slack. It also ships a modern web UI for browsing, dashboards, and scheduling.
 
 ---
 
-## 🚀 Quick Start  
+## 🐳 Docker Installation (Recommended)
+
+Run the API + Web UI with Docker and mount a local `src/` directory to persist your databases and configuration.
+
+1) Build the image
+
+```bash
+docker build -t scholar-slack-bot .
+```
+
+2) Prepare local data/config directory
+
+```bash
+mkdir -p src
+cp src/slack-example.config src/slack.config  # fill in your Slack token + target
+```
+
+3) Run the server (serves API + UI)
+
+```bash
+docker run --rm -p 8000:8000 \
+  -e API_KEY=changeme-optional \
+  -v $(pwd)/src:/app/src \
+  --name scholar-bot scholar-slack-bot
+```
+
+Open http://localhost:8000 in your browser.
+
+Notes
+- Secrets/config: Put plugin secrets in `src/slack.config`. The file stays on your host and is mounted into the container.
+- API auth: Set `API_KEY` to protect endpoints; omit for local development.
+- Data: `authors.db`, `publications.db`, and `settings.json` live under `src/` and persist via the bind mount.
+
+### CLI via Docker
+
+You can run any CLI subcommand inside the container. The bind mount ensures reads/writes go to your host `src/` path.
+
+```bash
+# Add an author (Google Scholar ID or OpenAlex/ORCID depending on backend)
+docker run --rm -it -v $(pwd)/src:/app/src scholar-slack-bot \
+  python main.py add-author ABC123XYZ
+
+# Fetch + send for all authors (full workflow)
+docker run --rm -it -v $(pwd)/src:/app/src scholar-slack-bot \
+  python main.py fetch
+
+# Refresh cache only (no send)
+docker run --rm -it -v $(pwd)/src:/app/src scholar-slack-bot \
+  python main.py update-cache
+```
+
+If your Slack token and channel/user are configured in `src/slack.config`, `python main.py fetch` will perform the full workflow (fetch, save, and notify).
+
+### Scheduling
+
+Two options:
+
+- Web UI Scheduler: Go to Settings → Jobs. Create a cron schedule (e.g., `0 9 * * MON`) for actions such as `fetch_and_notify` or `fetch`. Jobs run inside the API server using APScheduler. Progress appears inline.
+- Host Cron + Docker: Schedule the CLI using your host’s cron. Example (run weekdays at 9am):
+
+  ```cron
+  0 9 * * 1-5 docker run --rm -v /path/to/your/src:/app/src scholar-slack-bot \
+    python main.py fetch >> /var/log/scholar-bot.log 2>&1
+  ```
+
+---
+
+## 🚀 Bare-Metal Quick Start (Advanced)
 
 1. **Clone the repository:**  
    ```sh
    git clone https://github.com/costantinoai/scholar-slack-bot.git
    cd scholar-slack-bot
    ```  
-2. **Install dependencies:**  
-   ```sh
-   pip install -r requirements.txt
-   ```  
+2. **Install dependencies:**
+   - Recommended: conda/mamba env named `scholarbot`.
+   - Example:
+
+   ```bash
+   conda create -n scholarbot python=3.11 -y
+   conda activate scholarbot
+   mamba install -y fastapi uvicorn pydantic python-multipart apscheduler requests tqdm scholarly flask || \
+     pip install -r requirements.txt
+   ```
 3. **Edit the config file:**  
    - Add your Slack API token.  
    - Set the `target_name` field to either a **Slack channel** (public or private, if the bot is added) or a **Slack user** (for direct messages).  
    - Refer to the section [Setting Up Your Slack Bot](#setting-up-your-slack-bot) below for instructions on obtaining the Slack API token.  
-4. **Run the bot:**  
+4. **Run the bot:**
    ```sh
-   python main.py
+   python main.py fetch
+   ```
+   Other subcommands provide testing and maintenance workflows:
+
+   ```sh
+   python main.py send                 # send a test message
+   python main.py test-fetch <ID>      # fetch an author without saving
+   python main.py update-cache         # refresh cache only
+   python main.py test-run             # dry run for two authors
    ```
 
 ---
@@ -113,103 +194,134 @@ Slack apps require specific permissions (scopes) to function. Navigate to **OAut
 
 ## 🚀 Usage  
 
-### Command Line  
+### Command Line
 
-The script accepts several command-line arguments (flags) to customize its behavior:
-
-- `--authors_path`: Specifies the path to the authors database.
-  - Default: `./src/authors.db`
-
-- `--slack_config_path`: Sets the path to the `slack.config` file which contains Slack API token and channel information.
-  - Default: `./src/slack.config`
-
-- `--verbose`: (Optional) Provides verbose output for detailed logging and debugging.
-
-- `--test_message`: (Optional) Send test message. Do not fetch or save cache. Mutually exclusive with `--add_scholar_id` and `--update_cache`.
-  - Example:
-  ```python main.py --test_message```
-
-- `--add_scholar_id`: (Optional) Add a new scholar by Google Scholar ID to the file specified in `--authors_path`, fetch publications and save them to cache (do not send message). Mutually exclusive with `--test_message` and `--update_cache`.
-  - Example:
-  ```python main.py --add_scholar_id="YourGoogleScholarID"```
-
-- `--update_cache`: (Optional) Re-fetch and save publications for all authors (do not send message). It overwrites the old cache. Mutually exclusive with `--test_message` and `--add_scholar_id`.
-  - Example:
-  ```python main.py --update_cache```
-
-
-### Within the IDE
-
-If running from an IDE (e.g., Spyder, VScode), configurations are set in `IDEargs` in `main.py`. Modify paths or debug settings as needed.
-
-### Web Interface
-
-A modern Flask web UI is bundled for managing the bot. Launch it with:
+The CLI now uses **subcommands** instead of boolean flags. Global options may be
+placed before the subcommand:
 
 ```sh
-python gui.py
+python main.py [--authors_path PATH] [--slack_config_path PATH] [--verbose] <command> [args]
 ```
 
-The responsive page at [http://localhost:5000](http://localhost:5000) offers:
+Available subcommands:
 
-- Author tools: add/remove authors, refresh or clear their cache.
-- Publication browser: view cached papers in a searchable table.
-- Settings editor: adjust database locations, Slack config path, and API call delay. Changes are saved to `settings.json` for future runs.
-- Utilities: clear all cache and run the project's tests. Destructive actions prompt for confirmation.
+| Command | Fetches Data | Sends Message | Saves to Cache | Notes |
+|---------|--------------|---------------|----------------|-------|
+| `fetch` | ✅ | ✅ | ✅ | Default workflow for all authors. |
+| `send` | ❌ | ✅ | ❌ | Send a connectivity test message only. |
+| `add-author SCHOLAR_ID` | ✅ | ❌ | ✅ | Add a scholar and store their publications. |
+| `update-cache` | ✅ | ❌ | ✅ | Refresh publications for every author. |
+| `test-fetch SCHOLAR_ID` | ✅ | ❌ | ❌ | Fetch one author without side effects. |
+| `test-run [--limit N]` | ✅ | ✅ | ❌ | Dry run for `N` authors (default 2). |
+
+Examples use the format `python main.py <command> [args]`.
+
+Global options include:
+
+- `--authors_path`: Path to the authors database. Default: `./src/authors.db`.
+- `--slack_config_path`: Path to `slack.config`. Default: `./src/slack.config`.
+- `--verbose`: Enable verbose logging output.
+
+
+### Web Interface (FastAPI + HTMX)
+
+Run the API + Web UI with Uvicorn:
+
+```bash
+python -m uvicorn src.api.app:app --host 0.0.0.0 --port 8000 --reload
+```
+
+Open http://localhost:8000 and use the left menu:
+
+- Dashboard: overview charts and quick actions
+- Authors: manage monitored authors (Scholar/OpenAlex/ORCID), refresh cache, preview & send
+- Publications: browse/filter cached publications; open links; deduplicated grouped variants
+- Plugins: configure Slack plugin and test connectivity
+- Settings: select backend (OpenAlex/Scholar), connectivity tests, hard reset in background
+- Stats: deep statistics (year trends, top journals, keywords, h-index)
 
 ---
 
-## 📂 Directory Structure  
+## 📂 Directory Structure (FastAPI)
 
 ```
-slack-bot
-├── add_authors_batch.sh
-├── fetch_and_send.sh
-├── fetch_scholar.py
-├── gui.py
-├── helper_funcs.py
-├── log_config.py
-├── main.py
-├── README.md
-├── settings.json
-├── slack_bot.py
-├── streams_funcs.py
-└── src
-    ├── authors.db
-    ├── publications.db
-    └── slack.config
+scholar-slack-bot/
+├── src/
+│   ├── api/                  # FastAPI app (routes, models, deps)
+│   ├── web/                  # Jinja2 templates, routes, static (HTMX+Chart.js)
+│   ├── openalex/             # OpenAlex client + persistence helpers
+│   ├── publications.db       # SQLite cache of publications
+│   ├── authors.db            # SQLite database of monitored authors
+│   └── slack.config          # Slack plugin config (gitignored example provided)
+├── plugins/                  # Plugin system (Slack implemented)
+├── tests/                    # Unit tests (no real tokens used)
+├── main.py                   # Legacy CLI (fetch/send; still supported)
+├── fetch_scholar.py          # Scholar backend (optional if using OpenAlex)
+├── helper_funcs.py           # Legacy utilities (CLI compatibility)
+├── requirements.txt
+├── settings.json             # UI settings
+└── README.md
 ```
 
 ---
 
-## 📝 Files Descriptions  
+## 📝 Key Files
 
-- **`add_authors_batch.sh`**: Bash script for batch-adding authors.  
-- **`fetch_and_send.sh`**: Bash script to run the bot workflow.  
-- **`fetch_scholar.py`**: Internal functions to fetch publications from Google Scholar.
-- **`gui.py`**: Flask web application for author management and settings.
-- **`helper_funcs.py`**: Internal utility functions.
-- **`log_config.py`**: Internal Logging configuration.  
-- **`main.py`**: The main script to run the bot.  
-- **`slack_bot.py`**: Internal functions to format and send messages to Slack.  
-- **`streams_funcs.py`**: Internal, handles workflow logic based on CLI flags.
-- **`authors.db`**: SQLite database storing author names and Google Scholar IDs.
+### Core Application Files
+- **`main.py`**: CLI entry point with subcommand-based interface
+- **`fetch_scholar.py`**: Google Scholar API interactions and data fetching
+- **`slack_bot.py`**: Slack message formatting and API communication
+- **`streams_funcs.py`**: Workflow orchestration for different command modes
+- **`helper_funcs.py`**: Utility functions (database operations, cache management)
+- **`log_config.py`**: Centralized logging configuration
+- **`gui.py`**: Flask web interface for visual management
 
-- **`publications.db`**: SQLite database caching publication data.
-- **`slack.config`**: Configuration file for Slack settings. Example format:
-- **`settings.json`**: Persistent options used by the GUI (database paths, API delay, etc.).
+### Configuration Files
+- **`src/slack.config`**: Slack API credentials and channel configuration
+  ```ini
+  [slack]
+  api_token = xoxb-YOUR-API-TOKEN
+  channel_name = your-channel-or-user  # Channel name or direct message target
+  ```
+  💡 *No channel ID needed — the bot auto-detects channels vs. users*
 
+- **`settings.json`**: GUI persistent settings (database paths, API delay, etc.)
+- **`pytest.ini`**: Test framework configuration
+
+### Database Files
+- **`src/authors.db`**: SQLite database storing monitored authors (name + Google Scholar ID)
+- **`src/publications.db`**: SQLite cache of fetched publications with metadata
+
+### Testing
+- **`tests/`**: Comprehensive test suite including:
+  - Golden tests (mocked + real API integration)
+  - GUI tests (Flask routes and actions)
+  - Workflow tests (command orchestration)
+  - Unit tests (individual modules)
+
+### Automation Scripts (Optional)
+- **`add_authors_batch.sh`**: Batch add multiple authors via CLI
+- **`fetch_and_send.sh`**: Run full workflow (useful for cron jobs)  
+
+---
+
+## 🔐 Configuration & Secrets
+
+- Slack plugin: configure in `src/slack.config` (not committed to git). Example:
   ```ini
   [slack]
   api_token = xoxb-YOUR-API-TOKEN
   channel_name = your-channel-or-user
   ```
-
-💡 *You do not need to specify a channel ID — the bot will automatically determine whether `channel_name` refers to a public/private channel or a user.*  
+- API auth (optional): set `API_KEY` env var. Send header `X-API-Key: <key>` or `Authorization: Bearer <key>`.
+- Backend: configure in the UI (Settings) or via `settings.json`:
+  - backend: `openalex` or `scholar`
+  - openalex_email: your contact email for the polite pool
+  - fetch_full_history: `true` or `false`
+  - from_year: integer year
 
 ---
 
 ## 📄 License  
 
 [MIT](LICENSE) © Andrea Ivan Costantino  
-

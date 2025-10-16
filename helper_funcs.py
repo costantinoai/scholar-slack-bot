@@ -10,7 +10,14 @@ import shutil
 import logging
 import sqlite3
 import json
-from scholarly import scholarly
+
+# Scholarly is optional (used only for Google Scholar backend). Avoid importing
+# it as a hard dependency at module import time to keep OpenAlex-only flows
+# working without the package installed.
+try:
+    from scholarly import scholarly  # type: ignore
+except Exception:  # pragma: no cover - optional dependency
+    scholarly = None
 
 logger = logging.getLogger(__name__)
 
@@ -177,28 +184,6 @@ def confirm_temp_cache(
     return
 
 
-def has_conflicting_args(args):
-    """Check if any of the conflicting arguments are set to True or have values.
-
-    Args:
-        args (argparse.Namespace): The argument object.
-
-    Returns:
-        bool: True if any conflicting arguments are set, otherwise False.
-    """
-
-    if args.test_message:
-        return any([args.add_scholar_id, args.update_cache])
-
-    if args.add_scholar_id:
-        return any([args.test_message, args.update_cache])
-
-    if args.update_cache:
-        return any([args.test_message, args.add_scholar_id])
-
-    return False
-
-
 def _init_authors_db(authors_path: str) -> sqlite3.Connection:
     """Ensure the authors database exists and return a connection."""
 
@@ -213,6 +198,13 @@ def _init_authors_db(authors_path: str) -> sqlite3.Connection:
                 id TEXT PRIMARY KEY
             )"""
     )
+    # Add optional columns if missing (e.g., openalex_id)
+    try:
+        cols = [row[1] for row in conn.execute("PRAGMA table_info(authors)").fetchall()]
+        if 'openalex_id' not in cols:
+            conn.execute("ALTER TABLE authors ADD COLUMN openalex_id TEXT")
+    except Exception:
+        pass
     return conn
 
 
@@ -236,6 +228,10 @@ def add_new_author_to_json(authors_path: str, scholar_id: str) -> dict:
     logger.info(f"Adding author ID {scholar_id} to {authors_path}.")
     conn = _init_authors_db(authors_path)
     try:
+        if scholarly is None:
+            raise RuntimeError(
+                "Google Scholar backend not available: 'scholarly' package is not installed."
+            )
         try:
             author_fetched = scholarly.search_author_id(scholar_id)
         except Exception as e:
@@ -324,8 +320,7 @@ def clean_pubs(fetched_pubs, from_year=2023, exclude_not_cited_papers=False):
         # Check if the publication meets the year criterion and hasn't been seen before
         if (
             pub["bib"].get("pub_year")  # if the publication has a 'year' field
-            and int(pub["bib"]["pub_year"])
-            <= int(from_year)  # if the pub year is >= from_year
+            and int(pub["bib"]["pub_year"]) == int(from_year)
             and (
                 not exclude_not_cited_papers or pub["num_citations"] > 0
             )  # if exclude_not_cited_papers is True, then we select only papers with citations

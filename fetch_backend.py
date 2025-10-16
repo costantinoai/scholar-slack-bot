@@ -1,0 +1,130 @@
+"""Backend-agnostic fetch facade.
+
+Routes calls to either Google Scholar (existing) or OpenAlex (new) based on
+settings in `settings.json`.
+"""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from types import SimpleNamespace
+from typing import List, Tuple
+
+from helper_funcs import get_authors_json
+from src.openalex.client import find_author_id_by_name, fetch_works_for_author, upsert_publications, _get_mailto
+from helper_funcs import _init_authors_db  # type: ignore
+import json
+
+
+def _backend() -> str:
+    try:
+        cfg = json.loads(Path("./settings.json").read_text())
+        return cfg.get("backend", "scholar").lower()
+    except Exception:
+        return "scholar"
+
+
+def _settings() -> dict:
+    try:
+        return json.loads(Path("./settings.json").read_text())
+    except Exception:
+        return {}
+
+
+def fetch_from_json(args, idx=None):  # noqa: ANN001
+    if _backend() == "scholar":
+        # Lazy import to avoid requiring scholarly when using OpenAlex backend
+        import fetch_scholar  # type: ignore
+        return fetch_scholar.fetch_from_json(args, idx=idx)
+
+    # OpenAlex path
+    authors_json = get_authors_json(args.authors_path)
+    authors = [(a["name"], a["id"]) for a in authors_json]
+    if idx is not None:
+        authors = authors[:idx]
+
+    mailto = _get_mailto()
+    cfg = _settings()
+    # Determine from_year: respect settings when OpenAlex backend is active
+    from_year = None
+    if not cfg.get("fetch_full_history", False):
+        from_year = cfg.get("from_year") or int(__import__("time").strftime("%Y"))
+    pubs: List[dict] = []
+    for name, author_id in authors:
+        # Reuse stored OpenAlex ID if present
+        conn = _init_authors_db(args.authors_path)
+        try:
+            row = conn.execute("SELECT openalex_id FROM authors WHERE id=?", (author_id,)).fetchone()
+        finally:
+            conn.close()
+        openalex_id = row[0] if row and row[0] else find_author_id_by_name(name, mailto)
+        # Persist for future
+        if openalex_id:
+            conn = _init_authors_db(args.authors_path)
+            try:
+                conn.execute("UPDATE authors SET openalex_id=? WHERE id=?", (openalex_id, author_id))
+                conn.commit()
+            finally:
+                conn.close()
+        if not openalex_id:
+            continue
+        works = fetch_works_for_author(openalex_id, from_year, mailto)
+        # Upsert into DB; even if 0 works return
+        upsert_publications(author_id, works)
+        pubs.extend(works)
+    return authors, pubs
+
+
+def fetch_publications_by_id(
+    author_id: str,
+    output_folder: str = "./src",
+    args=None,
+    from_year: int = 2023,
+    exclude_not_cited_papers: bool = False,
+):
+    if _backend() == "scholar":
+        # Lazy import to avoid requiring scholarly when using OpenAlex backend
+        import fetch_scholar  # type: ignore
+        return fetch_scholar.fetch_publications_by_id(
+            author_id,
+            output_folder=output_folder,
+            args=args,
+            from_year=from_year,
+            exclude_not_cited_papers=exclude_not_cited_papers,
+        )
+
+    # OpenAlex path
+    mailto = _get_mailto()
+    cfg = _settings()
+    # For scholar backend, default to current year if from_year is None
+    if _backend() == "scholar" and from_year is None:
+        from_year = int(__import__("time").strftime("%Y"))
+    conn = _init_authors_db(f"{output_folder}/authors.db")
+    try:
+        row = conn.execute("SELECT name, openalex_id FROM authors WHERE id=?", (author_id,)).fetchone()
+    finally:
+        conn.close()
+    if not row:
+        return []
+    name, existing_oa = row
+    # Determine from_year for OpenAlex (full history if enabled)
+    cfg = _settings()
+    if cfg.get("fetch_full_history", False):
+        from_year = None
+    openalex_id = existing_oa or find_author_id_by_name(name, mailto)
+    if openalex_id and not existing_oa:
+        conn = _init_authors_db(f"{output_folder}/authors.db")
+        try:
+            conn.execute("UPDATE authors SET openalex_id=? WHERE id=?", (openalex_id, author_id))
+            conn.commit()
+        finally:
+            conn.close()
+    if not openalex_id:
+        return []
+    works = fetch_works_for_author(openalex_id, from_year, mailto)
+    upsert_publications(author_id, works)
+    # Optionally filter by citations if requested
+    if exclude_not_cited_papers:
+        works = [w for w in works if (w.get("num_citations") or 0) > 0]
+    return works

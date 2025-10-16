@@ -1,0 +1,477 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Scholar Slack Bot{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <!-- Page header -->
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+            <p class="mt-2 text-gray-600">Overview of your publication monitoring system</p>
+        </div>
+        <div class="flex space-x-3">
+            <button onclick="previewAll()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+                <span>Fetch & Preview</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Statistics cards -->
+    <div id="stats-cards" hx-get="/web/stats" hx-trigger="load" hx-swap="innerHTML">
+        <!-- Loading skeleton -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+                <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+                <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+                <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+                <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+                <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+                <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+                <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+                <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Publications by year -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-gray-900">Publications by Year</h3>
+                <div class="flex items-center space-x-2">
+                    <label for="year-range" class="text-sm text-gray-600">Range</label>
+                    <select id="year-range" class="px-2 py-1 text-sm border border-gray-300 rounded" onchange="loadDashboard()">
+                        <option value="last10">Last 10 years</option>
+                        <option value="all">All years</option>
+                    </select>
+                </div>
+            </div>
+            <canvas id="pubsByYearChart" height="200"></canvas>
+        </div>
+
+        <!-- Top authors by publications -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Top Authors (by citations)</h3>
+            <canvas id="topAuthorsChart" height="200"></canvas>
+        </div>
+    </div>
+
+    <!-- Recent activity & quick actions -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Recent activity -->
+        <div class="lg:col-span-2 bg-white rounded-lg shadow">
+            <div class="px-6 py-4 border-b border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900">Recent Publications</h3>
+            </div>
+            <div id="recent-pubs" hx-get="/web/recent-publications?limit=5" hx-trigger="load" hx-swap="innerHTML" class="divide-y divide-gray-200">
+                <!-- Loading skeleton -->
+                <div class="px-6 py-4 animate-pulse">
+                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                    <div class="h-3 bg-gray-200 rounded w-1/2"></div>
+                </div>
+                <div class="px-6 py-4 animate-pulse">
+                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                    <div class="h-3 bg-gray-200 rounded w-1/2"></div>
+                </div>
+                <div class="px-6 py-4 animate-pulse">
+                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                    <div class="h-3 bg-gray-200 rounded w-1/2"></div>
+                </div>
+            </div>
+            <div class="px-6 py-4 bg-gray-50 text-center">
+                <a href="/publications" class="text-blue-600 hover:text-blue-800 font-medium">View all publications →</a>
+            </div>
+        </div>
+
+        <!-- Quick actions -->
+        <div class="bg-white rounded-lg shadow">
+            <div class="px-6 py-4 border-b border-gray-200">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-semibold text-gray-900">Quick Actions</h3>
+                    <button onclick="checkHealth()" class="px-3 py-1 text-sm bg-gray-100 text-gray-800 rounded hover:bg-gray-200">Check Health</button>
+                </div>
+            </div>
+            <div class="p-6 space-y-3">
+                <div id="job-progress" class="hidden px-4 py-3 bg-blue-50 text-blue-700 rounded"></div>
+                <a href="/authors?action=add" class="block w-full px-4 py-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-center font-medium">
+                    + Add New Author
+                </a>
+                <button onclick="sendTestNotification()" class="block w-full px-4 py-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-center font-medium">
+                    📤 Send Test Notification
+                </button>
+                <a href="/plugins" class="block w-full px-4 py-3 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-center font-medium">
+                    ⚙️ Configure Plugins
+                </a>
+                
+            </div>
+
+            <!-- System status -->
+            <div class="px-6 py-4 border-t border-gray-200 bg-gray-50">
+                <div class="flex items-center justify-between text-sm">
+                    <span class="text-gray-600">API Status</span>
+                    <span id="api-status" class="flex items-center text-green-600">
+                        <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                        Healthy
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Preview Modal for All Authors
+    const previewAllModal = `
+    <div id="preview-modal-all" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full mx-4">
+            <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+                <h3 class="text-lg font-semibold text-gray-900">Fetch Preview (All Authors)</h3>
+                <button onclick="hidePreviewAll()" class="text-gray-400 hover:text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="px-6 py-4 max-h-[65vh] overflow-y-auto" id="preview-list-all">
+                <p class="text-gray-600">Loading…</p>
+            </div>
+            <div class="px-6 py-4 bg-gray-50 flex items-center justify-between rounded-b-lg">
+                <div class="flex items-center space-x-3">
+                    <label class="text-sm text-gray-700"><input type="checkbox" id="preview-select-all-all" class="mr-2">Select all</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <select id="preview-plugin-all" class="px-2 py-2 border border-gray-300 rounded-lg text-sm" title="Select plugin">
+                        <option value="">Loading plugins…</option>
+                    </select>
+                    <input id="preview-target-all" placeholder="Target (optional)" class="px-2 py-2 border border-gray-300 rounded-lg text-sm w-48" />
+                    <button onclick="openSelectedLinksAll()" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Open Links</button>
+                    <button onclick="saveSelectedPublicationsAll()" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Save Selected</button>
+                    <button id="preview-send-btn-all" onclick="sendSelectedPublicationsAll()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">Send Selected</button>
+                    <span id="plugin-cta-all" class="ml-2 text-sm text-gray-600 hidden">No plugin configured. <a href="/plugins" class="text-blue-600 hover:text-blue-800 underline">Configure Plugins →</a></span>
+                </div>
+            </div>
+        </div>
+    </div>`;
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.createElement('div');
+        container.innerHTML = previewAllModal;
+        document.body.appendChild(container.firstElementChild);
+    });
+    let previewAllItems = [];
+    let previewPluginsAll = [];
+    let authorsMapAll = {};
+    function hidePreviewAll() { const m = document.getElementById('preview-modal-all'); if (m) m.classList.add('hidden'); previewAllItems = []; }
+    async function previewAll() {
+        const modal = document.getElementById('preview-modal-all');
+        if (modal) { modal.classList.remove('hidden'); }
+        const list = document.getElementById('preview-list-all');
+        if (list) list.innerHTML = '<p class="text-gray-600">Loading…</p>';
+        try {
+            // Load authors map for displaying names
+            try { const ares = await fetch('/api/v1/authors'); const alist = await ares.json(); authorsMapAll = {}; (alist||[]).forEach(a => authorsMapAll[a.id] = a.name); } catch (e) { authorsMapAll = {}; }
+            const res = await fetch('/api/v1/fetch/preview', { method: 'POST' });
+            if (!res.ok) { const err = await res.json(); showToast(err.detail || 'Preview failed', 'error'); return; }
+            previewAllItems = await res.json();
+            await loadPreviewPluginsAll();
+            renderPreviewAll();
+        } catch (e) { showToast('Network error during preview', 'error'); }
+    }
+    async function loadPreviewPluginsAll() {
+        try { const res = await fetch('/api/v1/plugins'); previewPluginsAll = await res.json(); }
+        catch (e) { previewPluginsAll = []; }
+        const sel = document.getElementById('preview-plugin-all'); if (!sel) return;
+        sel.innerHTML='';
+        // Always include None
+        { const opt0 = document.createElement('option'); opt0.value=''; opt0.textContent='None (no sending)'; sel.appendChild(opt0); }
+        if (!Array.isArray(previewPluginsAll) || previewPluginsAll.length === 0) {
+            // keep only None
+        } else {
+            let idx = previewPluginsAll.findIndex(p => p.is_configured); if (idx < 0) idx = 0;
+            previewPluginsAll.forEach((p,i) => { const opt = document.createElement('option'); opt.value=p.name; opt.textContent=`${p.display_name || p.name}${p.is_configured ? '' : ' (not configured)'}`; if (i===idx) opt.selected=true; sel.appendChild(opt); });
+        }
+        sel.onchange = updatePreviewSendStateAll; updatePreviewSendStateAll();
+    }
+    function updatePreviewSendStateAll() {
+        const sendBtn = document.getElementById('preview-send-btn-all'); const sel = document.getElementById('preview-plugin-all'); if (!sendBtn||!sel) return;
+        const p = (previewPluginsAll||[]).find(x => x.name === sel.value); const configured = !!(p && p.is_configured);
+        sendBtn.disabled = !configured;
+        const cta = document.getElementById('plugin-cta-all');
+        if (!configured) { sendBtn.title = 'Configure selected plugin first'; sendBtn.classList.add('opacity-50','cursor-not-allowed'); if (cta) cta.classList.remove('hidden'); }
+        else { sendBtn.title=''; sendBtn.classList.remove('opacity-50','cursor-not-allowed'); if (cta) cta.classList.add('hidden'); }
+    }
+    function renderPreviewAll() {
+        const list = document.getElementById('preview-list-all');
+        if (!list) return;
+        if (!Array.isArray(previewAllItems) || previewAllItems.length === 0) { list.innerHTML = '<p class="text-gray-600">No new publications found.</p>'; return; }
+        list.innerHTML = previewAllItems.map((p, idx) => {
+            const title = p.title || '';
+            const abs = p.abstract || '';
+            const year = p.year || '';
+            const url = p.url || '';
+            const author = authorsMapAll[p.author_id] || p.author_id || '';
+            return `
+                <div class=\"py-3 border-b border-gray-100 flex items-start\"> 
+                    <input type=\"checkbox\" class=\"mt-1 mr-3\" data-preview-index=\"${idx}\"> 
+                    <div> 
+                        <div class=\"font-medium text-gray-900\">${title} <span class=\\\"text-gray-500 font-normal\\\">– ${author}</span></div> 
+                        ${abs ? `<div class=\\\"text-gray-600 text-sm\\\">${abs}</div>` : ''} 
+                        <div class=\"text-gray-500 text-xs mt-1\">${author}${year ? ' • ' + year : ''}${url ? ` • <a href=\\\"${url}\\\" target=\\\"_blank\\\" class=\\\"text-blue-600\\\">Open →</a>` : ''}</div>
+                    </div> 
+                </div>`;
+        }).join('');
+        const sel = document.getElementById('preview-select-all-all');
+        if (sel) {
+            sel.checked = false;
+            sel.onchange = () => document.querySelectorAll('#preview-list-all input[type="checkbox"]').forEach(cb => cb.checked = sel.checked);
+        }
+        const sendBtn = document.getElementById('preview-send-btn-all');
+        if (sendBtn) {
+            // We don't check plugin here; send endpoint will validate
+        }
+    }
+    function openSelectedLinksAll() {
+        const selected = Array.from(document.querySelectorAll('#preview-list-all input[type="checkbox"]:checked'))
+            .map(cb => previewAllItems[parseInt(cb.getAttribute('data-preview-index'))])
+            .filter(x => x && x.url);
+        const maxToOpen = 5; selected.slice(0, maxToOpen).forEach(it => window.open(it.url, '_blank'));
+        if (selected.length > maxToOpen) showToast(`Opened ${maxToOpen}/${selected.length} (pop-up limit)`, 'info');
+    }
+    async function sendSelectedPublicationsAll() {
+        const selected = Array.from(document.querySelectorAll('#preview-list-all input[type="checkbox"]:checked'))
+            .map(cb => previewAllItems[parseInt(cb.getAttribute('data-preview-index'))])
+            .filter(Boolean);
+        if (selected.length === 0) { showToast('Select at least one publication', 'warning'); return; }
+        try {
+            const pluginSel = document.getElementById('preview-plugin-all');
+            const targetEl = document.getElementById('preview-target-all');
+            const res = await fetch('/api/v1/fetch/notify/send', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ plugin_name: (pluginSel && pluginSel.value) || 'slack', target: (targetEl && targetEl.value) || null, items: selected }) });
+            if (res.ok) { const data = await res.json(); showToast(`Sent ${data.count} publication(s)`, 'success'); hidePreviewAll(); }
+            else { const err = await res.json(); showToast(err.detail || 'Failed to send', 'error'); }
+        } catch (e) { showToast('Network error while sending', 'error'); }
+    }
+    async function saveSelectedPublicationsAll() {
+        const selected = Array.from(document.querySelectorAll('#preview-list-all input[type="checkbox"]:checked'))
+            .map(cb => previewAllItems[parseInt(cb.getAttribute('data-preview-index'))])
+            .filter(Boolean);
+        if (selected.length === 0) { showToast('Select at least one publication', 'warning'); return; }
+        try {
+            const res = await fetch('/api/v1/fetch/preview/save', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ items: selected })
+            });
+            if (res.ok) { const data = await res.json(); showToast(`Saved ${data.saved || 0} publication(s)`, 'success'); }
+            else { const err = await res.json(); showToast(err.detail || 'Failed to save', 'error'); }
+        } catch (e) { showToast('Network error while saving', 'error'); }
+    }
+    let pubsChart = null;
+    let topAuthorsChart = null;
+    // Fetch statistics and render charts
+    async function loadDashboard() {
+        try {
+            // Determine range selection
+            const sel = document.getElementById('year-range');
+            const mode = sel ? sel.value : 'last10';
+            const now = new Date().getFullYear();
+            const params = new URLSearchParams();
+            if (mode === 'last10') params.set('min_year', String(now - 9));
+            params.set('top_limit', '10');
+
+            // Get publication stats (filtered by range)
+            const pubStatsRes = await fetch(`/api/v1/publications/stats?${params.toString()}`);
+            const pubStats = await pubStatsRes.json();
+
+            // Render publications by year chart
+            if (pubStats.publications_by_year && pubStats.publications_by_year.length > 0) {
+                const ctx1 = document.getElementById('pubsByYearChart');
+                if (pubsChart) { try { pubsChart.destroy(); } catch (e) {} }
+                pubsChart = new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: pubStats.publications_by_year.map(d => d.year),
+                        datasets: [{
+                            label: 'Publications',
+                            data: pubStats.publications_by_year.map(d => d.count),
+                            backgroundColor: 'rgba(59, 130, 246, 0.6)',
+                            borderColor: 'rgb(59, 130, 246)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 1
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Top authors by citations for selected range
+            const topAuthors = Array.isArray(pubStats.top_authors_by_citations) ? pubStats.top_authors_by_citations : [];
+            if (topAuthors.length > 0) {
+                const ctx2 = document.getElementById('topAuthorsChart');
+                if (topAuthorsChart) { try { topAuthorsChart.destroy(); } catch (e) {} }
+                topAuthorsChart = new Chart(ctx2, {
+                    // Use standard bar chart with a horizontal index axis (Chart.js v3+)
+                    type: 'bar',
+                    data: {
+                        labels: topAuthors.map(a => (a.name || '').split(' ').slice(-1)[0]), // Last name only
+                        datasets: [{
+                            label: 'Citations',
+                            data: topAuthors.map(a => a.citations || 0),
+                            backgroundColor: 'rgba(16, 185, 129, 0.6)',
+                            borderColor: 'rgb(16, 185, 129)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 1
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+        } catch (error) {
+            console.error('Error loading dashboard:', error);
+        }
+    }
+
+    // Quick action functions
+    let appSettings = { backend: 'scholar' };
+    document.addEventListener('DOMContentLoaded', async () => {
+        try { const r = await fetch('/api/v1/settings'); appSettings = await r.json(); } catch (e) {}
+    });
+
+    async function fetchAllAuthors() {
+        if (appSettings.backend === 'openalex') {
+            const ok = confirm('OpenAlex backend is active. This may take up to ~1 minute per new author. Proceed?');
+            if (!ok) return;
+        }
+        showLoading(true);
+        try {
+            const res = await fetch('/api/v1/fetch/run', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'fetch_and_notify' }) });
+            if (!res.ok) { const err = await res.json(); throw new Error(err.detail || 'Failed to start job'); }
+            const { job_id } = await res.json();
+            await pollJob(job_id);
+        } catch (e) {
+            showToast('Network error during fetch & send', 'error');
+        } finally { showLoading(false); }
+    }
+
+    function showLoading(on) {
+        const overlay = document.getElementById('loading-overlay');
+        if (!overlay) return;
+        overlay.style.display = on ? 'flex' : 'none';
+        overlay.style.pointerEvents = 'none';
+    }
+
+    async function pollJob(jobId) {
+        const url = `/api/v1/fetch/jobs/${jobId}/status`;
+        while (true) {
+            await new Promise(r => setTimeout(r, 2000));
+            const r = await fetch(url);
+            if (!r.ok) return;
+            const st = await r.json();
+            // Update progress banner
+            try {
+                const box = document.getElementById('job-progress');
+                if (st.status === 'running' && st.total) {
+                    box.classList.remove('hidden');
+                    const pct = Math.floor((st.processed || 0) * 100 / st.total);
+                    box.textContent = `Running: ${st.processed || 0}/${st.total} (${pct}%) ${st.current_author ? '– ' + st.current_author : ''}`;
+                }
+                if (st.status !== 'running') {
+                    box.classList.add('hidden');
+                }
+            } catch(e) {}
+            if (st.status === 'completed') {
+                const count = st.result && (st.result.count || st.result.refreshed || 0);
+                showToast(`Completed (${count} items)`, 'success');
+                break;
+            }
+            if (st.status === 'failed') { showToast('Job failed: ' + (st.error || ''), 'error'); break; }
+        }
+    }
+
+    async function sendTestNotification() {
+        try {
+            const response = await fetch('/api/v1/plugins/slack/notify?message=Test from Dashboard', {
+                method: 'POST'
+            });
+            if (response.ok) {
+                showToast('Test notification sent!', 'success');
+            } else {
+                showToast('Failed to send notification', 'error');
+            }
+        } catch (error) {
+            showToast('Plugin not configured', 'warning');
+        }
+    }
+
+    async function checkHealth() {
+        try {
+            const response = await fetch('/api/v1/health');
+            const health = await response.json();
+            if (health.status === 'healthy') {
+                showToast('System is healthy', 'success');
+                document.getElementById('api-status').innerHTML = `
+                    <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    Healthy
+                `;
+            } else {
+                showToast('System has issues', 'warning');
+                document.getElementById('api-status').innerHTML = `
+                    <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                    Degraded
+                `;
+            }
+        } catch (error) {
+            showToast('Cannot reach API', 'error');
+            document.getElementById('api-status').innerHTML = `
+                <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                Offline
+            `;
+        }
+    }
+
+    // Load dashboard on page load
+    document.addEventListener('DOMContentLoaded', loadDashboard);
+
+    // Health checks only when requested
+</script>
+{% endblock %}

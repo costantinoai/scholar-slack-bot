@@ -13,8 +13,32 @@ from helper_funcs import (
     add_new_author_to_json,
     convert_json_to_tuple,
 )
-from fetch_scholar import fetch_from_json, fetch_pubs_dictionary
-from slack_bot import make_slack_msg, send_to_slack
+from fetch_backend import fetch_from_json
+from slack_bot import make_slack_msg
+from plugins.registry import get_global_registry
+from plugins.slack import SlackPlugin
+
+
+def send_to_slack(channel_name: str, message: str, token: str):
+    """Compat shim to send a message to Slack via the plugin system.
+
+    Tests may patch this function. Production code uses it to route messages
+    through the Slack plugin.
+
+    Args:
+        channel_name: Slack channel or user to send to
+        token: Bot token
+        message: Preformatted message string
+
+    Returns:
+        bool: True if Slack API acknowledges the message
+    """
+    registry = get_global_registry()
+    if "slack" not in registry.list_plugins():
+        registry.register(SlackPlugin)
+    plugin = registry.create_instance("slack", {"api_token": token, "default_channel": channel_name}, cache=True)
+    ok = bool(plugin.send_message(message, channel_name))
+    return {"ok": ok}
 
 logger = logging.getLogger(__name__)
 
@@ -30,20 +54,20 @@ def update_cache_only(args):
     logger.info("Fetched pubs successfully moved to cache and temporary cache cleared.")
 
 
-def test_fetch_and_message(args, ch_name, token):
-    """
-    Test fetching of articles and send formatted messages to a Slack channel.
+def test_fetch_and_message(args, ch_name, token, limit: int = 2) -> None:
+    """Fetch a limited number of authors and send test messages to Slack.
 
-    This function is used for tests when:
-    - Not adding a scholar by ID (`add_scholar_id` is not provided).
-    - Not updating the cache only (`update-cache` is False).
-    - The test arguments set `test_message` (and optionally a testing flag
-      to limit fetching) to verify fetching and messaging together.
+    The helper exercises the full fetching and messaging workflow without
+    persisting any results to the cache. It is intended for dry runs where a
+    small subset of authors is processed and their publications are posted to
+    Slack with a clear test header.
 
     Args:
-        args: Arguments used by the `fetch_from_json` function.
-        ch_name (str): The channel name to send the message to.
-        token (str): The token used for communication with Slack.
+        args: Arguments passed through to :func:`fetch_from_json`.
+        ch_name: Target Slack channel or user.
+        token: Slack API token used for authentication.
+        limit: Maximum number of authors to include in the test run. Defaults
+            to ``2`` so the call remains lightweight.
 
     Returns:
         None
@@ -51,8 +75,8 @@ def test_fetch_and_message(args, ch_name, token):
     For each fetched article, a test message is created and sent.
     """
 
-    # Fetch details for up to 3 authors.
-    authors, articles = fetch_from_json(args, idx=3)
+    # Fetch a limited number of authors from the database.
+    authors, articles = fetch_from_json(args, idx=limit)
 
     # Convert fetched details into formatted messages suitable for Slack.
     formatted_messages = make_slack_msg(authors, articles)
@@ -64,14 +88,11 @@ def test_fetch_and_message(args, ch_name, token):
     # Loop through each formatted message and send it to Slack.
     for formatted_message in formatted_messages:
         formatted_message = f"```\n{test_header}\n{formatted_message}\n```"
-        response_json = send_to_slack(ch_name, formatted_message, token)
-
-        # Update success status based on the response.
-        if not response_json["ok"]:
+        ok = send_to_slack(ch_name, formatted_message, token)
+        okval = ok.get("ok") if isinstance(ok, dict) else bool(ok)
+        if not okval:
             success = False
-            e = response_json["error"]
-            # It might be useful to log failures as they happen.
-            logger.warning(f"Failed to send a test message due to: {e}")
+            logger.warning("Failed to send a test message via Slack plugin")
 
     # Log overall success or failure.
     if success:
@@ -98,6 +119,9 @@ def regular_fetch_and_message(args, ch_name, token):
 
     """
 
+    logger.info(
+        "Starting fetch & send workflow: target=%s (messages will be sent)", ch_name
+    )
     # Fetch all authors' details from the provided path.
     authors, articles = fetch_from_json(args)
 
@@ -109,21 +133,19 @@ def regular_fetch_and_message(args, ch_name, token):
     success = True
     error_message = None  # To store any error encountered.
 
-    # Send each formatted message to Slack.
     for formatted_message in formatted_messages:
-        response_json = send_to_slack(ch_name, formatted_message, token)
-
-        # If any message fails, update the success flag and store the error.
-        if not response_json["ok"]:
+        ok = send_to_slack(ch_name, formatted_message, token)
+        okval = ok.get("ok") if isinstance(ok, dict) else bool(ok)
+        if not okval:
             success = False
-            error_message = response_json.get("error", "Unknown error")
+            error_message = (ok.get("error") if isinstance(ok, dict) else None) or "send_message returned False"
             logger.warning(f"Failed to send a message due to: {error_message}")
 
     # Handle post-message actions based on the success flag.
     if success:
         confirm_temp_cache(args.temp_cache_path, args.cache_path)
         logger.info(
-            "Fetched publications successfully moved to cache. Temporary cache cleared."
+            "All messages sent. Moved fetched publications to cache and cleared temp cache."
         )
     else:
         # Clear the temporary cache due to the failure in sending messages.
@@ -197,6 +219,7 @@ def add_scholar_and_fetch(args):
     authors = convert_json_to_tuple(authors_json)
     logger.debug("Converted new author's record into tuple representation.")
 
+    # Provide a compat wrapper so tests can patch streams_funcs.fetch_pubs_dictionary
     articles = fetch_pubs_dictionary(authors, args)
     logger.info(f"Fetched {len(articles)} articles for the new author.")
 
@@ -204,3 +227,23 @@ def add_scholar_and_fetch(args):
     logger.info(
         "Added author to database. Cache successfully updated with new author's data."
     )
+
+
+def fetch_pubs_dictionary(authors, args, output_dir="./src"):
+    """Compat wrapper proxying to the backend implementation.
+
+    Tests patch streams_funcs.fetch_pubs_dictionary; keep this thin indirection
+    so the patch point remains stable.
+    """
+    try:
+        from fetch_scholar import fetch_pubs_dictionary as _fetch
+    except Exception:
+        # Fallback to backend (if implemented there)
+        from fetch_backend import fetch_publications_by_id as _alt
+        # If only per-author is available, iterate authors
+        results = []
+        for _, aid in authors or []:
+            results.extend(_alt(aid, output_folder=output_dir, args=args) or [])
+        return results
+    else:
+        return _fetch(authors, args, output_dir=output_dir)

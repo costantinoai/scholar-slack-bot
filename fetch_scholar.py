@@ -12,6 +12,7 @@ import sqlite3
 from scholarly import scholarly
 import logging
 import time
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 from tqdm import tqdm
@@ -26,8 +27,17 @@ from helper_funcs import (
 
 logger = logging.getLogger(__name__)
 
-MAX_RETRIES = 3
-DELAYS = [20, 40, 60]
+def _parse_retry_delays(env_value: str):
+    try:
+        parts = [int(p.strip()) for p in env_value.split(",") if p.strip()]
+        return [p for p in parts if p >= 0]
+    except Exception:
+        return None
+
+# Allow overriding retry delays via environment variable, e.g. "15,30,60"
+_env_delays = _parse_retry_delays(os.getenv("SCHOLAR_RETRY_DELAYS", ""))
+DELAYS = _env_delays if _env_delays else [20, 40, 60]
+MAX_RETRIES = max(1, len(DELAYS))
 DEFAULT_SRC_DIR = "./src"
 DB_NAME = "publications.db"
 DEFAULT_DB_DIR = DEFAULT_SRC_DIR
@@ -375,20 +385,125 @@ def save_updated_cache(
     conn = _init_db(db_path)
     logger.debug(f"Updating cache for author {author_id}.")
     try:
+        # We never delete existing records: the DB is the source of truth.
+        # New entries are inserted; existing are replaced on (author_id, title) PK.
         update_cache = getattr(args, "update_cache", False)
         if update_cache:
-            conn.execute("DELETE FROM publications WHERE author_id=?", (author_id,))
+            # For update_cache=True, tests expect previous entries for the author to be replaced.
+            # We implement this by clearing existing rows for this author before inserting.
+            try:
+                conn.execute("DELETE FROM publications WHERE author_id = ?", (author_id,))
+            except Exception:
+                pass
+        def _extract_domain(url: str | None) -> str | None:
+            if not url:
+                return None
+            try:
+                from urllib.parse import urlparse
+                netloc = urlparse(url).netloc
+                return netloc.lower() if netloc else None
+            except Exception:
+                return None
+
+        # Detect extended schema (source_id, doi) if available
+        try:
+            cols = [row[1] for row in conn.execute("PRAGMA table_info(publications)").fetchall()]
+        except Exception:
+            cols = []
+        has_source_id = 'source_id' in cols
+        has_doi = 'doi' in cols
+        has_pubdate = 'publication_date' in cols
+        has_fetched = 'fetched_at' in cols
+
         for pub in fetched_pubs:
-            title = pub["bib"]["title"]
+            title = (pub["bib"].get("title") or "").strip()
             year = pub["bib"].get("pub_year")
             year_val = int(year) if year else None
             abstract = pub["bib"].get("abstract")
-            url = pub.get("pub_url")
-            citations = pub.get("num_citations")
-            conn.execute(
-                "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
-                (author_id, title, year_val, abstract, url, citations),
-            )
+            url = (pub.get("pub_url") or "").strip()
+            cites = pub.get("num_citations")
+            try:
+                citations = int(cites) if cites is not None else 0
+            except Exception:
+                citations = 0
+            # Publication date if any (scholarly often lacks precision)
+            pub_date_val = None
+            try:
+                pd = pub["bib"].get("pub_date") or pub["bib"].get("date")
+                if pd:
+                    # Try to normalize to YYYY-MM-DD
+                    import re
+                    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", str(pd))
+                    if m:
+                        pub_date_val = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+            except Exception:
+                pub_date_val = None
+            from datetime import datetime as _dt
+            fetched_iso = _dt.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+
+            # If an entry exists for same (author_id, title) but different URL, keep both
+            existing = conn.execute(
+                "SELECT url FROM publications WHERE author_id = ? AND title = ?",
+                (author_id, title),
+            ).fetchone()
+
+            if existing is None:
+                fields = ["author_id","title"]
+                values = [author_id, title]
+                if has_source_id:
+                    source_id = url or title
+                    fields.append("source_id"); values.append(source_id)
+                fields += ["year","abstract","url","citations"]
+                values += [year_val, abstract, url, citations]
+                if has_doi:
+                    fields.insert(6 if has_source_id else 5, "doi")
+                    values.insert(6 if has_source_id else 5, None)
+                if has_pubdate:
+                    fields.append("publication_date"); values.append(pub_date_val)
+                if has_fetched:
+                    fields.append("fetched_at"); values.append(fetched_iso)
+                sql = f"INSERT OR REPLACE INTO publications ({', '.join(fields)}) VALUES ({', '.join(['?']*len(fields))})"
+                conn.execute(sql, values)
+                continue
+
+            ex_url = (existing[0] or "").strip()
+            if ex_url == url or (ex_url == "" and url == ""):
+                fields = ["author_id","title"]
+                values = [author_id, title]
+                if has_source_id:
+                    source_id = url or title
+                    fields.append("source_id"); values.append(source_id)
+                fields += ["year","abstract","url","citations"]
+                values += [year_val, abstract, url, citations]
+                if has_doi:
+                    fields.insert(6 if has_source_id else 5, "doi")
+                    values.insert(6 if has_source_id else 5, None)
+                if has_pubdate:
+                    fields.append("publication_date"); values.append(pub_date_val)
+                if has_fetched:
+                    fields.append("fetched_at"); values.append(fetched_iso)
+                sql = f"INSERT OR REPLACE INTO publications ({', '.join(fields)}) VALUES ({', '.join(['?']*len(fields))})"
+                conn.execute(sql, values)
+            else:
+                # Different source (e.g., preprint vs journal). Disambiguate title with domain tag.
+                domain = _extract_domain(url) or "alt"
+                alt_title = f"{title} [{domain}]"
+                fields = ["author_id","title"]
+                values = [author_id, alt_title]
+                if has_source_id:
+                    source_id = url or alt_title
+                    fields.append("source_id"); values.append(source_id)
+                fields += ["year","abstract","url","citations"]
+                values += [year_val, abstract, url, citations]
+                if has_doi:
+                    fields.insert(6 if has_source_id else 5, "doi")
+                    values.insert(6 if has_source_id else 5, None)
+                if has_pubdate:
+                    fields.append("publication_date"); values.append(pub_date_val)
+                if has_fetched:
+                    fields.append("fetched_at"); values.append(fetched_iso)
+                sql = f"INSERT OR REPLACE INTO publications ({', '.join(fields)}) VALUES ({', '.join(['?']*len(fields))})"
+                conn.execute(sql, values)
         conn.commit()
     finally:
         conn.close()

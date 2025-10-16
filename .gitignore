@@ -6,3 +6,14 @@ test/
 fetch_and_send.sh
 *.bkp
 **/obsolete
+
+# Internal documentation (not for GitHub)
+DEVELOPMENT.md
+MERGE_ASSESSMENT.md
+MODERNIZATION_PLAN.md
+.githooks/pre-push.bak
+AGENTS.md
+*.bak
+docs/PHASE4_SUMMARY.md
+docs/PHASE4_SUMMARY.md
+/docs

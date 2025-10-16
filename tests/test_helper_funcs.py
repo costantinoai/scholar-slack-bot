@@ -7,7 +7,6 @@ from helper_funcs import (
     clean_pubs,
     convert_json_to_tuple,
     ensure_output_folder,
-    has_conflicting_args,
     confirm_temp_cache,
 )
 
@@ -78,24 +77,6 @@ def test_clean_pubs_filters_duplicates_and_citations():
 def test_convert_json_to_tuple():
     authors_json = [{"name": "Alice", "id": "A1"}, {"name": "Bob", "id": "B2"}]
     assert convert_json_to_tuple(authors_json) == [("Alice", "A1"), ("Bob", "B2")]
-
-
-def test_has_conflicting_args_detects_conflict():
-    args = SimpleNamespace(
-        test_message=True,
-        add_scholar_id=True,
-        update_cache=False,
-    )
-    assert has_conflicting_args(args)
-
-
-def test_has_conflicting_args_no_conflict():
-    args = SimpleNamespace(
-        test_message=True,
-        add_scholar_id=False,
-        update_cache=False,
-    )
-    assert not has_conflicting_args(args)
 
 
 def test_ensure_output_folder_creates(tmp_path):
