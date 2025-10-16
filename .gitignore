@@ -13,3 +13,7 @@ MERGE_ASSESSMENT.md
 MODERNIZATION_PLAN.md
 .githooks/pre-push.bak
 AGENTS.md
+*.bak
+docs/PHASE4_SUMMARY.md
+docs/PHASE4_SUMMARY.md
+/docs
