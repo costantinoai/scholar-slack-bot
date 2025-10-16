@@ -13,6 +13,8 @@
 
     <!-- Chart.js for statistics -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" onerror="console.error('Chart.js failed to load')"></script>
+    <!-- Chart.js WordCloud plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-wordcloud@4" onerror="console.warn('Chart.js WordCloud not available')"></script>
 
     <!-- Debug: Log when scripts are loading -->
     <script>
@@ -112,6 +114,13 @@
                     Publications
                 </a>
 
+                <a href="/stats" class="flex items-center px-4 py-3 mb-2 text-blue-100 rounded-lg hover:bg-blue-700 transition-colors">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3v18m-6-8v8m12-12v12m6-16v16"/>
+                    </svg>
+                    Stats
+                </a>
+
                 <a href="/plugins" class="flex items-center px-4 py-3 mb-2 text-blue-100 rounded-lg hover:bg-blue-700 transition-colors">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"/>
@@ -130,11 +139,6 @@
             <div class="absolute bottom-0 w-64 p-4 bg-blue-950">
                 <div class="flex items-center justify-between text-blue-100 text-sm">
                     <span>v1.0.0</span>
-                    <button onclick="toggleDarkMode()" class="p-2 rounded hover:bg-blue-900">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-                        </svg>
-                    </button>
                 </div>
             </div>
         </div>
@@ -156,15 +160,7 @@
                             <input type="search" placeholder="Search publications..."
                                    class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
-
-                        <!-- Notifications removed for now -->
-
-                        <!-- User menu -->
-                        <div class="flex items-center">
-                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
-                                U
-                            </div>
-                        </div>
+                        <!-- User toggle removed -->
                     </div>
                 </div>
             </div>
@@ -213,13 +209,7 @@
         }
         console.log('toggleSidebar function defined');
 
-        // Dark mode toggle
-        function toggleDarkMode() {
-            console.log('toggleDarkMode called');
-            document.body.classList.toggle('dark');
-            // You can add localStorage persistence here if needed
-        }
-        console.log('toggleDarkMode function defined');
+        // Dark mode removed
 
         // Toast notification function
         function showToast(message, type = 'success') {
@@ -291,7 +281,6 @@
         console.log('===== All JavaScript Functions Loaded =====');
         console.log('Available functions:', {
             toggleSidebar: typeof toggleSidebar,
-            toggleDarkMode: typeof toggleDarkMode,
             showToast: typeof showToast
         });
     </script>

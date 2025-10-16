@@ -1,0 +1,331 @@
+{% extends base_template %}
+
+{% block title %}Statistics - Scholar Slack Bot{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  <!-- Page header -->
+  <div class="flex items-center justify-between">
+    <div>
+      <h1 class="text-3xl font-bold text-gray-900">Statistics</h1>
+      <p class="mt-2 text-gray-600">Insights about authors, journals, topics, and citations</p>
+    </div>
+  </div>
+
+  <!-- Summary cards -->
+  <div id="stats-cards" hx-get="/web/stats" hx-trigger="load" hx-swap="innerHTML">
+    <!-- Loading skeleton -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+        <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+        <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+        <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+        <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+        <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+        <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 animate-pulse">
+        <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+        <div class="h-8 bg-gray-200 rounded w-3/4"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+    <div class="flex items-center space-x-2">
+      <label for="stats-year-range" class="text-sm text-gray-600">Year range</label>
+      <select id="stats-year-range" class="px-2 py-1 text-sm border border-gray-300 rounded" onchange="loadStats()">
+        <option value="last10">Last 10 years</option>
+        <option value="all">All years</option>
+      </select>
+    </div>
+    <div class="flex items-center space-x-2">
+      <label for="stats-top-limit" class="text-sm text-gray-600">Top limit</label>
+      <select id="stats-top-limit" class="px-2 py-1 text-sm border border-gray-300 rounded" onchange="loadStats()">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Charts grid -->
+  <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+    <!-- Publications by year -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Publications by Year</h3>
+      <canvas id="statsPubsByYear" height="220"></canvas>
+    </div>
+
+    <!-- Top journals -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Top Journals</h3>
+      <canvas id="statsTopJournals" height="220"></canvas>
+    </div>
+
+    <!-- Institutions: Top Countries (bar) -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Top Countries (by institution affiliations)</h3>
+      <canvas id="statsTopCountries" height="220"></canvas>
+    </div>
+
+    <!-- Top keywords/topics -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Top Keywords (from titles/abstracts)</h3>
+      <canvas id="statsTopKeywords" height="220"></canvas>
+      <p class="mt-2 text-xs text-gray-500">Keywords are derived locally from titles/abstracts. For canonical topics, enable OpenAlex concept ingestion (TODO).</p>
+    </div>
+
+    <!-- Top authors by h-index -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Top Authors by h-index</h3>
+      <canvas id="statsTopHIndex" height="220"></canvas>
+    </div>
+  </div>
+
+  <!-- Authors/database summary -->
+  <div id="authors-summary" class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-900 mb-4">Authors & Database Summary</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div>
+        <p class="text-sm text-gray-500">Total Authors</p>
+        <p id="sumTotalAuthors" class="text-2xl font-bold text-gray-900">–</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Avg Pubs per Author</p>
+        <p id="sumAvgPubsPerAuthor" class="text-2xl font-bold text-gray-900">–</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Avg Citations per Author</p>
+        <p id="sumAvgCitsPerAuthor" class="text-2xl font-bold text-gray-900">–</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Avg Citations per Publication</p>
+        <p id="sumAvgCitsPerPub" class="text-2xl font-bold text-gray-900">–</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let chartPubs = null;
+  let chartJournals = null;
+  let chartKeywords = null;
+  let chartHIndex = null;
+  let chartCountries = null;
+  let chartWordCloud = null;
+
+  async function loadStats() {
+    try {
+      const sel = document.getElementById('stats-year-range');
+      const now = new Date().getFullYear();
+      const params = new URLSearchParams();
+      if (sel && sel.value === 'last10') params.set('min_year', String(now - 9));
+      const topSel = document.getElementById('stats-top-limit');
+      const topVal = topSel ? topSel.value : '10';
+      params.set('top_limit', topVal);
+
+      const res = await fetch(`/api/v1/publications/stats?${params.toString()}`);
+      const stats = await res.json();
+
+      // Publications by year
+      if (Array.isArray(stats.publications_by_year)) {
+        const ctx = document.getElementById('statsPubsByYear');
+        try { if (chartPubs) chartPubs.destroy(); } catch (e) {}
+        chartPubs = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: stats.publications_by_year.map(d => d.year),
+            datasets: [{
+              label: 'Publications',
+              data: stats.publications_by_year.map(d => d.count),
+              backgroundColor: 'rgba(59, 130, 246, 0.6)',
+              borderColor: 'rgb(59, 130, 246)',
+              borderWidth: 1
+            }]
+          },
+          options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { display: false } } }
+        });
+      }
+
+      // Top journals
+      if (Array.isArray(stats.top_journals)) {
+        const labels = stats.top_journals.map(j => j.journal);
+        const data = stats.top_journals.map(j => j.publications);
+        const ctx = document.getElementById('statsTopJournals');
+        try { if (chartJournals) chartJournals.destroy(); } catch (e) {}
+        chartJournals = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels,
+            datasets: [{
+              label: 'Publications',
+              data,
+              backgroundColor: 'rgba(16, 185, 129, 0.6)',
+              borderColor: 'rgb(16, 185, 129)',
+              borderWidth: 1
+            }]
+          },
+          options: { responsive: true, maintainAspectRatio: true, indexAxis: 'y', plugins: { legend: { display: false } } }
+        });
+      }
+
+      // Top keywords
+      if (Array.isArray(stats.top_keywords)) {
+        const labels = stats.top_keywords.map(k => k.term);
+        const data = stats.top_keywords.map(k => k.count);
+        const ctx = document.getElementById('statsTopKeywords');
+        try { if (chartKeywords) chartKeywords.destroy(); } catch (e) {}
+        chartKeywords = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels,
+            datasets: [{
+              label: 'Mentions',
+              data,
+              backgroundColor: 'rgba(234, 179, 8, 0.6)',
+              borderColor: 'rgb(234, 179, 8)',
+              borderWidth: 1
+            }]
+          },
+          options: { responsive: true, maintainAspectRatio: true, indexAxis: 'y', plugins: { legend: { display: false } } }
+        });
+      }
+
+      // Build Word Cloud from keywords (remove extra stopwords, collapse similar terms)
+      try {
+        const raw = Array.isArray(stats.top_keywords) ? stats.top_keywords.slice() : [];
+        const stop = new Set([
+          'the','and','for','with','that','this','from','into','over','under','between','within','without','using','use','used','based','via','of','in','on','to','by','as','a','an','is','are','be','we','it','our','their','its','at','or','not','no','yes','more','less','new','novel','study','paper','method','methods','results','analysis','approach','effect','effects','case','data','model','models','evidence','insight','insights','evaluation','towards','about','across','can','may','might','will','would','should','these','those','were','here','there'
+        ]);
+        const britUS = [
+          ['colour','color'], ['behaviour','behavior'], ['optimisation','optimization'], ['optimise','optimize'],
+          ['organisation','organization'], ['realise','realize'], ['centre','center'], ['defence','defense'],
+          ['analyse','analyze'], ['theatre','theater']
+        ];
+        const mapBritUS = (w) => {
+          for (const [uk,us] of britUS) { if (w === uk) return us; }
+          return w;
+        };
+        const canon = (w) => {
+          let s = (w || '').toLowerCase();
+          s = mapBritUS(s);
+          // trim possessive
+          if (s.endsWith("'s")) s = s.slice(0,-2);
+          // simple plural reductions
+          if (s.length > 4 && s.endsWith('es')) s = s.slice(0, -2);
+          else if (s.length > 3 && s.endsWith('s')) s = s.slice(0, -1);
+          return s;
+        };
+        const lev1 = (a,b) => {
+          // Levenshtein distance <= 1: quick check
+          if (a === b) return true;
+          const la=a.length, lb=b.length; const d=Math.abs(la-lb); if (d>1) return false;
+          // one replace or one insert/delete
+          let i=0,j=0,diff=0;
+          while (i<la && j<lb) {
+            if (a[i]===b[j]) { i++; j++; }
+            else { diff++; if (diff>1) return false; if (la>lb) i++; else if (lb>la) j++; else { i++; j++; } }
+          }
+          if (i<la || j<lb) diff++;
+          return diff<=1;
+        };
+        const counts = new Map();
+        const terms = raw.map(r => ({ term: canon(r.term || ''), count: r.count||0 }))
+                         .filter(r => r.term && !stop.has(r.term));
+        // Collapse using edit distance 1
+        for (const t of terms) {
+          let merged = false;
+          for (const [k,v] of counts) {
+            if (lev1(k, t.term)) { counts.set(k, v + t.count); merged = true; break; }
+          }
+          if (!merged) counts.set(t.term, t.count);
+        }
+        const labelsWC = Array.from(counts.keys());
+        const dataWC = Array.from(counts.values());
+        const ctxWC = document.getElementById('statsWordCloud');
+        if (ctxWC && window.Chart) {
+          try { if (chartWordCloud) chartWordCloud.destroy(); } catch (e) {}
+          chartWordCloud = new Chart(ctxWC, {
+            type: 'wordCloud',
+            data: { labels: labelsWC, datasets: [{ label: 'Keywords', data: dataWC }] },
+            options: { plugins: { legend: { display: false } } }
+          });
+        }
+      } catch (e) { /* non-fatal */ }
+
+      // Top authors by h-index
+      const hlist = (stats.authors_summary && Array.isArray(stats.authors_summary.top_authors_by_h_index)) ? stats.authors_summary.top_authors_by_h_index : [];
+      if (hlist.length > 0) {
+        const labels = hlist.map(a => (a.name || a.author_id || '').split(' ').slice(-1)[0]);
+        const data = hlist.map(a => a.h_index || 0);
+        const ctx = document.getElementById('statsTopHIndex');
+        try { if (chartHIndex) chartHIndex.destroy(); } catch (e) {}
+        chartHIndex = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels,
+            datasets: [{
+              label: 'h-index',
+              data,
+              backgroundColor: 'rgba(99, 102, 241, 0.6)',
+              borderColor: 'rgb(99, 102, 241)',
+              borderWidth: 1
+            }]
+          },
+          options: { responsive: true, maintainAspectRatio: true, indexAxis: 'y', plugins: { legend: { display: false } } }
+        });
+      }
+
+      // Top countries (bar)
+      const clist = Array.isArray(stats.institutions_by_country) ? stats.institutions_by_country : [];
+      if (clist.length > 0) {
+        const labels = clist.map(c => c.country_code);
+        const data = clist.map(c => c.publications || 0);
+        const ctx = document.getElementById('statsTopCountries');
+        try { if (chartCountries) chartCountries.destroy(); } catch (e) {}
+        chartCountries = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels,
+            datasets: [{
+              label: 'Publications',
+              data,
+              backgroundColor: 'rgba(59, 130, 246, 0.6)',
+              borderColor: 'rgb(59, 130, 246)',
+              borderWidth: 1
+            }]
+          },
+          options: { responsive: true, maintainAspectRatio: true, indexAxis: 'y', plugins: { legend: { display: false } } }
+        });
+      }
+
+      // Map removed (choropleth visualization disabled)
+
+      // Summary numbers
+      try {
+        document.getElementById('sumTotalAuthors').textContent = String(stats.authors_summary.total_authors || 0);
+        document.getElementById('sumAvgPubsPerAuthor').textContent = (stats.authors_summary.avg_pubs_per_author || 0).toFixed(2);
+        document.getElementById('sumAvgCitsPerAuthor').textContent = (stats.authors_summary.avg_citations_per_author || 0).toFixed(2);
+        document.getElementById('sumAvgCitsPerPub').textContent = (stats.authors_summary.avg_citations_per_publication || 0).toFixed(2);
+      } catch (e) { /* non-fatal */ }
+    } catch (e) {
+      console.error('Error loading stats:', e);
+      showToast('Failed to load statistics', 'error');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadStats);
+</script>
+{% endblock %}
+    <!-- Word Cloud -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Keywords Word Cloud</h3>
+      <canvas id="statsWordCloud" height="280"></canvas>
+      <p class="mt-2 text-xs text-gray-500">Common words removed; similar words collapsed (plurals, common UK/US variants).</p>
+    </div>
