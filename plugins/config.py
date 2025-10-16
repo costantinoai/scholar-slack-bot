@@ -247,7 +247,18 @@ def load_plugin_config(plugin_name: str) -> Optional[Dict[str, Any]]:
     """
     loader = PluginConfigLoader()
 
-    # Try JSON format first
+    # Environment variable override (preferred for secrets)
+    if plugin_name == "slack":
+        token = os.getenv("SLACK_API_TOKEN")
+        default_channel = os.getenv("SLACK_DEFAULT_CHANNEL") or os.getenv("SLACK_CHANNEL")
+        if token:
+            logger.info("Loaded Slack configuration from environment variables")
+            cfg = {"api_token": token}
+            if default_channel:
+                cfg["default_channel"] = default_channel
+            return cfg
+
+    # Try JSON format
     json_path = f"./config/{plugin_name}.json"
     try:
         return loader.load_from_json(json_path)
@@ -264,17 +275,6 @@ def load_plugin_config(plugin_name: str) -> Optional[Dict[str, Any]]:
         return config
     except (FileNotFoundError, KeyError):
         pass
-
-    # Environment variable fallback for Slack
-    if plugin_name == "slack":
-        token = os.getenv("SLACK_API_TOKEN")
-        default_channel = os.getenv("SLACK_DEFAULT_CHANNEL") or os.getenv("SLACK_CHANNEL")
-        if token:
-            logger.info("Loaded Slack configuration from environment variables")
-            cfg = {"api_token": token}
-            if default_channel:
-                cfg["default_channel"] = default_channel
-            return cfg
 
     # No configuration found
     logger.debug(f"No configuration found for plugin: {plugin_name}")
