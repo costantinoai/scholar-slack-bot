@@ -10,12 +10,25 @@ from datetime import datetime
 # ============================================================================
 
 class AuthorCreate(BaseModel):
-    """Request model for creating a new author."""
+    """Request model for creating a new author.
 
-    scholar_id: str = Field(
-        ...,
+    Either ``scholar_id`` or ``openalex_id`` must be provided.
+    """
+
+    scholar_id: Optional[str] = Field(
+        None,
         description="Google Scholar ID for the author",
-        examples=["abc123xyz"]
+        examples=["abc123xyz"],
+    )
+    openalex_id: Optional[str] = Field(
+        None,
+        description="OpenAlex author ID (e.g., https://openalex.org/A5034283312)",
+        examples=["https://openalex.org/A5034283312"],
+    )
+    orcid: Optional[str] = Field(
+        None,
+        description="ORCID (e.g., 0000-0002-1825-0097 or full URL)",
+        examples=["0000-0002-1825-0097", "https://orcid.org/0000-0002-1825-0097"],
     )
 
     model_config = ConfigDict(
@@ -62,6 +75,7 @@ class PublicationResponse(BaseModel):
     url: Optional[str] = Field(None, description="URL to the publication")
     citations: int = Field(0, description="Number of citations")
     journal: Optional[str] = Field(None, description="Journal or venue")
+    doi: Optional[str] = Field(None, description="Digital Object Identifier")
 
     model_config = ConfigDict(
         json_schema_extra={
@@ -74,6 +88,59 @@ class PublicationResponse(BaseModel):
                 "url": "https://scholar.google.com/...",
                 "citations": 127,
                 "journal": "Nature Machine Intelligence"
+            }
+        }
+    )
+
+
+class PublicationSendItem(BaseModel):
+    """Item to send via a plugin from a preview.
+
+    Mirrors PublicationResponse shape, optionally including fewer fields.
+    """
+
+    author_id: str = Field(..., description="Google Scholar ID of the author")
+    title: str = Field(..., description="Publication title")
+    authors: str = Field("", description="Comma-separated list of authors")
+    year: Optional[int] = Field(None, description="Publication year")
+    abstract: Optional[str] = Field(None, description="Publication abstract")
+    url: Optional[str] = Field(None, description="URL to the publication")
+    citations: Optional[int] = Field(0, description="Number of citations")
+    journal: Optional[str] = Field(None, description="Journal or venue")
+
+
+class SendPublicationsRequest(BaseModel):
+    """Request to send a previewed list of publications via a plugin."""
+
+    plugin_name: Optional[str] = Field(None, description="Plugin to use (default: slack)")
+    target: Optional[str] = Field(None, description="Target channel/user (plugin-defined)")
+    items: List[PublicationSendItem] = Field(..., description="Publications to send")
+
+
+class SavePublicationsRequest(BaseModel):
+    """Request to save previewed publications to the database.
+
+    Unlike sending, this only persists the items into publications.db.
+    """
+
+    items: List[PublicationSendItem] = Field(..., description="Publications to save")
+
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "items": [
+                    {
+                        "author_id": "abc123xyz",
+                        "title": "Test Paper",
+                        "authors": "Alice, Bob",
+                        "year": 2024,
+                        "abstract": "Abstract...",
+                        "url": "https://example.org",
+                        "citations": 12,
+                        "journal": "Journal Name",
+                        "doi": "10.1000/test"
+                    }
+                ]
             }
         }
     )

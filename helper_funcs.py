@@ -10,7 +10,14 @@ import shutil
 import logging
 import sqlite3
 import json
-from scholarly import scholarly
+
+# Scholarly is optional (used only for Google Scholar backend). Avoid importing
+# it as a hard dependency at module import time to keep OpenAlex-only flows
+# working without the package installed.
+try:
+    from scholarly import scholarly  # type: ignore
+except Exception:  # pragma: no cover - optional dependency
+    scholarly = None
 
 logger = logging.getLogger(__name__)
 
@@ -221,6 +228,10 @@ def add_new_author_to_json(authors_path: str, scholar_id: str) -> dict:
     logger.info(f"Adding author ID {scholar_id} to {authors_path}.")
     conn = _init_authors_db(authors_path)
     try:
+        if scholarly is None:
+            raise RuntimeError(
+                "Google Scholar backend not available: 'scholarly' package is not installed."
+            )
         try:
             author_fetched = scholarly.search_author_id(scholar_id)
         except Exception as e:

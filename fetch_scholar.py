@@ -388,17 +388,87 @@ def save_updated_cache(
         # We never delete existing records: the DB is the source of truth.
         # New entries are inserted; existing are replaced on (author_id, title) PK.
         update_cache = getattr(args, "update_cache", False)
+        def _extract_domain(url: str | None) -> str | None:
+            if not url:
+                return None
+            try:
+                from urllib.parse import urlparse
+                netloc = urlparse(url).netloc
+                return netloc.lower() if netloc else None
+            except Exception:
+                return None
+
+        # Detect extended schema (source_id, doi) if available
+        try:
+            cols = [row[1] for row in conn.execute("PRAGMA table_info(publications)").fetchall()]
+        except Exception:
+            cols = []
+        has_source_id = 'source_id' in cols
+        has_doi = 'doi' in cols
+
         for pub in fetched_pubs:
-            title = pub["bib"]["title"]
+            title = (pub["bib"].get("title") or "").strip()
             year = pub["bib"].get("pub_year")
             year_val = int(year) if year else None
             abstract = pub["bib"].get("abstract")
-            url = pub.get("pub_url")
-            citations = pub.get("num_citations")
-            conn.execute(
-                "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
-                (author_id, title, year_val, abstract, url, citations),
-            )
+            url = (pub.get("pub_url") or "").strip()
+            cites = pub.get("num_citations")
+            try:
+                citations = int(cites) if cites is not None else 0
+            except Exception:
+                citations = 0
+
+            # If an entry exists for same (author_id, title) but different URL, keep both
+            existing = conn.execute(
+                "SELECT url FROM publications WHERE author_id = ? AND title = ?",
+                (author_id, title),
+            ).fetchone()
+
+            if existing is None:
+                if has_source_id:
+                    source_id = url or title
+                    doi_val = None
+                    conn.execute(
+                        "INSERT OR REPLACE INTO publications (author_id, title, source_id, year, abstract, url, doi, citations) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                        (author_id, title, source_id, year_val, abstract, url, doi_val, citations),
+                    )
+                else:
+                    conn.execute(
+                        "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
+                        (author_id, title, year_val, abstract, url, citations),
+                    )
+                continue
+
+            ex_url = (existing[0] or "").strip()
+            if ex_url == url or (ex_url == "" and url == ""):
+                if has_source_id:
+                    source_id = url or title
+                    doi_val = None
+                    conn.execute(
+                        "INSERT OR REPLACE INTO publications (author_id, title, source_id, year, abstract, url, doi, citations) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                        (author_id, title, source_id, year_val, abstract, url, doi_val, citations),
+                    )
+                else:
+                    conn.execute(
+                        "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
+                        (author_id, title, year_val, abstract, url, citations),
+                    )
+            else:
+                # Different source (e.g., preprint vs journal). Disambiguate title with domain tag.
+                domain = _extract_domain(url) or "alt"
+                alt_title = f"{title} [{domain}]"
+                if has_source_id:
+                    source_id = url or alt_title
+                    doi_val = None
+                    conn.execute(
+                        "INSERT OR REPLACE INTO publications (author_id, title, source_id, year, abstract, url, doi, citations) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                        (author_id, alt_title, source_id, year_val, abstract, url, doi_val, citations),
+                    )
+                else:
+                    conn.execute(
+                        "INSERT OR REPLACE INTO publications (author_id, title, year, abstract, url, citations) VALUES (?, ?, ?, ?, ?, ?)",
+                        (author_id, alt_title, year_val, abstract, url, citations),
+                    )
         conn.commit()
     finally:
         conn.close()

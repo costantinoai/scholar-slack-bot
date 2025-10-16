@@ -6,7 +6,7 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 
 from src.api.models import PublicationResponse, ErrorResponse
-from src.api.deps import get_publications_db, get_current_user
+from src.api.deps import get_publications_db, get_current_user, get_authors_db
 
 logger = logging.getLogger(__name__)
 
@@ -64,7 +64,7 @@ async def query_publications(
     """
     try:
         # Build dynamic query
-        query_parts = ["SELECT author_id, title, year, abstract, url, citations, journal, authors FROM publications WHERE 1=1"]
+        query_parts = ["SELECT author_id, title, year, abstract, url, citations, journal, authors, doi FROM publications WHERE 1=1"]
         params = []
 
         # Add filters
@@ -113,7 +113,8 @@ async def query_publications(
                 abstract=pub_dict.get("abstract"),
                 url=pub_dict.get("url"),
                 citations=pub_dict.get("citations", 0),
-                journal=pub_dict.get("journal")
+                journal=pub_dict.get("journal"),
+                doi=pub_dict.get("doi")
             ))
 
         logger.info(f"Retrieved {len(result)} publications (limit={limit}, offset={offset})")
@@ -133,53 +134,257 @@ async def query_publications(
     description="Get aggregate statistics about publications in the database.",
 )
 async def get_publication_stats(
+    min_year: Optional[int] = Query(None, description="Minimum publication year to include"),
+    max_year: Optional[int] = Query(None, description="Maximum publication year to include"),
+    top_limit: int = Query(10, ge=1, le=100, description="Top authors/publications limit"),
     db: sqlite3.Connection = Depends(get_publications_db),
+    authors_db: sqlite3.Connection = Depends(get_authors_db),
     user: dict = Depends(get_current_user),
 ):
     """Get aggregate publication statistics.
 
-    Returns:
-        dict: Statistics including total count, citations, year distribution
+    Args:
+        min_year: Filter stats to publications from this year (inclusive)
+        max_year: Filter stats to publications up to this year (inclusive)
+        top_limit: How many entries to return for top lists
 
-    Example:
-        ```bash
-        curl http://localhost:8000/api/v1/publications/stats
-        ```
+    Returns:
+        dict with counts, per-year distribution, top-cited publications, and
+        top authors by citations within the provided year window.
     """
     try:
-        # Total publications
-        cursor = db.execute("SELECT COUNT(*) as count FROM publications")
+        # Common WHERE clause parts
+        where_parts = ["1=1"]
+        params: list = []
+        if min_year is not None:
+            where_parts.append("year >= ?")
+            params.append(min_year)
+        if max_year is not None:
+            where_parts.append("year <= ?")
+            params.append(max_year)
+        where = " AND ".join(where_parts)
+
+        # Total publications (respecting year filter if provided)
+        cursor = db.execute(f"SELECT COUNT(*) as count FROM publications WHERE {where}", params)
         total_pubs = cursor.fetchone()["count"]
 
-        # Total citations
-        cursor = db.execute("SELECT SUM(citations) as total FROM publications")
+        # Total citations (respecting year filter)
+        cursor = db.execute(f"SELECT COALESCE(SUM(citations), 0) as total FROM publications WHERE {where}", params)
         total_citations = cursor.fetchone()["total"] or 0
 
-        # Publications by year
+        # Publications by year (no limit by default; return ascending years for chart readability)
         cursor = db.execute(
-            """SELECT year, COUNT(*) as count
+            f"""
+               SELECT year, COUNT(*) as count
                FROM publications
-               WHERE year IS NOT NULL
+               WHERE year IS NOT NULL AND {where}
                GROUP BY year
-               ORDER BY year DESC
-               LIMIT 10"""
+               ORDER BY year ASC
+            """,
+            params,
         )
         by_year = [dict(row) for row in cursor.fetchall()]
 
-        # Top cited publications
+        # Top cited publications (within window)
         cursor = db.execute(
-            """SELECT title, citations, year
+            f"""
+               SELECT title, COALESCE(citations,0) AS citations, year
                FROM publications
+               WHERE {where}
                ORDER BY citations DESC
-               LIMIT 10"""
+               LIMIT ?
+            """,
+            [*params, top_limit],
         )
         top_cited = [dict(row) for row in cursor.fetchall()]
+
+        # Top authors by citations (within window) — aggregate in publications DB and resolve names from authors DB
+        cursor = db.execute(
+            f"""
+               SELECT author_id, COALESCE(SUM(citations),0) AS citations
+               FROM publications
+               WHERE {where}
+               GROUP BY author_id
+               ORDER BY citations DESC
+               LIMIT ?
+            """,
+            [*params, top_limit],
+        )
+        rows = cursor.fetchall()
+        top_authors = []
+        for r in rows:
+            aid = r["author_id"]
+            cits = r["citations"] or 0
+            name_row = authors_db.execute("SELECT name FROM authors WHERE id = ?", (aid,)).fetchone()
+            name = name_row["name"] if name_row else aid
+            top_authors.append({"author_id": aid, "name": name, "citations": cits})
+
+        # Top journals by publication count (and citations) within window
+        # We ignore empty or NULL journal entries for this aggregation.
+        cursor = db.execute(
+            f"""
+               SELECT journal, COUNT(*) AS publications, COALESCE(SUM(citations),0) AS citations
+               FROM publications
+               WHERE {where} AND journal IS NOT NULL AND TRIM(journal) <> ''
+               GROUP BY journal
+               ORDER BY publications DESC, citations DESC
+               LIMIT ?
+            """,
+            [*params, top_limit],
+        )
+        top_journals = [
+            {"journal": row["journal"], "publications": row["publications"], "citations": row["citations"]}
+            for row in cursor.fetchall()
+        ]
+
+        # Institutions by country (geo stats)
+        countries = []
+        try:
+            # Only if institutions table exists
+            chk = db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='publication_institutions'").fetchone()
+            if chk:
+                cursor = db.execute(
+                    f"""
+                       SELECT TRIM(UPPER(pi.country_code)) AS country_code, COUNT(*) AS publications
+                       FROM publication_institutions pi
+                       JOIN publications p
+                         ON p.author_id = pi.author_id AND p.source_id = pi.source_id
+                       WHERE {where} AND pi.country_code IS NOT NULL AND TRIM(pi.country_code) <> ''
+                       GROUP BY TRIM(UPPER(pi.country_code))
+                       ORDER BY publications DESC
+                       LIMIT ?
+                    """,
+                    [*params, top_limit],
+                )
+                countries = [ {"country_code": r["country_code"], "publications": r["publications"]} for r in cursor.fetchall() ]
+        except Exception:
+            countries = []
+
+        # Compute basic author-level fine-grained stats and h-index leaderboard
+        # We iterate authors and compute h-index using per-author citations list.
+        authors_rows = authors_db.execute("SELECT id, name FROM authors").fetchall()
+        total_authors = len(authors_rows)
+        pubs_per_author: list[int] = []
+        citations_per_author: list[int] = []
+        h_index_entries: list[dict] = []
+
+        for row in authors_rows:
+            aid = row["id"]
+            aname = row["name"]
+            # Publications count respecting year window
+            pcount_row = db.execute(
+                f"SELECT COUNT(*) AS c FROM publications WHERE author_id = ? AND {where}",
+                [aid, *params],
+            ).fetchone()
+            pcount = int(pcount_row["c"]) if pcount_row else 0
+            pubs_per_author.append(pcount)
+
+            # Total citations respecting year window
+            csum_row = db.execute(
+                f"SELECT COALESCE(SUM(citations),0) AS s FROM publications WHERE author_id = ? AND {where}",
+                [aid, *params],
+            ).fetchone()
+            csum = int(csum_row["s"]) if csum_row else 0
+            citations_per_author.append(csum)
+
+            # h-index (computed from all publications for the author within the window)
+            cits_rows = db.execute(
+                f"SELECT COALESCE(citations,0) AS c FROM publications WHERE author_id = ? AND {where} ORDER BY citations DESC",
+                [aid, *params],
+            ).fetchall()
+            cits_sorted = [int(r["c"]) for r in cits_rows]
+            h = 0
+            for i, c in enumerate(cits_sorted, start=1):
+                if c >= i:
+                    h = i
+                else:
+                    break
+            h_index_entries.append({"author_id": aid, "name": aname, "h_index": h})
+
+        # Sort and pick top N h-index authors
+        top_authors_by_h = sorted(h_index_entries, key=lambda x: x["h_index"], reverse=True)[:top_limit]
+
+        # Basic aggregates with safe guards against division by zero
+        avg_pubs_per_author = (sum(pubs_per_author) / total_authors) if total_authors else 0.0
+        avg_citations_per_author = (sum(citations_per_author) / total_authors) if total_authors else 0.0
+        avg_citations_per_publication = (total_citations / total_pubs) if total_pubs else 0.0
+
+        # Lightweight keyword extraction from titles+abstracts as a proxy for topics
+        # This avoids requiring OpenAlex concept ingestion while still giving a topical view.
+        # Very simple tokenization with a built-in stopword list.
+        # Prefer canonical topics if available in publication_topics; fallback to keyword extraction
+        top_keywords = []
+        try:
+            tbl = db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='publication_topics'").fetchone()
+            if tbl:
+                # Join with publications to respect year filters
+                cursor = db.execute(
+                    f"""
+                       SELECT pt.term AS term, COUNT(*) AS count
+                       FROM publication_topics pt
+                       JOIN publications p
+                         ON p.author_id = pt.author_id AND p.source_id = pt.source_id
+                       WHERE {where}
+                       GROUP BY pt.term
+                       ORDER BY count DESC
+                       LIMIT ?
+                    """,
+                    [*params, min(top_limit * 2, 30)],
+                )
+                rows = cursor.fetchall()
+                top_keywords = [ {"term": r["term"], "count": r["count"]} for r in rows ]
+        except Exception:
+            top_keywords = []
+
+        if not top_keywords:
+            try:
+                stopwords = {
+                    # Common English stopwords (short list)
+                    'the','and','for','with','that','this','from','into','over','under','between','within','without','using','use','used','based','via','of','in','on','to','by','as','a','an','is','are','be','we','it','our','their','its','at','or','not','no','yes','more','less','new','novel','study','paper','method','results','analysis','approach','effect','effects','case','data','model','models','evidence','insight','insights','evaluation','towards','about','across','across','can','may','might','will','would','should'
+                }
+                # Pull a limited number of records to stay efficient on large DBs
+                kw_rows = db.execute(
+                    f"""
+                       SELECT title, abstract FROM publications
+                       WHERE {where}
+                    """,
+                    params,
+                ).fetchall()
+                from collections import Counter
+                import re
+                counter: Counter[str] = Counter()
+                for r in kw_rows:
+                    text = f"{r['title'] or ''} {r['abstract'] or ''}"
+                    # Tokenize on non-letters, lowercase, minimum length 4
+                    for tok in re.split(r"[^a-zA-Z]+", text.lower()):
+                        if len(tok) < 4:
+                            continue
+                        if tok in stopwords:
+                            continue
+                        counter[tok] += 1
+                top_keywords = [
+                    {"term": term, "count": count}
+                    for term, count in counter.most_common(min(top_limit * 2, 30))
+                ]
+            except Exception:
+                top_keywords = []
 
         return {
             "total_publications": total_pubs,
             "total_citations": total_citations,
             "publications_by_year": by_year,
-            "top_cited": top_cited
+            "top_cited": top_cited,
+            "top_authors_by_citations": top_authors,
+            "top_journals": top_journals,
+            "institutions_by_country": countries,
+            "authors_summary": {
+                "total_authors": total_authors,
+                "avg_pubs_per_author": avg_pubs_per_author,
+                "avg_citations_per_author": avg_citations_per_author,
+                "avg_citations_per_publication": avg_citations_per_publication,
+                "top_authors_by_h_index": top_authors_by_h,
+            },
+            "top_keywords": top_keywords,
         }
 
     except Exception as e:

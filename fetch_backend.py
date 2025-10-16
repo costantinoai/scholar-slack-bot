@@ -12,7 +12,6 @@ from types import SimpleNamespace
 from typing import List, Tuple
 
 from helper_funcs import get_authors_json
-import fetch_scholar
 from src.openalex.client import find_author_id_by_name, fetch_works_for_author, upsert_publications, _get_mailto
 from helper_funcs import _init_authors_db  # type: ignore
 import json
@@ -35,6 +34,8 @@ def _settings() -> dict:
 
 def fetch_from_json(args, idx=None):  # noqa: ANN001
     if _backend() == "scholar":
+        # Lazy import to avoid requiring scholarly when using OpenAlex backend
+        import fetch_scholar  # type: ignore
         return fetch_scholar.fetch_from_json(args, idx=idx)
 
     # OpenAlex path
@@ -83,6 +84,8 @@ def fetch_publications_by_id(
     exclude_not_cited_papers: bool = False,
 ):
     if _backend() == "scholar":
+        # Lazy import to avoid requiring scholarly when using OpenAlex backend
+        import fetch_scholar  # type: ignore
         return fetch_scholar.fetch_publications_by_id(
             author_id,
             output_folder=output_folder,

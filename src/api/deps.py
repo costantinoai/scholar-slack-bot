@@ -47,6 +47,15 @@ def get_authors_db() -> Generator[sqlite3.Connection, None, None]:
                 id TEXT PRIMARY KEY
             )"""
         )
+        # Ensure optional columns
+        try:
+            cols = [row[1] for row in conn.execute("PRAGMA table_info(authors)").fetchall()]
+            if 'openalex_id' not in cols:
+                conn.execute("ALTER TABLE authors ADD COLUMN openalex_id TEXT")
+            if 'orcid' not in cols:
+                conn.execute("ALTER TABLE authors ADD COLUMN orcid TEXT")
+        except Exception:
+            pass
         yield conn
         conn.commit()
     except Exception as e:
@@ -78,15 +87,74 @@ def get_publications_db() -> Generator[sqlite3.Connection, None, None]:
                 PRIMARY KEY (author_id, title)
             )"""
         )
-        # Ensure optional columns exist
+        # Ensure optional columns exist and migrate to robust PK if needed
         try:
-            cols = [row[1] for row in conn.execute("PRAGMA table_info(publications)").fetchall()]
+            cols_info = conn.execute("PRAGMA table_info(publications)").fetchall()
+            cols = [row[1] for row in cols_info]
             if 'journal' not in cols:
                 conn.execute("ALTER TABLE publications ADD COLUMN journal TEXT")
             if 'authors' not in cols:
                 conn.execute("ALTER TABLE publications ADD COLUMN authors TEXT")
+            if 'doi' not in cols:
+                conn.execute("ALTER TABLE publications ADD COLUMN doi TEXT")
+            if 'source_id' not in cols:
+                conn.execute("ALTER TABLE publications ADD COLUMN source_id TEXT DEFAULT ''")
+
+            # Detect if PK is still (author_id, title) and migrate to (author_id, title, source_id)
+            pk_cols = [row[1] for row in cols_info if row[5] > 0]  # row[5] is pk flag/order
+            needs_pk_migration = pk_cols == ['author_id', 'title']
+
+            if needs_pk_migration:
+                logger.info("Migrating publications table to composite PK (author_id, title, source_id)")
+                conn.execute("BEGIN TRANSACTION")
+                # Create new table with desired schema
+                conn.execute(
+                    """
+                    CREATE TABLE IF NOT EXISTS publications_v2 (
+                        author_id TEXT,
+                        title TEXT,
+                        source_id TEXT,
+                        year INTEGER,
+                        abstract TEXT,
+                        url TEXT,
+                        doi TEXT,
+                        citations INTEGER,
+                        journal TEXT,
+                        authors TEXT,
+                        PRIMARY KEY (author_id, title, source_id)
+                    )
+                    """
+                )
+                # Populate with existing rows; derive source_id from doi/url/title
+                conn.execute(
+                    """
+                    INSERT OR REPLACE INTO publications_v2 (
+                        author_id, title, source_id, year, abstract, url, doi, citations, journal, authors
+                    )
+                    SELECT
+                        author_id,
+                        title,
+                        CASE
+                            WHEN COALESCE(doi, '') <> '' THEN doi
+                            WHEN COALESCE(url, '') <> '' THEN url
+                            ELSE title
+                        END AS source_id,
+                        year,
+                        abstract,
+                        url,
+                        doi,
+                        citations,
+                        journal,
+                        authors
+                    FROM publications
+                    """
+                )
+                # Replace old table
+                conn.execute("DROP TABLE publications")
+                conn.execute("ALTER TABLE publications_v2 RENAME TO publications")
+                conn.execute("COMMIT")
         except Exception as e:
-            logger.debug(f"Publications table alter skipped/failed: {e}")
+            logger.debug(f"Publications table alter/migration skipped/failed: {e}")
         yield conn
         conn.commit()
     except Exception as e:

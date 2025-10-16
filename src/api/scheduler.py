@@ -90,15 +90,7 @@ def set_job_status(job_id: str, **kwargs) -> None:  # noqa: ANN001
 
 def schedule_immediate(job_id: str, func, *args, **kwargs):  # noqa: ANN001
     sched = get_scheduler()
+    # Schedule to run as soon as possible in the background; do not block here
     sched.add_job(func, trigger=DateTrigger(run_date=datetime.now()), id=job_id, replace_existing=True, args=args, kwargs=kwargs)
     logger.info("Scheduled immediate job %s", job_id)
-    try:
-        # Directly call the stored function
-        func = job.func
-        args = job.args or ()
-        func(*args)
-        logger.info("Executed job %s immediately", job_id)
-        return True
-    except Exception as e:
-        logger.error("Immediate run for job %s failed: %s", job_id, e)
-        return False
+    return True
